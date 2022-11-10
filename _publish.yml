@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: 8c2df60a-4e26-4f7c-809d-4964d89ad901
+      url: 'https://quartopub.com/sites/ningli/codetalk'
