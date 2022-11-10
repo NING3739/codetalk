@@ -1,0 +1,182 @@
+---
+title: "Data Science: Data Visualization"
+---
+
+# Welcome!
+
+## What is data visualization?
+
+Data visualization is the graphical representation of information and data. By using visual elements like charts, graphs, and maps, data visualization tools provide an accessible way to see and understand trends, outliers, and patterns in data. Additionally, it provides an excellent way for employees or business owners to present data to non-technical audiences without confusion.
+
+In the world of Big Data, data visualization tools and technologies are essential to analyze massive amounts of information and make data-driven decisions.
+
+# Introduction to Data Visualization and Distributions
+
+## Overview
+
+After completing this section, i will:
+
+-   understand the importance of data visualization for communicating data-driven findings.
+
+-   be able to use distributions to summarize data.
+
+-   be able to use the average and the standard deviation to understand the normal distribution
+
+-   be able to access how well a normal distribution fit the data using a quantile-quantile plot.
+
+-   be able to interpret data from a box plot
+
+## Introduction to Data Visualization
+
+### Key Point:
+
+-   Plots of data easily communicate information that is difficult to extract from table of raw values.
+
+-   Data visualization is a key component of exploratory data analysis (EDA), in which the properties of data are explored through visualization and summarization techniques.
+
+-   Data visualization can help discover biases, systematic errors, mistakes and other unexpected problems in data before those data are incorporated into potentially flawed analysis.
+
+-   Basics of data visualization and EDA will be covered in R by using the ggplot2 package and motivating examples from world health, economics and infections disease.
+
+### Code:
+
+```{r}
+library(dslabs)
+data(murders)
+head(murders)
+```
+
+## Introduction to Distributions
+
+### Key Points:
+
+[[(**Variance/Deviation Var**)方差](https://baike.baidu.com/item/方差/3108412): 方差越大，数据的波动越大；方差越小，数据的波动就越小。]{.aside}
+
+[[(**Standard Deviation**)标准差](https://baike.baidu.com/item/标准差/1415772): 方差开根号。]{.aside}
+
+-   The most basic statistical summary of a list of object is its distribution.
+
+-   I will learn ways to visualize and analyze distributions in the upcoming videos.
+
+-   In some cases, data can be summarized by two-number summary: the average and standard deviation.I will learn to use data visualization to determine when that is appropriate.
+
+## Data Types
+
+In R, there are [6 basic data types](https://www.programiz.com/r/data-types):
+
+-   `logical`
+
+-   `numeric`
+
+-   `integer`
+
+-   `complex`
+
+-   `character`
+
+-   `raw`
+
+::: callout-important
+Categorical data are variables that are defined by a small number of groups.
+
+-   Ordinal categorical data have an inherent order to the categories (mild/medium/hot, for example).
+
+-   Non-ordinal categorical data have no order to the categories.
+:::
+
+::: callout-important
+Numerical data take a variety of numeric values.
+
+-   Continuous variables can take any value.
+
+-   Discrete variables are limited to sets of specific values.
+:::
+
+```{mermaid}
+flowchart LR
+  A[Main variable types] --> B{Catrgorical}
+  A[Main variable types] --> C{Numeric}
+  B{Catrgorical} --> D[ordinal]
+  B{Catrgorical} --> E[non-ordinal]
+  C{Numeric} --> F[continuous]
+  C{Numeric} --> G[discrete]
+```
+
+### Exercise
+
+```{code}
+# extract the variable names from a dataset
+names(x)
+# explore how many unique values are used in dataset
+unique(x)
+# determine how many variable were reported
+length(x)
+# determine how many unique variable were reported
+length(unique(x))
+# to compute the frequencies of each unique value
+table(x)
+```
+
+## Describe Heights to ET
+
+### key point:
+
+-   A distribution is a function or description that shows the possible values of a variable and how often those values occur.
+-   For categorical variables, the distribution describes the proportions of each category.
+-   A *frequency table* is the simplest way to show a categorical distribution. Use `prop.table()` to convert a table of counts to a frequency table. *Barplots* display the distribution of categorical variables and are a way to visualize the information in frequency tables.
+-   For continuous numerical data, reporting the frequency of each unique entry is not an effective summary as many or most values are unique. Instead, a distribution function is required.
+-   The [*cumulative distribution function (CDF)*](https://en.wikipedia.org/wiki/Cumulative_distribution_function) is a function that reports the proportion of data below a value $a$ for all values of $a$ :$F(a)=Pr(x≤a)$.
+-   The proportion of observations between any two values $a$ and $b$ can be computed from the CDF as $F(b)-F(a)$.
+-   A *histogram* divides data into non-overlapping bins of the same size and plots the counts of number of values that fall in that interval.
+
+### Code:
+
+[R 语言学习 - [`table()`](https://blog.csdn.net/wlt9037/article/details/76570155 "table()结果提取") 结果提取.]{.aside}
+
+```{r}
+# load the dataset
+library(dslabs)
+data(heights)
+# make a table of category proportions
+prop.table(table(heights$sex))
+```
+
+## Cumulative Distribution Function
+
+Every *continuous distribution* has *cumulative distribution function (CDF)*. The CDF defines the proportion of the data below a given value for all values of $a$ :
+
+![Cumulative Distribution Function (CDF)](http://rafalab.dfci.harvard.edu/dsbook/book_files/figure-html/ecdf-1.png)
+
+As defined above, this plot of the CDF for male heights has height value *a* on the x-axis and the proportion of student with heights of that value or lower(*F(*a*)*) on the y-axis.
+
+The CDF is essential for calculating probabilities related to continuous data. In a continuous dataset, the probability of a specific exact value is not informative because most entries are unique. For example, in the student heights data, only one individual reported a height of 68.8976377952726 inches, but many students rounded similar heights to 69 inches. If we computed exact value probabilities, we would find that being exactly 69 inches is much more likely than being a non-integer exact height, which does not match our understanding that height is continuous. We can instead use the CDF to obtain a useful summary, such as the probability that a student is between 68.5 and 69.5 inches.
+
+For datasets that are not normal, the CDF can be calculated manually by defining a function to compute the probability above. This function can then be applied to a range of values across the range of the dataset to calculate a CDF. Given a dataset`my_data`, the CDF can be calculated and plotted like this:
+
+[R语言中的[\[`apply()`\]，\[`lapply()`\]，\[`sapply()`\]，`tapply()`](https://www.jianshu.com/p/59fb24ca2ea7)函数以及示例]{.aside}
+
+```{code}
+# Cumulative Distribution Function 
+a <- seq(min(x), max(x), length) # define range of the values
+cdf_function <- function(x) {
+    mean(my_data <= x)
+}
+cdf_values <- sapply(a, cdf_function)
+plot(a, cdf_values)
+```
+
+```{r}
+# example for student heights
+a <- seq(min(heights$height), max(heights$height), length = 100)
+cdf_function <- function(x){
+  mean(heights$height <= x)
+}
+cdf_value <- sapply(a, cdf_function)
+plot(a, cdf_value)
+```
+
+The CDF defines that proportion of data below a cut-off $a$. To define the proportion of values above $a$, we compute: $1-F(a)$
+
+To define the proportion of values between $a$ and $b$, we compute: $F(b)-F(a)$
+
+Note that the CDF can help compute probabilities. The probability of observing a randomly chosen value between $a$ and $b$ is equal to the proportion of values between $a$ and $b$, which we compute with the CDF.

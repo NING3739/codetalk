@@ -1,0 +1,48 @@
+project:
+  type: website
+
+website:
+  title: "CodeTalk"
+  favicon: codetalk-logo.png
+  page-navigation: true
+  navbar:
+    background: "#868e96"
+    logo: codetalk-logo.png
+    logo-alt: "codetalk-logo.png"
+    left:
+      - text: "About"
+        menu:
+          - Who.qmd
+      - text: "Works"
+        menu: 
+          - Datavisualization.qmd
+      - text: "R Graph"
+        menu: 
+          - Graph.qmd
+    pinned: true
+    search: true
+    
+format:
+  html:
+    code-fold: true
+    code-summary: "show the code"
+    code-overflow: scroll
+    code-line-numbers: true
+    toc: true
+    toc-title: Contents
+    toc-location: left
+    number-sections: false
+    html-math-method: katex
+    theme:
+      - morph
+      - superhero.scss
+    highlight-style: arrow-dark
+    anchor-sections: true
+    smooth-scroll: true
+    link-external-newwindow: true
+    citations-hover: true
+    footnotes-hover: true
+    comments:
+      hypothesis:
+        theme: classic
+editor: visual

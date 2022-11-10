@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "Who.html",
+    "href": "Who.html",
+    "title": "Who am I ?",
+    "section": "",
+    "text": "Hi, I’ m Ning and I’m a potential data analyst.\nMy current focus is statistics, R-based data analysis and corporate-related political risk issues.\nMy background is in Accountancy. If you have any doubts about corporate auditing issues, maybe i can help you.\nI really hate graphical interface data analysis software, because it always gives me extra results that I didn’t ask for.\nMy current short-term goal is to publish my first peer-reviewed paper and start my PhD by 2023.\nIn my free time, I like listening to music, hiking and reading. If you also like these activities, please feel free to contact me."
+  },
+  {
+    "objectID": "Who.html#education",
+    "href": "Who.html#education",
+    "title": "Who am I ?",
+    "section": "Education",
+    "text": "Education\nMassey University, Auckland | Master in Accountancy | July 2017 - June 2019"
+  },
+  {
+    "objectID": "Who.html#experience",
+    "href": "Who.html#experience",
+    "title": "Who am I ?",
+    "section": "Experience",
+    "text": "Experience\nLife Maid Easy | Head Marketing | December 2020 - present"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "show the code\n1 + 1\n\n\n[1] 2"
+  },
+  {
+    "objectID": "Datavisualization.html",
+    "href": "Datavisualization.html",
+    "title": "Data Science: Data Visualization",
+    "section": "",
+    "text": "Data visualization is the graphical representation of information and data. By using visual elements like charts, graphs, and maps, data visualization tools provide an accessible way to see and understand trends, outliers, and patterns in data. Additionally, it provides an excellent way for employees or business owners to present data to non-technical audiences without confusion.\nIn the world of Big Data, data visualization tools and technologies are essential to analyze massive amounts of information and make data-driven decisions."
+  },
+  {
+    "objectID": "Datavisualization.html#overview",
+    "href": "Datavisualization.html#overview",
+    "title": "Data Science: Data Visualization",
+    "section": "Overview",
+    "text": "Overview\nAfter completing this section, i will:\n\nunderstand the importance of data visualization for communicating data-driven findings.\nbe able to use distributions to summarize data.\nbe able to use the average and the standard deviation to understand the normal distribution\nbe able to access how well a normal distribution fit the data using a quantile-quantile plot.\nbe able to interpret data from a box plot"
+  },
+  {
+    "objectID": "Datavisualization.html#introduction-to-data-visualization",
+    "href": "Datavisualization.html#introduction-to-data-visualization",
+    "title": "Data Science: Data Visualization",
+    "section": "Introduction to Data Visualization",
+    "text": "Introduction to Data Visualization\n\nKey Point:\n\nPlots of data easily communicate information that is difficult to extract from table of raw values.\nData visualization is a key component of exploratory data analysis (EDA), in which the properties of data are explored through visualization and summarization techniques.\nData visualization can help discover biases, systematic errors, mistakes and other unexpected problems in data before those data are incorporated into potentially flawed analysis.\nBasics of data visualization and EDA will be covered in R by using the ggplot2 package and motivating examples from world health, economics and infections disease.\n\n\n\nCode:\n\n\nshow the code\nlibrary(dslabs)\ndata(murders)\nhead(murders)\n\n\n       state abb region population total\n1    Alabama  AL  South    4779736   135\n2     Alaska  AK   West     710231    19\n3    Arizona  AZ   West    6392017   232\n4   Arkansas  AR  South    2915918    93\n5 California  CA   West   37253956  1257\n6   Colorado  CO   West    5029196    65"
+  },
+  {
+    "objectID": "Datavisualization.html#introduction-to-distributions",
+    "href": "Datavisualization.html#introduction-to-distributions",
+    "title": "Data Science: Data Visualization",
+    "section": "Introduction to Distributions",
+    "text": "Introduction to Distributions\n\nKey Points:\n(Variance/Deviation Var)方差: 方差越大，数据的波动越大；方差越小，数据的波动就越小。\n(Standard Deviation)标准差: 方差开根号。\n\nThe most basic statistical summary of a list of object is its distribution.\nI will learn ways to visualize and analyze distributions in the upcoming videos.\nIn some cases, data can be summarized by two-number summary: the average and standard deviation.I will learn to use data visualization to determine when that is appropriate."
+  },
+  {
+    "objectID": "Datavisualization.html#data-types",
+    "href": "Datavisualization.html#data-types",
+    "title": "Data Science: Data Visualization",
+    "section": "Data Types",
+    "text": "Data Types\nIn R, there are 6 basic data types:\n\nlogical\nnumeric\ninteger\ncomplex\ncharacter\nraw\n\n\n\n\n\n\n\nImportant\n\n\n\nCategorical data are variables that are defined by a small number of groups.\n\nOrdinal categorical data have an inherent order to the categories (mild/medium/hot, for example).\nNon-ordinal categorical data have no order to the categories.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nNumerical data take a variety of numeric values.\n\nContinuous variables can take any value.\nDiscrete variables are limited to sets of specific values.\n\n\n\n\n\n\n\nflowchart LR\n  A[Main variable types] --> B{Catrgorical}\n  A[Main variable types] --> C{Numeric}\n  B{Catrgorical} --> D[ordinal]\n  B{Catrgorical} --> E[non-ordinal]\n  C{Numeric} --> F[continuous]\n  C{Numeric} --> G[discrete]\n\n\n\n\n\n\n\n\n\nExercise\n\n\nshow the code\n# extract the variable names from a dataset\nnames(x)\n# explore how many unique values are used in dataset\nunique(x)\n# determine how many variable were reported\nlength(x)\n# determine how many unique variable were reported\nlength(unique(x))\n# to compute the frequencies of each unique value\ntable(x)"
+  },
+  {
+    "objectID": "Datavisualization.html#describe-heights-to-et",
+    "href": "Datavisualization.html#describe-heights-to-et",
+    "title": "Data Science: Data Visualization",
+    "section": "Describe Heights to ET",
+    "text": "Describe Heights to ET\n\nkey point:\n\nA distribution is a function or description that shows the possible values of a variable and how often those values occur.\nFor categorical variables, the distribution describes the proportions of each category.\nA frequency table is the simplest way to show a categorical distribution. Use prop.table() to convert a table of counts to a frequency table. Barplots display the distribution of categorical variables and are a way to visualize the information in frequency tables.\nFor continuous numerical data, reporting the frequency of each unique entry is not an effective summary as many or most values are unique. Instead, a distribution function is required.\nThe cumulative distribution function (CDF) is a function that reports the proportion of data below a value a for all values of a :F(a)=Pr(x≤a).\nThe proportion of observations between any two values a and b can be computed from the CDF as F(b)-F(a).\nA histogram divides data into non-overlapping bins of the same size and plots the counts of number of values that fall in that interval.\n\n\n\nCode:\nR 语言学习 - table() 结果提取.\n\n\nshow the code\n# load the dataset\nlibrary(dslabs)\ndata(heights)\n# make a table of category proportions\nprop.table(table(heights$sex))\n\n\n\n   Female      Male \n0.2266667 0.7733333"
+  },
+  {
+    "objectID": "Datavisualization.html#cumulative-distribution-function",
+    "href": "Datavisualization.html#cumulative-distribution-function",
+    "title": "Data Science: Data Visualization",
+    "section": "Cumulative Distribution Function",
+    "text": "Cumulative Distribution Function\nEvery continuous distribution has cumulative distribution function (CDF). The CDF defines the proportion of the data below a given value for all values of a :\n\n\n\nCumulative Distribution Function (CDF)\n\n\nAs defined above, this plot of the CDF for male heights has height value a on the x-axis and the proportion of student with heights of that value or lower(F(a)) on the y-axis.\nThe CDF is essential for calculating probabilities related to continuous data. In a continuous dataset, the probability of a specific exact value is not informative because most entries are unique. For example, in the student heights data, only one individual reported a height of 68.8976377952726 inches, but many students rounded similar heights to 69 inches. If we computed exact value probabilities, we would find that being exactly 69 inches is much more likely than being a non-integer exact height, which does not match our understanding that height is continuous. We can instead use the CDF to obtain a useful summary, such as the probability that a student is between 68.5 and 69.5 inches.\nFor datasets that are not normal, the CDF can be calculated manually by defining a function to compute the probability above. This function can then be applied to a range of values across the range of the dataset to calculate a CDF. Given a datasetmy_data, the CDF can be calculated and plotted like this:\nR语言中的[apply()]，[lapply()]，[sapply()]，tapply()函数以及示例\n\n\nshow the code\n# Cumulative Distribution Function \na <- seq(min(x), max(x), length) # define range of the values\ncdf_function <- function(x) {\n    mean(my_data <= x)\n}\ncdf_values <- sapply(a, cdf_function)\nplot(a, cdf_values)\n\n\n\n\nshow the code\n# example for student heights\na <- seq(min(heights$height), max(heights$height), length = 100)\ncdf_function <- function(x){\n  mean(heights$height <= x)\n}\ncdf_value <- sapply(a, cdf_function)\nplot(a, cdf_value)\n\n\n\n\n\nThe CDF defines that proportion of data below a cut-off a. To define the proportion of values above a, we compute: 1-F(a)\nTo define the proportion of values between a and b, we compute: F(b)-F(a)\nNote that the CDF can help compute probabilities. The probability of observing a randomly chosen value between a and b is equal to the proportion of values between a and b, which we compute with the CDF."
+  },
+  {
+    "objectID": "Graph.html",
+    "href": "Graph.html",
+    "title": "R graph",
+    "section": "",
+    "text": "This page are mainly introduce all kinds of graph for academic search. I am going to use BASE R, GGPLOT2, INTERACTIVE CHARTS and R MARKDOWN as the tools. mtcars and gapminder will be my data source."
+  },
+  {
+    "objectID": "Graph.html#data-from-mtcars",
+    "href": "Graph.html#data-from-mtcars",
+    "title": "R graph",
+    "section": "Data from mtcars",
+    "text": "Data from mtcars\n\n\nshow the code\nlibrary(ggplot2)\nlibrary(gganimate)\n\nggplot(mtcars, aes(factor(cyl), mpg)) + \n  geom_boxplot() + \n  # Here comes the gganimate code\n  transition_states(\n    gear,\n    transition_length = 2,\n    state_length = 1\n  ) +\n  enter_fade() + \n  exit_shrink() +\n  ease_aes('sine-in-out')"
+  },
+  {
+    "objectID": "Graph.html#data-from-gapminder",
+    "href": "Graph.html#data-from-gapminder",
+    "title": "R graph",
+    "section": "Data from gapminder",
+    "text": "Data from gapminder\n\n\nshow the code\nlibrary(gapminder)\n\nggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, colour = country)) +\n  geom_point(alpha = 0.7, show.legend = FALSE) +\n  scale_colour_manual(values = country_colors) +\n  scale_size(range = c(2, 12)) +\n  scale_x_log10() +\n  facet_wrap(~continent) +\n  # Here comes the gganimate specific bits\n  labs(title = 'Year: {frame_time}', x = 'GDP per capita', y = 'life expectancy') +\n  transition_time(year) +\n  ease_aes('linear')"
+  }
+]
