@@ -1,1 +1,1 @@
-Sitemap: https://8c2df60a-4e26-4f7c-809d-4964d89ad901.netlify.app/sitemap.xml
+Sitemap: https://quartopub.com/sites/ningli/codetalk/sitemap.xml

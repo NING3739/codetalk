@@ -149,6 +149,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="floating nav-fixed slimcontent">
@@ -592,7 +593,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/8c2df60a-4e26-4f7c-809d-4964d89ad901\.netlify\.app\//);
+      var filterRegex = new RegExp(/https:\/\/quartopub\.com\/sites\/ningli\/codetalk/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }

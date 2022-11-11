@@ -45,4 +45,5 @@ format:
     comments:
       hypothesis:
         theme: classic
+    css: styles.css
 editor: visual
