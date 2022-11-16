@@ -24,7 +24,7 @@ website:
     
 format:
   html:
-    code-fold: true
+    code-fold: false
     code-summary: "show the code"
     code-overflow: scroll
     code-line-numbers: true

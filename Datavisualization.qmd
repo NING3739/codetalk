@@ -104,7 +104,7 @@ flowchart LR
 
 ### Exercise
 
-```{code}
+```{r, eval=FALSE}
 # extract the variable names from a dataset
 names(x)
 # explore how many unique values are used in dataset
@@ -133,7 +133,7 @@ table(x)
 
 [R 语言学习 - [`table()`](https://blog.csdn.net/wlt9037/article/details/76570155 "table()结果提取") 结果提取.]{.aside}
 
-```{r}
+```{r, output=FALSE}
 # load the dataset
 library(dslabs)
 data(heights)
@@ -155,7 +155,9 @@ For datasets that are not normal, the CDF can be calculated manually by defining
 
 [R语言中的[\[`apply()`\]，\[`lapply()`\]，\[`sapply()`\]，`tapply()`](https://www.jianshu.com/p/59fb24ca2ea7)函数以及示例]{.aside}
 
-```{code}
+### Code for CDF:
+
+```{r, eval=FALSE}
 # Cumulative Distribution Function 
 a <- seq(min(x), max(x), length) # define range of the values
 cdf_function <- function(x) {
@@ -164,6 +166,8 @@ cdf_function <- function(x) {
 cdf_values <- sapply(a, cdf_function)
 plot(a, cdf_values)
 ```
+
+### Code for student height:
 
 ```{r}
 # example for student heights
@@ -180,3 +184,272 @@ The CDF defines that proportion of data below a cut-off $a$. To define the propo
 To define the proportion of values between $a$ and $b$, we compute: $F(b)-F(a)$
 
 Note that the CDF can help compute probabilities. The probability of observing a randomly chosen value between $a$ and $b$ is equal to the proportion of values between $a$ and $b$, which we compute with the CDF.
+
+## Smooth Density Plots
+
+### Key Point:
+
+::: callout-note
+## A further note on histograms
+
+The choice of binwidth has a determinative effect on sharp. There is no "correct" choice for binwidth, and you can sometimes gain insights into the data by experimenting with binwidths.
+:::
+
+-   *Smooth density plots* can be thought of as ***histograms where the binwidth is extremely or infinitely small***. The smoothing function makes estimates of the true continuous trend of the data given the available sample of data points.
+
+-   The degree of smoothness can be controlled by an argument in the plotting function.
+
+-   While the histogram is an assumption-free summary, the smooth density plot is shaped by assumptions and choices you make as a data analyst.
+
+-   ***The y-axis is scaled so that the area under the density curve sums to 1.*** <!--#这是因为Y轴表示的是区间内的变量占总体的比重。 所有区间相加等于1。-->This means that interpreting value on the y-axis is not straightforward. To determine the proportion of data in between two values, compute the area under the smooth density curve in the region between those values.
+
+-   An advantage of smooth densities over histograms is that ***densities are easier to compare visually***.
+
+## Normal Distribution
+
+{{< video https://www.youtube.com/watch?v=xI9ZHGOSaCg&ab_channel=AceTutors >}}
+
+### Key Points:
+
+-   The noraml distribution:
+
+    -   is ***centered around*** one value, the ***mean***
+    -   is ***symmetric(对称)*** around the mean.
+    -   is defined completely by its ***mean(***$\mu$**)** and ***standard deviation(***$\sigma$**)**
+    -   ***Always has the same proportion*** of observations ***within a given distance*** of the mean (for example, 95% with 2$\sigma$)
+
+-   The standard deviation is the ***average distance between a value and the mean value***.
+
+-   Calculate the mean using the ***`mean()`*** function.
+
+-   Calculate the standard deviation using the ***`sd()`*** function or manually.
+
+-   ***Standard units*** describe how many standard deviations a value is away from the mean. The z-score, or number of standard deviation an observation is away from the mean $\mu$:
+
+    $$
+    z = (x-\mu)/\sigma
+    $$
+
+-   Computer standard units with the `scale()` function.
+
+-   ***Important:*** to calculate the proportion of value that meet a certain condition, use the `mean` function on a logical vector. Because `TRUE` is converted to 1 and `FALSE` is converted to 0, taking the mean of this vector yields the proportion of `TURE`.
+
+### Equation for the normal distribution
+
+The normal distribution is mathematically defined by the following formula for any mean $\mu$ and standard deviation $\sigma$:
+
+$$
+Pr(a < x < b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{x-\mu^2}{\sigma})}dx
+$$
+
+When standard unites $z=0$, the normal distribution is at a maximum, the mean $\mu$. The function is defined to be symmetric around $z=0$.
+
+The normal distribution of z-score is called the *standard normal distribution* and is defined by $\mu=0$ and $\sigma=1$.
+
+Z-score are useful to quickly evalute whether an observation is average or extreme. Z-scores near 0 are average. Z-score above 2 or below -2 are ***significantly above or blew the mean***, and z-scores above 3 or below -3 are ***extrmely rate***.
+
+### Code:
+
+```{r, output=FALSE}
+# define x as vector of male heights
+library(tidyverse)
+library(dslabs)
+data(heights)
+index <- heights$sex=="Male"
+x <- heights$height[index]
+
+# calculate the mean and standard deviation manually
+average <- sum(x)/length(x)
+SD <- sqrt(sum((x-average)^2)/length(x))
+
+# built-in mean and sd functions - note that the audio and printed value disagree
+average <- mean(x)
+SD <- sd(x)
+c(average = average, SD = SD)
+
+# calculate standard units
+z <- scale(x)
+
+# calculate proportion of value within 2 SD of mean
+mean(abs(z) < 2)
+```
+
+[***function `sd()`:***The built-in R ***function `sd()`*** calculates the standard deviation, but it divides by ***`length(x)-1`*** instead of ***`length(x)`***. When the length of the list is large, this difference is negligible and you can use the built-in ***`sd()`*** function. Otherwise, you should compute σ by hand. For this course series, assume that you should use the ***`sd()`*** function unless you are told not to do so.]{.aside}
+
+Here we will learn more about benchmark z-score value and their corresponding probabilities.
+
+### The 68-95-99.7 Rule
+
+{{< video https://www.youtube.com/watch?v=mtbJbDwqWLE&ab_channel=SimpleLearningPro >}}
+
+The normal distribution is associated with the 68-95-99.7 rule. This rule describes the probability of observing events within a ceration number of standard deviations of the mean.
+
+![Normal Distribution Probabilities](https://courses.edx.org/assets/courseware/v1/28d10d22ba8b3bf4b0cc5024de0dc616/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-probs-combined.png)
+
+The probability distribution function for the normal distribution is defined such that:
+
+-   About 68% of observations will be within one standard deviation of the mean($\mu\pm\sigma$). In standard units, this is equivalent to a z-score of $|z|\leq2$
+
+![Probability of an observation within 1 SD of mean](https://courses.edx.org/assets/courseware/v1/f0bb9f66b7bdd91b2c9852c7a68427c7/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-1sd.png)
+
+-   About 95% of observations will be within two standard seviations of the mean($\mu\pm2\sigma$). In standard units, this is equivalent to a z-sore of $|z|\leq2$.
+
+![Probability of an ovservation within 2 SD of mean](https://courses.edx.org/assets/courseware/v1/9686a507a97a536a1f5c6b6a01bd8154/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-2sd.png)
+
+-   About 99.7% of observations will be within three standard deviations of the mean($\mu\pm3\sigma$). In standard units, this is equivalent to a z-score of $|z|\leq3$.
+
+![Probability of an observation within 3 SD of mean](https://courses.edx.org/assets/courseware/v1/a8af7c699c20d1e83819b5f68bf6f17d/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-3sd.png)
+
+## The Normal CDF and pnorm
+
+### Key points:
+
+-  The normal distribution has a mathematically defined CDF which can be computed in R with the function `pnorm`. 
+
+-  `pnom(a, avg, s)` gives the value of the cumculative distribution function *F(a)* for the normal distribution defined by average *avg* and standard deviation *s*.
+
+-  we say that a random quantity is normally distributed with average *avg* and standard deviation *s* if the approximate *pnorm(a, avg, s)* holds for all values of *a*.
+
+-  If we are willing to use the normal approximation for height, we can estimate the distribution simply from the mean and standard deviation of our values.
+
+-  If we treat the height data as discrete rather than categorical, we see that the data are not very useful because integer values are more common that expected due to rounding. This is called discretization.
+
+-  With rounded data, the normal approximation is particularly useful when computing probabilities of intervals of length 1 that include exactly over integer. 
+
+### Code: Using pnorm to calculate probabilities
+
+Given male heights x:
+
+```{r, output=FALSE}
+library(tidyverse)
+library(dslabs)
+data("heights")
+x <- heights %>% filter(sex=="Male") %>% pull(height)
+```
+
+we can estimate the probability that a male is taller than 70.5 inches with:
+
+```{r, output=FALSE}
+1 - pnorm(70.5, mean(x), sd(x))
+```
+
+### Code: Discretization and the normal approximation
+
+```{r}
+# plot distribution of exact heights in data
+plot(prop.table(table(x)), xlab = "a = Height in inches", ylab = "Pr(x = a)")
+```
+
+```{r, output=FALSE}
+# probabilities in actual data over length 1 ranges containing a integer
+mean(x <= 68.5) - mean(x <= 67.5)
+mean(x <= 69.5) - mean(x <= 68.5)
+mean(x <= 70.5) - mean(x <= 69.5)
+
+# probabilities in normal approximation match well
+pnorm(68.5, mean(x), sd(x)) - pnorm(67.5, mean(x), sd(x))
+pnorm(69.5, mean(x), sd(x)) - pnorm(68.5, mean(x), sd(x))
+pnorm(70.5, mean(x), sd(x)) - pnorm(69.5, mean(x), sd(x))
+
+# probabilities in actual data over other ranges don't match normal approx as well
+mean(x <= 70.9) - mean(x <= 70.1)
+pnorm(70.9, mean(x), sd(x)) - pnorm(70.1, mean(x), sd(x))
+```
+
+## Definition of quantiles
+
+### Definition of quantiles
+
+Quantiles are cut off points that divide a dataset into intervals with set probability. The *qth* quantile is the value at which *q%* of the observation are ***equal to or less than that value***.
+
+{{< video https://www.youtube.com/watch?v=Ky7QeVgv-BA&ab_channel=MarinStatsLectures-RProgramming%26Statistics >}}
+
+### Using the ***`quantile`*** function
+Given a dataset `data` and desired quantile `q`, you can find the `q` the quantile of `data` with:
+```{r, eval=FALSE}
+quantile(data,q)
+```
+
+### Percentiles
+Percentiles are the quantiles that divide a dataset into 100 intervals each with 1% probability. You can determine all percentiles of a dataset `data` like this:
+```{r, eval=FALSE}
+p <- seq(0.01, 0.09, 0.01)
+quantile(data, p)
+```
+
+### Quartiles
+Quartiles divide a dataset into 4 parts each with 25% probability. They are equal to the 25th, 50th and 75th percentiles. The 25th percentile is also known as the *1st quartile*, the 50th percentile is also konwn as the median, and the 75th percentile is also knowns as the *3rd quartile*. 
+
+The ***`summary()`*** function returns the minimum, quartiles and maximum of a vector. 
+
+### Examples
+
+Load the heights dataset from the *dslabs* package:
+```{r, output=FALSE}
+library(dslabs)
+data("heights")
+```
+
+Use`summary`on the `heights$height` variable to find the quartiles:
+```{r}
+summary(heights$height)
+```
+
+Find the percentiles of `height$height`:
+```{r}
+p <- seq(0.01, 0.99, 0.01)
+percentiles <- quantile(heights$height, p)
+```
+
+Confirm that the 25th and 75th percentiles match that 1st and 3rd quartiles. Note that `quantile()` returns a named vector. You can access the 25th and 75th percentiles like this (adapt the code for other percentile value):
+```{r}
+percentiles[names(percentiles) == "25%"]
+percentiles[names(percentiles) == "75%"]
+```
+
+## Finding quantile with qnorm
+
+### Definiton of qnorm 
+[简单来说,`qnorm`(https://www.jianshu.com/p/a24eb1b94177)是正态分布***累积分布函数(CDF)的反函数， 也就是说它可以视为`pnorm`的反函数, 这里`q`指的是quantile, 即分位数]{.aside}
+
+{{< video https://www.youtube.com/watch?v=X5NXDK6AVtU&ab_channel=TheDataDigest >}}
+
+The `qnorm()` function gives the theoretical value of a quantile with probability `p` of observing a value equal to or less than that quantile value a normal distribution with mean `mu` and standard deviation `sigma`:
+```{r,eval=FALSE}
+qnorm(p, mu, sigma)
+```
+
+***By default, `mu`=0 and `sigma`=1***. Therefore, calling `qnorm()` with no arguments gives quantiles for the standard normal distribution.
+```{r, eval=FALSE}
+qnorm(p)
+```
+
+Recall that quantiles are defined such that $p$ is the probability of a random observation less than or equal to the quantile.
+
+### Relation to pnorm
+
+The `pnorm()` function gives the probability that a value from a standard normal distribution will be less than or equal to the quantile.
+
+### Realation to pnorm
+The `pnorm()` function gives the probability that a value from a standard normal distribution will be less than or equal to a z-score value z. consider:
+***$$pnorm(-1.96)\approx0.025$$***
+The result of `pnorm()` is the quantile. Note that:
+***$$qnorm(0.025)\approx-1.96$$***
+`qnorm()` and `pnorm` are inverse functions:
+***$$pnorm(qnorm(0.025))\equiv0.025$$***
+
+### Theoretical quantiles
+
+You can use `qnorm()` to determine the theoretical quantiles of a dataset: that is, the theoretical value of quantiles assuming that a dataset follows a normal distribution. Run the `qnorm()` function with the desired probabilities *p*, mean mu and standard deviation sigma. 
+
+Suppose male heights follow a normal distribution with a mean of 69 inches and standard deviation of 3 inches. The theoretical quantiles are:
+```{r}
+p <- seq(0.01, 0.99, 0.01)
+theoretical_quantiles <- qnorm(p, 69, 3)
+```
+
+Theoretical quantiles can be compared to sample quantiles determined with the quantile function in order to evaluate whether the sample follows a normal distribution.
+
+
+
+
