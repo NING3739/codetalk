@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CodeTalk - Data Science: Data Visualization</title>
+<title>Stats &amp; R - Data Science: Data Visualization</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -92,7 +92,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./codetalk-logo.png" rel="icon" type="image/png">
+<link href="./Stats-&amp;-R.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -124,7 +124,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <style>html{ scroll-behavior: smooth; }</style>
 <script type="application/json" class="js-hypothesis-config">
 {
-  "theme": "classic"
+  "theme": "clean"
 }
 </script>
 <script async="" src="https://hypothes.is/embed.js"></script>
@@ -160,10 +160,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./codetalk-logo.png" alt="codetalk-logo.png" class="navbar-logo">
+    <img src="./Stats-&amp;-R.png" alt="Stats-&amp;-R.png" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">CodeTalk</span>
+    <span class="navbar-title">Stats &amp; R</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -280,6 +280,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#realation-to-pnorm" id="toc-realation-to-pnorm" class="nav-link" data-scroll-target="#realation-to-pnorm">Realation to pnorm</a></li>
   <li><a href="#theoretical-quantiles" id="toc-theoretical-quantiles" class="nav-link" data-scroll-target="#theoretical-quantiles">Theoretical quantiles</a></li>
   </ul></li>
+  <li><a href="#quantile-quantile-plots" id="toc-quantile-quantile-plots" class="nav-link" data-scroll-target="#quantile-quantile-plots">Quantile-Quantile Plots</a>
+  <ul class="collapse">
+  <li><a href="#key-points-3" id="toc-key-points-3" class="nav-link" data-scroll-target="#key-points-3">Key Points:</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -319,7 +323,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1>Introduction to Data Visualization and Distributions</h1>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>After completing this section, i will:</p>
+<p>After completing this section, we will:</p>
 <ul>
 <li><p>understand the importance of data visualization for communicating data-driven findings.</p></li>
 <li><p>be able to use distributions to summarize data.</p></li>
@@ -365,7 +369,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class=""><a href="https://baike.baidu.com/item/标准差/1415772">(<strong>Standard Deviation</strong>)标准差</a>: 方差开根号。</span></div></div>
 <ul>
 <li><p>The most basic statistical summary of a list of object is its distribution.</p></li>
-<li><p>I will learn ways to visualize and analyze distributions in the upcoming videos.</p></li>
+<li><p>We will learn ways to visualize and analyze distributions in the upcoming videos.</p></li>
 <li><p>In some cases, data can be summarized by two-number summary: the average and standard deviation.I will learn to use data visualization to determine when that is appropriate.</p></li>
 </ul>
 </section>
@@ -610,7 +614,6 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 </section>
 <section id="the-68-95-99.7-rule" class="level3">
 <h3 class="anchored" data-anchor-id="the-68-95-99.7-rule">The 68-95-99.7 Rule</h3>
-<div class="quarto-video ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/mtbJbDwqWLE" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p>The normal distribution is associated with the 68-95-99.7 rule. This rule describes the probability of observing events within a ceration number of standard deviations of the mean.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -767,7 +770,7 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <h2 class="anchored" data-anchor-id="finding-quantile-with-qnorm">Finding quantile with qnorm</h2>
 <section id="definiton-of-qnorm" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="definiton-of-qnorm">Definiton of qnorm</h3>
-<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">简单来说,<code>qnorm</code>(https://www.jianshu.com/p/a24eb1b94177)是正态分布***累积分布函数(CDF)的反函数， 也就是说它可以视为<code>pnorm</code>的反函数, 这里<code>q</code>指的是quantile, 即分位数</span></div></div>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">简单来说,<a href="https://www.jianshu.com/p/a24eb1b94177"><strong><em><code>qnorm</code></em></strong></a>是正态分布<strong><em>累积分布函数(CDF)</em></strong>的反函数， 也就是说它可以视为<code>pnorm</code>的反函数, 这里<code>q</code>指的是quantile, 即分位数</span></div></div>
 <div class="quarto-video ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/X5NXDK6AVtU" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p>The <code>qnorm()</code> function gives the theoretical value of a quantile with probability <code>p</code> of observing a value equal to or less than that quantile value a normal distribution with mean <code>mu</code> and standard deviation <code>sigma</code>:</p>
 <div class="cell">
@@ -796,6 +799,16 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <span id="cb24-2"><a href="#cb24-2"></a>theoretical_quantiles <span class="ot">&lt;-</span> <span class="fu">qnorm</span>(p, <span class="dv">69</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Theoretical quantiles can be compared to sample quantiles determined with the quantile function in order to evaluate whether the sample follows a normal distribution.</p>
+</section>
+</section>
+<section id="quantile-quantile-plots" class="level2">
+<h2 class="anchored" data-anchor-id="quantile-quantile-plots">Quantile-Quantile Plots</h2>
+<section id="key-points-3" class="level3">
+<h3 class="anchored" data-anchor-id="key-points-3">Key Points:</h3>
+<ul>
+<li><p>Quantile-quantile plots, or QQ-plot, are used to check whether distributions are well-approximated by a normal distribution.</p></li>
+<li><p>Given a proportion <em>p</em>, the quantile <em>q</em> is the value such that the proportion of values in the data blew <em>q</em> is <em>p</em>.</p></li>
+</ul>
 
 
 </section>

@@ -2,13 +2,12 @@ project:
   type: website
 
 website:
-  title: "CodeTalk"
-  favicon: codetalk-logo.png
+  title: "Stats & R"
+  favicon: Stats-&-R.png
   page-navigation: true
   navbar:
-    background: "#868e96"
-    logo: codetalk-logo.png
-    logo-alt: "codetalk-logo.png"
+    logo: Stats-&-R.png
+    logo-alt: "Stats-&-R.png"
     left:
       - text: "About"
         menu:
@@ -34,8 +33,8 @@ format:
     number-sections: false
     html-math-method: katex
     theme:
-      - morph
-      - superhero.scss
+       - superhero
+       - superhero.scss
     highlight-style: arrow-dark
     anchor-sections: true
     smooth-scroll: true
@@ -44,6 +43,7 @@ format:
     footnotes-hover: true
     comments:
       hypothesis:
-        theme: classic
+        theme: clean
+        
     css: styles.css
 editor: visual

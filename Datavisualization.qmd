@@ -14,7 +14,7 @@ In the world of Big Data, data visualization tools and technologies are essentia
 
 ## Overview
 
-After completing this section, i will:
+After completing this section, we will:
 
 -   understand the importance of data visualization for communicating data-driven findings.
 
@@ -56,7 +56,7 @@ head(murders)
 
 -   The most basic statistical summary of a list of object is its distribution.
 
--   I will learn ways to visualize and analyze distributions in the upcoming videos.
+-   We will learn ways to visualize and analyze distributions in the upcoming videos.
 
 -   In some cases, data can be summarized by two-number summary: the average and standard deviation.I will learn to use data visualization to determine when that is appropriate.
 
@@ -280,8 +280,6 @@ Here we will learn more about benchmark z-score value and their corresponding pr
 
 ### The 68-95-99.7 Rule
 
-{{< video https://www.youtube.com/watch?v=mtbJbDwqWLE&ab_channel=SimpleLearningPro >}}
-
 The normal distribution is associated with the 68-95-99.7 rule. This rule describes the probability of observing events within a ceration number of standard deviations of the mean.
 
 ![Normal Distribution Probabilities](https://courses.edx.org/assets/courseware/v1/28d10d22ba8b3bf4b0cc5024de0dc616/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-probs-combined.png)
@@ -410,7 +408,7 @@ percentiles[names(percentiles) == "75%"]
 ## Finding quantile with qnorm
 
 ### Definiton of qnorm 
-[简单来说,`qnorm`(https://www.jianshu.com/p/a24eb1b94177)是正态分布***累积分布函数(CDF)的反函数， 也就是说它可以视为`pnorm`的反函数, 这里`q`指的是quantile, 即分位数]{.aside}
+[简单来说,[***`qnorm`***](https://www.jianshu.com/p/a24eb1b94177)是正态分布***累积分布函数(CDF)***的反函数， 也就是说它可以视为`pnorm`的反函数, 这里`q`指的是quantile, 即分位数]{.aside}
 
 {{< video https://www.youtube.com/watch?v=X5NXDK6AVtU&ab_channel=TheDataDigest >}}
 
@@ -450,6 +448,13 @@ theoretical_quantiles <- qnorm(p, 69, 3)
 
 Theoretical quantiles can be compared to sample quantiles determined with the quantile function in order to evaluate whether the sample follows a normal distribution.
 
+## Quantile-Quantile Plots
+
+### Key Points:
+
+- Quantile-quantile plots, or QQ-plot, are used to check whether distributions are well-approximated by a normal distribution.
+
+- Given a proportion *p*, the quantile *q* is the value such that the proportion of values in the data blew *q* is *p*.
 
 
 
