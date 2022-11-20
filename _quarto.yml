@@ -23,14 +23,13 @@ website:
     
 format:
   html:
-    code-fold: false
+    code-fold: true
     code-summary: "show the code"
     code-overflow: scroll
     code-line-numbers: true
     toc: true
     toc-title: Contents
     toc-location: left
-    number-sections: false
     html-math-method: katex
     theme:
        - superhero
@@ -44,6 +43,5 @@ format:
     comments:
       hypothesis:
         theme: clean
-        
     css: styles.css
 editor: visual

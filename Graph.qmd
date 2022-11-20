@@ -3,7 +3,7 @@ title: "R graph"
 editor: visual
 ---
 
-This page are mainly introduce all kinds of graph for academic search. I am going to use **BASE R**, **GGPLOT2**, **INTERACTIVE CHARTS** and **R MARKDOWN** as the tools. `mtcars` and `gapminder` will be my data source.
+This page are mainly introduce all kinds of graph for academic search. we will going to use **BASE R**, **GGPLOT2**, **INTERACTIVE CHARTS** and **R MARKDOWN** as the tools. `mtcars` and `gapminder` will be our data source.
 
 # gganmate
 

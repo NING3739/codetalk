@@ -230,12 +230,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>This page are mainly introduce all kinds of graph for academic search. I am going to use <strong>BASE R</strong>, <strong>GGPLOT2</strong>, <strong>INTERACTIVE CHARTS</strong> and <strong>R MARKDOWN</strong> as the tools. <code>mtcars</code> and <code>gapminder</code> will be my data source.</p>
+<p>This page are mainly introduce all kinds of graph for academic search. we will going to use <strong>BASE R</strong>, <strong>GGPLOT2</strong>, <strong>INTERACTIVE CHARTS</strong> and <strong>R MARKDOWN</strong> as the tools. <code>mtcars</code> and <code>gapminder</code> will be our data source.</p>
 <section id="gganmate" class="level1">
 <h1>gganmate</h1>
 <section id="data-from-mtcars" class="level2">
 <h2 class="anchored" data-anchor-id="data-from-mtcars">Data from mtcars</h2>
 <div class="cell">
+<details>
+<summary>show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(gganimate)</span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
@@ -250,6 +252,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-12"><a href="#cb1-12"></a>  <span class="fu">enter_fade</span>() <span class="sc">+</span> </span>
 <span id="cb1-13"><a href="#cb1-13"></a>  <span class="fu">exit_shrink</span>() <span class="sc">+</span></span>
 <span id="cb1-14"><a href="#cb1-14"></a>  <span class="fu">ease_aes</span>(<span class="st">'sine-in-out'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <p><img src="Graph_files/figure-html/unnamed-chunk-1-1.gif" class="img-fluid"></p>
 </div>
@@ -258,6 +261,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="data-from-gapminder" class="level2">
 <h2 class="anchored" data-anchor-id="data-from-gapminder">Data from gapminder</h2>
 <div class="cell">
+<details>
+<summary>show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(gapminder)</span>
 <span id="cb2-2"><a href="#cb2-2"></a></span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="fu">ggplot</span>(gapminder, <span class="fu">aes</span>(gdpPercap, lifeExp, <span class="at">size =</span> pop, <span class="at">colour =</span> country)) <span class="sc">+</span></span>
@@ -270,6 +275,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-10"><a href="#cb2-10"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">'Year: {frame_time}'</span>, <span class="at">x =</span> <span class="st">'GDP per capita'</span>, <span class="at">y =</span> <span class="st">'life expectancy'</span>) <span class="sc">+</span></span>
 <span id="cb2-11"><a href="#cb2-11"></a>  <span class="fu">transition_time</span>(year) <span class="sc">+</span></span>
 <span id="cb2-12"><a href="#cb2-12"></a>  <span class="fu">ease_aes</span>(<span class="st">'linear'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <p><img src="Graph_files/figure-html/unnamed-chunk-2-1.gif" class="img-fluid"></p>
 </div>
@@ -412,7 +418,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/quartopub\.com\/sites\/ningli\/codetalk/);
+      var filterRegex = new RegExp(/https:\/\/quartopub\.com\/sites\/ningli\/statsr/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
