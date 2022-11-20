@@ -30,9 +30,9 @@ After completing this section, we will:
 
 - be able to interpret data from a box plot
 
-## Introduction to Data Visualization
+# Introduction to Data Visualization
 
-### Key Point:
+## Key Point:
 
 - Plots of data easily communicate information that is difficult to extract from table of raw values.
 
@@ -42,7 +42,7 @@ After completing this section, we will:
 
 - Basics of data visualization and EDA will be covered in R by using the ggplot2 package and motivating examples from world health, economics and infections disease.
 
-### Code:
+## Code:
 
 ```{r}
 library(dslabs)
@@ -50,9 +50,9 @@ data(murders)
 head(murders)
 ```
 
-## Introduction to Distributions
+# Introduction to Distributions
 
-### Key Points:
+## Key Points:
 
 [[(**Variance/Deviation Var**)方差](https://baike.baidu.com/item/方差/3108412): 方差越大，数据的波动越大；方差越小，数据的波动就越小。]{.aside}
 
@@ -106,7 +106,7 @@ flowchart LR
   C{Numeric} --> G[discrete]
 ```
 
-### Exercise
+## Exercise
 
 ```{r, eval=FALSE}
 # extract the variable names from a dataset
@@ -121,9 +121,9 @@ length(unique(x))
 table(x)
 ```
 
-## Describe Heights to ET
+# Describe Heights to ET
 
-### key point:
+## key point:
 
 - A distribution is a function or description that shows the possible values of a variable and how often those values occur.
 -   For categorical variables, the distribution describes the proportions of each category.
@@ -133,7 +133,7 @@ table(x)
 - The proportion of observations between any two values $a$ and $b$ can be computed from the CDF as $F(b)-F(a)$.
 - A *histogram* divides data into non-overlapping bins of the same size and plots the counts of number of values that fall in that interval.
 
-### Code:
+## Code:
 
 [R 语言学习 - [`table()`](https://blog.csdn.net/wlt9037/article/details/76570155 "table()结果提取") 结果提取.]{.aside}
 
@@ -145,7 +145,7 @@ data(heights)
 prop.table(table(heights$sex))
 ```
 
-## Cumulative Distribution Function
+# Cumulative Distribution Function
 
 Every *continuous distribution* has *cumulative distribution function (CDF)*. The CDF defines the proportion of the data below a given value for all values of $a$ :
 
@@ -159,7 +159,7 @@ For datasets that are not normal, the CDF can be calculated manually by defining
 
 [R语言中的[\[`apply()`\]，\[`lapply()`\]，\[`sapply()`\]，`tapply()`](https://www.jianshu.com/p/59fb24ca2ea7)函数以及示例]{.aside}
 
-### Code for CDF:
+## Code for CDF:
 
 ```{r, eval=FALSE}
 # Cumulative Distribution Function 
@@ -171,7 +171,7 @@ cdf_values <- sapply(a, cdf_function)
 plot(a, cdf_values)
 ```
 
-### Code for student height:
+## Code for student height:
 
 ```{r}
 # example for student heights
@@ -189,9 +189,9 @@ To define the proportion of values between $a$ and $b$, we compute: $F(b)-F(a)$
 
 Note that the CDF can help compute probabilities. The probability of observing a randomly chosen value between $a$ and $b$ is equal to the proportion of values between $a$ and $b$, which we compute with the CDF.
 
-## Smooth Density Plots
+# Smooth Density Plots
 
-### Key Point:
+## Key Point:
 
 ::: callout-note
 ## A further note on histograms
@@ -209,9 +209,9 @@ The choice of binwidth has a determinative effect on sharp. There is no "correct
 
 - An advantage of smooth densities over histograms is that ***densities are easier to compare visually***.
 
-## Normal Distribution
+# Normal Distribution
 
-### Key Points:
+## Key Points:
 
 - [The normal distribution](https://www.youtube.com/watch?v=xI9ZHGOSaCg&ab_channel=AceTutors):
 
@@ -236,7 +236,7 @@ The choice of binwidth has a determinative effect on sharp. There is no "correct
 
 - ***Important:*** to calculate the proportion of value that meet a certain condition, use the `mean` function on a logical vector. Because `TRUE` is converted to 1 and `FALSE` is converted to 0, taking the mean of this vector yields the proportion of `TURE`.
 
-### Equation for the normal distribution
+## Equation for the normal distribution
 
 The normal distribution is mathematically defined by the following formula for any mean $\mu$ and standard deviation $\sigma$:
 
@@ -250,7 +250,7 @@ The normal distribution of z-score is called the *standard normal distribution* 
 
 Z-score are useful to quickly evalute whether an observation is average or extreme. Z-scores near 0 are average. Z-score above 2 or below -2 are ***significantly above or blew the mean***, and z-scores above 3 or below -3 are ***extrmely rate***.
 
-### Code:
+## Code:
 
 ```{r, output=FALSE}
 # define x as vector of male heights
@@ -280,7 +280,7 @@ mean(abs(z) < 2)
 
 Here we will learn more about benchmark z-score value and their corresponding probabilities.
 
-### The 68-95-99.7 Rule
+## The 68-95-99.7 Rule
 
 The normal distribution is associated with the 68-95-99.7 rule. This rule describes the probability of observing events within a ceration number of standard deviations of the mean.
 
@@ -300,9 +300,9 @@ The probability distribution function for the normal distribution is defined suc
 
 ![Probability of an observation within 3 SD of mean](https://courses.edx.org/assets/courseware/v1/a8af7c699c20d1e83819b5f68bf6f17d/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-3sd.png)
 
-## The Normal CDF and pnorm
+# The Normal CDF and pnorm
 
-### Key points:
+## Key points:
 
 -  The normal distribution has a mathematically defined CDF which can be computed in R with the function `pnorm`. 
 
@@ -316,7 +316,7 @@ The probability distribution function for the normal distribution is defined suc
 
 -  With rounded data, the normal approximation is particularly useful when computing probabilities of intervals of length 1 that include exactly over integer. 
 
-### Code: Using pnorm to calculate probabilities
+## Code: Using pnorm to calculate probabilities
 
 Given male heights x:
 
@@ -333,7 +333,7 @@ we can estimate the probability that a male is taller than 70.5 inches with:
 1 - pnorm(70.5, mean(x), sd(x))
 ```
 
-### Code: Discretization and the normal approximation
+## Code: Discretization and the normal approximation
 
 ```{r}
 # plot distribution of exact heights in data
@@ -356,31 +356,31 @@ mean(x <= 70.9) - mean(x <= 70.1)
 pnorm(70.9, mean(x), sd(x)) - pnorm(70.1, mean(x), sd(x))
 ```
 
-## Definition of quantiles
+# Definition of quantiles
 
-### Definition of quantiles
+## Definition of quantiles
 
 [Quantiles](https://www.youtube.com/watch?v=Ky7QeVgv-BA&ab_channel=MarinStatsLectures-RProgramming%26Statistics) are cut off points that divide a dataset into intervals with set probability. The *qth* quantile is the value at which *q%* of the observation are ***equal to or less than that value***.
 
-### Using the quantile function
+## Using the quantile function
 Given a dataset `data` and desired quantile `q`, you can find the `q` the quantile of `data` with:
 ```{r, eval=FALSE}
 quantile(data,q)
 ```
 
-### Percentiles
+## Percentiles
 Percentiles are the quantiles that divide a dataset into 100 intervals each with 1% probability. You can determine all percentiles of a dataset `data` like this:
 ```{r, eval=FALSE}
 p <- seq(0.01, 0.09, 0.01)
 quantile(data, p)
 ```
 
-### Quartiles
+## Quartiles
 Quartiles divide a dataset into 4 parts each with 25% probability. They are equal to the 25th, 50th and 75th percentiles. The 25th percentile is also known as the *1st quartile*, the 50th percentile is also konwn as the median, and the 75th percentile is also knowns as the *3rd quartile*. 
 
 The ***`summary()`*** function returns the minimum, quartiles and maximum of a vector. 
 
-### Examples
+## Examples
 
 Load the heights dataset from the *dslabs* package:
 ```{r, output=FALSE}
@@ -405,9 +405,9 @@ percentiles[names(percentiles) == "25%"]
 percentiles[names(percentiles) == "75%"]
 ```
 
-## Finding quantile with qnorm
+# Finding quantile with qnorm
 
-### Definiton of qnorm 
+## Definiton of qnorm 
 [简单来说,[***`qnorm`***](https://www.jianshu.com/p/a24eb1b94177)是正态分布***累积分布函数(CDF)***的反函数， 也就是说它可以视为`pnorm`的反函数, 这里`q`指的是quantile, 即分位数]{.aside}
 
 The [`qnorm()`](https://www.youtube.com/watch?v=X5NXDK6AVtU&ab_channel=TheDataDigest) function gives the theoretical value of a quantile with probability `p` of observing a value equal to or less than that quantile value a normal distribution with mean `mu` and standard deviation `sigma`:
@@ -422,11 +422,7 @@ qnorm(p)
 
 Recall that quantiles are defined such that $p$ is the probability of a random observation less than or equal to the quantile.
 
-### Relation to pnorm
-
-The `pnorm()` function gives the probability that a value from a standard normal distribution will be less than or equal to the quantile.
-
-### Realation to pnorm
+## Realation to pnorm
 The `pnorm()` function gives the probability that a value from a standard normal distribution will be less than or equal to a z-score value z. consider:
 ***$$pnorm(-1.96)\approx0.025$$***
 The result of `pnorm()` is the quantile. Note that:
@@ -434,7 +430,7 @@ The result of `pnorm()` is the quantile. Note that:
 `qnorm()` and `pnorm` are inverse functions:
 ***$$pnorm(qnorm(0.025))\equiv0.025$$***
 
-### Theoretical quantiles
+## Theoretical quantiles
 
 You can use `qnorm()` to determine the theoretical quantiles of a dataset: that is, the theoretical value of quantiles assuming that a dataset follows a normal distribution. Run the `qnorm()` function with the desired probabilities *p*, mean mu and standard deviation sigma. 
 
@@ -446,9 +442,9 @@ theoretical_quantiles <- qnorm(p, 69, 3)
 
 Theoretical quantiles can be compared to sample quantiles determined with the quantile function in order to evaluate whether the sample follows a normal distribution.
 
-## Quantile-Quantile Plots
+# Quantile-Quantile Plots
 
-### Key Points:
+## Key Points:
 
 - Quantile-quantile plots, or QQ-plot, are used to check whether distributions are well-approximated by a normal distribution.
 
@@ -460,7 +456,7 @@ Theoretical quantiles can be compared to sample quantiles determined with the qu
 
 - Calculate theoretical quantiles with the `qnorm()` function. `qnorm()` will caculate quantiles for the standard normal distribution ($\mu=0, \sigma=1$) by default, but it can calculate quantiles for any normal distribution given `mean()` and `sd()` arguments. 
 
-### Code:
+## Code:
 
 ```{r}
 # define x and z

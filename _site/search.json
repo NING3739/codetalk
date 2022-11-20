@@ -35,81 +35,193 @@
     "text": "2.1 Overview\nAfter completing this section, we will:\n\nunderstand the importance of data visualization for communicating data-driven findings.\nbe able to use distributions to summarize data.\nbe able to use the average and the standard deviation to understand the normal distribution\nbe able to access how well a normal distribution fit the data using a quantile-quantile plot.\nbe able to interpret data from a box plot"
   },
   {
-    "objectID": "Datavisualization.html#introduction-to-data-visualization",
-    "href": "Datavisualization.html#introduction-to-data-visualization",
+    "objectID": "Datavisualization.html#key-point",
+    "href": "Datavisualization.html#key-point",
     "title": "Data Science: Data Visualization",
-    "section": "2.2 Introduction to Data Visualization",
-    "text": "2.2 Introduction to Data Visualization\n\n2.2.1 Key Point:\n\nPlots of data easily communicate information that is difficult to extract from table of raw values.\nData visualization is a key component of exploratory data analysis (EDA), in which the properties of data are explored through visualization and summarization techniques.\nData visualization can help discover biases, systematic errors, mistakes and other unexpected problems in data before those data are incorporated into potentially flawed analysis.\nBasics of data visualization and EDA will be covered in R by using the ggplot2 package and motivating examples from world health, economics and infections disease.\n\n\n\n2.2.2 Code:\n\n\nshow the code\nlibrary(dslabs)\ndata(murders)\nhead(murders)\n\n\n       state abb region population total\n1    Alabama  AL  South    4779736   135\n2     Alaska  AK   West     710231    19\n3    Arizona  AZ   West    6392017   232\n4   Arkansas  AR  South    2915918    93\n5 California  CA   West   37253956  1257\n6   Colorado  CO   West    5029196    65"
+    "section": "3.1 Key Point:",
+    "text": "3.1 Key Point:\n\nPlots of data easily communicate information that is difficult to extract from table of raw values.\nData visualization is a key component of exploratory data analysis (EDA), in which the properties of data are explored through visualization and summarization techniques.\nData visualization can help discover biases, systematic errors, mistakes and other unexpected problems in data before those data are incorporated into potentially flawed analysis.\nBasics of data visualization and EDA will be covered in R by using the ggplot2 package and motivating examples from world health, economics and infections disease."
   },
   {
-    "objectID": "Datavisualization.html#introduction-to-distributions",
-    "href": "Datavisualization.html#introduction-to-distributions",
+    "objectID": "Datavisualization.html#code",
+    "href": "Datavisualization.html#code",
     "title": "Data Science: Data Visualization",
-    "section": "2.3 Introduction to Distributions",
-    "text": "2.3 Introduction to Distributions\n\n2.3.1 Key Points:\n(Variance/Deviation Var)方差: 方差越大，数据的波动越大；方差越小，数据的波动就越小。\n(Standard Deviation)标准差: 方差开根号。\n\nThe most basic statistical summary of a list of object is its distribution.\nWe will learn ways to visualize and analyze distributions in the upcoming videos.\nIn some cases, data can be summarized by two-number summary: the average and standard deviation.I will learn to use data visualization to determine when that is appropriate."
+    "section": "3.2 Code:",
+    "text": "3.2 Code:\n\n\nshow the code\nlibrary(dslabs)\ndata(murders)\nhead(murders)\n\n\n       state abb region population total\n1    Alabama  AL  South    4779736   135\n2     Alaska  AK   West     710231    19\n3    Arizona  AZ   West    6392017   232\n4   Arkansas  AR  South    2915918    93\n5 California  CA   West   37253956  1257\n6   Colorado  CO   West    5029196    65"
+  },
+  {
+    "objectID": "Datavisualization.html#key-points",
+    "href": "Datavisualization.html#key-points",
+    "title": "Data Science: Data Visualization",
+    "section": "4.1 Key Points:",
+    "text": "4.1 Key Points:\n(Variance/Deviation Var)方差: 方差越大，数据的波动越大；方差越小，数据的波动就越小。\n(Standard Deviation)标准差: 方差开根号。\n\nThe most basic statistical summary of a list of object is its distribution.\nWe will learn ways to visualize and analyze distributions in the upcoming videos.\nIn some cases, data can be summarized by two-number summary: the average and standard deviation.I will learn to use data visualization to determine when that is appropriate."
   },
   {
     "objectID": "Datavisualization.html#data-types",
     "href": "Datavisualization.html#data-types",
     "title": "Data Science: Data Visualization",
-    "section": "2.4 Data Types",
-    "text": "2.4 Data Types\nIn R, there are 6 basic data types:\n\nlogical\nnumeric\ninteger\ncomplex\ncharacter\nraw\n\n\n\n\n\n\n\nImportant\n\n\n\nCategorical data are variables that are defined by a small number of groups.\n\nOrdinal categorical data have an inherent order to the categories (mild/medium/hot, for example).\nNon-ordinal categorical data have no order to the categories.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nNumerical data take a variety of numeric values.\n\nContinuous variables can take any value.\nDiscrete variables are limited to sets of specific values.\n\n\n\n\n\n\n\nflowchart LR\n  A[Main variable types] --> B{Catrgorical}\n  A[Main variable types] --> C{Numeric}\n  B{Catrgorical} --> D[ordinal]\n  B{Catrgorical} --> E[non-ordinal]\n  C{Numeric} --> F[continuous]\n  C{Numeric} --> G[discrete]\n\n\n\n\n\n\n\n\n\n2.4.1 Exercise\n\n\nshow the code\n# extract the variable names from a dataset\nnames(x)\n# explore how many unique values are used in dataset\nunique(x)\n# determine how many variable were reported\nlength(x)\n# determine how many unique variable were reported\nlength(unique(x))\n# to compute the frequencies of each unique value\ntable(x)"
+    "section": "4.2 Data Types",
+    "text": "4.2 Data Types\nIn R, there are 6 basic data types:\n\nlogical\nnumeric\ninteger\ncomplex\ncharacter\nraw\n\n\n\n\n\n\n\nImportant\n\n\n\nCategorical data are variables that are defined by a small number of groups.\n\nOrdinal categorical data have an inherent order to the categories (mild/medium/hot, for example).\nNon-ordinal categorical data have no order to the categories.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nNumerical data take a variety of numeric values.\n\nContinuous variables can take any value.\nDiscrete variables are limited to sets of specific values.\n\n\n\n\n\n\n\nflowchart LR\n  A[Main variable types] --> B{Catrgorical}\n  A[Main variable types] --> C{Numeric}\n  B{Catrgorical} --> D[ordinal]\n  B{Catrgorical} --> E[non-ordinal]\n  C{Numeric} --> F[continuous]\n  C{Numeric} --> G[discrete]"
   },
   {
-    "objectID": "Datavisualization.html#describe-heights-to-et",
-    "href": "Datavisualization.html#describe-heights-to-et",
+    "objectID": "Datavisualization.html#exercise",
+    "href": "Datavisualization.html#exercise",
     "title": "Data Science: Data Visualization",
-    "section": "2.5 Describe Heights to ET",
-    "text": "2.5 Describe Heights to ET\n\n2.5.1 key point:\n\nA distribution is a function or description that shows the possible values of a variable and how often those values occur.\nFor categorical variables, the distribution describes the proportions of each category.\nA frequency table is the simplest way to show a categorical distribution. Use prop.table() to convert a table of counts to a frequency table. Barplots display the distribution of categorical variables and are a way to visualize the information in frequency tables.\nFor continuous numerical data, reporting the frequency of each unique entry is not an effective summary as many or most values are unique. Instead, a distribution function is required.\nThe cumulative distribution function (CDF) is a function that reports the proportion of data below a value a for all values of a :F(a)=Pr(x≤a).\nThe proportion of observations between any two values a and b can be computed from the CDF as F(b)-F(a).\nA histogram divides data into non-overlapping bins of the same size and plots the counts of number of values that fall in that interval.\n\n\n\n2.5.2 Code:\nR 语言学习 - table() 结果提取.\n\n\nshow the code\n# load the dataset\nlibrary(dslabs)\ndata(heights)\n# make a table of category proportions\nprop.table(table(heights$sex))"
+    "section": "4.3 Exercise",
+    "text": "4.3 Exercise\n\n\nshow the code\n# extract the variable names from a dataset\nnames(x)\n# explore how many unique values are used in dataset\nunique(x)\n# determine how many variable were reported\nlength(x)\n# determine how many unique variable were reported\nlength(unique(x))\n# to compute the frequencies of each unique value\ntable(x)"
   },
   {
-    "objectID": "Datavisualization.html#cumulative-distribution-function",
-    "href": "Datavisualization.html#cumulative-distribution-function",
+    "objectID": "Datavisualization.html#key-point-1",
+    "href": "Datavisualization.html#key-point-1",
     "title": "Data Science: Data Visualization",
-    "section": "2.6 Cumulative Distribution Function",
-    "text": "2.6 Cumulative Distribution Function\nEvery continuous distribution has cumulative distribution function (CDF). The CDF defines the proportion of the data below a given value for all values of a :\n\n\n\nCumulative Distribution Function (CDF)\n\n\nAs defined above, this plot of the CDF for male heights has height value a on the x-axis and the proportion of student with heights of that value or lower(F(a)) on the y-axis.\nThe CDF is essential for calculating probabilities related to continuous data. In a continuous dataset, the probability of a specific exact value is not informative because most entries are unique. For example, in the student heights data, only one individual reported a height of 68.8976377952726 inches, but many students rounded similar heights to 69 inches. If we computed exact value probabilities, we would find that being exactly 69 inches is much more likely than being a non-integer exact height, which does not match our understanding that height is continuous. We can instead use the CDF to obtain a useful summary, such as the probability that a student is between 68.5 and 69.5 inches.\nFor datasets that are not normal, the CDF can be calculated manually by defining a function to compute the probability above. This function can then be applied to a range of values across the range of the dataset to calculate a CDF. Given a datasetmy_data, the CDF can be calculated and plotted like this:\nR语言中的[apply()]，[lapply()]，[sapply()]，tapply()函数以及示例\n\n2.6.1 Code for CDF:\n\n\nshow the code\n# Cumulative Distribution Function \na <- seq(min(x), max(x), length) # define range of the values\ncdf_function <- function(x) {\n    mean(my_data <= x)\n}\ncdf_values <- sapply(a, cdf_function)\nplot(a, cdf_values)\n\n\n\n\n2.6.2 Code for student height:\n\n\nshow the code\n# example for student heights\na <- seq(min(heights$height), max(heights$height), length = 100)\ncdf_function <- function(x){\n  mean(heights$height <= x)\n}\ncdf_value <- sapply(a, cdf_function)\nplot(a, cdf_value)\n\n\n\n\n\nThe CDF defines that proportion of data below a cut-off a. To define the proportion of values above a, we compute: 1-F(a)\nTo define the proportion of values between a and b, we compute: F(b)-F(a)\nNote that the CDF can help compute probabilities. The probability of observing a randomly chosen value between a and b is equal to the proportion of values between a and b, which we compute with the CDF."
+    "section": "5.1 key point:",
+    "text": "5.1 key point:\n\nA distribution is a function or description that shows the possible values of a variable and how often those values occur.\nFor categorical variables, the distribution describes the proportions of each category.\nA frequency table is the simplest way to show a categorical distribution. Use prop.table() to convert a table of counts to a frequency table. Barplots display the distribution of categorical variables and are a way to visualize the information in frequency tables.\nFor continuous numerical data, reporting the frequency of each unique entry is not an effective summary as many or most values are unique. Instead, a distribution function is required.\nThe cumulative distribution function (CDF) is a function that reports the proportion of data below a value a for all values of a :F(a)=Pr(x≤a).\nThe proportion of observations between any two values a and b can be computed from the CDF as F(b)-F(a).\nA histogram divides data into non-overlapping bins of the same size and plots the counts of number of values that fall in that interval."
   },
   {
-    "objectID": "Datavisualization.html#smooth-density-plots",
-    "href": "Datavisualization.html#smooth-density-plots",
+    "objectID": "Datavisualization.html#code-1",
+    "href": "Datavisualization.html#code-1",
     "title": "Data Science: Data Visualization",
-    "section": "2.7 Smooth Density Plots",
-    "text": "2.7 Smooth Density Plots\n\n2.7.1 Key Point:\n\n\n\n\n\n\nA further note on histograms\n\n\n\nThe choice of binwidth has a determinative effect on sharp. There is no “correct” choice for binwidth, and you can sometimes gain insights into the data by experimenting with binwidths.\n\n\n\nSmooth density plots can be thought of as histograms where the binwidth is extremely or infinitely small. The smoothing function makes estimates of the true continuous trend of the data given the available sample of data points.\nThe degree of smoothness can be controlled by an argument in the plotting function.\nWhile the histogram is an assumption-free summary, the smooth density plot is shaped by assumptions and choices you make as a data analyst.\nThe y-axis is scaled so that the area under the density curve sums to 1. This means that interpreting value on the y-axis is not straightforward. To determine the proportion of data in between two values, compute the area under the smooth density curve in the region between those values.\nAn advantage of smooth densities over histograms is that densities are easier to compare visually."
+    "section": "5.2 Code:",
+    "text": "5.2 Code:\nR 语言学习 - table() 结果提取.\n\n\nshow the code\n# load the dataset\nlibrary(dslabs)\ndata(heights)\n# make a table of category proportions\nprop.table(table(heights$sex))"
   },
   {
-    "objectID": "Datavisualization.html#normal-distribution",
-    "href": "Datavisualization.html#normal-distribution",
+    "objectID": "Datavisualization.html#code-for-cdf",
+    "href": "Datavisualization.html#code-for-cdf",
     "title": "Data Science: Data Visualization",
-    "section": "2.8 Normal Distribution",
-    "text": "2.8 Normal Distribution\n\n2.8.1 Key Points:\n\nThe normal distribution:\n\nis centered around one value, the mean\nis symmetric(对称) around the mean.\nis defined completely by its mean(\\mu) and standard deviation(\\sigma)\nAlways has the same proportion of observations within a given distance of the mean (for example, 95% with 2\\sigma)\n\nThe standard deviation is the average distance between a value and the mean value.\nCalculate the mean using the mean() function.\nCalculate the standard deviation using the sd() function or manually.\nStandard units describe how many standard deviations a value is away from the mean. The z-score, or number of standard deviation an observation is away from the mean \\mu:\n\n  z = (x-\\mu)/\\sigma\n  \nComputer standard units with the scale() function.\nImportant: to calculate the proportion of value that meet a certain condition, use the mean function on a logical vector. Because TRUE is converted to 1 and FALSE is converted to 0, taking the mean of this vector yields the proportion of TURE.\n\n\n\n2.8.2 Equation for the normal distribution\nThe normal distribution is mathematically defined by the following formula for any mean \\mu and standard deviation \\sigma:\n\nPr(a < x < b) = \\int_{a}^b\\frac{1}{\\sqrt{2\\pi\\mu}}{e}^{-\\frac{1}{2}(\\frac{x-\\mu^2}{\\sigma})}dx\n\nWhen standard unites z=0, the normal distribution is at a maximum, the mean \\mu. The function is defined to be symmetric around z=0.\nThe normal distribution of z-score is called the standard normal distribution and is defined by \\mu=0 and \\sigma=1.\nZ-score are useful to quickly evalute whether an observation is average or extreme. Z-scores near 0 are average. Z-score above 2 or below -2 are significantly above or blew the mean, and z-scores above 3 or below -3 are extrmely rate.\n\n\n2.8.3 Code:\n\n\nshow the code\n# define x as vector of male heights\nlibrary(tidyverse)\nlibrary(dslabs)\ndata(heights)\nindex <- heights$sex==\"Male\"\nx <- heights$height[index]\n\n# calculate the mean and standard deviation manually\naverage <- sum(x)/length(x)\nSD <- sqrt(sum((x-average)^2)/length(x))\n\n# built-in mean and sd functions - note that the audio and printed value disagree\naverage <- mean(x)\nSD <- sd(x)\nc(average = average, SD = SD)\n\n# calculate standard units\nz <- scale(x)\n\n# calculate proportion of value within 2 SD of mean\nmean(abs(z) < 2)\n\n\nfunction sd():The built-in R function sd() calculates the standard deviation, but it divides by length(x)-1 instead of length(x). When the length of the list is large, this difference is negligible and you can use the built-in sd() function. Otherwise, you should compute σ by hand. For this course series, assume that you should use the sd() function unless you are told not to do so.\nHere we will learn more about benchmark z-score value and their corresponding probabilities.\n\n\n2.8.4 The 68-95-99.7 Rule\nThe normal distribution is associated with the 68-95-99.7 rule. This rule describes the probability of observing events within a ceration number of standard deviations of the mean.\n\n\n\nNormal Distribution Probabilities\n\n\nThe probability distribution function for the normal distribution is defined such that:\n\nAbout 68% of observations will be within one standard deviation of the mean(\\mu\\pm\\sigma). In standard units, this is equivalent to a z-score of |z|\\leq2\n\n\n\n\nProbability of an observation within 1 SD of mean\n\n\n\nAbout 95% of observations will be within two standard seviations of the mean(\\mu\\pm2\\sigma). In standard units, this is equivalent to a z-sore of |z|\\leq2.\n\n\n\n\nProbability of an ovservation within 2 SD of mean\n\n\n\nAbout 99.7% of observations will be within three standard deviations of the mean(\\mu\\pm3\\sigma). In standard units, this is equivalent to a z-score of |z|\\leq3.\n\n\n\n\nProbability of an observation within 3 SD of mean"
+    "section": "6.1 Code for CDF:",
+    "text": "6.1 Code for CDF:\n\n\nshow the code\n# Cumulative Distribution Function \na <- seq(min(x), max(x), length) # define range of the values\ncdf_function <- function(x) {\n    mean(my_data <= x)\n}\ncdf_values <- sapply(a, cdf_function)\nplot(a, cdf_values)"
   },
   {
-    "objectID": "Datavisualization.html#the-normal-cdf-and-pnorm",
-    "href": "Datavisualization.html#the-normal-cdf-and-pnorm",
+    "objectID": "Datavisualization.html#code-for-student-height",
+    "href": "Datavisualization.html#code-for-student-height",
     "title": "Data Science: Data Visualization",
-    "section": "2.9 The Normal CDF and pnorm",
-    "text": "2.9 The Normal CDF and pnorm\n\n2.9.1 Key points:\n\nThe normal distribution has a mathematically defined CDF which can be computed in R with the function pnorm.\npnom(a, avg, s) gives the value of the cumculative distribution function F(a) for the normal distribution defined by average avg and standard deviation s.\nwe say that a random quantity is normally distributed with average avg and standard deviation s if the approximate pnorm(a, avg, s) holds for all values of a.\nIf we are willing to use the normal approximation for height, we can estimate the distribution simply from the mean and standard deviation of our values.\nIf we treat the height data as discrete rather than categorical, we see that the data are not very useful because integer values are more common that expected due to rounding. This is called discretization.\nWith rounded data, the normal approximation is particularly useful when computing probabilities of intervals of length 1 that include exactly over integer.\n\n\n\n2.9.2 Code: Using pnorm to calculate probabilities\nGiven male heights x:\n\n\nshow the code\nlibrary(tidyverse)\nlibrary(dslabs)\ndata(\"heights\")\nx <- heights %>% filter(sex==\"Male\") %>% pull(height)\n\n\nwe can estimate the probability that a male is taller than 70.5 inches with:\n\n\nshow the code\n1 - pnorm(70.5, mean(x), sd(x))\n\n\n\n\n2.9.3 Code: Discretization and the normal approximation\n\n\nshow the code\n# plot distribution of exact heights in data\nplot(prop.table(table(x)), xlab = \"a = Height in inches\", ylab = \"Pr(x = a)\")\n\n\n\n\n\n\n\nshow the code\n# probabilities in actual data over length 1 ranges containing a integer\nmean(x <= 68.5) - mean(x <= 67.5)\nmean(x <= 69.5) - mean(x <= 68.5)\nmean(x <= 70.5) - mean(x <= 69.5)\n\n# probabilities in normal approximation match well\npnorm(68.5, mean(x), sd(x)) - pnorm(67.5, mean(x), sd(x))\npnorm(69.5, mean(x), sd(x)) - pnorm(68.5, mean(x), sd(x))\npnorm(70.5, mean(x), sd(x)) - pnorm(69.5, mean(x), sd(x))\n\n# probabilities in actual data over other ranges don't match normal approx as well\nmean(x <= 70.9) - mean(x <= 70.1)\npnorm(70.9, mean(x), sd(x)) - pnorm(70.1, mean(x), sd(x))"
+    "section": "6.2 Code for student height:",
+    "text": "6.2 Code for student height:\n\n\nshow the code\n# example for student heights\na <- seq(min(heights$height), max(heights$height), length = 100)\ncdf_function <- function(x){\n  mean(heights$height <= x)\n}\ncdf_value <- sapply(a, cdf_function)\nplot(a, cdf_value)\n\n\n\n\n\nThe CDF defines that proportion of data below a cut-off a. To define the proportion of values above a, we compute: 1-F(a)\nTo define the proportion of values between a and b, we compute: F(b)-F(a)\nNote that the CDF can help compute probabilities. The probability of observing a randomly chosen value between a and b is equal to the proportion of values between a and b, which we compute with the CDF."
   },
   {
-    "objectID": "Datavisualization.html#definition-of-quantiles",
-    "href": "Datavisualization.html#definition-of-quantiles",
+    "objectID": "Datavisualization.html#key-point-2",
+    "href": "Datavisualization.html#key-point-2",
     "title": "Data Science: Data Visualization",
-    "section": "2.10 Definition of quantiles",
-    "text": "2.10 Definition of quantiles\n\n2.10.1 Definition of quantiles\nQuantiles are cut off points that divide a dataset into intervals with set probability. The qth quantile is the value at which q% of the observation are equal to or less than that value.\n\n\n2.10.2 Using the quantile function\nGiven a dataset data and desired quantile q, you can find the q the quantile of data with:\n\n\nshow the code\nquantile(data,q)\n\n\n\n\n2.10.3 Percentiles\nPercentiles are the quantiles that divide a dataset into 100 intervals each with 1% probability. You can determine all percentiles of a dataset data like this:\n\n\nshow the code\np <- seq(0.01, 0.09, 0.01)\nquantile(data, p)\n\n\n\n\n2.10.4 Quartiles\nQuartiles divide a dataset into 4 parts each with 25% probability. They are equal to the 25th, 50th and 75th percentiles. The 25th percentile is also known as the 1st quartile, the 50th percentile is also konwn as the median, and the 75th percentile is also knowns as the 3rd quartile.\nThe summary() function returns the minimum, quartiles and maximum of a vector.\n\n\n2.10.5 Examples\nLoad the heights dataset from the dslabs package:\n\n\nshow the code\nlibrary(dslabs)\ndata(\"heights\")\n\n\nUsesummaryon the heights$height variable to find the quartiles:\n\n\nshow the code\nsummary(heights$height)\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  50.00   66.00   68.50   68.32   71.00   82.68 \n\n\nFind the percentiles of height$height:\n\n\nshow the code\np <- seq(0.01, 0.99, 0.01)\npercentiles <- quantile(heights$height, p)\n\n\nConfirm that the 25th and 75th percentiles match that 1st and 3rd quartiles. Note that quantile() returns a named vector. You can access the 25th and 75th percentiles like this (adapt the code for other percentile value):\n\n\nshow the code\npercentiles[names(percentiles) == \"25%\"]\n\n\n25% \n 66 \n\n\nshow the code\npercentiles[names(percentiles) == \"75%\"]\n\n\n75% \n 71"
+    "section": "7.1 Key Point:",
+    "text": "7.1 Key Point:\n\n\n\n\n\n\nA further note on histograms\n\n\n\nThe choice of binwidth has a determinative effect on sharp. There is no “correct” choice for binwidth, and you can sometimes gain insights into the data by experimenting with binwidths.\n\n\n\nSmooth density plots can be thought of as histograms where the binwidth is extremely or infinitely small. The smoothing function makes estimates of the true continuous trend of the data given the available sample of data points.\nThe degree of smoothness can be controlled by an argument in the plotting function.\nWhile the histogram is an assumption-free summary, the smooth density plot is shaped by assumptions and choices you make as a data analyst.\nThe y-axis is scaled so that the area under the density curve sums to 1. This means that interpreting value on the y-axis is not straightforward. To determine the proportion of data in between two values, compute the area under the smooth density curve in the region between those values.\nAn advantage of smooth densities over histograms is that densities are easier to compare visually."
   },
   {
-    "objectID": "Datavisualization.html#finding-quantile-with-qnorm",
-    "href": "Datavisualization.html#finding-quantile-with-qnorm",
+    "objectID": "Datavisualization.html#key-points-1",
+    "href": "Datavisualization.html#key-points-1",
     "title": "Data Science: Data Visualization",
-    "section": "2.11 Finding quantile with qnorm",
-    "text": "2.11 Finding quantile with qnorm\n\n2.11.1 Definiton of qnorm\n简单来说,qnorm是正态分布累积分布函数(CDF)的反函数， 也就是说它可以视为pnorm的反函数, 这里q指的是quantile, 即分位数\nThe qnorm() function gives the theoretical value of a quantile with probability p of observing a value equal to or less than that quantile value a normal distribution with mean mu and standard deviation sigma:\n\n\nshow the code\nqnorm(p, mu, sigma)\n\n\nBy default, mu=0 and sigma=1. Therefore, calling qnorm() with no arguments gives quantiles for the standard normal distribution.\n\n\nshow the code\nqnorm(p)\n\n\nRecall that quantiles are defined such that p is the probability of a random observation less than or equal to the quantile.\n\n\n2.11.2 Relation to pnorm\nThe pnorm() function gives the probability that a value from a standard normal distribution will be less than or equal to the quantile.\n\n\n2.11.3 Realation to pnorm\nThe pnorm() function gives the probability that a value from a standard normal distribution will be less than or equal to a z-score value z. consider: pnorm(-1.96)\\approx0.025 The result of pnorm() is the quantile. Note that: qnorm(0.025)\\approx-1.96 qnorm() and pnorm are inverse functions: pnorm(qnorm(0.025))\\equiv0.025\n\n\n2.11.4 Theoretical quantiles\nYou can use qnorm() to determine the theoretical quantiles of a dataset: that is, the theoretical value of quantiles assuming that a dataset follows a normal distribution. Run the qnorm() function with the desired probabilities p, mean mu and standard deviation sigma.\nSuppose male heights follow a normal distribution with a mean of 69 inches and standard deviation of 3 inches. The theoretical quantiles are:\n\n\nshow the code\np <- seq(0.01, 0.99, 0.01)\ntheoretical_quantiles <- qnorm(p, 69, 3)\n\n\nTheoretical quantiles can be compared to sample quantiles determined with the quantile function in order to evaluate whether the sample follows a normal distribution."
+    "section": "8.1 Key Points:",
+    "text": "8.1 Key Points:\n\nThe normal distribution:\n\nis centered around one value, the mean\nis symmetric(对称) around the mean.\nis defined completely by its mean(\\mu) and standard deviation(\\sigma)\nAlways has the same proportion of observations within a given distance of the mean (for example, 95% with 2\\sigma)\n\nThe standard deviation is the average distance between a value and the mean value.\nCalculate the mean using the mean() function.\nCalculate the standard deviation using the sd() function or manually.\nStandard units describe how many standard deviations a value is away from the mean. The z-score, or number of standard deviation an observation is away from the mean \\mu:\n\n  z = (x-\\mu)/\\sigma\n  \nComputer standard units with the scale() function.\nImportant: to calculate the proportion of value that meet a certain condition, use the mean function on a logical vector. Because TRUE is converted to 1 and FALSE is converted to 0, taking the mean of this vector yields the proportion of TURE."
   },
   {
-    "objectID": "Datavisualization.html#quantile-quantile-plots",
-    "href": "Datavisualization.html#quantile-quantile-plots",
+    "objectID": "Datavisualization.html#equation-for-the-normal-distribution",
+    "href": "Datavisualization.html#equation-for-the-normal-distribution",
     "title": "Data Science: Data Visualization",
-    "section": "2.12 Quantile-Quantile Plots",
-    "text": "2.12 Quantile-Quantile Plots\n\n2.12.1 Key Points:\n\nQuantile-quantile plots, or QQ-plot, are used to check whether distributions are well-approximated by a normal distribution.\nGiven a proportion p, the quantile q is the value such that the proportion of values in the data blew q is p.\nIn a QQ-plot, the sample quantiles in the observed data are compared to the theoretical quantiles expected from the normal distribution. If the data are well-approximated by the normal distribution, then the points on the QQ-plot will fall near the identity line(sample = theoretical).\nCalculate sample quantiles (observed quantiles) using the quantile() function.\nCalculate theoretical quantiles with the qnorm() function. qnorm() will caculate quantiles for the standard normal distribution (\\mu=0, \\sigma=1) by default, but it can calculate quantiles for any normal distribution given mean() and sd() arguments.\n\n\n\n2.12.2 Code:\n\n\nshow the code\n# define x and z\nlibrary(tidyverse)\nlibrary(dslabs)\ndata(heights)\n\nindex <- heights$sex==\"Male\"\nx <- heights$height[index]\nz <- scale(x)\n\n# proportion of data below 69.5\nmean(x <= 69.5)\n\n\n[1] 0.5147783\n\n\nshow the code\n# calculate observed and theoretical quantiles\np <- seq(0.05, 0.95, 0.05)\nobserved_quantiles <- quantile(x, p)\ntheoretical_quantiles <- qnorm(p, mean = mean(x), sd = sd(x))\n\n# make QQ-plot\nplot(theoretical_quantiles, observed_quantiles)\nabline(0,1)\n\n\n\n\n\nshow the code\n# make QQ-plot with scaled values\nobserved_quantiles <- quantile(z, p)\ntheoretical_quantiles <- qnorm(p)\nplot(theoretical_quantiles, observed_quantiles)\nabline(0,1)"
+    "section": "8.2 Equation for the normal distribution",
+    "text": "8.2 Equation for the normal distribution\nThe normal distribution is mathematically defined by the following formula for any mean \\mu and standard deviation \\sigma:\n\nPr(a < x < b) = \\int_{a}^b\\frac{1}{\\sqrt{2\\pi\\mu}}{e}^{-\\frac{1}{2}(\\frac{x-\\mu^2}{\\sigma})}dx\n\nWhen standard unites z=0, the normal distribution is at a maximum, the mean \\mu. The function is defined to be symmetric around z=0.\nThe normal distribution of z-score is called the standard normal distribution and is defined by \\mu=0 and \\sigma=1.\nZ-score are useful to quickly evalute whether an observation is average or extreme. Z-scores near 0 are average. Z-score above 2 or below -2 are significantly above or blew the mean, and z-scores above 3 or below -3 are extrmely rate."
+  },
+  {
+    "objectID": "Datavisualization.html#code-2",
+    "href": "Datavisualization.html#code-2",
+    "title": "Data Science: Data Visualization",
+    "section": "8.3 Code:",
+    "text": "8.3 Code:\n\n\nshow the code\n# define x as vector of male heights\nlibrary(tidyverse)\nlibrary(dslabs)\ndata(heights)\nindex <- heights$sex==\"Male\"\nx <- heights$height[index]\n\n# calculate the mean and standard deviation manually\naverage <- sum(x)/length(x)\nSD <- sqrt(sum((x-average)^2)/length(x))\n\n# built-in mean and sd functions - note that the audio and printed value disagree\naverage <- mean(x)\nSD <- sd(x)\nc(average = average, SD = SD)\n\n# calculate standard units\nz <- scale(x)\n\n# calculate proportion of value within 2 SD of mean\nmean(abs(z) < 2)\n\n\nfunction sd():The built-in R function sd() calculates the standard deviation, but it divides by length(x)-1 instead of length(x). When the length of the list is large, this difference is negligible and you can use the built-in sd() function. Otherwise, you should compute σ by hand. For this course series, assume that you should use the sd() function unless you are told not to do so.\nHere we will learn more about benchmark z-score value and their corresponding probabilities."
+  },
+  {
+    "objectID": "Datavisualization.html#the-68-95-99.7-rule",
+    "href": "Datavisualization.html#the-68-95-99.7-rule",
+    "title": "Data Science: Data Visualization",
+    "section": "8.4 The 68-95-99.7 Rule",
+    "text": "8.4 The 68-95-99.7 Rule\nThe normal distribution is associated with the 68-95-99.7 rule. This rule describes the probability of observing events within a ceration number of standard deviations of the mean.\n\n\n\nNormal Distribution Probabilities\n\n\nThe probability distribution function for the normal distribution is defined such that:\n\nAbout 68% of observations will be within one standard deviation of the mean(\\mu\\pm\\sigma). In standard units, this is equivalent to a z-score of |z|\\leq2\n\n\n\n\nProbability of an observation within 1 SD of mean\n\n\n\nAbout 95% of observations will be within two standard seviations of the mean(\\mu\\pm2\\sigma). In standard units, this is equivalent to a z-sore of |z|\\leq2.\n\n\n\n\nProbability of an ovservation within 2 SD of mean\n\n\n\nAbout 99.7% of observations will be within three standard deviations of the mean(\\mu\\pm3\\sigma). In standard units, this is equivalent to a z-score of |z|\\leq3.\n\n\n\n\nProbability of an observation within 3 SD of mean"
+  },
+  {
+    "objectID": "Datavisualization.html#key-points-2",
+    "href": "Datavisualization.html#key-points-2",
+    "title": "Data Science: Data Visualization",
+    "section": "9.1 Key points:",
+    "text": "9.1 Key points:\n\nThe normal distribution has a mathematically defined CDF which can be computed in R with the function pnorm.\npnom(a, avg, s) gives the value of the cumculative distribution function F(a) for the normal distribution defined by average avg and standard deviation s.\nwe say that a random quantity is normally distributed with average avg and standard deviation s if the approximate pnorm(a, avg, s) holds for all values of a.\nIf we are willing to use the normal approximation for height, we can estimate the distribution simply from the mean and standard deviation of our values.\nIf we treat the height data as discrete rather than categorical, we see that the data are not very useful because integer values are more common that expected due to rounding. This is called discretization.\nWith rounded data, the normal approximation is particularly useful when computing probabilities of intervals of length 1 that include exactly over integer."
+  },
+  {
+    "objectID": "Datavisualization.html#code-using-pnorm-to-calculate-probabilities",
+    "href": "Datavisualization.html#code-using-pnorm-to-calculate-probabilities",
+    "title": "Data Science: Data Visualization",
+    "section": "9.2 Code: Using pnorm to calculate probabilities",
+    "text": "9.2 Code: Using pnorm to calculate probabilities\nGiven male heights x:\n\n\nshow the code\nlibrary(tidyverse)\nlibrary(dslabs)\ndata(\"heights\")\nx <- heights %>% filter(sex==\"Male\") %>% pull(height)\n\n\nwe can estimate the probability that a male is taller than 70.5 inches with:\n\n\nshow the code\n1 - pnorm(70.5, mean(x), sd(x))"
+  },
+  {
+    "objectID": "Datavisualization.html#code-discretization-and-the-normal-approximation",
+    "href": "Datavisualization.html#code-discretization-and-the-normal-approximation",
+    "title": "Data Science: Data Visualization",
+    "section": "9.3 Code: Discretization and the normal approximation",
+    "text": "9.3 Code: Discretization and the normal approximation\n\n\nshow the code\n# plot distribution of exact heights in data\nplot(prop.table(table(x)), xlab = \"a = Height in inches\", ylab = \"Pr(x = a)\")\n\n\n\n\n\n\n\nshow the code\n# probabilities in actual data over length 1 ranges containing a integer\nmean(x <= 68.5) - mean(x <= 67.5)\nmean(x <= 69.5) - mean(x <= 68.5)\nmean(x <= 70.5) - mean(x <= 69.5)\n\n# probabilities in normal approximation match well\npnorm(68.5, mean(x), sd(x)) - pnorm(67.5, mean(x), sd(x))\npnorm(69.5, mean(x), sd(x)) - pnorm(68.5, mean(x), sd(x))\npnorm(70.5, mean(x), sd(x)) - pnorm(69.5, mean(x), sd(x))\n\n# probabilities in actual data over other ranges don't match normal approx as well\nmean(x <= 70.9) - mean(x <= 70.1)\npnorm(70.9, mean(x), sd(x)) - pnorm(70.1, mean(x), sd(x))"
+  },
+  {
+    "objectID": "Datavisualization.html#definition-of-quantiles-1",
+    "href": "Datavisualization.html#definition-of-quantiles-1",
+    "title": "Data Science: Data Visualization",
+    "section": "10.1 Definition of quantiles",
+    "text": "10.1 Definition of quantiles\nQuantiles are cut off points that divide a dataset into intervals with set probability. The qth quantile is the value at which q% of the observation are equal to or less than that value."
+  },
+  {
+    "objectID": "Datavisualization.html#using-the-quantile-function",
+    "href": "Datavisualization.html#using-the-quantile-function",
+    "title": "Data Science: Data Visualization",
+    "section": "10.2 Using the quantile function",
+    "text": "10.2 Using the quantile function\nGiven a dataset data and desired quantile q, you can find the q the quantile of data with:\n\n\nshow the code\nquantile(data,q)"
+  },
+  {
+    "objectID": "Datavisualization.html#percentiles",
+    "href": "Datavisualization.html#percentiles",
+    "title": "Data Science: Data Visualization",
+    "section": "10.3 Percentiles",
+    "text": "10.3 Percentiles\nPercentiles are the quantiles that divide a dataset into 100 intervals each with 1% probability. You can determine all percentiles of a dataset data like this:\n\n\nshow the code\np <- seq(0.01, 0.09, 0.01)\nquantile(data, p)"
+  },
+  {
+    "objectID": "Datavisualization.html#quartiles",
+    "href": "Datavisualization.html#quartiles",
+    "title": "Data Science: Data Visualization",
+    "section": "10.4 Quartiles",
+    "text": "10.4 Quartiles\nQuartiles divide a dataset into 4 parts each with 25% probability. They are equal to the 25th, 50th and 75th percentiles. The 25th percentile is also known as the 1st quartile, the 50th percentile is also konwn as the median, and the 75th percentile is also knowns as the 3rd quartile.\nThe summary() function returns the minimum, quartiles and maximum of a vector."
+  },
+  {
+    "objectID": "Datavisualization.html#examples",
+    "href": "Datavisualization.html#examples",
+    "title": "Data Science: Data Visualization",
+    "section": "10.5 Examples",
+    "text": "10.5 Examples\nLoad the heights dataset from the dslabs package:\n\n\nshow the code\nlibrary(dslabs)\ndata(\"heights\")\n\n\nUsesummaryon the heights$height variable to find the quartiles:\n\n\nshow the code\nsummary(heights$height)\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  50.00   66.00   68.50   68.32   71.00   82.68 \n\n\nFind the percentiles of height$height:\n\n\nshow the code\np <- seq(0.01, 0.99, 0.01)\npercentiles <- quantile(heights$height, p)\n\n\nConfirm that the 25th and 75th percentiles match that 1st and 3rd quartiles. Note that quantile() returns a named vector. You can access the 25th and 75th percentiles like this (adapt the code for other percentile value):\n\n\nshow the code\npercentiles[names(percentiles) == \"25%\"]\n\n\n25% \n 66 \n\n\nshow the code\npercentiles[names(percentiles) == \"75%\"]\n\n\n75% \n 71"
+  },
+  {
+    "objectID": "Datavisualization.html#definiton-of-qnorm",
+    "href": "Datavisualization.html#definiton-of-qnorm",
+    "title": "Data Science: Data Visualization",
+    "section": "11.1 Definiton of qnorm",
+    "text": "11.1 Definiton of qnorm\n简单来说,qnorm是正态分布累积分布函数(CDF)的反函数， 也就是说它可以视为pnorm的反函数, 这里q指的是quantile, 即分位数\nThe qnorm() function gives the theoretical value of a quantile with probability p of observing a value equal to or less than that quantile value a normal distribution with mean mu and standard deviation sigma:\n\n\nshow the code\nqnorm(p, mu, sigma)\n\n\nBy default, mu=0 and sigma=1. Therefore, calling qnorm() with no arguments gives quantiles for the standard normal distribution.\n\n\nshow the code\nqnorm(p)\n\n\nRecall that quantiles are defined such that p is the probability of a random observation less than or equal to the quantile."
+  },
+  {
+    "objectID": "Datavisualization.html#realation-to-pnorm",
+    "href": "Datavisualization.html#realation-to-pnorm",
+    "title": "Data Science: Data Visualization",
+    "section": "11.2 Realation to pnorm",
+    "text": "11.2 Realation to pnorm\nThe pnorm() function gives the probability that a value from a standard normal distribution will be less than or equal to a z-score value z. consider: pnorm(-1.96)\\approx0.025 The result of pnorm() is the quantile. Note that: qnorm(0.025)\\approx-1.96 qnorm() and pnorm are inverse functions: pnorm(qnorm(0.025))\\equiv0.025"
+  },
+  {
+    "objectID": "Datavisualization.html#theoretical-quantiles",
+    "href": "Datavisualization.html#theoretical-quantiles",
+    "title": "Data Science: Data Visualization",
+    "section": "11.3 Theoretical quantiles",
+    "text": "11.3 Theoretical quantiles\nYou can use qnorm() to determine the theoretical quantiles of a dataset: that is, the theoretical value of quantiles assuming that a dataset follows a normal distribution. Run the qnorm() function with the desired probabilities p, mean mu and standard deviation sigma.\nSuppose male heights follow a normal distribution with a mean of 69 inches and standard deviation of 3 inches. The theoretical quantiles are:\n\n\nshow the code\np <- seq(0.01, 0.99, 0.01)\ntheoretical_quantiles <- qnorm(p, 69, 3)\n\n\nTheoretical quantiles can be compared to sample quantiles determined with the quantile function in order to evaluate whether the sample follows a normal distribution."
+  },
+  {
+    "objectID": "Datavisualization.html#key-points-3",
+    "href": "Datavisualization.html#key-points-3",
+    "title": "Data Science: Data Visualization",
+    "section": "12.1 Key Points:",
+    "text": "12.1 Key Points:\n\nQuantile-quantile plots, or QQ-plot, are used to check whether distributions are well-approximated by a normal distribution.\nGiven a proportion p, the quantile q is the value such that the proportion of values in the data blew q is p.\nIn a QQ-plot, the sample quantiles in the observed data are compared to the theoretical quantiles expected from the normal distribution. If the data are well-approximated by the normal distribution, then the points on the QQ-plot will fall near the identity line(sample = theoretical).\nCalculate sample quantiles (observed quantiles) using the quantile() function.\nCalculate theoretical quantiles with the qnorm() function. qnorm() will caculate quantiles for the standard normal distribution (\\mu=0, \\sigma=1) by default, but it can calculate quantiles for any normal distribution given mean() and sd() arguments."
+  },
+  {
+    "objectID": "Datavisualization.html#code-3",
+    "href": "Datavisualization.html#code-3",
+    "title": "Data Science: Data Visualization",
+    "section": "12.2 Code:",
+    "text": "12.2 Code:\n\n\nshow the code\n# define x and z\nlibrary(tidyverse)\nlibrary(dslabs)\ndata(heights)\n\nindex <- heights$sex==\"Male\"\nx <- heights$height[index]\nz <- scale(x)\n\n# proportion of data below 69.5\nmean(x <= 69.5)\n\n\n[1] 0.5147783\n\n\nshow the code\n# calculate observed and theoretical quantiles\np <- seq(0.05, 0.95, 0.05)\nobserved_quantiles <- quantile(x, p)\ntheoretical_quantiles <- qnorm(p, mean = mean(x), sd = sd(x))\n\n# make QQ-plot\nplot(theoretical_quantiles, observed_quantiles)\nabline(0,1)\n\n\n\n\n\nshow the code\n# make QQ-plot with scaled values\nobserved_quantiles <- quantile(z, p)\ntheoretical_quantiles <- qnorm(p)\nplot(theoretical_quantiles, observed_quantiles)\nabline(0,1)"
   },
   {
     "objectID": "Graph.html",
