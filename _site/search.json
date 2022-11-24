@@ -224,6 +224,20 @@
     "text": "12.2 Code:\n\n\nshow the code\n# define x and z\nlibrary(tidyverse)\nlibrary(dslabs)\ndata(heights)\n\nindex <- heights$sex==\"Male\"\nx <- heights$height[index]\nz <- scale(x)\n\n# proportion of data below 69.5\nmean(x <= 69.5)\n\n\n[1] 0.5147783\n\n\nshow the code\n# calculate observed and theoretical quantiles\np <- seq(0.05, 0.95, 0.05)\nobserved_quantiles <- quantile(x, p)\ntheoretical_quantiles <- qnorm(p, mean = mean(x), sd = sd(x))\n\n# make QQ-plot\nplot(theoretical_quantiles, observed_quantiles)\nabline(0,1)\n\n\n\n\n\nshow the code\n# make QQ-plot with scaled values\nobserved_quantiles <- quantile(z, p)\ntheoretical_quantiles <- qnorm(p)\nplot(theoretical_quantiles, observed_quantiles)\nabline(0,1)"
   },
   {
+    "objectID": "Datavisualization.html#key-points-4",
+    "href": "Datavisualization.html#key-points-4",
+    "title": "Data Science: Data Visualization",
+    "section": "13.1 Key Points:",
+    "text": "13.1 Key Points:\n\nPercentiles are the quantiles obtained when defining p as 0.01, 0.02,…,0.99. They summarize the values at which a certain percent of the observations are equal to or less than that value.\nThe 50th percentile is also known as the median.\nThe quartiles are the 25th, 50th and 75th percentiles."
+  },
+  {
+    "objectID": "Datavisualization.html#key-points-5",
+    "href": "Datavisualization.html#key-points-5",
+    "title": "Data Science: Data Visualization",
+    "section": "14.1 Key Points:",
+    "text": "14.1 Key Points:\n\nWhen data do not follow a normal distribution and cannot be succinctly summarized by only the mean and standard deviation, an alternative is to report a five-number summary: range (ignoring outliers) and the quartiles (25th, 50th, 75th percentile).\nIn a boxplot, the box is defined by the 25th and 75th percentiles and the median is a horizontal line through the box. The whiskers show the range excluding outliers, and outliers are plotted separately as individual points.\nThe interquartile range is the distance between the 25th and 75th percentiles.\nBoxplots are particularly useful when comparing multiple distributions."
+  },
+  {
     "objectID": "Graph.html",
     "href": "Graph.html",
     "title": "R graph",

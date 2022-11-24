@@ -487,6 +487,29 @@ plot(theoretical_quantiles, observed_quantiles)
 abline(0,1)
 ```
 
+# Percentiles
+
+## Key Points:
+
+- Percentiles are the quantiles obtained when defining $p$ as 0.01, 0.02,...,0.99. They summarize the values at which a certain percent of the observations are equal to or less than that value.
+
+- The 50th percentile is also known as the median.
+
+- The quartiles are the 25th, 50th and 75th percentiles.
+
+# Boxplots
+[R语言如何绘制[箱线图](https://zhuanlan.zhihu.com/p/440914623)]{.aside}
+
+## Key Points:
+
+- When data do not follow a normal distribution and cannot be succinctly summarized by only the mean and standard deviation, an alternative is to report a five-number summary: range (ignoring outliers) and the quartiles (25th, 50th, 75th percentile).
+
+- In a [boxplot](https://www.youtube.com/watch?v=INSIyaZUXIY&ab_channel=DATAtab), the box is defined by the *25th* and *75th* percentiles and the *median* is ***a horizontal line through the box***. The *whiskers* show ***the range excluding outliers***, and outliers are plotted separately as individual points.
+
+- The *interquartile range* is the distance between the 25th and 75th percentiles.
+
+- Boxplots are particularly useful when comparing *multiple distributions*.
+
 
 
 

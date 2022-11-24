@@ -283,6 +283,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#key-points-3" id="toc-key-points-3" class="nav-link" data-scroll-target="#key-points-3"><span class="toc-section-number">12.1</span>  Key Points:</a></li>
   <li><a href="#code-3" id="toc-code-3" class="nav-link" data-scroll-target="#code-3"><span class="toc-section-number">12.2</span>  Code:</a></li>
   </ul></li>
+  <li><a href="#percentiles-1" id="toc-percentiles-1" class="nav-link" data-scroll-target="#percentiles-1"><span class="toc-section-number">13</span>  Percentiles</a>
+  <ul class="collapse">
+  <li><a href="#key-points-4" id="toc-key-points-4" class="nav-link" data-scroll-target="#key-points-4"><span class="toc-section-number">13.1</span>  Key Points:</a></li>
+  </ul></li>
+  <li><a href="#boxplots" id="toc-boxplots" class="nav-link" data-scroll-target="#boxplots"><span class="toc-section-number">14</span>  Boxplots</a>
+  <ul class="collapse">
+  <li><a href="#key-points-5" id="toc-key-points-5" class="nav-link" data-scroll-target="#key-points-5"><span class="toc-section-number">14.1</span>  Key Points:</a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -911,6 +919,30 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <p><img src="Datavisualization_files/figure-html/unnamed-chunk-21-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+</section>
+</section>
+<section id="percentiles-1" class="level1" data-number="13">
+<h1 data-number="13"><span class="header-section-number">13</span> Percentiles</h1>
+<section id="key-points-4" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="key-points-4"><span class="header-section-number">13.1</span> Key Points:</h2>
+<ul>
+<li><p>Percentiles are the quantiles obtained when defining <span class="math inline">p</span> as 0.01, 0.02,…,0.99. They summarize the values at which a certain percent of the observations are equal to or less than that value.</p></li>
+<li><p>The 50th percentile is also known as the median.</p></li>
+<li><p>The quartiles are the 25th, 50th and 75th percentiles.</p></li>
+</ul>
+</section>
+</section>
+<section id="boxplots" class="level1 page-columns page-full" data-number="14">
+<h1 data-number="14"><span class="header-section-number">14</span> Boxplots</h1>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">R语言如何绘制<a href="https://zhuanlan.zhihu.com/p/440914623">箱线图</a></span></div></div>
+<section id="key-points-5" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="key-points-5"><span class="header-section-number">14.1</span> Key Points:</h2>
+<ul>
+<li><p>When data do not follow a normal distribution and cannot be succinctly summarized by only the mean and standard deviation, an alternative is to report a five-number summary: range (ignoring outliers) and the quartiles (25th, 50th, 75th percentile).</p></li>
+<li><p>In a <a href="https://www.youtube.com/watch?v=INSIyaZUXIY&amp;ab_channel=DATAtab">boxplot</a>, the box is defined by the <em>25th</em> and <em>75th</em> percentiles and the <em>median</em> is <strong><em>a horizontal line through the box</em></strong>. The <em>whiskers</em> show <strong><em>the range excluding outliers</em></strong>, and outliers are plotted separately as individual points.</p></li>
+<li><p>The <em>interquartile range</em> is the distance between the 25th and 75th percentiles.</p></li>
+<li><p>Boxplots are particularly useful when comparing <em>multiple distributions</em>.</p></li>
+</ul>
 
 
 </section>
