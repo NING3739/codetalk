@@ -20,29 +20,29 @@ In the world of Big Data, data visualization tools and technologies are essentia
 
 After completing this section, we will:
 
-- understand the importance of data visualization for communicating data-driven findings.
+-   understand the importance of data visualization for communicating data-driven findings.
 
-- be able to use distributions to summarize data.
+-   be able to use distributions to summarize data.
 
-- be able to use the average and the standard deviation to understand the normal distribution
+-   be able to use the average and the standard deviation to understand the normal distribution
 
-- be able to access how well a normal distribution fit the data using a quantile-quantile plot.
+-   be able to access how well a normal distribution fit the data using a quantile-quantile plot.
 
-- be able to interpret data from a box plot
+-   be able to interpret data from a box plot
 
-# Introduction to Data Visualization
+## Introduction to Data Visualization
 
-## Key Point:
+### Key Point:
 
-- Plots of data easily communicate information that is difficult to extract from table of raw values.
+-   Plots of data easily communicate information that is difficult to extract from table of raw values.
 
-- Data visualization is a key component of exploratory data analysis (EDA), in which the properties of data are explored through visualization and summarization techniques.
+-   Data visualization is a key component of exploratory data analysis (EDA), in which the properties of data are explored through visualization and summarization techniques.
 
-- Data visualization can help discover biases, systematic errors, mistakes and other unexpected problems in data before those data are incorporated into potentially flawed analysis.
+-   Data visualization can help discover biases, systematic errors, mistakes and other unexpected problems in data before those data are incorporated into potentially flawed analysis.
 
-- Basics of data visualization and EDA will be covered in R by using the ggplot2 package and motivating examples from world health, economics and infections disease.
+-   Basics of data visualization and EDA will be covered in R by using the ggplot2 package and motivating examples from world health, economics and infections disease.
 
-## Code:
+### Code:
 
 ```{r}
 library(dslabs)
@@ -50,50 +50,50 @@ data(murders)
 head(murders)
 ```
 
-# Introduction to Distributions
+## Introduction to Distributions
 
-## Key Points:
+### Key Points:
 
 [[(**Variance/Deviation Var**)方差](https://baike.baidu.com/item/方差/3108412): 方差越大，数据的波动越大；方差越小，数据的波动就越小。]{.aside}
 
 [[(**Standard Deviation**)标准差](https://baike.baidu.com/item/标准差/1415772): 方差开根号。]{.aside}
 
-- The most basic statistical summary of a list of object is its distribution.
+-   The most basic statistical summary of a list of object is its distribution.
 
-- We will learn ways to visualize and analyze distributions in the upcoming videos.
+-   We will learn ways to visualize and analyze distributions in the upcoming videos.
 
-- In some cases, data can be summarized by two-number summary: the average and standard deviation.I will learn to use data visualization to determine when that is appropriate.
+-   In some cases, data can be summarized by two-number summary: the average and standard deviation.I will learn to use data visualization to determine when that is appropriate.
 
-## Data Types
+### Data Types
 
 In R, there are [6 basic data types](https://www.programiz.com/r/data-types):
 
-- `logical`
+-   `logical`
 
-- `numeric`
+-   `numeric`
 
-- `integer`
+-   `integer`
 
-- `complex`
+-   `complex`
 
-- `character`
+-   `character`
 
-- `raw`
+-   `raw`
 
 ::: callout-important
 Categorical data are variables that are defined by a small number of groups.
 
-- Ordinal categorical data have an inherent order to the categories (mild/medium/hot, for example).
+-   Ordinal categorical data have an inherent order to the categories (mild/medium/hot, for example).
 
-- Non-ordinal categorical data have no order to the categories.
+-   Non-ordinal categorical data have no order to the categories.
 :::
 
 ::: callout-important
 Numerical data take a variety of numeric values.
 
-- Continuous variables can take any value.
+-   Continuous variables can take any value.
 
-- Discrete variables are limited to sets of specific values.
+-   Discrete variables are limited to sets of specific values.
 :::
 
 ```{mermaid}
@@ -106,7 +106,7 @@ flowchart LR
   C{Numeric} --> G[discrete]
 ```
 
-## Exercise
+### Exercise
 
 ```{r, eval=FALSE}
 # extract the variable names from a dataset
@@ -121,19 +121,19 @@ length(unique(x))
 table(x)
 ```
 
-# Describe Heights to ET
+## Describe Heights to ET
 
-## key point:
+### key point:
 
-- A distribution is a function or description that shows the possible values of a variable and how often those values occur.
+-   A distribution is a function or description that shows the possible values of a variable and how often those values occur.
 -   For categorical variables, the distribution describes the proportions of each category.
-- A *frequency table* is the simplest way to show a categorical distribution. Use `prop.table()` to convert a table of counts to a frequency table. *Barplots* display the distribution of categorical variables and are a way to visualize the information in frequency tables.
-- For continuous numerical data, reporting the frequency of each unique entry is not an effective summary as many or most values are unique. Instead, a distribution function is required.
-- The [*cumulative distribution function (CDF)*](https://en.wikipedia.org/wiki/Cumulative_distribution_function) is a function that reports the proportion of data below a value $a$ for all values of $a$ :$F(a)=Pr(x≤a)$.
-- The proportion of observations between any two values $a$ and $b$ can be computed from the CDF as $F(b)-F(a)$.
-- A *histogram* divides data into non-overlapping bins of the same size and plots the counts of number of values that fall in that interval.
+-   A *frequency table* is the simplest way to show a categorical distribution. Use `prop.table()` to convert a table of counts to a frequency table. *Barplots* display the distribution of categorical variables and are a way to visualize the information in frequency tables.
+-   For continuous numerical data, reporting the frequency of each unique entry is not an effective summary as many or most values are unique. Instead, a distribution function is required.
+-   The [*cumulative distribution function (CDF)*](https://en.wikipedia.org/wiki/Cumulative_distribution_function) is a function that reports the proportion of data below a value $a$ for all values of $a$ :$F(a)=Pr(x≤a)$.
+-   The proportion of observations between any two values $a$ and $b$ can be computed from the CDF as $F(b)-F(a)$.
+-   A *histogram* divides data into non-overlapping bins of the same size and plots the counts of number of values that fall in that interval.
 
-## Code:
+### Code:
 
 [R 语言学习 - [`table()`](https://blog.csdn.net/wlt9037/article/details/76570155 "table()结果提取") 结果提取.]{.aside}
 
@@ -145,7 +145,7 @@ data(heights)
 prop.table(table(heights$sex))
 ```
 
-# Cumulative Distribution Function
+## Cumulative Distribution Function
 
 Every *continuous distribution* has *cumulative distribution function (CDF)*. The CDF defines the proportion of the data below a given value for all values of $a$ :
 
@@ -159,7 +159,7 @@ For datasets that are not normal, the CDF can be calculated manually by defining
 
 [R语言中的[\[`apply()`\]，\[`lapply()`\]，\[`sapply()`\]，`tapply()`](https://www.jianshu.com/p/59fb24ca2ea7)函数以及示例]{.aside}
 
-## Code for CDF:
+### Code for CDF:
 
 ```{r, eval=FALSE}
 # Cumulative Distribution Function 
@@ -171,7 +171,7 @@ cdf_values <- sapply(a, cdf_function)
 plot(a, cdf_values)
 ```
 
-## Code for student height:
+### Code for student height:
 
 ```{r}
 # example for student heights
@@ -189,52 +189,52 @@ To define the proportion of values between $a$ and $b$, we compute: $F(b)-F(a)$
 
 Note that the CDF can help compute probabilities. The probability of observing a randomly chosen value between $a$ and $b$ is equal to the proportion of values between $a$ and $b$, which we compute with the CDF.
 
-# Smooth Density Plots
+## Smooth Density Plots
 
-## Key Point:
+### Key Point:
 
 ::: callout-note
-## A further note on histograms
+### A further note on histograms
 
 The choice of binwidth has a determinative effect on sharp. There is no "correct" choice for binwidth, and you can sometimes gain insights into the data by experimenting with binwidths.
 :::
 
-- *Smooth density plots* can be thought of as ***histograms where the binwidth is extremely or infinitely small***. The smoothing function makes estimates of the true continuous trend of the data given the available sample of data points.
+-   *Smooth density plots* can be thought of as ***histograms where the binwidth is extremely or infinitely small***. The smoothing function makes estimates of the true continuous trend of the data given the available sample of data points.
 
-- The degree of smoothness can be controlled by an argument in the plotting function.
+-   The degree of smoothness can be controlled by an argument in the plotting function.
 
-- While the histogram is an assumption-free summary, the smooth density plot is shaped by assumptions and choices you make as a data analyst.
+-   While the histogram is an assumption-free summary, the smooth density plot is shaped by assumptions and choices you make as a data analyst.
 
-- ***The y-axis is scaled so that the area under the density curve sums to 1.*** <!--#这是因为Y轴表示的是区间内的变量占总体的比重。 所有区间相加等于1。-->This means that interpreting value on the y-axis is not straightforward. To determine the proportion of data in between two values, compute the area under the smooth density curve in the region between those values.
+-   ***The y-axis is scaled so that the area under the density curve sums to 1.*** <!--#这是因为Y轴表示的是区间内的变量占总体的比重。 所有区间相加等于1。-->This means that interpreting value on the y-axis is not straightforward. To determine the proportion of data in between two values, compute the area under the smooth density curve in the region between those values.
 
-- An advantage of smooth densities over histograms is that ***densities are easier to compare visually***.
+-   An advantage of smooth densities over histograms is that ***densities are easier to compare visually***.
 
-# Normal Distribution
+## Normal Distribution
 
-## Key Points:
+### Key Points:
 
-- [The normal distribution](https://www.youtube.com/watch?v=xI9ZHGOSaCg&ab_channel=AceTutors):
+-   [The normal distribution](https://www.youtube.com/watch?v=xI9ZHGOSaCg&ab_channel=AceTutors):
 
-    - is ***centered around*** one value, the ***mean***
-    - is ***symmetric(对称)*** around the mean.
-    - is defined completely by its ***mean(***$\mu$**)** and ***standard deviation(***$\sigma$**)**
-    - ***Always has the same proportion*** of observations ***within a given distance*** of the mean (for example, 95% with 2$\sigma$)
+    -   is ***centered around*** one value, the ***mean***
+    -   is ***symmetric(对称)*** around the mean.
+    -   is defined completely by its ***mean(***$\mu$**)** and ***standard deviation(***$\sigma$**)**
+    -   ***Always has the same proportion*** of observations ***within a given distance*** of the mean (for example, 95% with 2$\sigma$)
 
-- The standard deviation is the ***average distance between a value and the mean value***.
+-   The standard deviation is the ***average distance between a value and the mean value***.
 
-- Calculate the mean using the ***`mean()`*** function.
+-   Calculate the mean using the ***`mean()`*** function.
 
-- Calculate the standard deviation using the ***`sd()`*** function or manually.
+-   Calculate the standard deviation using the ***`sd()`*** function or manually.
 
-- ***Standard units*** describe how many standard deviations a value is away from the mean. The z-score, or number of standard deviation an observation is away from the mean $\mu$:
+-   ***Standard units*** describe how many standard deviations a value is away from the mean. The z-score, or number of standard deviation an observation is away from the mean $\mu$:
 
     $$
-    z = (x-\mu)/\sigma
-    $$
+      z = (x-\mu)/\sigma
+      $$
 
-- Computer standard units with the `scale()` function.
+-   Computer standard units with the `scale()` function.
 
-- ***Important:*** to calculate the proportion of value that meet a certain condition, use the `mean` function on a logical vector. Because `TRUE` is converted to 1 and `FALSE` is converted to 0, taking the mean of this vector yields the proportion of `TURE`.
+-   ***Important:*** to calculate the proportion of value that meet a certain condition, use the `mean` function on a logical vector. Because `TRUE` is converted to 1 and `FALSE` is converted to 0, taking the mean of this vector yields the proportion of `TURE`.
 
 ## Equation for the normal distribution
 
@@ -250,7 +250,7 @@ The normal distribution of z-score is called the *standard normal distribution* 
 
 Z-score are useful to quickly evalute whether an observation is average or extreme. Z-scores near 0 are average. Z-score above 2 or below -2 are ***significantly above or blew the mean***, and z-scores above 3 or below -3 are ***extrmely rate***.
 
-## Code:
+### Code:
 
 ```{r, output=FALSE}
 # define x as vector of male heights
@@ -280,7 +280,7 @@ mean(abs(z) < 2)
 
 Here we will learn more about benchmark z-score value and their corresponding probabilities.
 
-## The 68-95-99.7 Rule
+### The 68-95-99.7 Rule
 
 The normal distribution is associated with the 68-95-99.7 rule. This rule describes the probability of observing events within a ceration number of standard deviations of the mean.
 
@@ -288,35 +288,35 @@ The normal distribution is associated with the 68-95-99.7 rule. This rule descri
 
 The probability distribution function for the normal distribution is defined such that:
 
-- About 68% of observations will be within one standard deviation of the mean($\mu\pm\sigma$). In standard units, this is equivalent to a z-score of $|z|\leq2$
+-   About 68% of observations will be within one standard deviation of the mean($\mu\pm\sigma$). In standard units, this is equivalent to a z-score of $|z|\leq2$
 
 ![Probability of an observation within 1 SD of mean](https://courses.edx.org/assets/courseware/v1/f0bb9f66b7bdd91b2c9852c7a68427c7/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-1sd.png)
 
-- About 95% of observations will be within two standard seviations of the mean($\mu\pm2\sigma$). In standard units, this is equivalent to a z-sore of $|z|\leq2$.
+-   About 95% of observations will be within two standard seviations of the mean($\mu\pm2\sigma$). In standard units, this is equivalent to a z-sore of $|z|\leq2$.
 
 ![Probability of an ovservation within 2 SD of mean](https://courses.edx.org/assets/courseware/v1/9686a507a97a536a1f5c6b6a01bd8154/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-2sd.png)
 
-- About 99.7% of observations will be within three standard deviations of the mean($\mu\pm3\sigma$). In standard units, this is equivalent to a z-score of $|z|\leq3$.
+-   About 99.7% of observations will be within three standard deviations of the mean($\mu\pm3\sigma$). In standard units, this is equivalent to a z-score of $|z|\leq3$.
 
 ![Probability of an observation within 3 SD of mean](https://courses.edx.org/assets/courseware/v1/a8af7c699c20d1e83819b5f68bf6f17d/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-3sd.png)
 
-# The Normal CDF and pnorm
+## The Normal CDF and pnorm
 
-## Key points:
+### Key points:
 
--  The normal distribution has a mathematically defined CDF which can be computed in R with the function `pnorm`. 
+-   The normal distribution has a mathematically defined CDF which can be computed in R with the function `pnorm`.
 
--  `pnom(a, avg, s)` gives the value of the cumculative distribution function *F(a)* for the normal distribution defined by average *avg* and standard deviation *s*.
+-   `pnom(a, avg, s)` gives the value of the cumculative distribution function *F(a)* for the normal distribution defined by average *avg* and standard deviation *s*.
 
--  we say that a random quantity is normally distributed with average *avg* and standard deviation *s* if the approximate *pnorm(a, avg, s)* holds for all values of *a*.
+-   we say that a random quantity is normally distributed with average *avg* and standard deviation *s* if the approximate *pnorm(a, avg, s)* holds for all values of *a*.
 
--  If we are willing to use the normal approximation for height, we can estimate the distribution simply from the mean and standard deviation of our values.
+-   If we are willing to use the normal approximation for height, we can estimate the distribution simply from the mean and standard deviation of our values.
 
--  If we treat the height data as discrete rather than categorical, we see that the data are not very useful because integer values are more common that expected due to rounding. This is called discretization.
+-   If we treat the height data as discrete rather than categorical, we see that the data are not very useful because integer values are more common that expected due to rounding. This is called discretization.
 
--  With rounded data, the normal approximation is particularly useful when computing probabilities of intervals of length 1 that include exactly over integer. 
+-   With rounded data, the normal approximation is particularly useful when computing probabilities of intervals of length 1 that include exactly over integer.
 
-## Code: Using pnorm to calculate probabilities
+### Code: Using pnorm to calculate probabilities
 
 Given male heights x:
 
@@ -333,7 +333,7 @@ we can estimate the probability that a male is taller than 70.5 inches with:
 1 - pnorm(70.5, mean(x), sd(x))
 ```
 
-## Code: Discretization and the normal approximation
+### Code: Discretization and the normal approximation
 
 ```{r}
 # plot distribution of exact heights in data
@@ -356,85 +356,94 @@ mean(x <= 70.9) - mean(x <= 70.1)
 pnorm(70.9, mean(x), sd(x)) - pnorm(70.1, mean(x), sd(x))
 ```
 
-# Definition of quantiles
-
 ## Definition of quantiles
+
+### Definition of quantiles
 
 [Quantiles](https://www.youtube.com/watch?v=Ky7QeVgv-BA&ab_channel=MarinStatsLectures-RProgramming%26Statistics) are cut off points that divide a dataset into intervals with set probability. The *qth* quantile is the value at which *q%* of the observation are ***equal to or less than that value***.
 
-## Using the quantile function
+### Using the quantile function
+
 Given a dataset `data` and desired quantile `q`, you can find the `q` the quantile of `data` with:
+
 ```{r, eval=FALSE}
 quantile(data,q)
 ```
 
-## Percentiles
+### Percentiles
+
 Percentiles are the quantiles that divide a dataset into 100 intervals each with 1% probability. You can determine all percentiles of a dataset `data` like this:
+
 ```{r, eval=FALSE}
 p <- seq(0.01, 0.09, 0.01)
 quantile(data, p)
 ```
 
-## Quartiles
-Quartiles divide a dataset into 4 parts each with 25% probability. They are equal to the 25th, 50th and 75th percentiles. The 25th percentile is also known as the *1st quartile*, the 50th percentile is also konwn as the median, and the 75th percentile is also knowns as the *3rd quartile*. 
+### Quartiles
 
-The ***`summary()`*** function returns the minimum, quartiles and maximum of a vector. 
+Quartiles divide a dataset into 4 parts each with 25% probability. They are equal to the 25th, 50th and 75th percentiles. The 25th percentile is also known as the *1st quartile*, the 50th percentile is also konwn as the median, and the 75th percentile is also knowns as the *3rd quartile*.
 
-## Examples
+The ***`summary()`*** function returns the minimum, quartiles and maximum of a vector.
+
+### Examples
 
 Load the heights dataset from the *dslabs* package:
+
 ```{r, output=FALSE}
 library(dslabs)
 data("heights")
 ```
 
 Use`summary`on the `heights$height` variable to find the quartiles:
+
 ```{r}
 summary(heights$height)
 ```
 
 Find the percentiles of `height$height`:
+
 ```{r}
 p <- seq(0.01, 0.99, 0.01)
 percentiles <- quantile(heights$height, p)
 ```
 
 Confirm that the 25th and 75th percentiles match that 1st and 3rd quartiles. Note that `quantile()` returns a named vector. You can access the 25th and 75th percentiles like this (adapt the code for other percentile value):
+
 ```{r}
 percentiles[names(percentiles) == "25%"]
 percentiles[names(percentiles) == "75%"]
 ```
 
-# Finding quantile with qnorm
+## Finding quantile with qnorm
 
-## Definiton of qnorm 
+### Definiton of qnorm
+
 [简单来说,[***`qnorm`***](https://www.jianshu.com/p/a24eb1b94177)是正态分布***累积分布函数(CDF)***的反函数， 也就是说它可以视为`pnorm`的反函数, 这里`q`指的是quantile, 即分位数]{.aside}
 
 The [`qnorm()`](https://www.youtube.com/watch?v=X5NXDK6AVtU&ab_channel=TheDataDigest) function gives the theoretical value of a quantile with probability `p` of observing a value equal to or less than that quantile value a normal distribution with mean `mu` and standard deviation `sigma`:
+
 ```{r,eval=FALSE}
 qnorm(p, mu, sigma)
 ```
 
 ***By default, `mu`=0 and `sigma`=1***. Therefore, calling `qnorm()` with no arguments gives quantiles for the standard normal distribution.
+
 ```{r, eval=FALSE}
 qnorm(p)
 ```
 
 Recall that quantiles are defined such that $p$ is the probability of a random observation less than or equal to the quantile.
 
-## Realation to pnorm
-The `pnorm()` function gives the probability that a value from a standard normal distribution will be less than or equal to a z-score value z. consider:
-***$$pnorm(-1.96)\approx0.025$$***
-The result of `pnorm()` is the quantile. Note that:
-***$$qnorm(0.025)\approx-1.96$$***
-`qnorm()` and `pnorm` are inverse functions:
-***$$pnorm(qnorm(0.025))\equiv0.025$$***
+### Realation to pnorm
 
-## Theoretical quantiles
+The `pnorm()` function gives the probability that a value from a standard normal distribution will be less than or equal to a z-score value z. consider: $$pnorm(-1.96)\approx0.025$$ The result of `pnorm()` is the quantile. Note that: $$qnorm(0.025)\approx-1.96$$ `qnorm()` and `pnorm` are inverse functions: $$pnorm(qnorm(0.025))\equiv0.025$$
 
-You can use `qnorm()` to determine the theoretical quantiles of a dataset: that is, the theoretical value of quantiles assuming that a dataset follows a normal distribution. Run the `qnorm()` function with the desired probabilities *p*, mean mu and standard deviation sigma. 
+### Theoretical quantiles
+
+You can use `qnorm()` to determine the theoretical quantiles of a dataset: that is, the theoretical value of quantiles assuming that a dataset follows a normal distribution. Run the `qnorm()` function with the desired probabilities *p*, mean mu and standard deviation sigma.
 
 Suppose male heights follow a normal distribution with a mean of 69 inches and standard deviation of 3 inches. The theoretical quantiles are:
+
 ```{r}
 p <- seq(0.01, 0.99, 0.01)
 theoretical_quantiles <- qnorm(p, 69, 3)
@@ -442,21 +451,21 @@ theoretical_quantiles <- qnorm(p, 69, 3)
 
 Theoretical quantiles can be compared to sample quantiles determined with the quantile function in order to evaluate whether the sample follows a normal distribution.
 
-# Quantile-Quantile Plots
+## Quantile-Quantile Plots
 
-## Key Points:
+### Key Points:
 
-- Quantile-quantile plots, or QQ-plot, are used to check whether distributions are well-approximated by a normal distribution.
+-   Quantile-quantile plots, or QQ-plot, are used to check whether distributions are well-approximated by a normal distribution.
 
-- Given a proportion *p*, the quantile *q* is the value such that the proportion of values in the data blew *q* is *p*.
+-   Given a proportion *p*, the quantile *q* is the value such that the proportion of values in the data blew *q* is *p*.
 
-- In a QQ-plot, the sample quantiles in the observed data are compared to the theoretical quantiles expected from the normal distribution. If the data are well-approximated by the normal distribution, then the points on the QQ-plot will fall near the identity line(sample = theoretical).
+-   In a QQ-plot, the sample quantiles in the observed data are compared to the theoretical quantiles expected from the normal distribution. If the data are well-approximated by the normal distribution, then the points on the QQ-plot will fall near the identity line(sample = theoretical).
 
-- Calculate sample quantiles (observed quantiles) using the `quantile()` function.
+-   Calculate sample quantiles (observed quantiles) using the `quantile()` function.
 
-- Calculate theoretical quantiles with the `qnorm()` function. `qnorm()` will caculate quantiles for the standard normal distribution ($\mu=0, \sigma=1$) by default, but it can calculate quantiles for any normal distribution given `mean()` and `sd()` arguments. 
+-   Calculate theoretical quantiles with the `qnorm()` function. `qnorm()` will caculate quantiles for the standard normal distribution ($\mu=0, \sigma=1$) by default, but it can calculate quantiles for any normal distribution given `mean()` and `sd()` arguments.
 
-## Code:
+### Code:
 
 ```{r}
 # define x and z
@@ -487,29 +496,217 @@ plot(theoretical_quantiles, observed_quantiles)
 abline(0,1)
 ```
 
-# Percentiles
+## Percentiles
 
-## Key Points:
+### Key Points:
 
-- Percentiles are the quantiles obtained when defining $p$ as 0.01, 0.02,...,0.99. They summarize the values at which a certain percent of the observations are equal to or less than that value.
+-   Percentiles are the quantiles obtained when defining $p$ as 0.01, 0.02,...,0.99. They summarize the values at which a certain percent of the observations are equal to or less than that value.
 
-- The 50th percentile is also known as the median.
+-   The 50th percentile is also known as the median.
 
-- The quartiles are the 25th, 50th and 75th percentiles.
+-   The quartiles are the 25th, 50th and 75th percentiles.
 
-# Boxplots
+## Boxplots
+
 [R语言如何绘制[箱线图](https://zhuanlan.zhihu.com/p/440914623)]{.aside}
 
-## Key Points:
+### Key Points:
 
-- When data do not follow a normal distribution and cannot be succinctly summarized by only the mean and standard deviation, an alternative is to report a five-number summary: range (ignoring outliers) and the quartiles (25th, 50th, 75th percentile).
+-   When data do not follow a normal distribution and cannot be succinctly summarized by only the mean and standard deviation, an alternative is to report a five-number summary: range (ignoring outliers) and the quartiles (25th, 50th, 75th percentile).
 
-- In a [boxplot](https://www.youtube.com/watch?v=INSIyaZUXIY&ab_channel=DATAtab), the box is defined by the *25th* and *75th* percentiles and the *median* is ***a horizontal line through the box***. The *whiskers* show ***the range excluding outliers***, and outliers are plotted separately as individual points.
+-   In a [boxplot](https://www.youtube.com/watch?v=INSIyaZUXIY&ab_channel=DATAtab), the box is defined by the *25th* and *75th* percentiles and the *median* is ***a horizontal line through the box***. The *whiskers* show ***the range excluding outliers***, and outliers are plotted separately as individual points.
 
-- The *interquartile range* is the distance between the 25th and 75th percentiles.
+-   The *interquartile range* is the distance between the 25th and 75th percentiles.
 
-- Boxplots are particularly useful when comparing *multiple distributions*.
+-   Boxplots are particularly useful when comparing *multiple distributions*.
 
+## Distribution of Female Heights
 
+### Key Points:
 
+-   If a distribution is not normal, it cannot be summarized with only the mean and standard seviation. Provide a histogram, smooth density or boxplot instead.
 
+-   A plot can force us to see unexpected results that make us question the quality or implication of our data.
+
+# Introduction to ggplot2
+
+## Overview
+
+After completing ggplot2, we will:
+
+-   be able to use ggplot2 to create data visualizations in R.
+
+-   be able to explain what the data component of a graph is.
+
+-   be able to identify the geometry component of a graph and know when to use which type of geometry. be able to explain what the aesthetic mapping component of a graph is.
+
+-   be able to understand the scale component of a graph and select an appropriate scale component to use.
+
+## ggplot
+
+### ggplot2
+
+-   [Data visualization with ggolot2](https://datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html)
+
+-   [Data visualization with ggplot2: Cheat Sheet](https://github.com/rstudio/cheatsheets/blob/main/data-visualization-2.1.pdf)
+
+-   [The R graph gallery example](https://r-graph-gallery.com/index.html)
+
+### key Points:
+
+-   Throughout the series, we will create plots with the ggplot2 package. **ggplot2** is part of the **tidyverse** suite of package, which you can load with **`library(tidyverse)`**.
+
+-   Note that you can also load **ggplot2** alone using the command **`library(ggplot2)`**, instead of loading the entire tidyverse.
+
+-   **ggplot2** uses a **grammar of graphics** to break plots into building blocks that have intuitive syntax, making it easy to create relatively complex and aesthetically pleasing plots with relatively simple and readable code.
+
+-   **ggplot2** is designed to work excusively with tidy data (**rows are observations and columns are variables**).
+
+## Graph Components
+
+### Key Points:
+
+-   Plots in **ggplot2** consist of 3 main components:
+    -   **Data**: The dataset being summarized
+    -   **Geometry**: The type of plot(scatterplot, boxplot, barplot, histogram, qqplot, smooth desity, etc.)
+    -   **Aesthetic mapping**: Variable mapped to visual cues, such as x-axis and y-axis values and color.
+
+### Code:
+
+```{r, eval=FALSE}
+library(dslabs)
+data(murders)
+```
+
+## Creating a New Plot
+
+### Key Points:
+
+-   You can associated a dataset `x` with a ggplot object with any of the 3 commands:
+
+    -   **`ggplot(data = x)`**
+    -   **`ggplot(x)`**
+    -   **`x %>% ggplot()`**
+
+-   You can assign a ggplot object to a variable. If the object is not assigned to a variable, it will automatically be displayed.
+
+-   You can display a ggplot object assigned to a variable by printing that variable.
+
+Code:
+
+```{r, eval=FALSE}
+library(tidyverse)
+library(dslabs)
+data(murders)
+
+ggplot(data = murders)
+
+murders %>% ggplot()
+
+p <- ggplot(data = murders)
+
+class(p)
+
+print(p) # this is equivalent to simply typing p
+p 
+```
+
+## Layers
+
+### Key Points:
+
+-   In **ggplot2**, graphs are created by adding layers to the ggplot object: DATA %\>% ggplot() + LAYER_1 + LAYER_2 + ... + LAYER_N
+
+-   The ***geometry layer*** defines that plot type and takes the format `geom_x` where `x` is the plot type.
+
+-   ***Aesthetic mappings*** describe how properties of **the data connect with features of the graph** (axis position, color, size, etc.) define aesthetic mapping with `aes()` function.
+
+-   **`aes()`** uses variable names from the object component (for example, **`total`** rather than **`murders$total`**).
+
+-   **`geom_point()`** creates a scatterplot and requires `x` and `y` aesthetic mappings.
+
+-   **`geom_text()`** and **`geom_label`** add text to a scatterplot and require `x`, `y`, and `label` aesthetic mappings.
+
+-   To determine which aesthetic mappings are required for a geometry, read the help file for that geometry.
+
+-   You can add layers with different aesthetic mappings to the same graph.
+
+Code: Adding layers to a plot
+
+```{r,eval=FALSE}
+library(tidyverse)
+library(dslabs)
+data(murders)
+
+murders %>% ggplot() +
+  geom_point(aes(x = population/10^6, y = total))
+```
+
+```{r}
+# add points layer to predefined ggplot object
+p <- ggplot(data = murders)
+p + geom_point(aes(population/10^6, total))
+
+# add text layer to scatterplot
+p + geom_point(aes(population/10^6, total)) +
+  geom_text(aes(population/10^6, total, label = abb))
+```
+
+Code: Example of `aes` behavior
+
+```{r,eval=FALSE}
+# no error from this call
+p_test <- p + geom_text(aes(population/10^6, total, lable = abb))
+
+# error - "abb" is not a globally defined variable and cannot be found outside of aes
+p_test <- p + geom_text(aes(population/10^6, total), label = abb)
+```
+
+## Thinkering
+
+### Key Points:
+
+-   You can modify arguments to geometry functions others than `aes()` and the data.
+
+-   These arguments are not aesthetic mappings: the affect all data points the same way.
+
+-   ***Global aesthetic mappings*** apply to all geometries and can be defined when you initially call `ggplot()`. All the geometries added as layers will default to this mapping. Local aesthetic mapping add additional information or override the default mappings.
+
+::: callout-tip
+# **Nudge** points a fixed distance
+
+[`position_nudge(x = 0, y = 0)`](https://ggplot2.tidyverse.org/reference/position_nudge.html?q=nudge#null) is generally useful for adjusting the position of items on discrete scales by a small amount. Nudging is built in to **`geom_text()`** because it's so useful for moving labels a small distance from what they're labeling.
+:::
+
+Code:
+
+```{r}
+# change the size of the points
+p + geom_point(aes(population/10^6, total), size = 3) +
+    geom_text(aes(population/10^6, total, label = abb))
+
+# move text labels slightly to the right
+p + geom_point(aes(population/10^6, total), size = 3) +
+    geom_text(aes(population/10^6, total, label = abb), nudge_x = 1)
+
+# simplify code by adding global aesthetic
+p <- murders %>% ggplot(aes(population/10^6, total, label = abb))
+p + geom_point(size = 3) +
+    geom_text(nudge_x = 1.5)
+
+# local aesthetics override global aesthetics
+p + geom_point(size = 3) +
+  geom_text(aes(x = 10, y = 800, label = "Hello there!"))
+```
+
+## Scales, Labels, and Colors
+
+### Textbook links:
+
+-   [Textbook section on **scales**](http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#scales)
+
+-   [Textbook section on **labels and titles**](http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#labels-and-titles)
+
+-   [Textbook section on **categories as colors**](http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#categories-as-colors)
+
+-   [Textbook section on **annotation, shapes and adjustments**](http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#annotation-shapes-and-adjustments)

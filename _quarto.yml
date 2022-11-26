@@ -2,6 +2,13 @@ project:
   type: website
 
 website:
+  cookie-consent: 
+    type: express
+    style: headline
+    palette: dark
+  google-analytics: 
+    tracking-id: "G-Y96LK2RNJD"
+    anonymize-ip: true
   title: "Stats & R"
   favicon: Stats-&-R.png
   page-navigation: true
@@ -34,7 +41,7 @@ format:
     theme:
        - superhero
        - superhero.scss
-    highlight-style: arrow-dark
+    highlight-style: arrow-light
     anchor-sections: true
     smooth-scroll: true
     link-external-newwindow: true

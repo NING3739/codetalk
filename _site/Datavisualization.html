@@ -93,6 +93,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./Stats-&amp;-R.png" rel="icon" type="image/png">
+<script src="site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -121,6 +123,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y96LK2RNJD"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"headline",
+  "consent_type":"express",
+  "palette":"dark",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  });
+});
+</script> 
+  
 <style>html{ scroll-behavior: smooth; }</style>
 <script type="application/json" class="js-hypothesis-config">
 {
@@ -225,71 +252,107 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#introduction-to-data-visualization-and-distributions" id="toc-introduction-to-data-visualization-and-distributions" class="nav-link" data-scroll-target="#introduction-to-data-visualization-and-distributions"><span class="toc-section-number">2</span>  Introduction to Data Visualization and Distributions</a>
   <ul class="collapse">
   <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview"><span class="toc-section-number">2.1</span>  Overview</a></li>
-  </ul></li>
-  <li><a href="#introduction-to-data-visualization" id="toc-introduction-to-data-visualization" class="nav-link" data-scroll-target="#introduction-to-data-visualization"><span class="toc-section-number">3</span>  Introduction to Data Visualization</a>
+  <li><a href="#introduction-to-data-visualization" id="toc-introduction-to-data-visualization" class="nav-link" data-scroll-target="#introduction-to-data-visualization"><span class="toc-section-number">2.2</span>  Introduction to Data Visualization</a>
   <ul class="collapse">
-  <li><a href="#key-point" id="toc-key-point" class="nav-link" data-scroll-target="#key-point"><span class="toc-section-number">3.1</span>  Key Point:</a></li>
-  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code"><span class="toc-section-number">3.2</span>  Code:</a></li>
+  <li><a href="#key-point" id="toc-key-point" class="nav-link" data-scroll-target="#key-point"><span class="toc-section-number">2.2.1</span>  Key Point:</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code"><span class="toc-section-number">2.2.2</span>  Code:</a></li>
   </ul></li>
-  <li><a href="#introduction-to-distributions" id="toc-introduction-to-distributions" class="nav-link" data-scroll-target="#introduction-to-distributions"><span class="toc-section-number">4</span>  Introduction to Distributions</a>
+  <li><a href="#introduction-to-distributions" id="toc-introduction-to-distributions" class="nav-link" data-scroll-target="#introduction-to-distributions"><span class="toc-section-number">2.3</span>  Introduction to Distributions</a>
   <ul class="collapse">
-  <li><a href="#key-points" id="toc-key-points" class="nav-link" data-scroll-target="#key-points"><span class="toc-section-number">4.1</span>  Key Points:</a></li>
-  <li><a href="#data-types" id="toc-data-types" class="nav-link" data-scroll-target="#data-types"><span class="toc-section-number">4.2</span>  Data Types</a></li>
-  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise"><span class="toc-section-number">4.3</span>  Exercise</a></li>
+  <li><a href="#key-points" id="toc-key-points" class="nav-link" data-scroll-target="#key-points"><span class="toc-section-number">2.3.1</span>  Key Points:</a></li>
+  <li><a href="#data-types" id="toc-data-types" class="nav-link" data-scroll-target="#data-types"><span class="toc-section-number">2.3.2</span>  Data Types</a></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise"><span class="toc-section-number">2.3.3</span>  Exercise</a></li>
   </ul></li>
-  <li><a href="#describe-heights-to-et" id="toc-describe-heights-to-et" class="nav-link" data-scroll-target="#describe-heights-to-et"><span class="toc-section-number">5</span>  Describe Heights to ET</a>
+  <li><a href="#describe-heights-to-et" id="toc-describe-heights-to-et" class="nav-link" data-scroll-target="#describe-heights-to-et"><span class="toc-section-number">2.4</span>  Describe Heights to ET</a>
   <ul class="collapse">
-  <li><a href="#key-point-1" id="toc-key-point-1" class="nav-link" data-scroll-target="#key-point-1"><span class="toc-section-number">5.1</span>  key point:</a></li>
-  <li><a href="#code-1" id="toc-code-1" class="nav-link" data-scroll-target="#code-1"><span class="toc-section-number">5.2</span>  Code:</a></li>
+  <li><a href="#key-point-1" id="toc-key-point-1" class="nav-link" data-scroll-target="#key-point-1"><span class="toc-section-number">2.4.1</span>  key point:</a></li>
+  <li><a href="#code-1" id="toc-code-1" class="nav-link" data-scroll-target="#code-1"><span class="toc-section-number">2.4.2</span>  Code:</a></li>
   </ul></li>
-  <li><a href="#cumulative-distribution-function" id="toc-cumulative-distribution-function" class="nav-link" data-scroll-target="#cumulative-distribution-function"><span class="toc-section-number">6</span>  Cumulative Distribution Function</a>
+  <li><a href="#cumulative-distribution-function" id="toc-cumulative-distribution-function" class="nav-link" data-scroll-target="#cumulative-distribution-function"><span class="toc-section-number">2.5</span>  Cumulative Distribution Function</a>
   <ul class="collapse">
-  <li><a href="#code-for-cdf" id="toc-code-for-cdf" class="nav-link" data-scroll-target="#code-for-cdf"><span class="toc-section-number">6.1</span>  Code for CDF:</a></li>
-  <li><a href="#code-for-student-height" id="toc-code-for-student-height" class="nav-link" data-scroll-target="#code-for-student-height"><span class="toc-section-number">6.2</span>  Code for student height:</a></li>
+  <li><a href="#code-for-cdf" id="toc-code-for-cdf" class="nav-link" data-scroll-target="#code-for-cdf"><span class="toc-section-number">2.5.1</span>  Code for CDF:</a></li>
+  <li><a href="#code-for-student-height" id="toc-code-for-student-height" class="nav-link" data-scroll-target="#code-for-student-height"><span class="toc-section-number">2.5.2</span>  Code for student height:</a></li>
   </ul></li>
-  <li><a href="#smooth-density-plots" id="toc-smooth-density-plots" class="nav-link" data-scroll-target="#smooth-density-plots"><span class="toc-section-number">7</span>  Smooth Density Plots</a>
+  <li><a href="#smooth-density-plots" id="toc-smooth-density-plots" class="nav-link" data-scroll-target="#smooth-density-plots"><span class="toc-section-number">2.6</span>  Smooth Density Plots</a>
   <ul class="collapse">
-  <li><a href="#key-point-2" id="toc-key-point-2" class="nav-link" data-scroll-target="#key-point-2"><span class="toc-section-number">7.1</span>  Key Point:</a></li>
+  <li><a href="#key-point-2" id="toc-key-point-2" class="nav-link" data-scroll-target="#key-point-2"><span class="toc-section-number">2.6.1</span>  Key Point:</a></li>
   </ul></li>
-  <li><a href="#normal-distribution" id="toc-normal-distribution" class="nav-link" data-scroll-target="#normal-distribution"><span class="toc-section-number">8</span>  Normal Distribution</a>
+  <li><a href="#normal-distribution" id="toc-normal-distribution" class="nav-link" data-scroll-target="#normal-distribution"><span class="toc-section-number">2.7</span>  Normal Distribution</a>
   <ul class="collapse">
-  <li><a href="#key-points-1" id="toc-key-points-1" class="nav-link" data-scroll-target="#key-points-1"><span class="toc-section-number">8.1</span>  Key Points:</a></li>
-  <li><a href="#equation-for-the-normal-distribution" id="toc-equation-for-the-normal-distribution" class="nav-link" data-scroll-target="#equation-for-the-normal-distribution"><span class="toc-section-number">8.2</span>  Equation for the normal distribution</a></li>
-  <li><a href="#code-2" id="toc-code-2" class="nav-link" data-scroll-target="#code-2"><span class="toc-section-number">8.3</span>  Code:</a></li>
-  <li><a href="#the-68-95-99.7-rule" id="toc-the-68-95-99.7-rule" class="nav-link" data-scroll-target="#the-68-95-99.7-rule"><span class="toc-section-number">8.4</span>  The 68-95-99.7 Rule</a></li>
+  <li><a href="#key-points-1" id="toc-key-points-1" class="nav-link" data-scroll-target="#key-points-1"><span class="toc-section-number">2.7.1</span>  Key Points:</a></li>
   </ul></li>
-  <li><a href="#the-normal-cdf-and-pnorm" id="toc-the-normal-cdf-and-pnorm" class="nav-link" data-scroll-target="#the-normal-cdf-and-pnorm"><span class="toc-section-number">9</span>  The Normal CDF and pnorm</a>
+  <li><a href="#equation-for-the-normal-distribution" id="toc-equation-for-the-normal-distribution" class="nav-link" data-scroll-target="#equation-for-the-normal-distribution"><span class="toc-section-number">2.8</span>  Equation for the normal distribution</a>
   <ul class="collapse">
-  <li><a href="#key-points-2" id="toc-key-points-2" class="nav-link" data-scroll-target="#key-points-2"><span class="toc-section-number">9.1</span>  Key points:</a></li>
-  <li><a href="#code-using-pnorm-to-calculate-probabilities" id="toc-code-using-pnorm-to-calculate-probabilities" class="nav-link" data-scroll-target="#code-using-pnorm-to-calculate-probabilities"><span class="toc-section-number">9.2</span>  Code: Using pnorm to calculate probabilities</a></li>
-  <li><a href="#code-discretization-and-the-normal-approximation" id="toc-code-discretization-and-the-normal-approximation" class="nav-link" data-scroll-target="#code-discretization-and-the-normal-approximation"><span class="toc-section-number">9.3</span>  Code: Discretization and the normal approximation</a></li>
+  <li><a href="#code-2" id="toc-code-2" class="nav-link" data-scroll-target="#code-2"><span class="toc-section-number">2.8.1</span>  Code:</a></li>
+  <li><a href="#the-68-95-99.7-rule" id="toc-the-68-95-99.7-rule" class="nav-link" data-scroll-target="#the-68-95-99.7-rule"><span class="toc-section-number">2.8.2</span>  The 68-95-99.7 Rule</a></li>
   </ul></li>
-  <li><a href="#definition-of-quantiles" id="toc-definition-of-quantiles" class="nav-link" data-scroll-target="#definition-of-quantiles"><span class="toc-section-number">10</span>  Definition of quantiles</a>
+  <li><a href="#the-normal-cdf-and-pnorm" id="toc-the-normal-cdf-and-pnorm" class="nav-link" data-scroll-target="#the-normal-cdf-and-pnorm"><span class="toc-section-number">2.9</span>  The Normal CDF and pnorm</a>
   <ul class="collapse">
-  <li><a href="#definition-of-quantiles-1" id="toc-definition-of-quantiles-1" class="nav-link" data-scroll-target="#definition-of-quantiles-1"><span class="toc-section-number">10.1</span>  Definition of quantiles</a></li>
-  <li><a href="#using-the-quantile-function" id="toc-using-the-quantile-function" class="nav-link" data-scroll-target="#using-the-quantile-function"><span class="toc-section-number">10.2</span>  Using the quantile function</a></li>
-  <li><a href="#percentiles" id="toc-percentiles" class="nav-link" data-scroll-target="#percentiles"><span class="toc-section-number">10.3</span>  Percentiles</a></li>
-  <li><a href="#quartiles" id="toc-quartiles" class="nav-link" data-scroll-target="#quartiles"><span class="toc-section-number">10.4</span>  Quartiles</a></li>
-  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples"><span class="toc-section-number">10.5</span>  Examples</a></li>
+  <li><a href="#key-points-2" id="toc-key-points-2" class="nav-link" data-scroll-target="#key-points-2"><span class="toc-section-number">2.9.1</span>  Key points:</a></li>
+  <li><a href="#code-using-pnorm-to-calculate-probabilities" id="toc-code-using-pnorm-to-calculate-probabilities" class="nav-link" data-scroll-target="#code-using-pnorm-to-calculate-probabilities"><span class="toc-section-number">2.9.2</span>  Code: Using pnorm to calculate probabilities</a></li>
+  <li><a href="#code-discretization-and-the-normal-approximation" id="toc-code-discretization-and-the-normal-approximation" class="nav-link" data-scroll-target="#code-discretization-and-the-normal-approximation"><span class="toc-section-number">2.9.3</span>  Code: Discretization and the normal approximation</a></li>
   </ul></li>
-  <li><a href="#finding-quantile-with-qnorm" id="toc-finding-quantile-with-qnorm" class="nav-link" data-scroll-target="#finding-quantile-with-qnorm"><span class="toc-section-number">11</span>  Finding quantile with qnorm</a>
+  <li><a href="#definition-of-quantiles" id="toc-definition-of-quantiles" class="nav-link" data-scroll-target="#definition-of-quantiles"><span class="toc-section-number">2.10</span>  Definition of quantiles</a>
   <ul class="collapse">
-  <li><a href="#definiton-of-qnorm" id="toc-definiton-of-qnorm" class="nav-link" data-scroll-target="#definiton-of-qnorm"><span class="toc-section-number">11.1</span>  Definiton of qnorm</a></li>
-  <li><a href="#realation-to-pnorm" id="toc-realation-to-pnorm" class="nav-link" data-scroll-target="#realation-to-pnorm"><span class="toc-section-number">11.2</span>  Realation to pnorm</a></li>
-  <li><a href="#theoretical-quantiles" id="toc-theoretical-quantiles" class="nav-link" data-scroll-target="#theoretical-quantiles"><span class="toc-section-number">11.3</span>  Theoretical quantiles</a></li>
+  <li><a href="#definition-of-quantiles-1" id="toc-definition-of-quantiles-1" class="nav-link" data-scroll-target="#definition-of-quantiles-1"><span class="toc-section-number">2.10.1</span>  Definition of quantiles</a></li>
+  <li><a href="#using-the-quantile-function" id="toc-using-the-quantile-function" class="nav-link" data-scroll-target="#using-the-quantile-function"><span class="toc-section-number">2.10.2</span>  Using the quantile function</a></li>
+  <li><a href="#percentiles" id="toc-percentiles" class="nav-link" data-scroll-target="#percentiles"><span class="toc-section-number">2.10.3</span>  Percentiles</a></li>
+  <li><a href="#quartiles" id="toc-quartiles" class="nav-link" data-scroll-target="#quartiles"><span class="toc-section-number">2.10.4</span>  Quartiles</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples"><span class="toc-section-number">2.10.5</span>  Examples</a></li>
   </ul></li>
-  <li><a href="#quantile-quantile-plots" id="toc-quantile-quantile-plots" class="nav-link" data-scroll-target="#quantile-quantile-plots"><span class="toc-section-number">12</span>  Quantile-Quantile Plots</a>
+  <li><a href="#finding-quantile-with-qnorm" id="toc-finding-quantile-with-qnorm" class="nav-link" data-scroll-target="#finding-quantile-with-qnorm"><span class="toc-section-number">2.11</span>  Finding quantile with qnorm</a>
   <ul class="collapse">
-  <li><a href="#key-points-3" id="toc-key-points-3" class="nav-link" data-scroll-target="#key-points-3"><span class="toc-section-number">12.1</span>  Key Points:</a></li>
-  <li><a href="#code-3" id="toc-code-3" class="nav-link" data-scroll-target="#code-3"><span class="toc-section-number">12.2</span>  Code:</a></li>
+  <li><a href="#definiton-of-qnorm" id="toc-definiton-of-qnorm" class="nav-link" data-scroll-target="#definiton-of-qnorm"><span class="toc-section-number">2.11.1</span>  Definiton of qnorm</a></li>
+  <li><a href="#realation-to-pnorm" id="toc-realation-to-pnorm" class="nav-link" data-scroll-target="#realation-to-pnorm"><span class="toc-section-number">2.11.2</span>  Realation to pnorm</a></li>
+  <li><a href="#theoretical-quantiles" id="toc-theoretical-quantiles" class="nav-link" data-scroll-target="#theoretical-quantiles"><span class="toc-section-number">2.11.3</span>  Theoretical quantiles</a></li>
   </ul></li>
-  <li><a href="#percentiles-1" id="toc-percentiles-1" class="nav-link" data-scroll-target="#percentiles-1"><span class="toc-section-number">13</span>  Percentiles</a>
+  <li><a href="#quantile-quantile-plots" id="toc-quantile-quantile-plots" class="nav-link" data-scroll-target="#quantile-quantile-plots"><span class="toc-section-number">2.12</span>  Quantile-Quantile Plots</a>
   <ul class="collapse">
-  <li><a href="#key-points-4" id="toc-key-points-4" class="nav-link" data-scroll-target="#key-points-4"><span class="toc-section-number">13.1</span>  Key Points:</a></li>
+  <li><a href="#key-points-3" id="toc-key-points-3" class="nav-link" data-scroll-target="#key-points-3"><span class="toc-section-number">2.12.1</span>  Key Points:</a></li>
+  <li><a href="#code-3" id="toc-code-3" class="nav-link" data-scroll-target="#code-3"><span class="toc-section-number">2.12.2</span>  Code:</a></li>
   </ul></li>
-  <li><a href="#boxplots" id="toc-boxplots" class="nav-link" data-scroll-target="#boxplots"><span class="toc-section-number">14</span>  Boxplots</a>
+  <li><a href="#percentiles-1" id="toc-percentiles-1" class="nav-link" data-scroll-target="#percentiles-1"><span class="toc-section-number">2.13</span>  Percentiles</a>
   <ul class="collapse">
-  <li><a href="#key-points-5" id="toc-key-points-5" class="nav-link" data-scroll-target="#key-points-5"><span class="toc-section-number">14.1</span>  Key Points:</a></li>
+  <li><a href="#key-points-4" id="toc-key-points-4" class="nav-link" data-scroll-target="#key-points-4"><span class="toc-section-number">2.13.1</span>  Key Points:</a></li>
+  </ul></li>
+  <li><a href="#boxplots" id="toc-boxplots" class="nav-link" data-scroll-target="#boxplots"><span class="toc-section-number">2.14</span>  Boxplots</a>
+  <ul class="collapse">
+  <li><a href="#key-points-5" id="toc-key-points-5" class="nav-link" data-scroll-target="#key-points-5"><span class="toc-section-number">2.14.1</span>  Key Points:</a></li>
+  </ul></li>
+  <li><a href="#distribution-of-female-heights" id="toc-distribution-of-female-heights" class="nav-link" data-scroll-target="#distribution-of-female-heights"><span class="toc-section-number">2.15</span>  Distribution of Female Heights</a>
+  <ul class="collapse">
+  <li><a href="#key-points-6" id="toc-key-points-6" class="nav-link" data-scroll-target="#key-points-6"><span class="toc-section-number">2.15.1</span>  Key Points:</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#introduction-to-ggplot2" id="toc-introduction-to-ggplot2" class="nav-link" data-scroll-target="#introduction-to-ggplot2"><span class="toc-section-number">3</span>  Introduction to ggplot2</a>
+  <ul class="collapse">
+  <li><a href="#overview-1" id="toc-overview-1" class="nav-link" data-scroll-target="#overview-1"><span class="toc-section-number">3.1</span>  Overview</a></li>
+  <li><a href="#ggplot" id="toc-ggplot" class="nav-link" data-scroll-target="#ggplot"><span class="toc-section-number">3.2</span>  ggplot</a>
+  <ul class="collapse">
+  <li><a href="#ggplot2" id="toc-ggplot2" class="nav-link" data-scroll-target="#ggplot2"><span class="toc-section-number">3.2.1</span>  ggplot2</a></li>
+  <li><a href="#key-points-7" id="toc-key-points-7" class="nav-link" data-scroll-target="#key-points-7"><span class="toc-section-number">3.2.2</span>  key Points:</a></li>
+  </ul></li>
+  <li><a href="#graph-components" id="toc-graph-components" class="nav-link" data-scroll-target="#graph-components"><span class="toc-section-number">3.3</span>  Graph Components</a>
+  <ul class="collapse">
+  <li><a href="#key-points-8" id="toc-key-points-8" class="nav-link" data-scroll-target="#key-points-8"><span class="toc-section-number">3.3.1</span>  Key Points:</a></li>
+  <li><a href="#code-4" id="toc-code-4" class="nav-link" data-scroll-target="#code-4"><span class="toc-section-number">3.3.2</span>  Code:</a></li>
+  </ul></li>
+  <li><a href="#creating-a-new-plot" id="toc-creating-a-new-plot" class="nav-link" data-scroll-target="#creating-a-new-plot"><span class="toc-section-number">3.4</span>  Creating a New Plot</a>
+  <ul class="collapse">
+  <li><a href="#key-points-9" id="toc-key-points-9" class="nav-link" data-scroll-target="#key-points-9"><span class="toc-section-number">3.4.1</span>  Key Points:</a></li>
+  </ul></li>
+  <li><a href="#layers" id="toc-layers" class="nav-link" data-scroll-target="#layers"><span class="toc-section-number">3.5</span>  Layers</a>
+  <ul class="collapse">
+  <li><a href="#key-points-10" id="toc-key-points-10" class="nav-link" data-scroll-target="#key-points-10"><span class="toc-section-number">3.5.1</span>  Key Points:</a></li>
+  </ul></li>
+  <li><a href="#thinkering" id="toc-thinkering" class="nav-link" data-scroll-target="#thinkering"><span class="toc-section-number">3.6</span>  Thinkering</a>
+  <ul class="collapse">
+  <li><a href="#key-points-11" id="toc-key-points-11" class="nav-link" data-scroll-target="#key-points-11"><span class="toc-section-number">3.6.1</span>  Key Points:</a></li>
+  </ul></li>
+  <li><a href="#scales-labels-and-colors" id="toc-scales-labels-and-colors" class="nav-link" data-scroll-target="#scales-labels-and-colors"><span class="toc-section-number">3.7</span>  Scales, Labels, and Colors</a>
+  <ul class="collapse">
+  <li><a href="#textbook-links" id="toc-textbook-links" class="nav-link" data-scroll-target="#textbook-links"><span class="toc-section-number">3.7.1</span>  Textbook links:</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -325,7 +388,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In the world of Big Data, data visualization tools and technologies are essential to analyze massive amounts of information and make data-driven decisions.</p>
 </section>
 </section>
-<section id="introduction-to-data-visualization-and-distributions" class="level1" data-number="2">
+<section id="introduction-to-data-visualization-and-distributions" class="level1 page-columns page-full" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Introduction to Data Visualization and Distributions</h1>
 <section id="overview" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">2.1</span> Overview</h2>
@@ -338,11 +401,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>be able to interpret data from a box plot</p></li>
 </ul>
 </section>
-</section>
-<section id="introduction-to-data-visualization" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Introduction to Data Visualization</h1>
-<section id="key-point" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="key-point"><span class="header-section-number">3.1</span> Key Point:</h2>
+<section id="introduction-to-data-visualization" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="introduction-to-data-visualization"><span class="header-section-number">2.2</span> Introduction to Data Visualization</h2>
+<section id="key-point" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="key-point"><span class="header-section-number">2.2.1</span> Key Point:</h3>
 <ul>
 <li><p>Plots of data easily communicate information that is difficult to extract from table of raw values.</p></li>
 <li><p>Data visualization is a key component of exploratory data analysis (EDA), in which the properties of data are explored through visualization and summarization techniques.</p></li>
@@ -350,8 +412,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Basics of data visualization and EDA will be covered in R by using the ggplot2 package and motivating examples from world health, economics and infections disease.</p></li>
 </ul>
 </section>
-<section id="code" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="code"><span class="header-section-number">3.2</span> Code:</h2>
+<section id="code" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="code"><span class="header-section-number">2.2.2</span> Code:</h3>
 <div class="cell">
 <details>
 <summary>show the code</summary>
@@ -371,10 +433,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </section>
 </section>
-<section id="introduction-to-distributions" class="level1 page-columns page-full" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Introduction to Distributions</h1>
-<section id="key-points" class="level2 page-columns page-full" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="key-points"><span class="header-section-number">4.1</span> Key Points:</h2>
+<section id="introduction-to-distributions" class="level2 page-columns page-full" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="introduction-to-distributions"><span class="header-section-number">2.3</span> Introduction to Distributions</h2>
+<section id="key-points" class="level3 page-columns page-full" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="key-points"><span class="header-section-number">2.3.1</span> Key Points:</h3>
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class=""><a href="https://baike.baidu.com/item/方差/3108412">(<strong>Variance/Deviation Var</strong>)方差</a>: 方差越大，数据的波动越大；方差越小，数据的波动就越小。</span></div></div>
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class=""><a href="https://baike.baidu.com/item/标准差/1415772">(<strong>Standard Deviation</strong>)标准差</a>: 方差开根号。</span></div></div>
 <ul>
@@ -383,8 +445,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>In some cases, data can be summarized by two-number summary: the average and standard deviation.I will learn to use data visualization to determine when that is appropriate.</p></li>
 </ul>
 </section>
-<section id="data-types" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="data-types"><span class="header-section-number">4.2</span> Data Types</h2>
+<section id="data-types" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="data-types"><span class="header-section-number">2.3.2</span> Data Types</h3>
 <p>In R, there are <a href="https://www.programiz.com/r/data-types">6 basic data types</a>:</p>
 <ul>
 <li><p><code>logical</code></p></li>
@@ -448,8 +510,8 @@ Important
 </div>
 </div>
 </section>
-<section id="exercise" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="exercise"><span class="header-section-number">4.3</span> Exercise</h2>
+<section id="exercise" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="exercise"><span class="header-section-number">2.3.3</span> Exercise</h3>
 <div class="cell">
 <details>
 <summary>show the code</summary>
@@ -467,10 +529,10 @@ Important
 </div>
 </section>
 </section>
-<section id="describe-heights-to-et" class="level1 page-columns page-full" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Describe Heights to ET</h1>
-<section id="key-point-1" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="key-point-1"><span class="header-section-number">5.1</span> key point:</h2>
+<section id="describe-heights-to-et" class="level2 page-columns page-full" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="describe-heights-to-et"><span class="header-section-number">2.4</span> Describe Heights to ET</h2>
+<section id="key-point-1" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="key-point-1"><span class="header-section-number">2.4.1</span> key point:</h3>
 <ul>
 <li>A distribution is a function or description that shows the possible values of a variable and how often those values occur.</li>
 <li>For categorical variables, the distribution describes the proportions of each category.</li>
@@ -481,8 +543,8 @@ Important
 <li>A <em>histogram</em> divides data into non-overlapping bins of the same size and plots the counts of number of values that fall in that interval.</li>
 </ul>
 </section>
-<section id="code-1" class="level2 page-columns page-full" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="code-1"><span class="header-section-number">5.2</span> Code:</h2>
+<section id="code-1" class="level3 page-columns page-full" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="code-1"><span class="header-section-number">2.4.2</span> Code:</h3>
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">R 语言学习 - <a href="https://blog.csdn.net/wlt9037/article/details/76570155" title="table()结果提取"><code>table()</code></a> 结果提取.</span></div></div>
 <div class="cell">
 <details>
@@ -496,8 +558,8 @@ Important
 </div>
 </section>
 </section>
-<section id="cumulative-distribution-function" class="level1 page-columns page-full" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Cumulative Distribution Function</h1>
+<section id="cumulative-distribution-function" class="level2 page-columns page-full" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="cumulative-distribution-function"><span class="header-section-number">2.5</span> Cumulative Distribution Function</h2>
 <p>Every <em>continuous distribution</em> has <em>cumulative distribution function (CDF)</em>. The CDF defines the proportion of the data below a given value for all values of <span class="math inline">a</span> :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -509,8 +571,8 @@ Important
 <p>The CDF is essential for calculating probabilities related to continuous data. In a continuous dataset, the probability of a specific exact value is not informative because most entries are unique. For example, in the student heights data, only one individual reported a height of 68.8976377952726 inches, but many students rounded similar heights to 69 inches. If we computed exact value probabilities, we would find that being exactly 69 inches is much more likely than being a non-integer exact height, which does not match our understanding that height is continuous. We can instead use the CDF to obtain a useful summary, such as the probability that a student is between 68.5 and 69.5 inches.</p>
 <p>For datasets that are not normal, the CDF can be calculated manually by defining a function to compute the probability above. This function can then be applied to a range of values across the range of the dataset to calculate a CDF. Given a dataset<code>my_data</code>, the CDF can be calculated and plotted like this:</p>
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">R语言中的<a href="https://www.jianshu.com/p/59fb24ca2ea7">[<code>apply()</code>]，[<code>lapply()</code>]，[<code>sapply()</code>]，<code>tapply()</code></a>函数以及示例</span></div></div>
-<section id="code-for-cdf" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="code-for-cdf"><span class="header-section-number">6.1</span> Code for CDF:</h2>
+<section id="code-for-cdf" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="code-for-cdf"><span class="header-section-number">2.5.1</span> Code for CDF:</h3>
 <div class="cell">
 <details>
 <summary>show the code</summary>
@@ -524,8 +586,8 @@ Important
 </details>
 </div>
 </section>
-<section id="code-for-student-height" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="code-for-student-height"><span class="header-section-number">6.2</span> Code for student height:</h2>
+<section id="code-for-student-height" class="level3" data-number="2.5.2">
+<h3 data-number="2.5.2" class="anchored" data-anchor-id="code-for-student-height"><span class="header-section-number">2.5.2</span> Code for student height:</h3>
 <div class="cell">
 <details>
 <summary>show the code</summary>
@@ -546,10 +608,10 @@ Important
 <p>Note that the CDF can help compute probabilities. The probability of observing a randomly chosen value between <span class="math inline">a</span> and <span class="math inline">b</span> is equal to the proportion of values between <span class="math inline">a</span> and <span class="math inline">b</span>, which we compute with the CDF.</p>
 </section>
 </section>
-<section id="smooth-density-plots" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Smooth Density Plots</h1>
-<section id="key-point-2" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="key-point-2"><span class="header-section-number">7.1</span> Key Point:</h2>
+<section id="smooth-density-plots" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="smooth-density-plots"><span class="header-section-number">2.6</span> Smooth Density Plots</h2>
+<section id="key-point-2" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="key-point-2"><span class="header-section-number">2.6.1</span> Key Point:</h3>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -572,10 +634,10 @@ A further note on histograms
 </ul>
 </section>
 </section>
-<section id="normal-distribution" class="level1 page-columns page-full" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Normal Distribution</h1>
-<section id="key-points-1" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="key-points-1"><span class="header-section-number">8.1</span> Key Points:</h2>
+<section id="normal-distribution" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="normal-distribution"><span class="header-section-number">2.7</span> Normal Distribution</h2>
+<section id="key-points-1" class="level3" data-number="2.7.1">
+<h3 data-number="2.7.1" class="anchored" data-anchor-id="key-points-1"><span class="header-section-number">2.7.1</span> Key Points:</h3>
 <ul>
 <li><p><a href="https://www.youtube.com/watch?v=xI9ZHGOSaCg&amp;ab_channel=AceTutors">The normal distribution</a>:</p>
 <ul>
@@ -595,8 +657,9 @@ A further note on histograms
 <li><p><strong><em>Important:</em></strong> to calculate the proportion of value that meet a certain condition, use the <code>mean</code> function on a logical vector. Because <code>TRUE</code> is converted to 1 and <code>FALSE</code> is converted to 0, taking the mean of this vector yields the proportion of <code>TURE</code>.</p></li>
 </ul>
 </section>
-<section id="equation-for-the-normal-distribution" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="equation-for-the-normal-distribution"><span class="header-section-number">8.2</span> Equation for the normal distribution</h2>
+</section>
+<section id="equation-for-the-normal-distribution" class="level2 page-columns page-full" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="equation-for-the-normal-distribution"><span class="header-section-number">2.8</span> Equation for the normal distribution</h2>
 <p>The normal distribution is mathematically defined by the following formula for any mean <span class="math inline">\mu</span> and standard deviation <span class="math inline">\sigma</span>:</p>
 <p><span class="math display">
 Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{x-\mu^2}{\sigma})}dx
@@ -604,9 +667,8 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <p>When standard unites <span class="math inline">z=0</span>, the normal distribution is at a maximum, the mean <span class="math inline">\mu</span>. The function is defined to be symmetric around <span class="math inline">z=0</span>.</p>
 <p>The normal distribution of z-score is called the <em>standard normal distribution</em> and is defined by <span class="math inline">\mu=0</span> and <span class="math inline">\sigma=1</span>.</p>
 <p>Z-score are useful to quickly evalute whether an observation is average or extreme. Z-scores near 0 are average. Z-score above 2 or below -2 are <strong><em>significantly above or blew the mean</em></strong>, and z-scores above 3 or below -3 are <strong><em>extrmely rate</em></strong>.</p>
-</section>
-<section id="code-2" class="level2 page-columns page-full" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="code-2"><span class="header-section-number">8.3</span> Code:</h2>
+<section id="code-2" class="level3 page-columns page-full" data-number="2.8.1">
+<h3 data-number="2.8.1" class="anchored" data-anchor-id="code-2"><span class="header-section-number">2.8.1</span> Code:</h3>
 <div class="cell">
 <details>
 <summary>show the code</summary>
@@ -636,8 +698,8 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class=""><strong><em>function <code>sd()</code>:</em></strong>The built-in R <strong><em>function <code>sd()</code></em></strong> calculates the standard deviation, but it divides by <strong><em><code>length(x)-1</code></em></strong> instead of <strong><em><code>length(x)</code></em></strong>. When the length of the list is large, this difference is negligible and you can use the built-in <strong><em><code>sd()</code></em></strong> function. Otherwise, you should compute σ by hand. For this course series, assume that you should use the <strong><em><code>sd()</code></em></strong> function unless you are told not to do so.</span></div></div>
 <p>Here we will learn more about benchmark z-score value and their corresponding probabilities.</p>
 </section>
-<section id="the-68-95-99.7-rule" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="the-68-95-99.7-rule"><span class="header-section-number">8.4</span> The 68-95-99.7 Rule</h2>
+<section id="the-68-95-99.7-rule" class="level3" data-number="2.8.2">
+<h3 data-number="2.8.2" class="anchored" data-anchor-id="the-68-95-99.7-rule"><span class="header-section-number">2.8.2</span> The 68-95-99.7 Rule</h3>
 <p>The normal distribution is associated with the 68-95-99.7 rule. This rule describes the probability of observing events within a ceration number of standard deviations of the mean.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -675,10 +737,10 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 </div>
 </section>
 </section>
-<section id="the-normal-cdf-and-pnorm" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> The Normal CDF and pnorm</h1>
-<section id="key-points-2" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="key-points-2"><span class="header-section-number">9.1</span> Key points:</h2>
+<section id="the-normal-cdf-and-pnorm" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="the-normal-cdf-and-pnorm"><span class="header-section-number">2.9</span> The Normal CDF and pnorm</h2>
+<section id="key-points-2" class="level3" data-number="2.9.1">
+<h3 data-number="2.9.1" class="anchored" data-anchor-id="key-points-2"><span class="header-section-number">2.9.1</span> Key points:</h3>
 <ul>
 <li><p>The normal distribution has a mathematically defined CDF which can be computed in R with the function <code>pnorm</code>.</p></li>
 <li><p><code>pnom(a, avg, s)</code> gives the value of the cumculative distribution function <em>F(a)</em> for the normal distribution defined by average <em>avg</em> and standard deviation <em>s</em>.</p></li>
@@ -688,8 +750,8 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <li><p>With rounded data, the normal approximation is particularly useful when computing probabilities of intervals of length 1 that include exactly over integer.</p></li>
 </ul>
 </section>
-<section id="code-using-pnorm-to-calculate-probabilities" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="code-using-pnorm-to-calculate-probabilities"><span class="header-section-number">9.2</span> Code: Using pnorm to calculate probabilities</h2>
+<section id="code-using-pnorm-to-calculate-probabilities" class="level3" data-number="2.9.2">
+<h3 data-number="2.9.2" class="anchored" data-anchor-id="code-using-pnorm-to-calculate-probabilities"><span class="header-section-number">2.9.2</span> Code: Using pnorm to calculate probabilities</h3>
 <p>Given male heights x:</p>
 <div class="cell">
 <details>
@@ -708,8 +770,8 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 </details>
 </div>
 </section>
-<section id="code-discretization-and-the-normal-approximation" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="code-discretization-and-the-normal-approximation"><span class="header-section-number">9.3</span> Code: Discretization and the normal approximation</h2>
+<section id="code-discretization-and-the-normal-approximation" class="level3" data-number="2.9.3">
+<h3 data-number="2.9.3" class="anchored" data-anchor-id="code-discretization-and-the-normal-approximation"><span class="header-section-number">2.9.3</span> Code: Discretization and the normal approximation</h3>
 <div class="cell">
 <details>
 <summary>show the code</summary>
@@ -740,14 +802,14 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 </div>
 </section>
 </section>
-<section id="definition-of-quantiles" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Definition of quantiles</h1>
-<section id="definition-of-quantiles-1" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="definition-of-quantiles-1"><span class="header-section-number">10.1</span> Definition of quantiles</h2>
+<section id="definition-of-quantiles" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="definition-of-quantiles"><span class="header-section-number">2.10</span> Definition of quantiles</h2>
+<section id="definition-of-quantiles-1" class="level3" data-number="2.10.1">
+<h3 data-number="2.10.1" class="anchored" data-anchor-id="definition-of-quantiles-1"><span class="header-section-number">2.10.1</span> Definition of quantiles</h3>
 <p><a href="https://www.youtube.com/watch?v=Ky7QeVgv-BA&amp;ab_channel=MarinStatsLectures-RProgramming%26Statistics">Quantiles</a> are cut off points that divide a dataset into intervals with set probability. The <em>qth</em> quantile is the value at which <em>q%</em> of the observation are <strong><em>equal to or less than that value</em></strong>.</p>
 </section>
-<section id="using-the-quantile-function" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="using-the-quantile-function"><span class="header-section-number">10.2</span> Using the quantile function</h2>
+<section id="using-the-quantile-function" class="level3" data-number="2.10.2">
+<h3 data-number="2.10.2" class="anchored" data-anchor-id="using-the-quantile-function"><span class="header-section-number">2.10.2</span> Using the quantile function</h3>
 <p>Given a dataset <code>data</code> and desired quantile <code>q</code>, you can find the <code>q</code> the quantile of <code>data</code> with:</p>
 <div class="cell">
 <details>
@@ -756,8 +818,8 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 </details>
 </div>
 </section>
-<section id="percentiles" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="percentiles"><span class="header-section-number">10.3</span> Percentiles</h2>
+<section id="percentiles" class="level3" data-number="2.10.3">
+<h3 data-number="2.10.3" class="anchored" data-anchor-id="percentiles"><span class="header-section-number">2.10.3</span> Percentiles</h3>
 <p>Percentiles are the quantiles that divide a dataset into 100 intervals each with 1% probability. You can determine all percentiles of a dataset <code>data</code> like this:</p>
 <div class="cell">
 <details>
@@ -767,13 +829,13 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 </details>
 </div>
 </section>
-<section id="quartiles" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="quartiles"><span class="header-section-number">10.4</span> Quartiles</h2>
+<section id="quartiles" class="level3" data-number="2.10.4">
+<h3 data-number="2.10.4" class="anchored" data-anchor-id="quartiles"><span class="header-section-number">2.10.4</span> Quartiles</h3>
 <p>Quartiles divide a dataset into 4 parts each with 25% probability. They are equal to the 25th, 50th and 75th percentiles. The 25th percentile is also known as the <em>1st quartile</em>, the 50th percentile is also konwn as the median, and the 75th percentile is also knowns as the <em>3rd quartile</em>.</p>
 <p>The <strong><em><code>summary()</code></em></strong> function returns the minimum, quartiles and maximum of a vector.</p>
 </section>
-<section id="examples" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="examples"><span class="header-section-number">10.5</span> Examples</h2>
+<section id="examples" class="level3" data-number="2.10.5">
+<h3 data-number="2.10.5" class="anchored" data-anchor-id="examples"><span class="header-section-number">2.10.5</span> Examples</h3>
 <p>Load the heights dataset from the <em>dslabs</em> package:</p>
 <div class="cell">
 <details>
@@ -822,10 +884,10 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 </div>
 </section>
 </section>
-<section id="finding-quantile-with-qnorm" class="level1 page-columns page-full" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> Finding quantile with qnorm</h1>
-<section id="definiton-of-qnorm" class="level2 page-columns page-full" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="definiton-of-qnorm"><span class="header-section-number">11.1</span> Definiton of qnorm</h2>
+<section id="finding-quantile-with-qnorm" class="level2 page-columns page-full" data-number="2.11">
+<h2 data-number="2.11" class="anchored" data-anchor-id="finding-quantile-with-qnorm"><span class="header-section-number">2.11</span> Finding quantile with qnorm</h2>
+<section id="definiton-of-qnorm" class="level3 page-columns page-full" data-number="2.11.1">
+<h3 data-number="2.11.1" class="anchored" data-anchor-id="definiton-of-qnorm"><span class="header-section-number">2.11.1</span> Definiton of qnorm</h3>
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">简单来说,<a href="https://www.jianshu.com/p/a24eb1b94177"><strong><em><code>qnorm</code></em></strong></a>是正态分布<strong><em>累积分布函数(CDF)</em></strong>的反函数， 也就是说它可以视为<code>pnorm</code>的反函数, 这里<code>q</code>指的是quantile, 即分位数</span></div></div>
 <p>The <a href="https://www.youtube.com/watch?v=X5NXDK6AVtU&amp;ab_channel=TheDataDigest"><code>qnorm()</code></a> function gives the theoretical value of a quantile with probability <code>p</code> of observing a value equal to or less than that quantile value a normal distribution with mean <code>mu</code> and standard deviation <code>sigma</code>:</p>
 <div class="cell">
@@ -843,12 +905,12 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 </div>
 <p>Recall that quantiles are defined such that <span class="math inline">p</span> is the probability of a random observation less than or equal to the quantile.</p>
 </section>
-<section id="realation-to-pnorm" class="level2" data-number="11.2">
-<h2 data-number="11.2" class="anchored" data-anchor-id="realation-to-pnorm"><span class="header-section-number">11.2</span> Realation to pnorm</h2>
-<p>The <code>pnorm()</code> function gives the probability that a value from a standard normal distribution will be less than or equal to a z-score value z. consider: <strong><em><span class="math display">pnorm(-1.96)\approx0.025</span></em></strong> The result of <code>pnorm()</code> is the quantile. Note that: <strong><em><span class="math display">qnorm(0.025)\approx-1.96</span></em></strong> <code>qnorm()</code> and <code>pnorm</code> are inverse functions: <strong><em><span class="math display">pnorm(qnorm(0.025))\equiv0.025</span></em></strong></p>
+<section id="realation-to-pnorm" class="level3" data-number="2.11.2">
+<h3 data-number="2.11.2" class="anchored" data-anchor-id="realation-to-pnorm"><span class="header-section-number">2.11.2</span> Realation to pnorm</h3>
+<p>The <code>pnorm()</code> function gives the probability that a value from a standard normal distribution will be less than or equal to a z-score value z. consider: <span class="math display">pnorm(-1.96)\approx0.025</span> The result of <code>pnorm()</code> is the quantile. Note that: <span class="math display">qnorm(0.025)\approx-1.96</span> <code>qnorm()</code> and <code>pnorm</code> are inverse functions: <span class="math display">pnorm(qnorm(0.025))\equiv0.025</span></p>
 </section>
-<section id="theoretical-quantiles" class="level2" data-number="11.3">
-<h2 data-number="11.3" class="anchored" data-anchor-id="theoretical-quantiles"><span class="header-section-number">11.3</span> Theoretical quantiles</h2>
+<section id="theoretical-quantiles" class="level3" data-number="2.11.3">
+<h3 data-number="2.11.3" class="anchored" data-anchor-id="theoretical-quantiles"><span class="header-section-number">2.11.3</span> Theoretical quantiles</h3>
 <p>You can use <code>qnorm()</code> to determine the theoretical quantiles of a dataset: that is, the theoretical value of quantiles assuming that a dataset follows a normal distribution. Run the <code>qnorm()</code> function with the desired probabilities <em>p</em>, mean mu and standard deviation sigma.</p>
 <p>Suppose male heights follow a normal distribution with a mean of 69 inches and standard deviation of 3 inches. The theoretical quantiles are:</p>
 <div class="cell">
@@ -861,10 +923,10 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <p>Theoretical quantiles can be compared to sample quantiles determined with the quantile function in order to evaluate whether the sample follows a normal distribution.</p>
 </section>
 </section>
-<section id="quantile-quantile-plots" class="level1" data-number="12">
-<h1 data-number="12"><span class="header-section-number">12</span> Quantile-Quantile Plots</h1>
-<section id="key-points-3" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="key-points-3"><span class="header-section-number">12.1</span> Key Points:</h2>
+<section id="quantile-quantile-plots" class="level2" data-number="2.12">
+<h2 data-number="2.12" class="anchored" data-anchor-id="quantile-quantile-plots"><span class="header-section-number">2.12</span> Quantile-Quantile Plots</h2>
+<section id="key-points-3" class="level3" data-number="2.12.1">
+<h3 data-number="2.12.1" class="anchored" data-anchor-id="key-points-3"><span class="header-section-number">2.12.1</span> Key Points:</h3>
 <ul>
 <li><p>Quantile-quantile plots, or QQ-plot, are used to check whether distributions are well-approximated by a normal distribution.</p></li>
 <li><p>Given a proportion <em>p</em>, the quantile <em>q</em> is the value such that the proportion of values in the data blew <em>q</em> is <em>p</em>.</p></li>
@@ -873,8 +935,8 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <li><p>Calculate theoretical quantiles with the <code>qnorm()</code> function. <code>qnorm()</code> will caculate quantiles for the standard normal distribution (<span class="math inline">\mu=0, \sigma=1</span>) by default, but it can calculate quantiles for any normal distribution given <code>mean()</code> and <code>sd()</code> arguments.</p></li>
 </ul>
 </section>
-<section id="code-3" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="code-3"><span class="header-section-number">12.2</span> Code:</h2>
+<section id="code-3" class="level3" data-number="2.12.2">
+<h3 data-number="2.12.2" class="anchored" data-anchor-id="code-3"><span class="header-section-number">2.12.2</span> Code:</h3>
 <div class="cell">
 <details>
 <summary>show the code</summary>
@@ -921,10 +983,10 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 </div>
 </section>
 </section>
-<section id="percentiles-1" class="level1" data-number="13">
-<h1 data-number="13"><span class="header-section-number">13</span> Percentiles</h1>
-<section id="key-points-4" class="level2" data-number="13.1">
-<h2 data-number="13.1" class="anchored" data-anchor-id="key-points-4"><span class="header-section-number">13.1</span> Key Points:</h2>
+<section id="percentiles-1" class="level2" data-number="2.13">
+<h2 data-number="2.13" class="anchored" data-anchor-id="percentiles-1"><span class="header-section-number">2.13</span> Percentiles</h2>
+<section id="key-points-4" class="level3" data-number="2.13.1">
+<h3 data-number="2.13.1" class="anchored" data-anchor-id="key-points-4"><span class="header-section-number">2.13.1</span> Key Points:</h3>
 <ul>
 <li><p>Percentiles are the quantiles obtained when defining <span class="math inline">p</span> as 0.01, 0.02,…,0.99. They summarize the values at which a certain percent of the observations are equal to or less than that value.</p></li>
 <li><p>The 50th percentile is also known as the median.</p></li>
@@ -932,19 +994,258 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 </ul>
 </section>
 </section>
-<section id="boxplots" class="level1 page-columns page-full" data-number="14">
-<h1 data-number="14"><span class="header-section-number">14</span> Boxplots</h1>
+<section id="boxplots" class="level2 page-columns page-full" data-number="2.14">
+<h2 data-number="2.14" class="anchored" data-anchor-id="boxplots"><span class="header-section-number">2.14</span> Boxplots</h2>
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">R语言如何绘制<a href="https://zhuanlan.zhihu.com/p/440914623">箱线图</a></span></div></div>
-<section id="key-points-5" class="level2" data-number="14.1">
-<h2 data-number="14.1" class="anchored" data-anchor-id="key-points-5"><span class="header-section-number">14.1</span> Key Points:</h2>
+<section id="key-points-5" class="level3" data-number="2.14.1">
+<h3 data-number="2.14.1" class="anchored" data-anchor-id="key-points-5"><span class="header-section-number">2.14.1</span> Key Points:</h3>
 <ul>
 <li><p>When data do not follow a normal distribution and cannot be succinctly summarized by only the mean and standard deviation, an alternative is to report a five-number summary: range (ignoring outliers) and the quartiles (25th, 50th, 75th percentile).</p></li>
 <li><p>In a <a href="https://www.youtube.com/watch?v=INSIyaZUXIY&amp;ab_channel=DATAtab">boxplot</a>, the box is defined by the <em>25th</em> and <em>75th</em> percentiles and the <em>median</em> is <strong><em>a horizontal line through the box</em></strong>. The <em>whiskers</em> show <strong><em>the range excluding outliers</em></strong>, and outliers are plotted separately as individual points.</p></li>
 <li><p>The <em>interquartile range</em> is the distance between the 25th and 75th percentiles.</p></li>
 <li><p>Boxplots are particularly useful when comparing <em>multiple distributions</em>.</p></li>
 </ul>
+</section>
+</section>
+<section id="distribution-of-female-heights" class="level2" data-number="2.15">
+<h2 data-number="2.15" class="anchored" data-anchor-id="distribution-of-female-heights"><span class="header-section-number">2.15</span> Distribution of Female Heights</h2>
+<section id="key-points-6" class="level3" data-number="2.15.1">
+<h3 data-number="2.15.1" class="anchored" data-anchor-id="key-points-6"><span class="header-section-number">2.15.1</span> Key Points:</h3>
+<ul>
+<li><p>If a distribution is not normal, it cannot be summarized with only the mean and standard seviation. Provide a histogram, smooth density or boxplot instead.</p></li>
+<li><p>A plot can force us to see unexpected results that make us question the quality or implication of our data.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="introduction-to-ggplot2" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Introduction to ggplot2</h1>
+<section id="overview-1" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="overview-1"><span class="header-section-number">3.1</span> Overview</h2>
+<p>After completing ggplot2, we will:</p>
+<ul>
+<li><p>be able to use ggplot2 to create data visualizations in R.</p></li>
+<li><p>be able to explain what the data component of a graph is.</p></li>
+<li><p>be able to identify the geometry component of a graph and know when to use which type of geometry. be able to explain what the aesthetic mapping component of a graph is.</p></li>
+<li><p>be able to understand the scale component of a graph and select an appropriate scale component to use.</p></li>
+</ul>
+</section>
+<section id="ggplot" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="ggplot"><span class="header-section-number">3.2</span> ggplot</h2>
+<section id="ggplot2" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="ggplot2"><span class="header-section-number">3.2.1</span> ggplot2</h3>
+<ul>
+<li><p><a href="https://datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html">Data visualization with ggolot2</a></p></li>
+<li><p><a href="https://github.com/rstudio/cheatsheets/blob/main/data-visualization-2.1.pdf">Data visualization with ggplot2: Cheat Sheet</a></p></li>
+<li><p><a href="https://r-graph-gallery.com/index.html">The R graph gallery example</a></p></li>
+</ul>
+</section>
+<section id="key-points-7" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="key-points-7"><span class="header-section-number">3.2.2</span> key Points:</h3>
+<ul>
+<li><p>Throughout the series, we will create plots with the ggplot2 package. <strong>ggplot2</strong> is part of the <strong>tidyverse</strong> suite of package, which you can load with <strong><code>library(tidyverse)</code></strong>.</p></li>
+<li><p>Note that you can also load <strong>ggplot2</strong> alone using the command <strong><code>library(ggplot2)</code></strong>, instead of loading the entire tidyverse.</p></li>
+<li><p><strong>ggplot2</strong> uses a <strong>grammar of graphics</strong> to break plots into building blocks that have intuitive syntax, making it easy to create relatively complex and aesthetically pleasing plots with relatively simple and readable code.</p></li>
+<li><p><strong>ggplot2</strong> is designed to work excusively with tidy data (<strong>rows are observations and columns are variables</strong>).</p></li>
+</ul>
+</section>
+</section>
+<section id="graph-components" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="graph-components"><span class="header-section-number">3.3</span> Graph Components</h2>
+<section id="key-points-8" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="key-points-8"><span class="header-section-number">3.3.1</span> Key Points:</h3>
+<ul>
+<li>Plots in <strong>ggplot2</strong> consist of 3 main components:
+<ul>
+<li><strong>Data</strong>: The dataset being summarized</li>
+<li><strong>Geometry</strong>: The type of plot(scatterplot, boxplot, barplot, histogram, qqplot, smooth desity, etc.)</li>
+<li><strong>Aesthetic mapping</strong>: Variable mapped to visual cues, such as x-axis and y-axis values and color.</li>
+</ul></li>
+</ul>
+</section>
+<section id="code-4" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="code-4"><span class="header-section-number">3.3.2</span> Code:</h3>
+<div class="cell">
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">library</span>(dslabs)</span>
+<span id="cb29-2"><a href="#cb29-2"></a><span class="fu">data</span>(murders)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="creating-a-new-plot" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="creating-a-new-plot"><span class="header-section-number">3.4</span> Creating a New Plot</h2>
+<section id="key-points-9" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="key-points-9"><span class="header-section-number">3.4.1</span> Key Points:</h3>
+<ul>
+<li><p>You can associated a dataset <code>x</code> with a ggplot object with any of the 3 commands:</p>
+<ul>
+<li><strong><code>ggplot(data = x)</code></strong></li>
+<li><strong><code>ggplot(x)</code></strong></li>
+<li><strong><code>x %&gt;% ggplot()</code></strong></li>
+</ul></li>
+<li><p>You can assign a ggplot object to a variable. If the object is not assigned to a variable, it will automatically be displayed.</p></li>
+<li><p>You can display a ggplot object assigned to a variable by printing that variable.</p></li>
+</ul>
+<p>Code:</p>
+<div class="cell">
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb30-2"><a href="#cb30-2"></a><span class="fu">library</span>(dslabs)</span>
+<span id="cb30-3"><a href="#cb30-3"></a><span class="fu">data</span>(murders)</span>
+<span id="cb30-4"><a href="#cb30-4"></a></span>
+<span id="cb30-5"><a href="#cb30-5"></a><span class="fu">ggplot</span>(<span class="at">data =</span> murders)</span>
+<span id="cb30-6"><a href="#cb30-6"></a></span>
+<span id="cb30-7"><a href="#cb30-7"></a>murders <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>()</span>
+<span id="cb30-8"><a href="#cb30-8"></a></span>
+<span id="cb30-9"><a href="#cb30-9"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> murders)</span>
+<span id="cb30-10"><a href="#cb30-10"></a></span>
+<span id="cb30-11"><a href="#cb30-11"></a><span class="fu">class</span>(p)</span>
+<span id="cb30-12"><a href="#cb30-12"></a></span>
+<span id="cb30-13"><a href="#cb30-13"></a><span class="fu">print</span>(p) <span class="co"># this is equivalent to simply typing p</span></span>
+<span id="cb30-14"><a href="#cb30-14"></a>p </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="layers" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="layers"><span class="header-section-number">3.5</span> Layers</h2>
+<section id="key-points-10" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="key-points-10"><span class="header-section-number">3.5.1</span> Key Points:</h3>
+<ul>
+<li><p>In <strong>ggplot2</strong>, graphs are created by adding layers to the ggplot object: DATA %&gt;% ggplot() + LAYER_1 + LAYER_2 + … + LAYER_N</p></li>
+<li><p>The <strong><em>geometry layer</em></strong> defines that plot type and takes the format <code>geom_x</code> where <code>x</code> is the plot type.</p></li>
+<li><p><strong><em>Aesthetic mappings</em></strong> describe how properties of <strong>the data connect with features of the graph</strong> (axis position, color, size, etc.) define aesthetic mapping with <code>aes()</code> function.</p></li>
+<li><p><strong><code>aes()</code></strong> uses variable names from the object component (for example, <strong><code>total</code></strong> rather than <strong><code>murders$total</code></strong>).</p></li>
+<li><p><strong><code>geom_point()</code></strong> creates a scatterplot and requires <code>x</code> and <code>y</code> aesthetic mappings.</p></li>
+<li><p><strong><code>geom_text()</code></strong> and <strong><code>geom_label</code></strong> add text to a scatterplot and require <code>x</code>, <code>y</code>, and <code>label</code> aesthetic mappings.</p></li>
+<li><p>To determine which aesthetic mappings are required for a geometry, read the help file for that geometry.</p></li>
+<li><p>You can add layers with different aesthetic mappings to the same graph.</p></li>
+</ul>
+<p>Code: Adding layers to a plot</p>
+<div class="cell">
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb31-2"><a href="#cb31-2"></a><span class="fu">library</span>(dslabs)</span>
+<span id="cb31-3"><a href="#cb31-3"></a><span class="fu">data</span>(murders)</span>
+<span id="cb31-4"><a href="#cb31-4"></a></span>
+<span id="cb31-5"><a href="#cb31-5"></a>murders <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb31-6"><a href="#cb31-6"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> population<span class="sc">/</span><span class="dv">10</span><span class="sc">^</span><span class="dv">6</span>, <span class="at">y =</span> total))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="co"># add points layer to predefined ggplot object</span></span>
+<span id="cb32-2"><a href="#cb32-2"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> murders)</span>
+<span id="cb32-3"><a href="#cb32-3"></a>p <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(population<span class="sc">/</span><span class="dv">10</span><span class="sc">^</span><span class="dv">6</span>, total))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Datavisualization_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid" width="672"></p>
+</div>
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="co"># add text layer to scatterplot</span></span>
+<span id="cb33-2"><a href="#cb33-2"></a>p <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(population<span class="sc">/</span><span class="dv">10</span><span class="sc">^</span><span class="dv">6</span>, total)) <span class="sc">+</span></span>
+<span id="cb33-3"><a href="#cb33-3"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(population<span class="sc">/</span><span class="dv">10</span><span class="sc">^</span><span class="dv">6</span>, total, <span class="at">label =</span> abb))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Datavisualization_files/figure-html/unnamed-chunk-25-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Code: Example of <code>aes</code> behavior</p>
+<div class="cell">
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="co"># no error from this call</span></span>
+<span id="cb34-2"><a href="#cb34-2"></a>p_test <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">geom_text</span>(<span class="fu">aes</span>(population<span class="sc">/</span><span class="dv">10</span><span class="sc">^</span><span class="dv">6</span>, total, <span class="at">lable =</span> abb))</span>
+<span id="cb34-3"><a href="#cb34-3"></a></span>
+<span id="cb34-4"><a href="#cb34-4"></a><span class="co"># error - "abb" is not a globally defined variable and cannot be found outside of aes</span></span>
+<span id="cb34-5"><a href="#cb34-5"></a>p_test <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">geom_text</span>(<span class="fu">aes</span>(population<span class="sc">/</span><span class="dv">10</span><span class="sc">^</span><span class="dv">6</span>, total), <span class="at">label =</span> abb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="thinkering" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="thinkering"><span class="header-section-number">3.6</span> Thinkering</h2>
+<section id="key-points-11" class="level3" data-number="3.6.1">
+<h3 data-number="3.6.1" class="anchored" data-anchor-id="key-points-11"><span class="header-section-number">3.6.1</span> Key Points:</h3>
+<ul>
+<li><p>You can modify arguments to geometry functions others than <code>aes()</code> and the data.</p></li>
+<li><p>These arguments are not aesthetic mappings: the affect all data points the same way.</p></li>
+<li><p><strong><em>Global aesthetic mappings</em></strong> apply to all geometries and can be defined when you initially call <code>ggplot()</code>. All the geometries added as layers will default to this mapping. Local aesthetic mapping add additional information or override the default mappings.</p></li>
+</ul>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+<strong>Nudge</strong> points a fixed distance
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://ggplot2.tidyverse.org/reference/position_nudge.html?q=nudge#null"><code>position_nudge(x = 0, y = 0)</code></a> is generally useful for adjusting the position of items on discrete scales by a small amount. Nudging is built in to <strong><code>geom_text()</code></strong> because it’s so useful for moving labels a small distance from what they’re labeling.</p>
+</div>
+</div>
+<p>Code:</p>
+<div class="cell">
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="co"># change the size of the points</span></span>
+<span id="cb35-2"><a href="#cb35-2"></a>p <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(population<span class="sc">/</span><span class="dv">10</span><span class="sc">^</span><span class="dv">6</span>, total), <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb35-3"><a href="#cb35-3"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(population<span class="sc">/</span><span class="dv">10</span><span class="sc">^</span><span class="dv">6</span>, total, <span class="at">label =</span> abb))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Datavisualization_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid" width="672"></p>
+</div>
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="co"># move text labels slightly to the right</span></span>
+<span id="cb36-2"><a href="#cb36-2"></a>p <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(population<span class="sc">/</span><span class="dv">10</span><span class="sc">^</span><span class="dv">6</span>, total), <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb36-3"><a href="#cb36-3"></a>    <span class="fu">geom_text</span>(<span class="fu">aes</span>(population<span class="sc">/</span><span class="dv">10</span><span class="sc">^</span><span class="dv">6</span>, total, <span class="at">label =</span> abb), <span class="at">nudge_x =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Datavisualization_files/figure-html/unnamed-chunk-27-2.png" class="img-fluid" width="672"></p>
+</div>
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="co"># simplify code by adding global aesthetic</span></span>
+<span id="cb37-2"><a href="#cb37-2"></a>p <span class="ot">&lt;-</span> murders <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(population<span class="sc">/</span><span class="dv">10</span><span class="sc">^</span><span class="dv">6</span>, total, <span class="at">label =</span> abb))</span>
+<span id="cb37-3"><a href="#cb37-3"></a>p <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb37-4"><a href="#cb37-4"></a>    <span class="fu">geom_text</span>(<span class="at">nudge_x =</span> <span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Datavisualization_files/figure-html/unnamed-chunk-27-3.png" class="img-fluid" width="672"></p>
+</div>
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="co"># local aesthetics override global aesthetics</span></span>
+<span id="cb38-2"><a href="#cb38-2"></a>p <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb38-3"><a href="#cb38-3"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">10</span>, <span class="at">y =</span> <span class="dv">800</span>, <span class="at">label =</span> <span class="st">"Hello there!"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Datavisualization_files/figure-html/unnamed-chunk-27-4.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="scales-labels-and-colors" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="scales-labels-and-colors"><span class="header-section-number">3.7</span> Scales, Labels, and Colors</h2>
+<section id="textbook-links" class="level3" data-number="3.7.1">
+<h3 data-number="3.7.1" class="anchored" data-anchor-id="textbook-links"><span class="header-section-number">3.7.1</span> Textbook links:</h3>
+<ul>
+<li><p><a href="http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#scales">Textbook section on <strong>scales</strong></a></p></li>
+<li><p><a href="http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#labels-and-titles">Textbook section on <strong>labels and titles</strong></a></p></li>
+<li><p><a href="http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#categories-as-colors">Textbook section on <strong>categories as colors</strong></a></p></li>
+<li><p><a href="http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#annotation-shapes-and-adjustments">Textbook section on <strong>annotation, shapes and adjustments</strong></a></p></li>
+</ul>
 
 
+</section>
 </section>
 </section>
 
@@ -1097,6 +1398,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+  </div>
+</footer>
 
 
 
