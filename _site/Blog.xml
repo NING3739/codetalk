@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Stats &amp; R</title>
+<link>https://quartopub.com/sites/ningli/statsr/Blog.html</link>
+<atom:link href="https://quartopub.com/sites/ningli/statsr/Blog.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.2.269</generator>
+<lastBuildDate>Wed, 30 Nov 2022 11:00:00 GMT</lastBuildDate>
+<item>
+  <title>Dynamic Graph</title>
+  <dc:creator>Ning Li</dc:creator>
+  <link>https://quartopub.com/sites/ningli/statsr/posts/Dynamic Graph/Graph.html</link>
+  <description><![CDATA[ 
+
+
+
+<p>Here is an example shows how to use <strong>gganmate</strong> package to make a dynamic graph.</p>
+<section id="gganmate" class="level1">
+<h1>gganmate</h1>
+<section id="data-from-mtcars" class="level2">
+<h2 class="anchored" data-anchor-id="data-from-mtcars">Data from mtcars</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;">library</span>(ggplot2)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;">library</span>(gganimate)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;">ggplot</span>(mtcars, <span class="fu" style="color: #4758AB;">aes</span>(<span class="fu" style="color: #4758AB;">factor</span>(cyl), mpg)) <span class="sc" style="color: #5E5E5E;">+</span> </span>
+<span id="cb1-5">  <span class="fu" style="color: #4758AB;">geom_boxplot</span>() <span class="sc" style="color: #5E5E5E;">+</span> </span>
+<span id="cb1-6">  <span class="co" style="color: #5E5E5E;"># Here comes the gganimate code</span></span>
+<span id="cb1-7">  <span class="fu" style="color: #4758AB;">transition_states</span>(</span>
+<span id="cb1-8">    gear,</span>
+<span id="cb1-9">    <span class="at" style="color: #657422;">transition_length =</span> <span class="dv" style="color: #AD0000;">2</span>,</span>
+<span id="cb1-10">    <span class="at" style="color: #657422;">state_length =</span> <span class="dv" style="color: #AD0000;">1</span></span>
+<span id="cb1-11">  ) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb1-12">  <span class="fu" style="color: #4758AB;">enter_fade</span>() <span class="sc" style="color: #5E5E5E;">+</span> </span>
+<span id="cb1-13">  <span class="fu" style="color: #4758AB;">exit_shrink</span>() <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb1-14">  <span class="fu" style="color: #4758AB;">ease_aes</span>(<span class="st" style="color: #20794D;">'sine-in-out'</span>)</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://quartopub.com/sites/ningli/statsr/posts/Dynamic Graph/Graph_files/figure-html/unnamed-chunk-1-1.gif" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="data-from-gapminder" class="level2">
+<h2 class="anchored" data-anchor-id="data-from-gapminder">Data from gapminder</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;">library</span>(gapminder)</span>
+<span id="cb2-2"></span>
+<span id="cb2-3"><span class="fu" style="color: #4758AB;">ggplot</span>(gapminder, <span class="fu" style="color: #4758AB;">aes</span>(gdpPercap, lifeExp, <span class="at" style="color: #657422;">size =</span> pop, <span class="at" style="color: #657422;">colour =</span> country)) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb2-4">  <span class="fu" style="color: #4758AB;">geom_point</span>(<span class="at" style="color: #657422;">alpha =</span> <span class="fl" style="color: #AD0000;">0.7</span>, <span class="at" style="color: #657422;">show.legend =</span> <span class="cn" style="color: #8f5902;">FALSE</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb2-5">  <span class="fu" style="color: #4758AB;">scale_colour_manual</span>(<span class="at" style="color: #657422;">values =</span> country_colors) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb2-6">  <span class="fu" style="color: #4758AB;">scale_size</span>(<span class="at" style="color: #657422;">range =</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="dv" style="color: #AD0000;">2</span>, <span class="dv" style="color: #AD0000;">12</span>)) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb2-7">  <span class="fu" style="color: #4758AB;">scale_x_log10</span>() <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb2-8">  <span class="fu" style="color: #4758AB;">facet_wrap</span>(<span class="sc" style="color: #5E5E5E;">~</span>continent) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb2-9">  <span class="co" style="color: #5E5E5E;"># Here comes the gganimate specific bits</span></span>
+<span id="cb2-10">  <span class="fu" style="color: #4758AB;">labs</span>(<span class="at" style="color: #657422;">title =</span> <span class="st" style="color: #20794D;">'Year: {frame_time}'</span>, <span class="at" style="color: #657422;">x =</span> <span class="st" style="color: #20794D;">'GDP per capita'</span>, <span class="at" style="color: #657422;">y =</span> <span class="st" style="color: #20794D;">'life expectancy'</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb2-11">  <span class="fu" style="color: #4758AB;">transition_time</span>(year) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb2-12">  <span class="fu" style="color: #4758AB;">ease_aes</span>(<span class="st" style="color: #20794D;">'linear'</span>)</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://quartopub.com/sites/ningli/statsr/posts/Dynamic Graph/Graph_files/figure-html/unnamed-chunk-2-1.gif" class="img-fluid"></p>
+</div>
+</div>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>code</category>
+  <category>analysis</category>
+  <guid>https://quartopub.com/sites/ningli/statsr/posts/Dynamic Graph/Graph.html</guid>
+  <pubDate>Wed, 30 Nov 2022 11:00:00 GMT</pubDate>
+  <media:content url="https://media4.giphy.com/media/bmQBu3aSF0DxadphkG/giphy.gif?cid=ecf05e47meob1g8g28iy7nkmukn31jbyq2jp88g0eqwwedn8&amp;rid=giphy.gif&amp;ct=g" medium="image"/>
+</item>
+<item>
+  <title>Christmas Tree</title>
+  <dc:creator>Ning Li</dc:creator>
+  <link>https://quartopub.com/sites/ningli/statsr/posts/Christmas Tree/christmas_tree.html</link>
+  <description><![CDATA[ 
+
+
+
+<p>Merry Christmas Everyone!!!</p>
+<p>Here is an example to use <strong>ggplot2</strong> to make a Christmas Tree.</p>
+<section id="code" class="level1">
+<h1>Code</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;">rm</span>(<span class="at" style="color: #657422;">list =</span> <span class="fu" style="color: #4758AB;">ls</span>())</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;">library</span>(ggplot2)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="co" style="color: #5E5E5E;"># create data</span></span>
+<span id="cb1-5">x <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="dv" style="color: #AD0000;">8</span>,<span class="dv" style="color: #AD0000;">7</span>,<span class="dv" style="color: #AD0000;">6</span>,<span class="dv" style="color: #AD0000;">7</span>,<span class="dv" style="color: #AD0000;">6</span>,<span class="dv" style="color: #AD0000;">5</span>,<span class="dv" style="color: #AD0000;">6</span>,<span class="dv" style="color: #AD0000;">5</span>,<span class="dv" style="color: #AD0000;">4</span>,<span class="dv" style="color: #AD0000;">5</span>,<span class="dv" style="color: #AD0000;">4</span>,<span class="dv" style="color: #AD0000;">3</span>,<span class="dv" style="color: #AD0000;">4</span>,<span class="dv" style="color: #AD0000;">3</span>,<span class="dv" style="color: #AD0000;">2</span>,<span class="dv" style="color: #AD0000;">3</span>,<span class="dv" style="color: #AD0000;">2</span>,<span class="dv" style="color: #AD0000;">1</span>,<span class="fl" style="color: #AD0000;">0.5</span>,<span class="fl" style="color: #AD0000;">0.1</span>)</span>
+<span id="cb1-6"></span>
+<span id="cb1-7">dat1 <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">data.frame</span>(<span class="at" style="color: #657422;">x1 =</span> <span class="dv" style="color: #AD0000;">1</span><span class="sc" style="color: #5E5E5E;">:</span><span class="fu" style="color: #4758AB;">length</span>(x), <span class="at" style="color: #657422;">x2 =</span> x)</span>
+<span id="cb1-8">dat2 <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">data.frame</span>(<span class="at" style="color: #657422;">x1 =</span> <span class="dv" style="color: #AD0000;">1</span><span class="sc" style="color: #5E5E5E;">:</span><span class="fu" style="color: #4758AB;">length</span>(x), <span class="at" style="color: #657422;">x2 =</span> <span class="sc" style="color: #5E5E5E;">-</span>x)</span>
+<span id="cb1-9">dat1<span class="sc" style="color: #5E5E5E;">$</span>xvar <span class="ot" style="color: #003B4F;">&lt;-</span> dat2<span class="sc" style="color: #5E5E5E;">$</span>xvar <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cn" style="color: #8f5902;">NA</span></span>
+<span id="cb1-10">dat1<span class="sc" style="color: #5E5E5E;">$</span>yvar <span class="ot" style="color: #003B4F;">&lt;-</span> dat2<span class="sc" style="color: #5E5E5E;">$</span>yvar <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cn" style="color: #8f5902;">NA</span></span>
+<span id="cb1-11">dat1<span class="sc" style="color: #5E5E5E;">$</span>siz <span class="ot" style="color: #003B4F;">&lt;-</span> dat2<span class="sc" style="color: #5E5E5E;">$</span>siz <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cn" style="color: #8f5902;">NA</span></span>
+<span id="cb1-12">dat1<span class="sc" style="color: #5E5E5E;">$</span>col <span class="ot" style="color: #003B4F;">&lt;-</span> dat2<span class="sc" style="color: #5E5E5E;">$</span>col <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cn" style="color: #8f5902;">NA</span></span>
+<span id="cb1-13"></span>
+<span id="cb1-14"><span class="co" style="color: #5E5E5E;"># set threshold for christmas balls</span></span>
+<span id="cb1-15">dec_threshold <span class="ot" style="color: #003B4F;">=</span> <span class="sc" style="color: #5E5E5E;">-</span><span class="fl" style="color: #AD0000;">0.5</span></span>
+<span id="cb1-16"></span>
+<span id="cb1-17"><span class="co" style="color: #5E5E5E;"># create random places, sizes and colors for christmas balls</span></span>
+<span id="cb1-18"><span class="fu" style="color: #4758AB;">set.seed</span>(<span class="dv" style="color: #AD0000;">2512</span>)</span>
+<span id="cb1-19"><span class="cf" style="color: #003B4F;">for</span> (row <span class="cf" style="color: #003B4F;">in</span> <span class="dv" style="color: #AD0000;">1</span><span class="sc" style="color: #5E5E5E;">:</span><span class="fu" style="color: #4758AB;">nrow</span>(dat1)){</span>
+<span id="cb1-20"></span>
+<span id="cb1-21"><span class="cf" style="color: #003B4F;">if</span> (<span class="fu" style="color: #4758AB;">rnorm</span>(<span class="dv" style="color: #AD0000;">1</span>) <span class="sc" style="color: #5E5E5E;">&gt;</span> dec_threshold){</span>
+<span id="cb1-22"></span>
+<span id="cb1-23">dat1<span class="sc" style="color: #5E5E5E;">$</span>xvar[row] <span class="ot" style="color: #003B4F;">&lt;-</span> row</span>
+<span id="cb1-24">dat1<span class="sc" style="color: #5E5E5E;">$</span>yvar[row] <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">sample</span>(<span class="dv" style="color: #AD0000;">1</span><span class="sc" style="color: #5E5E5E;">:</span>dat1<span class="sc" style="color: #5E5E5E;">$</span>x2[row]<span class="sc" style="color: #5E5E5E;">-</span><span class="dv" style="color: #AD0000;">1</span>,<span class="dv" style="color: #AD0000;">1</span>)</span>
+<span id="cb1-25">dat1<span class="sc" style="color: #5E5E5E;">$</span>siz[row] <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">runif</span>(<span class="dv" style="color: #AD0000;">1</span>,<span class="fl" style="color: #AD0000;">0.5</span>,<span class="fl" style="color: #AD0000;">1.5</span>)</span>
+<span id="cb1-26">dat1<span class="sc" style="color: #5E5E5E;">$</span>col[row] <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">sample</span>(<span class="dv" style="color: #AD0000;">1</span><span class="sc" style="color: #5E5E5E;">:</span><span class="dv" style="color: #AD0000;">5</span>, <span class="dv" style="color: #AD0000;">1</span>)</span>
+<span id="cb1-27">}</span>
+<span id="cb1-28"></span>
+<span id="cb1-29"><span class="cf" style="color: #003B4F;">if</span> (<span class="fu" style="color: #4758AB;">rnorm</span>(<span class="dv" style="color: #AD0000;">1</span>) <span class="sc" style="color: #5E5E5E;">&gt;</span> dec_threshold){</span>
+<span id="cb1-30"></span>
+<span id="cb1-31">dat2<span class="sc" style="color: #5E5E5E;">$</span>xvar[row] <span class="ot" style="color: #003B4F;">&lt;-</span> row</span>
+<span id="cb1-32">dat2<span class="sc" style="color: #5E5E5E;">$</span>yvar[row] <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">sample</span>(<span class="dv" style="color: #AD0000;">1</span><span class="sc" style="color: #5E5E5E;">:</span>dat2<span class="sc" style="color: #5E5E5E;">$</span>x2[row],<span class="dv" style="color: #AD0000;">1</span>)</span>
+<span id="cb1-33">dat2<span class="sc" style="color: #5E5E5E;">$</span>siz[row] <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">runif</span>(<span class="dv" style="color: #AD0000;">1</span>,<span class="fl" style="color: #AD0000;">0.5</span>,<span class="fl" style="color: #AD0000;">1.5</span>)</span>
+<span id="cb1-34">dat2<span class="sc" style="color: #5E5E5E;">$</span>col[row] <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">sample</span>(<span class="dv" style="color: #AD0000;">1</span><span class="sc" style="color: #5E5E5E;">:</span><span class="dv" style="color: #AD0000;">5</span>, <span class="dv" style="color: #AD0000;">1</span>)</span>
+<span id="cb1-35">}</span>
+<span id="cb1-36">}</span>
+<span id="cb1-37"></span>
+<span id="cb1-38"><span class="co" style="color: #5E5E5E;"># plot the christmas tree</span></span>
+<span id="cb1-39"><span class="fu" style="color: #4758AB;">ggplot</span>() <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb1-40"><span class="fu" style="color: #4758AB;">geom_bar</span>(<span class="at" style="color: #657422;">data =</span> dat1, <span class="fu" style="color: #4758AB;">aes</span>(<span class="at" style="color: #657422;">x=</span>x1, <span class="at" style="color: #657422;">y=</span>x2),<span class="at" style="color: #657422;">stat =</span> <span class="st" style="color: #20794D;">"identity"</span>, <span class="at" style="color: #657422;">fill =</span> <span class="st" style="color: #20794D;">'#31a354'</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb1-41"><span class="fu" style="color: #4758AB;">geom_bar</span>(<span class="at" style="color: #657422;">data =</span> dat2, <span class="fu" style="color: #4758AB;">aes</span>(<span class="at" style="color: #657422;">x=</span>x1, <span class="at" style="color: #657422;">y=</span>x2),<span class="at" style="color: #657422;">stat =</span> <span class="st" style="color: #20794D;">"identity"</span>, <span class="at" style="color: #657422;">fill =</span> <span class="st" style="color: #20794D;">'#31a354'</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb1-42"><span class="fu" style="color: #4758AB;">geom_point</span>(<span class="at" style="color: #657422;">data =</span> dat1,<span class="fu" style="color: #4758AB;">aes</span>(<span class="at" style="color: #657422;">x =</span> xvar, <span class="at" style="color: #657422;">y =</span> yvar, <span class="at" style="color: #657422;">size =</span> siz, <span class="at" style="color: #657422;">colour =</span> <span class="fu" style="color: #4758AB;">as.factor</span>(col)) ) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb1-43"><span class="fu" style="color: #4758AB;">geom_point</span>(<span class="at" style="color: #657422;">data =</span> dat2,<span class="fu" style="color: #4758AB;">aes</span>(<span class="at" style="color: #657422;">x =</span> xvar, <span class="at" style="color: #657422;">y =</span> yvar, <span class="at" style="color: #657422;">size =</span> siz, <span class="at" style="color: #657422;">colour =</span> <span class="fu" style="color: #4758AB;">as.factor</span>(col)) ) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb1-44"><span class="fu" style="color: #4758AB;">coord_flip</span>() <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">theme_minimal</span>()<span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">theme</span>(<span class="at" style="color: #657422;">legend.position=</span><span class="st" style="color: #20794D;">"none"</span>,</span>
+<span id="cb1-45"><span class="at" style="color: #657422;">axis.title.x=</span><span class="fu" style="color: #4758AB;">element_blank</span>(),</span>
+<span id="cb1-46"><span class="at" style="color: #657422;">axis.text.x=</span><span class="fu" style="color: #4758AB;">element_blank</span>(),</span>
+<span id="cb1-47"><span class="at" style="color: #657422;">axis.ticks.x=</span><span class="fu" style="color: #4758AB;">element_blank</span>(),</span>
+<span id="cb1-48"><span class="at" style="color: #657422;">axis.title.y=</span><span class="fu" style="color: #4758AB;">element_blank</span>(),</span>
+<span id="cb1-49"><span class="at" style="color: #657422;">axis.text.y=</span><span class="fu" style="color: #4758AB;">element_blank</span>(),</span>
+<span id="cb1-50"><span class="at" style="color: #657422;">axis.ticks.y=</span><span class="fu" style="color: #4758AB;">element_blank</span>()) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb1-51"><span class="fu" style="color: #4758AB;">ggtitle</span>(<span class="st" style="color: #20794D;">'Merry Christmas'</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb1-52"><span class="fu" style="color: #4758AB;">theme</span>(<span class="at" style="color: #657422;">plot.title =</span> <span class="fu" style="color: #4758AB;">element_text</span>(<span class="at" style="color: #657422;">color =</span> <span class="st" style="color: #20794D;">"red"</span>, <span class="at" style="color: #657422;">hjust =</span> <span class="fl" style="color: #AD0000;">0.5</span>))</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://quartopub.com/sites/ningli/statsr/posts/Christmas Tree/christmas_tree_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>code</category>
+  <guid>https://quartopub.com/sites/ningli/statsr/posts/Christmas Tree/christmas_tree.html</guid>
+  <pubDate>Tue, 29 Nov 2022 11:00:00 GMT</pubDate>
+  <media:content url="https://media2.giphy.com/media/R7AW255ijTdV6/giphy.gif?cid=ecf05e47fer2fd1d7u1mh7d3ijl0wrpcib7o57odywu4axdd&amp;rid=giphy.gif&amp;ct=g" medium="image"/>
+</item>
+<item>
+  <title>Welcome</title>
+  <dc:creator>Ning Li</dc:creator>
+  <link>https://quartopub.com/sites/ningli/statsr/posts/welcome/welcome.html</link>
+  <description><![CDATA[ 
+
+
+
+<p>This is my first blog on Stats &amp; R. Hope you will find some joys here !!!</p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://quartopub.com/sites/ningli/statsr/posts/welcome/welcome.html</guid>
+  <pubDate>Sat, 26 Nov 2022 11:00:00 GMT</pubDate>
+  <media:content url="https://media1.giphy.com/media/3YX5uFD3ksn5QGhQCQ/giphy.gif?cid=ecf05e47wh8zqk5qrx69zxo06440kl54py9vudby0dhlldj2&amp;rid=giphy.gif&amp;ct=g" medium="image"/>
+</item>
+</channel>
+</rss>

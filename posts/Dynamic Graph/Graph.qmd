@@ -1,9 +1,15 @@
 ---
-title: "R graph"
-editor: visual
+title: "Dynamic Graph"
+date: "2022-12-01"
+categories: [code, analysis]
+image: "https://media4.giphy.com/media/bmQBu3aSF0DxadphkG/giphy.gif?cid=ecf05e47meob1g8g28iy7nkmukn31jbyq2jp88g0eqwwedn8&rid=giphy.gif&ct=g"
+description: Make a dynamic graph by gganmate
+format:
+  html:
+    code-fold: false
 ---
 
-This page are mainly introduce all kinds of graph for academic search. we will going to use **BASE R**, **GGPLOT2**, **INTERACTIVE CHARTS** and **R MARKDOWN** as the tools. `mtcars` and `gapminder` will be our data source.
+Here is an example shows how to use **gganmate** package to make a dynamic graph.
 
 # gganmate
 

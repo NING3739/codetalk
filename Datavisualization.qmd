@@ -710,3 +710,100 @@ p + geom_point(size = 3) +
 -   [Textbook section on **categories as colors**](http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#categories-as-colors)
 
 -   [Textbook section on **annotation, shapes and adjustments**](http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#annotation-shapes-and-adjustments)
+
+### Key Points:
+
+- Convert the x-axis to log scale with **`scale_x_continuous(trans = "log10")`** or **`scale_x_log10()`**. Similar function exist for the y-axis.
+
+- **Add axis title** with **`xlab()`** and **`ylab()`** function. **Add a plot title** with the **`ggtitle()`** function.
+
+- **Add a color mapping** that colors points by a varaibale by defining **`col`** argument **within `aes()`**. To color all pints the same way, define **`col`** outside of **`aes()`**. 
+
+- **Add a line** with the **`geom_abline()`** geometry. **`geom_abline()`** takes arguments **`slop`** (default = 1) and **`intercept`**(default = 0). Change the color with **`col`** or **`color`** and line type with [**`lty`**](https://r-charts.com/base-r/line-types/).
+
+- Placing the line layer after the point layer will overlay the the line on top of the points. To overlay points on the line, **place the line layer before the point layer**. 
+
+- There are many additional ways to tweak your graph that can be found in the **ggplot2** documentation, cheat sheet or on the internet. For example, you can change the legend title with [**`scale_color_discrete`**](https://www.jianshu.com/p/6ba336b3931f).  
+
+### Code: Log-scale the x-axis and y-axis
+
+```{r, eval=FALSE}
+# define p
+library(tidyverse)
+library(dslabs)
+data(murders)
+
+p <- murders %>% ggplot(aes(population/10^6, total, label = abb))
+
+# log base 10 scale the x-axis and y-axis
+p + geom_point(size = 3) +
+    geom_text(nudge_x = 0.05) +
+    scale_x_continuous(trans = "log10") +
+    scale_y_continuous(trans = "log10")
+```
+
+```{r}
+# efficient log scaling of the axes
+p + geom_point(size = 3) +
+    geom_text(nudge_x = 0.05) +
+    scale_x_log10() +
+    scale_y_log10()
+```
+
+### Code: Add labels and title
+
+```{r}
+p + geom_point(size = 3) +
+    geom_text(nudge_x = 0.05) +
+    scale_x_log10() +
+    scale_y_log10() +
+    xlab("Population in million(log scale)") +
+    ylab("Total number of murders(log scale)") +
+    ggtitle("US Gun Murders in 2010")
+```
+
+### Code: Change color of the points
+
+```{r}
+# redefine p to be everything except the points layer
+p <- murders %>% 
+     ggplot(aes(population/10^6, total, label = abb)) +
+     geom_text(nudge_x = 0.075) +
+     scale_x_log10() +
+     scale_y_log10() +
+     xlab("Population in million(log scale)") +
+     ylab("Total number of murders(log scale)") +
+     ggtitle("US Gun Murders in 2010")
+```
+
+```{r}
+# make all points blue
+p + geom_point(size = 3, color = "blue")
+```
+
+```{r}
+# color points by region
+p + geom_point(aes(col = region), size = 3)
+```
+
+### Code: Add a line with average murder rate
+
+```{r}
+r <- murders %>% 
+     summarize(rate = sum(total) / sum(population) * 10^6) %>%      pull(rate)
+
+p <- p + geom_point(aes(col = region), size = 3) +
+         geom_abline(intercept = log10(r)) # slop is default of 1
+
+# change line to dashed and dark grey, line under points
+p + geom_abline(intercept = log(r), lty = 2, color = "darkgrey") +
+    geom_point(aes(col = region), size = 3)
+```
+
+### Code: Change legend title
+```{r}
+# capitalize legend title
+p <- p + scale_color_discrete(name = "Region")
+p
+```
+

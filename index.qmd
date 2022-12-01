@@ -1,0 +1,28 @@
+---
+format:
+  html:
+    toc: false
+---
+::: column-page
+
+![](https://media3.giphy.com/media/2L8AviEEaIW2DcXGg0/giphy.gif?cid=ecf05e47squf2aep9xwfuuxs5a3o604416nte3wlabz8fvo8&rid=giphy.gif&ct=g){fig-align="center"}
+
+# Welcome to Stats & R !!!
+
+This is a personal website with **Statistics** and the open source language [**R**](https://www.r-project.org/) as the main content, aiming to **facilitate academic exchanges** and **better promote myself**.
+
+If you are new to this site, you will notice that the site is made up of four sections: Blog, About, Works and Contact.
+
+Here are some useful suggestions that can help you use this site smoothly.
+
+-   The **Blog** page, **some interesting ideas**(how to use R to make a 3D Christmas tree, etc.) in daily life will be presented.
+
+-   The **About** page, a good place where you can quickly get to know **who i am** and **what i am doing now**.
+
+-   The **Works** page, **Independent projects**, and R language **study notes** will be showing here.
+
+-   If you have any questions, please go to the contact page to get in touch directly.
+
+Thanks again for coming to my personal website, i hope it can be helpful for your concern.
+
+:::

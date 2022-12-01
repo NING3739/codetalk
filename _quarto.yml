@@ -1,6 +1,5 @@
 project:
   type: website
-
 website:
   cookie-consent: 
     type: express
@@ -12,19 +11,21 @@ website:
   title: "Stats & R"
   favicon: Stats-&-R.png
   page-navigation: true
+  page-footer: "Copyright 2022, Stats & R"
   navbar:
     logo: Stats-&-R.png
     logo-alt: "Stats-&-R.png"
+    logo-href: index.qmd
     left:
-      - text: "About"
-        menu:
-          - Who.qmd
+      - href: "Blog.qmd"
+        text: "Blog"
+      - href: "who.qmd"
+        text: "About"
       - text: "Works"
         menu: 
           - Datavisualization.qmd
-      - text: "R Graph"
-        menu: 
-          - Graph.qmd
+      - href: Contact.qmd
+        text: "Contact"
     pinned: true
     search: true
     

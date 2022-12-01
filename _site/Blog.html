@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Stats &amp; R</title>
+<title>Stats &amp; R – blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./Stats-&amp;-R.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -60,6 +62,35 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-author','listing-description','listing-categories','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y96LK2RNJD"></script>
 
 <script type="text/plain" cookie-consent="tracking">
@@ -93,11 +124,27 @@ cookieconsent.run({
 </script>
 <script async="" src="https://hypothes.is/embed.js"></script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="styles.css">
-</head>
+<link rel="alternate" type="application/rss+xml" title="Stats &amp; R" href="Blog.xml"></head>
 
-<body class="floating nav-fixed fullcontent">
+<body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -117,7 +164,7 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./Blog.html">
+    <a class="nav-link active" href="./Blog.html" aria-current="page">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -146,42 +193,158 @@ cookieconsent.run({
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-    
-</nav>
+  
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(2)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content page-columns page-full column-body" id="quarto-document-content">
 
 
 
-<div class="column-page">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://media3.giphy.com/media/2L8AviEEaIW2DcXGg0/giphy.gif?cid=ecf05e47squf2aep9xwfuuxs5a3o604416nte3wlabz8fvo8&amp;rid=giphy.gif&amp;ct=g" class="img-fluid figure-img"></p>
-</figure>
-</div>
-<section id="welcome-to-stats-r" class="level1">
-<h1>Welcome to Stats &amp; R !!!</h1>
-<p>This is a personal website with <strong>Statistics</strong> and the open source language <a href="https://www.r-project.org/"><strong>R</strong></a> as the main content, aiming to <strong>facilitate academic exchanges</strong> and <strong>better promote myself</strong>.</p>
-<p>If you are new to this site, you will notice that the site is made up of four sections: Blog, About, Works and Contact.</p>
-<p>Here are some useful suggestions that can help you use this site smoothly.</p>
-<ul>
-<li><p>The <strong>Blog</strong> page, <strong>some interesting ideas</strong>(how to use R to make a 3D Christmas tree, etc.) in daily life will be presented.</p></li>
-<li><p>The <strong>About</strong> page, a good place where you can quickly get to know <strong>who i am</strong> and <strong>what i am doing now</strong>.</p></li>
-<li><p>The <strong>Works</strong> page, <strong>Independent projects</strong>, and R language <strong>study notes</strong> will be showing here.</p></li>
-<li><p>If you have any questions, please go to the contact page to get in touch directly.</p></li>
-</ul>
-<p>Thanks again for coming to my personal website, i hope it can be helpful for your concern.</p>
-</section>
+<div class="column-page-left">
+
 </div>
 
 
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="code,analysis" data-listing-date-sort="1669806000000" data-listing-file-modified-sort="1669858782141" data-listing-reading-time-sort="0.64">
+<a href="./posts/Dynamic Graph/Graph.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="https://media4.giphy.com/media/bmQBu3aSF0DxadphkG/giphy.gif?cid=ecf05e47meob1g8g28iy7nkmukn31jbyq2jp88g0eqwwedn8&amp;rid=giphy.gif&amp;ct=g" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Dynamic Graph
+</h5>
+<div class="listing-reading-time card-text text-muted">
+0 min
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
+code
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
+analysis
+</div>
+</div>
+<div class="card-text listing-description">
+Make a dynamic graph by gganmate
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Ning Li
+</div>
+<div class="listing-date">
+Dec 1, 2022
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="code" data-listing-date-sort="1669719600000" data-listing-file-modified-sort="1669859610518" data-listing-reading-time-sort="0.79">
+<a href="./posts/Christmas Tree/christmas_tree.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="https://media2.giphy.com/media/R7AW255ijTdV6/giphy.gif?cid=ecf05e47fer2fd1d7u1mh7d3ijl0wrpcib7o57odywu4axdd&amp;rid=giphy.gif&amp;ct=g" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Christmas Tree
+</h5>
+<div class="listing-reading-time card-text text-muted">
+0 min
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
+code
+</div>
+</div>
+<div class="card-text listing-description">
+Merry Christmas Everyone!!!
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Ning Li
+</div>
+<div class="listing-date">
+Nov 30, 2022
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="news" data-listing-date-sort="1669460400000" data-listing-file-modified-sort="1669871551414" data-listing-reading-time-sort="0.085">
+<a href="./posts/welcome/welcome.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="https://media1.giphy.com/media/3YX5uFD3ksn5QGhQCQ/giphy.gif?cid=ecf05e47wh8zqk5qrx69zxo06440kl54py9vudby0dhlldj2&amp;rid=giphy.gif&amp;ct=g" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Welcome
+</h5>
+<div class="listing-reading-time card-text text-muted">
+0 min
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
+news
+</div>
+</div>
+<div class="card-text listing-description">
+Welcome !!!
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Ning Li
+</div>
+<div class="listing-date">
+Nov 27, 2022
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

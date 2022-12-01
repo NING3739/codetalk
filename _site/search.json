@@ -1,5 +1,47 @@
 [
   {
+    "objectID": "Contact.html",
+    "href": "Contact.html",
+    "title": "Stats & R",
+    "section": "",
+    "text": "Contact\n\n\n\n\n\nThanks in advance for contacting me.\nIn order for me to answer you as soon as possible, here are the best communication methods:\n\nDue to the increasing number of questions received, responding to each of them by email has become unmanageable and unproductive. Therefore, if you have a question, I invite you to add it as a comment at the end of the corresponding article. This way, other readers can benefit from the discussion and that saves me from answering the same thing several times. Questions by email will not be answered (I will redirect you to the comments).\nFor mistakes, bugs or inconsistencies—and that can happen, we are all human after all—you can inform me about them by raising an issue on GitHub. If you are familiar with GitHub, you can even edit the corresponding file and propose a pull request so I can quickly include your changes.\nFor all other requests, please use the contact form below\n\nIf you need to send a file, first fill in the contact form to which I will reply and from there you will be able to send me your file (this is to limit spam)\n\n\nFor a quick answer to your question, make sure to first check the FAQ and comments from other readers. Your question may have already been answered."
+  },
+  {
+    "objectID": "posts/Dynamic Graph/Graph.html",
+    "href": "posts/Dynamic Graph/Graph.html",
+    "title": "Dynamic Graph",
+    "section": "",
+    "text": "Here is an example shows how to use gganmate package to make a dynamic graph."
+  },
+  {
+    "objectID": "posts/Dynamic Graph/Graph.html#data-from-mtcars",
+    "href": "posts/Dynamic Graph/Graph.html#data-from-mtcars",
+    "title": "Dynamic Graph",
+    "section": "Data from mtcars",
+    "text": "Data from mtcars\n\nlibrary(ggplot2)\nlibrary(gganimate)\n\nggplot(mtcars, aes(factor(cyl), mpg)) + \n  geom_boxplot() + \n  # Here comes the gganimate code\n  transition_states(\n    gear,\n    transition_length = 2,\n    state_length = 1\n  ) +\n  enter_fade() + \n  exit_shrink() +\n  ease_aes('sine-in-out')"
+  },
+  {
+    "objectID": "posts/Dynamic Graph/Graph.html#data-from-gapminder",
+    "href": "posts/Dynamic Graph/Graph.html#data-from-gapminder",
+    "title": "Dynamic Graph",
+    "section": "Data from gapminder",
+    "text": "Data from gapminder\n\nlibrary(gapminder)\n\nggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, colour = country)) +\n  geom_point(alpha = 0.7, show.legend = FALSE) +\n  scale_colour_manual(values = country_colors) +\n  scale_size(range = c(2, 12)) +\n  scale_x_log10() +\n  facet_wrap(~continent) +\n  # Here comes the gganimate specific bits\n  labs(title = 'Year: {frame_time}', x = 'GDP per capita', y = 'life expectancy') +\n  transition_time(year) +\n  ease_aes('linear')"
+  },
+  {
+    "objectID": "posts/welcome/welcome.html",
+    "href": "posts/welcome/welcome.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "This is my first blog on Stats & R. Hope you will find some joys here !!!"
+  },
+  {
+    "objectID": "posts/Christmas Tree/christmas_tree.html",
+    "href": "posts/Christmas Tree/christmas_tree.html",
+    "title": "Christmas Tree",
+    "section": "",
+    "text": "Merry Christmas Everyone!!!\nHere is an example to use ggplot2 to make a Christmas Tree.\n\nCode\n\nrm(list = ls())\nlibrary(ggplot2)\n\n# create data\nx <- c(8,7,6,7,6,5,6,5,4,5,4,3,4,3,2,3,2,1,0.5,0.1)\n\ndat1 <- data.frame(x1 = 1:length(x), x2 = x)\ndat2 <- data.frame(x1 = 1:length(x), x2 = -x)\ndat1$xvar <- dat2$xvar <- NA\ndat1$yvar <- dat2$yvar <- NA\ndat1$siz <- dat2$siz <- NA\ndat1$col <- dat2$col <- NA\n\n# set threshold for christmas balls\ndec_threshold = -0.5\n\n# create random places, sizes and colors for christmas balls\nset.seed(2512)\nfor (row in 1:nrow(dat1)){\n\nif (rnorm(1) > dec_threshold){\n\ndat1$xvar[row] <- row\ndat1$yvar[row] <- sample(1:dat1$x2[row]-1,1)\ndat1$siz[row] <- runif(1,0.5,1.5)\ndat1$col[row] <- sample(1:5, 1)\n}\n\nif (rnorm(1) > dec_threshold){\n\ndat2$xvar[row] <- row\ndat2$yvar[row] <- sample(1:dat2$x2[row],1)\ndat2$siz[row] <- runif(1,0.5,1.5)\ndat2$col[row] <- sample(1:5, 1)\n}\n}\n\n# plot the christmas tree\nggplot() +\ngeom_bar(data = dat1, aes(x=x1, y=x2),stat = \"identity\", fill = '#31a354') +\ngeom_bar(data = dat2, aes(x=x1, y=x2),stat = \"identity\", fill = '#31a354') +\ngeom_point(data = dat1,aes(x = xvar, y = yvar, size = siz, colour = as.factor(col)) ) +\ngeom_point(data = dat2,aes(x = xvar, y = yvar, size = siz, colour = as.factor(col)) ) +\ncoord_flip() + theme_minimal()+ theme(legend.position=\"none\",\naxis.title.x=element_blank(),\naxis.text.x=element_blank(),\naxis.ticks.x=element_blank(),\naxis.title.y=element_blank(),\naxis.text.y=element_blank(),\naxis.ticks.y=element_blank()) +\nggtitle('Merry Christmas') +\ntheme(plot.title = element_text(color = \"red\", hjust = 0.5))"
+  },
+  {
     "objectID": "Who.html",
     "href": "Who.html",
     "title": "Who am I ?",
@@ -19,6 +61,13 @@
     "title": "Who am I ?",
     "section": "Experience",
     "text": "Experience\nLife Maid Easy | Head Marketing | December 2020 - present"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Stats & R",
+    "section": "",
+    "text": "Welcome to Stats & R !!!\nThis is a personal website with Statistics and the open source language R as the main content, aiming to facilitate academic exchanges and better promote myself.\nIf you are new to this site, you will notice that the site is made up of four sections: Blog, About, Works and Contact.\nHere are some useful suggestions that can help you use this site smoothly.\n\nThe Blog page, some interesting ideas(how to use R to make a 3D Christmas tree, etc.) in daily life will be presented.\nThe About page, a good place where you can quickly get to know who i am and what i am doing now.\nThe Works page, Independent projects, and R language study notes will be showing here.\nIf you have any questions, please go to the contact page to get in touch directly.\n\nThanks again for coming to my personal website, i hope it can be helpful for your concern."
   },
   {
     "objectID": "Datavisualization.html",
@@ -179,27 +228,13 @@
     "href": "Datavisualization.html#scales-labels-and-colors",
     "title": "Data Science: Data Visualization",
     "section": "3.7 Scales, Labels, and Colors",
-    "text": "3.7 Scales, Labels, and Colors\n\n3.7.1 Textbook links:\n\nTextbook section on scales\nTextbook section on labels and titles\nTextbook section on categories as colors\nTextbook section on annotation, shapes and adjustments"
+    "text": "3.7 Scales, Labels, and Colors\n\n3.7.1 Textbook links:\n\nTextbook section on scales\nTextbook section on labels and titles\nTextbook section on categories as colors\nTextbook section on annotation, shapes and adjustments\n\n\n\n3.7.2 Key Points:\n\nConvert the x-axis to log scale with scale_x_continuous(trans = \"log10\") or scale_x_log10(). Similar function exist for the y-axis.\nAdd axis title with xlab() and ylab() function. Add a plot title with the ggtitle() function.\nAdd a color mapping that colors points by a varaibale by defining col argument within aes(). To color all pints the same way, define col outside of aes().\nAdd a line with the geom_abline() geometry. geom_abline() takes arguments slop (default = 1) and intercept(default = 0). Change the color with col or color and line type with lty.\nPlacing the line layer after the point layer will overlay the the line on top of the points. To overlay points on the line, place the line layer before the point layer.\nThere are many additional ways to tweak your graph that can be found in the ggplot2 documentation, cheat sheet or on the internet. For example, you can change the legend title with scale_color_discrete.\n\n\n\n3.7.3 Code: Log-scale the x-axis and y-axis\n\n\nshow the code\n# define p\nlibrary(tidyverse)\nlibrary(dslabs)\ndata(murders)\n\np <- murders %>% ggplot(aes(population/10^6, total, label = abb))\n\n# log base 10 scale the x-axis and y-axis\np + geom_point(size = 3) +\n    geom_text(nudge_x = 0.05) +\n    scale_x_continuous(trans = \"log10\") +\n    scale_y_continuous(trans = \"log10\")\n\n\n\n\nshow the code\n# efficient log scaling of the axes\np + geom_point(size = 3) +\n    geom_text(nudge_x = 0.05) +\n    scale_x_log10() +\n    scale_y_log10()\n\n\n\n\n\n\n\n3.7.4 Code: Add labels and title\n\n\nshow the code\np + geom_point(size = 3) +\n    geom_text(nudge_x = 0.05) +\n    scale_x_log10() +\n    scale_y_log10() +\n    xlab(\"Population in million(log scale)\") +\n    ylab(\"Total number of murders(log scale)\") +\n    ggtitle(\"US Gun Murders in 2010\")\n\n\n\n\n\n\n\n3.7.5 Code: Change color of the points\n\n\nshow the code\n# redefine p to be everything except the points layer\np <- murders %>% \n     ggplot(aes(population/10^6, total, label = abb)) +\n     geom_text(nudge_x = 0.075) +\n     scale_x_log10() +\n     scale_y_log10() +\n     xlab(\"Population in million(log scale)\") +\n     ylab(\"Total number of murders(log scale)\") +\n     ggtitle(\"US Gun Murders in 2010\")\n\n\n\n\nshow the code\n# make all points blue\np + geom_point(size = 3, color = \"blue\")\n\n\n\n\n\n\n\nshow the code\n# color points by region\np + geom_point(aes(col = region), size = 3)\n\n\n\n\n\n\n\n3.7.6 Code: Add a line with average murder rate\n\n\nshow the code\nr <- murders %>% \n     summarize(rate = sum(total) / sum(population) * 10^6) %>%      pull(rate)\n\np <- p + geom_point(aes(col = region), size = 3) +\n         geom_abline(intercept = log10(r)) # slop is default of 1\n\n# change line to dashed and dark grey, line under points\np + geom_abline(intercept = log(r), lty = 2, color = \"darkgrey\") +\n    geom_point(aes(col = region), size = 3)\n\n\n\n\n\n\n\n3.7.7 Code: Change legend title\n\n\nshow the code\n# capitalize legend title\np <- p + scale_color_discrete(name = \"Region\")\np"
   },
   {
-    "objectID": "Graph.html",
-    "href": "Graph.html",
-    "title": "R graph",
+    "objectID": "Blog.html",
+    "href": "Blog.html",
+    "title": "Stats & R",
     "section": "",
-    "text": "This page are mainly introduce all kinds of graph for academic search. we will going to use BASE R, GGPLOT2, INTERACTIVE CHARTS and R MARKDOWN as the tools. mtcars and gapminder will be our data source."
-  },
-  {
-    "objectID": "Graph.html#data-from-mtcars",
-    "href": "Graph.html#data-from-mtcars",
-    "title": "R graph",
-    "section": "Data from mtcars",
-    "text": "Data from mtcars\n\n\nshow the code\nlibrary(ggplot2)\nlibrary(gganimate)\n\nggplot(mtcars, aes(factor(cyl), mpg)) + \n  geom_boxplot() + \n  # Here comes the gganimate code\n  transition_states(\n    gear,\n    transition_length = 2,\n    state_length = 1\n  ) +\n  enter_fade() + \n  exit_shrink() +\n  ease_aes('sine-in-out')"
-  },
-  {
-    "objectID": "Graph.html#data-from-gapminder",
-    "href": "Graph.html#data-from-gapminder",
-    "title": "R graph",
-    "section": "Data from gapminder",
-    "text": "Data from gapminder\n\n\nshow the code\nlibrary(gapminder)\n\nggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, colour = country)) +\n  geom_point(alpha = 0.7, show.legend = FALSE) +\n  scale_colour_manual(values = country_colors) +\n  scale_size(range = c(2, 12)) +\n  scale_x_log10() +\n  facet_wrap(~continent) +\n  # Here comes the gganimate specific bits\n  labs(title = 'Year: {frame_time}', x = 'GDP per capita', y = 'life expectancy') +\n  transition_time(year) +\n  ease_aes('linear')"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nDynamic Graph\n\n\n0 min\n\n\n\ncode\n\n\nanalysis\n\n\n\nMake a dynamic graph by gganmate\n\n\n\nNing Li\n\n\nDec 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChristmas Tree\n\n\n0 min\n\n\n\ncode\n\n\n\nMerry Christmas Everyone!!!\n\n\n\nNing Li\n\n\nNov 30, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome\n\n\n0 min\n\n\n\nnews\n\n\n\nWelcome !!!\n\n\n\nNing Li\n\n\nNov 27, 2022\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]

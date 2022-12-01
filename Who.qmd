@@ -1,6 +1,6 @@
 ---
 title: "Who am I ?"
-about:
+about:  
   template: solana
   image: https://github.com/NING3739/my-personal-website/blob/797a74d18665e9f6136ef9e862e990067f7627c8/NING%20LI.jpeg?raw=true
   links:

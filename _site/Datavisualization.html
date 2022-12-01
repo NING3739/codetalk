@@ -198,17 +198,14 @@ cookieconsent.run({
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">About</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-about">    
-        <li>
-    <a class="dropdown-item" href="./Who.html">
- <span class="dropdown-text">Who am I ?</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="./Blog.html">
+ <span class="menu-text">Blog</span></a>
   </li>  
-    </ul>
-  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./Who.html">
+ <span class="menu-text">About</span></a>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-works" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Works</span>
@@ -220,17 +217,10 @@ cookieconsent.run({
   </li>  
     </ul>
   </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-r-graph" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">R Graph</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-r-graph">    
-        <li>
-    <a class="dropdown-item" href="./Graph.html">
- <span class="dropdown-text">R graph</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="./Contact.html">
+ <span class="menu-text">Contact</span></a>
   </li>  
-    </ul>
-  </li>
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -352,6 +342,12 @@ cookieconsent.run({
   <li><a href="#scales-labels-and-colors" id="toc-scales-labels-and-colors" class="nav-link" data-scroll-target="#scales-labels-and-colors"><span class="toc-section-number">3.7</span>  Scales, Labels, and Colors</a>
   <ul class="collapse">
   <li><a href="#textbook-links" id="toc-textbook-links" class="nav-link" data-scroll-target="#textbook-links"><span class="toc-section-number">3.7.1</span>  Textbook links:</a></li>
+  <li><a href="#key-points-12" id="toc-key-points-12" class="nav-link" data-scroll-target="#key-points-12"><span class="toc-section-number">3.7.2</span>  Key Points:</a></li>
+  <li><a href="#code-log-scale-the-x-axis-and-y-axis" id="toc-code-log-scale-the-x-axis-and-y-axis" class="nav-link" data-scroll-target="#code-log-scale-the-x-axis-and-y-axis"><span class="toc-section-number">3.7.3</span>  Code: Log-scale the x-axis and y-axis</a></li>
+  <li><a href="#code-add-labels-and-title" id="toc-code-add-labels-and-title" class="nav-link" data-scroll-target="#code-add-labels-and-title"><span class="toc-section-number">3.7.4</span>  Code: Add labels and title</a></li>
+  <li><a href="#code-change-color-of-the-points" id="toc-code-change-color-of-the-points" class="nav-link" data-scroll-target="#code-change-color-of-the-points"><span class="toc-section-number">3.7.5</span>  Code: Change color of the points</a></li>
+  <li><a href="#code-add-a-line-with-average-murder-rate" id="toc-code-add-a-line-with-average-murder-rate" class="nav-link" data-scroll-target="#code-add-a-line-with-average-murder-rate"><span class="toc-section-number">3.7.6</span>  Code: Add a line with average murder rate</a></li>
+  <li><a href="#code-change-legend-title" id="toc-code-change-legend-title" class="nav-link" data-scroll-target="#code-change-legend-title"><span class="toc-section-number">3.7.7</span>  Code: Change legend title</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -1243,6 +1239,139 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <li><p><a href="http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#categories-as-colors">Textbook section on <strong>categories as colors</strong></a></p></li>
 <li><p><a href="http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#annotation-shapes-and-adjustments">Textbook section on <strong>annotation, shapes and adjustments</strong></a></p></li>
 </ul>
+</section>
+<section id="key-points-12" class="level3" data-number="3.7.2">
+<h3 data-number="3.7.2" class="anchored" data-anchor-id="key-points-12"><span class="header-section-number">3.7.2</span> Key Points:</h3>
+<ul>
+<li><p>Convert the x-axis to log scale with <strong><code>scale_x_continuous(trans = "log10")</code></strong> or <strong><code>scale_x_log10()</code></strong>. Similar function exist for the y-axis.</p></li>
+<li><p><strong>Add axis title</strong> with <strong><code>xlab()</code></strong> and <strong><code>ylab()</code></strong> function. <strong>Add a plot title</strong> with the <strong><code>ggtitle()</code></strong> function.</p></li>
+<li><p><strong>Add a color mapping</strong> that colors points by a varaibale by defining <strong><code>col</code></strong> argument <strong>within <code>aes()</code></strong>. To color all pints the same way, define <strong><code>col</code></strong> outside of <strong><code>aes()</code></strong>.</p></li>
+<li><p><strong>Add a line</strong> with the <strong><code>geom_abline()</code></strong> geometry. <strong><code>geom_abline()</code></strong> takes arguments <strong><code>slop</code></strong> (default = 1) and <strong><code>intercept</code></strong>(default = 0). Change the color with <strong><code>col</code></strong> or <strong><code>color</code></strong> and line type with <a href="https://r-charts.com/base-r/line-types/"><strong><code>lty</code></strong></a>.</p></li>
+<li><p>Placing the line layer after the point layer will overlay the the line on top of the points. To overlay points on the line, <strong>place the line layer before the point layer</strong>.</p></li>
+<li><p>There are many additional ways to tweak your graph that can be found in the <strong>ggplot2</strong> documentation, cheat sheet or on the internet. For example, you can change the legend title with <a href="https://www.jianshu.com/p/6ba336b3931f"><strong><code>scale_color_discrete</code></strong></a>.</p></li>
+</ul>
+</section>
+<section id="code-log-scale-the-x-axis-and-y-axis" class="level3" data-number="3.7.3">
+<h3 data-number="3.7.3" class="anchored" data-anchor-id="code-log-scale-the-x-axis-and-y-axis"><span class="header-section-number">3.7.3</span> Code: Log-scale the x-axis and y-axis</h3>
+<div class="cell">
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="co"># define p</span></span>
+<span id="cb39-2"><a href="#cb39-2"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb39-3"><a href="#cb39-3"></a><span class="fu">library</span>(dslabs)</span>
+<span id="cb39-4"><a href="#cb39-4"></a><span class="fu">data</span>(murders)</span>
+<span id="cb39-5"><a href="#cb39-5"></a></span>
+<span id="cb39-6"><a href="#cb39-6"></a>p <span class="ot">&lt;-</span> murders <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(population<span class="sc">/</span><span class="dv">10</span><span class="sc">^</span><span class="dv">6</span>, total, <span class="at">label =</span> abb))</span>
+<span id="cb39-7"><a href="#cb39-7"></a></span>
+<span id="cb39-8"><a href="#cb39-8"></a><span class="co"># log base 10 scale the x-axis and y-axis</span></span>
+<span id="cb39-9"><a href="#cb39-9"></a>p <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb39-10"><a href="#cb39-10"></a>    <span class="fu">geom_text</span>(<span class="at">nudge_x =</span> <span class="fl">0.05</span>) <span class="sc">+</span></span>
+<span id="cb39-11"><a href="#cb39-11"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">trans =</span> <span class="st">"log10"</span>) <span class="sc">+</span></span>
+<span id="cb39-12"><a href="#cb39-12"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">trans =</span> <span class="st">"log10"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="co"># efficient log scaling of the axes</span></span>
+<span id="cb40-2"><a href="#cb40-2"></a>p <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb40-3"><a href="#cb40-3"></a>    <span class="fu">geom_text</span>(<span class="at">nudge_x =</span> <span class="fl">0.05</span>) <span class="sc">+</span></span>
+<span id="cb40-4"><a href="#cb40-4"></a>    <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb40-5"><a href="#cb40-5"></a>    <span class="fu">scale_y_log10</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Datavisualization_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="code-add-labels-and-title" class="level3" data-number="3.7.4">
+<h3 data-number="3.7.4" class="anchored" data-anchor-id="code-add-labels-and-title"><span class="header-section-number">3.7.4</span> Code: Add labels and title</h3>
+<div class="cell">
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a>p <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb41-2"><a href="#cb41-2"></a>    <span class="fu">geom_text</span>(<span class="at">nudge_x =</span> <span class="fl">0.05</span>) <span class="sc">+</span></span>
+<span id="cb41-3"><a href="#cb41-3"></a>    <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb41-4"><a href="#cb41-4"></a>    <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb41-5"><a href="#cb41-5"></a>    <span class="fu">xlab</span>(<span class="st">"Population in million(log scale)"</span>) <span class="sc">+</span></span>
+<span id="cb41-6"><a href="#cb41-6"></a>    <span class="fu">ylab</span>(<span class="st">"Total number of murders(log scale)"</span>) <span class="sc">+</span></span>
+<span id="cb41-7"><a href="#cb41-7"></a>    <span class="fu">ggtitle</span>(<span class="st">"US Gun Murders in 2010"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Datavisualization_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="code-change-color-of-the-points" class="level3" data-number="3.7.5">
+<h3 data-number="3.7.5" class="anchored" data-anchor-id="code-change-color-of-the-points"><span class="header-section-number">3.7.5</span> Code: Change color of the points</h3>
+<div class="cell">
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="co"># redefine p to be everything except the points layer</span></span>
+<span id="cb42-2"><a href="#cb42-2"></a>p <span class="ot">&lt;-</span> murders <span class="sc">%&gt;%</span> </span>
+<span id="cb42-3"><a href="#cb42-3"></a>     <span class="fu">ggplot</span>(<span class="fu">aes</span>(population<span class="sc">/</span><span class="dv">10</span><span class="sc">^</span><span class="dv">6</span>, total, <span class="at">label =</span> abb)) <span class="sc">+</span></span>
+<span id="cb42-4"><a href="#cb42-4"></a>     <span class="fu">geom_text</span>(<span class="at">nudge_x =</span> <span class="fl">0.075</span>) <span class="sc">+</span></span>
+<span id="cb42-5"><a href="#cb42-5"></a>     <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb42-6"><a href="#cb42-6"></a>     <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb42-7"><a href="#cb42-7"></a>     <span class="fu">xlab</span>(<span class="st">"Population in million(log scale)"</span>) <span class="sc">+</span></span>
+<span id="cb42-8"><a href="#cb42-8"></a>     <span class="fu">ylab</span>(<span class="st">"Total number of murders(log scale)"</span>) <span class="sc">+</span></span>
+<span id="cb42-9"><a href="#cb42-9"></a>     <span class="fu">ggtitle</span>(<span class="st">"US Gun Murders in 2010"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="co"># make all points blue</span></span>
+<span id="cb43-2"><a href="#cb43-2"></a>p <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">"blue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Datavisualization_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="co"># color points by region</span></span>
+<span id="cb44-2"><a href="#cb44-2"></a>p <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">col =</span> region), <span class="at">size =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Datavisualization_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="code-add-a-line-with-average-murder-rate" class="level3" data-number="3.7.6">
+<h3 data-number="3.7.6" class="anchored" data-anchor-id="code-add-a-line-with-average-murder-rate"><span class="header-section-number">3.7.6</span> Code: Add a line with average murder rate</h3>
+<div class="cell">
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a>r <span class="ot">&lt;-</span> murders <span class="sc">%&gt;%</span> </span>
+<span id="cb45-2"><a href="#cb45-2"></a>     <span class="fu">summarize</span>(<span class="at">rate =</span> <span class="fu">sum</span>(total) <span class="sc">/</span> <span class="fu">sum</span>(population) <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">6</span>) <span class="sc">%&gt;%</span>      <span class="fu">pull</span>(rate)</span>
+<span id="cb45-3"><a href="#cb45-3"></a></span>
+<span id="cb45-4"><a href="#cb45-4"></a>p <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">col =</span> region), <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb45-5"><a href="#cb45-5"></a>         <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fu">log10</span>(r)) <span class="co"># slop is default of 1</span></span>
+<span id="cb45-6"><a href="#cb45-6"></a></span>
+<span id="cb45-7"><a href="#cb45-7"></a><span class="co"># change line to dashed and dark grey, line under points</span></span>
+<span id="cb45-8"><a href="#cb45-8"></a>p <span class="sc">+</span> <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fu">log</span>(r), <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">color =</span> <span class="st">"darkgrey"</span>) <span class="sc">+</span></span>
+<span id="cb45-9"><a href="#cb45-9"></a>    <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">col =</span> region), <span class="at">size =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Datavisualization_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="code-change-legend-title" class="level3" data-number="3.7.7">
+<h3 data-number="3.7.7" class="anchored" data-anchor-id="code-change-legend-title"><span class="header-section-number">3.7.7</span> Code: Change legend title</h3>
+<div class="cell">
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="co"># capitalize legend title</span></span>
+<span id="cb46-2"><a href="#cb46-2"></a>p <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">scale_color_discrete</span>(<span class="at">name =</span> <span class="st">"Region"</span>)</span>
+<span id="cb46-3"><a href="#cb46-3"></a>p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Datavisualization_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 
 
 </section>
@@ -1400,7 +1529,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-      <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+      <div class="nav-footer-center">Copyright 2022, Stats &amp; R<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
   </div>
 </footer>
 

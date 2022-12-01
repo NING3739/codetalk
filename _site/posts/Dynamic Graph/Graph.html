@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Ning Li">
+<meta name="dcterms.date" content="2022-12-01">
+<meta name="description" content="use gganmate package to make a dynamic graph">
 
-<title>Stats &amp; R - R graph</title>
+<title>Stats &amp; R - Dynamic Graph</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -86,24 +89,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./Stats-&amp;-R.png" rel="icon" type="image/png">
-<script src="site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../Stats-&amp;-R.png" rel="icon" type="image/png">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -157,7 +160,7 @@ cookieconsent.run({
 <script async="" src="https://hypothes.is/embed.js"></script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="floating nav-fixed">
@@ -167,10 +170,10 @@ cookieconsent.run({
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./Stats-&amp;-R.png" alt="Stats-&amp;-R.png" class="navbar-logo">
+    <a href="index.qmd" class="navbar-brand navbar-brand-logo">
+    <img src="../../Stats-&amp;-R.png" alt="Stats-&amp;-R.png" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="index.qmd">
     <span class="navbar-title">Stats &amp; R</span>
     </a>
   </div>
@@ -179,39 +182,29 @@ cookieconsent.run({
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">About</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-about">    
-        <li>
-    <a class="dropdown-item" href="./Who.html">
- <span class="dropdown-text">Who am I ?</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../../Blog.html">
+ <span class="menu-text">Blog</span></a>
   </li>  
-    </ul>
-  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../Who.html">
+ <span class="menu-text">About</span></a>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-works" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Works</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-works">    
         <li>
-    <a class="dropdown-item" href="./Datavisualization.html">
+    <a class="dropdown-item" href="../../Datavisualization.html">
  <span class="dropdown-text">Data Science: Data Visualization</span></a>
   </li>  
     </ul>
   </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-r-graph" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">R Graph</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-r-graph">    
-        <li>
-    <a class="dropdown-item" href="./Graph.html">
- <span class="dropdown-text">R graph</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../../Contact.html">
+ <span class="menu-text">Contact</span></a>
   </li>  
-    </ul>
-  </li>
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -219,7 +212,7 @@ cookieconsent.run({
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <nav id="TOC" role="doc-toc" class="toc-active">
@@ -235,21 +228,42 @@ cookieconsent.run({
 </nav>
 </nav>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-right" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">R graph</h1>
-</div>
+<h1 class="title">Dynamic Graph</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">code</div>
+    <div class="quarto-category">analysis</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    use gganmate package to make a dynamic graph
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ning Li </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 1, 2022</p>
+    </div>
+  </div>
   
     
   </div>
@@ -257,14 +271,12 @@ cookieconsent.run({
 
 </header>
 
-<p>This page are mainly introduce all kinds of graph for academic search. we will going to use <strong>BASE R</strong>, <strong>GGPLOT2</strong>, <strong>INTERACTIVE CHARTS</strong> and <strong>R MARKDOWN</strong> as the tools. <code>mtcars</code> and <code>gapminder</code> will be our data source.</p>
+<p>Here is an example shows how to use <strong>gganmate</strong> package to make a dynamic graph.</p>
 <section id="gganmate" class="level1">
 <h1>gganmate</h1>
 <section id="data-from-mtcars" class="level2">
 <h2 class="anchored" data-anchor-id="data-from-mtcars">Data from mtcars</h2>
 <div class="cell">
-<details>
-<summary>show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(gganimate)</span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
@@ -279,7 +291,6 @@ cookieconsent.run({
 <span id="cb1-12"><a href="#cb1-12"></a>  <span class="fu">enter_fade</span>() <span class="sc">+</span> </span>
 <span id="cb1-13"><a href="#cb1-13"></a>  <span class="fu">exit_shrink</span>() <span class="sc">+</span></span>
 <span id="cb1-14"><a href="#cb1-14"></a>  <span class="fu">ease_aes</span>(<span class="st">'sine-in-out'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output-display">
 <p><img src="Graph_files/figure-html/unnamed-chunk-1-1.gif" class="img-fluid"></p>
 </div>
@@ -288,8 +299,6 @@ cookieconsent.run({
 <section id="data-from-gapminder" class="level2">
 <h2 class="anchored" data-anchor-id="data-from-gapminder">Data from gapminder</h2>
 <div class="cell">
-<details>
-<summary>show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(gapminder)</span>
 <span id="cb2-2"><a href="#cb2-2"></a></span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="fu">ggplot</span>(gapminder, <span class="fu">aes</span>(gdpPercap, lifeExp, <span class="at">size =</span> pop, <span class="at">colour =</span> country)) <span class="sc">+</span></span>
@@ -302,7 +311,6 @@ cookieconsent.run({
 <span id="cb2-10"><a href="#cb2-10"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">'Year: {frame_time}'</span>, <span class="at">x =</span> <span class="st">'GDP per capita'</span>, <span class="at">y =</span> <span class="st">'life expectancy'</span>) <span class="sc">+</span></span>
 <span id="cb2-11"><a href="#cb2-11"></a>  <span class="fu">transition_time</span>(year) <span class="sc">+</span></span>
 <span id="cb2-12"><a href="#cb2-12"></a>  <span class="fu">ease_aes</span>(<span class="st">'linear'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output-display">
 <p><img src="Graph_files/figure-html/unnamed-chunk-2-1.gif" class="img-fluid"></p>
 </div>
@@ -463,11 +471,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-      <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+      <div class="nav-footer-center">Copyright 2022, Stats &amp; R<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
   </div>
 </footer>
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
