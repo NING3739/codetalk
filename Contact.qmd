@@ -1,10 +1,19 @@
 ---
+comments: 
+  giscus: 
+    repo: NING3739/my-personal-website
+    repo-id: R_kgDOIYBxAA
+    category: Comments
+    category-id: DIC_kwDOIYBxAM4CS2io
+    mapping: url
+    input-position: bottom
+    theme: preferred_color_scheme
 format:
   html:
     toc: false
 ---
-::: column-page
 
+::: column-page
 # Contact
 
 ![](https://media1.giphy.com/media/3o8dp3rE9m8IYtZcCQ/giphy.gif?cid=ecf05e4763y1aocmf0top0mat5l4638y3yspqsh08ehc1jb4&rid=giphy.gif&ct=g){fig-align="center"}
@@ -22,5 +31,4 @@ In order for me to answer you as soon as possible, here are the best communicati
     -   If you need to send a file, first fill in the contact form to which I will reply and from there you will be able to send me your file (this is to limit spam)
 
 For a quick answer to your question, make sure to first check the FAQ and comments from other readers. Your question may have already been answered.
-
 :::

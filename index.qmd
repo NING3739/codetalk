@@ -3,8 +3,8 @@ format:
   html:
     toc: false
 ---
-::: column-page
 
+::: column-page
 ![](https://media3.giphy.com/media/2L8AviEEaIW2DcXGg0/giphy.gif?cid=ecf05e47squf2aep9xwfuuxs5a3o604416nte3wlabz8fvo8&rid=giphy.gif&ct=g){fig-align="center"}
 
 # Welcome to Stats & R !!!
@@ -24,5 +24,4 @@ Here are some useful suggestions that can help you use this site smoothly.
 -   If you have any questions, please go to the contact page to get in touch directly.
 
 Thanks again for coming to my personal website, i hope it can be helpful for your concern.
-
 :::

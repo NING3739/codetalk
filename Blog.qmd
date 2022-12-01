@@ -11,5 +11,6 @@ listing:
 page-layout: full
 title-block-banner: false
 ---
-:::{.column-page-left}
+
+::: column-page-left
 :::

@@ -8,9 +8,11 @@ format:
   html:
     code-fold: false
 ---
-Let us use **ggplot2** to make a Christmas Tree. 
+
+Let us use **ggplot2** to make a Christmas Tree.
 
 # Code
+
 ```{r, warning=FALSE}
 rm(list = ls())
 library(ggplot2)

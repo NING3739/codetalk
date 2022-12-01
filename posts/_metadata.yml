@@ -16,3 +16,14 @@ toc-depth: 3
 
 # page-layout
 page-layout: full 
+
+comments: 
+  giscus: 
+    repo: NING3739/my-personal-website
+    repo-id: R_kgDOIYBxAA
+    category: Comments
+    category-id: DIC_kwDOIYBxAM4CS2io
+    mapping: url
+    input-position: bottom
+    theme: preferred_color_scheme
+
