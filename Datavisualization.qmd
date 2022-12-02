@@ -713,17 +713,17 @@ p + geom_point(size = 3) +
 
 ### Key Points:
 
-- Convert the x-axis to log scale with **`scale_x_continuous(trans = "log10")`** or **`scale_x_log10()`**. Similar function exist for the y-axis.
+-   Convert the x-axis to log scale with **`scale_x_continuous(trans = "log10")`** or **`scale_x_log10()`**. Similar function exist for the y-axis.
 
-- **Add axis title** with **`xlab()`** and **`ylab()`** function. **Add a plot title** with the **`ggtitle()`** function.
+-   **Add axis title** with **`xlab()`** and **`ylab()`** function. **Add a plot title** with the **`ggtitle()`** function.
 
-- **Add a color mapping** that colors points by a varaibale by defining **`col`** argument **within `aes()`**. To color all pints the same way, define **`col`** outside of **`aes()`**. 
+-   **Add a color mapping** that colors points by a varaibale by defining **`col`** argument **within `aes()`**. To color all pints the same way, define **`col`** outside of **`aes()`**.
 
-- **Add a line** with the **`geom_abline()`** geometry. **`geom_abline()`** takes arguments **`slop`** (default = 1) and **`intercept`**(default = 0). Change the color with **`col`** or **`color`** and line type with [**`lty`**](https://r-charts.com/base-r/line-types/).
+-   **Add a line** with the **`geom_abline()`** geometry. **`geom_abline()`** takes arguments **`slop`** (default = 1) and **`intercept`**(default = 0). Change the color with **`col`** or **`color`** and line type with [**`lty`**](https://r-charts.com/base-r/line-types/).
 
-- Placing the line layer after the point layer will overlay the the line on top of the points. To overlay points on the line, **place the line layer before the point layer**. 
+-   Placing the line layer after the point layer will overlay the the line on top of the points. To overlay points on the line, **place the line layer before the point layer**.
 
-- There are many additional ways to tweak your graph that can be found in the **ggplot2** documentation, cheat sheet or on the internet. For example, you can change the legend title with [**`scale_color_discrete`**](https://www.jianshu.com/p/6ba336b3931f).  
+-   There are many additional ways to tweak your graph that can be found in the **ggplot2** documentation, cheat sheet or on the internet. For example, you can change the legend title with [**`scale_color_discrete`**](https://www.jianshu.com/p/6ba336b3931f).
 
 ### Code: Log-scale the x-axis and y-axis
 
@@ -801,9 +801,9 @@ p + geom_abline(intercept = log(r), lty = 2, color = "darkgrey") +
 ```
 
 ### Code: Change legend title
+
 ```{r}
 # capitalize legend title
 p <- p + scale_color_discrete(name = "Region")
 p
 ```
-

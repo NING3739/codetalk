@@ -11,7 +11,15 @@ website:
   title: "Stats & R"
   favicon: Stats-&-R.png
   page-navigation: true
-  page-footer: "❤️Copyright 2022, Stats & R❤️"
+  page-footer: 
+    left:  "© 2022 Stats & R™ made with❤️ by [NING](Who.qmd)"
+    right:
+      - icon: envelope
+        href: mailto:ln729500172@gmail.com
+      - icon: twitter
+        href: https://twitter.com/ningli3739
+      - icon: github
+        href: https://github.com/NING3739
   navbar:
     logo: Stats-&-R.png
     logo-alt: "Stats-&-R.png"
@@ -26,8 +34,16 @@ website:
           - Datavisualization.qmd
       - href: Contact.qmd
         text: "Contact"
+    right:
+      - icon: envelope
+        href: mailto:ln729500172@gmail.com
+      - icon: twitter
+        href: https://twitter.com/ningli3739
+      - icon: github
+        href: https://github.com/NING3739
     pinned: true
     search: true
+    
     
 format:
   html:
@@ -39,9 +55,9 @@ format:
     toc-title: Contents
     toc-location: left
     html-math-method: katex
-    theme:
-       - superhero
-       - superhero.scss
+    theme: Litera
+       #- superhero
+       #- superhero.scss
     highlight-style: arrow-light
     anchor-sections: true
     smooth-scroll: true
