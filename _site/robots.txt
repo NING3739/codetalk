@@ -1,1 +1,1 @@
-Sitemap: https://quartopub.com/sites/ningli/statsr/sitemap.xml
+Sitemap: https://ningli.quarto.pub/sitemap.xml

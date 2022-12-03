@@ -1,6 +1,4 @@
 - source: project
   quarto-pub:
-    - id: 68b4b360-fc10-4941-97f8-b277d3a4f61e
-      url: 'https://quartopub.com/sites/ningli/httpsningliquartopubstatsr'
     - id: 53727982-cd76-4984-803d-3f564e2a8946
       url: 'https://quartopub.com/sites/ningli/statsr'

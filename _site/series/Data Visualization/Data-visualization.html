@@ -573,8 +573,8 @@ Important
 <p>Every <em>continuous distribution</em> has <em>cumulative distribution function (CDF)</em>. The CDF defines the proportion of the data below a given value for all values of <span class="math inline">a</span> :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://rafalab.dfci.harvard.edu/dsbook/book_files/figure-html/ecdf-1.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Cumulative Distribution Function (CDF)</figcaption><p></p>
+<p><img src="http://rafalab.dfci.harvard.edu/dsbook/book_files/figure-html/ecdf-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>As defined above, this plot of the CDF for male heights has height value <em>a</em> on the x-axis and the proportion of student with heights of that value or lower(<em>F(</em>a<em>)</em>) on the y-axis.</p>
@@ -713,8 +713,8 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <p>The normal distribution is associated with the 68-95-99.7 rule. This rule describes the probability of observing events within a ceration number of standard deviations of the mean.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://courses.edx.org/assets/courseware/v1/28d10d22ba8b3bf4b0cc5024de0dc616/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-probs-combined.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Normal Distribution Probabilities</figcaption><p></p>
+<p><img src="https://courses.edx.org/assets/courseware/v1/28d10d22ba8b3bf4b0cc5024de0dc616/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-probs-combined.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>The probability distribution function for the normal distribution is defined such that:</p>
@@ -723,8 +723,8 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://courses.edx.org/assets/courseware/v1/f0bb9f66b7bdd91b2c9852c7a68427c7/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-1sd.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Probability of an observation within 1 SD of mean</figcaption><p></p>
+<p><img src="https://courses.edx.org/assets/courseware/v1/f0bb9f66b7bdd91b2c9852c7a68427c7/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-1sd.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <ul>
@@ -732,8 +732,8 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://courses.edx.org/assets/courseware/v1/9686a507a97a536a1f5c6b6a01bd8154/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-2sd.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Probability of an ovservation within 2 SD of mean</figcaption><p></p>
+<p><img src="https://courses.edx.org/assets/courseware/v1/9686a507a97a536a1f5c6b6a01bd8154/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-2sd.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <ul>
@@ -741,8 +741,8 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://courses.edx.org/assets/courseware/v1/a8af7c699c20d1e83819b5f68bf6f17d/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-3sd.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Probability of an observation within 3 SD of mean</figcaption><p></p>
+<p><img src="https://courses.edx.org/assets/courseware/v1/a8af7c699c20d1e83819b5f68bf6f17d/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-3sd.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </section>
@@ -1640,7 +1640,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/quartopub\.com\/sites\/ningli\/statsr/);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/ningli\.quarto\.pub\/custom/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
@@ -1651,6 +1651,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (!isInternal(link.href)) {
           // target, if specified
           link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
       }
     }
 });

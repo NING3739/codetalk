@@ -43,26 +43,32 @@ website:
 
 format:
   html:
-    code-fold: true
-    code-summary: "show the code"
-    code-overflow: scroll
-    code-line-numbers: true
-    toc: true
-    toc-title: Contents
-    toc-location: left
-    html-math-method: katex
-    theme: 
-       light: Litera
-       dark: superhero
-    highlight-style: arrow-light
     anchor-sections: true
-    smooth-scroll: true
-    link-external-newwindow: true
     citations-hover: true
-    footnotes-hover: true
     comments:
       hypothesis:
         theme: clean
+    code-fold: true
+    code-summary: "show the code"
+    code-overflow: scroll
+    code-link: true
+    code-line-numbers: true
+    code-block-bg: true
+    code-block-border-left: "#31BAE9"
     css: styles.css
-
+    fig-align: center
+    fig-cap-location: top
+    footnotes-hover: true
+    link-external-filter: '^(?:http:|https:)\/\/ningli\.quarto\.pub\/custom'
+    link-external-newwindow: true
+    highlight-style: github
+    html-math-method: katex
+    smooth-scroll: true
+    theme: 
+      light: Litera
+      dark: superhero
+    toc: true
+    toc-title: Contents
+    toc-location: left
+    
 editor: visual

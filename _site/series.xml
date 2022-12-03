@@ -6,14 +6,14 @@
       version="2.0">
 <channel>
 <title>Stats &amp; R</title>
-<link>https://quartopub.com/sites/ningli/statsr/series.html</link>
-<atom:link href="https://quartopub.com/sites/ningli/statsr/series.xml" rel="self" type="application/rss+xml"/>
+<link>https://ningli.quarto.pub/series.html</link>
+<atom:link href="https://ningli.quarto.pub/series.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.2.269</generator>
 <lastBuildDate>Wed, 30 Nov 2022 11:00:00 GMT</lastBuildDate>
 <item>
   <title>Data Visualization</title>
-  <link>https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization.html</link>
+  <link>https://ningli.quarto.pub/series/Data Visualization/Data-visualization.html</link>
   <description><![CDATA[ 
 
 
@@ -201,8 +201,8 @@ Important
 <p>Every <em>continuous distribution</em> has <em>cumulative distribution function (CDF)</em>. The CDF defines the proportion of the data below a given value for all values of <img src="https://latex.codecogs.com/png.latex?a"> :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/http:/rafalab.dfci.harvard.edu/dsbook/book_files/figure-html/ecdf-1.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Cumulative Distribution Function (CDF)</figcaption><p></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/http:/rafalab.dfci.harvard.edu/dsbook/book_files/figure-html/ecdf-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>As defined above, this plot of the CDF for male heights has height value <em>a</em> on the x-axis and the proportion of student with heights of that value or lower(<em>F(</em>a<em>)</em>) on the y-axis.</p>
@@ -238,7 +238,7 @@ Important
 <span id="cb6-7"><span class="fu" style="color: #4758AB;">plot</span>(a, cdf_value)</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>The CDF defines that proportion of data below a cut-off <img src="https://latex.codecogs.com/png.latex?a">. To define the proportion of values above <img src="https://latex.codecogs.com/png.latex?a">, we compute: <img src="https://latex.codecogs.com/png.latex?1-F(a)"></p>
@@ -337,8 +337,8 @@ A further note on histograms
 <p>The normal distribution is associated with the 68-95-99.7 rule. This rule describes the probability of observing events within a ceration number of standard deviations of the mean.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/28d10d22ba8b3bf4b0cc5024de0dc616/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-probs-combined.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Normal Distribution Probabilities</figcaption><p></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/28d10d22ba8b3bf4b0cc5024de0dc616/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-probs-combined.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>The probability distribution function for the normal distribution is defined such that:</p>
@@ -347,8 +347,8 @@ A further note on histograms
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/f0bb9f66b7bdd91b2c9852c7a68427c7/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-1sd.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Probability of an observation within 1 SD of mean</figcaption><p></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/f0bb9f66b7bdd91b2c9852c7a68427c7/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-1sd.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <ul>
@@ -356,8 +356,8 @@ A further note on histograms
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/9686a507a97a536a1f5c6b6a01bd8154/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-2sd.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Probability of an ovservation within 2 SD of mean</figcaption><p></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/9686a507a97a536a1f5c6b6a01bd8154/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-2sd.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <ul>
@@ -365,8 +365,8 @@ A further note on histograms
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/a8af7c699c20d1e83819b5f68bf6f17d/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-3sd.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Probability of an observation within 3 SD of mean</figcaption><p></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/a8af7c699c20d1e83819b5f68bf6f17d/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-3sd.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </section>
@@ -413,7 +413,7 @@ A further note on histograms
 <span id="cb10-2"><span class="fu" style="color: #4758AB;">plot</span>(<span class="fu" style="color: #4758AB;">prop.table</span>(<span class="fu" style="color: #4758AB;">table</span>(x)), <span class="at" style="color: #657422;">xlab =</span> <span class="st" style="color: #20794D;">"a = Height in inches"</span>, <span class="at" style="color: #657422;">ylab =</span> <span class="st" style="color: #20794D;">"Pr(x = a)"</span>)</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="cell">
@@ -601,7 +601,7 @@ A further note on histograms
 <span id="cb27-8"><span class="fu" style="color: #4758AB;">abline</span>(<span class="dv" style="color: #AD0000;">0</span>,<span class="dv" style="color: #AD0000;">1</span>)</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid" width="672"></p>
 </div>
 <details>
 <summary>show the code</summary>
@@ -612,7 +612,7 @@ A further note on histograms
 <span id="cb28-5"><span class="fu" style="color: #4758AB;">abline</span>(<span class="dv" style="color: #AD0000;">0</span>,<span class="dv" style="color: #AD0000;">1</span>)</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-21-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-21-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
@@ -778,7 +778,7 @@ A further note on histograms
 <span id="cb32-3">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_point</span>(<span class="fu" style="color: #4758AB;">aes</span>(population<span class="sc" style="color: #5E5E5E;">/</span><span class="dv" style="color: #AD0000;">10</span><span class="sc" style="color: #5E5E5E;">^</span><span class="dv" style="color: #AD0000;">6</span>, total))</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid" width="672"></p>
 </div>
 <details>
 <summary>show the code</summary>
@@ -787,7 +787,7 @@ A further note on histograms
 <span id="cb33-3">  <span class="fu" style="color: #4758AB;">geom_text</span>(<span class="fu" style="color: #4758AB;">aes</span>(population<span class="sc" style="color: #5E5E5E;">/</span><span class="dv" style="color: #AD0000;">10</span><span class="sc" style="color: #5E5E5E;">^</span><span class="dv" style="color: #AD0000;">6</span>, total, <span class="at" style="color: #657422;">label =</span> abb))</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-25-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-25-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Code: Example of <code>aes</code> behavior</p>
@@ -834,7 +834,7 @@ A further note on histograms
 <span id="cb35-3">    <span class="fu" style="color: #4758AB;">geom_text</span>(<span class="fu" style="color: #4758AB;">aes</span>(population<span class="sc" style="color: #5E5E5E;">/</span><span class="dv" style="color: #AD0000;">10</span><span class="sc" style="color: #5E5E5E;">^</span><span class="dv" style="color: #AD0000;">6</span>, total, <span class="at" style="color: #657422;">label =</span> abb))</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid" width="672"></p>
 </div>
 <details>
 <summary>show the code</summary>
@@ -843,7 +843,7 @@ A further note on histograms
 <span id="cb36-3">    <span class="fu" style="color: #4758AB;">geom_text</span>(<span class="fu" style="color: #4758AB;">aes</span>(population<span class="sc" style="color: #5E5E5E;">/</span><span class="dv" style="color: #AD0000;">10</span><span class="sc" style="color: #5E5E5E;">^</span><span class="dv" style="color: #AD0000;">6</span>, total, <span class="at" style="color: #657422;">label =</span> abb), <span class="at" style="color: #657422;">nudge_x =</span> <span class="dv" style="color: #AD0000;">1</span>)</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-27-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-27-2.png" class="img-fluid" width="672"></p>
 </div>
 <details>
 <summary>show the code</summary>
@@ -853,7 +853,7 @@ A further note on histograms
 <span id="cb37-4">    <span class="fu" style="color: #4758AB;">geom_text</span>(<span class="at" style="color: #657422;">nudge_x =</span> <span class="fl" style="color: #AD0000;">1.5</span>)</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-27-3.png" class="img-fluid" width="672"></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-27-3.png" class="img-fluid" width="672"></p>
 </div>
 <details>
 <summary>show the code</summary>
@@ -862,7 +862,7 @@ A further note on histograms
 <span id="cb38-3">  <span class="fu" style="color: #4758AB;">geom_text</span>(<span class="fu" style="color: #4758AB;">aes</span>(<span class="at" style="color: #657422;">x =</span> <span class="dv" style="color: #AD0000;">10</span>, <span class="at" style="color: #657422;">y =</span> <span class="dv" style="color: #AD0000;">800</span>, <span class="at" style="color: #657422;">label =</span> <span class="st" style="color: #20794D;">"Hello there!"</span>))</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-27-4.png" class="img-fluid" width="672"></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-27-4.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
@@ -918,7 +918,7 @@ A further note on histograms
 <span id="cb40-5">    <span class="fu" style="color: #4758AB;">scale_y_log10</span>()</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
@@ -936,7 +936,7 @@ A further note on histograms
 <span id="cb41-7">    <span class="fu" style="color: #4758AB;">ggtitle</span>(<span class="st" style="color: #20794D;">"US Gun Murders in 2010"</span>)</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
@@ -963,7 +963,7 @@ A further note on histograms
 <span id="cb43-2">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_point</span>(<span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">3</span>, <span class="at" style="color: #657422;">color =</span> <span class="st" style="color: #20794D;">"blue"</span>)</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="cell">
@@ -973,7 +973,7 @@ A further note on histograms
 <span id="cb44-2">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_point</span>(<span class="fu" style="color: #4758AB;">aes</span>(<span class="at" style="color: #657422;">col =</span> region), <span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">3</span>)</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
@@ -993,7 +993,7 @@ A further note on histograms
 <span id="cb45-9">    <span class="fu" style="color: #4758AB;">geom_point</span>(<span class="fu" style="color: #4758AB;">aes</span>(<span class="at" style="color: #657422;">col =</span> region), <span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">3</span>)</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
@@ -1007,7 +1007,7 @@ A further note on histograms
 <span id="cb46-3">p</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 
@@ -1019,13 +1019,13 @@ A further note on histograms
  ]]></description>
   <category>Data Science</category>
   <category>Data Visualization</category>
-  <guid>https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization.html</guid>
+  <guid>https://ningli.quarto.pub/series/Data Visualization/Data-visualization.html</guid>
   <pubDate>Wed, 30 Nov 2022 11:00:00 GMT</pubDate>
   <media:content url="http://rafalab.dfci.harvard.edu/dsbook/book_files/figure-html/ecdf-1.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>R Basic</title>
-  <link>https://quartopub.com/sites/ningli/statsr/series/R Basic/R-basic.html</link>
+  <link>https://ningli.quarto.pub/series/R Basic/R-basic.html</link>
   <description><![CDATA[ 
 
 
@@ -1036,7 +1036,7 @@ A further note on histograms
  ]]></description>
   <category>Data Science</category>
   <category>R Basic</category>
-  <guid>https://quartopub.com/sites/ningli/statsr/series/R Basic/R-basic.html</guid>
+  <guid>https://ningli.quarto.pub/series/R Basic/R-basic.html</guid>
   <pubDate>Sat, 26 Nov 2022 11:00:00 GMT</pubDate>
 </item>
 </channel>

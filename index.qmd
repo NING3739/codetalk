@@ -11,7 +11,7 @@ format:
 # Welcome to Stats & R!!!
 :::
 
-This is a personal website with the contents of **statistics** and the **open-source [R](https://www.r-project.org/) language**, aiming to facilitate **academic exchanges** and better **promote myself**.
+This is a personal website with the contents of **statistics** and the **open-source** [R](https://www.r-project.org/) **language**, aiming to facilitate **academic exchanges** and better **promote myself**.
 
 If you are new to this site, here are some useful suggestions that you can do.
 

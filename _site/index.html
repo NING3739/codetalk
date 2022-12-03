@@ -164,7 +164,7 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 <section id="welcome-to-stats-r" class="level1 column-body-outset-right">
 <h1>Welcome to Stats &amp; R!!!</h1>
 </section>
-<p>This is a personal website with the contents of <strong>statistics</strong> and the <strong>open-source <a href="https://www.r-project.org/">R</a> language</strong>, aiming to facilitate <strong>academic exchanges</strong> and better <strong>promote myself</strong>.</p>
+<p>This is a personal website with the contents of <strong>statistics</strong> and the <strong>open-source</strong> <a href="https://www.r-project.org/">R</a> <strong>language</strong>, aiming to facilitate <strong>academic exchanges</strong> and better <strong>promote myself</strong>.</p>
 <p>If you are new to this site, here are some useful suggestions that you can do.</p>
 <ul>
 <li><p>On the <a href="./posts.html">posts page</a>, some <strong>interesting ideas</strong> (how to use R to make a 3D Christmas tree, etc.) for daily life will be presented.</p></li>
@@ -425,7 +425,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/quartopub\.com\/sites\/ningli\/statsr/);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/ningli\.quarto\.pub\/custom/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
