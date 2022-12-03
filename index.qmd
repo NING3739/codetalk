@@ -15,13 +15,13 @@ This is a personal website with the contents of **statistics** and the **open-so
 
 If you are new to this site, here are some useful suggestions that you can do.
 
--   On the [blog page](Blog.qmd), some **interesting ideas** (how to use R to make a 3D Christmas tree, etc.) for daily life will be presented.
+-   On the [posts page](posts.qmd), some **interesting ideas** (how to use R to make a 3D Christmas tree, etc.) for daily life will be presented.
 
--   The [about page](Who.qmd) is a good place where you can quickly get to know **who I am** and **what I am doing now**.
+-   The [about page](who.qmd) is a good place where you can quickly get to know **who I am** and **what I am doing now**.
 
--   The series page will display my **independent projects** and R language **study notes**.
+-   The [series page](series.qmd) will display my **independent projects** and R language **study notes**.
 
--   If you have any questions, please go to the [contact page](Contact.qmd) to **get in touch with me** directly.
+-   If you have any questions, please go to the [contact page](contact.qmd) to **get in touch with me** directly.
 
 Thanks again for coming to my personal website.😘
 :::

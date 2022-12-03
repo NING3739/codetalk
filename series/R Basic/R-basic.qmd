@@ -1,0 +1,7 @@
+---
+title: "R Basic"
+date: "2022-11-27"
+categories: [Data Science, R Basic]
+description: Data Science-R Basic
+editor: visual
+---

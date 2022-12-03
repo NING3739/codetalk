@@ -10,7 +10,7 @@ website:
   favicon: Stats-&-R.png
   page-navigation: true
   page-footer: 
-    left:  "© 2022 Stats & R™ made with❤️ by [NING](Who.qmd)"
+    left:  "© 2022 Stats & R™ made with❤️ by [NING](who.qmd)"
     right:
       - icon: envelope
         href: mailto:ln729500172@gmail.com
@@ -24,15 +24,11 @@ website:
     logo-href: index.qmd
     left:
       - text: "Posts"
-        href: "posts.qmd"
+        href: posts.qmd
       - text: "About"
-        href: "who.qmd"
+        href: who.qmd
       - text: "Series"
-        menu: 
-          - text: R Basic
-            href: R-basic.qmd
-          - text: Data Visualization 
-            href: Data-visualization.qmd
+        href: series.qmd
       - text: "Contact"
         href: contact.qmd
     right:
@@ -68,4 +64,5 @@ format:
       hypothesis:
         theme: clean
     css: styles.css
+
 editor: visual

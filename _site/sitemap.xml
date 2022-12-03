@@ -1,39 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://quartopub.com/sites/ningli/statsr/series/R Basic/R-basic.html</loc>
+    <lastmod>2022-12-03T03:44:13.349Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization.html</loc>
+    <lastmod>2022-12-03T03:44:14.701Z</lastmod>
+  </url>
+  <url>
     <loc>https://quartopub.com/sites/ningli/statsr/contact.html</loc>
-    <lastmod>2022-12-03T02:28:53.840Z</lastmod>
+    <lastmod>2022-12-03T03:44:15.060Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/posts/Dynamic Graph/Graph.html</loc>
-    <lastmod>2022-12-03T02:28:54.420Z</lastmod>
+    <lastmod>2022-12-03T03:44:15.645Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/posts/welcome/welcome.html</loc>
-    <lastmod>2022-12-03T02:28:54.793Z</lastmod>
+    <lastmod>2022-12-03T03:44:15.978Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/posts/Christmas Tree/christmas_tree.html</loc>
-    <lastmod>2022-12-03T02:28:55.391Z</lastmod>
+    <lastmod>2022-12-03T03:44:16.560Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/who.html</loc>
-    <lastmod>2022-12-03T02:28:55.734Z</lastmod>
+    <lastmod>2022-12-03T03:44:16.901Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quartopub.com/sites/ningli/statsr/series.html</loc>
+    <lastmod>2022-12-03T03:44:17.287Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/index.html</loc>
-    <lastmod>2022-12-03T02:28:56.074Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/R-basic.html</loc>
-    <lastmod>2022-12-03T02:28:56.393Z</lastmod>
+    <lastmod>2022-12-03T03:44:17.628Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/posts.html</loc>
-    <lastmod>2022-12-03T02:28:56.790Z</lastmod>
+    <lastmod>2022-12-03T03:44:18.033Z</lastmod>
   </url>
   <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/Data-visualization.html</loc>
-    <lastmod>2022-12-03T02:29:06.594Z</lastmod>
+    <loc>https://ningli.quarto.pub/index.html</loc>
+    <lastmod>2022-12-03T03:44:45.924Z</lastmod>
   </url>
 </urlset>

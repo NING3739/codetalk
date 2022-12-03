@@ -108,21 +108,10 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
     <a class="nav-link" href="./who.html">
  <span class="menu-text">About</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-series" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Series</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-series">    
-        <li>
-    <a class="dropdown-item" href="./R-basic.html">
- <span class="dropdown-text">R Basic</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="./series.html">
+ <span class="menu-text">Series</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./Data-visualization.html">
- <span class="dropdown-text">Data Visualization</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
     <a class="nav-link" href="./contact.html">
  <span class="menu-text">Contact</span></a>
@@ -178,9 +167,9 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 <p>This is a personal website with the contents of <strong>statistics</strong> and the <strong>open-source <a href="https://www.r-project.org/">R</a> language</strong>, aiming to facilitate <strong>academic exchanges</strong> and better <strong>promote myself</strong>.</p>
 <p>If you are new to this site, here are some useful suggestions that you can do.</p>
 <ul>
-<li><p>On the <a href="Blog.qmd">blog page</a>, some <strong>interesting ideas</strong> (how to use R to make a 3D Christmas tree, etc.) for daily life will be presented.</p></li>
+<li><p>On the <a href="./posts.html">posts page</a>, some <strong>interesting ideas</strong> (how to use R to make a 3D Christmas tree, etc.) for daily life will be presented.</p></li>
 <li><p>The <a href="./who.html">about page</a> is a good place where you can quickly get to know <strong>who I am</strong> and <strong>what I am doing now</strong>.</p></li>
-<li><p>The series page will display my <strong>independent projects</strong> and R language <strong>study notes</strong>.</p></li>
+<li><p>The <a href="./series.html">series page</a> will display my <strong>independent projects</strong> and R language <strong>study notes</strong>.</p></li>
 <li><p>If you have any questions, please go to the <a href="./contact.html">contact page</a> to <strong>get in touch with me</strong> directly.</p></li>
 </ul>
 <p>Thanks again for coming to my personal website.😘</p>
@@ -436,7 +425,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/quartopub\.com\/sites\/ningli\/statsr/);
+      var filterRegex = new RegExp(/https:\/\/ningli\.quarto\.pub/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
