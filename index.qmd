@@ -17,7 +17,7 @@ If you are new to this site, here are some useful suggestions that you can do.
 
 -   On the [posts page](posts.qmd), some **interesting ideas** (how to use R to make a 3D Christmas tree, etc.) for daily life will be presented.
 
--   The [about page](who.qmd) is a good place where you can quickly get to know **who I am** and **what I am doing now**.
+-   The [about page](about.qmd) is a good place where you can quickly get to know **who I am** and **what I am doing now**.
 
 -   The [series page](series.qmd) will display my **independent projects** and R language **study notes**.
 

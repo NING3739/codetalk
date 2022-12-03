@@ -26,7 +26,7 @@ website:
       - text: "Posts"
         href: posts.qmd
       - text: "About"
-        href: who.qmd
+        href: about.qmd
       - text: "Series"
         href: series.qmd
       - text: "Contact"

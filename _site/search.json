@@ -203,27 +203,6 @@
     "text": "Let us use ggplot2 to make a Christmas Tree.\n\nCode\n\nrm(list = ls())\nlibrary(ggplot2)\n\n# create data\nx <- c(8,7,6,7,6,5,6,5,4,5,4,3,4,3,2,3,2,1,0.5,0.1)\n\ndat1 <- data.frame(x1 = 1:length(x), x2 = x)\ndat2 <- data.frame(x1 = 1:length(x), x2 = -x)\ndat1$xvar <- dat2$xvar <- NA\ndat1$yvar <- dat2$yvar <- NA\ndat1$siz <- dat2$siz <- NA\ndat1$col <- dat2$col <- NA\n\n# set threshold for christmas balls\ndec_threshold = -0.5\n\n# create random places, sizes and colors for christmas balls\nset.seed(2512)\nfor (row in 1:nrow(dat1)){\n\nif (rnorm(1) > dec_threshold){\n\ndat1$xvar[row] <- row\ndat1$yvar[row] <- sample(1:dat1$x2[row]-1,1)\ndat1$siz[row] <- runif(1,0.5,1.5)\ndat1$col[row] <- sample(1:5, 1)\n}\n\nif (rnorm(1) > dec_threshold){\n\ndat2$xvar[row] <- row\ndat2$yvar[row] <- sample(1:dat2$x2[row],1)\ndat2$siz[row] <- runif(1,0.5,1.5)\ndat2$col[row] <- sample(1:5, 1)\n}\n}\n\n# plot the christmas tree\nggplot() +\ngeom_bar(data = dat1, aes(x=x1, y=x2),stat = \"identity\", fill = '#31a354') +\ngeom_bar(data = dat2, aes(x=x1, y=x2),stat = \"identity\", fill = '#31a354') +\ngeom_point(data = dat1,aes(x = xvar, y = yvar, size = siz, colour = as.factor(col)) ) +\ngeom_point(data = dat2,aes(x = xvar, y = yvar, size = siz, colour = as.factor(col)) ) +\ncoord_flip() + theme_minimal()+ theme(legend.position=\"none\",\naxis.title.x=element_blank(),\naxis.text.x=element_blank(),\naxis.ticks.x=element_blank(),\naxis.title.y=element_blank(),\naxis.text.y=element_blank(),\naxis.ticks.y=element_blank()) +\nggtitle('Merry Christmas') +\ntheme(plot.title = element_text(color = \"red\", hjust = 0.5))"
   },
   {
-    "objectID": "who.html",
-    "href": "who.html",
-    "title": "Who am I ?",
-    "section": "",
-    "text": "Hi, I’ m Ning and I’m a potential data analyst.\nMy current focus is statistics, R-based data analysis and corporate-related political risk issues.\nMy background is in Accountancy. If you have any doubts about corporate auditing issues, maybe i can help you.\nI really hate graphical interface data analysis software, because it always gives me extra results that I didn’t ask for.\nMy current short-term goal is to publish my first peer-reviewed paper and start my PhD by 2023.\nIn my free time, I like listening to music, hiking and reading. If you also like these activities, please feel free to contact me."
-  },
-  {
-    "objectID": "who.html#education",
-    "href": "who.html#education",
-    "title": "Who am I ?",
-    "section": "Education",
-    "text": "Education\nMassey University, Auckland | Master in Accountancy | February 2019 - June 2020"
-  },
-  {
-    "objectID": "who.html#experience",
-    "href": "who.html#experience",
-    "title": "Who am I ?",
-    "section": "Experience",
-    "text": "Experience\nLife Maid Easy | Head Marketing | December 2020 - present"
-  },
-  {
     "objectID": "series.html",
     "href": "series.html",
     "title": "Stats & R",
@@ -236,6 +215,13 @@
     "title": "Stats & R",
     "section": "",
     "text": "Welcome to Stats & R!!!\n\nThis is a personal website with the contents of statistics and the open-source R language, aiming to facilitate academic exchanges and better promote myself.\nIf you are new to this site, here are some useful suggestions that you can do.\n\nOn the posts page, some interesting ideas (how to use R to make a 3D Christmas tree, etc.) for daily life will be presented.\nThe about page is a good place where you can quickly get to know who I am and what I am doing now.\nThe series page will display my independent projects and R language study notes.\nIf you have any questions, please go to the contact page to get in touch with me directly.\n\nThanks again for coming to my personal website.😘"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Stats & R",
+    "section": "",
+    "text": "Hi, I’ m Ning and I’m a potential data analyst.\nMy current focus is statistics, R-based data analysis and corporate-related political risk issues.\nMy background is in Accountancy. If you have any doubts about corporate auditing issues, maybe i can help you.\nI really hate graphical interface data analysis software, because it always gives me extra results that I didn’t ask for.\nMy current short-term goal is to publish my first peer-reviewed paper and start my PhD by 2023.\nIn my free time, I like listening to music, hiking and reading. If you also like these activities, please feel free to contact me.\n\n\nMassey University, Auckland | Master in Accountancy | February 2019 - June 2020\n\n\n\nLife Maid Easy | Head Marketing | December 2020 - present"
   },
   {
     "objectID": "posts.html",
