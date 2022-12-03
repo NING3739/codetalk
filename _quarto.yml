@@ -1,14 +1,12 @@
 project:
   type: website
+
 website:
-  cookie-consent: 
-    type: express
-    style: headline
-    palette: dark
   google-analytics: 
     tracking-id: "G-Y96LK2RNJD"
     anonymize-ip: true
   title: "Stats & R"
+  site-url: https://ningli.quarto.pub
   favicon: Stats-&-R.png
   page-navigation: true
   page-footer: 
@@ -25,15 +23,18 @@ website:
     logo-alt: "Stats-&-R.png"
     logo-href: index.qmd
     left:
-      - href: "Blog.qmd"
-        text: "Blog"
-      - href: "who.qmd"
-        text: "About"
-      - text: "Works"
+      - text: "Posts"
+        href: "posts.qmd"
+      - text: "About"
+        href: "who.qmd"
+      - text: "Series"
         menu: 
-          - Datavisualization.qmd
-      - href: Contact.qmd
-        text: "Contact"
+          - text: R Basic
+            href: R-basic.qmd
+          - text: Data Visualization 
+            href: Data-visualization.qmd
+      - text: "Contact"
+        href: contact.qmd
     right:
       - icon: envelope
         href: mailto:ln729500172@gmail.com
@@ -43,8 +44,7 @@ website:
         href: https://github.com/NING3739
     pinned: true
     search: true
-    
-    
+
 format:
   html:
     code-fold: true
@@ -55,9 +55,9 @@ format:
     toc-title: Contents
     toc-location: left
     html-math-method: katex
-    theme: Litera
-       #- superhero
-       #- superhero.scss
+    theme: 
+       light: Litera
+       dark: superhero
     highlight-style: arrow-light
     anchor-sections: true
     smooth-scroll: true

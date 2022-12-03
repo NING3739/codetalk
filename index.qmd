@@ -4,10 +4,10 @@ format:
     toc: false
 ---
 
-:::: {.column-page}
+::: column-page
 ![](https://media3.giphy.com/media/2L8AviEEaIW2DcXGg0/giphy.gif?cid=ecf05e47squf2aep9xwfuuxs5a3o604416nte3wlabz8fvo8&rid=giphy.gif&ct=g){fig-align="center"}
 
-::: {.column-body-outset-right}
+::: column-body-outset-right
 # Welcome to Stats & R!!!
 :::
 
@@ -19,9 +19,9 @@ If you are new to this site, here are some useful suggestions that you can do.
 
 -   The [about page](Who.qmd) is a good place where you can quickly get to know **who I am** and **what I am doing now**.
 
--   The works page will display my **independent projects** and R language **study notes**.
+-   The series page will display my **independent projects** and R language **study notes**.
 
 -   If you have any questions, please go to the [contact page](Contact.qmd) to **get in touch with me** directly.
 
 Thanks again for coming to my personal website.😘
-::::
+:::

@@ -1,35 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/Contact.html</loc>
-    <lastmod>2022-12-02T01:29:37.329Z</lastmod>
+    <loc>https://quartopub.com/sites/ningli/statsr/contact.html</loc>
+    <lastmod>2022-12-03T02:28:53.840Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/posts/Dynamic Graph/Graph.html</loc>
-    <lastmod>2022-12-02T01:29:38.091Z</lastmod>
+    <lastmod>2022-12-03T02:28:54.420Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/posts/welcome/welcome.html</loc>
-    <lastmod>2022-12-02T01:29:38.421Z</lastmod>
+    <lastmod>2022-12-03T02:28:54.793Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/posts/Christmas Tree/christmas_tree.html</loc>
-    <lastmod>2022-12-02T01:29:39.011Z</lastmod>
+    <lastmod>2022-12-03T02:28:55.391Z</lastmod>
   </url>
   <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/Who.html</loc>
-    <lastmod>2022-12-02T01:29:39.340Z</lastmod>
+    <loc>https://quartopub.com/sites/ningli/statsr/who.html</loc>
+    <lastmod>2022-12-03T02:28:55.734Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/index.html</loc>
-    <lastmod>2022-12-02T01:29:39.667Z</lastmod>
+    <lastmod>2022-12-03T02:28:56.074Z</lastmod>
   </url>
   <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/Datavisualization.html</loc>
-    <lastmod>2022-12-02T01:29:50.207Z</lastmod>
+    <loc>https://quartopub.com/sites/ningli/statsr/R-basic.html</loc>
+    <lastmod>2022-12-03T02:28:56.393Z</lastmod>
   </url>
   <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/Blog.html</loc>
-    <lastmod>2022-12-02T01:29:50.608Z</lastmod>
+    <loc>https://quartopub.com/sites/ningli/statsr/posts.html</loc>
+    <lastmod>2022-12-03T02:28:56.790Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quartopub.com/sites/ningli/statsr/Data-visualization.html</loc>
+    <lastmod>2022-12-03T02:29:06.594Z</lastmod>
   </url>
 </urlset>

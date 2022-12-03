@@ -4,12 +4,14 @@ about:
   template: solana
   image: https://github.com/NING3739/my-personal-website/blob/797a74d18665e9f6136ef9e862e990067f7627c8/NING%20LI.jpeg?raw=true
   links:
+    - icon: envelope
+      text: E-mali
+      href: mailto:ln729500172@gmail.com
+  
     - icon: twitter
-      text: twitter
+      text: Twitter
       href: https://twitter.com/ningli3739
-    - icon: instagram
-      text: Instagram
-      href: https://www.instagram.com/barry_allen_nz
+    
     - icon: github
       text: Github
       href: https://github.com/NING3739
