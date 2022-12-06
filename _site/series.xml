@@ -6,14 +6,14 @@
       version="2.0">
 <channel>
 <title>Stats &amp; R</title>
-<link>https://ningli.quarto.pub/series.html</link>
-<atom:link href="https://ningli.quarto.pub/series.xml" rel="self" type="application/rss+xml"/>
+<link>https://quartopub.com/sites/ningli/statsr/series.html</link>
+<atom:link href="https://quartopub.com/sites/ningli/statsr/series.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.2.269</generator>
 <lastBuildDate>Wed, 30 Nov 2022 11:00:00 GMT</lastBuildDate>
 <item>
   <title>Data Visualization</title>
-  <link>https://ningli.quarto.pub/series/Data Visualization/Data-visualization.html</link>
+  <link>https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization.html</link>
   <description><![CDATA[ 
 
 
@@ -202,7 +202,7 @@ Important
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p></p><figcaption class="figure-caption">Cumulative Distribution Function (CDF)</figcaption><p></p>
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/http:/rafalab.dfci.harvard.edu/dsbook/book_files/figure-html/ecdf-1.png" class="img-fluid figure-img"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/http:/rafalab.dfci.harvard.edu/dsbook/book_files/figure-html/ecdf-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>As defined above, this plot of the CDF for male heights has height value <em>a</em> on the x-axis and the proportion of student with heights of that value or lower(<em>F(</em>a<em>)</em>) on the y-axis.</p>
@@ -238,7 +238,7 @@ Important
 <span id="cb6-7"><span class="fu" style="color: #4758AB;">plot</span>(a, cdf_value)</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>The CDF defines that proportion of data below a cut-off <img src="https://latex.codecogs.com/png.latex?a">. To define the proportion of values above <img src="https://latex.codecogs.com/png.latex?a">, we compute: <img src="https://latex.codecogs.com/png.latex?1-F(a)"></p>
@@ -338,7 +338,7 @@ A further note on histograms
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p></p><figcaption class="figure-caption">Normal Distribution Probabilities</figcaption><p></p>
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/28d10d22ba8b3bf4b0cc5024de0dc616/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-probs-combined.png" class="img-fluid figure-img"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/28d10d22ba8b3bf4b0cc5024de0dc616/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-probs-combined.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>The probability distribution function for the normal distribution is defined such that:</p>
@@ -348,7 +348,7 @@ A further note on histograms
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p></p><figcaption class="figure-caption">Probability of an observation within 1 SD of mean</figcaption><p></p>
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/f0bb9f66b7bdd91b2c9852c7a68427c7/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-1sd.png" class="img-fluid figure-img"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/f0bb9f66b7bdd91b2c9852c7a68427c7/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-1sd.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <ul>
@@ -357,7 +357,7 @@ A further note on histograms
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p></p><figcaption class="figure-caption">Probability of an ovservation within 2 SD of mean</figcaption><p></p>
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/9686a507a97a536a1f5c6b6a01bd8154/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-2sd.png" class="img-fluid figure-img"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/9686a507a97a536a1f5c6b6a01bd8154/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-2sd.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <ul>
@@ -366,7 +366,7 @@ A further note on histograms
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p></p><figcaption class="figure-caption">Probability of an observation within 3 SD of mean</figcaption><p></p>
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/a8af7c699c20d1e83819b5f68bf6f17d/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-3sd.png" class="img-fluid figure-img"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/a8af7c699c20d1e83819b5f68bf6f17d/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-3sd.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </section>
@@ -413,7 +413,7 @@ A further note on histograms
 <span id="cb10-2"><span class="fu" style="color: #4758AB;">plot</span>(<span class="fu" style="color: #4758AB;">prop.table</span>(<span class="fu" style="color: #4758AB;">table</span>(x)), <span class="at" style="color: #657422;">xlab =</span> <span class="st" style="color: #20794D;">"a = Height in inches"</span>, <span class="at" style="color: #657422;">ylab =</span> <span class="st" style="color: #20794D;">"Pr(x = a)"</span>)</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="cell">
@@ -601,7 +601,7 @@ A further note on histograms
 <span id="cb27-8"><span class="fu" style="color: #4758AB;">abline</span>(<span class="dv" style="color: #AD0000;">0</span>,<span class="dv" style="color: #AD0000;">1</span>)</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid" width="672"></p>
 </div>
 <details>
 <summary>show the code</summary>
@@ -612,7 +612,7 @@ A further note on histograms
 <span id="cb28-5"><span class="fu" style="color: #4758AB;">abline</span>(<span class="dv" style="color: #AD0000;">0</span>,<span class="dv" style="color: #AD0000;">1</span>)</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-21-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-21-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
@@ -778,7 +778,7 @@ A further note on histograms
 <span id="cb32-3">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_point</span>(<span class="fu" style="color: #4758AB;">aes</span>(population<span class="sc" style="color: #5E5E5E;">/</span><span class="dv" style="color: #AD0000;">10</span><span class="sc" style="color: #5E5E5E;">^</span><span class="dv" style="color: #AD0000;">6</span>, total))</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid" width="672"></p>
 </div>
 <details>
 <summary>show the code</summary>
@@ -787,7 +787,7 @@ A further note on histograms
 <span id="cb33-3">  <span class="fu" style="color: #4758AB;">geom_text</span>(<span class="fu" style="color: #4758AB;">aes</span>(population<span class="sc" style="color: #5E5E5E;">/</span><span class="dv" style="color: #AD0000;">10</span><span class="sc" style="color: #5E5E5E;">^</span><span class="dv" style="color: #AD0000;">6</span>, total, <span class="at" style="color: #657422;">label =</span> abb))</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-25-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-25-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Code: Example of <code>aes</code> behavior</p>
@@ -834,7 +834,7 @@ A further note on histograms
 <span id="cb35-3">    <span class="fu" style="color: #4758AB;">geom_text</span>(<span class="fu" style="color: #4758AB;">aes</span>(population<span class="sc" style="color: #5E5E5E;">/</span><span class="dv" style="color: #AD0000;">10</span><span class="sc" style="color: #5E5E5E;">^</span><span class="dv" style="color: #AD0000;">6</span>, total, <span class="at" style="color: #657422;">label =</span> abb))</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid" width="672"></p>
 </div>
 <details>
 <summary>show the code</summary>
@@ -843,7 +843,7 @@ A further note on histograms
 <span id="cb36-3">    <span class="fu" style="color: #4758AB;">geom_text</span>(<span class="fu" style="color: #4758AB;">aes</span>(population<span class="sc" style="color: #5E5E5E;">/</span><span class="dv" style="color: #AD0000;">10</span><span class="sc" style="color: #5E5E5E;">^</span><span class="dv" style="color: #AD0000;">6</span>, total, <span class="at" style="color: #657422;">label =</span> abb), <span class="at" style="color: #657422;">nudge_x =</span> <span class="dv" style="color: #AD0000;">1</span>)</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-27-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-27-2.png" class="img-fluid" width="672"></p>
 </div>
 <details>
 <summary>show the code</summary>
@@ -853,7 +853,7 @@ A further note on histograms
 <span id="cb37-4">    <span class="fu" style="color: #4758AB;">geom_text</span>(<span class="at" style="color: #657422;">nudge_x =</span> <span class="fl" style="color: #AD0000;">1.5</span>)</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-27-3.png" class="img-fluid" width="672"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-27-3.png" class="img-fluid" width="672"></p>
 </div>
 <details>
 <summary>show the code</summary>
@@ -862,7 +862,7 @@ A further note on histograms
 <span id="cb38-3">  <span class="fu" style="color: #4758AB;">geom_text</span>(<span class="fu" style="color: #4758AB;">aes</span>(<span class="at" style="color: #657422;">x =</span> <span class="dv" style="color: #AD0000;">10</span>, <span class="at" style="color: #657422;">y =</span> <span class="dv" style="color: #AD0000;">800</span>, <span class="at" style="color: #657422;">label =</span> <span class="st" style="color: #20794D;">"Hello there!"</span>))</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-27-4.png" class="img-fluid" width="672"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-27-4.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
@@ -918,7 +918,7 @@ A further note on histograms
 <span id="cb40-5">    <span class="fu" style="color: #4758AB;">scale_y_log10</span>()</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
@@ -936,7 +936,7 @@ A further note on histograms
 <span id="cb41-7">    <span class="fu" style="color: #4758AB;">ggtitle</span>(<span class="st" style="color: #20794D;">"US Gun Murders in 2010"</span>)</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
@@ -963,7 +963,7 @@ A further note on histograms
 <span id="cb43-2">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_point</span>(<span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">3</span>, <span class="at" style="color: #657422;">color =</span> <span class="st" style="color: #20794D;">"blue"</span>)</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="cell">
@@ -973,7 +973,7 @@ A further note on histograms
 <span id="cb44-2">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_point</span>(<span class="fu" style="color: #4758AB;">aes</span>(<span class="at" style="color: #657422;">col =</span> region), <span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">3</span>)</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
@@ -993,7 +993,7 @@ A further note on histograms
 <span id="cb45-9">    <span class="fu" style="color: #4758AB;">geom_point</span>(<span class="fu" style="color: #4758AB;">aes</span>(<span class="at" style="color: #657422;">col =</span> region), <span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">3</span>)</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
@@ -1007,7 +1007,7 @@ A further note on histograms
 <span id="cb46-3">p</span></code></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 
@@ -1019,24 +1019,79 @@ A further note on histograms
  ]]></description>
   <category>Data Science</category>
   <category>Data Visualization</category>
-  <guid>https://ningli.quarto.pub/series/Data Visualization/Data-visualization.html</guid>
+  <guid>https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization.html</guid>
   <pubDate>Wed, 30 Nov 2022 11:00:00 GMT</pubDate>
   <media:content url="http://rafalab.dfci.harvard.edu/dsbook/book_files/figure-html/ecdf-1.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>R Basic</title>
-  <link>https://ningli.quarto.pub/series/R Basic/R-basic.html</link>
+  <link>https://quartopub.com/sites/ningli/statsr/series/R Basic/R-basic.html</link>
   <description><![CDATA[ 
 
 
 
+<section id="getting-started-using-r" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Getting Started Using R</h1>
+<section id="key-points" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="key-points"><span class="header-section-number">1.1</span> Key Points:</h2>
+<ul>
+<li><p>R was developed by statisticians and data analysts as an interactive environment for data analysis.</p></li>
+<li><p>Some of the advantages of R are that:</p>
+<ul>
+<li><p>it is free and open source;</p></li>
+<li><p>it has the capability to save scripts;</p></li>
+<li><p>there are numerous resources for learning;</p></li>
+<li><p>it is easy for developers to share software implementation.</p></li>
+</ul></li>
+<li><p>Expressions are evaluated in the R console when you type the expression into the console and hit Return.</p></li>
+<li><p>A great advantage of R over point and click analysis software is that you can save your work as scripts.</p></li>
+<li><p>“Base R” is what you get after you first install R. Additional components are available via packages.</p></li>
+</ul>
+</section>
+<section id="some-addition-notes" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="some-addition-notes"><span class="header-section-number">1.2</span> Some Addition Notes</h2>
+<p>In RStudio, you can upload additional functions and datasets in addition to the base R functions and datasets that come with R automatically. A common way to do this is by installing packages, which often contain extra functions and datasets. For this course, there are a few packages you will need to install. You only need to install each individual package once, but after you install a package, there are other steps you have to do whenever you want to use something from that package.</p>
+<p>To install a package, you use the code <code>install.packages("package_name", dependencies = TRUE)</code>.</p>
+<p>To load a package, you use the code <code>library(package_name)</code>.</p>
+<p>If you also want to use a dataset from a package you have loaded, then you use the code <code>data(dataset_name)</code>. To see the dataset, you can take the additional step of <code>View(dataset_name)</code>.</p>
+</section>
+</section>
+<section id="installing-packahes" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Installing Packahes</h1>
+<section id="note" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="note"><span class="header-section-number">2.1</span> Note</h2>
+<p>We recommend installing packages through RStudio, rather than through R, and the code provided works in both R and RStudio. Once a package has been installed, it is technically added onto R (even if you use RStudio to install it), which is why packages must be re-installed when R is updated. However, since we use R through RStudio, any packages that are installed can be used in both R and RStudio, regardless of which one was used to install the packages.</p>
+</section>
+<section id="key-points-1" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="key-points-1"><span class="header-section-number">2.2</span> key points</h2>
+<ul>
+<li>The base version of R is quite minimal, but you can supplement its functions by installing additional packages.</li>
+<li>We will be using <strong>tidyverse</strong> and <strong>dslabs</strong> packages for this course.</li>
+<li>Install packages from R console: <code>install.packages("pkg_name")</code></li>
+<li>Install packages from RStudio interface: Tools &gt; Install Packages (allows autocomplete)</li>
+<li>Once installed, we can use <code>library(pkg_name)</code> to load a package each time we want to use it</li>
+</ul>
+</section>
+<section id="additional-notes" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="additional-notes"><span class="header-section-number">2.3</span> Additional Notes</h2>
+<ul>
+<li>If you try to load a package with <code>library(blahblah)</code> and get a message like <em>Error in library(blahblah) : there is no package called ‘blahblah’</em>, it means you need to install that package first with <code>install.packages()</code>.</li>
+<li>On the DataCamp interface we use for some problems in the course, you cannot install additional packages. The problems have been set up with the packages you need to solve them.</li>
+<li>You can add the option <code>dependencies = TRUE</code>, which tells R to install the other things that are necessary for the package or packages to run smoothly. Otherwise, you may need to install additional packages to unlock the full functionality of a package.</li>
+<li>Throughout the course materials and textbook, package names are in <strong>bold</strong>.</li>
+</ul>
+</section>
+<section id="code" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="code"><span class="header-section-number">2.4</span> Code</h2>
 
 
+</section>
+</section>
 
  ]]></description>
   <category>Data Science</category>
   <category>R Basic</category>
-  <guid>https://ningli.quarto.pub/series/R Basic/R-basic.html</guid>
+  <guid>https://quartopub.com/sites/ningli/statsr/series/R Basic/R-basic.html</guid>
   <pubDate>Sat, 26 Nov 2022 11:00:00 GMT</pubDate>
 </item>
 </channel>

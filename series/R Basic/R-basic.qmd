@@ -5,3 +5,57 @@ categories: [Data Science, R Basic]
 description: Data Science-R Basic
 editor: visual
 ---
+
+# Getting Started Using R
+
+## Key Points:
+
+- R was developed by statisticians and data analysts as an interactive environment for data analysis.
+
+- Some of the advantages of R are that:
+  - it is free and open source;
+  
+  - it has the capability to save scripts;
+  
+  - there are numerous resources for learning;
+  
+  - it is easy for developers to share software implementation.
+
+- Expressions are evaluated in the R console when you type the expression into the console and hit Return.
+
+- A great advantage of R over point and click analysis software is that you can save your work as scripts.
+
+- “Base R” is what you get after you first install R. Additional components are available via packages.
+
+## Some Addition Notes
+In RStudio, you can upload additional functions and datasets in addition to the base R functions and datasets that come with R automatically. A common way to do this is by installing packages, which often contain extra functions and datasets. For this course, there are a few packages you will need to install. You only need to install each individual package once, but after you install a package, there are other steps you have to do whenever you want to use something from that package.
+
+To install a package, you use the code `install.packages("package_name", dependencies = TRUE)`.
+
+To load a package, you use the code `library(package_name)`.
+
+If you also want to use a dataset from a package you have loaded, then you use the code `data(dataset_name)`. To see the dataset, you can take the additional step of `View(dataset_name)`.
+
+# Installing Packahes
+
+## Note
+
+We recommend installing packages through RStudio, rather than through R, and the code provided works in both R and RStudio. Once a package has been installed, it is technically added onto R (even if you use RStudio to install it), which is why packages must be re-installed when R is updated. However, since we use R through RStudio, any packages that are installed can be used in both R and RStudio, regardless of which one was used to install the packages.
+
+## key points
+
+- The base version of R is quite minimal, but you can supplement its functions by installing additional packages.
+- We will be using **tidyverse** and **dslabs** packages for this course.
+- Install packages from R console: `install.packages("pkg_name")`
+- Install packages from RStudio interface: Tools > Install Packages (allows autocomplete)
+- Once installed, we can use `library(pkg_name)` to load a package each time we want to use it
+
+## Additional Notes
+
+- If you try to load a package with `library(blahblah)` and get a message like *Error in library(blahblah) : there is no package called 'blahblah'*, it means you need to install that package first with `install.packages()`.
+- On the DataCamp interface we use for some problems in the course, you cannot install additional packages. The problems have been set up with the packages you need to solve them.
+- You can add the option `dependencies = TRUE`, which tells R to install the other things that are necessary for the package or packages to run smoothly. Otherwise, you may need to install additional packages to unlock the full functionality of a package.
+- Throughout the course materials and textbook, package names are in **bold**.
+
+## Code
+

@@ -1,5 +1,40 @@
 [
   {
+    "objectID": "series/R Basic/R-basic.html",
+    "href": "series/R Basic/R-basic.html",
+    "title": "R Basic",
+    "section": "",
+    "text": "R was developed by statisticians and data analysts as an interactive environment for data analysis.\nSome of the advantages of R are that:\n\nit is free and open source;\nit has the capability to save scripts;\nthere are numerous resources for learning;\nit is easy for developers to share software implementation.\n\nExpressions are evaluated in the R console when you type the expression into the console and hit Return.\nA great advantage of R over point and click analysis software is that you can save your work as scripts.\n“Base R” is what you get after you first install R. Additional components are available via packages.\n\n\n\n\nIn RStudio, you can upload additional functions and datasets in addition to the base R functions and datasets that come with R automatically. A common way to do this is by installing packages, which often contain extra functions and datasets. For this course, there are a few packages you will need to install. You only need to install each individual package once, but after you install a package, there are other steps you have to do whenever you want to use something from that package.\nTo install a package, you use the code install.packages(\"package_name\", dependencies = TRUE).\nTo load a package, you use the code library(package_name).\nIf you also want to use a dataset from a package you have loaded, then you use the code data(dataset_name). To see the dataset, you can take the additional step of View(dataset_name)."
+  },
+  {
+    "objectID": "series/R Basic/R-basic.html#note",
+    "href": "series/R Basic/R-basic.html#note",
+    "title": "R Basic",
+    "section": "2.1 Note",
+    "text": "2.1 Note\nWe recommend installing packages through RStudio, rather than through R, and the code provided works in both R and RStudio. Once a package has been installed, it is technically added onto R (even if you use RStudio to install it), which is why packages must be re-installed when R is updated. However, since we use R through RStudio, any packages that are installed can be used in both R and RStudio, regardless of which one was used to install the packages."
+  },
+  {
+    "objectID": "series/R Basic/R-basic.html#key-points-1",
+    "href": "series/R Basic/R-basic.html#key-points-1",
+    "title": "R Basic",
+    "section": "2.2 key points",
+    "text": "2.2 key points\n\nThe base version of R is quite minimal, but you can supplement its functions by installing additional packages.\nWe will be using tidyverse and dslabs packages for this course.\nInstall packages from R console: install.packages(\"pkg_name\")\nInstall packages from RStudio interface: Tools > Install Packages (allows autocomplete)\nOnce installed, we can use library(pkg_name) to load a package each time we want to use it"
+  },
+  {
+    "objectID": "series/R Basic/R-basic.html#additional-notes",
+    "href": "series/R Basic/R-basic.html#additional-notes",
+    "title": "R Basic",
+    "section": "2.3 Additional Notes",
+    "text": "2.3 Additional Notes\n\nIf you try to load a package with library(blahblah) and get a message like Error in library(blahblah) : there is no package called ‘blahblah’, it means you need to install that package first with install.packages().\nOn the DataCamp interface we use for some problems in the course, you cannot install additional packages. The problems have been set up with the packages you need to solve them.\nYou can add the option dependencies = TRUE, which tells R to install the other things that are necessary for the package or packages to run smoothly. Otherwise, you may need to install additional packages to unlock the full functionality of a package.\nThroughout the course materials and textbook, package names are in bold."
+  },
+  {
+    "objectID": "series/R Basic/R-basic.html#code",
+    "href": "series/R Basic/R-basic.html#code",
+    "title": "R Basic",
+    "section": "2.4 Code",
+    "text": "2.4 Code"
+  },
+  {
     "objectID": "series/Data Visualization/Data-visualization.html",
     "href": "series/Data Visualization/Data-visualization.html",
     "title": "Data Visualization",
@@ -207,7 +242,7 @@
     "href": "series.html",
     "title": "Stats & R",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\nCategories\n\n\nReading Time\n\n\n\n\n\n\nDec 1, 2022\n\n\nData Visualization\n\n\nData Science-Data Visualization\n\n\nData Science,Data Visualization\n\n\n21 min\n\n\n\n\nNov 27, 2022\n\n\nR Basic\n\n\nData Science-R Basic\n\n\nData Science,R Basic\n\n\n0 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\nCategories\n\n\nReading Time\n\n\n\n\n\n\nDec 1, 2022\n\n\nData Visualization\n\n\nData Science-Data Visualization\n\n\nData Science,Data Visualization\n\n\n21 min\n\n\n\n\nNov 27, 2022\n\n\nR Basic\n\n\nData Science-R Basic\n\n\nData Science,R Basic\n\n\n2 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",

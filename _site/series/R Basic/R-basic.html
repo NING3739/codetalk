@@ -147,12 +147,31 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#getting-started-using-r" id="toc-getting-started-using-r" class="nav-link active" data-scroll-target="#getting-started-using-r"><span class="toc-section-number">1</span>  Getting Started Using R</a>
+  <ul class="collapse">
+  <li><a href="#key-points" id="toc-key-points" class="nav-link" data-scroll-target="#key-points"><span class="toc-section-number">1.1</span>  Key Points:</a></li>
+  <li><a href="#some-addition-notes" id="toc-some-addition-notes" class="nav-link" data-scroll-target="#some-addition-notes"><span class="toc-section-number">1.2</span>  Some Addition Notes</a></li>
+  </ul></li>
+  <li><a href="#installing-packahes" id="toc-installing-packahes" class="nav-link" data-scroll-target="#installing-packahes"><span class="toc-section-number">2</span>  Installing Packahes</a>
+  <ul class="collapse">
+  <li><a href="#note" id="toc-note" class="nav-link" data-scroll-target="#note"><span class="toc-section-number">2.1</span>  Note</a></li>
+  <li><a href="#key-points-1" id="toc-key-points-1" class="nav-link" data-scroll-target="#key-points-1"><span class="toc-section-number">2.2</span>  key points</a></li>
+  <li><a href="#additional-notes" id="toc-additional-notes" class="nav-link" data-scroll-target="#additional-notes"><span class="toc-section-number">2.3</span>  Additional Notes</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code"><span class="toc-section-number">2.4</span>  Code</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-right" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -186,8 +205,63 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 
 </header>
 
+<section id="getting-started-using-r" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Getting Started Using R</h1>
+<section id="key-points" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="key-points"><span class="header-section-number">1.1</span> Key Points:</h2>
+<ul>
+<li><p>R was developed by statisticians and data analysts as an interactive environment for data analysis.</p></li>
+<li><p>Some of the advantages of R are that:</p>
+<ul>
+<li><p>it is free and open source;</p></li>
+<li><p>it has the capability to save scripts;</p></li>
+<li><p>there are numerous resources for learning;</p></li>
+<li><p>it is easy for developers to share software implementation.</p></li>
+</ul></li>
+<li><p>Expressions are evaluated in the R console when you type the expression into the console and hit Return.</p></li>
+<li><p>A great advantage of R over point and click analysis software is that you can save your work as scripts.</p></li>
+<li><p>“Base R” is what you get after you first install R. Additional components are available via packages.</p></li>
+</ul>
+</section>
+<section id="some-addition-notes" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="some-addition-notes"><span class="header-section-number">1.2</span> Some Addition Notes</h2>
+<p>In RStudio, you can upload additional functions and datasets in addition to the base R functions and datasets that come with R automatically. A common way to do this is by installing packages, which often contain extra functions and datasets. For this course, there are a few packages you will need to install. You only need to install each individual package once, but after you install a package, there are other steps you have to do whenever you want to use something from that package.</p>
+<p>To install a package, you use the code <code>install.packages("package_name", dependencies = TRUE)</code>.</p>
+<p>To load a package, you use the code <code>library(package_name)</code>.</p>
+<p>If you also want to use a dataset from a package you have loaded, then you use the code <code>data(dataset_name)</code>. To see the dataset, you can take the additional step of <code>View(dataset_name)</code>.</p>
+</section>
+</section>
+<section id="installing-packahes" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Installing Packahes</h1>
+<section id="note" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="note"><span class="header-section-number">2.1</span> Note</h2>
+<p>We recommend installing packages through RStudio, rather than through R, and the code provided works in both R and RStudio. Once a package has been installed, it is technically added onto R (even if you use RStudio to install it), which is why packages must be re-installed when R is updated. However, since we use R through RStudio, any packages that are installed can be used in both R and RStudio, regardless of which one was used to install the packages.</p>
+</section>
+<section id="key-points-1" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="key-points-1"><span class="header-section-number">2.2</span> key points</h2>
+<ul>
+<li>The base version of R is quite minimal, but you can supplement its functions by installing additional packages.</li>
+<li>We will be using <strong>tidyverse</strong> and <strong>dslabs</strong> packages for this course.</li>
+<li>Install packages from R console: <code>install.packages("pkg_name")</code></li>
+<li>Install packages from RStudio interface: Tools &gt; Install Packages (allows autocomplete)</li>
+<li>Once installed, we can use <code>library(pkg_name)</code> to load a package each time we want to use it</li>
+</ul>
+</section>
+<section id="additional-notes" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="additional-notes"><span class="header-section-number">2.3</span> Additional Notes</h2>
+<ul>
+<li>If you try to load a package with <code>library(blahblah)</code> and get a message like <em>Error in library(blahblah) : there is no package called ‘blahblah’</em>, it means you need to install that package first with <code>install.packages()</code>.</li>
+<li>On the DataCamp interface we use for some problems in the course, you cannot install additional packages. The problems have been set up with the packages you need to solve them.</li>
+<li>You can add the option <code>dependencies = TRUE</code>, which tells R to install the other things that are necessary for the package or packages to run smoothly. Otherwise, you may need to install additional packages to unlock the full functionality of a package.</li>
+<li>Throughout the course materials and textbook, package names are in <strong>bold</strong>.</li>
+</ul>
+</section>
+<section id="code" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="code"><span class="header-section-number">2.4</span> Code</h2>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
