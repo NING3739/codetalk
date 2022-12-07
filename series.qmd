@@ -2,12 +2,13 @@
 listing:
   contents: series/**/*.qmd
   sort: "date desc"
-  type: table
+  type: default
   categories: true
   sort-ui: true
   filter-ui: true
-  fields: [date, title, description, categories, reading-time]
+  fields: [image, date, title, description, categories, reading-time]
   feed: true
+  image-align: left
 page-layout: full
 title-block-banner: false
 ---

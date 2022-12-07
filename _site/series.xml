@@ -10,7 +10,24 @@
 <atom:link href="https://quartopub.com/sites/ningli/statsr/series.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.2.269</generator>
-<lastBuildDate>Wed, 30 Nov 2022 11:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 06 Dec 2022 11:00:00 GMT</lastBuildDate>
+<item>
+  <title>Probability</title>
+  <link>https://quartopub.com/sites/ningli/statsr/series/Probability/Probability.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+ ]]></description>
+  <category>Data Science</category>
+  <category>Probability</category>
+  <guid>https://quartopub.com/sites/ningli/statsr/series/Probability/Probability.html</guid>
+  <pubDate>Tue, 06 Dec 2022 11:00:00 GMT</pubDate>
+  <media:content url="https://images.unsplash.com/photo-1609017909889-d7b582c072f7?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy&amp;w=3600" medium="image"/>
+</item>
 <item>
   <title>Data Visualization</title>
   <link>https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization.html</link>
@@ -1021,7 +1038,7 @@ A further note on histograms
   <category>Data Visualization</category>
   <guid>https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization.html</guid>
   <pubDate>Wed, 30 Nov 2022 11:00:00 GMT</pubDate>
-  <media:content url="http://rafalab.dfci.harvard.edu/dsbook/book_files/figure-html/ecdf-1.png" medium="image" type="image/png"/>
+  <media:content url="https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy&amp;w=3600" medium="image"/>
 </item>
 <item>
   <title>R Basic</title>
@@ -1093,6 +1110,7 @@ A further note on histograms
   <category>R Basic</category>
   <guid>https://quartopub.com/sites/ningli/statsr/series/R Basic/R-basic.html</guid>
   <pubDate>Sat, 26 Nov 2022 11:00:00 GMT</pubDate>
+  <media:content url="https://images.unsplash.com/photo-1634128221889-82ed6efebfc3?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy&amp;w=3600" medium="image"/>
 </item>
 </channel>
 </rss>

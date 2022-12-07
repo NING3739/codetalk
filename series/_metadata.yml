@@ -18,4 +18,3 @@ page-layout: full
 format:
   html:
     number-sections: true
-    link-external-icon: true

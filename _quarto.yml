@@ -59,7 +59,6 @@ format:
     fig-align: center
     fig-cap-location: top
     footnotes-hover: true
-    link-external-filter: '^(?:http:|https:)\/\/ningli\.quarto\.pub\/custom'
     link-external-newwindow: true
     highlight-style: github
     html-math-method: katex

@@ -72,9 +72,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-description','listing-categories','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-categories','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -195,7 +195,7 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
   
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Data Science">Data Science <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Data Visualization">Data Visualization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R Basic">R Basic <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Data Science">Data Science <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Data Visualization">Data Visualization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Probability">Probability <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R Basic">R Basic <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -205,21 +205,21 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 
 
 
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
      <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
      <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
        <option value="" disabled="" selected="" hidden="">Order By</option>
        <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
          <option value="listing-date-sort" data-direction="asc">
           Date - Oldest
         </option>
          <option value="listing-date-sort" data-direction="desc">
           Date - Newest
-        </option>
-         <option value="listing-title-sort" data-direction="asc">
-          Title
         </option>
      </select>
   </div>
@@ -228,65 +228,122 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
+<div class="list quarto-listing-default">
+<div class="quarto-post image-left" data-index="0" data-categories="Data Science,Probability" data-listing-date-sort="1670324400000" data-listing-file-modified-sort="1670383629120" data-listing-reading-time-sort="0.005">
+<div class="thumbnail">
+<p><a href="./series/Probability/Probability.html"> <img src="https://images.unsplash.com/photo-1609017909889-d7b582c072f7?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy&amp;w=3600" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./series/Probability/Probability.html">
+<h3 class="no-anchor listing-title">
+Probability
+</h3>
+<div class="listing-subtitle">
 
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
-</th>
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-<th>
-Description
-</th>
-<th>
-Categories
-</th>
-<th>
-Reading Time
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="Data Science,Data Visualization" data-listing-date-sort="1669806000000" data-listing-file-modified-sort="1670037332000" data-listing-reading-time-sort="21.975" data-listing-title-sort="Data Visualization" data-listing-filename-sort="Data-visualization.qmd">
-<td class="listing-date">
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Data Science'); return false;">
+Data Science
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Probability'); return false;">
+Probability
+</div>
+</div>
+<a href="./series/Probability/Probability.html">
+<div class="listing-description">
+<p>Data Science-Probability</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./series/Probability/Probability.html">
+<div class="listing-date">
+Dec 7, 2022
+</div>
+<div class="listing-reading-time">
+0 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="1" data-categories="Data Science,Data Visualization" data-listing-date-sort="1669806000000" data-listing-file-modified-sort="1670383783231" data-listing-reading-time-sort="21.975">
+<div class="thumbnail">
+<p><a href="./series/Data Visualization/Data-visualization.html"> <img src="https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy&amp;w=3600" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./series/Data Visualization/Data-visualization.html">
+<h3 class="no-anchor listing-title">
+Data Visualization
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Data Science'); return false;">
+Data Science
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Data Visualization'); return false;">
+Data Visualization
+</div>
+</div>
+<a href="./series/Data Visualization/Data-visualization.html">
+<div class="listing-description">
+<p>Data Science-Data Visualization</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./series/Data Visualization/Data-visualization.html">
+<div class="listing-date">
 Dec 1, 2022
-</td>
-<td class="listing-title">
-<a href="./series/Data Visualization/Data-visualization.html" class="title">Data Visualization</a>
-</td>
-<td class="listing-description">
-Data Science-Data Visualization
-</td>
-<td class="listing-categories">
-Data Science,Data Visualization
-</td>
-<td class="listing-reading-time">
+</div>
+<div class="listing-reading-time">
 21 min
-</td>
-</tr>
-<tr data-index="1" data-categories="Data Science,R Basic" data-listing-date-sort="1669460400000" data-listing-file-modified-sort="1670306876052" data-listing-reading-time-sort="2.655" data-listing-title-sort="R Basic" data-listing-filename-sort="R-basic.qmd">
-<td class="listing-date">
-Nov 27, 2022
-</td>
-<td class="listing-title">
-<a href="./series/R Basic/R-basic.html" class="title">R Basic</a>
-</td>
-<td class="listing-description">
-Data Science-R Basic
-</td>
-<td class="listing-categories">
-Data Science,R Basic
-</td>
-<td class="listing-reading-time">
-2 min
-</td>
-</tr>
-</tbody>
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="2" data-categories="Data Science,R Basic" data-listing-date-sort="1669460400000" data-listing-file-modified-sort="1670383720248" data-listing-reading-time-sort="2.655">
+<div class="thumbnail">
+<p><a href="./series/R Basic/R-basic.html"> <img src="https://images.unsplash.com/photo-1634128221889-82ed6efebfc3?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy&amp;w=3600" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./series/R Basic/R-basic.html">
+<h3 class="no-anchor listing-title">
+R Basic
+</h3>
+<div class="listing-subtitle">
 
-</table>
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Data Science'); return false;">
+Data Science
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R Basic'); return false;">
+R Basic
+</div>
+</div>
+<a href="./series/R Basic/R-basic.html">
+<div class="listing-description">
+<p>Data Science-R Basic</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./series/R Basic/R-basic.html">
+<div class="listing-date">
+Nov 27, 2022
+</div>
+<div class="listing-reading-time">
+2 min
+</div>
+</a>
+</div>
+</div>
+</div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
@@ -538,7 +595,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/^(?:http:|https:)\/\/ningli\.quarto\.pub\/custom/);
+      var filterRegex = new RegExp(/https:\/\/quartopub\.com\/sites\/ningli\/statsr/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }

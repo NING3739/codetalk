@@ -2,6 +2,7 @@
   {
     "listing": "/series.html",
     "items": [
+      "/series/Probability/Probability.html",
       "/series/Data Visualization/Data-visualization.html",
       "/series/R Basic/R-basic.html"
     ]
