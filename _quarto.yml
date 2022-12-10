@@ -10,7 +10,7 @@ website:
   favicon: Stats-&-R.png
   page-navigation: true
   page-footer: 
-    left:  "© 2022 Stats & R™ made with❤️ by [NING](who.qmd)"
+    left:  "© 2022 Stats & R™ made with❤️ by [NING](about.qmd)"
     right:
       - icon: envelope
         href: mailto:ln729500172@gmail.com
