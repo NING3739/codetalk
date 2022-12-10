@@ -8,9 +8,9 @@ code-fold: false
 editor: visual
 ---
 # R Basics, Functions, and Data Types
-In Section, we will introduce you to R Basics, Functions, and Datatypes.
+In this section, I will introduce you to R Basics, Functions, and Datatypes.
 
-In this Section, we will learn to:
+In this part, you will learn to:
 
 - Appreciate the rationale for data analysis using R.
 
@@ -269,7 +269,7 @@ levels(murders$region)
 ```
 
 # Vectors, Sorting
-In this Section, we will introduce you to vectors and functions such as sorting.
+In this section, I will introduce you to vectors and functions such as sorting.
 
 In Vectors, you will: 
 
@@ -426,7 +426,7 @@ murders$state[order(murder_rate, decreasing=TRUE)]
 ```
 # Indexing, Data Wrangling, Plots
 
-In this section, we will introduce the R commands and techniques that help you wrangle, analyze, and visualize data.
+In this section, I will introduce the R commands and techniques that help you wrangle, analyze, and visualize data.
 
 In Indexing, you will:
 - Subset a vector based on properties of another vector. 
@@ -956,7 +956,7 @@ murders[order(region, rate)]
 ```
 
 # Programming Basics
-In this section,  we will introduce you to general programming features like 'if-else' and 'for loop' commands so that you can write your own functions to perform various operations on datasets.
+In this section,  I will introduce you to general programming features like 'if-else' and 'for loop' commands so that you can write your own functions to perform various operations on datasets.
 
 In programming basics, you will:
 - Understand some of the programming capabilities of R. 
