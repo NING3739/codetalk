@@ -801,10 +801,289 @@ p + geom_abline(intercept = log(r), lty = 2, color = "darkgrey") +
     geom_point(aes(col = region), size = 3)
 ```
 
-### Code: Change legend title
+::: callout-tip
+## Line types in R: Ity
 
+The different **line types** available in **R** are shown in the figure hereafter. The argument [**lty**](http://www.sthda.com/english/wiki/line-types-in-r-lty) can be used to specify the **line type**. To change **line width**, the argument **lwd** can be used.
+:::
+
+### Code: Change legend title
 ```{r}
 # capitalize legend title
 p <- p + scale_color_discrete(name = "Region")
 p
+```
+
+## Add-on packages
+### Textbook links:
+- [Textbook section on add-on packages](http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#add-on-packages)
+- [Textbook section on putting it all together](http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#putting-it-all-together)
+
+### Key Points
+- The style of a ggplot graph can be changed using the `theme()` function.
+
+- The `ggthemes` package adds additional themes.
+
+- The `ggrepel` package includes a geometry that repels text labels, ensuring they do not overlap with each other: `geom_text_repel()`.
+
+### Code: Adding themes
+```{r, output=FALSE}
+# theme used for graphs in the textbook and course
+library(dslabs)
+ds_theme_set()
+```
+```{r, output=FALSE}
+# themes from ggthemes
+library(ggthemes)
+```
+```{r}
+p + theme_economist()    # style of the Economist magazine
+p + theme_fivethirtyeight()    # style of the FiveThirtyEight website
+```
+
+### Code: Putting it all together to assemble the plot
+```{r, output=FALSE}
+# load libraries
+library(tidyverse)
+library(ggrepel)
+library(ggthemes)
+library(dslabs)
+data(murders)
+```
+```{r}
+# define the intercept
+r <- murders %>%
+    summarize(rate = sum(total) / sum(population) * 10^6) %>%
+    .$rate
+    
+# make the plot, combining all elements
+murders %>%
+    ggplot(aes(population/10^6, total, label = abb)) +
+    geom_abline(intercept = log10(r), lty = 2, color = "darkgrey") +
+    geom_point(aes(col = region), size = 3) +
+    geom_text_repel() +
+    scale_x_log10() +
+    scale_y_log10() +
+    xlab("Population in millions (log scale)") +
+    ylab("Total number of murders (log scale)") +
+    ggtitle("US Gun Murders in 2010") +
+    scale_color_discrete(name = "Region") +
+    theme_economist()
+```
+
+## Other Examples
+### Textbook links:
+- [Textbook section on histograms](http://rafalab.dfci.harvard.edu/dsbook/distributions.html#histograms-1)
+
+- [Textbook section on density plots](http://rafalab.dfci.harvard.edu/dsbook/distributions.html#density-plots)
+
+- [Textbook section on grids of plots](http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#grids-of-plots)
+
+### Key points
+- `geom_histogram()` creates a histogram. Use the **binwidth** argument to change the width of bins, the fill argument to change the bar fill color, and the col argument to change bar outline color.
+
+- `geom_density()` creates smooth density plots. Change the fill color of the plot with the fill argument.
+
+- `geom_qq()` creates a quantile-quantile plot. This geometry requires the sample argument. By default, the data are compared to a standard normal distribution with a mean of 0 and standard deviation of 1. This can be changed with the dparams argument, or the sample data can be scaled.
+
+- Plots can be arranged adjacent to each other using the `grid.arrange()` function from the **gridExtra** package. First, create the plots and save them to objects (p1, p2, ...). Then pass the plot objects to `grid.arrange()`.
+
+### Code: Histograms in ggplot2
+```{r, output=FALSE}
+library(tidyverse)
+library(dslabs)
+data(heights)
+
+# define p
+p <- heights %>% 
+  filter(sex == "Male") %>% 
+  ggplot(aes(x=height))
+```
+
+```{r, error=FALSE}
+# basic histograms
+p + geom_histogram() + ggtitle("binwidth is default")
+p + geom_histogram(binwidth = 1) + ggtitle("binwidth is 1")
+
+# histogram with blue fill, black outline, labels and title
+p + geom_histogram(binwidth = 1, fill ="blue", col = "black") + 
+  xlab("Male heights in inches") +
+  ggtitle("histogram")
+```
+
+### Code: Smooth density plots in ggplot2
+```{r}
+p + geom_density()
+p + geom_density(fill = "blue", col = "red") +
+  xlab("Male heights in inches") +
+  ylab("proportion of Male heights") +
+  ggtitle("Male heights distribution")
+```
+
+### Code: Quantile-quantile plots in ggplot2
+```{r}
+# basic QQ-plot
+p <- heights %>% filter(sex == "Male") %>% 
+  ggplot(aes(sample = height))
+p + geom_qq()
+
+# QQ-plot against a normal distribution with same mean/sd as data
+params <- heights %>% 
+  filter(sex == "Male") %>% 
+  summarize(mean = mean(height), sd = sd(height))
+p + geom_qq(dparams = params) +
+  geom_abline()
+
+# QQ-plot of scaled data against the standard normal distribution
+heights %>% 
+  ggplot(aes(sample = scale(height))) +
+  geom_qq() +
+  geom_abline()
+```
+```{r}
+# define plots p1, p2, p3
+p <- heights %>% filter(sex == "Male") %>% ggplot(aes(x = height))
+p1 <- p + geom_histogram(binwidth = 1, fill = "blue", col = "black")
+p2 <- p + geom_histogram(binwidth = 2, fill = "blue", col = "black")
+p3 <- p + geom_histogram(binwidth = 3, fill = "blue", col = "black")
+```
+```{r, output=FALSE}
+# arrange plots next to each other in 1 row, 3 columns
+library(gridExtra)
+```
+```{r}
+grid.arrange(p1, p2, p3, ncol = 3)
+```
+
+# Gapminder
+## Overview
+After completing Gapminder, you will:
+- understand how Hans Rosling and the Gapminder Foundation use effective data visualization to convey data-based trends.
+
+- be able to apply the **ggplot2** techniques from the previous section to answer questions using data.
+
+- understand how fixed scales across plots can ease comparisons.
+
+- be able to modify graphs to improve data visualization.
+
+## Introduction to Gapminder
+
+Case study: Trends in World Health and Economics
+
+Data Source form Gapminder
+
+We will use this data to answer the following questions about World Health and Economics:
+- Is it still fair to consider the world as divided into the West and the developing world?
+- Has income inequality across countries worsened over the last 40 years?
+
+## Gapminder Dataset
+
+### Key Points
+- A selection of world health and economics statistics from the Gapminder project can be found in the `dslabs` package as data(gapminder).
+
+- Most people have **misconceptions** about world health and economics, which can be addressed by considering real data.
+
+### Code
+```{r, output=FALSE}
+library(dslabs)
+data("gapminder")
+```
+```{r}
+head(gapminder)
+names(gapminder)
+```
+```{r}
+gapminder %>% 
+  filter(year == 2015 & country %in% c("Sri Lanka", "Turkey")) %>% 
+  select(country, infant_mortality)
+```
+
+## Life Expectancy and Fertility Rates
+### Key Points
+- A prevalent worldview is that the world is divided into two groups of countries:
+  
+  - Western world: high life expectancy, low fertility rate
+  
+  - Developing world: lower life expectancy, higher fertility rate
+
+- Gapminder data can be used to evaluate the validity of this view.
+
+- A scatterplot of life expectancy versus fertility rate in 1962 suggests that this viewpoint was grounded in reality 50 years ago. Is it still the case today?
+
+### Code
+```{r}
+# basic scatterplot of life expectancy versus fertility
+ds_theme_set() # set plot theme
+filter(gapminder, year == 1962) %>% 
+  ggplot(aes(fertility, life_expectancy)) +
+  geom_point()
+
+# add color as continent
+filter(gapminder, year == 1962) %>% 
+  ggplot(aes(fertility, life_expectancy, color = continent)) +
+  geom_point()
+```
+
+## Faceting
+### Key Points
+
+- Faceting **makes multiple side-by-side plots stratified by some variable**. This is a way to ease comparisons.
+
+- The `facet_grid()` function allows *faceting by up to two variables*, with rows faceted by one variable and columns faceted by the other variable. To facet by only one variable, use the dot operator as the other variable.
+
+- The `facet_wrap()` function *facets by one variable and automatically wraps the series of plots* so they have readable dimensions.
+
+- Faceting keeps the axes fixed across all plots, easing comparisons between plots.
+
+- The data suggest that the developing versus Western world view no longer makes sense in 2012.
+
+[ggplot2-[分面(facet) 一页多图](https://blog.csdn.net/tanzuozhev/article/details/51112177)]{.aside}
+[数据可视化章节学习[facet](https://zhuanlan.zhihu.com/p/31044450)]{.aside}
+
+### Code
+```{r}
+# facet by continent and year
+filter(gapminder, year %in% c(1962, 2012)) %>% 
+  ggplot(aes(fertility, life_expectancy, col = continent)) +
+  geom_point() +
+  facet_grid(continent ~ year)
+
+# facet by year only 
+filter(gapminder, year %in% c(1962, 2012)) %>% 
+  ggplot(aes(fertility, life_expectancy, col = continent)) +
+  geom_point() +
+  facet_grid(. ~ year)
+
+# facet by year, plots wrapped onto multiple rows
+years <- c(1962, 1980, 1990, 2000, 2012)
+continents <- c("Europ", "Asia")
+gapminder %>% 
+  filter(year %in% years & continent %in% continent) %>% 
+  ggplot(aes(fertility, life_expectancy, col = continent)) +
+  geom_point() +
+  facet_wrap(. ~ year)
+```
+
+## Time Series Plots
+### Key Points
+- Time series plots have time on the *x-axis* and a variable of interest on the *y-axis*.
+
+- The `geom_line()` geometry connects adjacent data points to form a continuous line. A line plot is appropriate when points are regularly spaced, densely packed and from a single data series.
+
+- You can plot multiple lines on the same graph. Remember to group or color by a variable so that the lines are plotted independently.
+
+- Labeling is usually preferred over legends. However, legends are easier to make and appear by default. Add a label with `geom_text()`, specifying the coordinates where the label should appear on the graph.
+
+### Code: Single Time Series
+```{r, warning=FALSE}
+# scatterplot of US fertility by year
+gapminder %>% 
+  filter(country == "United States") %>% 
+  ggplot(aes(year, fertility)) +
+  geom_point()
+# line plot of US fertility by year
+gapminder %>% 
+  filter(country == "United States") %>% 
+  ggplot(aes(year, fertility)) +
+  geom_line()
 ```
