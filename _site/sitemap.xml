@@ -1,55 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/series/R Basic/R-basic.html</loc>
-    <lastmod>2022-12-15T02:30:01.945Z</lastmod>
+    <loc>https://ningli.quarto.pub/index.html</loc>
+    <lastmod>2022-12-17T03:11:09.575Z</lastmod>
   </url>
   <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/series/Probability/Probability.html</loc>
-    <lastmod>2022-12-15T02:30:02.325Z</lastmod>
+    <loc>https://ningli.quarto.pub/series/R Basic/R-basic.html</loc>
+    <lastmod>2022-12-17T03:11:01.080Z</lastmod>
   </url>
   <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization.html</loc>
-    <lastmod>2022-12-15T02:30:04.670Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/contact.html</loc>
-    <lastmod>2022-12-15T02:30:05.023Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/posts/Dynamic Graph/Graph.html</loc>
-    <lastmod>2022-12-15T02:30:06.229Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/posts/welcome/welcome.html</loc>
-    <lastmod>2022-12-15T02:30:06.576Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/posts/Christmas Tree/christmas_tree.html</loc>
-    <lastmod>2022-12-15T02:30:07.770Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/series.html</loc>
-    <lastmod>2022-12-15T02:30:08.216Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/index.html</loc>
-    <lastmod>2022-12-15T02:30:08.557Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/about.html</loc>
-    <lastmod>2022-12-15T02:30:08.927Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/posts.html</loc>
-    <lastmod>2022-12-15T02:30:09.340Z</lastmod>
+    <loc>https://ningli.quarto.pub/series/Probability/Probability.html</loc>
+    <lastmod>2022-12-17T03:11:01.430Z</lastmod>
   </url>
   <url>
     <loc>https://ningli.quarto.pub/series/Data Visualization/Data-visualization.html</loc>
-    <lastmod>2022-12-15T03:43:22.820Z</lastmod>
+    <lastmod>2022-12-17T03:13:16.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ningli.quarto.pub/contact.html</loc>
+    <lastmod>2022-12-17T03:11:03.850Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ningli.quarto.pub/posts/Dynamic Graph/Graph.html</loc>
+    <lastmod>2022-12-17T03:11:04.968Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ningli.quarto.pub/posts/welcome/welcome.html</loc>
+    <lastmod>2022-12-17T03:11:05.339Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ningli.quarto.pub/posts/Christmas Tree/christmas_tree.html</loc>
+    <lastmod>2022-12-17T03:11:06.442Z</lastmod>
   </url>
   <url>
     <loc>https://ningli.quarto.pub/series.html</loc>
-    <lastmod>2022-12-15T03:43:18.421Z</lastmod>
+    <lastmod>2022-12-17T03:13:13.039Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ningli.quarto.pub/about.html</loc>
+    <lastmod>2022-12-17T03:11:07.266Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ningli.quarto.pub/posts.html</loc>
+    <lastmod>2022-12-17T03:11:07.696Z</lastmod>
   </url>
 </urlset>

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.2.280">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
 <meta name="dcterms.date" content="2022-11-27">
 <meta name="description" content="Data Science-R Basic">
+
 <title>Stats &amp; R - R Basic</title>
 <style>
 code{white-space: pre-wrap;}
@@ -84,6 +87,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -101,7 +105,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -119,19 +124,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y96LK2RNJD"></script><script type="text/javascript">
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y96LK2RNJD"></script>
+
+<script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
-</script><style>html{ scroll-behavior: smooth; }</style>
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
 <script type="application/json" class="js-hypothesis-config">
 {
   "theme": "clean"
 }
-</script><script async="" src="https://hypothes.is/embed.js"></script><script src="../../site_libs/quarto-diagram/mermaid.min.js"></script><script src="../../site_libs/quarto-diagram/mermaid-init.js"></script><link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
-<script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script><script>document.addEventListener("DOMContentLoaded", function () {
+</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
  var macros = [];
  for (var i = 0; i < mathElements.length; i++) {
@@ -144,16 +159,22 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
     fleqn: false
    });
 }}});
-  </script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+
 <link rel="stylesheet" href="../../styles.css">
 </head>
+
 <body class="floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="index.qmd" class="navbar-brand navbar-brand-logo">
-    <img src="../../Stats-&amp;-R.png" alt="Stats-&amp;-R.png" class="navbar-logo"></a>
+    <img src="../../Stats-&amp;-R.png" alt="Stats-&amp;-R.png" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="index.qmd">
     <span class="navbar-title">Stats &amp; R</span>
     </a>
@@ -163,7 +184,7 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-<li class="nav-item">
+  <li class="nav-item">
     <a class="nav-link" href="../../posts.html">
  <span class="menu-text">Posts</span></a>
   </li>  
@@ -180,8 +201,8 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
  <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
-<ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item compact">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
     <a class="nav-link" href="mailto:ln729500172@gmail.com"><i class="bi bi-envelope" role="img">
 </i> 
  <span class="menu-text"></span></a>
@@ -197,257 +218,198 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-<div class="quarto-toggle-container">
+              <div class="quarto-toggle-container">
                   <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
               </div>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto"><nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Contents</h2>
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
    
   <ul>
-<li>
-<a href="#r-basics-functions-and-data-types" id="toc-r-basics-functions-and-data-types" class="nav-link active" data-scroll-target="#r-basics-functions-and-data-types"><span class="toc-section-number">1</span>  R Basics, Functions, and Data Types</a>
+  <li><a href="#r-basics-functions-and-data-types" id="toc-r-basics-functions-and-data-types" class="nav-link active" data-scroll-target="#r-basics-functions-and-data-types"><span class="toc-section-number">1</span>  R Basics, Functions, and Data Types</a>
   <ul class="collapse">
-<li>
-<a href="#insralling-r" id="toc-insralling-r" class="nav-link" data-scroll-target="#insralling-r"><span class="toc-section-number">1.1</span>  Insralling R</a>
+  <li><a href="#insralling-r" id="toc-insralling-r" class="nav-link" data-scroll-target="#insralling-r"><span class="toc-section-number">1.1</span>  Insralling R</a>
   <ul class="collapse">
-<li><a href="#why-install-r-and-rstudio" id="toc-why-install-r-and-rstudio" class="nav-link" data-scroll-target="#why-install-r-and-rstudio"><span class="toc-section-number">1.1.1</span>  why Install R and RStudio?</a></li>
+  <li><a href="#why-install-r-and-rstudio" id="toc-why-install-r-and-rstudio" class="nav-link" data-scroll-target="#why-install-r-and-rstudio"><span class="toc-section-number">1.1.1</span>  why Install R and RStudio?</a></li>
   <li><a href="#key-points" id="toc-key-points" class="nav-link" data-scroll-target="#key-points"><span class="toc-section-number">1.1.2</span>  Key Points</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#installing-rstudio" id="toc-installing-rstudio" class="nav-link" data-scroll-target="#installing-rstudio"><span class="toc-section-number">1.2</span>  Installing Rstudio</a>
+  </ul></li>
+  <li><a href="#installing-rstudio" id="toc-installing-rstudio" class="nav-link" data-scroll-target="#installing-rstudio"><span class="toc-section-number">1.2</span>  Installing Rstudio</a>
   <ul class="collapse">
-<li><a href="#key-points-1" id="toc-key-points-1" class="nav-link" data-scroll-target="#key-points-1"><span class="toc-section-number">1.2.1</span>  Key Points</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#using-rstudio-for-the-first-time" id="toc-using-rstudio-for-the-first-time" class="nav-link" data-scroll-target="#using-rstudio-for-the-first-time"><span class="toc-section-number">1.3</span>  Using RStudio for the First Time</a>
+  <li><a href="#key-points-1" id="toc-key-points-1" class="nav-link" data-scroll-target="#key-points-1"><span class="toc-section-number">1.2.1</span>  Key Points</a></li>
+  </ul></li>
+  <li><a href="#using-rstudio-for-the-first-time" id="toc-using-rstudio-for-the-first-time" class="nav-link" data-scroll-target="#using-rstudio-for-the-first-time"><span class="toc-section-number">1.3</span>  Using RStudio for the First Time</a>
   <ul class="collapse">
-<li><a href="#key-points-2" id="toc-key-points-2" class="nav-link" data-scroll-target="#key-points-2"><span class="toc-section-number">1.3.1</span>  Key Points</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#getting-started-using-r" id="toc-getting-started-using-r" class="nav-link" data-scroll-target="#getting-started-using-r"><span class="toc-section-number">1.4</span>  Getting Started Using R</a>
+  <li><a href="#key-points-2" id="toc-key-points-2" class="nav-link" data-scroll-target="#key-points-2"><span class="toc-section-number">1.3.1</span>  Key Points</a></li>
+  </ul></li>
+  <li><a href="#getting-started-using-r" id="toc-getting-started-using-r" class="nav-link" data-scroll-target="#getting-started-using-r"><span class="toc-section-number">1.4</span>  Getting Started Using R</a>
   <ul class="collapse">
-<li><a href="#key-points-3" id="toc-key-points-3" class="nav-link" data-scroll-target="#key-points-3"><span class="toc-section-number">1.4.1</span>  Key Points:</a></li>
+  <li><a href="#key-points-3" id="toc-key-points-3" class="nav-link" data-scroll-target="#key-points-3"><span class="toc-section-number">1.4.1</span>  Key Points:</a></li>
   <li><a href="#some-addition-notes" id="toc-some-addition-notes" class="nav-link" data-scroll-target="#some-addition-notes"><span class="toc-section-number">1.4.2</span>  Some Addition Notes</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#installing-packahes" id="toc-installing-packahes" class="nav-link" data-scroll-target="#installing-packahes"><span class="toc-section-number">1.5</span>  Installing Packahes</a>
+  </ul></li>
+  <li><a href="#installing-packahes" id="toc-installing-packahes" class="nav-link" data-scroll-target="#installing-packahes"><span class="toc-section-number">1.5</span>  Installing Packahes</a>
   <ul class="collapse">
-<li><a href="#note" id="toc-note" class="nav-link" data-scroll-target="#note"><span class="toc-section-number">1.5.1</span>  Note</a></li>
+  <li><a href="#note" id="toc-note" class="nav-link" data-scroll-target="#note"><span class="toc-section-number">1.5.1</span>  Note</a></li>
   <li><a href="#key-points-4" id="toc-key-points-4" class="nav-link" data-scroll-target="#key-points-4"><span class="toc-section-number">1.5.2</span>  key points</a></li>
   <li><a href="#additional-notes" id="toc-additional-notes" class="nav-link" data-scroll-target="#additional-notes"><span class="toc-section-number">1.5.3</span>  Additional Notes</a></li>
   <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code"><span class="toc-section-number">1.5.4</span>  Code</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#running-commands-while-editing-scripts" id="toc-running-commands-while-editing-scripts" class="nav-link" data-scroll-target="#running-commands-while-editing-scripts"><span class="toc-section-number">1.6</span>  Running Commands While Editing Scripts</a>
+  </ul></li>
+  <li><a href="#running-commands-while-editing-scripts" id="toc-running-commands-while-editing-scripts" class="nav-link" data-scroll-target="#running-commands-while-editing-scripts"><span class="toc-section-number">1.6</span>  Running Commands While Editing Scripts</a>
   <ul class="collapse">
-<li><a href="#key-points-5" id="toc-key-points-5" class="nav-link" data-scroll-target="#key-points-5"><span class="toc-section-number">1.6.1</span>  Key Points</a></li>
+  <li><a href="#key-points-5" id="toc-key-points-5" class="nav-link" data-scroll-target="#key-points-5"><span class="toc-section-number">1.6.1</span>  Key Points</a></li>
   <li><a href="#code-1" id="toc-code-1" class="nav-link" data-scroll-target="#code-1"><span class="toc-section-number">1.6.2</span>  Code</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#r-basics" id="toc-r-basics" class="nav-link" data-scroll-target="#r-basics"><span class="toc-section-number">1.7</span>  R Basics</a>
+  </ul></li>
+  <li><a href="#r-basics" id="toc-r-basics" class="nav-link" data-scroll-target="#r-basics"><span class="toc-section-number">1.7</span>  R Basics</a>
   <ul class="collapse">
-<li><a href="#key-points-6" id="toc-key-points-6" class="nav-link" data-scroll-target="#key-points-6"><span class="toc-section-number">1.7.1</span>  Key Points</a></li>
+  <li><a href="#key-points-6" id="toc-key-points-6" class="nav-link" data-scroll-target="#key-points-6"><span class="toc-section-number">1.7.1</span>  Key Points</a></li>
   <li><a href="#code-example-to-solving-the-equation-x2-x---1-0" id="toc-code-example-to-solving-the-equation-x2-x---1-0" class="nav-link" data-scroll-target="#code-example-to-solving-the-equation-x2-x---1-0"><span class="toc-section-number">1.8.1</span>  Code: example to solving the equation <span class="math inline">x^{2} + x - 1 = 0</span></a></li>
-  </ul>
-</li>
-  <li>
-<a href="#function" id="toc-function" class="nav-link" data-scroll-target="#function"><span class="toc-section-number">1.9</span>  Function</a>
+  </ul></li>
+  <li><a href="#function" id="toc-function" class="nav-link" data-scroll-target="#function"><span class="toc-section-number">1.9</span>  Function</a>
   <ul class="collapse">
-<li><a href="#key-points-7" id="toc-key-points-7" class="nav-link" data-scroll-target="#key-points-7"><span class="toc-section-number">1.9.1</span>  Key Points</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#data-types" id="toc-data-types" class="nav-link" data-scroll-target="#data-types"><span class="toc-section-number">1.10</span>  Data Types</a>
+  <li><a href="#key-points-7" id="toc-key-points-7" class="nav-link" data-scroll-target="#key-points-7"><span class="toc-section-number">1.9.1</span>  Key Points</a></li>
+  </ul></li>
+  <li><a href="#data-types" id="toc-data-types" class="nav-link" data-scroll-target="#data-types"><span class="toc-section-number">1.10</span>  Data Types</a>
   <ul class="collapse">
-<li><a href="#key-points-8" id="toc-key-points-8" class="nav-link" data-scroll-target="#key-points-8"><span class="toc-section-number">1.10.1</span>  Key Points</a></li>
+  <li><a href="#key-points-8" id="toc-key-points-8" class="nav-link" data-scroll-target="#key-points-8"><span class="toc-section-number">1.10.1</span>  Key Points</a></li>
   <li><a href="#code-2" id="toc-code-2" class="nav-link" data-scroll-target="#code-2"><span class="toc-section-number">1.10.2</span>  Code</a></li>
-  </ul>
-</li>
-  </ul>
-</li>
-  <li>
-<a href="#vectors-sorting" id="toc-vectors-sorting" class="nav-link" data-scroll-target="#vectors-sorting"><span class="toc-section-number">2</span>  Vectors, Sorting</a>
+  </ul></li>
+  </ul></li>
+  <li><a href="#vectors-sorting" id="toc-vectors-sorting" class="nav-link" data-scroll-target="#vectors-sorting"><span class="toc-section-number">2</span>  Vectors, Sorting</a>
   <ul class="collapse">
-<li>
-<a href="#vectors" id="toc-vectors" class="nav-link" data-scroll-target="#vectors"><span class="toc-section-number">2.1</span>  Vectors</a>
+  <li><a href="#vectors" id="toc-vectors" class="nav-link" data-scroll-target="#vectors"><span class="toc-section-number">2.1</span>  Vectors</a>
   <ul class="collapse">
-<li><a href="#key-points-9" id="toc-key-points-9" class="nav-link" data-scroll-target="#key-points-9"><span class="toc-section-number">2.1.1</span>  Key points</a></li>
+  <li><a href="#key-points-9" id="toc-key-points-9" class="nav-link" data-scroll-target="#key-points-9"><span class="toc-section-number">2.1.1</span>  Key points</a></li>
   <li><a href="#code-3" id="toc-code-3" class="nav-link" data-scroll-target="#code-3"><span class="toc-section-number">2.1.2</span>  Code</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#vector-coercion" id="toc-vector-coercion" class="nav-link" data-scroll-target="#vector-coercion"><span class="toc-section-number">2.2</span>  Vector Coercion</a>
+  </ul></li>
+  <li><a href="#vector-coercion" id="toc-vector-coercion" class="nav-link" data-scroll-target="#vector-coercion"><span class="toc-section-number">2.2</span>  Vector Coercion</a>
   <ul class="collapse">
-<li><a href="#key-point" id="toc-key-point" class="nav-link" data-scroll-target="#key-point"><span class="toc-section-number">2.2.1</span>  Key Point</a></li>
+  <li><a href="#key-point" id="toc-key-point" class="nav-link" data-scroll-target="#key-point"><span class="toc-section-number">2.2.1</span>  Key Point</a></li>
   <li><a href="#question" id="toc-question" class="nav-link" data-scroll-target="#question"><span class="toc-section-number">2.2.2</span>  Question</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#sorting" id="toc-sorting" class="nav-link" data-scroll-target="#sorting"><span class="toc-section-number">2.3</span>  Sorting</a>
+  </ul></li>
+  <li><a href="#sorting" id="toc-sorting" class="nav-link" data-scroll-target="#sorting"><span class="toc-section-number">2.3</span>  Sorting</a>
   <ul class="collapse">
-<li><a href="#key-points-10" id="toc-key-points-10" class="nav-link" data-scroll-target="#key-points-10"><span class="toc-section-number">2.3.1</span>  Key Points</a></li>
+  <li><a href="#key-points-10" id="toc-key-points-10" class="nav-link" data-scroll-target="#key-points-10"><span class="toc-section-number">2.3.1</span>  Key Points</a></li>
   <li><a href="#code-4" id="toc-code-4" class="nav-link" data-scroll-target="#code-4"><span class="toc-section-number">2.3.2</span>  Code</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#vector-arithmetic" id="toc-vector-arithmetic" class="nav-link" data-scroll-target="#vector-arithmetic"><span class="toc-section-number">2.4</span>  Vector Arithmetic</a>
+  </ul></li>
+  <li><a href="#vector-arithmetic" id="toc-vector-arithmetic" class="nav-link" data-scroll-target="#vector-arithmetic"><span class="toc-section-number">2.4</span>  Vector Arithmetic</a>
   <ul class="collapse">
-<li><a href="#key-point-1" id="toc-key-point-1" class="nav-link" data-scroll-target="#key-point-1"><span class="toc-section-number">2.4.1</span>  Key Point</a></li>
+  <li><a href="#key-point-1" id="toc-key-point-1" class="nav-link" data-scroll-target="#key-point-1"><span class="toc-section-number">2.4.1</span>  Key Point</a></li>
   <li><a href="#code-5" id="toc-code-5" class="nav-link" data-scroll-target="#code-5"><span class="toc-section-number">2.4.2</span>  Code</a></li>
-  </ul>
-</li>
-  </ul>
-</li>
-  <li>
-<a href="#indexing-data-wrangling-plots" id="toc-indexing-data-wrangling-plots" class="nav-link" data-scroll-target="#indexing-data-wrangling-plots"><span class="toc-section-number">3</span>  Indexing, Data Wrangling, Plots</a>
+  </ul></li>
+  </ul></li>
+  <li><a href="#indexing-data-wrangling-plots" id="toc-indexing-data-wrangling-plots" class="nav-link" data-scroll-target="#indexing-data-wrangling-plots"><span class="toc-section-number">3</span>  Indexing, Data Wrangling, Plots</a>
   <ul class="collapse">
-<li>
-<a href="#indexing" id="toc-indexing" class="nav-link" data-scroll-target="#indexing"><span class="toc-section-number">3.1</span>  Indexing</a>
+  <li><a href="#indexing" id="toc-indexing" class="nav-link" data-scroll-target="#indexing"><span class="toc-section-number">3.1</span>  Indexing</a>
   <ul class="collapse">
-<li><a href="#key-point-2" id="toc-key-point-2" class="nav-link" data-scroll-target="#key-point-2"><span class="toc-section-number">3.1.1</span>  Key Point</a></li>
+  <li><a href="#key-point-2" id="toc-key-point-2" class="nav-link" data-scroll-target="#key-point-2"><span class="toc-section-number">3.1.1</span>  Key Point</a></li>
   <li><a href="#code-6" id="toc-code-6" class="nav-link" data-scroll-target="#code-6"><span class="toc-section-number">3.1.2</span>  Code</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#indexing-functions" id="toc-indexing-functions" class="nav-link" data-scroll-target="#indexing-functions"><span class="toc-section-number">3.2</span>  Indexing Functions</a>
+  </ul></li>
+  <li><a href="#indexing-functions" id="toc-indexing-functions" class="nav-link" data-scroll-target="#indexing-functions"><span class="toc-section-number">3.2</span>  Indexing Functions</a>
   <ul class="collapse">
-<li><a href="#key-points-11" id="toc-key-points-11" class="nav-link" data-scroll-target="#key-points-11"><span class="toc-section-number">3.2.1</span>  Key Points</a></li>
+  <li><a href="#key-points-11" id="toc-key-points-11" class="nav-link" data-scroll-target="#key-points-11"><span class="toc-section-number">3.2.1</span>  Key Points</a></li>
   <li><a href="#code-7" id="toc-code-7" class="nav-link" data-scroll-target="#code-7"><span class="toc-section-number">3.2.2</span>  Code</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#basic-data-wrangling" id="toc-basic-data-wrangling" class="nav-link" data-scroll-target="#basic-data-wrangling"><span class="toc-section-number">3.3</span>  Basic Data Wrangling</a>
+  </ul></li>
+  <li><a href="#basic-data-wrangling" id="toc-basic-data-wrangling" class="nav-link" data-scroll-target="#basic-data-wrangling"><span class="toc-section-number">3.3</span>  Basic Data Wrangling</a>
   <ul class="collapse">
-<li><a href="#key-points-12" id="toc-key-points-12" class="nav-link" data-scroll-target="#key-points-12"><span class="toc-section-number">3.3.1</span>  Key Points</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#creating-data-frames" id="toc-creating-data-frames" class="nav-link" data-scroll-target="#creating-data-frames"><span class="toc-section-number">3.4</span>  Creating Data Frames</a>
+  <li><a href="#key-points-12" id="toc-key-points-12" class="nav-link" data-scroll-target="#key-points-12"><span class="toc-section-number">3.3.1</span>  Key Points</a></li>
+  </ul></li>
+  <li><a href="#creating-data-frames" id="toc-creating-data-frames" class="nav-link" data-scroll-target="#creating-data-frames"><span class="toc-section-number">3.4</span>  Creating Data Frames</a>
   <ul class="collapse">
-<li><a href="#note-2" id="toc-note-2" class="nav-link" data-scroll-target="#note-2"><span class="toc-section-number">3.4.1</span>  Note</a></li>
+  <li><a href="#note-2" id="toc-note-2" class="nav-link" data-scroll-target="#note-2"><span class="toc-section-number">3.4.1</span>  Note</a></li>
   <li><a href="#key-points-13" id="toc-key-points-13" class="nav-link" data-scroll-target="#key-points-13"><span class="toc-section-number">3.4.2</span>  Key Points</a></li>
   <li><a href="#code-8" id="toc-code-8" class="nav-link" data-scroll-target="#code-8"><span class="toc-section-number">3.4.3</span>  Code</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#basic-plots" id="toc-basic-plots" class="nav-link" data-scroll-target="#basic-plots"><span class="toc-section-number">3.5</span>  Basic Plots</a>
+  </ul></li>
+  <li><a href="#basic-plots" id="toc-basic-plots" class="nav-link" data-scroll-target="#basic-plots"><span class="toc-section-number">3.5</span>  Basic Plots</a>
   <ul class="collapse">
-<li><a href="#key-points-14" id="toc-key-points-14" class="nav-link" data-scroll-target="#key-points-14"><span class="toc-section-number">3.5.1</span>  Key Points</a></li>
+  <li><a href="#key-points-14" id="toc-key-points-14" class="nav-link" data-scroll-target="#key-points-14"><span class="toc-section-number">3.5.1</span>  Key Points</a></li>
   <li><a href="#code-9" id="toc-code-9" class="nav-link" data-scroll-target="#code-9"><span class="toc-section-number">3.5.2</span>  Code</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#the-summarize-function" id="toc-the-summarize-function" class="nav-link" data-scroll-target="#the-summarize-function"><span class="toc-section-number">3.6</span>  The summarize function</a>
+  </ul></li>
+  <li><a href="#the-summarize-function" id="toc-the-summarize-function" class="nav-link" data-scroll-target="#the-summarize-function"><span class="toc-section-number">3.6</span>  The summarize function</a>
   <ul class="collapse">
-<li><a href="#key-points-15" id="toc-key-points-15" class="nav-link" data-scroll-target="#key-points-15"><span class="toc-section-number">3.6.1</span>  Key Points</a></li>
+  <li><a href="#key-points-15" id="toc-key-points-15" class="nav-link" data-scroll-target="#key-points-15"><span class="toc-section-number">3.6.1</span>  Key Points</a></li>
   <li><a href="#code-10" id="toc-code-10" class="nav-link" data-scroll-target="#code-10"><span class="toc-section-number">3.6.2</span>  Code</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#summarizing-with-more-than-one-value" id="toc-summarizing-with-more-than-one-value" class="nav-link" data-scroll-target="#summarizing-with-more-than-one-value"><span class="toc-section-number">3.7</span>  Summarizing with more than one value</a>
+  </ul></li>
+  <li><a href="#summarizing-with-more-than-one-value" id="toc-summarizing-with-more-than-one-value" class="nav-link" data-scroll-target="#summarizing-with-more-than-one-value"><span class="toc-section-number">3.7</span>  Summarizing with more than one value</a>
   <ul class="collapse">
-<li><a href="#key-points-16" id="toc-key-points-16" class="nav-link" data-scroll-target="#key-points-16"><span class="toc-section-number">3.7.1</span>  Key Points</a></li>
+  <li><a href="#key-points-16" id="toc-key-points-16" class="nav-link" data-scroll-target="#key-points-16"><span class="toc-section-number">3.7.1</span>  Key Points</a></li>
   <li><a href="#code-11" id="toc-code-11" class="nav-link" data-scroll-target="#code-11"><span class="toc-section-number">3.7.2</span>  Code</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#pull-to-access-to-columns" id="toc-pull-to-access-to-columns" class="nav-link" data-scroll-target="#pull-to-access-to-columns"><span class="toc-section-number">3.8</span>  Pull to access to columns</a>
+  </ul></li>
+  <li><a href="#pull-to-access-to-columns" id="toc-pull-to-access-to-columns" class="nav-link" data-scroll-target="#pull-to-access-to-columns"><span class="toc-section-number">3.8</span>  Pull to access to columns</a>
   <ul class="collapse">
-<li><a href="#key-points-17" id="toc-key-points-17" class="nav-link" data-scroll-target="#key-points-17"><span class="toc-section-number">3.8.1</span>  Key Points</a></li>
+  <li><a href="#key-points-17" id="toc-key-points-17" class="nav-link" data-scroll-target="#key-points-17"><span class="toc-section-number">3.8.1</span>  Key Points</a></li>
   <li><a href="#code-12" id="toc-code-12" class="nav-link" data-scroll-target="#code-12"><span class="toc-section-number">3.8.2</span>  Code</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#the-dot-placeholder" id="toc-the-dot-placeholder" class="nav-link" data-scroll-target="#the-dot-placeholder"><span class="toc-section-number">3.9</span>  The dot placeholder</a>
+  </ul></li>
+  <li><a href="#the-dot-placeholder" id="toc-the-dot-placeholder" class="nav-link" data-scroll-target="#the-dot-placeholder"><span class="toc-section-number">3.9</span>  The dot placeholder</a>
   <ul class="collapse">
-<li><a href="#key-points-18" id="toc-key-points-18" class="nav-link" data-scroll-target="#key-points-18"><span class="toc-section-number">3.9.1</span>  Key Points</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#group-then-summarize" id="toc-group-then-summarize" class="nav-link" data-scroll-target="#group-then-summarize"><span class="toc-section-number">3.10</span>  Group then summarize</a>
+  <li><a href="#key-points-18" id="toc-key-points-18" class="nav-link" data-scroll-target="#key-points-18"><span class="toc-section-number">3.9.1</span>  Key Points</a></li>
+  </ul></li>
+  <li><a href="#group-then-summarize" id="toc-group-then-summarize" class="nav-link" data-scroll-target="#group-then-summarize"><span class="toc-section-number">3.10</span>  Group then summarize</a>
   <ul class="collapse">
-<li><a href="#key-points-19" id="toc-key-points-19" class="nav-link" data-scroll-target="#key-points-19"><span class="toc-section-number">3.10.1</span>  Key Points</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#sorting-data-tables" id="toc-sorting-data-tables" class="nav-link" data-scroll-target="#sorting-data-tables"><span class="toc-section-number">3.11</span>  Sorting data tables</a>
+  <li><a href="#key-points-19" id="toc-key-points-19" class="nav-link" data-scroll-target="#key-points-19"><span class="toc-section-number">3.10.1</span>  Key Points</a></li>
+  </ul></li>
+  <li><a href="#sorting-data-tables" id="toc-sorting-data-tables" class="nav-link" data-scroll-target="#sorting-data-tables"><span class="toc-section-number">3.11</span>  Sorting data tables</a>
   <ul class="collapse">
-<li><a href="#key-points-20" id="toc-key-points-20" class="nav-link" data-scroll-target="#key-points-20"><span class="toc-section-number">3.11.1</span>  Key Points</a></li>
+  <li><a href="#key-points-20" id="toc-key-points-20" class="nav-link" data-scroll-target="#key-points-20"><span class="toc-section-number">3.11.1</span>  Key Points</a></li>
   <li><a href="#code-13" id="toc-code-13" class="nav-link" data-scroll-target="#code-13"><span class="toc-section-number">3.11.2</span>  Code</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#introduction-to-data.table" id="toc-introduction-to-data.table" class="nav-link" data-scroll-target="#introduction-to-data.table"><span class="toc-section-number">3.12</span>  Introduction to data.table</a>
+  </ul></li>
+  <li><a href="#introduction-to-data.table" id="toc-introduction-to-data.table" class="nav-link" data-scroll-target="#introduction-to-data.table"><span class="toc-section-number">3.12</span>  Introduction to data.table</a>
   <ul class="collapse">
-<li><a href="#key-points-21" id="toc-key-points-21" class="nav-link" data-scroll-target="#key-points-21"><span class="toc-section-number">3.12.1</span>  Key Points</a></li>
+  <li><a href="#key-points-21" id="toc-key-points-21" class="nav-link" data-scroll-target="#key-points-21"><span class="toc-section-number">3.12.1</span>  Key Points</a></li>
   <li><a href="#code-14" id="toc-code-14" class="nav-link" data-scroll-target="#code-14"><span class="toc-section-number">3.12.2</span>  Code</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#subsetting-with-data.table" id="toc-subsetting-with-data.table" class="nav-link" data-scroll-target="#subsetting-with-data.table"><span class="toc-section-number">3.13</span>  Subsetting with data.table</a>
+  </ul></li>
+  <li><a href="#subsetting-with-data.table" id="toc-subsetting-with-data.table" class="nav-link" data-scroll-target="#subsetting-with-data.table"><span class="toc-section-number">3.13</span>  Subsetting with data.table</a>
   <ul class="collapse">
-<li><a href="#key-points-22" id="toc-key-points-22" class="nav-link" data-scroll-target="#key-points-22"><span class="toc-section-number">3.13.1</span>  Key Points</a></li>
+  <li><a href="#key-points-22" id="toc-key-points-22" class="nav-link" data-scroll-target="#key-points-22"><span class="toc-section-number">3.13.1</span>  Key Points</a></li>
   <li><a href="#code-15" id="toc-code-15" class="nav-link" data-scroll-target="#code-15"><span class="toc-section-number">3.13.2</span>  Code</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#summarizing-with-data.table" id="toc-summarizing-with-data.table" class="nav-link" data-scroll-target="#summarizing-with-data.table"><span class="toc-section-number">3.14</span>  Summarizing with data.table</a>
+  </ul></li>
+  <li><a href="#summarizing-with-data.table" id="toc-summarizing-with-data.table" class="nav-link" data-scroll-target="#summarizing-with-data.table"><span class="toc-section-number">3.14</span>  Summarizing with data.table</a>
   <ul class="collapse">
-<li><a href="#key-points-23" id="toc-key-points-23" class="nav-link" data-scroll-target="#key-points-23"><span class="toc-section-number">3.14.1</span>  Key Points</a></li>
+  <li><a href="#key-points-23" id="toc-key-points-23" class="nav-link" data-scroll-target="#key-points-23"><span class="toc-section-number">3.14.1</span>  Key Points</a></li>
   <li><a href="#code-16" id="toc-code-16" class="nav-link" data-scroll-target="#code-16"><span class="toc-section-number">3.14.2</span>  Code</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#sorting-data-frames" id="toc-sorting-data-frames" class="nav-link" data-scroll-target="#sorting-data-frames"><span class="toc-section-number">3.15</span>  Sorting data frames</a>
+  </ul></li>
+  <li><a href="#sorting-data-frames" id="toc-sorting-data-frames" class="nav-link" data-scroll-target="#sorting-data-frames"><span class="toc-section-number">3.15</span>  Sorting data frames</a>
   <ul class="collapse">
-<li><a href="#key-points-24" id="toc-key-points-24" class="nav-link" data-scroll-target="#key-points-24"><span class="toc-section-number">3.15.1</span>  Key Points</a></li>
+  <li><a href="#key-points-24" id="toc-key-points-24" class="nav-link" data-scroll-target="#key-points-24"><span class="toc-section-number">3.15.1</span>  Key Points</a></li>
   <li><a href="#code-17" id="toc-code-17" class="nav-link" data-scroll-target="#code-17"><span class="toc-section-number">3.15.2</span>  Code</a></li>
-  </ul>
-</li>
-  </ul>
-</li>
-  <li>
-<a href="#programming-basics" id="toc-programming-basics" class="nav-link" data-scroll-target="#programming-basics"><span class="toc-section-number">4</span>  Programming Basics</a>
+  </ul></li>
+  </ul></li>
+  <li><a href="#programming-basics" id="toc-programming-basics" class="nav-link" data-scroll-target="#programming-basics"><span class="toc-section-number">4</span>  Programming Basics</a>
   <ul class="collapse">
-<li><a href="#programming-basics-1" id="toc-programming-basics-1" class="nav-link" data-scroll-target="#programming-basics-1"><span class="toc-section-number">4.1</span>  Programming Basics</a></li>
-  <li>
-<a href="#basic-condationals" id="toc-basic-condationals" class="nav-link" data-scroll-target="#basic-condationals"><span class="toc-section-number">4.2</span>  Basic Condationals</a>
+  <li><a href="#programming-basics-1" id="toc-programming-basics-1" class="nav-link" data-scroll-target="#programming-basics-1"><span class="toc-section-number">4.1</span>  Programming Basics</a></li>
+  <li><a href="#basic-condationals" id="toc-basic-condationals" class="nav-link" data-scroll-target="#basic-condationals"><span class="toc-section-number">4.2</span>  Basic Condationals</a>
   <ul class="collapse">
-<li><a href="#key-points-25" id="toc-key-points-25" class="nav-link" data-scroll-target="#key-points-25"><span class="toc-section-number">4.2.1</span>  Key Points</a></li>
+  <li><a href="#key-points-25" id="toc-key-points-25" class="nav-link" data-scroll-target="#key-points-25"><span class="toc-section-number">4.2.1</span>  Key Points</a></li>
   <li><a href="#code-18" id="toc-code-18" class="nav-link" data-scroll-target="#code-18"><span class="toc-section-number">4.2.2</span>  Code</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions"><span class="toc-section-number">4.3</span>  Functions</a>
+  </ul></li>
+  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions"><span class="toc-section-number">4.3</span>  Functions</a>
   <ul class="collapse">
-<li><a href="#key-points-26" id="toc-key-points-26" class="nav-link" data-scroll-target="#key-points-26"><span class="toc-section-number">4.3.1</span>  Key Points</a></li>
+  <li><a href="#key-points-26" id="toc-key-points-26" class="nav-link" data-scroll-target="#key-points-26"><span class="toc-section-number">4.3.1</span>  Key Points</a></li>
   <li><a href="#code-19" id="toc-code-19" class="nav-link" data-scroll-target="#code-19"><span class="toc-section-number">4.3.2</span>  Code</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#for-loops" id="toc-for-loops" class="nav-link" data-scroll-target="#for-loops"><span class="toc-section-number">4.4</span>  For Loops</a>
+  </ul></li>
+  <li><a href="#for-loops" id="toc-for-loops" class="nav-link" data-scroll-target="#for-loops"><span class="toc-section-number">4.4</span>  For Loops</a>
   <ul class="collapse">
-<li><a href="#key-points-27" id="toc-key-points-27" class="nav-link" data-scroll-target="#key-points-27"><span class="toc-section-number">4.4.1</span>  Key Points</a></li>
+  <li><a href="#key-points-27" id="toc-key-points-27" class="nav-link" data-scroll-target="#key-points-27"><span class="toc-section-number">4.4.1</span>  Key Points</a></li>
   <li><a href="#code-20" id="toc-code-20" class="nav-link" data-scroll-target="#code-20"><span class="toc-section-number">4.4.2</span>  Code</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
-</li>
-  </ul>
-</li>
-  </ul></nav>
-</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+</nav>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
 <!-- main -->
-<main class="content page-columns page-full column-body" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<main class="content page-columns page-full column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
 <h1 class="title">R Basic</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Data Science</div>
@@ -476,8 +438,10 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
   </div>
   
 
-</header><section id="r-basics-functions-and-data-types" class="level1 page-columns page-full" data-number="1"><h1 data-number="1">
-<span class="header-section-number">1</span> R Basics, Functions, and Data Types</h1>
+</header>
+
+<section id="r-basics-functions-and-data-types" class="level1 page-columns page-full" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> R Basics, Functions, and Data Types</h1>
 <p>In this section, I will introduce you to R Basics, Functions, and Datatypes.</p>
 <p>In this part, you will learn to:</p>
 <ul>
@@ -486,112 +450,127 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 <li><p>Use pre-defined functions to perform operations on objects.</p></li>
 <li><p>Distinguish between various data types.</p></li>
 </ul>
-<section id="insralling-r" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="insralling-r">
-<span class="header-section-number">1.1</span> Insralling R</h2>
-<section id="why-install-r-and-rstudio" class="level3" data-number="1.1.1"><h3 data-number="1.1.1" class="anchored" data-anchor-id="why-install-r-and-rstudio">
-<span class="header-section-number">1.1.1</span> why Install R and RStudio?</h3>
+<section id="insralling-r" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="insralling-r"><span class="header-section-number">1.1</span> Insralling R</h2>
+<section id="why-install-r-and-rstudio" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="why-install-r-and-rstudio"><span class="header-section-number">1.1.1</span> why Install R and RStudio?</h3>
 <ul>
 <li><p>To complete this course, you should install R locally on your computer. We also highly recommend installing RStudio, an integrated development environment (IDE), to edit and test your code.</p></li>
 <li><p>In order to complete some assignments in the course, you will need your own copy of R. You may also find it helpful to follow along with the course videos in R or RStudio.</p></li>
 <li><p>Both R and RStudio can be freely downloaded and installed.</p></li>
-</ul></section><section id="key-points" class="level3" data-number="1.1.2"><h3 data-number="1.1.2" class="anchored" data-anchor-id="key-points">
-<span class="header-section-number">1.1.2</span> Key Points</h3>
+</ul>
+</section>
+<section id="key-points" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="key-points"><span class="header-section-number">1.1.2</span> Key Points</h3>
 <ul>
 <li><p>You need to install R before using RStudio, which is an interactive desktop environment.</p></li>
 <li><p>Select base subdirectory in <a href="https://cran.r-project.org/">CRAN</a> and click download.</p></li>
 <li><p>Select all default choices in the installation process.</p></li>
 <li><p>We recommend selecting English for language to help you better follow the course.</p></li>
 <li><p>You can try using the R console, but for productivity purposes, we can switch to RStudio.</p></li>
-</ul></section></section><section id="installing-rstudio" class="level2" data-number="1.2"><h2 data-number="1.2" class="anchored" data-anchor-id="installing-rstudio">
-<span class="header-section-number">1.2</span> Installing Rstudio</h2>
-<section id="key-points-1" class="level3" data-number="1.2.1"><h3 data-number="1.2.1" class="anchored" data-anchor-id="key-points-1">
-<span class="header-section-number">1.2.1</span> Key Points</h3>
+</ul>
+</section>
+</section>
+<section id="installing-rstudio" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="installing-rstudio"><span class="header-section-number">1.2</span> Installing Rstudio</h2>
+<section id="key-points-1" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="key-points-1"><span class="header-section-number">1.2.1</span> Key Points</h3>
 <ul>
 <li><p>You can download the latest version of RStudio at the <a href="https://posit.co/download/rstudio-desktop/">RStudio website</a>.</p></li>
 <li><p>The free desktop version is more than enough for this course.</p></li>
 <li><p>Make sure to choose the version for your own operating system.</p></li>
 <li><p>Choose “Yes” for all defaults in the installation process.</p></li>
-</ul></section></section><section id="using-rstudio-for-the-first-time" class="level2" data-number="1.3"><h2 data-number="1.3" class="anchored" data-anchor-id="using-rstudio-for-the-first-time">
-<span class="header-section-number">1.3</span> Using RStudio for the First Time</h2>
-<section id="key-points-2" class="level3" data-number="1.3.1"><h3 data-number="1.3.1" class="anchored" data-anchor-id="key-points-2">
-<span class="header-section-number">1.3.1</span> Key Points</h3>
+</ul>
+</section>
+</section>
+<section id="using-rstudio-for-the-first-time" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="using-rstudio-for-the-first-time"><span class="header-section-number">1.3</span> Using RStudio for the First Time</h2>
+<section id="key-points-2" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="key-points-2"><span class="header-section-number">1.3.1</span> Key Points</h3>
 <ul>
 <li><p>The free desktop version of RStudio can be launched like other applications on your computer.</p></li>
 <li><p>When you start RStudio for the first time, you will see three panes. The left pane shows you the R console. On the right, the top pane includes three tabs, while the bottom pane shows you five tabs, file, plots, packages, help, and viewer.</p></li>
 <li><p>You can download a cheat sheet of the most common RStudio commands directly from RStudio by going to “Help -&gt; Cheat Sheets -&gt; RStudio IDE Cheat Sheet.”</p></li>
-</ul></section></section><section id="getting-started-using-r" class="level2" data-number="1.4"><h2 data-number="1.4" class="anchored" data-anchor-id="getting-started-using-r">
-<span class="header-section-number">1.4</span> Getting Started Using R</h2>
-<section id="key-points-3" class="level3" data-number="1.4.1"><h3 data-number="1.4.1" class="anchored" data-anchor-id="key-points-3">
-<span class="header-section-number">1.4.1</span> Key Points:</h3>
+</ul>
+</section>
+</section>
+<section id="getting-started-using-r" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="getting-started-using-r"><span class="header-section-number">1.4</span> Getting Started Using R</h2>
+<section id="key-points-3" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="key-points-3"><span class="header-section-number">1.4.1</span> Key Points:</h3>
 <ul>
 <li><p>R was developed by statisticians and data analysts as an interactive environment for data analysis.</p></li>
-<li>
-<p>Some of the advantages of R are that:</p>
+<li><p>Some of the advantages of R are that:</p>
 <ul>
 <li><p>it is free and open source;</p></li>
 <li><p>it has the capability to save scripts;</p></li>
 <li><p>there are numerous resources for learning;</p></li>
 <li><p>it is easy for developers to share software implementation.</p></li>
-</ul>
-</li>
+</ul></li>
 <li><p>Expressions are evaluated in the R console when you type the expression into the console and hit Return.</p></li>
 <li><p>A great advantage of R over point and click analysis software is that you can save your work as scripts.</p></li>
 <li><p>“Base R” is what you get after you first install R. Additional components are available via packages.</p></li>
-</ul></section><section id="some-addition-notes" class="level3" data-number="1.4.2"><h3 data-number="1.4.2" class="anchored" data-anchor-id="some-addition-notes">
-<span class="header-section-number">1.4.2</span> Some Addition Notes</h3>
+</ul>
+</section>
+<section id="some-addition-notes" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="some-addition-notes"><span class="header-section-number">1.4.2</span> Some Addition Notes</h3>
 <p>In RStudio, you can upload additional functions and datasets in addition to the base R functions and datasets that come with R automatically. A common way to do this is by installing packages, which often contain extra functions and datasets. For this course, there are a few packages you will need to install. You only need to install each individual package once, but after you install a package, there are other steps you have to do whenever you want to use something from that package.</p>
 <p>To install a package, you use the code <code>install.packages("package_name", dependencies = TRUE)</code>.</p>
-<p>To load a package, you use the code <code><a href="https://rdrr.io/r/base/library.html">library(package_name)</a></code>.</p>
+<p>To load a package, you use the code <code>library(package_name)</code>.</p>
 <p>If you also want to use a dataset from a package you have loaded, then you use the code <code>data(dataset_name)</code>. To see the dataset, you can take the additional step of <code>View(dataset_name)</code>.</p>
-</section></section><section id="installing-packahes" class="level2" data-number="1.5"><h2 data-number="1.5" class="anchored" data-anchor-id="installing-packahes">
-<span class="header-section-number">1.5</span> Installing Packahes</h2>
-<section id="note" class="level3" data-number="1.5.1"><h3 data-number="1.5.1" class="anchored" data-anchor-id="note">
-<span class="header-section-number">1.5.1</span> Note</h3>
+</section>
+</section>
+<section id="installing-packahes" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="installing-packahes"><span class="header-section-number">1.5</span> Installing Packahes</h2>
+<section id="note" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="note"><span class="header-section-number">1.5.1</span> Note</h3>
 <p>We recommend installing packages through RStudio, rather than through R, and the code provided works in both R and RStudio. Once a package has been installed, it is technically added onto R (even if you use RStudio to install it), which is why packages must be re-installed when R is updated. However, since we use R through RStudio, any packages that are installed can be used in both R and RStudio, regardless of which one was used to install the packages.</p>
-</section><section id="key-points-4" class="level3" data-number="1.5.2"><h3 data-number="1.5.2" class="anchored" data-anchor-id="key-points-4">
-<span class="header-section-number">1.5.2</span> key points</h3>
+</section>
+<section id="key-points-4" class="level3" data-number="1.5.2">
+<h3 data-number="1.5.2" class="anchored" data-anchor-id="key-points-4"><span class="header-section-number">1.5.2</span> key points</h3>
 <ul>
 <li>The base version of R is quite minimal, but you can supplement its functions by installing additional packages.</li>
 <li>We will be using <strong>tidyverse</strong> and <strong>dslabs</strong> packages for this course.</li>
-<li>Install packages from R console: <code>install.packages("pkg_name")</code>
-</li>
+<li>Install packages from R console: <code>install.packages("pkg_name")</code></li>
 <li>Install packages from RStudio interface: Tools &gt; Install Packages (allows autocomplete)</li>
-<li>Once installed, we can use <code><a href="https://rdrr.io/r/base/library.html">library(pkg_name)</a></code> to load a package each time we want to use it</li>
-</ul></section><section id="additional-notes" class="level3" data-number="1.5.3"><h3 data-number="1.5.3" class="anchored" data-anchor-id="additional-notes">
-<span class="header-section-number">1.5.3</span> Additional Notes</h3>
+<li>Once installed, we can use <code>library(pkg_name)</code> to load a package each time we want to use it</li>
+</ul>
+</section>
+<section id="additional-notes" class="level3" data-number="1.5.3">
+<h3 data-number="1.5.3" class="anchored" data-anchor-id="additional-notes"><span class="header-section-number">1.5.3</span> Additional Notes</h3>
 <ul>
-<li>If you try to load a package with <code><a href="https://rdrr.io/r/base/library.html">library(blahblah)</a></code> and get a message like <em>Error in library(blahblah) : there is no package called ‘blahblah’</em>, it means you need to install that package first with <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages()</a></code>.</li>
+<li>If you try to load a package with <code>library(blahblah)</code> and get a message like <em>Error in library(blahblah) : there is no package called ‘blahblah’</em>, it means you need to install that package first with <code>install.packages()</code>.</li>
 <li>On the DataCamp interface we use for some problems in the course, you cannot install additional packages. The problems have been set up with the packages you need to solve them.</li>
 <li>You can add the option <code>dependencies = TRUE</code>, which tells R to install the other things that are necessary for the package or packages to run smoothly. Otherwise, you may need to install additional packages to unlock the full functionality of a package.</li>
 <li>Throughout the course materials and textbook, package names are in <strong>bold</strong>.</li>
-</ul></section><section id="code" class="level3" data-number="1.5.4"><h3 data-number="1.5.4" class="anchored" data-anchor-id="code">
-<span class="header-section-number">1.5.4</span> Code</h3>
+</ul>
+</section>
+<section id="code" class="level3" data-number="1.5.4">
+<h3 data-number="1.5.4" class="anchored" data-anchor-id="code"><span class="header-section-number">1.5.4</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">install.packages</span>(<span class="st">"dslabs"</span>) <span class="co"># to install a single package</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"dslabs"</span>)) <span class="co"># to install two packages at the same time</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="fu">installed.packages</span>() <span class="co"># to see the list of all installed packages</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section><section id="running-commands-while-editing-scripts" class="level2" data-number="1.6"><h2 data-number="1.6" class="anchored" data-anchor-id="running-commands-while-editing-scripts">
-<span class="header-section-number">1.6</span> Running Commands While Editing Scripts</h2>
-<section id="key-points-5" class="level3" data-number="1.6.1"><h3 data-number="1.6.1" class="anchored" data-anchor-id="key-points-5">
-<span class="header-section-number">1.6.1</span> Key Points</h3>
+</section>
+</section>
+<section id="running-commands-while-editing-scripts" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="running-commands-while-editing-scripts"><span class="header-section-number">1.6</span> Running Commands While Editing Scripts</h2>
+<section id="key-points-5" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="key-points-5"><span class="header-section-number">1.6.1</span> Key Points</h3>
 <ul>
 <li><p>RStudio has many useful features as an R editor, including the ability to <strong>test code</strong> easily as we write scripts and several <strong>auto complete features</strong>.</p></li>
-<li>
-<p>Keyboard shortcuts:</p>
+<li><p>Keyboard shortcuts:</p>
 <ul>
-<li>
-<strong>Save a script</strong>: Ctrl+S on Windows and Command+S on Mac</li>
-<li>
-<strong>Run an entire script</strong>: Ctrl+Shift+Enter on Windows Command+Shift+Return on Mac, or click “Source” on the editor pane</li>
-<li>
-<strong>Run a single line of script</strong>: Ctrl+Enter on Windows and Command+Return on Mac while the cursor is pointing to that line, or select the chunk and click “run”</li>
-<li>
-<strong>Open a new script</strong>: Ctrl+Shift+N on Windows and Command+Shift+N on Mac</li>
+<li><strong>Save a script</strong>: Ctrl+S on Windows and Command+S on Mac</li>
+<li><strong>Run an entire script</strong>: Ctrl+Shift+Enter on Windows Command+Shift+Return on Mac, or click “Source” on the editor pane</li>
+<li><strong>Run a single line of script</strong>: Ctrl+Enter on Windows and Command+Return on Mac while the cursor is pointing to that line, or select the chunk and click “run”</li>
+<li><strong>Open a new script</strong>: Ctrl+Shift+N on Windows and Command+Shift+N on Mac</li>
+</ul></li>
 </ul>
-</li>
-</ul></section><section id="code-1" class="level3" data-number="1.6.2"><h3 data-number="1.6.2" class="anchored" data-anchor-id="code-1">
-<span class="header-section-number">1.6.2</span> Code</h3>
+</section>
+<section id="code-1" class="level3" data-number="1.6.2">
+<h3 data-number="1.6.2" class="anchored" data-anchor-id="code-1"><span class="header-section-number">1.6.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Here is an example how to running commends while editing scripts</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(tidyverse)</span>
@@ -602,27 +581,27 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 <span id="cb2-7"><a href="#cb2-7"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(population, total, <span class="at">label=</span>abb, <span class="at">color=</span>region)) <span class="sc">+</span></span>
 <span id="cb2-8"><a href="#cb2-8"></a>  <span class="fu">geom_label</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section><section id="r-basics" class="level2" data-number="1.7"><h2 data-number="1.7" class="anchored" data-anchor-id="r-basics">
-<span class="header-section-number">1.7</span> R Basics</h2>
-<section id="key-points-6" class="level3" data-number="1.7.1"><h3 data-number="1.7.1" class="anchored">
-<span class="header-section-number">1.7.1</span> Key Points</h3>
+</section>
+</section>
+<section id="r-basics" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="r-basics"><span class="header-section-number">1.7</span> R Basics</h2>
+<section id="key-points-6" class="level3" data-number="1.7.1">
+<h3 data-number="1.7.1" class="anchored"><span class="header-section-number">1.7.1</span> Key Points</h3>
 <ul>
 <li><p>To define a variable, we may use the assignment symbol, <code>&lt;-</code>.</p></li>
-<li>
-<h2 id="there-are-two-ways-to-see-the-value-stored-in-a-variable" data-number="1.8" class="anchored" data-anchor-id="key-points-6">
-<span class="header-section-number">1.8</span> There are two ways to see the value stored in a variable:</h2>
+<li><h2 id="there-are-two-ways-to-see-the-value-stored-in-a-variable" data-number="1.8" class="anchored" data-anchor-id="key-points-6"><span class="header-section-number">1.8</span> There are two ways to see the value stored in a variable:</h2>
 <pre><code>(1) type the variable name into the console and hit Return;</code></pre>
 <ul>
 <li><ol start="2" type="1">
-<li>use the <code><a href="https://rdrr.io/r/base/print.html">print()</a></code> function by typing <code>print(variable_name)</code> and hitting Return.</li>
+<li>use the <code>print()</code> function by typing <code>print(variable_name)</code> and hitting Return.</li>
 </ol></li>
-</ul>
-</li>
+</ul></li>
 <li><p>Objects are things that are stored in named containers in R. They can be variables, functions, etc.</p></li>
-<li><p>The <code><a href="https://rdrr.io/r/base/ls.html">ls()</a></code> function shows the names of the objects saved in your work space.</p></li>
-</ul></section><section id="code-example-to-solving-the-equation-x2-x---1-0" class="level3" data-number="1.8.1"><h3 data-number="1.8.1" class="anchored" data-anchor-id="code-example-to-solving-the-equation-x2-x---1-0">
-<span class="header-section-number">1.8.1</span> Code: example to solving the equation <span class="math inline">x^{2} + x - 1 = 0</span>
-</h3>
+<li><p>The <code>ls()</code> function shows the names of the objects saved in your work space.</p></li>
+</ul>
+</section>
+<section id="code-example-to-solving-the-equation-x2-x---1-0" class="level3" data-number="1.8.1">
+<h3 data-number="1.8.1" class="anchored" data-anchor-id="code-example-to-solving-the-equation-x2-x---1-0"><span class="header-section-number">1.8.1</span> Code: example to solving the equation <span class="math inline">x^{2} + x - 1 = 0</span></h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># assigning values to variables</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a>a <span class="ot">&lt;-</span> <span class="dv">1</span></span>
@@ -633,19 +612,24 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 <span id="cb4-7"><a href="#cb4-7"></a>(<span class="sc">-</span>b <span class="sc">+</span> <span class="fu">sqrt</span>(b<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">4</span><span class="sc">*</span>a<span class="sc">*</span>c))<span class="sc">/</span>(<span class="dv">2</span><span class="sc">*</span>a)</span>
 <span id="cb4-8"><a href="#cb4-8"></a>(<span class="sc">-</span>b <span class="sc">-</span> <span class="fu">sqrt</span>(b<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">4</span><span class="sc">*</span>a<span class="sc">*</span>c))<span class="sc">/</span>(<span class="dv">2</span><span class="sc">*</span>a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section><section id="function" class="level2" data-number="1.9"><h2 data-number="1.9" class="anchored" data-anchor-id="function">
-<span class="header-section-number">1.9</span> Function</h2>
-<section id="key-points-7" class="level3" data-number="1.9.1"><h3 data-number="1.9.1" class="anchored" data-anchor-id="key-points-7">
-<span class="header-section-number">1.9.1</span> Key Points</h3>
+</section>
+</section>
+<section id="function" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="function"><span class="header-section-number">1.9</span> Function</h2>
+<section id="key-points-7" class="level3" data-number="1.9.1">
+<h3 data-number="1.9.1" class="anchored" data-anchor-id="key-points-7"><span class="header-section-number">1.9.1</span> Key Points</h3>
 <ul>
 <li><p>In general, to evaluate a function we need to use <strong>parentheses</strong>. If we type a function without parenthesis, R shows us the code for the function. Most functions also require an argument, that is, something to be written inside the parenthesis.</p></li>
 <li><p>To access <strong>help</strong> files, we may use the help function, <code>help(function_name)</code>, or write the question mark followed by the function name, ?function_name.</p></li>
-<li><p>The help file shows you the arguments the function is expecting, some of which are required and some are optional. If an argument is optional, a default value is assigned with the equal sign. The <code><a href="https://rdrr.io/r/base/args.html">args()</a></code> function also shows the arguments a function needs.</p></li>
+<li><p>The help file shows you the arguments the function is expecting, some of which are required and some are optional. If an argument is optional, a default value is assigned with the equal sign. The <code>args()</code> function also shows the arguments a function needs.</p></li>
 <li><p>To specify arguments, we use the equals sign. If no argument name is used, R assumes you’re entering arguments in the order shown in the help file.</p></li>
 <li><p>Creating and saving a script makes code much easier to execute.</p></li>
 <li><p>To make your code more readable, <strong>use intuitive variable names and include comments</strong> (using the <strong>“#”</strong> symbol) to remind yourself why you wrote a particular line of code.</p></li>
-</ul></section></section><section id="data-types" class="level2 page-columns page-full" data-number="1.10"><h2 data-number="1.10" class="anchored" data-anchor-id="data-types">
-<span class="header-section-number">1.10</span> Data Types</h2>
+</ul>
+</section>
+</section>
+<section id="data-types" class="level2 page-columns page-full" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="data-types"><span class="header-section-number">1.10</span> Data Types</h2>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -659,10 +643,10 @@ Note
 <p>The code <code>data("dataset_name")</code> and <code>data(dataset_name)</code> do the same thing. The code will work regardless of whether the quotes are present. It is a bit faster to leave out the quotes (as we do in the Code at the bottom of this page), so that is usually what we recommend, but it is your choice.</p>
 </div>
 </div>
-<section id="key-points-8" class="level3 page-columns page-full" data-number="1.10.1"><h3 data-number="1.10.1" class="anchored" data-anchor-id="key-points-8">
-<span class="header-section-number">1.10.1</span> Key Points</h3>
+<section id="key-points-8" class="level3 page-columns page-full" data-number="1.10.1">
+<h3 data-number="1.10.1" class="anchored" data-anchor-id="key-points-8"><span class="header-section-number">1.10.1</span> Key Points</h3>
 <ul>
-<li><p>The function <code><a href="https://rdrr.io/r/base/class.html">class()</a></code> helps us determine the type of an object.</p></li>
+<li><p>The function <code>class()</code> helps us determine the type of an object.</p></li>
 <li><p><strong>Data frames</strong> can be thought of as tables with rows representing observations and columns representing different variables.</p></li>
 <li><p>To access data from columns of a data frame, we use the dollar sign symbol, <code>$</code>, which is called the accessor.</p></li>
 <li><p>A <strong>vector</strong> is an object consisting of several entries and can be a <strong>numeric vector</strong>, a <strong>character vector</strong>, or a <strong>logical vector</strong>.</p></li>
@@ -683,8 +667,7 @@ Knowledge Extension
 <div class="cell-output-display">
 <div>
 <p>
-</p>
-<pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">flowchart LR
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">flowchart LR
   A{Data Type}---&gt; B[numeric]
   A{Data Type}---&gt;C[integer]
   A{Data Type} ---&gt;D[complex]
@@ -694,15 +677,16 @@ Knowledge Extension
 <div id="mermaid-tooltip-1" class="mermaidTooltip">
 
 </div>
-
+<p></p>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class=""><strong>Explanation</strong>:<strong>Numeric</strong>: all real numbers with or without decimal values. e.g.&nbsp;1, 2, 8, 1.1.<strong>Integer(整数)</strong>: specifies real values without decimal points. we use the suffix<code>L</code> to specify integer data.<strong>Complex</strong>: specify purely imaginary values in R. We use the suffix <code>i</code> to specify the imaginary part. e.g.&nbsp;3 + 2i.<strong>Character</strong>:specify character or string values in a variable. <code>''</code> for character variables; <code>""</code> for string variables.<strong>Logical</strong>: is known as boolean data type. It can only have two values: <code>TRUE</code> and <code>FALSE</code></span></div></div>
-</section><section id="code-2" class="level3" data-number="1.10.2"><h3 data-number="1.10.2" class="anchored" data-anchor-id="code-2">
-<span class="header-section-number">1.10.2</span> Code</h3>
+</section>
+<section id="code-2" class="level3" data-number="1.10.2">
+<h3 data-number="1.10.2" class="anchored" data-anchor-id="code-2"><span class="header-section-number">1.10.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># loading the dslabs package and the murders dataset</span></span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="fu">library</span>(dslabs)</span>
@@ -736,8 +720,11 @@ Knowledge Extension
 <span id="cb5-30"><a href="#cb5-30"></a><span class="co"># obtaining the levels of a factor</span></span>
 <span id="cb5-31"><a href="#cb5-31"></a><span class="fu">levels</span>(murders<span class="sc">$</span>region)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section></section><section id="vectors-sorting" class="level1" data-number="2"><h1 data-number="2">
-<span class="header-section-number">2</span> Vectors, Sorting</h1>
+</section>
+</section>
+</section>
+<section id="vectors-sorting" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Vectors, Sorting</h1>
 <p>In this section, I will introduce you to vectors and functions such as sorting.</p>
 <p>In Vectors, you will:</p>
 <ul>
@@ -759,16 +746,18 @@ Knowledge Extension
 <li><p>Perform arithmetic between a vector and a single number.</p></li>
 <li><p>Perform arithmetic between two vectors of the same length.</p></li>
 </ul>
-<section id="vectors" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="vectors">
-<span class="header-section-number">2.1</span> Vectors</h2>
-<section id="key-points-9" class="level3" data-number="2.1.1"><h3 data-number="2.1.1" class="anchored" data-anchor-id="key-points-9">
-<span class="header-section-number">2.1.1</span> Key points</h3>
+<section id="vectors" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="vectors"><span class="header-section-number">2.1</span> Vectors</h2>
+<section id="key-points-9" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="key-points-9"><span class="header-section-number">2.1.1</span> Key points</h3>
 <ul>
 <li><p>The function c(), which stands for concatenate, is useful for creating vectors.</p></li>
 <li><p>Another useful function for creating vectors is the seq() function, which generates sequences.</p></li>
 <li><p>Subsetting lets us access specific parts of a vector by using square brackets to access elements of a vector.</p></li>
-</ul></section><section id="code-3" class="level3" data-number="2.1.2"><h3 data-number="2.1.2" class="anchored" data-anchor-id="code-3">
-<span class="header-section-number">2.1.2</span> Code</h3>
+</ul>
+</section>
+<section id="code-3" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="code-3"><span class="header-section-number">2.1.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># We may create vectors of class numeric or character with the concatenate function</span></span>
 <span id="cb6-2"><a href="#cb6-2"></a>codes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">380</span>, <span class="dv">124</span>, <span class="dv">818</span>)</span>
@@ -793,10 +782,12 @@ Knowledge Extension
 <span id="cb6-21"><a href="#cb6-21"></a>codes[<span class="st">"canada"</span>]</span>
 <span id="cb6-22"><a href="#cb6-22"></a>codes[<span class="fu">c</span>(<span class="st">"egypt"</span>,<span class="st">"italy"</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section><section id="vector-coercion" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="vector-coercion">
-<span class="header-section-number">2.2</span> Vector Coercion</h2>
-<section id="key-point" class="level3" data-number="2.2.1"><h3 data-number="2.2.1" class="anchored" data-anchor-id="key-point">
-<span class="header-section-number">2.2.1</span> Key Point</h3>
+</section>
+</section>
+<section id="vector-coercion" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="vector-coercion"><span class="header-section-number">2.2</span> Vector Coercion</h2>
+<section id="key-point" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="key-point"><span class="header-section-number">2.2.1</span> Key Point</h3>
 <ul>
 <li>In general, coercion is an attempt by R to be flexible with data types by guessing what was meant when an entry does not match the expected. For example, when defining x as</li>
 </ul>
@@ -805,16 +796,21 @@ Knowledge Extension
 </div>
 <p>R coerced the data into characters. It guessed that because you put a character string in the vector, you meant the 1 and 3 to actually be character strings, “1” and “3”.</p>
 <ul>
-<li><p>The function <code><a href="https://rdrr.io/r/base/character.html">as.character()</a></code> turns numbers into characters.</p></li>
-<li><p>The function <code><a href="https://rdrr.io/r/base/numeric.html">as.numeric()</a></code> turns characters into numbers.</p></li>
+<li><p>The function <code>as.character()</code> turns numbers into characters.</p></li>
+<li><p>The function <code>as.numeric()</code> turns characters into numbers.</p></li>
 <li><p>In R, missing data is assigned the value <code>NA</code>.</p></li>
-</ul></section><section id="question" class="level3" data-number="2.2.2"><h3 data-number="2.2.2" class="anchored" data-anchor-id="question">
-<span class="header-section-number">2.2.2</span> Question</h3>
+</ul>
+</section>
+<section id="question" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="question"><span class="header-section-number">2.2.2</span> Question</h3>
 <ol type="1">
 <li>class(3L) is integer ?</li>
 <li>3L-3 equals 0 ?</li>
-</ol></section></section><section id="sorting" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="sorting">
-<span class="header-section-number">2.3</span> Sorting</h2>
+</ol>
+</section>
+</section>
+<section id="sorting" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sorting"><span class="header-section-number">2.3</span> Sorting</h2>
 <table class="table">
 <colgroup>
 <col style="width: 20%">
@@ -861,15 +857,17 @@ Knowledge Extension
 </tr>
 </tbody>
 </table>
-<section id="key-points-10" class="level3" data-number="2.3.1"><h3 data-number="2.3.1" class="anchored" data-anchor-id="key-points-10">
-<span class="header-section-number">2.3.1</span> Key Points</h3>
+<section id="key-points-10" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="key-points-10"><span class="header-section-number">2.3.1</span> Key Points</h3>
 <ul>
-<li><p>The function <code><a href="https://rdrr.io/r/base/sort.html">sort()</a></code> sorts a vector in increasing order.</p></li>
-<li><p>The function <code><a href="https://rdrr.io/r/base/order.html">order()</a></code> produces the indices needed to obtain the sorted vector, e.g.&nbsp;a result of 2 3 1 5 4 means the sorted vector will be produced by listing the 2nd, 3rd, 1st, 5th, and then 4th item of the original vector.</p></li>
-<li><p>The function <code><a href="https://rdrr.io/r/base/rank.html">rank()</a></code> gives us the ranks of the items in the original vector.</p></li>
-<li><p>The function <code><a href="https://rdrr.io/r/base/Extremes.html">max()</a></code> returns the largest value, while <code><a href="https://rdrr.io/r/base/which.min.html">which.max()</a></code> returns the index of the largest value. The functions <code><a href="https://rdrr.io/r/base/Extremes.html">min()</a></code> and <code><a href="https://rdrr.io/r/base/which.min.html">which.min()</a></code> work similarly for minimum values.</p></li>
-</ul></section><section id="code-4" class="level3" data-number="2.3.2"><h3 data-number="2.3.2" class="anchored" data-anchor-id="code-4">
-<span class="header-section-number">2.3.2</span> Code</h3>
+<li><p>The function <code>sort()</code> sorts a vector in increasing order.</p></li>
+<li><p>The function <code>order()</code> produces the indices needed to obtain the sorted vector, e.g.&nbsp;a result of 2 3 1 5 4 means the sorted vector will be produced by listing the 2nd, 3rd, 1st, 5th, and then 4th item of the original vector.</p></li>
+<li><p>The function <code>rank()</code> gives us the ranks of the items in the original vector.</p></li>
+<li><p>The function <code>max()</code> returns the largest value, while <code>which.max()</code> returns the index of the largest value. The functions <code>min()</code> and <code>which.min()</code> work similarly for minimum values.</p></li>
+</ul>
+</section>
+<section id="code-4" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="code-4"><span class="header-section-number">2.3.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">library</span>(dslabs)</span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="fu">data</span>(murders)</span>
@@ -897,14 +895,18 @@ Knowledge Extension
 <span id="cb8-24"><a href="#cb8-24"></a>x</span>
 <span id="cb8-25"><a href="#cb8-25"></a><span class="fu">rank</span>(x)    <span class="co"># returns ranks (smallest to largest)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section><section id="vector-arithmetic" class="level2" data-number="2.4"><h2 data-number="2.4" class="anchored" data-anchor-id="vector-arithmetic">
-<span class="header-section-number">2.4</span> Vector Arithmetic</h2>
-<section id="key-point-1" class="level3" data-number="2.4.1"><h3 data-number="2.4.1" class="anchored" data-anchor-id="key-point-1">
-<span class="header-section-number">2.4.1</span> Key Point</h3>
+</section>
+</section>
+<section id="vector-arithmetic" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="vector-arithmetic"><span class="header-section-number">2.4</span> Vector Arithmetic</h2>
+<section id="key-point-1" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="key-point-1"><span class="header-section-number">2.4.1</span> Key Point</h3>
 <ul>
 <li>In R, arithmetic operation on vectors occur element-wise</li>
-</ul></section><section id="code-5" class="level3" data-number="2.4.2"><h3 data-number="2.4.2" class="anchored" data-anchor-id="code-5">
-<span class="header-section-number">2.4.2</span> Code</h3>
+</ul>
+</section>
+<section id="code-5" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="code-5"><span class="header-section-number">2.4.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># The name of the state with the maximum population is found by doing the following</span></span>
 <span id="cb9-2"><a href="#cb9-2"></a>murders<span class="sc">$</span>state[<span class="fu">which.max</span>(murders<span class="sc">$</span>population)]</span>
@@ -915,8 +917,11 @@ Knowledge Extension
 <span id="cb9-7"><a href="#cb9-7"></a><span class="co"># ordering the states by murder rate, in decreasing order</span></span>
 <span id="cb9-8"><a href="#cb9-8"></a>murders<span class="sc">$</span>state[<span class="fu">order</span>(murder_rate, <span class="at">decreasing=</span><span class="cn">TRUE</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section></section><section id="indexing-data-wrangling-plots" class="level1" data-number="3"><h1 data-number="3">
-<span class="header-section-number">3</span> Indexing, Data Wrangling, Plots</h1>
+</section>
+</section>
+</section>
+<section id="indexing-data-wrangling-plots" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Indexing, Data Wrangling, Plots</h1>
 <p>In this section, I will introduce the R commands and techniques that help you wrangle, analyze, and visualize data.</p>
 <p>In Indexing, you will: - Subset a vector based on properties of another vector.</p>
 <ul>
@@ -945,16 +950,18 @@ Knowledge Extension
 <ul>
 <li>Learn how to sort data frames using data.table.</li>
 </ul>
-<section id="indexing" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="indexing">
-<span class="header-section-number">3.1</span> Indexing</h2>
-<section id="key-point-2" class="level3" data-number="3.1.1"><h3 data-number="3.1.1" class="anchored" data-anchor-id="key-point-2">
-<span class="header-section-number">3.1.1</span> Key Point</h3>
+<section id="indexing" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="indexing"><span class="header-section-number">3.1</span> Indexing</h2>
+<section id="key-point-2" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="key-point-2"><span class="header-section-number">3.1.1</span> Key Point</h3>
 <ul>
 <li><p>We can use logicals to index vectors.</p></li>
 <li><p>Using the function sum()on a logical vector returns the number of entries that are true.</p></li>
 <li><p>The logical operator “&amp;” makes two logicals true only when they are both true.</p></li>
-</ul></section><section id="code-6" class="level3" data-number="3.1.2"><h3 data-number="3.1.2" class="anchored" data-anchor-id="code-6">
-<span class="header-section-number">3.1.2</span> Code</h3>
+</ul>
+</section>
+<section id="code-6" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="code-6"><span class="header-section-number">3.1.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># defining murder rate as before</span></span>
 <span id="cb10-2"><a href="#cb10-2"></a>murder_rate <span class="ot">&lt;-</span> murders<span class="sc">$</span>total <span class="sc">/</span> murders<span class="sc">$</span>population <span class="sc">*</span> <span class="dv">100000</span></span>
@@ -972,16 +979,20 @@ Knowledge Extension
 <span id="cb10-14"><a href="#cb10-14"></a>index <span class="ot">&lt;-</span> safe <span class="sc">&amp;</span> west</span>
 <span id="cb10-15"><a href="#cb10-15"></a>murders<span class="sc">$</span>state[index]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section><section id="indexing-functions" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="indexing-functions">
-<span class="header-section-number">3.2</span> Indexing Functions</h2>
-<section id="key-points-11" class="level3" data-number="3.2.1"><h3 data-number="3.2.1" class="anchored" data-anchor-id="key-points-11">
-<span class="header-section-number">3.2.1</span> Key Points</h3>
+</section>
+</section>
+<section id="indexing-functions" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="indexing-functions"><span class="header-section-number">3.2</span> Indexing Functions</h2>
+<section id="key-points-11" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="key-points-11"><span class="header-section-number">3.2.1</span> Key Points</h3>
 <ul>
-<li><p>The function <code><a href="https://rdrr.io/r/base/which.html">which()</a></code> gives us the entries of a logical vector that are true.</p></li>
-<li><p>The function <code><a href="https://rdrr.io/r/base/match.html">match()</a></code> looks for entries in a vector and returns the index needed to access them.</p></li>
+<li><p>The function <code>which()</code> gives us the entries of a logical vector that are true.</p></li>
+<li><p>The function <code>match()</code> looks for entries in a vector and returns the index needed to access them.</p></li>
 <li><p>We use the function <code>%in%</code> if we want to know whether or not each element of a first vector is in a second vector.</p></li>
-</ul></section><section id="code-7" class="level3" data-number="3.2.2"><h3 data-number="3.2.2" class="anchored" data-anchor-id="code-7">
-<span class="header-section-number">3.2.2</span> Code</h3>
+</ul>
+</section>
+<section id="code-7" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="code-7"><span class="header-section-number">3.2.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span>
 <span id="cb11-2"><a href="#cb11-2"></a><span class="fu">which</span>(x)    <span class="co"># returns indices that are TRUE</span></span>
@@ -1004,27 +1015,35 @@ Knowledge Extension
 <span id="cb11-19"><a href="#cb11-19"></a><span class="co"># to see if Boston, Dakota, and Washington are states</span></span>
 <span id="cb11-20"><a href="#cb11-20"></a><span class="fu">c</span>(<span class="st">"Boston"</span>, <span class="st">"Dakota"</span>, <span class="st">"Washington"</span>) <span class="sc">%in%</span> murders<span class="sc">$</span>state</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section><section id="basic-data-wrangling" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="basic-data-wrangling">
-<span class="header-section-number">3.3</span> Basic Data Wrangling</h2>
-<section id="key-points-12" class="level3" data-number="3.3.1"><h3 data-number="3.3.1" class="anchored" data-anchor-id="key-points-12">
-<span class="header-section-number">3.3.1</span> Key Points</h3>
+</section>
+</section>
+<section id="basic-data-wrangling" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="basic-data-wrangling"><span class="header-section-number">3.3</span> Basic Data Wrangling</h2>
+<section id="key-points-12" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="key-points-12"><span class="header-section-number">3.3.1</span> Key Points</h3>
 <ul>
 <li><p>To change a data table by <strong>adding a new column</strong>, or changing an existing one, we use the <code>mutate()</code> function.</p></li>
-<li><p>To <strong>filter the data</strong> by subsetting rows, we use the function <code><a href="https://rdrr.io/r/stats/filter.html">filter()</a></code>.</p></li>
+<li><p>To <strong>filter the data</strong> by subsetting rows, we use the function <code>filter()</code>.</p></li>
 <li><p>To subset the data by <strong>selecting specific columns</strong>, we use the <code>select()</code> function.</p></li>
 <li><p>We can perform a series of operations by sending the results of one function to another function using the <strong>pipe operator</strong>, <code>%&gt;%</code>.</p></li>
-</ul></section></section><section id="creating-data-frames" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="creating-data-frames">
-<span class="header-section-number">3.4</span> Creating Data Frames</h2>
-<section id="note-2" class="level3" data-number="3.4.1"><h3 data-number="3.4.1" class="anchored" data-anchor-id="note-2">
-<span class="header-section-number">3.4.1</span> Note</h3>
+</ul>
+</section>
+</section>
+<section id="creating-data-frames" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="creating-data-frames"><span class="header-section-number">3.4</span> Creating Data Frames</h2>
+<section id="note-2" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="note-2"><span class="header-section-number">3.4.1</span> Note</h3>
 <p>The default settings in R have changed as of version 4.0, and it is no longer necessary to include the code <code>stringsAsFactors = FALSE</code> in order to keep strings as characters. Putting the entries in quotes, as in the example, is adequate to keep strings as characters. The <code>stringsAsFactors = FALSE</code> code is useful in certain other situations, but you do not need to include it when you create data frames in this manner.</p>
-</section><section id="key-points-13" class="level3" data-number="3.4.2"><h3 data-number="3.4.2" class="anchored" data-anchor-id="key-points-13">
-<span class="header-section-number">3.4.2</span> Key Points</h3>
+</section>
+<section id="key-points-13" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="key-points-13"><span class="header-section-number">3.4.2</span> Key Points</h3>
 <ul>
-<li><p>We can use the <code><a href="https://rdrr.io/r/base/data.frame.html">data.frame()</a></code> function to create data frames.</p></li>
-<li><p>Formerly, the <code><a href="https://rdrr.io/r/base/data.frame.html">data.frame()</a></code> function turned characters into factors by default. To avoid this, we could utilize the <code>stringsAsFactors</code> argument and set it equal to false. As of R 4.0, it is no longer necessary to include the <code>stringsAsFactors</code> argument, because R no longer turns characters into factors by default.</p></li>
-</ul></section><section id="code-8" class="level3" data-number="3.4.3"><h3 data-number="3.4.3" class="anchored" data-anchor-id="code-8">
-<span class="header-section-number">3.4.3</span> Code</h3>
+<li><p>We can use the <code>data.frame()</code> function to create data frames.</p></li>
+<li><p>Formerly, the <code>data.frame()</code> function turned characters into factors by default. To avoid this, we could utilize the <code>stringsAsFactors</code> argument and set it equal to false. As of R 4.0, it is no longer necessary to include the <code>stringsAsFactors</code> argument, because R no longer turns characters into factors by default.</p></li>
+</ul>
+</section>
+<section id="code-8" class="level3" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="code-8"><span class="header-section-number">3.4.3</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># creating a data frame with stringAsFactors = FALSE</span></span>
 <span id="cb12-2"><a href="#cb12-2"></a>grades <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">names =</span> <span class="fu">c</span>(<span class="st">"John"</span>, <span class="st">"Juan"</span>, <span class="st">"Jean"</span>, <span class="st">"Yao"</span>), </span>
@@ -1032,16 +1051,20 @@ Knowledge Extension
 <span id="cb12-4"><a href="#cb12-4"></a>                     <span class="at">exam_2 =</span> <span class="fu">c</span>(<span class="dv">90</span>, <span class="dv">85</span>, <span class="dv">85</span>, <span class="dv">90</span>),</span>
 <span id="cb12-5"><a href="#cb12-5"></a>                     <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section><section id="basic-plots" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="basic-plots">
-<span class="header-section-number">3.5</span> Basic Plots</h2>
-<section id="key-points-14" class="level3" data-number="3.5.1"><h3 data-number="3.5.1" class="anchored" data-anchor-id="key-points-14">
-<span class="header-section-number">3.5.1</span> Key Points</h3>
+</section>
+</section>
+<section id="basic-plots" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="basic-plots"><span class="header-section-number">3.5</span> Basic Plots</h2>
+<section id="key-points-14" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="key-points-14"><span class="header-section-number">3.5.1</span> Key Points</h3>
 <ul>
-<li><p>We can create a simple scatterplot using the function <code><a href="https://rdrr.io/r/graphics/plot.default.html">plot()</a></code>.</p></li>
-<li><p>Histograms are graphical summaries that give you a general overview of the types of values you have. In R, they can be produced using the <code><a href="https://rdrr.io/r/graphics/hist.html">hist()</a></code> function.</p></li>
-<li><p>Boxplots provide a more compact summary of a distribution than a histogram and are more useful for comparing distributions. They can be produced using the <code><a href="https://rdrr.io/r/graphics/boxplot.html">boxplot()</a></code> function.</p></li>
-</ul></section><section id="code-9" class="level3" data-number="3.5.2"><h3 data-number="3.5.2" class="anchored" data-anchor-id="code-9">
-<span class="header-section-number">3.5.2</span> Code</h3>
+<li><p>We can create a simple scatterplot using the function <code>plot()</code>.</p></li>
+<li><p>Histograms are graphical summaries that give you a general overview of the types of values you have. In R, they can be produced using the <code>hist()</code> function.</p></li>
+<li><p>Boxplots provide a more compact summary of a distribution than a histogram and are more useful for comparing distributions. They can be produced using the <code>boxplot()</code> function.</p></li>
+</ul>
+</section>
+<section id="code-9" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="code-9"><span class="header-section-number">3.5.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb13-2"><a href="#cb13-2"></a><span class="fu">library</span>(dslabs)</span>
@@ -1069,16 +1092,20 @@ Knowledge Extension
 <p><img src="R-basic_files/figure-html/unnamed-chunk-15-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section></section><section id="the-summarize-function" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="the-summarize-function">
-<span class="header-section-number">3.6</span> The summarize function</h2>
-<section id="key-points-15" class="level3" data-number="3.6.1"><h3 data-number="3.6.1" class="anchored" data-anchor-id="key-points-15">
-<span class="header-section-number">3.6.1</span> Key Points</h3>
+</section>
+</section>
+<section id="the-summarize-function" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="the-summarize-function"><span class="header-section-number">3.6</span> The summarize function</h2>
+<section id="key-points-15" class="level3" data-number="3.6.1">
+<h3 data-number="3.6.1" class="anchored" data-anchor-id="key-points-15"><span class="header-section-number">3.6.1</span> Key Points</h3>
 <ul>
 <li><p>Summarizing data is an important part of data analysis.</p></li>
 <li><p>Some summary ststistics are the <strong>mean</strong>, <strong>median</strong>, and <strong>standard deviation</strong>.</p></li>
 <li><p>The <code>summarize()</code> function from <strong>dplyr</strong> provides an easy way to compute summary statics.</p></li>
-</ul></section><section id="code-10" class="level3" data-number="3.6.2"><h3 data-number="3.6.2" class="anchored" data-anchor-id="code-10">
-<span class="header-section-number">3.6.2</span> Code</h3>
+</ul>
+</section>
+<section id="code-10" class="level3" data-number="3.6.2">
+<h3 data-number="3.6.2" class="anchored" data-anchor-id="code-10"><span class="header-section-number">3.6.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb17-2"><a href="#cb17-2"></a><span class="fu">library</span>(dplyr)</span>
@@ -1121,14 +1148,18 @@ Knowledge Extension
 1 3.034555</code></pre>
 </div>
 </div>
-</section></section><section id="summarizing-with-more-than-one-value" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="summarizing-with-more-than-one-value">
-<span class="header-section-number">3.7</span> Summarizing with more than one value</h2>
-<section id="key-points-16" class="level3" data-number="3.7.1"><h3 data-number="3.7.1" class="anchored" data-anchor-id="key-points-16">
-<span class="header-section-number">3.7.1</span> Key Points</h3>
+</section>
+</section>
+<section id="summarizing-with-more-than-one-value" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="summarizing-with-more-than-one-value"><span class="header-section-number">3.7</span> Summarizing with more than one value</h2>
+<section id="key-points-16" class="level3" data-number="3.7.1">
+<h3 data-number="3.7.1" class="anchored" data-anchor-id="key-points-16"><span class="header-section-number">3.7.1</span> Key Points</h3>
 <ul>
-<li>The <code><a href="https://rdrr.io/r/stats/quantile.html">quantile()</a></code> function can be used to return the min, median, and max in a single line of code.</li>
-</ul></section><section id="code-11" class="level3" data-number="3.7.2"><h3 data-number="3.7.2" class="anchored" data-anchor-id="code-11">
-<span class="header-section-number">3.7.2</span> Code</h3>
+<li>The <code>quantile()</code> function can be used to return the min, median, and max in a single line of code.</li>
+</ul>
+</section>
+<section id="code-11" class="level3" data-number="3.7.2">
+<h3 data-number="3.7.2" class="anchored" data-anchor-id="code-11"><span class="header-section-number">3.7.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb28-2"><a href="#cb28-2"></a><span class="fu">library</span>(dplyr)</span>
@@ -1161,14 +1192,18 @@ Knowledge Extension
 1 0.514592 1.292453 3.629527</code></pre>
 </div>
 </div>
-</section></section><section id="pull-to-access-to-columns" class="level2" data-number="3.8"><h2 data-number="3.8" class="anchored" data-anchor-id="pull-to-access-to-columns">
-<span class="header-section-number">3.8</span> Pull to access to columns</h2>
-<section id="key-points-17" class="level3" data-number="3.8.1"><h3 data-number="3.8.1" class="anchored" data-anchor-id="key-points-17">
-<span class="header-section-number">3.8.1</span> Key Points</h3>
+</section>
+</section>
+<section id="pull-to-access-to-columns" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="pull-to-access-to-columns"><span class="header-section-number">3.8</span> Pull to access to columns</h2>
+<section id="key-points-17" class="level3" data-number="3.8.1">
+<h3 data-number="3.8.1" class="anchored" data-anchor-id="key-points-17"><span class="header-section-number">3.8.1</span> Key Points</h3>
 <ul>
 <li>The <code>pull()</code> function can be used to access values stored in data when using pipes: when a data object is piped that object and its columns can be accessed using the <code>pull()</code> function.</li>
-</ul></section><section id="code-12" class="level3" data-number="3.8.2"><h3 data-number="3.8.2" class="anchored" data-anchor-id="code-12">
-<span class="header-section-number">3.8.2</span> Code</h3>
+</ul>
+</section>
+<section id="code-12" class="level3" data-number="3.8.2">
+<h3 data-number="3.8.2" class="anchored" data-anchor-id="code-12"><span class="header-section-number">3.8.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb33-2"><a href="#cb33-2"></a><span class="fu">library</span>(dplyr)</span>
@@ -1209,10 +1244,12 @@ Knowledge Extension
 <pre><code>[1] "numeric"</code></pre>
 </div>
 </div>
-</section></section><section id="the-dot-placeholder" class="level2" data-number="3.9"><h2 data-number="3.9" class="anchored" data-anchor-id="the-dot-placeholder">
-<span class="header-section-number">3.9</span> The dot placeholder</h2>
-<section id="key-points-18" class="level3" data-number="3.9.1"><h3 data-number="3.9.1" class="anchored" data-anchor-id="key-points-18">
-<span class="header-section-number">3.9.1</span> Key Points</h3>
+</section>
+</section>
+<section id="the-dot-placeholder" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="the-dot-placeholder"><span class="header-section-number">3.9</span> The dot placeholder</h2>
+<section id="key-points-18" class="level3" data-number="3.9.1">
+<h3 data-number="3.9.1" class="anchored" data-anchor-id="key-points-18"><span class="header-section-number">3.9.1</span> Key Points</h3>
 <ul>
 <li>The <code>dot (.)</code> can be thought of as a placeholder for the data being passed through the pipe.</li>
 </ul>
@@ -1245,10 +1282,12 @@ Knowledge Extension
 <pre><code>[1] "numeric"</code></pre>
 </div>
 </div>
-</section></section><section id="group-then-summarize" class="level2" data-number="3.10"><h2 data-number="3.10" class="anchored" data-anchor-id="group-then-summarize">
-<span class="header-section-number">3.10</span> Group then summarize</h2>
-<section id="key-points-19" class="level3" data-number="3.10.1"><h3 data-number="3.10.1" class="anchored" data-anchor-id="key-points-19">
-<span class="header-section-number">3.10.1</span> Key Points</h3>
+</section>
+</section>
+<section id="group-then-summarize" class="level2" data-number="3.10">
+<h2 data-number="3.10" class="anchored" data-anchor-id="group-then-summarize"><span class="header-section-number">3.10</span> Group then summarize</h2>
+<section id="key-points-19" class="level3" data-number="3.10.1">
+<h3 data-number="3.10.1" class="anchored" data-anchor-id="key-points-19"><span class="header-section-number">3.10.1</span> Key Points</h3>
 <ul>
 <li><p>Splitting data into groups and then computing summaries for each group is a common operation in data exploration.</p></li>
 <li><p>We can use the <strong>dplyr</strong> <code>group_by()</code> function to create a special grouped data frame to facilitate such summaries.</p></li>
@@ -1294,17 +1333,21 @@ Knowledge Extension
 4 West            1.29</code></pre>
 </div>
 </div>
-</section></section><section id="sorting-data-tables" class="level2" data-number="3.11"><h2 data-number="3.11" class="anchored" data-anchor-id="sorting-data-tables">
-<span class="header-section-number">3.11</span> Sorting data tables</h2>
-<section id="key-points-20" class="level3" data-number="3.11.1"><h3 data-number="3.11.1" class="anchored" data-anchor-id="key-points-20">
-<span class="header-section-number">3.11.1</span> Key Points</h3>
+</section>
+</section>
+<section id="sorting-data-tables" class="level2" data-number="3.11">
+<h2 data-number="3.11" class="anchored" data-anchor-id="sorting-data-tables"><span class="header-section-number">3.11</span> Sorting data tables</h2>
+<section id="key-points-20" class="level3" data-number="3.11.1">
+<h3 data-number="3.11.1" class="anchored" data-anchor-id="key-points-20"><span class="header-section-number">3.11.1</span> Key Points</h3>
 <ul>
 <li><p>To order an entire table, we can use the <strong>dplyr</strong> function <code>arrange()</code>.</p></li>
 <li><p>We can also use nested sorting to order by additional columns.</p></li>
-<li><p>The function <code><a href="https://rdrr.io/r/utils/head.html">head()</a></code> returns on the first few lines of a table.</p></li>
+<li><p>The function <code>head()</code> returns on the first few lines of a table.</p></li>
 <li><p>The function <code>top_n()</code> returns the top n rows of a table.</p></li>
-</ul></section><section id="code-13" class="level3" data-number="3.11.2"><h3 data-number="3.11.2" class="anchored" data-anchor-id="code-13">
-<span class="header-section-number">3.11.2</span> Code</h3>
+</ul>
+</section>
+<section id="code-13" class="level3" data-number="3.11.2">
+<h3 data-number="3.11.2" class="anchored" data-anchor-id="code-13"><span class="header-section-number">3.11.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb56-2"><a href="#cb56-2"></a><span class="fu">library</span>(dplyr)</span>
@@ -1391,10 +1434,12 @@ Knowledge Extension
 10              Arizona  AZ          West    6392017   232  3.629527</code></pre>
 </div>
 </div>
-</section></section><section id="introduction-to-data.table" class="level2" data-number="3.12"><h2 data-number="3.12" class="anchored" data-anchor-id="introduction-to-data.table">
-<span class="header-section-number">3.12</span> Introduction to data.table</h2>
-<section id="key-points-21" class="level3" data-number="3.12.1"><h3 data-number="3.12.1" class="anchored" data-anchor-id="key-points-21">
-<span class="header-section-number">3.12.1</span> Key Points</h3>
+</section>
+</section>
+<section id="introduction-to-data.table" class="level2" data-number="3.12">
+<h2 data-number="3.12" class="anchored" data-anchor-id="introduction-to-data.table"><span class="header-section-number">3.12</span> Introduction to data.table</h2>
+<section id="key-points-21" class="level3" data-number="3.12.1">
+<h3 data-number="3.12.1" class="anchored" data-anchor-id="key-points-21"><span class="header-section-number">3.12.1</span> Key Points</h3>
 <ul>
 <li><p>In this course, we often use tidyverse packages to illustrate because these packages tend to have code that is very readable for beginners.</p></li>
 <li><p>There are other approaches to wrangling and analyzing data in R that are faster and better at handling large objects, such as the data.table package.</p></li>
@@ -1402,8 +1447,10 @@ Knowledge Extension
 <li><p>To add a column in data.table, you can use the := function.</p></li>
 <li><p>Because the data.table package is designed to avoid wasting memory, when you make a copy of a table, it does not create a new object. The := function changes by reference. If you want to make an actual copy, you need to use the copy() function.</p></li>
 <li><p>Side note: the R language has a new, built-in pipe operator as of version 4.1: |&gt;. This works similarly to the pipe %&gt;% you are already familiar with. You can <a href="https://www.r-bloggers.com/2021/05/the-new-r-pipe/">read more about the |&gt; pipe here External link</a>.</p></li>
-</ul></section><section id="code-14" class="level3" data-number="3.12.2"><h3 data-number="3.12.2" class="anchored" data-anchor-id="code-14">
-<span class="header-section-number">3.12.2</span> Code</h3>
+</ul>
+</section>
+<section id="code-14" class="level3" data-number="3.12.2">
+<h3 data-number="3.12.2" class="anchored" data-anchor-id="code-14"><span class="header-section-number">3.12.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1"></a><span class="co"># install the data.table package before you use it!</span></span>
 <span id="cb70-2"><a href="#cb70-2"></a><span class="fu">install.packages</span>(<span class="st">"data.table"</span>)</span>
@@ -1451,13 +1498,16 @@ Knowledge Extension
 <span id="cb70-44"><a href="#cb70-44"></a>x[,a <span class="sc">:</span><span class="er">=</span> <span class="dv">2</span>]</span>
 <span id="cb70-45"><a href="#cb70-45"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section><section id="subsetting-with-data.table" class="level2" data-number="3.13"><h2 data-number="3.13" class="anchored" data-anchor-id="subsetting-with-data.table">
-<span class="header-section-number">3.13</span> Subsetting with data.table</h2>
-<section id="key-points-22" class="level3" data-number="3.13.1"><h3 data-number="3.13.1" class="anchored" data-anchor-id="key-points-22">
-<span class="header-section-number">3.13.1</span> Key Points</h3>
+</section>
+</section>
+<section id="subsetting-with-data.table" class="level2" data-number="3.13">
+<h2 data-number="3.13" class="anchored" data-anchor-id="subsetting-with-data.table"><span class="header-section-number">3.13</span> Subsetting with data.table</h2>
+<section id="key-points-22" class="level3" data-number="3.13.1">
+<h3 data-number="3.13.1" class="anchored" data-anchor-id="key-points-22"><span class="header-section-number">3.13.1</span> Key Points</h3>
 <p><a href="http://rafalab.dfci.harvard.edu/dsbook/data-table.html#subsetting-1">Subsetting in <strong>data.table</strong></a> uses notation similar to that used with matrices.</p>
-</section><section id="code-15" class="level3" data-number="3.13.2"><h3 data-number="3.13.2" class="anchored" data-anchor-id="code-15">
-<span class="header-section-number">3.13.2</span> Code</h3>
+</section>
+<section id="code-15" class="level3" data-number="3.13.2">
+<h3 data-number="3.13.2" class="anchored" data-anchor-id="code-15"><span class="header-section-number">3.13.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1"></a><span class="co"># load packages and prepare the data</span></span>
 <span id="cb71-2"><a href="#cb71-2"></a><span class="fu">library</span>(tidyverse)</span>
@@ -1481,15 +1531,19 @@ Knowledge Extension
 <span id="cb71-20"><a href="#cb71-20"></a><span class="co"># combining filter and select in dplyr</span></span>
 <span id="cb71-21"><a href="#cb71-21"></a>murders <span class="sc">%&gt;%</span> <span class="fu">filter</span>(rate <span class="sc">&lt;=</span> <span class="fl">0.7</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(state, rate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section><section id="summarizing-with-data.table" class="level2" data-number="3.14"><h2 data-number="3.14" class="anchored" data-anchor-id="summarizing-with-data.table">
-<span class="header-section-number">3.14</span> Summarizing with data.table</h2>
-<section id="key-points-23" class="level3" data-number="3.14.1"><h3 data-number="3.14.1" class="anchored" data-anchor-id="key-points-23">
-<span class="header-section-number">3.14.1</span> Key Points</h3>
+</section>
+</section>
+<section id="summarizing-with-data.table" class="level2" data-number="3.14">
+<h2 data-number="3.14" class="anchored" data-anchor-id="summarizing-with-data.table"><span class="header-section-number">3.14</span> Summarizing with data.table</h2>
+<section id="key-points-23" class="level3" data-number="3.14.1">
+<h3 data-number="3.14.1" class="anchored" data-anchor-id="key-points-23"><span class="header-section-number">3.14.1</span> Key Points</h3>
 <ul>
 <li><p>In data.table we can call functions inside <code>.()</code>and they will be applied to rows.</p></li>
 <li><p>The <code>group_by</code> followed by summarize in <strong>dplyr</strong> is performed in one line in data.table using the by argument.</p></li>
-</ul></section><section id="code-16" class="level3" data-number="3.14.2"><h3 data-number="3.14.2" class="anchored" data-anchor-id="code-16">
-<span class="header-section-number">3.14.2</span> Code</h3>
+</ul>
+</section>
+<section id="code-16" class="level3" data-number="3.14.2">
+<h3 data-number="3.14.2" class="anchored" data-anchor-id="code-16"><span class="header-section-number">3.14.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1"></a><span class="co"># load packages and prepare the data - heights dataset</span></span>
 <span id="cb72-2"><a href="#cb72-2"></a><span class="fu">library</span>(tidyverse)</span>
@@ -1525,17 +1579,20 @@ Knowledge Extension
 <span id="cb72-32"><a href="#cb72-32"></a><span class="co"># grouping then summarizing in data.table</span></span>
 <span id="cb72-33"><a href="#cb72-33"></a>heights[, .(<span class="at">average =</span> <span class="fu">mean</span>(height), <span class="at">standard_deviation =</span> <span class="fu">sd</span>(height)), by <span class="ot">=</span> sex]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section><section id="sorting-data-frames" class="level2" data-number="3.15"><h2 data-number="3.15" class="anchored" data-anchor-id="sorting-data-frames">
-<span class="header-section-number">3.15</span> <a href="http://rafalab.dfci.harvard.edu/dsbook/tidyverse.html#sorting-data-frames">Sorting data frames</a>
-</h2>
-<section id="key-points-24" class="level3" data-number="3.15.1"><h3 data-number="3.15.1" class="anchored" data-anchor-id="key-points-24">
-<span class="header-section-number">3.15.1</span> Key Points</h3>
+</section>
+</section>
+<section id="sorting-data-frames" class="level2" data-number="3.15">
+<h2 data-number="3.15" class="anchored" data-anchor-id="sorting-data-frames"><span class="header-section-number">3.15</span> <a href="http://rafalab.dfci.harvard.edu/dsbook/tidyverse.html#sorting-data-frames">Sorting data frames</a></h2>
+<section id="key-points-24" class="level3" data-number="3.15.1">
+<h3 data-number="3.15.1" class="anchored" data-anchor-id="key-points-24"><span class="header-section-number">3.15.1</span> Key Points</h3>
 <ul>
 <li><p>To order rows in a data frame using data.table, we can use the same approach we used for filtering.</p></li>
 <li><p>The default sort is an ascending order, but we can also sort tables in descending order.</p></li>
 <li><p>We can also perform nested sorting by including multiple variables in the desired sort order.</p></li>
-</ul></section><section id="code-17" class="level3" data-number="3.15.2"><h3 data-number="3.15.2" class="anchored" data-anchor-id="code-17">
-<span class="header-section-number">3.15.2</span> Code</h3>
+</ul>
+</section>
+<section id="code-17" class="level3" data-number="3.15.2">
+<h3 data-number="3.15.2" class="anchored" data-anchor-id="code-17"><span class="header-section-number">3.15.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1"></a><span class="co"># load packages and datasets and prepare the data</span></span>
 <span id="cb73-2"><a href="#cb73-2"></a><span class="fu">library</span>(tidyverse)</span>
@@ -1555,8 +1612,11 @@ Knowledge Extension
 <span id="cb73-16"><a href="#cb73-16"></a><span class="co"># order by region and then murder rate</span></span>
 <span id="cb73-17"><a href="#cb73-17"></a>murders[<span class="fu">order</span>(region, rate)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section></section><section id="programming-basics" class="level1" data-number="4"><h1 data-number="4">
-<span class="header-section-number">4</span> Programming Basics</h1>
+</section>
+</section>
+</section>
+<section id="programming-basics" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Programming Basics</h1>
 <p>In this section, I will introduce you to general programming features like ‘if-else’ and ‘for loop’ commands so that you can write your own functions to perform various operations on datasets.</p>
 <p>In programming basics, you will: - Understand some of the programming capabilities of R.</p>
 <p>In basic condationals, you will: - Use basic conditional expressions to perform different operations. Check if any or all elements of a logical vector are TRUE.</p>
@@ -1568,20 +1628,23 @@ Knowledge Extension
 <ul>
 <li>Articulate in-built functions of R that you could try for yourself.</li>
 </ul>
-<section id="programming-basics-1" class="level2" data-number="4.1"><h2 data-number="4.1" class="anchored" data-anchor-id="programming-basics-1">
-<span class="header-section-number">4.1</span> Programming Basics</h2>
+<section id="programming-basics-1" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="programming-basics-1"><span class="header-section-number">4.1</span> Programming Basics</h2>
 <p><a href="http://rafalab.dfci.harvard.edu/dsbook/programming-basics.html">Introduction to Programming in R</a></p>
-</section><section id="basic-condationals" class="level2" data-number="4.2"><h2 data-number="4.2" class="anchored" data-anchor-id="basic-condationals">
-<span class="header-section-number">4.2</span> Basic Condationals</h2>
-<section id="key-points-25" class="level3" data-number="4.2.1"><h3 data-number="4.2.1" class="anchored" data-anchor-id="key-points-25">
-<span class="header-section-number">4.2.1</span> Key Points</h3>
+</section>
+<section id="basic-condationals" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="basic-condationals"><span class="header-section-number">4.2</span> Basic Condationals</h2>
+<section id="key-points-25" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="key-points-25"><span class="header-section-number">4.2.1</span> Key Points</h3>
 <ul>
 <li><p>The most common conditional expression in programming is an if-else statement, which has the form “if [condition], perform [expression], else perform [alternative expression]”.</p></li>
-<li><p>The <code><a href="https://rdrr.io/r/base/ifelse.html">ifelse()</a></code> function works similarly to an if-else statement, but it is particularly useful since it works on vectors by examining each element of the vector and returning a corresponding answer accordingly.</p></li>
-<li><p>The <code><a href="https://rdrr.io/r/base/any.html">any()</a></code> function takes a vector of logicals and returns true if any of the entries are true.</p></li>
-<li><p>The <code><a href="https://rdrr.io/r/base/all.html">all()</a></code> function takes a vector of logicals and returns true if all of the entries are true.</p></li>
-</ul></section><section id="code-18" class="level3" data-number="4.2.2"><h3 data-number="4.2.2" class="anchored" data-anchor-id="code-18">
-<span class="header-section-number">4.2.2</span> Code</h3>
+<li><p>The <code>ifelse()</code> function works similarly to an if-else statement, but it is particularly useful since it works on vectors by examining each element of the vector and returning a corresponding answer accordingly.</p></li>
+<li><p>The <code>any()</code> function takes a vector of logicals and returns true if any of the entries are true.</p></li>
+<li><p>The <code>all()</code> function takes a vector of logicals and returns true if all of the entries are true.</p></li>
+</ul>
+</section>
+<section id="code-18" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="code-18"><span class="header-section-number">4.2.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1"></a><span class="co"># an example showing the general structure of an if-else statement</span></span>
 <span id="cb74-2"><a href="#cb74-2"></a>a <span class="ot">&lt;-</span> <span class="dv">0</span></span>
@@ -1627,15 +1690,16 @@ Knowledge Extension
 <span id="cb74-42"><a href="#cb74-42"></a><span class="fu">any</span>(z)</span>
 <span id="cb74-43"><a href="#cb74-43"></a><span class="fu">all</span>(z)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section><section id="functions" class="level2" data-number="4.3"><h2 data-number="4.3" class="anchored" data-anchor-id="functions">
-<span class="header-section-number">4.3</span> Functions</h2>
-<section id="key-points-26" class="level3" data-number="4.3.1"><h3 data-number="4.3.1" class="anchored" data-anchor-id="key-points-26">
-<span class="header-section-number">4.3.1</span> Key Points</h3>
+</section>
+</section>
+<section id="functions" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="functions"><span class="header-section-number">4.3</span> Functions</h2>
+<section id="key-points-26" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="key-points-26"><span class="header-section-number">4.3.1</span> Key Points</h3>
 <ul>
 <li><p>The R function called function() tells R you are about to define a new function.</p></li>
 <li><p>Functions are objects, so must be assigned a variable name with the arrow operator.</p></li>
-<li>
-<p>The general way to define functions is:</p>
+<li><p>The general way to define functions is:</p>
 <ul>
 <li><ol type="1">
 <li>decide the function name, which will be an object,</li>
@@ -1643,11 +1707,12 @@ Knowledge Extension
 <li><ol start="2" type="1">
 <li>type function() with your function’s arguments in parentheses, - (3) write all the operations inside brackets.</li>
 </ol></li>
-</ul>
-</li>
+</ul></li>
 <li><p>Variables defined inside a function are not saved in the workspace.</p></li>
-</ul></section><section id="code-19" class="level3" data-number="4.3.2"><h3 data-number="4.3.2" class="anchored" data-anchor-id="code-19">
-<span class="header-section-number">4.3.2</span> Code</h3>
+</ul>
+</section>
+<section id="code-19" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="code-19"><span class="header-section-number">4.3.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1"></a><span class="co"># example of defining a function to compute the average of a vector x</span></span>
 <span id="cb75-2"><a href="#cb75-2"></a>avg <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
@@ -1677,16 +1742,20 @@ Knowledge Extension
 <span id="cb75-26"><a href="#cb75-26"></a>  <span class="fu">ifelse</span>(arithmetic, <span class="fu">sum</span>(x)<span class="sc">/</span>n, <span class="fu">prod</span>(x)<span class="sc">^</span>(<span class="dv">1</span><span class="sc">/</span>n))</span>
 <span id="cb75-27"><a href="#cb75-27"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section><section id="for-loops" class="level2" data-number="4.4"><h2 data-number="4.4" class="anchored" data-anchor-id="for-loops">
-<span class="header-section-number">4.4</span> For Loops</h2>
-<section id="key-points-27" class="level3" data-number="4.4.1"><h3 data-number="4.4.1" class="anchored" data-anchor-id="key-points-27">
-<span class="header-section-number">4.4.1</span> Key Points</h3>
+</section>
+</section>
+<section id="for-loops" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="for-loops"><span class="header-section-number">4.4</span> For Loops</h2>
+<section id="key-points-27" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="key-points-27"><span class="header-section-number">4.4.1</span> Key Points</h3>
 <ul>
 <li><p>For-loops perform the same task over and over while changing the variable. They let us define the range that our variable takes, and then changes the value with each loop and evaluates the expression every time inside the loop.</p></li>
 <li><p>The general form of a for-loop is: “For i in [some range], do operations”. This i changes across the range of values and the operations assume i is a value you’re interested in computing on.</p></li>
 <li><p>At the end of the loop, the value of i is the last value of the range.</p></li>
-</ul></section><section id="code-20" class="level3" data-number="4.4.2"><h3 data-number="4.4.2" class="anchored" data-anchor-id="code-20">
-<span class="header-section-number">4.4.2</span> Code</h3>
+</ul>
+</section>
+<section id="code-20" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="code-20"><span class="header-section-number">4.4.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1"></a><span class="co"># creating a function that computes the sum of integers 1 through n</span></span>
 <span id="cb76-2"><a href="#cb76-2"></a>compute_s_n <span class="ot">&lt;-</span> <span class="cf">function</span>(n){</span>
@@ -1719,7 +1788,12 @@ Knowledge Extension
 </div>
 
 
-</section></section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1966,7 +2040,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/quartopub\.com\/sites\/ningli\/statsr/);
+      var filterRegex = new RegExp(/https:\/\/ningli\.quarto\.pub/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
@@ -1982,11 +2056,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">© 2022 Stats &amp; R™ made with❤️ by <a href="about.qmd">NING</a></div>   
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-<li class="nav-item compact">
+    <li class="nav-item compact">
     <a class="nav-link" href="mailto:ln729500172@gmail.com">
       <i class="bi bi-envelope" role="img">
 </i> 
@@ -2005,9 +2080,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-</div>
+    </div>
   </div>
 </footer>
+
 
 
 <script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
