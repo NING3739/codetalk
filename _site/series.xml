@@ -1501,6 +1501,60 @@ Line types in R: Ity
 <p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-53-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+</section>
+<section id="code-multiple-time-series" class="level3" data-number="4.6.3">
+<h3 data-number="4.6.3" class="anchored" data-anchor-id="code-multiple-time-series"><span class="header-section-number">4.6.3</span> Code: Multiple Time Series</h3>
+<div class="cell">
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb80" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb80-1"><span class="co" style="color: #5E5E5E;"># line plot fertility time series for two countries- only one line (incorrect)</span></span>
+<span id="cb80-2">countries <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"South Korea"</span>, <span class="st" style="color: #20794D;">"Germany"</span>)</span>
+<span id="cb80-3">gapminder <span class="sc" style="color: #5E5E5E;">%&gt;%</span> <span class="fu" style="color: #4758AB;">filter</span>(country <span class="sc" style="color: #5E5E5E;">%in%</span> countries) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb80-4">    <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(year, fertility)) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb80-5">    <span class="fu" style="color: #4758AB;">geom_line</span>()</span></code></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-54-1.png" class="img-fluid" width="672"></p>
+</div>
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb81" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb81-1"><span class="co" style="color: #5E5E5E;"># line plot fertility time series for two countries - one line per country</span></span>
+<span id="cb81-2">gapminder <span class="sc" style="color: #5E5E5E;">%&gt;%</span> <span class="fu" style="color: #4758AB;">filter</span>(country <span class="sc" style="color: #5E5E5E;">%in%</span> countries) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb81-3">    <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(year, fertility, <span class="at" style="color: #657422;">group =</span> country)) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb81-4">    <span class="fu" style="color: #4758AB;">geom_line</span>()</span></code></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-54-2.png" class="img-fluid" width="672"></p>
+</div>
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb82" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb82-1"><span class="co" style="color: #5E5E5E;"># fertility time series for two countries - lines colored by country</span></span>
+<span id="cb82-2">gapminder <span class="sc" style="color: #5E5E5E;">%&gt;%</span> <span class="fu" style="color: #4758AB;">filter</span>(country <span class="sc" style="color: #5E5E5E;">%in%</span> countries) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb82-3">    <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(year, fertility, <span class="at" style="color: #657422;">col =</span> country)) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb82-4">    <span class="fu" style="color: #4758AB;">geom_line</span>()</span></code></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-54-3.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="code-adding-text-labels-to-a-plot" class="level3" data-number="4.6.4">
+<h3 data-number="4.6.4" class="anchored" data-anchor-id="code-adding-text-labels-to-a-plot"><span class="header-section-number">4.6.4</span> Code: Adding text labels to a plot</h3>
+<div class="cell">
+<details>
+<summary>show the code</summary>
+<div class="sourceCode cell-code" id="cb83" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb83-1"><span class="co" style="color: #5E5E5E;"># life expectancy time series - lines colored by country and labeled, no legend</span></span>
+<span id="cb83-2">labels <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">data.frame</span>(<span class="at" style="color: #657422;">country =</span> countries, <span class="at" style="color: #657422;">x =</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="dv" style="color: #AD0000;">1975</span>, <span class="dv" style="color: #AD0000;">1965</span>), <span class="at" style="color: #657422;">y =</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="dv" style="color: #AD0000;">60</span>, <span class="dv" style="color: #AD0000;">72</span>))</span>
+<span id="cb83-3">gapminder <span class="sc" style="color: #5E5E5E;">%&gt;%</span> <span class="fu" style="color: #4758AB;">filter</span>(country <span class="sc" style="color: #5E5E5E;">%in%</span> countries) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb83-4">    <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(year, life_expectancy, <span class="at" style="color: #657422;">col =</span> country)) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb83-5">    <span class="fu" style="color: #4758AB;">geom_line</span>() <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb83-6">    <span class="fu" style="color: #4758AB;">geom_text</span>(<span class="at" style="color: #657422;">data =</span> labels, <span class="fu" style="color: #4758AB;">aes</span>(x, y, <span class="at" style="color: #657422;">label =</span> country), <span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">5</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb83-7">    <span class="fu" style="color: #4758AB;">theme</span>(<span class="at" style="color: #657422;">legend.position =</span> <span class="st" style="color: #20794D;">"none"</span>)</span></code></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="https://ningli.quarto.pub/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-55-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 
 
 </section>
