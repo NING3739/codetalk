@@ -7,57 +7,64 @@ image: https://images.unsplash.com/photo-1634128221889-82ed6efebfc3?ixlib=rb-1.2
 code-fold: false
 editor: visual
 ---
+
 # R Basics, Functions, and Data Types
+
 In this section, I will introduce you to R Basics, Functions, and Datatypes.
 
 In this part, you will learn to:
 
-- Appreciate the rationale for data analysis using R.
+-   Appreciate the rationale for data analysis using R.
 
-- Define objects and perform basic arithmetic and logical operations.
+-   Define objects and perform basic arithmetic and logical operations.
 
-- Use pre-defined functions to perform operations on objects.
+-   Use pre-defined functions to perform operations on objects.
 
-- Distinguish between various data types.
+-   Distinguish between various data types.
 
 ## Insralling R
 
-### why Install R and RStudio? 
+### why Install R and RStudio?
 
-- To complete this course, you should install R locally on your computer. We also highly recommend installing RStudio, an integrated development environment (IDE), to edit and test your code.
+-   To complete this course, you should install R locally on your computer. We also highly recommend installing RStudio, an integrated development environment (IDE), to edit and test your code.
 
-- In order to complete some assignments in the course, you will need your own copy of R. You may also find it helpful to follow along with the course videos in R or RStudio.
+-   In order to complete some assignments in the course, you will need your own copy of R. You may also find it helpful to follow along with the course videos in R or RStudio.
 
-- Both R and RStudio can be freely downloaded and installed.
+-   Both R and RStudio can be freely downloaded and installed.
 
 ### Key Points
-- You need to install R before using RStudio, which is an interactive desktop environment.
 
-- Select base subdirectory in [CRAN](https://cran.r-project.org/) and click download.
+-   You need to install R before using RStudio, which is an interactive desktop environment.
 
-- Select all default choices in the installation process.
+-   Select base subdirectory in [CRAN](https://cran.r-project.org/) and click download.
 
-- We recommend selecting English for language to help you better follow the course.
+-   Select all default choices in the installation process.
 
-- You can try using the R console, but for productivity purposes, we can switch to RStudio.
+-   We recommend selecting English for language to help you better follow the course.
+
+-   You can try using the R console, but for productivity purposes, we can switch to RStudio.
 
 ## Installing Rstudio
+
 ### Key Points
-- You can download the latest version of RStudio at the [RStudio website](https://posit.co/download/rstudio-desktop/).
 
-- The free desktop version is more than enough for this course.
+-   You can download the latest version of RStudio at the [RStudio website](https://posit.co/download/rstudio-desktop/).
 
-- Make sure to choose the version for your own operating system.
+-   The free desktop version is more than enough for this course.
 
-- Choose "Yes" for all defaults in the installation process.
+-   Make sure to choose the version for your own operating system.
+
+-   Choose "Yes" for all defaults in the installation process.
 
 ## Using RStudio for the First Time
+
 ### Key Points
-- The free desktop version of RStudio can be launched like other applications on your computer.
 
-- When you start RStudio for the first time, you will see three panes. The left pane shows you the R console. On the right, the top pane includes three tabs, while the bottom pane shows you five tabs, file, plots, packages, help, and viewer.
+-   The free desktop version of RStudio can be launched like other applications on your computer.
 
-- You can download a cheat sheet of the most common RStudio commands directly from RStudio by going to "Help -> Cheat Sheets -> RStudio IDE Cheat Sheet."
+-   When you start RStudio for the first time, you will see three panes. The left pane shows you the R console. On the right, the top pane includes three tabs, while the bottom pane shows you five tabs, file, plots, packages, help, and viewer.
+
+-   You can download a cheat sheet of the most common RStudio commands directly from RStudio by going to "Help -\> Cheat Sheets -\> RStudio IDE Cheat Sheet."
 
 ## Getting Started Using R
 
@@ -269,35 +276,36 @@ levels(murders$region)
 ```
 
 # Vectors, Sorting
+
 In this section, I will introduce you to vectors and functions such as sorting.
 
-In Vectors, you will: 
+In Vectors, you will:
 
-- Create numeric and character vectors. 
+-   Create numeric and character vectors.
 
-- Name the columns of a vector. 
+-   Name the columns of a vector.
 
-- Generate numeric sequences. 
+-   Generate numeric sequences.
 
-- Access specific elements or parts of a vector.
+-   Access specific elements or parts of a vector.
 
-- Coerce data into different data types as needed. 
+-   Coerce data into different data types as needed.
 
-In Sorting, you will: 
+In Sorting, you will:
 
-- Sort vectors in ascending and descending order. 
+-   Sort vectors in ascending and descending order.
 
-- Extract the indices of the sorted elements from the original vector. 
+-   Extract the indices of the sorted elements from the original vector.
 
-- Find the maximum and minimum elements, as well as their indices, in a vector. 
+-   Find the maximum and minimum elements, as well as their indices, in a vector.
 
-- Rank the elements of a vector in increasing order. 
+-   Rank the elements of a vector in increasing order.
 
-In Vector Arithmetic, you will: 
+In Vector Arithmetic, you will:
 
-- Perform arithmetic between a vector and a single number.
+-   Perform arithmetic between a vector and a single number.
 
-- Perform arithmetic between two vectors of the same length. 
+-   Perform arithmetic between two vectors of the same length.
 
 ## Vectors
 
@@ -362,7 +370,7 @@ R coerced the data into characters. It guessed that because you put a character 
 ## Sorting
 
 |          |                       |                                            |                                           |
-|---------------|---------------|----------------------|----------------------|
+|-----------------|-----------------|--------------------|--------------------|
 | Original | Sort(按从小到大排列） | Order(Sort对应数字在原来数字排列中的顺序） | Rank(Original原来数字在Sort顺序中的排名） |
 | 31       | 4                     | 2                                          | 3                                         |
 | 4        | 15                    | 3                                          | 1                                         |
@@ -371,15 +379,17 @@ R coerced the data into characters. It guessed that because you put a character 
 | 65       | 92                    | 4                                          | 4                                         |
 
 ### Key Points
-- The function `sort()` sorts a vector in increasing order.
 
-- The function `order()` produces the indices needed to obtain the sorted vector, e.g. a result of  2 3 1 5 4 means the sorted vector will be produced by listing the 2nd, 3rd, 1st, 5th, and then 4th item of the original vector.
+-   The function `sort()` sorts a vector in increasing order.
 
-- The function `rank()` gives us the ranks of the items in the original vector.
+-   The function `order()` produces the indices needed to obtain the sorted vector, e.g. a result of 2 3 1 5 4 means the sorted vector will be produced by listing the 2nd, 3rd, 1st, 5th, and then 4th item of the original vector.
 
-- The function `max()` returns the largest value, while `which.max()` returns the index of the largest value. The functions `min()` and `which.min()` work similarly for minimum values.
+-   The function `rank()` gives us the ranks of the items in the original vector.
+
+-   The function `max()` returns the largest value, while `which.max()` returns the index of the largest value. The functions `min()` and `which.min()` work similarly for minimum values.
 
 ### Code
+
 ```{r, eval=FALSE}
 library(dslabs)
 data(murders)
@@ -411,9 +421,11 @@ rank(x)    # returns ranks (smallest to largest)
 ## Vector Arithmetic
 
 ### Key Point
-- In R, arithmetic operation on vectors occur element-wise
+
+-   In R, arithmetic operation on vectors occur element-wise
 
 ### Code
+
 ```{r, eval=FALSE}
 # The name of the state with the maximum population is found by doing the following
 murders$state[which.max(murders$population)]
@@ -424,63 +436,61 @@ murder_rate <- murders$total / murders$population * 100000
 # ordering the states by murder rate, in decreasing order
 murders$state[order(murder_rate, decreasing=TRUE)]
 ```
+
 # Indexing, Data Wrangling, Plots
 
 In this section, I will introduce the R commands and techniques that help you wrangle, analyze, and visualize data.
 
-In Indexing, you will:
-- Subset a vector based on properties of another vector. 
+In Indexing, you will: - Subset a vector based on properties of another vector.
 
-- Use multiple logical operators to index vectors.
+-   Use multiple logical operators to index vectors.
 
-- Extract the indices of vector elements satisfying one or more logical conditions. 
+-   Extract the indices of vector elements satisfying one or more logical conditions.
 
-- Extract the indices of vector elements matching with another vector.
+-   Extract the indices of vector elements matching with another vector.
 
-- Determine which elements in one vector are present in another vector. 
+-   Determine which elements in one vector are present in another vector.
 
 In basic data wrangling, you will:
 
-- Wrangle data tables using functions in the dplyr package. 
+-   Wrangle data tables using functions in the dplyr package.
 
-- Modify a data table by adding or changing columns. 
+-   Modify a data table by adding or changing columns.
 
-- Subset rows in a data table.
+-   Subset rows in a data table.
 
-- Subset columns in a data table. 
+-   Subset columns in a data table.
 
-- Perform a series of operations using the pipe operator. 
+-   Perform a series of operations using the pipe operator.
 
-- Create data frames. 
+-   Create data frames.
 
-In basic plots, you will:
-- Plot data in scatter plots, box plots, and histograms. 
+In basic plots, you will: - Plot data in scatter plots, box plots, and histograms.
 
-In summarizing with dplyr, you will:
-- Use summarize() to facilitate summarizing data in dplyr.
+In summarizing with dplyr, you will: - Use summarize() to facilitate summarizing data in dplyr.
 
-- Learn about the dot placeholder.
+-   Learn about the dot placeholder.
 
-- Learn how to group and then summarize in dplyr.
+-   Learn how to group and then summarize in dplyr.
 
-- Learn how to sort data tables in dplyr.
+-   Learn how to sort data tables in dplyr.
 
-In the rest section, you will:
-- Learn how to subset and summarize data using data.table.
+In the rest section, you will: - Learn how to subset and summarize data using data.table.
 
-- Learn how to sort data frames using data.table.
+-   Learn how to sort data frames using data.table.
 
-## Indexing 
+## Indexing
 
 ### Key Point
 
-- We can use logicals to index vectors.
+-   We can use logicals to index vectors.
 
-- Using the function sum()on a logical vector returns the number of entries that are true.
+-   Using the function sum()on a logical vector returns the number of entries that are true.
 
-- The logical operator “&” makes two logicals true only when they are both true.
+-   The logical operator "&" makes two logicals true only when they are both true.
 
 ### Code
+
 ```{r, eval=FALSE}
 # defining murder rate as before
 murder_rate <- murders$total / murders$population * 100000
@@ -502,13 +512,15 @@ murders$state[index]
 ## Indexing Functions
 
 ### Key Points
-- The function `which()` gives us the entries of a logical vector that are true.
 
-- The function `match()` looks for entries in a vector and returns the index needed to access them.
+-   The function `which()` gives us the entries of a logical vector that are true.
 
-- We use the function `%in%` if we want to know whether or not each element of a first vector is in a second vector.
+-   The function `match()` looks for entries in a vector and returns the index needed to access them.
+
+-   We use the function `%in%` if we want to know whether or not each element of a first vector is in a second vector.
 
 ### Code
+
 ```{r, eval=FALSE}
 x <- c(FALSE, TRUE, FALSE, TRUE, TRUE, FALSE)
 which(x)    # returns indices that are TRUE
@@ -535,25 +547,29 @@ c("Boston", "Dakota", "Washington") %in% murders$state
 ## Basic Data Wrangling
 
 ### Key Points
-- To change a data table by **adding a new column**, or changing an existing one, we use the `mutate()` function.
 
-- To **filter the data** by subsetting rows, we use the function `filter()`.
+-   To change a data table by **adding a new column**, or changing an existing one, we use the `mutate()` function.
 
-- To subset the data by **selecting specific columns**, we use the `select()` function.
+-   To **filter the data** by subsetting rows, we use the function `filter()`.
 
-- We can perform a series of operations by sending the results of one function to another function using the **pipe operator**, `%>%`.
+-   To subset the data by **selecting specific columns**, we use the `select()` function.
+
+-   We can perform a series of operations by sending the results of one function to another function using the **pipe operator**, `%>%`.
 
 ## Creating Data Frames
 
 ### Note
+
 The default settings in R have changed as of version 4.0, and it is no longer necessary to include the code `stringsAsFactors = FALSE` in order to keep strings as characters. Putting the entries in quotes, as in the example, is adequate to keep strings as characters. The `stringsAsFactors = FALSE` code is useful in certain other situations, but you do not need to include it when you create data frames in this manner.
 
 ### Key Points
-- We can use the `data.frame()` function to create data frames.
 
-- Formerly, the `data.frame()` function turned characters into factors by default. To avoid this, we could utilize the `stringsAsFactors` argument and set it equal to false. As of R 4.0, it is no longer necessary to include the `stringsAsFactors` argument, because R no longer turns characters into factors by default.
+-   We can use the `data.frame()` function to create data frames.
+
+-   Formerly, the `data.frame()` function turned characters into factors by default. To avoid this, we could utilize the `stringsAsFactors` argument and set it equal to false. As of R 4.0, it is no longer necessary to include the `stringsAsFactors` argument, because R no longer turns characters into factors by default.
 
 ### Code
+
 ```{r, eval=FALSE}
 # creating a data frame with stringAsFactors = FALSE
 grades <- data.frame(names = c("John", "Juan", "Jean", "Yao"), 
@@ -565,24 +581,28 @@ grades <- data.frame(names = c("John", "Juan", "Jean", "Yao"),
 ## Basic Plots
 
 ### Key Points
-- We can create a simple scatterplot using the function `plot()`.
 
-- Histograms are graphical summaries that give you a general overview of the types of values you have.  In R, they can be produced using the `hist()` function.
+-   We can create a simple scatterplot using the function `plot()`.
 
-- Boxplots provide a more compact summary of a distribution than a histogram and are more useful for comparing distributions. They can be produced using the `boxplot()` function.
+-   Histograms are graphical summaries that give you a general overview of the types of values you have. In R, they can be produced using the `hist()` function.
+
+-   Boxplots provide a more compact summary of a distribution than a histogram and are more useful for comparing distributions. They can be produced using the `boxplot()` function.
 
 ### Code
+
 ```{r, output=FALSE}
 library(dplyr)
 library(dslabs)
 data("murders")
 ```
+
 ```{r}
 # a simple scatterplot of total murders versus population
 x <- murders$population /10^6
 y <- murders$total
 plot(x, y)
 ```
+
 ```{r}
 # a histogram of murder rates
 murders <- mutate(murders, rate = total / population * 100000)
@@ -595,13 +615,15 @@ boxplot(rate~region, data = murders)
 ## The summarize function
 
 ### Key Points
-- Summarizing data is an important part of data analysis.
 
-- Some summary ststistics are the **mean**, **median**, and **standard deviation**. 
+-   Summarizing data is an important part of data analysis.
 
-- The `summarize()` function from **dplyr** provides an easy way to compute summary statics. 
+-   Some summary ststistics are the **mean**, **median**, and **standard deviation**.
+
+-   The `summarize()` function from **dplyr** provides an easy way to compute summary statics.
 
 ### Code
+
 ```{r, output=FALSE}
 library(tidyverse)
 library(dplyr)
@@ -609,6 +631,7 @@ library(dslabs)
 data(murders)
 murders <- mutate(murders, rate = total / population * 10^5)
 ```
+
 ```{r}
 # minimum, median, and maximum murder rate for the states in the West region
 s <- murders %>% 
@@ -635,9 +658,10 @@ us_murder_rate
 
 ### Key Points
 
-- The `quantile()` function can be used to return the min, median, and max in a single line of code.
+-   The `quantile()` function can be used to return the min, median, and max in a single line of code.
 
 ### Code
+
 ```{r, output=FALSE}
 library(tidyverse)
 library(dplyr)
@@ -645,6 +669,7 @@ library(dslabs)
 data(murders)
 murders <- mutate(murders, rate = total / population * 10^5)
 ```
+
 ```{r}
 # minimum, median, and maximum murder rate for the states in the West region using quantile
 # note that this returns a vector
@@ -665,9 +690,11 @@ murders %>%
 ## Pull to access to columns
 
 ### Key Points
-- The `pull()` function can be used to access values stored in data when using pipes: when a data object is piped that object and its columns can be accessed using the `pull()` function.
+
+-   The `pull()` function can be used to access values stored in data when using pipes: when a data object is piped that object and its columns can be accessed using the `pull()` function.
 
 ### Code
+
 ```{r, output=FALSE}
 library(tidyverse)
 library(dplyr)
@@ -675,6 +702,7 @@ library(dslabs)
 data(murders)
 murders <- mutate(murders, rate = total / population * 10^5)
 ```
+
 ```{r}
 # average rate adjusted by population size
 us_murder_rate <- murders %>% 
@@ -700,7 +728,8 @@ class(us_murder_rate)
 ## The dot placeholder
 
 ### Key Points
-- The `dot (.)` can be thought of as a placeholder for the data being passed through the pipe.
+
+-   The `dot (.)` can be thought of as a placeholder for the data being passed through the pipe.
 
 ```{r, output=FALSE}
 library(tidyverse)
@@ -709,6 +738,7 @@ library(dslabs)
 data(murders)
 murders <- mutate(murders, rate = total / population * 10^5)
 ```
+
 ```{r}
 # average rate adjusted by population size
 us_murder_rate <- murders %>% 
@@ -726,9 +756,10 @@ class(us_murder_rate)
 ## Group then summarize
 
 ### Key Points
-- Splitting data into groups and then computing summaries for each group is a common operation in data exploration.
 
-- We can use the **dplyr** `group_by()` function to create a special grouped data frame to facilitate such summaries.
+-   Splitting data into groups and then computing summaries for each group is a common operation in data exploration.
+
+-   We can use the **dplyr** `group_by()` function to create a special grouped data frame to facilitate such summaries.
 
 ```{r, output=FALSE}
 library(tidyverse)
@@ -737,6 +768,7 @@ library(dslabs)
 data(murders)
 murders <- mutate(murders, rate = total / population * 10^5)
 ```
+
 ```{r}
 # group by region
 murders %>% group_by(region)
@@ -750,15 +782,17 @@ murders %>%
 ## Sorting data tables
 
 ### Key Points
-- To order an entire table, we can use the **dplyr** function `arrange()`.
 
-- We can also use nested sorting to order by additional columns.
+-   To order an entire table, we can use the **dplyr** function `arrange()`.
 
-- The function `head()` returns on the first few lines of a table.
+-   We can also use nested sorting to order by additional columns.
 
-- The function `top_n()` returns the top n rows of a table.
+-   The function `head()` returns on the first few lines of a table.
+
+-   The function `top_n()` returns the top n rows of a table.
 
 ### Code
+
 ```{r, output=FALSE}
 library(tidyverse)
 library(dplyr)
@@ -766,6 +800,7 @@ library(dslabs)
 data(murders)
 murders <- mutate(murders, rate = total / population * 10^5)
 ```
+
 ```{r}
 # order the states by population size
 murders %>% arrange(population) %>% head()
@@ -789,19 +824,21 @@ murders %>% arrange(desc(rate)) %>% top_n(10)
 ## Introduction to data.table
 
 ### Key Points
-- In this course, we often use tidyverse packages to illustrate because these packages tend to have code that is very readable for beginners.
 
-- There are other approaches to wrangling and analyzing data in R that are faster and better at handling large objects, such as the data.table package.
+-   In this course, we often use tidyverse packages to illustrate because these packages tend to have code that is very readable for beginners.
 
-- Selecting in data.table uses notation similar to that used with matrices.
+-   There are other approaches to wrangling and analyzing data in R that are faster and better at handling large objects, such as the data.table package.
 
-- To add a column in data.table, you can use the := function.
+-   Selecting in data.table uses notation similar to that used with matrices.
 
-- Because the data.table package is designed to avoid wasting memory, when you make a copy of a table, it does not create a new object. The := function changes by reference. If you want to make an actual copy, you need to use the copy() function.
+-   To add a column in data.table, you can use the := function.
 
-- Side note: the R language has a new, built-in pipe operator as of version 4.1: |>. This works similarly to the pipe %>% you are already familiar with. You can [read more about the |> pipe here External link](https://www.r-bloggers.com/2021/05/the-new-r-pipe/).
+-   Because the data.table package is designed to avoid wasting memory, when you make a copy of a table, it does not create a new object. The := function changes by reference. If you want to make an actual copy, you need to use the copy() function.
+
+-   Side note: the R language has a new, built-in pipe operator as of version 4.1: \|\>. This works similarly to the pipe %\>% you are already familiar with. You can [read more about the \|\> pipe here External link](https://www.r-bloggers.com/2021/05/the-new-r-pipe/).
 
 ### Code
+
 ```{r, eval=FALSE}
 # install the data.table package before you use it!
 install.packages("data.table")
@@ -853,9 +890,11 @@ y
 ## Subsetting with data.table
 
 ### Key Points
+
 [Subsetting in **data.table**](http://rafalab.dfci.harvard.edu/dsbook/data-table.html#subsetting-1) uses notation similar to that used with matrices.
 
 ### Code
+
 ```{r, eval=FALSE}
 # load packages and prepare the data
 library(tidyverse)
@@ -883,11 +922,13 @@ murders %>% filter(rate <= 0.7) %>% select(state, rate)
 ## Summarizing with data.table
 
 ### Key Points
-- In data.table we can call functions inside `.()`and they will be applied to rows.
 
-- The `group_by` followed by summarize in **dplyr** is performed in one line in data.table using the by argument.
+-   In data.table we can call functions inside `.()`and they will be applied to rows.
+
+-   The `group_by` followed by summarize in **dplyr** is performed in one line in data.table using the by argument.
 
 ### Code
+
 ```{r, eval=FALSE}
 # load packages and prepare the data - heights dataset
 library(tidyverse)
@@ -928,13 +969,14 @@ heights[, .(average = mean(height), standard_deviation = sd(height)), by = sex]
 
 ### Key Points
 
-- To order rows in a data frame using data.table, we can use the same approach we used for filtering.
+-   To order rows in a data frame using data.table, we can use the same approach we used for filtering.
 
-- The default sort is an ascending order, but we can also sort tables in descending order.
+-   The default sort is an ascending order, but we can also sort tables in descending order.
 
-- We can also perform nested sorting by including multiple variables in the desired sort order.
+-   We can also perform nested sorting by including multiple variables in the desired sort order.
 
 ### Code
+
 ```{r, eval=FALSE}
 # load packages and datasets and prepare the data
 library(tidyverse)
@@ -956,40 +998,39 @@ murders[order(region, rate)]
 ```
 
 # Programming Basics
-In this section,  I will introduce you to general programming features like 'if-else' and 'for loop' commands so that you can write your own functions to perform various operations on datasets.
 
-In programming basics, you will:
-- Understand some of the programming capabilities of R. 
+In this section, I will introduce you to general programming features like 'if-else' and 'for loop' commands so that you can write your own functions to perform various operations on datasets.
 
-In basic condationals, you will:
-- Use basic conditional expressions to perform different operations. 
-Check if any or all elements of a logical vector are TRUE. 
+In programming basics, you will: - Understand some of the programming capabilities of R.
 
-In function, you will:
-- Define and call functions to perform various operations.
+In basic condationals, you will: - Use basic conditional expressions to perform different operations. Check if any or all elements of a logical vector are TRUE.
 
-- Pass arguments to functions, and return variables/objects from functions.
+In function, you will: - Define and call functions to perform various operations.
 
-In loops, you will:
-- Use for-loops to perform repeated operations. 
+-   Pass arguments to functions, and return variables/objects from functions.
 
-- Articulate in-built functions of R that you could try for yourself. 
+In loops, you will: - Use for-loops to perform repeated operations.
+
+-   Articulate in-built functions of R that you could try for yourself.
 
 ## Programming Basics
+
 [Introduction to Programming in R](http://rafalab.dfci.harvard.edu/dsbook/programming-basics.html)
 
 ## Basic Condationals
 
 ### Key Points
-- The most common conditional expression in programming is an if-else statement, which has the form "if [condition], perform [expression], else perform [alternative expression]".
 
-- The `ifelse()` function works similarly to an if-else statement, but it is particularly useful since it works on vectors by examining each element of the vector and returning a corresponding answer accordingly.
+-   The most common conditional expression in programming is an if-else statement, which has the form "if \[condition\], perform \[expression\], else perform \[alternative expression\]".
 
-- The `any()` function takes a vector of logicals and returns true if any of the entries are true.
+-   The `ifelse()` function works similarly to an if-else statement, but it is particularly useful since it works on vectors by examining each element of the vector and returning a corresponding answer accordingly.
 
-- The `all()` function takes a vector of logicals and returns true if all of the entries are true.
+-   The `any()` function takes a vector of logicals and returns true if any of the entries are true.
+
+-   The `all()` function takes a vector of logicals and returns true if all of the entries are true.
 
 ### Code
+
 ```{r, eval=FALSE}
 # an example showing the general structure of an if-else statement
 a <- 0
@@ -1039,17 +1080,25 @@ all(z)
 ## Functions
 
 ### Key Points
-- The R function called function() tells R you are about to define a new function.
 
-- Functions are objects, so must be assigned a variable name with the arrow operator.
+-   The R function called function() tells R you are about to define a new function.
 
-- The general way to define functions is: 
-  - (1) decide the function name, which will be an object, 
-  - (2) type function() with your function's arguments in parentheses,     - (3) write all the operations inside brackets.
+-   Functions are objects, so must be assigned a variable name with the arrow operator.
 
-- Variables defined inside a function are not saved in the workspace.
+-   The general way to define functions is:
+
+    -   
+
+        (1) decide the function name, which will be an object,
+
+    -   
+
+        (2) type function() with your function's arguments in parentheses, - (3) write all the operations inside brackets.
+
+-   Variables defined inside a function are not saved in the workspace.
 
 ### Code
+
 ```{r, eval=FALSE}
 # example of defining a function to compute the average of a vector x
 avg <- function(x){
@@ -1083,13 +1132,15 @@ avg <- function(x, arithmetic = TRUE){
 ## For Loops
 
 ### Key Points
-- For-loops perform the same task over and over while changing the variable.  They let us define the range that our variable takes, and then changes the value with each loop and evaluates the expression every time inside the loop.
 
-- The general form of a for-loop is: "For i in [some range], do operations".  This i changes across the range of values and the operations assume i is a value you're interested in computing on.
+-   For-loops perform the same task over and over while changing the variable. They let us define the range that our variable takes, and then changes the value with each loop and evaluates the expression every time inside the loop.
 
-- At the end of the loop, the value of i is the last value of the range.
+-   The general form of a for-loop is: "For i in \[some range\], do operations". This i changes across the range of values and the operations assume i is a value you're interested in computing on.
+
+-   At the end of the loop, the value of i is the last value of the range.
 
 ### Code
+
 ```{r, eval=FALSE}
 # creating a function that computes the sum of integers 1 through n
 compute_s_n <- function(n){
@@ -1120,4 +1171,3 @@ head(data.frame(s_n = s_n, formula = n*(n+1)/2))
 plot(n, s_n)
 lines(n, n*(n+1)/2)
 ```
-
