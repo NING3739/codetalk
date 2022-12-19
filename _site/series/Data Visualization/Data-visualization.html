@@ -423,6 +423,13 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
   <li><a href="#code-adding-text-labels-to-a-plot" id="toc-code-adding-text-labels-to-a-plot" class="nav-link" data-scroll-target="#code-adding-text-labels-to-a-plot"><span class="toc-section-number">4.6.4</span>  Code: Adding text labels to a plot</a></li>
   </ul>
 </li>
+  <li>
+<a href="#transformations" id="toc-transformations" class="nav-link" data-scroll-target="#transformations"><span class="toc-section-number">4.7</span>  Transformations</a>
+  <ul class="collapse">
+<li><a href="#key-points-19" id="toc-key-points-19" class="nav-link" data-scroll-target="#key-points-19"><span class="toc-section-number">4.7.1</span>  Key Points</a></li>
+  <li><a href="#code-8" id="toc-code-8" class="nav-link" data-scroll-target="#code-8"><span class="toc-section-number">4.7.2</span>  Code</a></li>
+  </ul>
+</li>
   </ul>
 </li>
   </ul></nav>
@@ -1641,6 +1648,19 @@ Line types in R: Ity
 </div>
 </section><section id="code-adding-text-labels-to-a-plot" class="level3" data-number="4.6.4"><h3 data-number="4.6.4" class="anchored" data-anchor-id="code-adding-text-labels-to-a-plot">
 <span class="header-section-number">4.6.4</span> Code: Adding text labels to a plot</h3>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>labels data frame as the data to ensure where to start label text</strong> <img src="https://raw.githubusercontent.com/NING3739/my-personal-website/main/geom_text.png" class="img-fluid"></p>
+</div>
+</div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1"></a><span class="co"># life expectancy time series - lines colored by country and labeled, no legend</span></span>
 <span id="cb83-2"><a href="#cb83-2"></a>labels <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">country =</span> countries, <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1975</span>, <span class="dv">1965</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">60</span>, <span class="dv">72</span>))</span>
@@ -1651,6 +1671,52 @@ Line types in R: Ity
 <span id="cb83-7"><a href="#cb83-7"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="Data-visualization_files/figure-html/unnamed-chunk-55-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section></section><section id="transformations" class="level2" data-number="4.7"><h2 data-number="4.7" class="anchored" data-anchor-id="transformations">
+<span class="header-section-number">4.7</span> Transformations</h2>
+<section id="key-points-19" class="level3" data-number="4.7.1"><h3 data-number="4.7.1" class="anchored" data-anchor-id="key-points-19">
+<span class="header-section-number">4.7.1</span> Key Points</h3>
+<ul>
+<li><p>We use GDP data to compute income in US dollars per day, adjusted for inflation.</p></li>
+<li><p>Log transformations covert multiplicative changes into additive changes.</p></li>
+<li><p>common transformations are the log base 2 transformation and the log base 10 transformation. The choice of base depends on the range of the data. The natural log is not recommended for visualization because it is difficult to interpret.</p></li>
+<li><p>The mode of a distribution is the value with the highest frequency. The mode of a normal distribution is the average. A distribution can have multiple local modes.</p></li>
+<li><p>There are two ways to use log transformations in plots: transform the data before plotting or transform the axes of the plot. Log scales have the advantage of showing the original values as axis labels, while log transformed values ease interpretation of intermediate values between labels.</p></li>
+<li><p>Scale the x-axis using <code>scale_x_continuous()</code> or <code>scale_x_log10()</code> layers in ggplot2. Similar functions exist for the y-axis.</p></li>
+<li><p>In 1970, income distribution is bimodal, consistent with the dichotomous Western versus developing worldview.</p></li>
+</ul></section><section id="code-8" class="level3" data-number="4.7.2"><h3 data-number="4.7.2" class="anchored" data-anchor-id="code-8">
+<span class="header-section-number">4.7.2</span> Code</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1"></a><span class="co"># add dollars per day variable</span></span>
+<span id="cb84-2"><a href="#cb84-2"></a>gapminder <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span> </span>
+<span id="cb84-3"><a href="#cb84-3"></a>  <span class="fu">mutate</span>(<span class="at">dollars_per_day =</span> gdp<span class="sc">/</span>population<span class="sc">/</span><span class="dv">365</span>)</span>
+<span id="cb84-4"><a href="#cb84-4"></a></span>
+<span id="cb84-5"><a href="#cb84-5"></a><span class="co"># histogram of dollars per day</span></span>
+<span id="cb84-6"><a href="#cb84-6"></a>past_year <span class="ot">&lt;-</span> <span class="dv">1970</span></span>
+<span id="cb84-7"><a href="#cb84-7"></a>gapminder <span class="sc">%&gt;%</span> </span>
+<span id="cb84-8"><a href="#cb84-8"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> past_year <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(gdp)) <span class="sc">%&gt;%</span> </span>
+<span id="cb84-9"><a href="#cb84-9"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(dollars_per_day)) <span class="sc">+</span></span>
+<span id="cb84-10"><a href="#cb84-10"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"black"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Data-visualization_files/figure-html/unnamed-chunk-56-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1"></a><span class="co"># repeat histogram with log2 scaled data</span></span>
+<span id="cb85-2"><a href="#cb85-2"></a>gapminder <span class="sc">%&gt;%</span></span>
+<span id="cb85-3"><a href="#cb85-3"></a>    <span class="fu">filter</span>(year <span class="sc">==</span> past_year <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(gdp)) <span class="sc">%&gt;%</span></span>
+<span id="cb85-4"><a href="#cb85-4"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="fu">log2</span>(dollars_per_day))) <span class="sc">+</span></span>
+<span id="cb85-5"><a href="#cb85-5"></a>    <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"black"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Data-visualization_files/figure-html/unnamed-chunk-56-2.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1"></a><span class="co"># repeat histogram with log2 scaled x-axis</span></span>
+<span id="cb86-2"><a href="#cb86-2"></a>gapminder <span class="sc">%&gt;%</span></span>
+<span id="cb86-3"><a href="#cb86-3"></a>    <span class="fu">filter</span>(year <span class="sc">==</span> past_year <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(gdp)) <span class="sc">%&gt;%</span></span>
+<span id="cb86-4"><a href="#cb86-4"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(dollars_per_day)) <span class="sc">+</span></span>
+<span id="cb86-5"><a href="#cb86-5"></a>    <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb86-6"><a href="#cb86-6"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">trans =</span> <span class="st">"log2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Data-visualization_files/figure-html/unnamed-chunk-56-3.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 
@@ -1902,7 +1968,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/quartopub\.com\/sites\/ningli\/statsr/);
+      var filterRegex = new RegExp(/https:\/\/stats-r\.com/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }

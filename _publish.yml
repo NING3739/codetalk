@@ -2,3 +2,6 @@
   quarto-pub:
     - id: 53727982-cd76-4984-803d-3f564e2a8946
       url: 'https://quartopub.com/sites/ningli/statsr'
+  netlify:
+    - id: 844a5dd0-c9a0-405c-8415-ac405e812571
+      url: 'https://stats-r.com'
