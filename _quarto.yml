@@ -6,7 +6,6 @@ website:
     tracking-id: "G-Y96LK2RNJD"
     anonymize-ip: true
   title: "Stats & R"
-  site-url: https://ningli.quarto.pub
   favicon: Stats-&-R.png
   page-navigation: true
   page-footer: 

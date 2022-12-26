@@ -1140,8 +1140,7 @@ gapminder %>% filter(country %in% countries) %>%
 ### Code: Adding text labels to a plot
 
 ::: callout-note
-**labels data frame as the data to ensure where to start label text**
-![](https://raw.githubusercontent.com/NING3739/my-personal-website/main/geom_text.png)
+**labels data frame as the data to ensure where to start label text** ![](https://raw.githubusercontent.com/NING3739/my-personal-website/main/geom_text.png)
 :::
 
 ```{r}
@@ -1157,21 +1156,23 @@ gapminder %>% filter(country %in% countries) %>%
 ## Transformations
 
 ### Key Points
-- We use GDP data to compute income in US dollars per day, adjusted for inflation. 
 
-- Log transformations covert multiplicative changes into additive changes.
+-   We use GDP data to compute income in US dollars per day, adjusted for inflation.
 
-- common transformations are the log base 2 transformation and the log base 10 transformation. The choice of base depends on the range of the data. The natural log is not recommended for visualization because it is difficult to interpret.
+-   Log transformations covert multiplicative changes into additive changes.
 
-- The mode of a distribution is the value with the highest frequency. The mode of a normal distribution is the average. A distribution can have multiple local modes.
+-   common transformations are the log base 2 transformation and the log base 10 transformation. The choice of base depends on the range of the data. The natural log is not recommended for visualization because it is difficult to interpret.
 
-- There are two ways to use log transformations in plots: transform the data before plotting or transform the axes of the plot. Log scales have the advantage of showing the original values as axis labels, while log transformed values ease interpretation of intermediate values between labels.
+-   The mode of a distribution is the value with the highest frequency. The mode of a normal distribution is the average. A distribution can have multiple local modes.
 
-- Scale the x-axis using `scale_x_continuous()` or `scale_x_log10()` layers in ggplot2. Similar functions exist for the y-axis.
+-   There are two ways to use log transformations in plots: transform the data before plotting or transform the axes of the plot. Log scales have the advantage of showing the original values as axis labels, while log transformed values ease interpretation of intermediate values between labels.
 
-- In 1970, income distribution is bimodal, consistent with the dichotomous Western versus developing worldview.
+-   Scale the x-axis using `scale_x_continuous()` or `scale_x_log10()` layers in ggplot2. Similar functions exist for the y-axis.
+
+-   In 1970, income distribution is bimodal, consistent with the dichotomous Western versus developing worldview.
 
 ### Code
+
 ```{r}
 # add dollars per day variable
 gapminder <- gapminder %>% 
@@ -1197,3 +1198,153 @@ gapminder %>%
     geom_histogram(binwidth = 1, color = "black") +
     scale_x_continuous(trans = "log2")
 ```
+
+## Stratify and Boxplot
+
+### Key Points
+
+-   Make boxplots stratified by a categorical variable using the `geom_boxplot()` geometry.
+
+-   Rotate axis labels by changing the theme through `element_text()`. You can change the angle and justification of the text labels.
+
+-   Consider ordering your factors by a meaningful value with the `reorder` function, which changes the order of factor levels based on a related numeric vector. This is a way to ease comparisons.
+
+-   Show the data by adding data points to the boxplot with a `geom_point` layer. This adds information beyond the five-number summary to your plot, but too many data points it can obfuscate your message.
+
+### Code: Boxplot of GDP by region
+
+```{r}
+# add dollars per day variable
+gapminder <- gapminder %>% 
+  mutate(dollars_per_day = gdp/population/365)
+
+# number of regions
+length(levels(gapminder$region))
+
+# boxplot of GDP by region in 1970
+past_year <- 1970
+p <- gapminder %>% 
+     filter(year == past_year & !is.na(gdp)) %>% 
+     ggplot(aes(region, dollars_per_day))
+p + geom_boxplot()
+
+# roation name on x-axis
+p + geom_boxplot() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+### Code: The reorder function
+
+:::{.callout-tip}
+[Reorder a variable with ggplot2](https://r-graph-gallery.com/267-reorder-a-variable-in-ggplot2.html)
+:::
+
+```{r}
+# by default, factor order is alphabetical
+fac <- factor(c("Asia", "Asia", "West", "West", "West"))
+levels(fac)
+
+# reorder factor by the category means
+value <- c(10, 11, 12, 6, 4)
+fac <- reorder(fac, value, FUN = mean)
+levels(fac)
+```
+
+### Code: Enhanced boxplot ordered by median income, scaled, and showing data
+
+```{r}
+# reorder by median income and color by continent 
+p <- gapminder %>%
+    filter(year == past_year & !is.na(gdp)) %>%
+    mutate(region = reorder(region, dollars_per_day, FUN = median)) %>%  # reorder
+    ggplot(aes(region, dollars_per_day, fill = continent)) + # color by continent 
+    geom_boxplot() +
+    theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+    xlab("")
+p
+
+# log2 scale y-axis
+p + scale_y_continuous(trans = "log2")
+
+# add data points
+p + scale_y_continuous(trans = "log2") + geom_point(show.legend = FALSE)
+```
+
+## Comparing Distributions
+:::{.callout-important}
+[intersect(交集);union(并集);setdiff(找不同);setequal(判断相同)](https://blog.csdn.net/woodcorpse/article/details/80494605)
+:::
+
+### Key Points
+- Use `intersect` to find the overlap between two vectors. 
+- To make boxplots where grouped variables are adjacaent, color the boxplot by a factor instead of faceting by that factor. This is a way to ease comparisions. 
+- The data suggest that the income gap between rich and poor countries has narrowed, not expended. 
+
+### Code: Histogram of income in West versus developing world, 1970 and 2010
+```{r}
+# add dollars per day variable and define past year
+gapminder <- gapminder %>% 
+  mutate(dollars_per_day = gdp/population/365)
+past_year <- 1970
+
+# define Western countries
+west <- c("Western Europe", "Northern Europe", "Southern Europe", "Northern America", "Australia and New Zealand")
+
+# facet by West vs Devloping 
+gapminder %>% 
+  filter(year == past_year & !is.na(gdp)) %>% 
+  mutate(group = ifelse(region %in% west, "West", "Developing")) %>% 
+  ggplot(aes(dollars_per_day)) +
+  geom_histogram(binwidth = 1, color = "black") +
+  scale_x_continuous(trans = "log2") +
+  facet_grid(. ~group)
+
+# facet by West/Developing and year
+present_year <- 2010
+gapminder %>%
+    filter(year %in% c(past_year, present_year) & !is.na(gdp)) %>%
+    mutate(group = ifelse(region %in% west, "West", "Developing")) %>%
+    ggplot(aes(dollars_per_day)) +
+    geom_histogram(binwidth = 1, color = "black") +
+    scale_x_continuous(trans = "log2") +
+    facet_grid(year ~ group)
+```
+
+### Code: Income distribution of West verseus Developing world, only countries with data
+```{r}
+# define countries that have data available in both years
+country_list_1 <- gapminder %>% 
+  filter(year == past_year & !is.na(dollars_per_day)) %>% .$country
+
+country_list_2 <- gapminder %>% 
+  filter(year == present_year & !is.na(dollars_per_day)) %>% .$country
+
+country_list <- intersect(country_list_1, country_list_2)
+
+# make histogram including only countries with data availabe in both years
+gapminder %>% 
+  filter(year %in% c(past_year, present_year) & country %in% country_list) %>% # keep only selected countries
+  mutate(group = ifelse(region %in% west, "West", "Developing")) %>% 
+  ggplot(aes(dollars_per_day)) +
+  geom_histogram(binwidth = 1, color = "black") +
+  scale_x_continuous(trans = "log2") +
+  facet_grid(year ~ group)
+```
+
+### Code: Boxplots of income in West versus Developing world, 1970 and 2010
+
+```{r}
+p <- gapminder %>% 
+  filter(year %in% c(past_year, present_year) & country %in% country_list) %>%
+  mutate(region = reorder(region, dollars_per_day, FUN = median)) %>% 
+  ggplot() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  xlab("") + scale_y_continuous(trans = "log2") 
+
+p + geom_boxplot(aes(region, dollars_per_day, fill = continent)) +
+  facet_grid(year ~ .)
+
+# arrange matching boxplots next to each other, colored by year
+p + geom_boxplot(aes(region, dollars_per_day, fill = factor(year)))
+```
+     
