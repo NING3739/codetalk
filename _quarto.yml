@@ -7,6 +7,7 @@ website:
     anonymize-ip: true
   title: "Stats & R"
   favicon: Stats-&-R.png
+  site-url: https://stats-r.com/
   page-navigation: true
   page-footer: 
     left:  "© 2022 Stats & R™ made with❤️ by [NING](about.qmd)"
@@ -20,7 +21,6 @@ website:
   navbar:
     logo: Stats-&-R.png
     logo-alt: "Stats-&-R.png"
-    logo-href: index.qmd
     left:
       - text: "Posts"
         href: posts.qmd
@@ -44,9 +44,6 @@ format:
   html:
     anchor-sections: true
     citations-hover: true
-    comments:
-      hypothesis:
-        theme: clean
     code-fold: true
     code-summary: "show the code"
     code-overflow: scroll

@@ -2,17 +2,17 @@
   {
     "listing": "/series.html",
     "items": [
-      "/series/Probability/Probability.html",
-      "/series/Data Visualization/Data-visualization.html",
-      "/series/R Basic/R-basic.html"
+      "/series/Probability/about.html",
+      "/series/Data Visualization/about.html",
+      "/series/R Basic/about.html"
     ]
   },
   {
     "listing": "/posts.html",
     "items": [
-      "/posts/Dynamic Graph/Graph.html",
-      "/posts/Christmas Tree/christmas_tree.html",
-      "/posts/welcome/welcome.html"
+      "/posts/Dynamic Graph/about.html",
+      "/posts/Christmas Tree/about.html",
+      "/posts/welcome/about.html"
     ]
   }
 ]

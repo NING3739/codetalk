@@ -1,0 +1,34 @@
+---
+title: "Dynamic Graph"
+date: "2022-12-01"
+categories: [code, analysis]
+image: "https://media4.giphy.com/media/bmQBu3aSF0DxadphkG/giphy.gif?cid=ecf05e47meob1g8g28iy7nkmukn31jbyq2jp88g0eqwwedn8&rid=giphy.gif&ct=g"
+description: Make a dynamic graph by gganmate
+format:
+  html:
+    code-fold: false
+---
+
+Here is an example shows how to use **gganmate** package to make a dynamic graph.
+
+# gganmate
+
+## Data from mtcars
+
+```{r}
+library(ggplot2)
+library(gganimate)
+
+ggplot(mtcars, aes(factor(cyl), mpg)) + 
+  geom_boxplot() + 
+  # Here comes the gganimate code
+  transition_states(
+    gear,
+    transition_length = 2,
+    state_length = 1
+  ) +
+  enter_fade() + 
+  exit_shrink() +
+  ease_aes('sine-in-out')
+```
+
