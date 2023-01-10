@@ -1475,6 +1475,116 @@ Important
 <p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-62-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+</section></section><section id="density-plots" class="level2" data-number="4.10"><h2 data-number="4.10" class="anchored" data-anchor-id="density-plots">
+<span class="header-section-number">4.10</span> Density Plots</h2>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><a href="https://bookdown.org/zhongyufei/Data-Handling-in-R/dplyr-functions.html"><strong>dplyr处理数据时常用的的函数</strong></a></p></li>
+<li><p><a href="https://verytoolz.com/blog/4341dd7810/"><strong>在 R Dplyr 包中使用 case when 语句</strong></a></p></li>
+</ul>
+</div>
+</div>
+<section id="key-points-22" class="level3" data-number="4.10.1"><h3 data-number="4.10.1" class="anchored" data-anchor-id="key-points-22">
+<span class="header-section-number">4.10.1</span> Key Points</h3>
+<ul>
+<li><p>Change the y-axis of density plots to variable counts using <code>..count..</code> as the y argument.</p></li>
+<li><p>The <code>case_when()</code> function defines a factor whose levels are defined by a variety of logical operations to group data.</p></li>
+<li><p>Plot stacked density plots using <code>position="stack"</code>.</p></li>
+<li><p>Define a weight aesthetic mapping to change the relative weights of density plots-for example, this allow weighting of plots by population rather than number of countries.</p></li>
+</ul></section><section id="code-faceted-smooth-density-plots" class="level3" data-number="4.10.2"><h3 data-number="4.10.2" class="anchored" data-anchor-id="code-faceted-smooth-density-plots">
+<span class="header-section-number">4.10.2</span> Code: Faceted smooth density plots</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb103" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb103-1"><span class="co" style="color: #5E5E5E;"># see the code below the previous video for variable definitions</span></span>
+<span id="cb103-2"></span>
+<span id="cb103-3"><span class="co" style="color: #5E5E5E;"># smooth density plots - area under each curve adds to 1</span></span>
+<span id="cb103-4">gapminder <span class="sc" style="color: #5E5E5E;">%&gt;%</span> </span>
+<span id="cb103-5">  <span class="fu" style="color: #4758AB;">filter</span>(year <span class="sc" style="color: #5E5E5E;">==</span> past_year <span class="sc" style="color: #5E5E5E;">&amp;</span> country <span class="sc" style="color: #5E5E5E;">%in%</span> country_list) <span class="sc" style="color: #5E5E5E;">%&gt;%</span> </span>
+<span id="cb103-6">  <span class="fu" style="color: #4758AB;">mutate</span>(<span class="at" style="color: #657422;">group =</span> <span class="fu" style="color: #4758AB;">ifelse</span>(region <span class="sc" style="color: #5E5E5E;">%in%</span> west, <span class="st" style="color: #20794D;">"West"</span>, <span class="st" style="color: #20794D;">"Developing"</span>)) <span class="sc" style="color: #5E5E5E;">%&gt;%</span> <span class="fu" style="color: #4758AB;">group_by</span>(group) <span class="sc" style="color: #5E5E5E;">%&gt;%</span> </span>
+<span id="cb103-7">  <span class="fu" style="color: #4758AB;">summarize</span>(<span class="at" style="color: #657422;">n =</span> <span class="fu" style="color: #4758AB;">n</span>()) <span class="sc" style="color: #5E5E5E;">%&gt;%</span> knitr<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">kable</span>()</span></code></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead><tr class="header">
+<th style="text-align: left;">group</th>
+<th style="text-align: right;">n</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Developing</td>
+<td style="text-align: right;">87</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">West</td>
+<td style="text-align: right;">21</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode cell-code" id="cb104" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb104-1"><span class="co" style="color: #5E5E5E;"># smooth density plots - variable counts on y-axis</span></span>
+<span id="cb104-2">p <span class="ot" style="color: #003B4F;">&lt;-</span> gapminder <span class="sc" style="color: #5E5E5E;">%&gt;%</span> </span>
+<span id="cb104-3">  <span class="fu" style="color: #4758AB;">filter</span>(year <span class="sc" style="color: #5E5E5E;">==</span> past_year <span class="sc" style="color: #5E5E5E;">&amp;</span> country <span class="sc" style="color: #5E5E5E;">%in%</span> country_list) <span class="sc" style="color: #5E5E5E;">%&gt;%</span> </span>
+<span id="cb104-4">  <span class="fu" style="color: #4758AB;">mutate</span>(<span class="at" style="color: #657422;">group =</span> <span class="fu" style="color: #4758AB;">ifelse</span>(region <span class="sc" style="color: #5E5E5E;">%in%</span> west, <span class="st" style="color: #20794D;">"West"</span>, <span class="st" style="color: #20794D;">"Developing"</span>)) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
+<span id="cb104-5">  <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(dollars_per_day, <span class="at" style="color: #657422;">y =</span> ..count.., <span class="at" style="color: #657422;">fill =</span> group)) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb104-6">  <span class="fu" style="color: #4758AB;">scale_x_continuous</span>(<span class="at" style="color: #657422;">trans =</span> <span class="st" style="color: #20794D;">"log2"</span>)</span>
+<span id="cb104-7">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_density</span>(<span class="at" style="color: #657422;">alpha =</span> <span class="fl" style="color: #AD0000;">0.2</span>, <span class="at" style="color: #657422;">bw =</span> <span class="fl" style="color: #AD0000;">0.75</span>) <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">facet_grid</span>(year <span class="sc" style="color: #5E5E5E;">~</span> .)</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-63-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section><section id="code-add-new-region-group-with-case_when" class="level3" data-number="4.10.3"><h3 data-number="4.10.3" class="anchored" data-anchor-id="code-add-new-region-group-with-case_when">
+<span class="header-section-number">4.10.3</span> Code: Add new region group with case_when</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb105" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb105-1"><span class="co" style="color: #5E5E5E;"># add group as a factor, grouping regions</span></span>
+<span id="cb105-2">gapminder <span class="ot" style="color: #003B4F;">&lt;-</span> gapminder <span class="sc" style="color: #5E5E5E;">%&gt;%</span> </span>
+<span id="cb105-3">  <span class="fu" style="color: #4758AB;">mutate</span>(<span class="at" style="color: #657422;">group =</span> <span class="fu" style="color: #4758AB;">case_when</span>(</span>
+<span id="cb105-4">    .<span class="sc" style="color: #5E5E5E;">$</span>region <span class="sc" style="color: #5E5E5E;">%in%</span> west <span class="sc" style="color: #5E5E5E;">~</span> <span class="st" style="color: #20794D;">"West"</span>,</span>
+<span id="cb105-5">    .<span class="sc" style="color: #5E5E5E;">$</span>region <span class="sc" style="color: #5E5E5E;">%in%</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"Eastern Asia"</span>, <span class="st" style="color: #20794D;">"South-Eastern Asia"</span>) <span class="sc" style="color: #5E5E5E;">~</span> <span class="st" style="color: #20794D;">"East Asia"</span>, </span>
+<span id="cb105-6">    .<span class="sc" style="color: #5E5E5E;">$</span>region <span class="sc" style="color: #5E5E5E;">%in%</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"Caribbean"</span>, <span class="st" style="color: #20794D;">"Central America"</span>, <span class="st" style="color: #20794D;">"South America"</span>) <span class="sc" style="color: #5E5E5E;">~</span> <span class="st" style="color: #20794D;">"Latin America"</span>,</span>
+<span id="cb105-7">    .<span class="sc" style="color: #5E5E5E;">$</span>continent <span class="sc" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">"Africa"</span> <span class="sc" style="color: #5E5E5E;">&amp;</span> .<span class="sc" style="color: #5E5E5E;">$</span>region <span class="sc" style="color: #5E5E5E;">!=</span> <span class="st" style="color: #20794D;">"Northern Africa"</span> <span class="sc" style="color: #5E5E5E;">~</span> <span class="st" style="color: #20794D;">"Sub-Saharan Africa"</span>, <span class="cn" style="color: #8f5902;">TRUE</span> <span class="sc" style="color: #5E5E5E;">~</span> <span class="st" style="color: #20794D;">"Others"</span>))</span>
+<span id="cb105-8"></span>
+<span id="cb105-9"><span class="co" style="color: #5E5E5E;"># reorder factor levels</span></span>
+<span id="cb105-10">gapminder <span class="ot" style="color: #003B4F;">&lt;-</span> gapminder <span class="sc" style="color: #5E5E5E;">%&gt;%</span> </span>
+<span id="cb105-11">  <span class="fu" style="color: #4758AB;">mutate</span>(<span class="at" style="color: #657422;">group =</span> <span class="fu" style="color: #4758AB;">factor</span>(group, <span class="at" style="color: #657422;">levels =</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"Others"</span>, <span class="st" style="color: #20794D;">"Latin America"</span>, <span class="st" style="color: #20794D;">"East Asia"</span>, <span class="st" style="color: #20794D;">"Sub-Saharan Africa"</span>, <span class="st" style="color: #20794D;">"West"</span>)))</span></code></pre></div>
+</div>
+</section><section id="code-stacked-density-plot" class="level3" data-number="4.10.4"><h3 data-number="4.10.4" class="anchored" data-anchor-id="code-stacked-density-plot">
+<span class="header-section-number">4.10.4</span> Code: Stacked density plot</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb106" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb106-1"><span class="co" style="color: #5E5E5E;"># note you must redefine p with the new gapminder object first</span></span>
+<span id="cb106-2">p <span class="ot" style="color: #003B4F;">&lt;-</span> gapminder <span class="sc" style="color: #5E5E5E;">%&gt;%</span> </span>
+<span id="cb106-3">  <span class="fu" style="color: #4758AB;">filter</span>(year <span class="sc" style="color: #5E5E5E;">%in%</span> <span class="fu" style="color: #4758AB;">c</span>(past_year, present_year) <span class="sc" style="color: #5E5E5E;">&amp;</span> country <span class="sc" style="color: #5E5E5E;">%in%</span> country_list) <span class="sc" style="color: #5E5E5E;">%&gt;%</span> </span>
+<span id="cb106-4">  <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(dollars_per_day, <span class="at" style="color: #657422;">fill =</span> group)) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb106-5">  <span class="fu" style="color: #4758AB;">scale_x_continuous</span>(<span class="at" style="color: #657422;">trans =</span> <span class="st" style="color: #20794D;">"log2"</span>)</span>
+<span id="cb106-6"></span>
+<span id="cb106-7"><span class="co" style="color: #5E5E5E;"># stacked density plot</span></span>
+<span id="cb106-8">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_density</span>(<span class="at" style="color: #657422;">alpha =</span> <span class="fl" style="color: #AD0000;">0.2</span>, <span class="at" style="color: #657422;">bw =</span> <span class="fl" style="color: #AD0000;">0.75</span>, <span class="at" style="color: #657422;">position =</span> <span class="st" style="color: #20794D;">"stack"</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb106-9">  <span class="fu" style="color: #4758AB;">facet_grid</span>(year <span class="sc" style="color: #5E5E5E;">~</span> .)</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-65-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section><section id="code-weighted-stacked-density-plot" class="level3" data-number="4.10.5"><h3 data-number="4.10.5" class="anchored" data-anchor-id="code-weighted-stacked-density-plot">
+<span class="header-section-number">4.10.5</span> Code: Weighted stacked density plot</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb107" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb107-1">gapminder <span class="sc" style="color: #5E5E5E;">%&gt;%</span> </span>
+<span id="cb107-2">  <span class="fu" style="color: #4758AB;">filter</span>(year <span class="sc" style="color: #5E5E5E;">%in%</span> <span class="fu" style="color: #4758AB;">c</span>(past_year, present_year) <span class="sc" style="color: #5E5E5E;">&amp;</span> country <span class="sc" style="color: #5E5E5E;">%in%</span> country_list) <span class="sc" style="color: #5E5E5E;">%&gt;%</span> </span>
+<span id="cb107-3">  <span class="fu" style="color: #4758AB;">group_by</span>(year) <span class="sc" style="color: #5E5E5E;">%&gt;%</span> </span>
+<span id="cb107-4">  <span class="fu" style="color: #4758AB;">mutate</span>(<span class="at" style="color: #657422;">weight =</span> population<span class="sc" style="color: #5E5E5E;">/</span><span class="fu" style="color: #4758AB;">sum</span>(population<span class="sc" style="color: #5E5E5E;">*</span><span class="dv" style="color: #AD0000;">2</span>)) <span class="sc" style="color: #5E5E5E;">%&gt;%</span> </span>
+<span id="cb107-5">  <span class="fu" style="color: #4758AB;">ungroup</span>() <span class="sc" style="color: #5E5E5E;">%&gt;%</span> </span>
+<span id="cb107-6">  <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(dollars_per_day, <span class="at" style="color: #657422;">fill =</span> group, <span class="at" style="color: #657422;">weight =</span> weight)) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb107-7">  <span class="fu" style="color: #4758AB;">scale_x_continuous</span>(<span class="at" style="color: #657422;">trans =</span> <span class="st" style="color: #20794D;">"log2"</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb107-8">  <span class="fu" style="color: #4758AB;">geom_density</span>(<span class="at" style="color: #657422;">alpha =</span> <span class="fl" style="color: #AD0000;">0.2</span>, <span class="at" style="color: #657422;">bw =</span> <span class="fl" style="color: #AD0000;">0.75</span>, <span class="at" style="color: #657422;">position =</span> <span class="st" style="color: #20794D;">"stack"</span>) <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">facet_grid</span>(year <span class="sc" style="color: #5E5E5E;">~</span> .)</span></code></pre></div>
+<div class="cell-output-display">
+<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/Data-visualization_files/figure-html/unnamed-chunk-66-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 
 
 </section></section></section> ]]></description>

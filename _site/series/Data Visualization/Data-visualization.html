@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.2.313">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="dcterms.date" content="2022-12-01">
 <meta name="description" content="Data Science-Data Visualization">
@@ -446,6 +446,22 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
   <li><a href="#code-histogram-of-income-in-west-versus-developing-world-1970-and-2010" id="toc-code-histogram-of-income-in-west-versus-developing-world-1970-and-2010" class="nav-link" data-scroll-target="#code-histogram-of-income-in-west-versus-developing-world-1970-and-2010"><span class="toc-section-number">4.9.2</span>  Code: Histogram of income in West versus developing world, 1970 and 2010</a></li>
   <li><a href="#code-income-distribution-of-west-verseus-developing-world-only-countries-with-data" id="toc-code-income-distribution-of-west-verseus-developing-world-only-countries-with-data" class="nav-link" data-scroll-target="#code-income-distribution-of-west-verseus-developing-world-only-countries-with-data"><span class="toc-section-number">4.9.3</span>  Code: Income distribution of West verseus Developing world, only countries with data</a></li>
   <li><a href="#code-boxplots-of-income-in-west-versus-developing-world-1970-and-2010" id="toc-code-boxplots-of-income-in-west-versus-developing-world-1970-and-2010" class="nav-link" data-scroll-target="#code-boxplots-of-income-in-west-versus-developing-world-1970-and-2010"><span class="toc-section-number">4.9.4</span>  Code: Boxplots of income in West versus Developing world, 1970 and 2010</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#density-plots" id="toc-density-plots" class="nav-link" data-scroll-target="#density-plots"><span class="toc-section-number">4.10</span>  Density Plots</a>
+  <ul class="collapse">
+<li><a href="#key-points-22" id="toc-key-points-22" class="nav-link" data-scroll-target="#key-points-22"><span class="toc-section-number">4.10.1</span>  Key Points</a></li>
+  <li><a href="#code-faceted-smooth-density-plots" id="toc-code-faceted-smooth-density-plots" class="nav-link" data-scroll-target="#code-faceted-smooth-density-plots"><span class="toc-section-number">4.10.2</span>  Code: Faceted smooth density plots</a></li>
+  <li><a href="#code-add-new-region-group-with-case_when" id="toc-code-add-new-region-group-with-case_when" class="nav-link" data-scroll-target="#code-add-new-region-group-with-case_when"><span class="toc-section-number">4.10.3</span>  Code: Add new region group with case_when</a></li>
+  <li><a href="#code-stacked-density-plot" id="toc-code-stacked-density-plot" class="nav-link" data-scroll-target="#code-stacked-density-plot"><span class="toc-section-number">4.10.4</span>  Code: Stacked density plot</a></li>
+  <li><a href="#code-weighted-stacked-density-plot" id="toc-code-weighted-stacked-density-plot" class="nav-link" data-scroll-target="#code-weighted-stacked-density-plot"><span class="toc-section-number">4.10.5</span>  Code: Weighted stacked density plot</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#ecological-fallacy" id="toc-ecological-fallacy" class="nav-link" data-scroll-target="#ecological-fallacy"><span class="toc-section-number">4.11</span>  Ecological Fallacy</a>
+  <ul class="collapse">
+<li><a href="#key-points-23" id="toc-key-points-23" class="nav-link" data-scroll-target="#key-points-23"><span class="toc-section-number">4.11.1</span>  Key Points</a></li>
   </ul>
 </li>
   </ul>
@@ -1931,6 +1947,120 @@ Important
 <p><img src="Data-visualization_files/figure-html/unnamed-chunk-62-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+</section></section><section id="density-plots" class="level2" data-number="4.10"><h2 data-number="4.10" class="anchored" data-anchor-id="density-plots">
+<span class="header-section-number">4.10</span> Density Plots</h2>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><a href="https://bookdown.org/zhongyufei/Data-Handling-in-R/dplyr-functions.html"><strong>dplyr处理数据时常用的的函数</strong></a></p></li>
+<li><p><a href="https://verytoolz.com/blog/4341dd7810/"><strong>在 R Dplyr 包中使用 case when 语句</strong></a></p></li>
+</ul>
+</div>
+</div>
+<section id="key-points-22" class="level3" data-number="4.10.1"><h3 data-number="4.10.1" class="anchored" data-anchor-id="key-points-22">
+<span class="header-section-number">4.10.1</span> Key Points</h3>
+<ul>
+<li><p>Change the y-axis of density plots to variable counts using <code>..count..</code> as the y argument.</p></li>
+<li><p>The <code>case_when()</code> function defines a factor whose levels are defined by a variety of logical operations to group data.</p></li>
+<li><p>Plot stacked density plots using <code>position="stack"</code>.</p></li>
+<li><p>Define a weight aesthetic mapping to change the relative weights of density plots-for example, this allow weighting of plots by population rather than number of countries.</p></li>
+</ul></section><section id="code-faceted-smooth-density-plots" class="level3" data-number="4.10.2"><h3 data-number="4.10.2" class="anchored" data-anchor-id="code-faceted-smooth-density-plots">
+<span class="header-section-number">4.10.2</span> Code: Faceted smooth density plots</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1"></a><span class="co"># see the code below the previous video for variable definitions</span></span>
+<span id="cb103-2"><a href="#cb103-2"></a></span>
+<span id="cb103-3"><a href="#cb103-3"></a><span class="co"># smooth density plots - area under each curve adds to 1</span></span>
+<span id="cb103-4"><a href="#cb103-4"></a>gapminder <span class="sc">%&gt;%</span> </span>
+<span id="cb103-5"><a href="#cb103-5"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> past_year <span class="sc">&amp;</span> country <span class="sc">%in%</span> country_list) <span class="sc">%&gt;%</span> </span>
+<span id="cb103-6"><a href="#cb103-6"></a>  <span class="fu">mutate</span>(<span class="at">group =</span> <span class="fu">ifelse</span>(region <span class="sc">%in%</span> west, <span class="st">"West"</span>, <span class="st">"Developing"</span>)) <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(group) <span class="sc">%&gt;%</span> </span>
+<span id="cb103-7"><a href="#cb103-7"></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span> knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead><tr class="header">
+<th style="text-align: left;">group</th>
+<th style="text-align: right;">n</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Developing</td>
+<td style="text-align: right;">87</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">West</td>
+<td style="text-align: right;">21</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1"></a><span class="co"># smooth density plots - variable counts on y-axis</span></span>
+<span id="cb104-2"><a href="#cb104-2"></a>p <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span> </span>
+<span id="cb104-3"><a href="#cb104-3"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> past_year <span class="sc">&amp;</span> country <span class="sc">%in%</span> country_list) <span class="sc">%&gt;%</span> </span>
+<span id="cb104-4"><a href="#cb104-4"></a>  <span class="fu">mutate</span>(<span class="at">group =</span> <span class="fu">ifelse</span>(region <span class="sc">%in%</span> west, <span class="st">"West"</span>, <span class="st">"Developing"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb104-5"><a href="#cb104-5"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(dollars_per_day, <span class="at">y =</span> ..count.., <span class="at">fill =</span> group)) <span class="sc">+</span></span>
+<span id="cb104-6"><a href="#cb104-6"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">trans =</span> <span class="st">"log2"</span>)</span>
+<span id="cb104-7"><a href="#cb104-7"></a>p <span class="sc">+</span> <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.2</span>, <span class="at">bw =</span> <span class="fl">0.75</span>) <span class="sc">+</span> <span class="fu">facet_grid</span>(year <span class="sc">~</span> .)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Data-visualization_files/figure-html/unnamed-chunk-63-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section><section id="code-add-new-region-group-with-case_when" class="level3" data-number="4.10.3"><h3 data-number="4.10.3" class="anchored" data-anchor-id="code-add-new-region-group-with-case_when">
+<span class="header-section-number">4.10.3</span> Code: Add new region group with case_when</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a href="#cb105-1"></a><span class="co"># add group as a factor, grouping regions</span></span>
+<span id="cb105-2"><a href="#cb105-2"></a>gapminder <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span> </span>
+<span id="cb105-3"><a href="#cb105-3"></a>  <span class="fu">mutate</span>(<span class="at">group =</span> <span class="fu">case_when</span>(</span>
+<span id="cb105-4"><a href="#cb105-4"></a>    .<span class="sc">$</span>region <span class="sc">%in%</span> west <span class="sc">~</span> <span class="st">"West"</span>,</span>
+<span id="cb105-5"><a href="#cb105-5"></a>    .<span class="sc">$</span>region <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Eastern Asia"</span>, <span class="st">"South-Eastern Asia"</span>) <span class="sc">~</span> <span class="st">"East Asia"</span>, </span>
+<span id="cb105-6"><a href="#cb105-6"></a>    .<span class="sc">$</span>region <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Caribbean"</span>, <span class="st">"Central America"</span>, <span class="st">"South America"</span>) <span class="sc">~</span> <span class="st">"Latin America"</span>,</span>
+<span id="cb105-7"><a href="#cb105-7"></a>    .<span class="sc">$</span>continent <span class="sc">==</span> <span class="st">"Africa"</span> <span class="sc">&amp;</span> .<span class="sc">$</span>region <span class="sc">!=</span> <span class="st">"Northern Africa"</span> <span class="sc">~</span> <span class="st">"Sub-Saharan Africa"</span>, <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"Others"</span>))</span>
+<span id="cb105-8"><a href="#cb105-8"></a></span>
+<span id="cb105-9"><a href="#cb105-9"></a><span class="co"># reorder factor levels</span></span>
+<span id="cb105-10"><a href="#cb105-10"></a>gapminder <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span> </span>
+<span id="cb105-11"><a href="#cb105-11"></a>  <span class="fu">mutate</span>(<span class="at">group =</span> <span class="fu">factor</span>(group, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Others"</span>, <span class="st">"Latin America"</span>, <span class="st">"East Asia"</span>, <span class="st">"Sub-Saharan Africa"</span>, <span class="st">"West"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="code-stacked-density-plot" class="level3" data-number="4.10.4"><h3 data-number="4.10.4" class="anchored" data-anchor-id="code-stacked-density-plot">
+<span class="header-section-number">4.10.4</span> Code: Stacked density plot</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href="#cb106-1"></a><span class="co"># note you must redefine p with the new gapminder object first</span></span>
+<span id="cb106-2"><a href="#cb106-2"></a>p <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span> </span>
+<span id="cb106-3"><a href="#cb106-3"></a>  <span class="fu">filter</span>(year <span class="sc">%in%</span> <span class="fu">c</span>(past_year, present_year) <span class="sc">&amp;</span> country <span class="sc">%in%</span> country_list) <span class="sc">%&gt;%</span> </span>
+<span id="cb106-4"><a href="#cb106-4"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(dollars_per_day, <span class="at">fill =</span> group)) <span class="sc">+</span></span>
+<span id="cb106-5"><a href="#cb106-5"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">trans =</span> <span class="st">"log2"</span>)</span>
+<span id="cb106-6"><a href="#cb106-6"></a></span>
+<span id="cb106-7"><a href="#cb106-7"></a><span class="co"># stacked density plot</span></span>
+<span id="cb106-8"><a href="#cb106-8"></a>p <span class="sc">+</span> <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.2</span>, <span class="at">bw =</span> <span class="fl">0.75</span>, <span class="at">position =</span> <span class="st">"stack"</span>) <span class="sc">+</span></span>
+<span id="cb106-9"><a href="#cb106-9"></a>  <span class="fu">facet_grid</span>(year <span class="sc">~</span> .)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Data-visualization_files/figure-html/unnamed-chunk-65-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section><section id="code-weighted-stacked-density-plot" class="level3" data-number="4.10.5"><h3 data-number="4.10.5" class="anchored" data-anchor-id="code-weighted-stacked-density-plot">
+<span class="header-section-number">4.10.5</span> Code: Weighted stacked density plot</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a href="#cb107-1"></a>gapminder <span class="sc">%&gt;%</span> </span>
+<span id="cb107-2"><a href="#cb107-2"></a>  <span class="fu">filter</span>(year <span class="sc">%in%</span> <span class="fu">c</span>(past_year, present_year) <span class="sc">&amp;</span> country <span class="sc">%in%</span> country_list) <span class="sc">%&gt;%</span> </span>
+<span id="cb107-3"><a href="#cb107-3"></a>  <span class="fu">group_by</span>(year) <span class="sc">%&gt;%</span> </span>
+<span id="cb107-4"><a href="#cb107-4"></a>  <span class="fu">mutate</span>(<span class="at">weight =</span> population<span class="sc">/</span><span class="fu">sum</span>(population<span class="sc">*</span><span class="dv">2</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb107-5"><a href="#cb107-5"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb107-6"><a href="#cb107-6"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(dollars_per_day, <span class="at">fill =</span> group, <span class="at">weight =</span> weight)) <span class="sc">+</span></span>
+<span id="cb107-7"><a href="#cb107-7"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">trans =</span> <span class="st">"log2"</span>) <span class="sc">+</span></span>
+<span id="cb107-8"><a href="#cb107-8"></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.2</span>, <span class="at">bw =</span> <span class="fl">0.75</span>, <span class="at">position =</span> <span class="st">"stack"</span>) <span class="sc">+</span> <span class="fu">facet_grid</span>(year <span class="sc">~</span> .)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Data-visualization_files/figure-html/unnamed-chunk-66-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section></section><section id="ecological-fallacy" class="level2" data-number="4.11"><h2 data-number="4.11" class="anchored" data-anchor-id="ecological-fallacy">
+<span class="header-section-number">4.11</span> Ecological Fallacy</h2>
+<section id="key-points-23" class="level3" data-number="4.11.1"><h3 data-number="4.11.1" class="anchored" data-anchor-id="key-points-23">
+<span class="header-section-number">4.11.1</span> Key Points</h3>
 
 
 </section></section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
@@ -2180,7 +2310,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/quartopub\.com\/sites\/ningli\/statsr/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
