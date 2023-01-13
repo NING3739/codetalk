@@ -8,6 +8,14 @@
     ]
   },
   {
+    "listing": "/index.html",
+    "items": [
+      "/posts/Dynamic Graph/about.html",
+      "/posts/Christmas Tree/about.html",
+      "/posts/welcome/about.html"
+    ]
+  },
+  {
     "listing": "/posts.html",
     "items": [
       "/posts/Dynamic Graph/about.html",

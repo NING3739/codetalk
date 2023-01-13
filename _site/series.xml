@@ -189,7 +189,7 @@ Important
 <p>Every <em>continuous distribution</em> has <em>cumulative distribution function (CDF)</em>. The CDF defines the proportion of the data below a given value for all values of <img src="https://latex.codecogs.com/png.latex?a"> :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p></p><figcaption class="figure-caption">Cumulative Distribution Function (CDF)</figcaption><p></p>
-<p><img src="https://stats-r.com/series/Data Visualization/http:/rafalab.dfci.harvard.edu/dsbook/book_files/figure-html/ecdf-1.png" class="img-fluid figure-img"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/https:/rafalab.dfci.harvard.edu/dsbook/book_files/figure-html/ecdf-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>As defined above, this plot of the CDF for male heights has height value <em>a</em> on the x-axis and the proportion of student with heights of that value or lower(<em>F(</em>a<em>)</em>) on the y-axis.</p>

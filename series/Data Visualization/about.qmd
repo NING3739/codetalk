@@ -151,7 +151,7 @@ prop.table(table(heights$sex))
 
 Every *continuous distribution* has *cumulative distribution function (CDF)*. The CDF defines the proportion of the data below a given value for all values of $a$ :
 
-![Cumulative Distribution Function (CDF)](http://rafalab.dfci.harvard.edu/dsbook/book_files/figure-html/ecdf-1.png)
+![Cumulative Distribution Function (CDF)](https://rafalab.dfci.harvard.edu/dsbook/book_files/figure-html/ecdf-1.png)
 
 As defined above, this plot of the CDF for male heights has height value *a* on the x-axis and the proportion of student with heights of that value or lower(*F(*a*)*) on the y-axis.
 

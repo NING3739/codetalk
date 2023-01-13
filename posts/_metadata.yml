@@ -16,7 +16,6 @@ toc-depth: 3
 
 # page-layout
 page-layout: full 
-
 # comments
 comments: 
   giscus: 
@@ -27,4 +26,6 @@ comments:
     mapping: url
     input-position: bottom
     theme: preferred_color_scheme
+
+
 

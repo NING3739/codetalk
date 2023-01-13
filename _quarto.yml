@@ -59,9 +59,9 @@ format:
     highlight-style: github
     html-math-method: katex
     smooth-scroll: true
-    theme: 
-      light: Litera
-      dark: superhero
+    theme: superhero
+      #light: Litera
+      #dark: superhero
     toc: true
     toc-title: Contents
     toc-location: left
