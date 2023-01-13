@@ -11,14 +11,15 @@ listing:
 format:
   html:
     toc: false
+
+css: styles.css
 ---
 
-::: column-page
+
 ![](https://media3.giphy.com/media/2L8AviEEaIW2DcXGg0/giphy.gif?cid=ecf05e47squf2aep9xwfuuxs5a3o604416nte3wlabz8fvo8&rid=giphy.gif&ct=g){fig-align="center"}
 
-::: column-body-outset-right
-# Welcome to Stats & R!!!
-:::
+
+# Welcome to Stats & R!!! {.center-text}
 
 This is a personal website with the contents of **statistics** and the **open-source** [R](https://www.r-project.org/) **language**, aiming to facilitate **academic exchanges** and better **promote myself**.
 
@@ -977,4 +978,3 @@ Thanks again for coming to my personal website.😘
       <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v300817f630ad0e957914d0b28a2b6d78" type="text/javascript"></script>
 ```
 
-:::
