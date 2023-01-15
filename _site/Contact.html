@@ -144,8 +144,9 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 
 
 
-<section id="get-in-touch" class="level1 column-page">
-<h1>📬 Get In Touch</h1>
+<div class="column-page">
+<section id="get-in-touch" class="level1">
+<h1>💌 Get In Touch</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://media1.giphy.com/media/3o8dp3rE9m8IYtZcCQ/giphy.gif?cid=ecf05e4763y1aocmf0top0mat5l4638y3yspqsh08ehc1jb4&amp;rid=giphy.gif&amp;ct=g" class="img-fluid figure-img"></p>
@@ -162,6 +163,36 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 <script src="https://giscus.app/client.js" data-repo="NING3739/my-personal-website" data-repo-id="R_kgDOIYBxAA" data-category="Comments" data-category-id="DIC_kwDOIYBxAM4CS2io" data-mapping="url" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </section>
+<section id="subscribe" class="level1">
+<h1>📣 Subscribe</h1>
+<div style="background-color: #0F2437; text-align: center; width:100%">
+  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display: flex; flex-wrap: wrap; justify-content: left;">
+    <div style="width: 50%; margin: 10px 0; text-align: justify-all; color: #EAEAEA; font-family: lato; font-weight: bold; font-size: 25px">
+      <label for="name">Name:</label>
+    </div>
+    <div style="width: 50%; margin: 10px 0; text-align: justify;color:#EBEBEB;">
+      <input type="text" id="name" name="name" required="" style="width: 70%; font-family: lato; background-color: #EBEBEB;">
+    </div>
+    <div style="width: 50%; margin: 10px 0; text-align: justify-all; color: #EBEBEB; font-family: lato; font-weight: bold; font-size: 25px">
+      <label for="email">Email:</label>
+    </div>
+    <div style="width: 50%; margin: 10px 0; text-align: justify; color: #EBEBEB">
+      <input type="email" id="email" name="email" required="" style="width: 70%; font-family: lato ;background-color: #EBEBEB">
+    </div>
+    <div style="width: 50%; margin: 10px 0; text-align: justify-all; color: #EBEBEB; font-family: lato ; font-weight: bold;font-size: 25px">
+      <label for="message">Message:</label>
+    </div>
+    <div style="width: 50%; margin: 10px 0; text-align: justify; color:#EBEBEB">
+      <textarea id="message" name="message" rows="6" required="" style="width: 70%; font-family: lato ;background-color: #EBEBEB"></textarea>
+    </div>
+    <div style="width: 100%; text-align: center; margin-top: 10px; color: #0F2437;font-weight: bold">
+      <input type="submit" value="Submit" style="width:28%; font-style: lato; font-size: 25px; color: #0F2437; font-weight: bold; background-color: #EBEBEB">
+    </div>
+    <input type="hidden" name="form-name" value="contact">
+  </form>
+</div>
+</section>
+</div>
 
 
 
@@ -298,7 +329,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/quartopub\.com\/sites\/ningli\/statsr/);
+      var filterRegex = new RegExp(/https:\/\/stats-r\.com\//);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
