@@ -6,24 +6,18 @@
       version="2.0">
 <channel>
 <title>Stats &amp; R</title>
-<link>https://stats-r.com/posts.html</link>
-<atom:link href="https://stats-r.com/posts.xml" rel="self" type="application/rss+xml"/>
+<link>https://quartopub.com/sites/ningli/statsr/posts.html</link>
+<atom:link href="https://quartopub.com/sites/ningli/statsr/posts.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.2.313</generator>
 <lastBuildDate>Wed, 30 Nov 2022 11:00:00 GMT</lastBuildDate>
 <item>
   <title>Dynamic Graph</title>
   <dc:creator>NING LI</dc:creator>
-  <link>https://stats-r.com/posts/Dynamic Graph/about.html</link>
-  <description><![CDATA[ 
-
-
-
-<p>Here is an example shows how to use <strong>gganmate</strong> package to make a dynamic graph.</p>
-<section id="gganmate" class="level1">
-<h1>gganmate</h1>
-<section id="data-from-mtcars" class="level2">
-<h2 class="anchored" data-anchor-id="data-from-mtcars">Data from mtcars</h2>
+  <link>https://quartopub.com/sites/ningli/statsr/posts/Dynamic Graph/about.html</link>
+  <description><![CDATA[ <p>Here is an example shows how to use <strong>gganmate</strong> package to make a dynamic graph.</p>
+<section id="gganmate" class="level1"><h1>gganmate</h1>
+<section id="data-from-mtcars" class="level2"><h2 class="anchored" data-anchor-id="data-from-mtcars">Data from mtcars</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;">library</span>(ggplot2)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;">library</span>(gganimate)</span>
@@ -40,32 +34,24 @@
 <span id="cb1-13">  <span class="fu" style="color: #4758AB;">exit_shrink</span>() <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb1-14">  <span class="fu" style="color: #4758AB;">ease_aes</span>(<span class="st" style="color: #20794D;">'sine-in-out'</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://stats-r.com/posts/Dynamic Graph/about_files/figure-html/unnamed-chunk-1-1.gif" class="img-fluid"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/posts/Dynamic Graph/about_files/figure-html/unnamed-chunk-1-1.gif" class="img-fluid"></p>
 </div>
 </div>
 
 
-</section>
-</section>
-
- ]]></description>
+</section></section> ]]></description>
   <category>code</category>
   <category>analysis</category>
-  <guid>https://stats-r.com/posts/Dynamic Graph/about.html</guid>
+  <guid>https://quartopub.com/sites/ningli/statsr/posts/Dynamic Graph/about.html</guid>
   <pubDate>Wed, 30 Nov 2022 11:00:00 GMT</pubDate>
   <media:content url="https://media4.giphy.com/media/bmQBu3aSF0DxadphkG/giphy.gif?cid=ecf05e47meob1g8g28iy7nkmukn31jbyq2jp88g0eqwwedn8&amp;rid=giphy.gif&amp;ct=g" medium="image"/>
 </item>
 <item>
   <title>Christmas Tree</title>
   <dc:creator>NING LI</dc:creator>
-  <link>https://stats-r.com/posts/Christmas Tree/about.html</link>
-  <description><![CDATA[ 
-
-
-
-<p>Let us use <strong>ggplot2</strong> to make a Christmas Tree.</p>
-<section id="code" class="level1">
-<h1>Code</h1>
+  <link>https://quartopub.com/sites/ningli/statsr/posts/Christmas Tree/about.html</link>
+  <description><![CDATA[ <p>Let us use <strong>ggplot2</strong> to make a Christmas Tree.</p>
+<section id="code" class="level1"><h1>Code</h1>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;">rm</span>(<span class="at" style="color: #657422;">list =</span> <span class="fu" style="color: #4758AB;">ls</span>())</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;">library</span>(ggplot2)</span>
@@ -120,23 +106,21 @@
 <span id="cb1-51"><span class="fu" style="color: #4758AB;">ggtitle</span>(<span class="st" style="color: #20794D;">'Merry Christmas'</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb1-52"><span class="fu" style="color: #4758AB;">theme</span>(<span class="at" style="color: #657422;">plot.title =</span> <span class="fu" style="color: #4758AB;">element_text</span>(<span class="at" style="color: #657422;">color =</span> <span class="st" style="color: #20794D;">"red"</span>, <span class="at" style="color: #657422;">hjust =</span> <span class="fl" style="color: #AD0000;">0.5</span>))</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://stats-r.com/posts/Christmas Tree/about_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://quartopub.com/sites/ningli/statsr/posts/Christmas Tree/about_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 
 
-</section>
-
- ]]></description>
+</section> ]]></description>
   <category>code</category>
-  <guid>https://stats-r.com/posts/Christmas Tree/about.html</guid>
+  <guid>https://quartopub.com/sites/ningli/statsr/posts/Christmas Tree/about.html</guid>
   <pubDate>Tue, 29 Nov 2022 11:00:00 GMT</pubDate>
   <media:content url="https://media2.giphy.com/media/R7AW255ijTdV6/giphy.gif?cid=ecf05e47fer2fd1d7u1mh7d3ijl0wrpcib7o57odywu4axdd&amp;rid=giphy.gif&amp;ct=g" medium="image"/>
 </item>
 <item>
   <title>Welcome</title>
   <dc:creator>NING LI</dc:creator>
-  <link>https://stats-r.com/posts/welcome/about.html</link>
+  <link>https://quartopub.com/sites/ningli/statsr/posts/welcome/about.html</link>
   <description><![CDATA[ 
 
 
@@ -147,7 +131,7 @@
 
  ]]></description>
   <category>news</category>
-  <guid>https://stats-r.com/posts/welcome/about.html</guid>
+  <guid>https://quartopub.com/sites/ningli/statsr/posts/welcome/about.html</guid>
   <pubDate>Sat, 26 Nov 2022 11:00:00 GMT</pubDate>
   <media:content url="https://media1.giphy.com/media/3YX5uFD3ksn5QGhQCQ/giphy.gif?cid=ecf05e47wh8zqk5qrx69zxo06440kl54py9vudby0dhlldj2&amp;rid=giphy.gif&amp;ct=g" medium="image"/>
 </item>

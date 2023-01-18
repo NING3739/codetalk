@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.313">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="dcterms.date" content="2022-12-01">
 <meta name="description" content="Data Science-Data Visualization">
-
 <title>Stats &amp; R - Data Visualization</title>
 <style>
 code{white-space: pre-wrap;}
@@ -87,7 +84,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -103,8 +99,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -122,23 +117,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y96LK2RNJD"></script>
-
-<script type="text/javascript">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y96LK2RNJD"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
-</script>
-<style>html{ scroll-behavior: smooth; }</style>
-<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
-
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
+</script><style>html{ scroll-behavior: smooth; }</style>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script><script src="../../site_libs/quarto-diagram/mermaid-init.js"></script><link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script><script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
  var macros = [];
  for (var i = 0; i < mathElements.length; i++) {
@@ -151,22 +138,16 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
     fleqn: false
    });
 }}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
-
+  </script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 <link rel="stylesheet" href="../../styles.css">
 </head>
-
 <body class="floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../Stats-&amp;-R.png" alt="Stats-&amp;-R.png" class="navbar-logo">
-    </a>
+    <img src="../../Stats-&amp;-R.png" alt="Stats-&amp;-R.png" class="navbar-logo"></a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Stats &amp; R</span>
     </a>
@@ -176,7 +157,7 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../posts.html">
  <span class="menu-text">Posts</span></a>
   </li>  
@@ -193,8 +174,8 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
  <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
     <a class="nav-link" href="mailto:ln729500172@gmail.com"><i class="bi bi-envelope" role="img">
 </i> 
  <span class="menu-text"></span></a>
@@ -210,218 +191,277 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+<div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Contents</h2>
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto"><nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome"><span class="toc-section-number">1</span>  Welcome!</a>
+<li>
+<a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome"><span class="toc-section-number">1</span>  Welcome!</a>
   <ul class="collapse">
-  <li><a href="#what-is-data-visualization" id="toc-what-is-data-visualization" class="nav-link" data-scroll-target="#what-is-data-visualization"><span class="toc-section-number">1.1</span>  What is data visualization?</a></li>
-  </ul></li>
-  <li><a href="#introduction-to-data-visualization-and-distributions" id="toc-introduction-to-data-visualization-and-distributions" class="nav-link" data-scroll-target="#introduction-to-data-visualization-and-distributions"><span class="toc-section-number">2</span>  Introduction to Data Visualization and Distributions</a>
+<li><a href="#what-is-data-visualization" id="toc-what-is-data-visualization" class="nav-link" data-scroll-target="#what-is-data-visualization"><span class="toc-section-number">1.1</span>  What is data visualization?</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#introduction-to-data-visualization-and-distributions" id="toc-introduction-to-data-visualization-and-distributions" class="nav-link" data-scroll-target="#introduction-to-data-visualization-and-distributions"><span class="toc-section-number">2</span>  Introduction to Data Visualization and Distributions</a>
   <ul class="collapse">
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview"><span class="toc-section-number">2.1</span>  Overview</a></li>
-  <li><a href="#introduction-to-data-visualization" id="toc-introduction-to-data-visualization" class="nav-link" data-scroll-target="#introduction-to-data-visualization"><span class="toc-section-number">2.2</span>  Introduction to Data Visualization</a>
+<li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview"><span class="toc-section-number">2.1</span>  Overview</a></li>
+  <li>
+<a href="#introduction-to-data-visualization" id="toc-introduction-to-data-visualization" class="nav-link" data-scroll-target="#introduction-to-data-visualization"><span class="toc-section-number">2.2</span>  Introduction to Data Visualization</a>
   <ul class="collapse">
-  <li><a href="#key-point" id="toc-key-point" class="nav-link" data-scroll-target="#key-point"><span class="toc-section-number">2.2.1</span>  Key Point:</a></li>
+<li><a href="#key-point" id="toc-key-point" class="nav-link" data-scroll-target="#key-point"><span class="toc-section-number">2.2.1</span>  Key Point:</a></li>
   <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code"><span class="toc-section-number">2.2.2</span>  Code:</a></li>
-  </ul></li>
-  <li><a href="#introduction-to-distributions" id="toc-introduction-to-distributions" class="nav-link" data-scroll-target="#introduction-to-distributions"><span class="toc-section-number">2.3</span>  Introduction to Distributions</a>
+  </ul>
+</li>
+  <li>
+<a href="#introduction-to-distributions" id="toc-introduction-to-distributions" class="nav-link" data-scroll-target="#introduction-to-distributions"><span class="toc-section-number">2.3</span>  Introduction to Distributions</a>
   <ul class="collapse">
-  <li><a href="#key-points" id="toc-key-points" class="nav-link" data-scroll-target="#key-points"><span class="toc-section-number">2.3.1</span>  Key Points:</a></li>
+<li><a href="#key-points" id="toc-key-points" class="nav-link" data-scroll-target="#key-points"><span class="toc-section-number">2.3.1</span>  Key Points:</a></li>
   <li><a href="#data-types" id="toc-data-types" class="nav-link" data-scroll-target="#data-types"><span class="toc-section-number">2.3.2</span>  Data Types</a></li>
   <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise"><span class="toc-section-number">2.3.3</span>  Exercise</a></li>
-  </ul></li>
-  <li><a href="#describe-heights-to-et" id="toc-describe-heights-to-et" class="nav-link" data-scroll-target="#describe-heights-to-et"><span class="toc-section-number">2.4</span>  Describe Heights to ET</a>
+  </ul>
+</li>
+  <li>
+<a href="#describe-heights-to-et" id="toc-describe-heights-to-et" class="nav-link" data-scroll-target="#describe-heights-to-et"><span class="toc-section-number">2.4</span>  Describe Heights to ET</a>
   <ul class="collapse">
-  <li><a href="#key-point-1" id="toc-key-point-1" class="nav-link" data-scroll-target="#key-point-1"><span class="toc-section-number">2.4.1</span>  key point:</a></li>
+<li><a href="#key-point-1" id="toc-key-point-1" class="nav-link" data-scroll-target="#key-point-1"><span class="toc-section-number">2.4.1</span>  key point:</a></li>
   <li><a href="#code-1" id="toc-code-1" class="nav-link" data-scroll-target="#code-1"><span class="toc-section-number">2.4.2</span>  Code:</a></li>
-  </ul></li>
-  <li><a href="#cumulative-distribution-function" id="toc-cumulative-distribution-function" class="nav-link" data-scroll-target="#cumulative-distribution-function"><span class="toc-section-number">2.5</span>  Cumulative Distribution Function</a>
+  </ul>
+</li>
+  <li>
+<a href="#cumulative-distribution-function" id="toc-cumulative-distribution-function" class="nav-link" data-scroll-target="#cumulative-distribution-function"><span class="toc-section-number">2.5</span>  Cumulative Distribution Function</a>
   <ul class="collapse">
-  <li><a href="#code-for-cdf" id="toc-code-for-cdf" class="nav-link" data-scroll-target="#code-for-cdf"><span class="toc-section-number">2.5.1</span>  Code for CDF:</a></li>
+<li><a href="#code-for-cdf" id="toc-code-for-cdf" class="nav-link" data-scroll-target="#code-for-cdf"><span class="toc-section-number">2.5.1</span>  Code for CDF:</a></li>
   <li><a href="#code-for-student-height" id="toc-code-for-student-height" class="nav-link" data-scroll-target="#code-for-student-height"><span class="toc-section-number">2.5.2</span>  Code for student height:</a></li>
-  </ul></li>
-  <li><a href="#smooth-density-plots" id="toc-smooth-density-plots" class="nav-link" data-scroll-target="#smooth-density-plots"><span class="toc-section-number">2.6</span>  Smooth Density Plots</a>
+  </ul>
+</li>
+  <li>
+<a href="#smooth-density-plots" id="toc-smooth-density-plots" class="nav-link" data-scroll-target="#smooth-density-plots"><span class="toc-section-number">2.6</span>  Smooth Density Plots</a>
   <ul class="collapse">
-  <li><a href="#key-point-2" id="toc-key-point-2" class="nav-link" data-scroll-target="#key-point-2"><span class="toc-section-number">2.6.1</span>  Key Point:</a></li>
-  </ul></li>
-  <li><a href="#normal-distribution" id="toc-normal-distribution" class="nav-link" data-scroll-target="#normal-distribution"><span class="toc-section-number">2.7</span>  Normal Distribution</a>
+<li><a href="#key-point-2" id="toc-key-point-2" class="nav-link" data-scroll-target="#key-point-2"><span class="toc-section-number">2.6.1</span>  Key Point:</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#normal-distribution" id="toc-normal-distribution" class="nav-link" data-scroll-target="#normal-distribution"><span class="toc-section-number">2.7</span>  Normal Distribution</a>
   <ul class="collapse">
-  <li><a href="#key-points-1" id="toc-key-points-1" class="nav-link" data-scroll-target="#key-points-1"><span class="toc-section-number">2.7.1</span>  Key Points:</a></li>
-  </ul></li>
-  <li><a href="#equation-for-the-normal-distribution" id="toc-equation-for-the-normal-distribution" class="nav-link" data-scroll-target="#equation-for-the-normal-distribution"><span class="toc-section-number">2.8</span>  Equation for the normal distribution</a>
+<li><a href="#key-points-1" id="toc-key-points-1" class="nav-link" data-scroll-target="#key-points-1"><span class="toc-section-number">2.7.1</span>  Key Points:</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#equation-for-the-normal-distribution" id="toc-equation-for-the-normal-distribution" class="nav-link" data-scroll-target="#equation-for-the-normal-distribution"><span class="toc-section-number">2.8</span>  Equation for the normal distribution</a>
   <ul class="collapse">
-  <li><a href="#code-2" id="toc-code-2" class="nav-link" data-scroll-target="#code-2"><span class="toc-section-number">2.8.1</span>  Code:</a></li>
+<li><a href="#code-2" id="toc-code-2" class="nav-link" data-scroll-target="#code-2"><span class="toc-section-number">2.8.1</span>  Code:</a></li>
   <li><a href="#the-68-95-99.7-rule" id="toc-the-68-95-99.7-rule" class="nav-link" data-scroll-target="#the-68-95-99.7-rule"><span class="toc-section-number">2.8.2</span>  The 68-95-99.7 Rule</a></li>
-  </ul></li>
-  <li><a href="#the-normal-cdf-and-pnorm" id="toc-the-normal-cdf-and-pnorm" class="nav-link" data-scroll-target="#the-normal-cdf-and-pnorm"><span class="toc-section-number">2.9</span>  The Normal CDF and pnorm</a>
+  </ul>
+</li>
+  <li>
+<a href="#the-normal-cdf-and-pnorm" id="toc-the-normal-cdf-and-pnorm" class="nav-link" data-scroll-target="#the-normal-cdf-and-pnorm"><span class="toc-section-number">2.9</span>  The Normal CDF and pnorm</a>
   <ul class="collapse">
-  <li><a href="#key-points-2" id="toc-key-points-2" class="nav-link" data-scroll-target="#key-points-2"><span class="toc-section-number">2.9.1</span>  Key points:</a></li>
+<li><a href="#key-points-2" id="toc-key-points-2" class="nav-link" data-scroll-target="#key-points-2"><span class="toc-section-number">2.9.1</span>  Key points:</a></li>
   <li><a href="#code-using-pnorm-to-calculate-probabilities" id="toc-code-using-pnorm-to-calculate-probabilities" class="nav-link" data-scroll-target="#code-using-pnorm-to-calculate-probabilities"><span class="toc-section-number">2.9.2</span>  Code: Using pnorm to calculate probabilities</a></li>
   <li><a href="#code-discretization-and-the-normal-approximation" id="toc-code-discretization-and-the-normal-approximation" class="nav-link" data-scroll-target="#code-discretization-and-the-normal-approximation"><span class="toc-section-number">2.9.3</span>  Code: Discretization and the normal approximation</a></li>
-  </ul></li>
-  <li><a href="#definition-of-quantiles" id="toc-definition-of-quantiles" class="nav-link" data-scroll-target="#definition-of-quantiles"><span class="toc-section-number">2.10</span>  Definition of quantiles</a>
+  </ul>
+</li>
+  <li>
+<a href="#definition-of-quantiles" id="toc-definition-of-quantiles" class="nav-link" data-scroll-target="#definition-of-quantiles"><span class="toc-section-number">2.10</span>  Definition of quantiles</a>
   <ul class="collapse">
-  <li><a href="#definition-of-quantiles-1" id="toc-definition-of-quantiles-1" class="nav-link" data-scroll-target="#definition-of-quantiles-1"><span class="toc-section-number">2.10.1</span>  Definition of quantiles</a></li>
+<li><a href="#definition-of-quantiles-1" id="toc-definition-of-quantiles-1" class="nav-link" data-scroll-target="#definition-of-quantiles-1"><span class="toc-section-number">2.10.1</span>  Definition of quantiles</a></li>
   <li><a href="#using-the-quantile-function" id="toc-using-the-quantile-function" class="nav-link" data-scroll-target="#using-the-quantile-function"><span class="toc-section-number">2.10.2</span>  Using the quantile function</a></li>
   <li><a href="#percentiles" id="toc-percentiles" class="nav-link" data-scroll-target="#percentiles"><span class="toc-section-number">2.10.3</span>  Percentiles</a></li>
   <li><a href="#quartiles" id="toc-quartiles" class="nav-link" data-scroll-target="#quartiles"><span class="toc-section-number">2.10.4</span>  Quartiles</a></li>
   <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples"><span class="toc-section-number">2.10.5</span>  Examples</a></li>
-  </ul></li>
-  <li><a href="#finding-quantile-with-qnorm" id="toc-finding-quantile-with-qnorm" class="nav-link" data-scroll-target="#finding-quantile-with-qnorm"><span class="toc-section-number">2.11</span>  Finding quantile with qnorm</a>
+  </ul>
+</li>
+  <li>
+<a href="#finding-quantile-with-qnorm" id="toc-finding-quantile-with-qnorm" class="nav-link" data-scroll-target="#finding-quantile-with-qnorm"><span class="toc-section-number">2.11</span>  Finding quantile with qnorm</a>
   <ul class="collapse">
-  <li><a href="#definiton-of-qnorm" id="toc-definiton-of-qnorm" class="nav-link" data-scroll-target="#definiton-of-qnorm"><span class="toc-section-number">2.11.1</span>  Definiton of qnorm</a></li>
+<li><a href="#definiton-of-qnorm" id="toc-definiton-of-qnorm" class="nav-link" data-scroll-target="#definiton-of-qnorm"><span class="toc-section-number">2.11.1</span>  Definiton of qnorm</a></li>
   <li><a href="#realation-to-pnorm" id="toc-realation-to-pnorm" class="nav-link" data-scroll-target="#realation-to-pnorm"><span class="toc-section-number">2.11.2</span>  Realation to pnorm</a></li>
   <li><a href="#theoretical-quantiles" id="toc-theoretical-quantiles" class="nav-link" data-scroll-target="#theoretical-quantiles"><span class="toc-section-number">2.11.3</span>  Theoretical quantiles</a></li>
-  </ul></li>
-  <li><a href="#quantile-quantile-plots" id="toc-quantile-quantile-plots" class="nav-link" data-scroll-target="#quantile-quantile-plots"><span class="toc-section-number">2.12</span>  Quantile-Quantile Plots</a>
+  </ul>
+</li>
+  <li>
+<a href="#quantile-quantile-plots" id="toc-quantile-quantile-plots" class="nav-link" data-scroll-target="#quantile-quantile-plots"><span class="toc-section-number">2.12</span>  Quantile-Quantile Plots</a>
   <ul class="collapse">
-  <li><a href="#key-points-3" id="toc-key-points-3" class="nav-link" data-scroll-target="#key-points-3"><span class="toc-section-number">2.12.1</span>  Key Points:</a></li>
+<li><a href="#key-points-3" id="toc-key-points-3" class="nav-link" data-scroll-target="#key-points-3"><span class="toc-section-number">2.12.1</span>  Key Points:</a></li>
   <li><a href="#code-3" id="toc-code-3" class="nav-link" data-scroll-target="#code-3"><span class="toc-section-number">2.12.2</span>  Code:</a></li>
-  </ul></li>
-  <li><a href="#percentiles-1" id="toc-percentiles-1" class="nav-link" data-scroll-target="#percentiles-1"><span class="toc-section-number">2.13</span>  Percentiles</a>
+  </ul>
+</li>
+  <li>
+<a href="#percentiles-1" id="toc-percentiles-1" class="nav-link" data-scroll-target="#percentiles-1"><span class="toc-section-number">2.13</span>  Percentiles</a>
   <ul class="collapse">
-  <li><a href="#key-points-4" id="toc-key-points-4" class="nav-link" data-scroll-target="#key-points-4"><span class="toc-section-number">2.13.1</span>  Key Points:</a></li>
-  </ul></li>
-  <li><a href="#boxplots" id="toc-boxplots" class="nav-link" data-scroll-target="#boxplots"><span class="toc-section-number">2.14</span>  Boxplots</a>
+<li><a href="#key-points-4" id="toc-key-points-4" class="nav-link" data-scroll-target="#key-points-4"><span class="toc-section-number">2.13.1</span>  Key Points:</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#boxplots" id="toc-boxplots" class="nav-link" data-scroll-target="#boxplots"><span class="toc-section-number">2.14</span>  Boxplots</a>
   <ul class="collapse">
-  <li><a href="#key-points-5" id="toc-key-points-5" class="nav-link" data-scroll-target="#key-points-5"><span class="toc-section-number">2.14.1</span>  Key Points:</a></li>
-  </ul></li>
-  <li><a href="#distribution-of-female-heights" id="toc-distribution-of-female-heights" class="nav-link" data-scroll-target="#distribution-of-female-heights"><span class="toc-section-number">2.15</span>  Distribution of Female Heights</a>
+<li><a href="#key-points-5" id="toc-key-points-5" class="nav-link" data-scroll-target="#key-points-5"><span class="toc-section-number">2.14.1</span>  Key Points:</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#distribution-of-female-heights" id="toc-distribution-of-female-heights" class="nav-link" data-scroll-target="#distribution-of-female-heights"><span class="toc-section-number">2.15</span>  Distribution of Female Heights</a>
   <ul class="collapse">
-  <li><a href="#key-points-6" id="toc-key-points-6" class="nav-link" data-scroll-target="#key-points-6"><span class="toc-section-number">2.15.1</span>  Key Points:</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#introduction-to-ggplot2" id="toc-introduction-to-ggplot2" class="nav-link" data-scroll-target="#introduction-to-ggplot2"><span class="toc-section-number">3</span>  Introduction to ggplot2</a>
+<li><a href="#key-points-6" id="toc-key-points-6" class="nav-link" data-scroll-target="#key-points-6"><span class="toc-section-number">2.15.1</span>  Key Points:</a></li>
+  </ul>
+</li>
+  </ul>
+</li>
+  <li>
+<a href="#introduction-to-ggplot2" id="toc-introduction-to-ggplot2" class="nav-link" data-scroll-target="#introduction-to-ggplot2"><span class="toc-section-number">3</span>  Introduction to ggplot2</a>
   <ul class="collapse">
-  <li><a href="#overview-1" id="toc-overview-1" class="nav-link" data-scroll-target="#overview-1"><span class="toc-section-number">3.1</span>  Overview</a></li>
-  <li><a href="#ggplot" id="toc-ggplot" class="nav-link" data-scroll-target="#ggplot"><span class="toc-section-number">3.2</span>  ggplot</a>
+<li><a href="#overview-1" id="toc-overview-1" class="nav-link" data-scroll-target="#overview-1"><span class="toc-section-number">3.1</span>  Overview</a></li>
+  <li>
+<a href="#ggplot" id="toc-ggplot" class="nav-link" data-scroll-target="#ggplot"><span class="toc-section-number">3.2</span>  ggplot</a>
   <ul class="collapse">
-  <li><a href="#ggplot2" id="toc-ggplot2" class="nav-link" data-scroll-target="#ggplot2"><span class="toc-section-number">3.2.1</span>  ggplot2</a></li>
+<li><a href="#ggplot2" id="toc-ggplot2" class="nav-link" data-scroll-target="#ggplot2"><span class="toc-section-number">3.2.1</span>  ggplot2</a></li>
   <li><a href="#key-points-7" id="toc-key-points-7" class="nav-link" data-scroll-target="#key-points-7"><span class="toc-section-number">3.2.2</span>  key Points:</a></li>
-  </ul></li>
-  <li><a href="#graph-components" id="toc-graph-components" class="nav-link" data-scroll-target="#graph-components"><span class="toc-section-number">3.3</span>  Graph Components</a>
+  </ul>
+</li>
+  <li>
+<a href="#graph-components" id="toc-graph-components" class="nav-link" data-scroll-target="#graph-components"><span class="toc-section-number">3.3</span>  Graph Components</a>
   <ul class="collapse">
-  <li><a href="#key-points-8" id="toc-key-points-8" class="nav-link" data-scroll-target="#key-points-8"><span class="toc-section-number">3.3.1</span>  Key Points:</a></li>
+<li><a href="#key-points-8" id="toc-key-points-8" class="nav-link" data-scroll-target="#key-points-8"><span class="toc-section-number">3.3.1</span>  Key Points:</a></li>
   <li><a href="#code-4" id="toc-code-4" class="nav-link" data-scroll-target="#code-4"><span class="toc-section-number">3.3.2</span>  Code:</a></li>
-  </ul></li>
-  <li><a href="#creating-a-new-plot" id="toc-creating-a-new-plot" class="nav-link" data-scroll-target="#creating-a-new-plot"><span class="toc-section-number">3.4</span>  Creating a New Plot</a>
+  </ul>
+</li>
+  <li>
+<a href="#creating-a-new-plot" id="toc-creating-a-new-plot" class="nav-link" data-scroll-target="#creating-a-new-plot"><span class="toc-section-number">3.4</span>  Creating a New Plot</a>
   <ul class="collapse">
-  <li><a href="#key-points-9" id="toc-key-points-9" class="nav-link" data-scroll-target="#key-points-9"><span class="toc-section-number">3.4.1</span>  Key Points:</a></li>
-  </ul></li>
-  <li><a href="#layers" id="toc-layers" class="nav-link" data-scroll-target="#layers"><span class="toc-section-number">3.5</span>  Layers</a>
+<li><a href="#key-points-9" id="toc-key-points-9" class="nav-link" data-scroll-target="#key-points-9"><span class="toc-section-number">3.4.1</span>  Key Points:</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#layers" id="toc-layers" class="nav-link" data-scroll-target="#layers"><span class="toc-section-number">3.5</span>  Layers</a>
   <ul class="collapse">
-  <li><a href="#key-points-10" id="toc-key-points-10" class="nav-link" data-scroll-target="#key-points-10"><span class="toc-section-number">3.5.1</span>  Key Points:</a></li>
-  </ul></li>
-  <li><a href="#thinkering" id="toc-thinkering" class="nav-link" data-scroll-target="#thinkering"><span class="toc-section-number">3.6</span>  Thinkering</a>
+<li><a href="#key-points-10" id="toc-key-points-10" class="nav-link" data-scroll-target="#key-points-10"><span class="toc-section-number">3.5.1</span>  Key Points:</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#thinkering" id="toc-thinkering" class="nav-link" data-scroll-target="#thinkering"><span class="toc-section-number">3.6</span>  Thinkering</a>
   <ul class="collapse">
-  <li><a href="#key-points-11" id="toc-key-points-11" class="nav-link" data-scroll-target="#key-points-11"><span class="toc-section-number">3.6.1</span>  Key Points:</a></li>
-  </ul></li>
-  <li><a href="#scales-labels-and-colors" id="toc-scales-labels-and-colors" class="nav-link" data-scroll-target="#scales-labels-and-colors"><span class="toc-section-number">3.7</span>  Scales, Labels, and Colors</a>
+<li><a href="#key-points-11" id="toc-key-points-11" class="nav-link" data-scroll-target="#key-points-11"><span class="toc-section-number">3.6.1</span>  Key Points:</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#scales-labels-and-colors" id="toc-scales-labels-and-colors" class="nav-link" data-scroll-target="#scales-labels-and-colors"><span class="toc-section-number">3.7</span>  Scales, Labels, and Colors</a>
   <ul class="collapse">
-  <li><a href="#textbook-links" id="toc-textbook-links" class="nav-link" data-scroll-target="#textbook-links"><span class="toc-section-number">3.7.1</span>  Textbook links:</a></li>
+<li><a href="#textbook-links" id="toc-textbook-links" class="nav-link" data-scroll-target="#textbook-links"><span class="toc-section-number">3.7.1</span>  Textbook links:</a></li>
   <li><a href="#key-points-12" id="toc-key-points-12" class="nav-link" data-scroll-target="#key-points-12"><span class="toc-section-number">3.7.2</span>  Key Points:</a></li>
   <li><a href="#code-log-scale-the-x-axis-and-y-axis" id="toc-code-log-scale-the-x-axis-and-y-axis" class="nav-link" data-scroll-target="#code-log-scale-the-x-axis-and-y-axis"><span class="toc-section-number">3.7.3</span>  Code: Log-scale the x-axis and y-axis</a></li>
   <li><a href="#code-add-labels-and-title" id="toc-code-add-labels-and-title" class="nav-link" data-scroll-target="#code-add-labels-and-title"><span class="toc-section-number">3.7.4</span>  Code: Add labels and title</a></li>
   <li><a href="#code-change-color-of-the-points" id="toc-code-change-color-of-the-points" class="nav-link" data-scroll-target="#code-change-color-of-the-points"><span class="toc-section-number">3.7.5</span>  Code: Change color of the points</a></li>
   <li><a href="#code-add-a-line-with-average-murder-rate" id="toc-code-add-a-line-with-average-murder-rate" class="nav-link" data-scroll-target="#code-add-a-line-with-average-murder-rate"><span class="toc-section-number">3.7.6</span>  Code: Add a line with average murder rate</a></li>
   <li><a href="#code-change-legend-title" id="toc-code-change-legend-title" class="nav-link" data-scroll-target="#code-change-legend-title"><span class="toc-section-number">3.7.7</span>  Code: Change legend title</a></li>
-  </ul></li>
-  <li><a href="#add-on-packages" id="toc-add-on-packages" class="nav-link" data-scroll-target="#add-on-packages"><span class="toc-section-number">3.8</span>  Add-on packages</a>
+  </ul>
+</li>
+  <li>
+<a href="#add-on-packages" id="toc-add-on-packages" class="nav-link" data-scroll-target="#add-on-packages"><span class="toc-section-number">3.8</span>  Add-on packages</a>
   <ul class="collapse">
-  <li><a href="#textbook-links-1" id="toc-textbook-links-1" class="nav-link" data-scroll-target="#textbook-links-1"><span class="toc-section-number">3.8.1</span>  Textbook links:</a></li>
+<li><a href="#textbook-links-1" id="toc-textbook-links-1" class="nav-link" data-scroll-target="#textbook-links-1"><span class="toc-section-number">3.8.1</span>  Textbook links:</a></li>
   <li><a href="#key-points-13" id="toc-key-points-13" class="nav-link" data-scroll-target="#key-points-13"><span class="toc-section-number">3.8.2</span>  Key Points</a></li>
   <li><a href="#code-adding-themes" id="toc-code-adding-themes" class="nav-link" data-scroll-target="#code-adding-themes"><span class="toc-section-number">3.8.3</span>  Code: Adding themes</a></li>
   <li><a href="#code-putting-it-all-together-to-assemble-the-plot" id="toc-code-putting-it-all-together-to-assemble-the-plot" class="nav-link" data-scroll-target="#code-putting-it-all-together-to-assemble-the-plot"><span class="toc-section-number">3.8.4</span>  Code: Putting it all together to assemble the plot</a></li>
-  </ul></li>
-  <li><a href="#other-examples" id="toc-other-examples" class="nav-link" data-scroll-target="#other-examples"><span class="toc-section-number">3.9</span>  Other Examples</a>
+  </ul>
+</li>
+  <li>
+<a href="#other-examples" id="toc-other-examples" class="nav-link" data-scroll-target="#other-examples"><span class="toc-section-number">3.9</span>  Other Examples</a>
   <ul class="collapse">
-  <li><a href="#textbook-links-2" id="toc-textbook-links-2" class="nav-link" data-scroll-target="#textbook-links-2"><span class="toc-section-number">3.9.1</span>  Textbook links:</a></li>
+<li><a href="#textbook-links-2" id="toc-textbook-links-2" class="nav-link" data-scroll-target="#textbook-links-2"><span class="toc-section-number">3.9.1</span>  Textbook links:</a></li>
   <li><a href="#key-points-14" id="toc-key-points-14" class="nav-link" data-scroll-target="#key-points-14"><span class="toc-section-number">3.9.2</span>  Key points</a></li>
   <li><a href="#code-histograms-in-ggplot2" id="toc-code-histograms-in-ggplot2" class="nav-link" data-scroll-target="#code-histograms-in-ggplot2"><span class="toc-section-number">3.9.3</span>  Code: Histograms in ggplot2</a></li>
   <li><a href="#code-smooth-density-plots-in-ggplot2" id="toc-code-smooth-density-plots-in-ggplot2" class="nav-link" data-scroll-target="#code-smooth-density-plots-in-ggplot2"><span class="toc-section-number">3.9.4</span>  Code: Smooth density plots in ggplot2</a></li>
   <li><a href="#code-quantile-quantile-plots-in-ggplot2" id="toc-code-quantile-quantile-plots-in-ggplot2" class="nav-link" data-scroll-target="#code-quantile-quantile-plots-in-ggplot2"><span class="toc-section-number">3.9.5</span>  Code: Quantile-quantile plots in ggplot2</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#gapminder" id="toc-gapminder" class="nav-link" data-scroll-target="#gapminder"><span class="toc-section-number">4</span>  Gapminder</a>
+  </ul>
+</li>
+  </ul>
+</li>
+  <li>
+<a href="#gapminder" id="toc-gapminder" class="nav-link" data-scroll-target="#gapminder"><span class="toc-section-number">4</span>  Gapminder</a>
   <ul class="collapse">
-  <li><a href="#overview-2" id="toc-overview-2" class="nav-link" data-scroll-target="#overview-2"><span class="toc-section-number">4.1</span>  Overview</a></li>
+<li><a href="#overview-2" id="toc-overview-2" class="nav-link" data-scroll-target="#overview-2"><span class="toc-section-number">4.1</span>  Overview</a></li>
   <li><a href="#introduction-to-gapminder" id="toc-introduction-to-gapminder" class="nav-link" data-scroll-target="#introduction-to-gapminder"><span class="toc-section-number">4.2</span>  Introduction to Gapminder</a></li>
-  <li><a href="#gapminder-dataset" id="toc-gapminder-dataset" class="nav-link" data-scroll-target="#gapminder-dataset"><span class="toc-section-number">4.3</span>  Gapminder Dataset</a>
+  <li>
+<a href="#gapminder-dataset" id="toc-gapminder-dataset" class="nav-link" data-scroll-target="#gapminder-dataset"><span class="toc-section-number">4.3</span>  Gapminder Dataset</a>
   <ul class="collapse">
-  <li><a href="#key-points-15" id="toc-key-points-15" class="nav-link" data-scroll-target="#key-points-15"><span class="toc-section-number">4.3.1</span>  Key Points</a></li>
+<li><a href="#key-points-15" id="toc-key-points-15" class="nav-link" data-scroll-target="#key-points-15"><span class="toc-section-number">4.3.1</span>  Key Points</a></li>
   <li><a href="#code-5" id="toc-code-5" class="nav-link" data-scroll-target="#code-5"><span class="toc-section-number">4.3.2</span>  Code</a></li>
-  </ul></li>
-  <li><a href="#life-expectancy-and-fertility-rates" id="toc-life-expectancy-and-fertility-rates" class="nav-link" data-scroll-target="#life-expectancy-and-fertility-rates"><span class="toc-section-number">4.4</span>  Life Expectancy and Fertility Rates</a>
+  </ul>
+</li>
+  <li>
+<a href="#life-expectancy-and-fertility-rates" id="toc-life-expectancy-and-fertility-rates" class="nav-link" data-scroll-target="#life-expectancy-and-fertility-rates"><span class="toc-section-number">4.4</span>  Life Expectancy and Fertility Rates</a>
   <ul class="collapse">
-  <li><a href="#key-points-16" id="toc-key-points-16" class="nav-link" data-scroll-target="#key-points-16"><span class="toc-section-number">4.4.1</span>  Key Points</a></li>
+<li><a href="#key-points-16" id="toc-key-points-16" class="nav-link" data-scroll-target="#key-points-16"><span class="toc-section-number">4.4.1</span>  Key Points</a></li>
   <li><a href="#code-6" id="toc-code-6" class="nav-link" data-scroll-target="#code-6"><span class="toc-section-number">4.4.2</span>  Code</a></li>
-  </ul></li>
-  <li><a href="#faceting" id="toc-faceting" class="nav-link" data-scroll-target="#faceting"><span class="toc-section-number">4.5</span>  Faceting</a>
+  </ul>
+</li>
+  <li>
+<a href="#faceting" id="toc-faceting" class="nav-link" data-scroll-target="#faceting"><span class="toc-section-number">4.5</span>  Faceting</a>
   <ul class="collapse">
-  <li><a href="#key-points-17" id="toc-key-points-17" class="nav-link" data-scroll-target="#key-points-17"><span class="toc-section-number">4.5.1</span>  Key Points</a></li>
+<li><a href="#key-points-17" id="toc-key-points-17" class="nav-link" data-scroll-target="#key-points-17"><span class="toc-section-number">4.5.1</span>  Key Points</a></li>
   <li><a href="#code-7" id="toc-code-7" class="nav-link" data-scroll-target="#code-7"><span class="toc-section-number">4.5.2</span>  Code</a></li>
-  </ul></li>
-  <li><a href="#time-series-plots" id="toc-time-series-plots" class="nav-link" data-scroll-target="#time-series-plots"><span class="toc-section-number">4.6</span>  Time Series Plots</a>
+  </ul>
+</li>
+  <li>
+<a href="#time-series-plots" id="toc-time-series-plots" class="nav-link" data-scroll-target="#time-series-plots"><span class="toc-section-number">4.6</span>  Time Series Plots</a>
   <ul class="collapse">
-  <li><a href="#key-points-18" id="toc-key-points-18" class="nav-link" data-scroll-target="#key-points-18"><span class="toc-section-number">4.6.1</span>  Key Points</a></li>
+<li><a href="#key-points-18" id="toc-key-points-18" class="nav-link" data-scroll-target="#key-points-18"><span class="toc-section-number">4.6.1</span>  Key Points</a></li>
   <li><a href="#code-single-time-series" id="toc-code-single-time-series" class="nav-link" data-scroll-target="#code-single-time-series"><span class="toc-section-number">4.6.2</span>  Code: Single Time Series</a></li>
   <li><a href="#code-multiple-time-series" id="toc-code-multiple-time-series" class="nav-link" data-scroll-target="#code-multiple-time-series"><span class="toc-section-number">4.6.3</span>  Code: Multiple Time Series</a></li>
   <li><a href="#code-adding-text-labels-to-a-plot" id="toc-code-adding-text-labels-to-a-plot" class="nav-link" data-scroll-target="#code-adding-text-labels-to-a-plot"><span class="toc-section-number">4.6.4</span>  Code: Adding text labels to a plot</a></li>
-  </ul></li>
-  <li><a href="#transformations" id="toc-transformations" class="nav-link" data-scroll-target="#transformations"><span class="toc-section-number">4.7</span>  Transformations</a>
+  </ul>
+</li>
+  <li>
+<a href="#transformations" id="toc-transformations" class="nav-link" data-scroll-target="#transformations"><span class="toc-section-number">4.7</span>  Transformations</a>
   <ul class="collapse">
-  <li><a href="#key-points-19" id="toc-key-points-19" class="nav-link" data-scroll-target="#key-points-19"><span class="toc-section-number">4.7.1</span>  Key Points</a></li>
+<li><a href="#key-points-19" id="toc-key-points-19" class="nav-link" data-scroll-target="#key-points-19"><span class="toc-section-number">4.7.1</span>  Key Points</a></li>
   <li><a href="#code-8" id="toc-code-8" class="nav-link" data-scroll-target="#code-8"><span class="toc-section-number">4.7.2</span>  Code</a></li>
-  </ul></li>
-  <li><a href="#stratify-and-boxplot" id="toc-stratify-and-boxplot" class="nav-link" data-scroll-target="#stratify-and-boxplot"><span class="toc-section-number">4.8</span>  Stratify and Boxplot</a>
+  </ul>
+</li>
+  <li>
+<a href="#stratify-and-boxplot" id="toc-stratify-and-boxplot" class="nav-link" data-scroll-target="#stratify-and-boxplot"><span class="toc-section-number">4.8</span>  Stratify and Boxplot</a>
   <ul class="collapse">
-  <li><a href="#key-points-20" id="toc-key-points-20" class="nav-link" data-scroll-target="#key-points-20"><span class="toc-section-number">4.8.1</span>  Key Points</a></li>
+<li><a href="#key-points-20" id="toc-key-points-20" class="nav-link" data-scroll-target="#key-points-20"><span class="toc-section-number">4.8.1</span>  Key Points</a></li>
   <li><a href="#code-boxplot-of-gdp-by-region" id="toc-code-boxplot-of-gdp-by-region" class="nav-link" data-scroll-target="#code-boxplot-of-gdp-by-region"><span class="toc-section-number">4.8.2</span>  Code: Boxplot of GDP by region</a></li>
   <li><a href="#code-the-reorder-function" id="toc-code-the-reorder-function" class="nav-link" data-scroll-target="#code-the-reorder-function"><span class="toc-section-number">4.8.3</span>  Code: The reorder function</a></li>
   <li><a href="#code-enhanced-boxplot-ordered-by-median-income-scaled-and-showing-data" id="toc-code-enhanced-boxplot-ordered-by-median-income-scaled-and-showing-data" class="nav-link" data-scroll-target="#code-enhanced-boxplot-ordered-by-median-income-scaled-and-showing-data"><span class="toc-section-number">4.8.4</span>  Code: Enhanced boxplot ordered by median income, scaled, and showing data</a></li>
-  </ul></li>
-  <li><a href="#comparing-distributions" id="toc-comparing-distributions" class="nav-link" data-scroll-target="#comparing-distributions"><span class="toc-section-number">4.9</span>  Comparing Distributions</a>
+  </ul>
+</li>
+  <li>
+<a href="#comparing-distributions" id="toc-comparing-distributions" class="nav-link" data-scroll-target="#comparing-distributions"><span class="toc-section-number">4.9</span>  Comparing Distributions</a>
   <ul class="collapse">
-  <li><a href="#key-points-21" id="toc-key-points-21" class="nav-link" data-scroll-target="#key-points-21"><span class="toc-section-number">4.9.1</span>  Key Points</a></li>
+<li><a href="#key-points-21" id="toc-key-points-21" class="nav-link" data-scroll-target="#key-points-21"><span class="toc-section-number">4.9.1</span>  Key Points</a></li>
   <li><a href="#code-histogram-of-income-in-west-versus-developing-world-1970-and-2010" id="toc-code-histogram-of-income-in-west-versus-developing-world-1970-and-2010" class="nav-link" data-scroll-target="#code-histogram-of-income-in-west-versus-developing-world-1970-and-2010"><span class="toc-section-number">4.9.2</span>  Code: Histogram of income in West versus developing world, 1970 and 2010</a></li>
   <li><a href="#code-income-distribution-of-west-verseus-developing-world-only-countries-with-data" id="toc-code-income-distribution-of-west-verseus-developing-world-only-countries-with-data" class="nav-link" data-scroll-target="#code-income-distribution-of-west-verseus-developing-world-only-countries-with-data"><span class="toc-section-number">4.9.3</span>  Code: Income distribution of West verseus Developing world, only countries with data</a></li>
   <li><a href="#code-boxplots-of-income-in-west-versus-developing-world-1970-and-2010" id="toc-code-boxplots-of-income-in-west-versus-developing-world-1970-and-2010" class="nav-link" data-scroll-target="#code-boxplots-of-income-in-west-versus-developing-world-1970-and-2010"><span class="toc-section-number">4.9.4</span>  Code: Boxplots of income in West versus Developing world, 1970 and 2010</a></li>
-  </ul></li>
-  <li><a href="#density-plots" id="toc-density-plots" class="nav-link" data-scroll-target="#density-plots"><span class="toc-section-number">4.10</span>  Density Plots</a>
+  </ul>
+</li>
+  <li>
+<a href="#density-plots" id="toc-density-plots" class="nav-link" data-scroll-target="#density-plots"><span class="toc-section-number">4.10</span>  Density Plots</a>
   <ul class="collapse">
-  <li><a href="#key-points-22" id="toc-key-points-22" class="nav-link" data-scroll-target="#key-points-22"><span class="toc-section-number">4.10.1</span>  Key Points</a></li>
+<li><a href="#key-points-22" id="toc-key-points-22" class="nav-link" data-scroll-target="#key-points-22"><span class="toc-section-number">4.10.1</span>  Key Points</a></li>
   <li><a href="#code-faceted-smooth-density-plots" id="toc-code-faceted-smooth-density-plots" class="nav-link" data-scroll-target="#code-faceted-smooth-density-plots"><span class="toc-section-number">4.10.2</span>  Code: Faceted smooth density plots</a></li>
   <li><a href="#code-add-new-region-group-with-case_when" id="toc-code-add-new-region-group-with-case_when" class="nav-link" data-scroll-target="#code-add-new-region-group-with-case_when"><span class="toc-section-number">4.10.3</span>  Code: Add new region group with case_when</a></li>
   <li><a href="#code-stacked-density-plot" id="toc-code-stacked-density-plot" class="nav-link" data-scroll-target="#code-stacked-density-plot"><span class="toc-section-number">4.10.4</span>  Code: Stacked density plot</a></li>
   <li><a href="#code-weighted-stacked-density-plot" id="toc-code-weighted-stacked-density-plot" class="nav-link" data-scroll-target="#code-weighted-stacked-density-plot"><span class="toc-section-number">4.10.5</span>  Code: Weighted stacked density plot</a></li>
-  </ul></li>
-  <li><a href="#ecological-fallacy" id="toc-ecological-fallacy" class="nav-link" data-scroll-target="#ecological-fallacy"><span class="toc-section-number">4.11</span>  Ecological Fallacy</a>
-  <ul class="collapse">
-  <li><a href="#key-points-23" id="toc-key-points-23" class="nav-link" data-scroll-target="#key-points-23"><span class="toc-section-number">4.11.1</span>  Key Points</a></li>
-  </ul></li>
-  </ul></li>
   </ul>
-</nav>
-</nav>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+</li>
+  <li>
+<a href="#ecological-fallacy" id="toc-ecological-fallacy" class="nav-link" data-scroll-target="#ecological-fallacy"><span class="toc-section-number">4.11</span>  Ecological Fallacy</a>
+  <ul class="collapse">
+<li><a href="#key-points-23" id="toc-key-points-23" class="nav-link" data-scroll-target="#key-points-23"><span class="toc-section-number">4.11.1</span>  Key Points</a></li>
+  </ul>
+</li>
+  </ul>
+</li>
+  </ul></nav>
+</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
 <!-- main -->
-<main class="content page-columns page-full column-body" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content page-columns page-full column-body" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">Data Visualization</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Data Science</div>
@@ -450,20 +490,16 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
   </div>
   
 
-</header>
-
-<section id="welcome" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Welcome!</h1>
-<section id="what-is-data-visualization" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="what-is-data-visualization"><span class="header-section-number">1.1</span> What is data visualization?</h2>
+</header><section id="welcome" class="level1" data-number="1"><h1 data-number="1">
+<span class="header-section-number">1</span> Welcome!</h1>
+<section id="what-is-data-visualization" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="what-is-data-visualization">
+<span class="header-section-number">1.1</span> What is data visualization?</h2>
 <p>Data visualization is the graphical representation of information and data. By using visual elements like charts, graphs, and maps, data visualization tools provide an accessible way to see and understand trends, outliers, and patterns in data. Additionally, it provides an excellent way for employees or business owners to present data to non-technical audiences without confusion.</p>
 <p>In the world of Big Data, data visualization tools and technologies are essential to analyze massive amounts of information and make data-driven decisions.</p>
-</section>
-</section>
-<section id="introduction-to-data-visualization-and-distributions" class="level1 page-columns page-full" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Introduction to Data Visualization and Distributions</h1>
-<section id="overview" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">2.1</span> Overview</h2>
+</section></section><section id="introduction-to-data-visualization-and-distributions" class="level1 page-columns page-full" data-number="2"><h1 data-number="2">
+<span class="header-section-number">2</span> Introduction to Data Visualization and Distributions</h1>
+<section id="overview" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="overview">
+<span class="header-section-number">2.1</span> Overview</h2>
 <p>After completing this section, we will:</p>
 <ul>
 <li><p>understand the importance of data visualization for communicating data-driven findings.</p></li>
@@ -471,21 +507,17 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 <li><p>be able to use the average and the standard deviation to understand the normal distribution</p></li>
 <li><p>be able to access how well a normal distribution fit the data using a quantile-quantile plot.</p></li>
 <li><p>be able to interpret data from a box plot</p></li>
-</ul>
-</section>
-<section id="introduction-to-data-visualization" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="introduction-to-data-visualization"><span class="header-section-number">2.2</span> Introduction to Data Visualization</h2>
-<section id="key-point" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="key-point"><span class="header-section-number">2.2.1</span> Key Point:</h3>
+</ul></section><section id="introduction-to-data-visualization" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="introduction-to-data-visualization">
+<span class="header-section-number">2.2</span> Introduction to Data Visualization</h2>
+<section id="key-point" class="level3" data-number="2.2.1"><h3 data-number="2.2.1" class="anchored" data-anchor-id="key-point">
+<span class="header-section-number">2.2.1</span> Key Point:</h3>
 <ul>
 <li><p>Plots of data easily communicate information that is difficult to extract from table of raw values.</p></li>
 <li><p>Data visualization is a key component of exploratory data analysis (EDA), in which the properties of data are explored through visualization and summarization techniques.</p></li>
 <li><p>Data visualization can help discover biases, systematic errors, mistakes and other unexpected problems in data before those data are incorporated into potentially flawed analysis.</p></li>
 <li><p>Basics of data visualization and EDA will be covered in R by using the ggplot2 package and motivating examples from world health, economics and infections disease.</p></li>
-</ul>
-</section>
-<section id="code" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="code"><span class="header-section-number">2.2.2</span> Code:</h3>
+</ul></section><section id="code" class="level3" data-number="2.2.2"><h3 data-number="2.2.2" class="anchored" data-anchor-id="code">
+<span class="header-section-number">2.2.2</span> Code:</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(dslabs)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">data</span>(murders)</span>
@@ -500,22 +532,18 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 6   Colorado  CO   West    5029196    65</code></pre>
 </div>
 </div>
-</section>
-</section>
-<section id="introduction-to-distributions" class="level2 page-columns page-full" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="introduction-to-distributions"><span class="header-section-number">2.3</span> Introduction to Distributions</h2>
-<section id="key-points" class="level3 page-columns page-full" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="key-points"><span class="header-section-number">2.3.1</span> Key Points:</h3>
-<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class=""><a href="https://baike.baidu.com/item/方差/3108412">(<strong>Variance/Deviation Var</strong>)方差</a>: 方差越大，数据的波动越大；方差越小，数据的波动就越小。</span></div></div>
-<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class=""><a href="https://baike.baidu.com/item/标准差/1415772">(<strong>Standard Deviation</strong>)标准差</a>: 方差开根号。</span></div></div>
+</section></section><section id="introduction-to-distributions" class="level2 page-columns page-full" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="introduction-to-distributions">
+<span class="header-section-number">2.3</span> Introduction to Distributions</h2>
+<section id="key-points" class="level3 page-columns page-full" data-number="2.3.1"><h3 data-number="2.3.1" class="anchored" data-anchor-id="key-points">
+<span class="header-section-number">2.3.1</span> Key Points:</h3>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class=""><a href="https://baike.baidu.com/item/%E6%96%B9%E5%B7%AE/3108412">(<strong>Variance/Deviation Var</strong>)方差</a>: 方差越大，数据的波动越大；方差越小，数据的波动就越小。</span></div></div>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class=""><a href="https://baike.baidu.com/item/%E6%A0%87%E5%87%86%E5%B7%AE/1415772">(<strong>Standard Deviation</strong>)标准差</a>: 方差开根号。</span></div></div>
 <ul>
 <li><p>The most basic statistical summary of a list of object is its distribution.</p></li>
 <li><p>We will learn ways to visualize and analyze distributions in the upcoming videos.</p></li>
 <li><p>In some cases, data can be summarized by two-number summary: the average and standard deviation.I will learn to use data visualization to determine when that is appropriate.</p></li>
-</ul>
-</section>
-<section id="data-types" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="data-types"><span class="header-section-number">2.3.2</span> Data Types</h3>
+</ul></section><section id="data-types" class="level3" data-number="2.3.2"><h3 data-number="2.3.2" class="anchored" data-anchor-id="data-types">
+<span class="header-section-number">2.3.2</span> Data Types</h3>
 <p>In R, there are <a href="https://www.programiz.com/r/data-types">6 basic data types</a>:</p>
 <ul>
 <li><p><code>logical</code></p></li>
@@ -563,7 +591,8 @@ Important
 <div class="cell-output-display">
 <div>
 <p>
-</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">flowchart LR
+</p>
+<pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">flowchart LR
   A[Main variable types] --&gt; B{Catrgorical}
   A[Main variable types] --&gt; C{Numeric}
   B{Catrgorical} --&gt; D[ordinal]
@@ -574,13 +603,12 @@ Important
 <div id="mermaid-tooltip-1" class="mermaidTooltip">
 
 </div>
-<p></p>
+
 </div>
 </div>
 </div>
-</section>
-<section id="exercise" class="level3" data-number="2.3.3">
-<h3 data-number="2.3.3" class="anchored" data-anchor-id="exercise"><span class="header-section-number">2.3.3</span> Exercise</h3>
+</section><section id="exercise" class="level3" data-number="2.3.3"><h3 data-number="2.3.3" class="anchored" data-anchor-id="exercise">
+<span class="header-section-number">2.3.3</span> Exercise</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># extract the variable names from a dataset</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="fu">names</span>(x)</span>
@@ -593,24 +621,20 @@ Important
 <span id="cb3-9"><a href="#cb3-9"></a><span class="co"># to compute the frequencies of each unique value</span></span>
 <span id="cb3-10"><a href="#cb3-10"></a><span class="fu">table</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-</section>
-<section id="describe-heights-to-et" class="level2 page-columns page-full" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="describe-heights-to-et"><span class="header-section-number">2.4</span> Describe Heights to ET</h2>
-<section id="key-point-1" class="level3" data-number="2.4.1">
-<h3 data-number="2.4.1" class="anchored" data-anchor-id="key-point-1"><span class="header-section-number">2.4.1</span> key point:</h3>
+</section></section><section id="describe-heights-to-et" class="level2 page-columns page-full" data-number="2.4"><h2 data-number="2.4" class="anchored" data-anchor-id="describe-heights-to-et">
+<span class="header-section-number">2.4</span> Describe Heights to ET</h2>
+<section id="key-point-1" class="level3" data-number="2.4.1"><h3 data-number="2.4.1" class="anchored" data-anchor-id="key-point-1">
+<span class="header-section-number">2.4.1</span> key point:</h3>
 <ul>
 <li>A distribution is a function or description that shows the possible values of a variable and how often those values occur.</li>
 <li>For categorical variables, the distribution describes the proportions of each category.</li>
-<li>A <em>frequency table</em> is the simplest way to show a categorical distribution. Use <code>prop.table()</code> to convert a table of counts to a frequency table. <em>Barplots</em> display the distribution of categorical variables and are a way to visualize the information in frequency tables.</li>
+<li>A <em>frequency table</em> is the simplest way to show a categorical distribution. Use <code><a href="https://rdrr.io/r/base/proportions.html">prop.table()</a></code> to convert a table of counts to a frequency table. <em>Barplots</em> display the distribution of categorical variables and are a way to visualize the information in frequency tables.</li>
 <li>For continuous numerical data, reporting the frequency of each unique entry is not an effective summary as many or most values are unique. Instead, a distribution function is required.</li>
 <li>The <a href="https://en.wikipedia.org/wiki/Cumulative_distribution_function"><em>cumulative distribution function (CDF)</em></a> is a function that reports the proportion of data below a value <span class="math inline">a</span> for all values of <span class="math inline">a</span> :<span class="math inline">F(a)=Pr(x≤a)</span>.</li>
 <li>The proportion of observations between any two values <span class="math inline">a</span> and <span class="math inline">b</span> can be computed from the CDF as <span class="math inline">F(b)-F(a)</span>.</li>
 <li>A <em>histogram</em> divides data into non-overlapping bins of the same size and plots the counts of number of values that fall in that interval.</li>
-</ul>
-</section>
-<section id="code-1" class="level3 page-columns page-full" data-number="2.4.2">
-<h3 data-number="2.4.2" class="anchored" data-anchor-id="code-1"><span class="header-section-number">2.4.2</span> Code:</h3>
+</ul></section><section id="code-1" class="level3 page-columns page-full" data-number="2.4.2"><h3 data-number="2.4.2" class="anchored" data-anchor-id="code-1">
+<span class="header-section-number">2.4.2</span> Code:</h3>
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">R 语言学习 - <a href="https://blog.csdn.net/wlt9037/article/details/76570155" title="table()结果提取"><code>table()</code></a> 结果提取.</span></div></div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># load the dataset</span></span>
@@ -619,14 +643,11 @@ Important
 <span id="cb4-4"><a href="#cb4-4"></a><span class="co"># make a table of category proportions</span></span>
 <span id="cb4-5"><a href="#cb4-5"></a><span class="fu">prop.table</span>(<span class="fu">table</span>(heights<span class="sc">$</span>sex))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-</section>
-<section id="cumulative-distribution-function" class="level2 page-columns page-full" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="cumulative-distribution-function"><span class="header-section-number">2.5</span> Cumulative Distribution Function</h2>
+</section></section><section id="cumulative-distribution-function" class="level2 page-columns page-full" data-number="2.5"><h2 data-number="2.5" class="anchored" data-anchor-id="cumulative-distribution-function">
+<span class="header-section-number">2.5</span> Cumulative Distribution Function</h2>
 <p>Every <em>continuous distribution</em> has <em>cumulative distribution function (CDF)</em>. The CDF defines the proportion of the data below a given value for all values of <span class="math inline">a</span> :</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p></p><figcaption class="figure-caption">Cumulative Distribution Function (CDF)</figcaption><p></p>
+<figure class="figure"><p></p><figcaption class="figure-caption">Cumulative Distribution Function (CDF)</figcaption><p></p>
 <p><img src="https://rafalab.dfci.harvard.edu/dsbook/book_files/figure-html/ecdf-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
@@ -634,8 +655,8 @@ Important
 <p>The CDF is essential for calculating probabilities related to continuous data. In a continuous dataset, the probability of a specific exact value is not informative because most entries are unique. For example, in the student heights data, only one individual reported a height of 68.8976377952726 inches, but many students rounded similar heights to 69 inches. If we computed exact value probabilities, we would find that being exactly 69 inches is much more likely than being a non-integer exact height, which does not match our understanding that height is continuous. We can instead use the CDF to obtain a useful summary, such as the probability that a student is between 68.5 and 69.5 inches.</p>
 <p>For datasets that are not normal, the CDF can be calculated manually by defining a function to compute the probability above. This function can then be applied to a range of values across the range of the dataset to calculate a CDF. Given a dataset<code>my_data</code>, the CDF can be calculated and plotted like this:</p>
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">R语言中的<a href="https://www.jianshu.com/p/59fb24ca2ea7">[<code>apply()</code>]，[<code>lapply()</code>]，[<code>sapply()</code>]，<code>tapply()</code></a>函数以及示例</span></div></div>
-<section id="code-for-cdf" class="level3" data-number="2.5.1">
-<h3 data-number="2.5.1" class="anchored" data-anchor-id="code-for-cdf"><span class="header-section-number">2.5.1</span> Code for CDF:</h3>
+<section id="code-for-cdf" class="level3" data-number="2.5.1"><h3 data-number="2.5.1" class="anchored" data-anchor-id="code-for-cdf">
+<span class="header-section-number">2.5.1</span> Code for CDF:</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Cumulative Distribution Function </span></span>
 <span id="cb5-2"><a href="#cb5-2"></a>a <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">min</span>(x), <span class="fu">max</span>(x), length) <span class="co"># define range of the values</span></span>
@@ -645,9 +666,8 @@ Important
 <span id="cb5-6"><a href="#cb5-6"></a>cdf_values <span class="ot">&lt;-</span> <span class="fu">sapply</span>(a, cdf_function)</span>
 <span id="cb5-7"><a href="#cb5-7"></a><span class="fu">plot</span>(a, cdf_values)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="code-for-student-height" class="level3" data-number="2.5.2">
-<h3 data-number="2.5.2" class="anchored" data-anchor-id="code-for-student-height"><span class="header-section-number">2.5.2</span> Code for student height:</h3>
+</section><section id="code-for-student-height" class="level3" data-number="2.5.2"><h3 data-number="2.5.2" class="anchored" data-anchor-id="code-for-student-height">
+<span class="header-section-number">2.5.2</span> Code for student height:</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># example for student heights</span></span>
 <span id="cb6-2"><a href="#cb6-2"></a>a <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">min</span>(heights<span class="sc">$</span>height), <span class="fu">max</span>(heights<span class="sc">$</span>height), <span class="at">length =</span> <span class="dv">100</span>)</span>
@@ -663,12 +683,10 @@ Important
 <p>The CDF defines that proportion of data below a cut-off <span class="math inline">a</span>. To define the proportion of values above <span class="math inline">a</span>, we compute: <span class="math inline">1-F(a)</span></p>
 <p>To define the proportion of values between <span class="math inline">a</span> and <span class="math inline">b</span>, we compute: <span class="math inline">F(b)-F(a)</span></p>
 <p>Note that the CDF can help compute probabilities. The probability of observing a randomly chosen value between <span class="math inline">a</span> and <span class="math inline">b</span> is equal to the proportion of values between <span class="math inline">a</span> and <span class="math inline">b</span>, which we compute with the CDF.</p>
-</section>
-</section>
-<section id="smooth-density-plots" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="smooth-density-plots"><span class="header-section-number">2.6</span> Smooth Density Plots</h2>
-<section id="key-point-2" class="level3" data-number="2.6.1">
-<h3 data-number="2.6.1" class="anchored" data-anchor-id="key-point-2"><span class="header-section-number">2.6.1</span> Key Point:</h3>
+</section></section><section id="smooth-density-plots" class="level2" data-number="2.6"><h2 data-number="2.6" class="anchored" data-anchor-id="smooth-density-plots">
+<span class="header-section-number">2.6</span> Smooth Density Plots</h2>
+<section id="key-point-2" class="level3" data-number="2.6.1"><h3 data-number="2.6.1" class="anchored" data-anchor-id="key-point-2">
+<span class="header-section-number">2.6.1</span> Key Point:</h3>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -688,35 +706,36 @@ A further note on histograms
 <li><p>While the histogram is an assumption-free summary, the smooth density plot is shaped by assumptions and choices you make as a data analyst.</p></li>
 <li><p><strong><em>The y-axis is scaled so that the area under the density curve sums to 1.</em></strong> <!--#这是因为Y轴表示的是区间内的变量占总体的比重。 所有区间相加等于1。-->This means that interpreting value on the y-axis is not straightforward. To determine the proportion of data in between two values, compute the area under the smooth density curve in the region between those values.</p></li>
 <li><p>An advantage of smooth densities over histograms is that <strong><em>densities are easier to compare visually</em></strong>.</p></li>
-</ul>
-</section>
-</section>
-<section id="normal-distribution" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="normal-distribution"><span class="header-section-number">2.7</span> Normal Distribution</h2>
-<section id="key-points-1" class="level3" data-number="2.7.1">
-<h3 data-number="2.7.1" class="anchored" data-anchor-id="key-points-1"><span class="header-section-number">2.7.1</span> Key Points:</h3>
+</ul></section></section><section id="normal-distribution" class="level2" data-number="2.7"><h2 data-number="2.7" class="anchored" data-anchor-id="normal-distribution">
+<span class="header-section-number">2.7</span> Normal Distribution</h2>
+<section id="key-points-1" class="level3" data-number="2.7.1"><h3 data-number="2.7.1" class="anchored" data-anchor-id="key-points-1">
+<span class="header-section-number">2.7.1</span> Key Points:</h3>
 <ul>
-<li><p><a href="https://www.youtube.com/watch?v=xI9ZHGOSaCg&amp;ab_channel=AceTutors">The normal distribution</a>:</p>
+<li>
+<p><a href="https://www.youtube.com/watch?v=xI9ZHGOSaCg&amp;ab_channel=AceTutors">The normal distribution</a>:</p>
 <ul>
-<li>is <strong><em>centered around</em></strong> one value, the <strong><em>mean</em></strong></li>
+<li>is <strong><em>centered around</em></strong> one value, the <strong><em>mean</em></strong>
+</li>
 <li>is <strong><em>symmetric(对称)</em></strong> around the mean.</li>
-<li>is defined completely by its <strong><em>mean(</em></strong><span class="math inline">\mu</span><strong>)</strong> and <strong><em>standard deviation(</em></strong><span class="math inline">\sigma</span><strong>)</strong></li>
-<li><strong><em>Always has the same proportion</em></strong> of observations <strong><em>within a given distance</em></strong> of the mean (for example, 95% with 2<span class="math inline">\sigma</span>)</li>
-</ul></li>
+<li>is defined completely by its <strong><em>mean(</em></strong><span class="math inline">\mu</span><strong>)</strong> and <strong><em>standard deviation(</em></strong><span class="math inline">\sigma</span><strong>)</strong>
+</li>
+<li>
+<strong><em>Always has the same proportion</em></strong> of observations <strong><em>within a given distance</em></strong> of the mean (for example, 95% with 2<span class="math inline">\sigma</span>)</li>
+</ul>
+</li>
 <li><p>The standard deviation is the <strong><em>average distance between a value and the mean value</em></strong>.</p></li>
-<li><p>Calculate the mean using the <strong><em><code>mean()</code></em></strong> function.</p></li>
-<li><p>Calculate the standard deviation using the <strong><em><code>sd()</code></em></strong> function or manually.</p></li>
-<li><p><strong><em>Standard units</em></strong> describe how many standard deviations a value is away from the mean. The z-score, or number of standard deviation an observation is away from the mean <span class="math inline">\mu</span>:</p>
+<li><p>Calculate the mean using the <strong><em><code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code></em></strong> function.</p></li>
+<li><p>Calculate the standard deviation using the <strong><em><code><a href="https://rdrr.io/r/stats/sd.html">sd()</a></code></em></strong> function or manually.</p></li>
+<li>
+<p><strong><em>Standard units</em></strong> describe how many standard deviations a value is away from the mean. The z-score, or number of standard deviation an observation is away from the mean <span class="math inline">\mu</span>:</p>
 <p><span class="math display">
   z = (x-\mu)/\sigma
-  </span></p></li>
-<li><p>Computer standard units with the <code>scale()</code> function.</p></li>
+  </span></p>
+</li>
+<li><p>Computer standard units with the <code><a href="https://rdrr.io/r/base/scale.html">scale()</a></code> function.</p></li>
 <li><p><strong><em>Important:</em></strong> to calculate the proportion of value that meet a certain condition, use the <code>mean</code> function on a logical vector. Because <code>TRUE</code> is converted to 1 and <code>FALSE</code> is converted to 0, taking the mean of this vector yields the proportion of <code>TURE</code>.</p></li>
-</ul>
-</section>
-</section>
-<section id="equation-for-the-normal-distribution" class="level2 page-columns page-full" data-number="2.8">
-<h2 data-number="2.8" class="anchored" data-anchor-id="equation-for-the-normal-distribution"><span class="header-section-number">2.8</span> Equation for the normal distribution</h2>
+</ul></section></section><section id="equation-for-the-normal-distribution" class="level2 page-columns page-full" data-number="2.8"><h2 data-number="2.8" class="anchored" data-anchor-id="equation-for-the-normal-distribution">
+<span class="header-section-number">2.8</span> Equation for the normal distribution</h2>
 <p>The normal distribution is mathematically defined by the following formula for any mean <span class="math inline">\mu</span> and standard deviation <span class="math inline">\sigma</span>:</p>
 <p><span class="math display">
 Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{x-\mu^2}{\sigma})}dx
@@ -724,8 +743,8 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <p>When standard unites <span class="math inline">z=0</span>, the normal distribution is at a maximum, the mean <span class="math inline">\mu</span>. The function is defined to be symmetric around <span class="math inline">z=0</span>.</p>
 <p>The normal distribution of z-score is called the <em>standard normal distribution</em> and is defined by <span class="math inline">\mu=0</span> and <span class="math inline">\sigma=1</span>.</p>
 <p>Z-score are useful to quickly evalute whether an observation is average or extreme. Z-scores near 0 are average. Z-score above 2 or below -2 are <strong><em>significantly above or blew the mean</em></strong>, and z-scores above 3 or below -3 are <strong><em>extrmely rate</em></strong>.</p>
-<section id="code-2" class="level3 page-columns page-full" data-number="2.8.1">
-<h3 data-number="2.8.1" class="anchored" data-anchor-id="code-2"><span class="header-section-number">2.8.1</span> Code:</h3>
+<section id="code-2" class="level3 page-columns page-full" data-number="2.8.1"><h3 data-number="2.8.1" class="anchored" data-anchor-id="code-2">
+<span class="header-section-number">2.8.1</span> Code:</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># define x as vector of male heights</span></span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="fu">library</span>(tidyverse)</span>
@@ -749,25 +768,23 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <span id="cb7-20"><a href="#cb7-20"></a><span class="co"># calculate proportion of value within 2 SD of mean</span></span>
 <span id="cb7-21"><a href="#cb7-21"></a><span class="fu">mean</span>(<span class="fu">abs</span>(z) <span class="sc">&lt;</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class=""><strong><em>function <code>sd()</code>:</em></strong>The built-in R <strong><em>function <code>sd()</code></em></strong> calculates the standard deviation, but it divides by <strong><em><code>length(x)-1</code></em></strong> instead of <strong><em><code>length(x)</code></em></strong>. When the length of the list is large, this difference is negligible and you can use the built-in <strong><em><code>sd()</code></em></strong> function. Otherwise, you should compute σ by hand. For this course series, assume that you should use the <strong><em><code>sd()</code></em></strong> function unless you are told not to do so.</span></div></div>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class=""><strong><em>function <code><a href="https://rdrr.io/r/stats/sd.html">sd()</a></code>:</em></strong>The built-in R <strong><em>function <code><a href="https://rdrr.io/r/stats/sd.html">sd()</a></code></em></strong> calculates the standard deviation, but it divides by <strong><em><code>length(x)-1</code></em></strong> instead of <strong><em><code>length(x)</code></em></strong>. When the length of the list is large, this difference is negligible and you can use the built-in <strong><em><code><a href="https://rdrr.io/r/stats/sd.html">sd()</a></code></em></strong> function. Otherwise, you should compute σ by hand. For this course series, assume that you should use the <strong><em><code><a href="https://rdrr.io/r/stats/sd.html">sd()</a></code></em></strong> function unless you are told not to do so.</span></div></div>
 <p>Here we will learn more about benchmark z-score value and their corresponding probabilities.</p>
-</section>
-<section id="the-68-95-99.7-rule" class="level3" data-number="2.8.2">
-<h3 data-number="2.8.2" class="anchored" data-anchor-id="the-68-95-99.7-rule"><span class="header-section-number">2.8.2</span> The 68-95-99.7 Rule</h3>
+</section><section id="the-68-95-99.7-rule" class="level3" data-number="2.8.2"><h3 data-number="2.8.2" class="anchored" data-anchor-id="the-68-95-99.7-rule">
+<span class="header-section-number">2.8.2</span> The 68-95-99.7 Rule</h3>
 <p>The normal distribution is associated with the 68-95-99.7 rule. This rule describes the probability of observing events within a ceration number of standard deviations of the mean.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p></p><figcaption class="figure-caption">Normal Distribution Probabilities</figcaption><p></p>
+<figure class="figure"><p></p><figcaption class="figure-caption">Normal Distribution Probabilities</figcaption><p></p>
 <p><img src="https://courses.edx.org/assets/courseware/v1/28d10d22ba8b3bf4b0cc5024de0dc616/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-probs-combined.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>The probability distribution function for the normal distribution is defined such that:</p>
 <ul>
-<li>About 68% of observations will be within one standard deviation of the mean(<span class="math inline">\mu\pm\sigma</span>). In standard units, this is equivalent to a z-score of <span class="math inline">|z|\leq2</span></li>
+<li>About 68% of observations will be within one standard deviation of the mean(<span class="math inline">\mu\pm\sigma</span>). In standard units, this is equivalent to a z-score of <span class="math inline">|z|\leq2</span>
+</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p></p><figcaption class="figure-caption">Probability of an observation within 1 SD of mean</figcaption><p></p>
+<figure class="figure"><p></p><figcaption class="figure-caption">Probability of an observation within 1 SD of mean</figcaption><p></p>
 <p><img src="https://courses.edx.org/assets/courseware/v1/f0bb9f66b7bdd91b2c9852c7a68427c7/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-1sd.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
@@ -775,8 +792,7 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <li>About 95% of observations will be within two standard seviations of the mean(<span class="math inline">\mu\pm2\sigma</span>). In standard units, this is equivalent to a z-sore of <span class="math inline">|z|\leq2</span>.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p></p><figcaption class="figure-caption">Probability of an ovservation within 2 SD of mean</figcaption><p></p>
+<figure class="figure"><p></p><figcaption class="figure-caption">Probability of an ovservation within 2 SD of mean</figcaption><p></p>
 <p><img src="https://courses.edx.org/assets/courseware/v1/9686a507a97a536a1f5c6b6a01bd8154/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-2sd.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
@@ -784,17 +800,14 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <li>About 99.7% of observations will be within three standard deviations of the mean(<span class="math inline">\mu\pm3\sigma</span>). In standard units, this is equivalent to a z-score of <span class="math inline">|z|\leq3</span>.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p></p><figcaption class="figure-caption">Probability of an observation within 3 SD of mean</figcaption><p></p>
+<figure class="figure"><p></p><figcaption class="figure-caption">Probability of an observation within 3 SD of mean</figcaption><p></p>
 <p><img src="https://courses.edx.org/assets/courseware/v1/a8af7c699c20d1e83819b5f68bf6f17d/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-3sd.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-</section>
-</section>
-<section id="the-normal-cdf-and-pnorm" class="level2" data-number="2.9">
-<h2 data-number="2.9" class="anchored" data-anchor-id="the-normal-cdf-and-pnorm"><span class="header-section-number">2.9</span> The Normal CDF and pnorm</h2>
-<section id="key-points-2" class="level3" data-number="2.9.1">
-<h3 data-number="2.9.1" class="anchored" data-anchor-id="key-points-2"><span class="header-section-number">2.9.1</span> Key points:</h3>
+</section></section><section id="the-normal-cdf-and-pnorm" class="level2" data-number="2.9"><h2 data-number="2.9" class="anchored" data-anchor-id="the-normal-cdf-and-pnorm">
+<span class="header-section-number">2.9</span> The Normal CDF and pnorm</h2>
+<section id="key-points-2" class="level3" data-number="2.9.1"><h3 data-number="2.9.1" class="anchored" data-anchor-id="key-points-2">
+<span class="header-section-number">2.9.1</span> Key points:</h3>
 <ul>
 <li><p>The normal distribution has a mathematically defined CDF which can be computed in R with the function <code>pnorm</code>.</p></li>
 <li><p><code>pnom(a, avg, s)</code> gives the value of the cumculative distribution function <em>F(a)</em> for the normal distribution defined by average <em>avg</em> and standard deviation <em>s</em>.</p></li>
@@ -802,10 +815,8 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <li><p>If we are willing to use the normal approximation for height, we can estimate the distribution simply from the mean and standard deviation of our values.</p></li>
 <li><p>If we treat the height data as discrete rather than categorical, we see that the data are not very useful because integer values are more common that expected due to rounding. This is called discretization.</p></li>
 <li><p>With rounded data, the normal approximation is particularly useful when computing probabilities of intervals of length 1 that include exactly over integer.</p></li>
-</ul>
-</section>
-<section id="code-using-pnorm-to-calculate-probabilities" class="level3" data-number="2.9.2">
-<h3 data-number="2.9.2" class="anchored" data-anchor-id="code-using-pnorm-to-calculate-probabilities"><span class="header-section-number">2.9.2</span> Code: Using pnorm to calculate probabilities</h3>
+</ul></section><section id="code-using-pnorm-to-calculate-probabilities" class="level3" data-number="2.9.2"><h3 data-number="2.9.2" class="anchored" data-anchor-id="code-using-pnorm-to-calculate-probabilities">
+<span class="header-section-number">2.9.2</span> Code: Using pnorm to calculate probabilities</h3>
 <p>Given male heights x:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -817,9 +828,8 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="dv">1</span> <span class="sc">-</span> <span class="fu">pnorm</span>(<span class="fl">70.5</span>, <span class="fu">mean</span>(x), <span class="fu">sd</span>(x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="code-discretization-and-the-normal-approximation" class="level3" data-number="2.9.3">
-<h3 data-number="2.9.3" class="anchored" data-anchor-id="code-discretization-and-the-normal-approximation"><span class="header-section-number">2.9.3</span> Code: Discretization and the normal approximation</h3>
+</section><section id="code-discretization-and-the-normal-approximation" class="level3" data-number="2.9.3"><h3 data-number="2.9.3" class="anchored" data-anchor-id="code-discretization-and-the-normal-approximation">
+<span class="header-section-number">2.9.3</span> Code: Discretization and the normal approximation</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># plot distribution of exact heights in data</span></span>
 <span id="cb10-2"><a href="#cb10-2"></a><span class="fu">plot</span>(<span class="fu">prop.table</span>(<span class="fu">table</span>(x)), <span class="at">xlab =</span> <span class="st">"a = Height in inches"</span>, <span class="at">ylab =</span> <span class="st">"Pr(x = a)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -842,36 +852,30 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <span id="cb11-12"><a href="#cb11-12"></a><span class="fu">mean</span>(x <span class="sc">&lt;=</span> <span class="fl">70.9</span>) <span class="sc">-</span> <span class="fu">mean</span>(x <span class="sc">&lt;=</span> <span class="fl">70.1</span>)</span>
 <span id="cb11-13"><a href="#cb11-13"></a><span class="fu">pnorm</span>(<span class="fl">70.9</span>, <span class="fu">mean</span>(x), <span class="fu">sd</span>(x)) <span class="sc">-</span> <span class="fu">pnorm</span>(<span class="fl">70.1</span>, <span class="fu">mean</span>(x), <span class="fu">sd</span>(x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-</section>
-<section id="definition-of-quantiles" class="level2" data-number="2.10">
-<h2 data-number="2.10" class="anchored" data-anchor-id="definition-of-quantiles"><span class="header-section-number">2.10</span> Definition of quantiles</h2>
-<section id="definition-of-quantiles-1" class="level3" data-number="2.10.1">
-<h3 data-number="2.10.1" class="anchored" data-anchor-id="definition-of-quantiles-1"><span class="header-section-number">2.10.1</span> Definition of quantiles</h3>
+</section></section><section id="definition-of-quantiles" class="level2" data-number="2.10"><h2 data-number="2.10" class="anchored" data-anchor-id="definition-of-quantiles">
+<span class="header-section-number">2.10</span> Definition of quantiles</h2>
+<section id="definition-of-quantiles-1" class="level3" data-number="2.10.1"><h3 data-number="2.10.1" class="anchored" data-anchor-id="definition-of-quantiles-1">
+<span class="header-section-number">2.10.1</span> Definition of quantiles</h3>
 <p><a href="https://www.youtube.com/watch?v=Ky7QeVgv-BA&amp;ab_channel=MarinStatsLectures-RProgramming%26Statistics">Quantiles</a> are cut off points that divide a dataset into intervals with set probability. The <em>qth</em> quantile is the value at which <em>q%</em> of the observation are <strong><em>equal to or less than that value</em></strong>.</p>
-</section>
-<section id="using-the-quantile-function" class="level3" data-number="2.10.2">
-<h3 data-number="2.10.2" class="anchored" data-anchor-id="using-the-quantile-function"><span class="header-section-number">2.10.2</span> Using the quantile function</h3>
+</section><section id="using-the-quantile-function" class="level3" data-number="2.10.2"><h3 data-number="2.10.2" class="anchored" data-anchor-id="using-the-quantile-function">
+<span class="header-section-number">2.10.2</span> Using the quantile function</h3>
 <p>Given a dataset <code>data</code> and desired quantile <code>q</code>, you can find the <code>q</code> the quantile of <code>data</code> with:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">quantile</span>(data,q)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="percentiles" class="level3" data-number="2.10.3">
-<h3 data-number="2.10.3" class="anchored" data-anchor-id="percentiles"><span class="header-section-number">2.10.3</span> Percentiles</h3>
+</section><section id="percentiles" class="level3" data-number="2.10.3"><h3 data-number="2.10.3" class="anchored" data-anchor-id="percentiles">
+<span class="header-section-number">2.10.3</span> Percentiles</h3>
 <p>Percentiles are the quantiles that divide a dataset into 100 intervals each with 1% probability. You can determine all percentiles of a dataset <code>data</code> like this:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>p <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fl">0.01</span>, <span class="fl">0.09</span>, <span class="fl">0.01</span>)</span>
 <span id="cb13-2"><a href="#cb13-2"></a><span class="fu">quantile</span>(data, p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="quartiles" class="level3" data-number="2.10.4">
-<h3 data-number="2.10.4" class="anchored" data-anchor-id="quartiles"><span class="header-section-number">2.10.4</span> Quartiles</h3>
+</section><section id="quartiles" class="level3" data-number="2.10.4"><h3 data-number="2.10.4" class="anchored" data-anchor-id="quartiles">
+<span class="header-section-number">2.10.4</span> Quartiles</h3>
 <p>Quartiles divide a dataset into 4 parts each with 25% probability. They are equal to the 25th, 50th and 75th percentiles. The 25th percentile is also known as the <em>1st quartile</em>, the 50th percentile is also konwn as the median, and the 75th percentile is also knowns as the <em>3rd quartile</em>.</p>
-<p>The <strong><em><code>summary()</code></em></strong> function returns the minimum, quartiles and maximum of a vector.</p>
-</section>
-<section id="examples" class="level3" data-number="2.10.5">
-<h3 data-number="2.10.5" class="anchored" data-anchor-id="examples"><span class="header-section-number">2.10.5</span> Examples</h3>
+<p>The <strong><em><code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code></em></strong> function returns the minimum, quartiles and maximum of a vector.</p>
+</section><section id="examples" class="level3" data-number="2.10.5"><h3 data-number="2.10.5" class="anchored" data-anchor-id="examples">
+<span class="header-section-number">2.10.5</span> Examples</h3>
 <p>Load the heights dataset from the <em>dslabs</em> package:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">library</span>(dslabs)</span>
@@ -890,7 +894,7 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>p <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fl">0.01</span>, <span class="fl">0.99</span>, <span class="fl">0.01</span>)</span>
 <span id="cb17-2"><a href="#cb17-2"></a>percentiles <span class="ot">&lt;-</span> <span class="fu">quantile</span>(heights<span class="sc">$</span>height, p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Confirm that the 25th and 75th percentiles match that 1st and 3rd quartiles. Note that <code>quantile()</code> returns a named vector. You can access the 25th and 75th percentiles like this (adapt the code for other percentile value):</p>
+<p>Confirm that the 25th and 75th percentiles match that 1st and 3rd quartiles. Note that <code><a href="https://rdrr.io/r/stats/quantile.html">quantile()</a></code> returns a named vector. You can access the 25th and 75th percentiles like this (adapt the code for other percentile value):</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>percentiles[<span class="fu">names</span>(percentiles) <span class="sc">==</span> <span class="st">"25%"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -903,52 +907,44 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
  71 </code></pre>
 </div>
 </div>
-</section>
-</section>
-<section id="finding-quantile-with-qnorm" class="level2 page-columns page-full" data-number="2.11">
-<h2 data-number="2.11" class="anchored" data-anchor-id="finding-quantile-with-qnorm"><span class="header-section-number">2.11</span> Finding quantile with qnorm</h2>
-<section id="definiton-of-qnorm" class="level3 page-columns page-full" data-number="2.11.1">
-<h3 data-number="2.11.1" class="anchored" data-anchor-id="definiton-of-qnorm"><span class="header-section-number">2.11.1</span> Definiton of qnorm</h3>
+</section></section><section id="finding-quantile-with-qnorm" class="level2 page-columns page-full" data-number="2.11"><h2 data-number="2.11" class="anchored" data-anchor-id="finding-quantile-with-qnorm">
+<span class="header-section-number">2.11</span> Finding quantile with qnorm</h2>
+<section id="definiton-of-qnorm" class="level3 page-columns page-full" data-number="2.11.1"><h3 data-number="2.11.1" class="anchored" data-anchor-id="definiton-of-qnorm">
+<span class="header-section-number">2.11.1</span> Definiton of qnorm</h3>
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">简单来说,<a href="https://www.jianshu.com/p/a24eb1b94177"><strong><em><code>qnorm</code></em></strong></a>是正态分布<strong><em>累积分布函数(CDF)</em></strong>的反函数， 也就是说它可以视为<code>pnorm</code>的反函数, 这里<code>q</code>指的是quantile, 即分位数</span></div></div>
 <p>The <a href="https://www.youtube.com/watch?v=X5NXDK6AVtU&amp;ab_channel=TheDataDigest"><code>qnorm()</code></a> function gives the theoretical value of a quantile with probability <code>p</code> of observing a value equal to or less than that quantile value a normal distribution with mean <code>mu</code> and standard deviation <code>sigma</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">qnorm</span>(p, mu, sigma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong><em>By default, <code>mu</code>=0 and <code>sigma</code>=1</em></strong>. Therefore, calling <code>qnorm()</code> with no arguments gives quantiles for the standard normal distribution.</p>
+<p><strong><em>By default, <code>mu</code>=0 and <code>sigma</code>=1</em></strong>. Therefore, calling <code><a href="https://rdrr.io/r/stats/Normal.html">qnorm()</a></code> with no arguments gives quantiles for the standard normal distribution.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">qnorm</span>(p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Recall that quantiles are defined such that <span class="math inline">p</span> is the probability of a random observation less than or equal to the quantile.</p>
-</section>
-<section id="realation-to-pnorm" class="level3" data-number="2.11.2">
-<h3 data-number="2.11.2" class="anchored" data-anchor-id="realation-to-pnorm"><span class="header-section-number">2.11.2</span> Realation to pnorm</h3>
-<p>The <code>pnorm()</code> function gives the probability that a value from a standard normal distribution will be less than or equal to a z-score value z. consider: <span class="math display">pnorm(-1.96)\approx0.025</span> The result of <code>pnorm()</code> is the quantile. Note that: <span class="math display">qnorm(0.025)\approx-1.96</span> <code>qnorm()</code> and <code>pnorm</code> are inverse functions: <span class="math display">pnorm(qnorm(0.025))\equiv0.025</span></p>
-</section>
-<section id="theoretical-quantiles" class="level3" data-number="2.11.3">
-<h3 data-number="2.11.3" class="anchored" data-anchor-id="theoretical-quantiles"><span class="header-section-number">2.11.3</span> Theoretical quantiles</h3>
-<p>You can use <code>qnorm()</code> to determine the theoretical quantiles of a dataset: that is, the theoretical value of quantiles assuming that a dataset follows a normal distribution. Run the <code>qnorm()</code> function with the desired probabilities <em>p</em>, mean mu and standard deviation sigma.</p>
+</section><section id="realation-to-pnorm" class="level3" data-number="2.11.2"><h3 data-number="2.11.2" class="anchored" data-anchor-id="realation-to-pnorm">
+<span class="header-section-number">2.11.2</span> Realation to pnorm</h3>
+<p>The <code><a href="https://rdrr.io/r/stats/Normal.html">pnorm()</a></code> function gives the probability that a value from a standard normal distribution will be less than or equal to a z-score value z. consider: <span class="math display">pnorm(-1.96)\approx0.025</span> The result of <code><a href="https://rdrr.io/r/stats/Normal.html">pnorm()</a></code> is the quantile. Note that: <span class="math display">qnorm(0.025)\approx-1.96</span> <code><a href="https://rdrr.io/r/stats/Normal.html">qnorm()</a></code> and <code>pnorm</code> are inverse functions: <span class="math display">pnorm(qnorm(0.025))\equiv0.025</span></p>
+</section><section id="theoretical-quantiles" class="level3" data-number="2.11.3"><h3 data-number="2.11.3" class="anchored" data-anchor-id="theoretical-quantiles">
+<span class="header-section-number">2.11.3</span> Theoretical quantiles</h3>
+<p>You can use <code><a href="https://rdrr.io/r/stats/Normal.html">qnorm()</a></code> to determine the theoretical quantiles of a dataset: that is, the theoretical value of quantiles assuming that a dataset follows a normal distribution. Run the <code><a href="https://rdrr.io/r/stats/Normal.html">qnorm()</a></code> function with the desired probabilities <em>p</em>, mean mu and standard deviation sigma.</p>
 <p>Suppose male heights follow a normal distribution with a mean of 69 inches and standard deviation of 3 inches. The theoretical quantiles are:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>p <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fl">0.01</span>, <span class="fl">0.99</span>, <span class="fl">0.01</span>)</span>
 <span id="cb24-2"><a href="#cb24-2"></a>theoretical_quantiles <span class="ot">&lt;-</span> <span class="fu">qnorm</span>(p, <span class="dv">69</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Theoretical quantiles can be compared to sample quantiles determined with the quantile function in order to evaluate whether the sample follows a normal distribution.</p>
-</section>
-</section>
-<section id="quantile-quantile-plots" class="level2" data-number="2.12">
-<h2 data-number="2.12" class="anchored" data-anchor-id="quantile-quantile-plots"><span class="header-section-number">2.12</span> Quantile-Quantile Plots</h2>
-<section id="key-points-3" class="level3" data-number="2.12.1">
-<h3 data-number="2.12.1" class="anchored" data-anchor-id="key-points-3"><span class="header-section-number">2.12.1</span> Key Points:</h3>
+</section></section><section id="quantile-quantile-plots" class="level2" data-number="2.12"><h2 data-number="2.12" class="anchored" data-anchor-id="quantile-quantile-plots">
+<span class="header-section-number">2.12</span> Quantile-Quantile Plots</h2>
+<section id="key-points-3" class="level3" data-number="2.12.1"><h3 data-number="2.12.1" class="anchored" data-anchor-id="key-points-3">
+<span class="header-section-number">2.12.1</span> Key Points:</h3>
 <ul>
 <li><p>Quantile-quantile plots, or QQ-plot, are used to check whether distributions are well-approximated by a normal distribution.</p></li>
 <li><p>Given a proportion <em>p</em>, the quantile <em>q</em> is the value such that the proportion of values in the data blew <em>q</em> is <em>p</em>.</p></li>
 <li><p>In a QQ-plot, the sample quantiles in the observed data are compared to the theoretical quantiles expected from the normal distribution. If the data are well-approximated by the normal distribution, then the points on the QQ-plot will fall near the identity line(sample = theoretical).</p></li>
-<li><p>Calculate sample quantiles (observed quantiles) using the <code>quantile()</code> function.</p></li>
-<li><p>Calculate theoretical quantiles with the <code>qnorm()</code> function. <code>qnorm()</code> will caculate quantiles for the standard normal distribution (<span class="math inline">\mu=0, \sigma=1</span>) by default, but it can calculate quantiles for any normal distribution given <code>mean()</code> and <code>sd()</code> arguments.</p></li>
-</ul>
-</section>
-<section id="code-3" class="level3" data-number="2.12.2">
-<h3 data-number="2.12.2" class="anchored" data-anchor-id="code-3"><span class="header-section-number">2.12.2</span> Code:</h3>
+<li><p>Calculate sample quantiles (observed quantiles) using the <code><a href="https://rdrr.io/r/stats/quantile.html">quantile()</a></code> function.</p></li>
+<li><p>Calculate theoretical quantiles with the <code><a href="https://rdrr.io/r/stats/Normal.html">qnorm()</a></code> function. <code><a href="https://rdrr.io/r/stats/Normal.html">qnorm()</a></code> will caculate quantiles for the standard normal distribution (<span class="math inline">\mu=0, \sigma=1</span>) by default, but it can calculate quantiles for any normal distribution given <code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code> and <code><a href="https://rdrr.io/r/stats/sd.html">sd()</a></code> arguments.</p></li>
+</ul></section><section id="code-3" class="level3" data-number="2.12.2"><h3 data-number="2.12.2" class="anchored" data-anchor-id="code-3">
+<span class="header-section-number">2.12.2</span> Code:</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="co"># define x and z</span></span>
 <span id="cb25-2"><a href="#cb25-2"></a><span class="fu">library</span>(tidyverse)</span>
@@ -984,107 +980,90 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <p><img src="about_files/figure-html/unnamed-chunk-21-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-</section>
-<section id="percentiles-1" class="level2" data-number="2.13">
-<h2 data-number="2.13" class="anchored" data-anchor-id="percentiles-1"><span class="header-section-number">2.13</span> Percentiles</h2>
-<section id="key-points-4" class="level3" data-number="2.13.1">
-<h3 data-number="2.13.1" class="anchored" data-anchor-id="key-points-4"><span class="header-section-number">2.13.1</span> Key Points:</h3>
+</section></section><section id="percentiles-1" class="level2" data-number="2.13"><h2 data-number="2.13" class="anchored" data-anchor-id="percentiles-1">
+<span class="header-section-number">2.13</span> Percentiles</h2>
+<section id="key-points-4" class="level3" data-number="2.13.1"><h3 data-number="2.13.1" class="anchored" data-anchor-id="key-points-4">
+<span class="header-section-number">2.13.1</span> Key Points:</h3>
 <ul>
 <li><p>Percentiles are the quantiles obtained when defining <span class="math inline">p</span> as 0.01, 0.02,…,0.99. They summarize the values at which a certain percent of the observations are equal to or less than that value.</p></li>
 <li><p>The 50th percentile is also known as the median.</p></li>
 <li><p>The quartiles are the 25th, 50th and 75th percentiles.</p></li>
-</ul>
-</section>
-</section>
-<section id="boxplots" class="level2 page-columns page-full" data-number="2.14">
-<h2 data-number="2.14" class="anchored" data-anchor-id="boxplots"><span class="header-section-number">2.14</span> Boxplots</h2>
+</ul></section></section><section id="boxplots" class="level2 page-columns page-full" data-number="2.14"><h2 data-number="2.14" class="anchored" data-anchor-id="boxplots">
+<span class="header-section-number">2.14</span> Boxplots</h2>
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">R语言如何绘制<a href="https://zhuanlan.zhihu.com/p/440914623">箱线图</a></span></div></div>
-<section id="key-points-5" class="level3" data-number="2.14.1">
-<h3 data-number="2.14.1" class="anchored" data-anchor-id="key-points-5"><span class="header-section-number">2.14.1</span> Key Points:</h3>
+<section id="key-points-5" class="level3" data-number="2.14.1"><h3 data-number="2.14.1" class="anchored" data-anchor-id="key-points-5">
+<span class="header-section-number">2.14.1</span> Key Points:</h3>
 <ul>
 <li><p>When data do not follow a normal distribution and cannot be succinctly summarized by only the mean and standard deviation, an alternative is to report a five-number summary: range (ignoring outliers) and the quartiles (25th, 50th, 75th percentile).</p></li>
 <li><p>In a <a href="https://www.youtube.com/watch?v=INSIyaZUXIY&amp;ab_channel=DATAtab">boxplot</a>, the box is defined by the <em>25th</em> and <em>75th</em> percentiles and the <em>median</em> is <strong><em>a horizontal line through the box</em></strong>. The <em>whiskers</em> show <strong><em>the range excluding outliers</em></strong>, and outliers are plotted separately as individual points.</p></li>
 <li><p>The <em>interquartile range</em> is the distance between the 25th and 75th percentiles.</p></li>
 <li><p>Boxplots are particularly useful when comparing <em>multiple distributions</em>.</p></li>
-</ul>
-</section>
-</section>
-<section id="distribution-of-female-heights" class="level2" data-number="2.15">
-<h2 data-number="2.15" class="anchored" data-anchor-id="distribution-of-female-heights"><span class="header-section-number">2.15</span> Distribution of Female Heights</h2>
-<section id="key-points-6" class="level3" data-number="2.15.1">
-<h3 data-number="2.15.1" class="anchored" data-anchor-id="key-points-6"><span class="header-section-number">2.15.1</span> Key Points:</h3>
+</ul></section></section><section id="distribution-of-female-heights" class="level2" data-number="2.15"><h2 data-number="2.15" class="anchored" data-anchor-id="distribution-of-female-heights">
+<span class="header-section-number">2.15</span> Distribution of Female Heights</h2>
+<section id="key-points-6" class="level3" data-number="2.15.1"><h3 data-number="2.15.1" class="anchored" data-anchor-id="key-points-6">
+<span class="header-section-number">2.15.1</span> Key Points:</h3>
 <ul>
 <li><p>If a distribution is not normal, it cannot be summarized with only the mean and standard seviation. Provide a histogram, smooth density or boxplot instead.</p></li>
 <li><p>A plot can force us to see unexpected results that make us question the quality or implication of our data.</p></li>
-</ul>
-</section>
-</section>
-</section>
-<section id="introduction-to-ggplot2" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Introduction to ggplot2</h1>
-<section id="overview-1" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="overview-1"><span class="header-section-number">3.1</span> Overview</h2>
+</ul></section></section></section><section id="introduction-to-ggplot2" class="level1" data-number="3"><h1 data-number="3">
+<span class="header-section-number">3</span> Introduction to ggplot2</h1>
+<section id="overview-1" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="overview-1">
+<span class="header-section-number">3.1</span> Overview</h2>
 <p>After completing ggplot2, we will:</p>
 <ul>
 <li><p>be able to use ggplot2 to create data visualizations in R.</p></li>
 <li><p>be able to explain what the data component of a graph is.</p></li>
 <li><p>be able to identify the geometry component of a graph and know when to use which type of geometry. be able to explain what the aesthetic mapping component of a graph is.</p></li>
 <li><p>be able to understand the scale component of a graph and select an appropriate scale component to use.</p></li>
-</ul>
-</section>
-<section id="ggplot" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="ggplot"><span class="header-section-number">3.2</span> ggplot</h2>
-<section id="ggplot2" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="ggplot2"><span class="header-section-number">3.2.1</span> ggplot2</h3>
+</ul></section><section id="ggplot" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="ggplot">
+<span class="header-section-number">3.2</span> ggplot</h2>
+<section id="ggplot2" class="level3" data-number="3.2.1"><h3 data-number="3.2.1" class="anchored" data-anchor-id="ggplot2">
+<span class="header-section-number">3.2.1</span> ggplot2</h3>
 <ul>
 <li><p><a href="https://datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html">Data visualization with ggolot2</a></p></li>
 <li><p><a href="https://github.com/rstudio/cheatsheets/blob/main/data-visualization-2.1.pdf">Data visualization with ggplot2: Cheat Sheet</a></p></li>
 <li><p><a href="https://r-graph-gallery.com/index.html">The R graph gallery example</a></p></li>
-</ul>
-</section>
-<section id="key-points-7" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="key-points-7"><span class="header-section-number">3.2.2</span> key Points:</h3>
+</ul></section><section id="key-points-7" class="level3" data-number="3.2.2"><h3 data-number="3.2.2" class="anchored" data-anchor-id="key-points-7">
+<span class="header-section-number">3.2.2</span> key Points:</h3>
 <ul>
-<li><p>Throughout the series, we will create plots with the ggplot2 package. <strong>ggplot2</strong> is part of the <strong>tidyverse</strong> suite of package, which you can load with <strong><code>library(tidyverse)</code></strong>.</p></li>
-<li><p>Note that you can also load <strong>ggplot2</strong> alone using the command <strong><code>library(ggplot2)</code></strong>, instead of loading the entire tidyverse.</p></li>
+<li><p>Throughout the series, we will create plots with the ggplot2 package. <strong>ggplot2</strong> is part of the <strong>tidyverse</strong> suite of package, which you can load with <strong><code><a href="https://tidyverse.tidyverse.org">library(tidyverse)</a></code></strong>.</p></li>
+<li><p>Note that you can also load <strong>ggplot2</strong> alone using the command <strong><code><a href="https://ggplot2.tidyverse.org">library(ggplot2)</a></code></strong>, instead of loading the entire tidyverse.</p></li>
 <li><p><strong>ggplot2</strong> uses a <strong>grammar of graphics</strong> to break plots into building blocks that have intuitive syntax, making it easy to create relatively complex and aesthetically pleasing plots with relatively simple and readable code.</p></li>
 <li><p><strong>ggplot2</strong> is designed to work excusively with tidy data (<strong>rows are observations and columns are variables</strong>).</p></li>
-</ul>
-</section>
-</section>
-<section id="graph-components" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="graph-components"><span class="header-section-number">3.3</span> Graph Components</h2>
-<section id="key-points-8" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="key-points-8"><span class="header-section-number">3.3.1</span> Key Points:</h3>
+</ul></section></section><section id="graph-components" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="graph-components">
+<span class="header-section-number">3.3</span> Graph Components</h2>
+<section id="key-points-8" class="level3" data-number="3.3.1"><h3 data-number="3.3.1" class="anchored" data-anchor-id="key-points-8">
+<span class="header-section-number">3.3.1</span> Key Points:</h3>
 <ul>
 <li>Plots in <strong>ggplot2</strong> consist of 3 main components:
 <ul>
-<li><strong>Data</strong>: The dataset being summarized</li>
-<li><strong>Geometry</strong>: The type of plot(scatterplot, boxplot, barplot, histogram, qqplot, smooth desity, etc.)</li>
-<li><strong>Aesthetic mapping</strong>: Variable mapped to visual cues, such as x-axis and y-axis values and color.</li>
-</ul></li>
+<li>
+<strong>Data</strong>: The dataset being summarized</li>
+<li>
+<strong>Geometry</strong>: The type of plot(scatterplot, boxplot, barplot, histogram, qqplot, smooth desity, etc.)</li>
+<li>
+<strong>Aesthetic mapping</strong>: Variable mapped to visual cues, such as x-axis and y-axis values and color.</li>
 </ul>
-</section>
-<section id="code-4" class="level3" data-number="3.3.2">
-<h3 data-number="3.3.2" class="anchored" data-anchor-id="code-4"><span class="header-section-number">3.3.2</span> Code:</h3>
+</li>
+</ul></section><section id="code-4" class="level3" data-number="3.3.2"><h3 data-number="3.3.2" class="anchored" data-anchor-id="code-4">
+<span class="header-section-number">3.3.2</span> Code:</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">library</span>(dslabs)</span>
 <span id="cb29-2"><a href="#cb29-2"></a><span class="fu">data</span>(murders)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-</section>
-<section id="creating-a-new-plot" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="creating-a-new-plot"><span class="header-section-number">3.4</span> Creating a New Plot</h2>
-<section id="key-points-9" class="level3" data-number="3.4.1">
-<h3 data-number="3.4.1" class="anchored" data-anchor-id="key-points-9"><span class="header-section-number">3.4.1</span> Key Points:</h3>
+</section></section><section id="creating-a-new-plot" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="creating-a-new-plot">
+<span class="header-section-number">3.4</span> Creating a New Plot</h2>
+<section id="key-points-9" class="level3" data-number="3.4.1"><h3 data-number="3.4.1" class="anchored" data-anchor-id="key-points-9">
+<span class="header-section-number">3.4.1</span> Key Points:</h3>
 <ul>
-<li><p>You can associated a dataset <code>x</code> with a ggplot object with any of the 3 commands:</p>
+<li>
+<p>You can associated a dataset <code>x</code> with a ggplot object with any of the 3 commands:</p>
 <ul>
 <li><strong><code>ggplot(data = x)</code></strong></li>
 <li><strong><code>ggplot(x)</code></strong></li>
 <li><strong><code>x %&gt;% ggplot()</code></strong></li>
-</ul></li>
+</ul>
+</li>
 <li><p>You can assign a ggplot object to a variable. If the object is not assigned to a variable, it will automatically be displayed.</p></li>
 <li><p>You can display a ggplot object assigned to a variable by printing that variable.</p></li>
 </ul>
@@ -1105,12 +1084,10 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <span id="cb30-13"><a href="#cb30-13"></a><span class="fu">print</span>(p) <span class="co"># this is equivalent to simply typing p</span></span>
 <span id="cb30-14"><a href="#cb30-14"></a>p </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-</section>
-<section id="layers" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="layers"><span class="header-section-number">3.5</span> Layers</h2>
-<section id="key-points-10" class="level3" data-number="3.5.1">
-<h3 data-number="3.5.1" class="anchored" data-anchor-id="key-points-10"><span class="header-section-number">3.5.1</span> Key Points:</h3>
+</section></section><section id="layers" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="layers">
+<span class="header-section-number">3.5</span> Layers</h2>
+<section id="key-points-10" class="level3" data-number="3.5.1"><h3 data-number="3.5.1" class="anchored" data-anchor-id="key-points-10">
+<span class="header-section-number">3.5.1</span> Key Points:</h3>
 <ul>
 <li><p>In <strong>ggplot2</strong>, graphs are created by adding layers to the ggplot object: DATA %&gt;% ggplot() + LAYER_1 + LAYER_2 + … + LAYER_N</p></li>
 <li><p>The <strong><em>geometry layer</em></strong> defines that plot type and takes the format <code>geom_x</code> where <code>x</code> is the plot type.</p></li>
@@ -1152,12 +1129,10 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <span id="cb34-4"><a href="#cb34-4"></a><span class="co"># error - "abb" is not a globally defined variable and cannot be found outside of aes</span></span>
 <span id="cb34-5"><a href="#cb34-5"></a>p_test <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">geom_text</span>(<span class="fu">aes</span>(population<span class="sc">/</span><span class="dv">10</span><span class="sc">^</span><span class="dv">6</span>, total), <span class="at">label =</span> abb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-</section>
-<section id="thinkering" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="thinkering"><span class="header-section-number">3.6</span> Thinkering</h2>
-<section id="key-points-11" class="level3" data-number="3.6.1">
-<h3 data-number="3.6.1" class="anchored" data-anchor-id="key-points-11"><span class="header-section-number">3.6.1</span> Key Points:</h3>
+</section></section><section id="thinkering" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="thinkering">
+<span class="header-section-number">3.6</span> Thinkering</h2>
+<section id="key-points-11" class="level3" data-number="3.6.1"><h3 data-number="3.6.1" class="anchored" data-anchor-id="key-points-11">
+<span class="header-section-number">3.6.1</span> Key Points:</h3>
 <ul>
 <li><p>You can modify arguments to geometry functions others than <code>aes()</code> and the data.</p></li>
 <li><p>These arguments are not aesthetic mappings: the affect all data points the same way.</p></li>
@@ -1204,21 +1179,17 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <p><img src="about_files/figure-html/unnamed-chunk-27-4.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-</section>
-<section id="scales-labels-and-colors" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="scales-labels-and-colors"><span class="header-section-number">3.7</span> Scales, Labels, and Colors</h2>
-<section id="textbook-links" class="level3" data-number="3.7.1">
-<h3 data-number="3.7.1" class="anchored" data-anchor-id="textbook-links"><span class="header-section-number">3.7.1</span> Textbook links:</h3>
+</section></section><section id="scales-labels-and-colors" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="scales-labels-and-colors">
+<span class="header-section-number">3.7</span> Scales, Labels, and Colors</h2>
+<section id="textbook-links" class="level3" data-number="3.7.1"><h3 data-number="3.7.1" class="anchored" data-anchor-id="textbook-links">
+<span class="header-section-number">3.7.1</span> Textbook links:</h3>
 <ul>
 <li><p><a href="http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#scales">Textbook section on <strong>scales</strong></a></p></li>
 <li><p><a href="http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#labels-and-titles">Textbook section on <strong>labels and titles</strong></a></p></li>
 <li><p><a href="http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#categories-as-colors">Textbook section on <strong>categories as colors</strong></a></p></li>
 <li><p><a href="http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#annotation-shapes-and-adjustments">Textbook section on <strong>annotation, shapes and adjustments</strong></a></p></li>
-</ul>
-</section>
-<section id="key-points-12" class="level3" data-number="3.7.2">
-<h3 data-number="3.7.2" class="anchored" data-anchor-id="key-points-12"><span class="header-section-number">3.7.2</span> Key Points:</h3>
+</ul></section><section id="key-points-12" class="level3" data-number="3.7.2"><h3 data-number="3.7.2" class="anchored" data-anchor-id="key-points-12">
+<span class="header-section-number">3.7.2</span> Key Points:</h3>
 <ul>
 <li><p>Convert the x-axis to log scale with <strong><code>scale_x_continuous(trans = "log10")</code></strong> or <strong><code>scale_x_log10()</code></strong>. Similar function exist for the y-axis.</p></li>
 <li><p><strong>Add axis title</strong> with <strong><code>xlab()</code></strong> and <strong><code>ylab()</code></strong> function. <strong>Add a plot title</strong> with the <strong><code>ggtitle()</code></strong> function.</p></li>
@@ -1226,10 +1197,8 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <li><p><strong>Add a line</strong> with the <strong><code>geom_abline()</code></strong> geometry. <strong><code>geom_abline()</code></strong> takes arguments <strong><code>slop</code></strong> (default = 1) and <strong><code>intercept</code></strong>(default = 0). Change the color with <strong><code>col</code></strong> or <strong><code>color</code></strong> and line type with <a href="https://r-charts.com/base-r/line-types/"><strong><code>lty</code></strong></a>.</p></li>
 <li><p>Placing the line layer after the point layer will overlay the the line on top of the points. To overlay points on the line, <strong>place the line layer before the point layer</strong>.</p></li>
 <li><p>There are many additional ways to tweak your graph that can be found in the <strong>ggplot2</strong> documentation, cheat sheet or on the internet. For example, you can change the legend title with <a href="https://www.jianshu.com/p/6ba336b3931f"><strong><code>scale_color_discrete</code></strong></a>.</p></li>
-</ul>
-</section>
-<section id="code-log-scale-the-x-axis-and-y-axis" class="level3" data-number="3.7.3">
-<h3 data-number="3.7.3" class="anchored" data-anchor-id="code-log-scale-the-x-axis-and-y-axis"><span class="header-section-number">3.7.3</span> Code: Log-scale the x-axis and y-axis</h3>
+</ul></section><section id="code-log-scale-the-x-axis-and-y-axis" class="level3" data-number="3.7.3"><h3 data-number="3.7.3" class="anchored" data-anchor-id="code-log-scale-the-x-axis-and-y-axis">
+<span class="header-section-number">3.7.3</span> Code: Log-scale the x-axis and y-axis</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="co"># define p</span></span>
 <span id="cb39-2"><a href="#cb39-2"></a><span class="fu">library</span>(tidyverse)</span>
@@ -1254,9 +1223,8 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <p><img src="about_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-<section id="code-add-labels-and-title" class="level3" data-number="3.7.4">
-<h3 data-number="3.7.4" class="anchored" data-anchor-id="code-add-labels-and-title"><span class="header-section-number">3.7.4</span> Code: Add labels and title</h3>
+</section><section id="code-add-labels-and-title" class="level3" data-number="3.7.4"><h3 data-number="3.7.4" class="anchored" data-anchor-id="code-add-labels-and-title">
+<span class="header-section-number">3.7.4</span> Code: Add labels and title</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a>p <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
 <span id="cb41-2"><a href="#cb41-2"></a>    <span class="fu">geom_text</span>(<span class="at">nudge_x =</span> <span class="fl">0.05</span>) <span class="sc">+</span></span>
@@ -1269,9 +1237,8 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <p><img src="about_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-<section id="code-change-color-of-the-points" class="level3" data-number="3.7.5">
-<h3 data-number="3.7.5" class="anchored" data-anchor-id="code-change-color-of-the-points"><span class="header-section-number">3.7.5</span> Code: Change color of the points</h3>
+</section><section id="code-change-color-of-the-points" class="level3" data-number="3.7.5"><h3 data-number="3.7.5" class="anchored" data-anchor-id="code-change-color-of-the-points">
+<span class="header-section-number">3.7.5</span> Code: Change color of the points</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="co"># redefine p to be everything except the points layer</span></span>
 <span id="cb42-2"><a href="#cb42-2"></a>p <span class="ot">&lt;-</span> murders <span class="sc">%&gt;%</span> </span>
@@ -1297,9 +1264,8 @@ Pr(a &lt; x &lt; b) = \int_{a}^b\frac{1}{\sqrt{2\pi\mu}}{e}^{-\frac{1}{2}(\frac{
 <p><img src="about_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-<section id="code-add-a-line-with-average-murder-rate" class="level3" data-number="3.7.6">
-<h3 data-number="3.7.6" class="anchored" data-anchor-id="code-add-a-line-with-average-murder-rate"><span class="header-section-number">3.7.6</span> Code: Add a line with average murder rate</h3>
+</section><section id="code-add-a-line-with-average-murder-rate" class="level3" data-number="3.7.6"><h3 data-number="3.7.6" class="anchored" data-anchor-id="code-add-a-line-with-average-murder-rate">
+<span class="header-section-number">3.7.6</span> Code: Add a line with average murder rate</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a>r <span class="ot">&lt;-</span> murders <span class="sc">%&gt;%</span> </span>
 <span id="cb45-2"><a href="#cb45-2"></a>     <span class="fu">summarize</span>(<span class="at">rate =</span> <span class="fu">sum</span>(total) <span class="sc">/</span> <span class="fu">sum</span>(population) <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">6</span>) <span class="sc">%&gt;%</span>      <span class="fu">pull</span>(rate)</span>
@@ -1327,9 +1293,8 @@ Line types in R: Ity
 <p>The different <strong>line types</strong> available in <strong>R</strong> are shown in the figure hereafter. The argument <a href="http://www.sthda.com/english/wiki/line-types-in-r-lty"><strong>lty</strong></a> can be used to specify the <strong>line type</strong>. To change <strong>line width</strong>, the argument <strong>lwd</strong> can be used.</p>
 </div>
 </div>
-</section>
-<section id="code-change-legend-title" class="level3" data-number="3.7.7">
-<h3 data-number="3.7.7" class="anchored" data-anchor-id="code-change-legend-title"><span class="header-section-number">3.7.7</span> Code: Change legend title</h3>
+</section><section id="code-change-legend-title" class="level3" data-number="3.7.7"><h3 data-number="3.7.7" class="anchored" data-anchor-id="code-change-legend-title">
+<span class="header-section-number">3.7.7</span> Code: Change legend title</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="co"># capitalize legend title</span></span>
 <span id="cb46-2"><a href="#cb46-2"></a>p <span class="ot">&lt;-</span> p <span class="sc">+</span> <span class="fu">scale_color_discrete</span>(<span class="at">name =</span> <span class="st">"Region"</span>)</span>
@@ -1338,27 +1303,21 @@ Line types in R: Ity
 <p><img src="about_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-</section>
-<section id="add-on-packages" class="level2" data-number="3.8">
-<h2 data-number="3.8" class="anchored" data-anchor-id="add-on-packages"><span class="header-section-number">3.8</span> Add-on packages</h2>
-<section id="textbook-links-1" class="level3" data-number="3.8.1">
-<h3 data-number="3.8.1" class="anchored" data-anchor-id="textbook-links-1"><span class="header-section-number">3.8.1</span> Textbook links:</h3>
+</section></section><section id="add-on-packages" class="level2" data-number="3.8"><h2 data-number="3.8" class="anchored" data-anchor-id="add-on-packages">
+<span class="header-section-number">3.8</span> Add-on packages</h2>
+<section id="textbook-links-1" class="level3" data-number="3.8.1"><h3 data-number="3.8.1" class="anchored" data-anchor-id="textbook-links-1">
+<span class="header-section-number">3.8.1</span> Textbook links:</h3>
 <ul>
 <li><a href="http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#add-on-packages">Textbook section on add-on packages</a></li>
 <li><a href="http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#putting-it-all-together">Textbook section on putting it all together</a></li>
-</ul>
-</section>
-<section id="key-points-13" class="level3" data-number="3.8.2">
-<h3 data-number="3.8.2" class="anchored" data-anchor-id="key-points-13"><span class="header-section-number">3.8.2</span> Key Points</h3>
+</ul></section><section id="key-points-13" class="level3" data-number="3.8.2"><h3 data-number="3.8.2" class="anchored" data-anchor-id="key-points-13">
+<span class="header-section-number">3.8.2</span> Key Points</h3>
 <ul>
 <li><p>The style of a ggplot graph can be changed using the <code>theme()</code> function.</p></li>
 <li><p>The <code>ggthemes</code> package adds additional themes.</p></li>
 <li><p>The <code>ggrepel</code> package includes a geometry that repels text labels, ensuring they do not overlap with each other: <code>geom_text_repel()</code>.</p></li>
-</ul>
-</section>
-<section id="code-adding-themes" class="level3" data-number="3.8.3">
-<h3 data-number="3.8.3" class="anchored" data-anchor-id="code-adding-themes"><span class="header-section-number">3.8.3</span> Code: Adding themes</h3>
+</ul></section><section id="code-adding-themes" class="level3" data-number="3.8.3"><h3 data-number="3.8.3" class="anchored" data-anchor-id="code-adding-themes">
+<span class="header-section-number">3.8.3</span> Code: Adding themes</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="co"># theme used for graphs in the textbook and course</span></span>
 <span id="cb47-2"><a href="#cb47-2"></a><span class="fu">library</span>(dslabs)</span>
@@ -1378,9 +1337,8 @@ Line types in R: Ity
 <p><img src="about_files/figure-html/unnamed-chunk-38-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-<section id="code-putting-it-all-together-to-assemble-the-plot" class="level3" data-number="3.8.4">
-<h3 data-number="3.8.4" class="anchored" data-anchor-id="code-putting-it-all-together-to-assemble-the-plot"><span class="header-section-number">3.8.4</span> Code: Putting it all together to assemble the plot</h3>
+</section><section id="code-putting-it-all-together-to-assemble-the-plot" class="level3" data-number="3.8.4"><h3 data-number="3.8.4" class="anchored" data-anchor-id="code-putting-it-all-together-to-assemble-the-plot">
+<span class="header-section-number">3.8.4</span> Code: Putting it all together to assemble the plot</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a><span class="co"># load libraries</span></span>
 <span id="cb51-2"><a href="#cb51-2"></a><span class="fu">library</span>(tidyverse)</span>
@@ -1412,29 +1370,23 @@ Line types in R: Ity
 <p><img src="about_files/figure-html/unnamed-chunk-40-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-</section>
-<section id="other-examples" class="level2" data-number="3.9">
-<h2 data-number="3.9" class="anchored" data-anchor-id="other-examples"><span class="header-section-number">3.9</span> Other Examples</h2>
-<section id="textbook-links-2" class="level3" data-number="3.9.1">
-<h3 data-number="3.9.1" class="anchored" data-anchor-id="textbook-links-2"><span class="header-section-number">3.9.1</span> Textbook links:</h3>
+</section></section><section id="other-examples" class="level2" data-number="3.9"><h2 data-number="3.9" class="anchored" data-anchor-id="other-examples">
+<span class="header-section-number">3.9</span> Other Examples</h2>
+<section id="textbook-links-2" class="level3" data-number="3.9.1"><h3 data-number="3.9.1" class="anchored" data-anchor-id="textbook-links-2">
+<span class="header-section-number">3.9.1</span> Textbook links:</h3>
 <ul>
 <li><p><a href="http://rafalab.dfci.harvard.edu/dsbook/distributions.html#histograms-1">Textbook section on histograms</a></p></li>
 <li><p><a href="http://rafalab.dfci.harvard.edu/dsbook/distributions.html#density-plots">Textbook section on density plots</a></p></li>
 <li><p><a href="http://rafalab.dfci.harvard.edu/dsbook/ggplot2.html#grids-of-plots">Textbook section on grids of plots</a></p></li>
-</ul>
-</section>
-<section id="key-points-14" class="level3" data-number="3.9.2">
-<h3 data-number="3.9.2" class="anchored" data-anchor-id="key-points-14"><span class="header-section-number">3.9.2</span> Key points</h3>
+</ul></section><section id="key-points-14" class="level3" data-number="3.9.2"><h3 data-number="3.9.2" class="anchored" data-anchor-id="key-points-14">
+<span class="header-section-number">3.9.2</span> Key points</h3>
 <ul>
 <li><p><code>geom_histogram()</code> creates a histogram. Use the <strong>binwidth</strong> argument to change the width of bins, the fill argument to change the bar fill color, and the col argument to change bar outline color.</p></li>
 <li><p><code>geom_density()</code> creates smooth density plots. Change the fill color of the plot with the fill argument.</p></li>
 <li><p><code>geom_qq()</code> creates a quantile-quantile plot. This geometry requires the sample argument. By default, the data are compared to a standard normal distribution with a mean of 0 and standard deviation of 1. This can be changed with the dparams argument, or the sample data can be scaled.</p></li>
 <li><p>Plots can be arranged adjacent to each other using the <code>grid.arrange()</code> function from the <strong>gridExtra</strong> package. First, create the plots and save them to objects (p1, p2, …). Then pass the plot objects to <code>grid.arrange()</code>.</p></li>
-</ul>
-</section>
-<section id="code-histograms-in-ggplot2" class="level3" data-number="3.9.3">
-<h3 data-number="3.9.3" class="anchored" data-anchor-id="code-histograms-in-ggplot2"><span class="header-section-number">3.9.3</span> Code: Histograms in ggplot2</h3>
+</ul></section><section id="code-histograms-in-ggplot2" class="level3" data-number="3.9.3"><h3 data-number="3.9.3" class="anchored" data-anchor-id="code-histograms-in-ggplot2">
+<span class="header-section-number">3.9.3</span> Code: Histograms in ggplot2</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb53-2"><a href="#cb53-2"></a><span class="fu">library</span>(dslabs)</span>
@@ -1466,9 +1418,8 @@ Line types in R: Ity
 <p><img src="about_files/figure-html/unnamed-chunk-42-3.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-<section id="code-smooth-density-plots-in-ggplot2" class="level3" data-number="3.9.4">
-<h3 data-number="3.9.4" class="anchored" data-anchor-id="code-smooth-density-plots-in-ggplot2"><span class="header-section-number">3.9.4</span> Code: Smooth density plots in ggplot2</h3>
+</section><section id="code-smooth-density-plots-in-ggplot2" class="level3" data-number="3.9.4"><h3 data-number="3.9.4" class="anchored" data-anchor-id="code-smooth-density-plots-in-ggplot2">
+<span class="header-section-number">3.9.4</span> Code: Smooth density plots in ggplot2</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a>p <span class="sc">+</span> <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -1482,9 +1433,8 @@ Line types in R: Ity
 <p><img src="about_files/figure-html/unnamed-chunk-43-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-<section id="code-quantile-quantile-plots-in-ggplot2" class="level3" data-number="3.9.5">
-<h3 data-number="3.9.5" class="anchored" data-anchor-id="code-quantile-quantile-plots-in-ggplot2"><span class="header-section-number">3.9.5</span> Code: Quantile-quantile plots in ggplot2</h3>
+</section><section id="code-quantile-quantile-plots-in-ggplot2" class="level3" data-number="3.9.5"><h3 data-number="3.9.5" class="anchored" data-anchor-id="code-quantile-quantile-plots-in-ggplot2">
+<span class="header-section-number">3.9.5</span> Code: Quantile-quantile plots in ggplot2</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1"></a><span class="co"># basic QQ-plot</span></span>
 <span id="cb60-2"><a href="#cb60-2"></a>p <span class="ot">&lt;-</span> heights <span class="sc">%&gt;%</span> <span class="fu">filter</span>(sex <span class="sc">==</span> <span class="st">"Male"</span>) <span class="sc">%&gt;%</span> </span>
@@ -1528,37 +1478,29 @@ Line types in R: Ity
 <p><img src="about_files/figure-html/unnamed-chunk-47-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-</section>
-</section>
-<section id="gapminder" class="level1 page-columns page-full" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Gapminder</h1>
-<section id="overview-2" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="overview-2"><span class="header-section-number">4.1</span> Overview</h2>
+</section></section></section><section id="gapminder" class="level1 page-columns page-full" data-number="4"><h1 data-number="4">
+<span class="header-section-number">4</span> Gapminder</h1>
+<section id="overview-2" class="level2" data-number="4.1"><h2 data-number="4.1" class="anchored" data-anchor-id="overview-2">
+<span class="header-section-number">4.1</span> Overview</h2>
 <p>After completing Gapminder, you will: - understand how Hans Rosling and the Gapminder Foundation use effective data visualization to convey data-based trends.</p>
 <ul>
 <li><p>be able to apply the <strong>ggplot2</strong> techniques from the previous section to answer questions using data.</p></li>
 <li><p>understand how fixed scales across plots can ease comparisons.</p></li>
 <li><p>be able to modify graphs to improve data visualization.</p></li>
-</ul>
-</section>
-<section id="introduction-to-gapminder" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="introduction-to-gapminder"><span class="header-section-number">4.2</span> Introduction to Gapminder</h2>
+</ul></section><section id="introduction-to-gapminder" class="level2" data-number="4.2"><h2 data-number="4.2" class="anchored" data-anchor-id="introduction-to-gapminder">
+<span class="header-section-number">4.2</span> Introduction to Gapminder</h2>
 <p>Case study: Trends in World Health and Economics</p>
 <p>Data Source form Gapminder</p>
 <p>We will use this data to answer the following questions about World Health and Economics: - Is it still fair to consider the world as divided into the West and the developing world? - Has income inequality across countries worsened over the last 40 years?</p>
-</section>
-<section id="gapminder-dataset" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="gapminder-dataset"><span class="header-section-number">4.3</span> Gapminder Dataset</h2>
-<section id="key-points-15" class="level3" data-number="4.3.1">
-<h3 data-number="4.3.1" class="anchored" data-anchor-id="key-points-15"><span class="header-section-number">4.3.1</span> Key Points</h3>
+</section><section id="gapminder-dataset" class="level2" data-number="4.3"><h2 data-number="4.3" class="anchored" data-anchor-id="gapminder-dataset">
+<span class="header-section-number">4.3</span> Gapminder Dataset</h2>
+<section id="key-points-15" class="level3" data-number="4.3.1"><h3 data-number="4.3.1" class="anchored" data-anchor-id="key-points-15">
+<span class="header-section-number">4.3.1</span> Key Points</h3>
 <ul>
 <li><p>A selection of world health and economics statistics from the Gapminder project can be found in the <code>dslabs</code> package as data(gapminder).</p></li>
 <li><p>Most people have <strong>misconceptions</strong> about world health and economics, which can be addressed by considering real data.</p></li>
-</ul>
-</section>
-<section id="code-5" class="level3" data-number="4.3.2">
-<h3 data-number="4.3.2" class="anchored" data-anchor-id="code-5"><span class="header-section-number">4.3.2</span> Code</h3>
+</ul></section><section id="code-5" class="level3" data-number="4.3.2"><h3 data-number="4.3.2" class="anchored" data-anchor-id="code-5">
+<span class="header-section-number">4.3.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a><span class="fu">library</span>(dslabs)</span>
 <span id="cb66-2"><a href="#cb66-2"></a><span class="fu">data</span>(<span class="st">"gapminder"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1598,24 +1540,22 @@ Line types in R: Ity
 2    Turkey             11.6</code></pre>
 </div>
 </div>
-</section>
-</section>
-<section id="life-expectancy-and-fertility-rates" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="life-expectancy-and-fertility-rates"><span class="header-section-number">4.4</span> Life Expectancy and Fertility Rates</h2>
-<section id="key-points-16" class="level3" data-number="4.4.1">
-<h3 data-number="4.4.1" class="anchored" data-anchor-id="key-points-16"><span class="header-section-number">4.4.1</span> Key Points</h3>
+</section></section><section id="life-expectancy-and-fertility-rates" class="level2" data-number="4.4"><h2 data-number="4.4" class="anchored" data-anchor-id="life-expectancy-and-fertility-rates">
+<span class="header-section-number">4.4</span> Life Expectancy and Fertility Rates</h2>
+<section id="key-points-16" class="level3" data-number="4.4.1"><h3 data-number="4.4.1" class="anchored" data-anchor-id="key-points-16">
+<span class="header-section-number">4.4.1</span> Key Points</h3>
 <ul>
-<li><p>A prevalent worldview is that the world is divided into two groups of countries:</p>
+<li>
+<p>A prevalent worldview is that the world is divided into two groups of countries:</p>
 <ul>
 <li><p>Western world: high life expectancy, low fertility rate</p></li>
 <li><p>Developing world: lower life expectancy, higher fertility rate</p></li>
-</ul></li>
+</ul>
+</li>
 <li><p>Gapminder data can be used to evaluate the validity of this view.</p></li>
 <li><p>A scatterplot of life expectancy versus fertility rate in 1962 suggests that this viewpoint was grounded in reality 50 years ago. Is it still the case today?</p></li>
-</ul>
-</section>
-<section id="code-6" class="level3" data-number="4.4.2">
-<h3 data-number="4.4.2" class="anchored" data-anchor-id="code-6"><span class="header-section-number">4.4.2</span> Code</h3>
+</ul></section><section id="code-6" class="level3" data-number="4.4.2"><h3 data-number="4.4.2" class="anchored" data-anchor-id="code-6">
+<span class="header-section-number">4.4.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1"></a><span class="co"># basic scatterplot of life expectancy versus fertility</span></span>
 <span id="cb73-2"><a href="#cb73-2"></a><span class="fu">ds_theme_set</span>() <span class="co"># set plot theme</span></span>
@@ -1633,12 +1573,10 @@ Line types in R: Ity
 <p><img src="about_files/figure-html/unnamed-chunk-51-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-</section>
-<section id="faceting" class="level2 page-columns page-full" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="faceting"><span class="header-section-number">4.5</span> Faceting</h2>
-<section id="key-points-17" class="level3 page-columns page-full" data-number="4.5.1">
-<h3 data-number="4.5.1" class="anchored" data-anchor-id="key-points-17"><span class="header-section-number">4.5.1</span> Key Points</h3>
+</section></section><section id="faceting" class="level2 page-columns page-full" data-number="4.5"><h2 data-number="4.5" class="anchored" data-anchor-id="faceting">
+<span class="header-section-number">4.5</span> Faceting</h2>
+<section id="key-points-17" class="level3 page-columns page-full" data-number="4.5.1"><h3 data-number="4.5.1" class="anchored" data-anchor-id="key-points-17">
+<span class="header-section-number">4.5.1</span> Key Points</h3>
 <ul>
 <li><p>Faceting <strong>makes multiple side-by-side plots stratified by some variable</strong>. This is a way to ease comparisons.</p></li>
 <li><p>The <code>facet_grid()</code> function allows <em>faceting by up to two variables</em>, with rows faceted by one variable and columns faceted by the other variable. To facet by only one variable, use the dot operator as the other variable.</p></li>
@@ -1647,9 +1585,8 @@ Line types in R: Ity
 <li><p>The data suggest that the developing versus Western world view no longer makes sense in 2012.</p></li>
 </ul>
 <div class="page-columns page-full"><p> </p><div class="no-row-height column-margin column-container"><span class="">ggplot2-<a href="https://blog.csdn.net/tanzuozhev/article/details/51112177">分面(facet) 一页多图</a></span><span class="">数据可视化章节学习<a href="https://zhuanlan.zhihu.com/p/31044450">facet</a></span></div></div>
-</section>
-<section id="code-7" class="level3" data-number="4.5.2">
-<h3 data-number="4.5.2" class="anchored" data-anchor-id="code-7"><span class="header-section-number">4.5.2</span> Code</h3>
+</section><section id="code-7" class="level3" data-number="4.5.2"><h3 data-number="4.5.2" class="anchored" data-anchor-id="code-7">
+<span class="header-section-number">4.5.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1"></a><span class="co"># facet by continent and year</span></span>
 <span id="cb75-2"><a href="#cb75-2"></a><span class="fu">filter</span>(gapminder, year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1962</span>, <span class="dv">2012</span>)) <span class="sc">%&gt;%</span> </span>
@@ -1679,21 +1616,17 @@ Line types in R: Ity
 <p><img src="about_files/figure-html/unnamed-chunk-52-3.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-</section>
-<section id="time-series-plots" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="time-series-plots"><span class="header-section-number">4.6</span> Time Series Plots</h2>
-<section id="key-points-18" class="level3" data-number="4.6.1">
-<h3 data-number="4.6.1" class="anchored" data-anchor-id="key-points-18"><span class="header-section-number">4.6.1</span> Key Points</h3>
+</section></section><section id="time-series-plots" class="level2" data-number="4.6"><h2 data-number="4.6" class="anchored" data-anchor-id="time-series-plots">
+<span class="header-section-number">4.6</span> Time Series Plots</h2>
+<section id="key-points-18" class="level3" data-number="4.6.1"><h3 data-number="4.6.1" class="anchored" data-anchor-id="key-points-18">
+<span class="header-section-number">4.6.1</span> Key Points</h3>
 <ul>
 <li><p>Time series plots have time on the <em>x-axis</em> and a variable of interest on the <em>y-axis</em>.</p></li>
 <li><p>The <code>geom_line()</code> geometry connects adjacent data points to form a continuous line. A line plot is appropriate when points are regularly spaced, densely packed and from a single data series.</p></li>
 <li><p>You can plot multiple lines on the same graph. Remember to group or color by a variable so that the lines are plotted independently.</p></li>
 <li><p>Labeling is usually preferred over legends. However, legends are easier to make and appear by default. Add a label with <code>geom_text()</code>, specifying the coordinates where the label should appear on the graph.</p></li>
-</ul>
-</section>
-<section id="code-single-time-series" class="level3" data-number="4.6.2">
-<h3 data-number="4.6.2" class="anchored" data-anchor-id="code-single-time-series"><span class="header-section-number">4.6.2</span> Code: Single Time Series</h3>
+</ul></section><section id="code-single-time-series" class="level3" data-number="4.6.2"><h3 data-number="4.6.2" class="anchored" data-anchor-id="code-single-time-series">
+<span class="header-section-number">4.6.2</span> Code: Single Time Series</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb78"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1"></a><span class="co"># scatterplot of US fertility by year</span></span>
 <span id="cb78-2"><a href="#cb78-2"></a>gapminder <span class="sc">%&gt;%</span> </span>
@@ -1712,9 +1645,8 @@ Line types in R: Ity
 <p><img src="about_files/figure-html/unnamed-chunk-53-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-<section id="code-multiple-time-series" class="level3" data-number="4.6.3">
-<h3 data-number="4.6.3" class="anchored" data-anchor-id="code-multiple-time-series"><span class="header-section-number">4.6.3</span> Code: Multiple Time Series</h3>
+</section><section id="code-multiple-time-series" class="level3" data-number="4.6.3"><h3 data-number="4.6.3" class="anchored" data-anchor-id="code-multiple-time-series">
+<span class="header-section-number">4.6.3</span> Code: Multiple Time Series</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb80"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1"></a><span class="co"># line plot fertility time series for two countries- only one line (incorrect)</span></span>
 <span id="cb80-2"><a href="#cb80-2"></a>countries <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"South Korea"</span>, <span class="st">"Germany"</span>)</span>
@@ -1739,9 +1671,8 @@ Line types in R: Ity
 <p><img src="about_files/figure-html/unnamed-chunk-54-3.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-<section id="code-adding-text-labels-to-a-plot" class="level3" data-number="4.6.4">
-<h3 data-number="4.6.4" class="anchored" data-anchor-id="code-adding-text-labels-to-a-plot"><span class="header-section-number">4.6.4</span> Code: Adding text labels to a plot</h3>
+</section><section id="code-adding-text-labels-to-a-plot" class="level3" data-number="4.6.4"><h3 data-number="4.6.4" class="anchored" data-anchor-id="code-adding-text-labels-to-a-plot">
+<span class="header-section-number">4.6.4</span> Code: Adding text labels to a plot</h3>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1767,12 +1698,10 @@ Note
 <p><img src="about_files/figure-html/unnamed-chunk-55-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-</section>
-<section id="transformations" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="transformations"><span class="header-section-number">4.7</span> Transformations</h2>
-<section id="key-points-19" class="level3" data-number="4.7.1">
-<h3 data-number="4.7.1" class="anchored" data-anchor-id="key-points-19"><span class="header-section-number">4.7.1</span> Key Points</h3>
+</section></section><section id="transformations" class="level2" data-number="4.7"><h2 data-number="4.7" class="anchored" data-anchor-id="transformations">
+<span class="header-section-number">4.7</span> Transformations</h2>
+<section id="key-points-19" class="level3" data-number="4.7.1"><h3 data-number="4.7.1" class="anchored" data-anchor-id="key-points-19">
+<span class="header-section-number">4.7.1</span> Key Points</h3>
 <ul>
 <li><p>We use GDP data to compute income in US dollars per day, adjusted for inflation.</p></li>
 <li><p>Log transformations covert multiplicative changes into additive changes.</p></li>
@@ -1781,10 +1710,8 @@ Note
 <li><p>There are two ways to use log transformations in plots: transform the data before plotting or transform the axes of the plot. Log scales have the advantage of showing the original values as axis labels, while log transformed values ease interpretation of intermediate values between labels.</p></li>
 <li><p>Scale the x-axis using <code>scale_x_continuous()</code> or <code>scale_x_log10()</code> layers in ggplot2. Similar functions exist for the y-axis.</p></li>
 <li><p>In 1970, income distribution is bimodal, consistent with the dichotomous Western versus developing worldview.</p></li>
-</ul>
-</section>
-<section id="code-8" class="level3" data-number="4.7.2">
-<h3 data-number="4.7.2" class="anchored" data-anchor-id="code-8"><span class="header-section-number">4.7.2</span> Code</h3>
+</ul></section><section id="code-8" class="level3" data-number="4.7.2"><h3 data-number="4.7.2" class="anchored" data-anchor-id="code-8">
+<span class="header-section-number">4.7.2</span> Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1"></a><span class="co"># add dollars per day variable</span></span>
 <span id="cb84-2"><a href="#cb84-2"></a>gapminder <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span> </span>
@@ -1817,21 +1744,17 @@ Note
 <p><img src="about_files/figure-html/unnamed-chunk-56-3.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-</section>
-<section id="stratify-and-boxplot" class="level2" data-number="4.8">
-<h2 data-number="4.8" class="anchored" data-anchor-id="stratify-and-boxplot"><span class="header-section-number">4.8</span> Stratify and Boxplot</h2>
-<section id="key-points-20" class="level3" data-number="4.8.1">
-<h3 data-number="4.8.1" class="anchored" data-anchor-id="key-points-20"><span class="header-section-number">4.8.1</span> Key Points</h3>
+</section></section><section id="stratify-and-boxplot" class="level2" data-number="4.8"><h2 data-number="4.8" class="anchored" data-anchor-id="stratify-and-boxplot">
+<span class="header-section-number">4.8</span> Stratify and Boxplot</h2>
+<section id="key-points-20" class="level3" data-number="4.8.1"><h3 data-number="4.8.1" class="anchored" data-anchor-id="key-points-20">
+<span class="header-section-number">4.8.1</span> Key Points</h3>
 <ul>
 <li><p>Make boxplots stratified by a categorical variable using the <code>geom_boxplot()</code> geometry.</p></li>
 <li><p>Rotate axis labels by changing the theme through <code>element_text()</code>. You can change the angle and justification of the text labels.</p></li>
 <li><p>Consider ordering your factors by a meaningful value with the <code>reorder</code> function, which changes the order of factor levels based on a related numeric vector. This is a way to ease comparisons.</p></li>
 <li><p>Show the data by adding data points to the boxplot with a <code>geom_point</code> layer. This adds information beyond the five-number summary to your plot, but too many data points it can obfuscate your message.</p></li>
-</ul>
-</section>
-<section id="code-boxplot-of-gdp-by-region" class="level3" data-number="4.8.2">
-<h3 data-number="4.8.2" class="anchored" data-anchor-id="code-boxplot-of-gdp-by-region"><span class="header-section-number">4.8.2</span> Code: Boxplot of GDP by region</h3>
+</ul></section><section id="code-boxplot-of-gdp-by-region" class="level3" data-number="4.8.2"><h3 data-number="4.8.2" class="anchored" data-anchor-id="code-boxplot-of-gdp-by-region">
+<span class="header-section-number">4.8.2</span> Code: Boxplot of GDP by region</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1"></a><span class="co"># add dollars per day variable</span></span>
 <span id="cb87-2"><a href="#cb87-2"></a>gapminder <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span> </span>
@@ -1858,9 +1781,8 @@ Note
 <p><img src="about_files/figure-html/unnamed-chunk-57-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-<section id="code-the-reorder-function" class="level3" data-number="4.8.3">
-<h3 data-number="4.8.3" class="anchored" data-anchor-id="code-the-reorder-function"><span class="header-section-number">4.8.3</span> Code: The reorder function</h3>
+</section><section id="code-the-reorder-function" class="level3" data-number="4.8.3"><h3 data-number="4.8.3" class="anchored" data-anchor-id="code-the-reorder-function">
+<span class="header-section-number">4.8.3</span> Code: The reorder function</h3>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1889,9 +1811,8 @@ Tip
 <pre><code>[1] "West" "Asia"</code></pre>
 </div>
 </div>
-</section>
-<section id="code-enhanced-boxplot-ordered-by-median-income-scaled-and-showing-data" class="level3" data-number="4.8.4">
-<h3 data-number="4.8.4" class="anchored" data-anchor-id="code-enhanced-boxplot-ordered-by-median-income-scaled-and-showing-data"><span class="header-section-number">4.8.4</span> Code: Enhanced boxplot ordered by median income, scaled, and showing data</h3>
+</section><section id="code-enhanced-boxplot-ordered-by-median-income-scaled-and-showing-data" class="level3" data-number="4.8.4"><h3 data-number="4.8.4" class="anchored" data-anchor-id="code-enhanced-boxplot-ordered-by-median-income-scaled-and-showing-data">
+<span class="header-section-number">4.8.4</span> Code: Enhanced boxplot ordered by median income, scaled, and showing data</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb95"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1"></a><span class="co"># reorder by median income and color by continent </span></span>
 <span id="cb95-2"><a href="#cb95-2"></a>p <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span></span>
@@ -1916,10 +1837,8 @@ Tip
 <p><img src="about_files/figure-html/unnamed-chunk-59-3.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-</section>
-<section id="comparing-distributions" class="level2" data-number="4.9">
-<h2 data-number="4.9" class="anchored" data-anchor-id="comparing-distributions"><span class="header-section-number">4.9</span> Comparing Distributions</h2>
+</section></section><section id="comparing-distributions" class="level2" data-number="4.9"><h2 data-number="4.9" class="anchored" data-anchor-id="comparing-distributions">
+<span class="header-section-number">4.9</span> Comparing Distributions</h2>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1933,16 +1852,14 @@ Important
 <p><a href="https://blog.csdn.net/woodcorpse/article/details/80494605">intersect(交集);union(并集);setdiff(找不同);setequal(判断相同)</a></p>
 </div>
 </div>
-<section id="key-points-21" class="level3" data-number="4.9.1">
-<h3 data-number="4.9.1" class="anchored" data-anchor-id="key-points-21"><span class="header-section-number">4.9.1</span> Key Points</h3>
+<section id="key-points-21" class="level3" data-number="4.9.1"><h3 data-number="4.9.1" class="anchored" data-anchor-id="key-points-21">
+<span class="header-section-number">4.9.1</span> Key Points</h3>
 <ul>
 <li>Use <code>intersect</code> to find the overlap between two vectors.</li>
 <li>To make boxplots where grouped variables are adjacaent, color the boxplot by a factor instead of faceting by that factor. This is a way to ease comparisions.</li>
 <li>The data suggest that the income gap between rich and poor countries has narrowed, not expended.</li>
-</ul>
-</section>
-<section id="code-histogram-of-income-in-west-versus-developing-world-1970-and-2010" class="level3" data-number="4.9.2">
-<h3 data-number="4.9.2" class="anchored" data-anchor-id="code-histogram-of-income-in-west-versus-developing-world-1970-and-2010"><span class="header-section-number">4.9.2</span> Code: Histogram of income in West versus developing world, 1970 and 2010</h3>
+</ul></section><section id="code-histogram-of-income-in-west-versus-developing-world-1970-and-2010" class="level3" data-number="4.9.2"><h3 data-number="4.9.2" class="anchored" data-anchor-id="code-histogram-of-income-in-west-versus-developing-world-1970-and-2010">
+<span class="header-section-number">4.9.2</span> Code: Histogram of income in West versus developing world, 1970 and 2010</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb98"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1"></a><span class="co"># add dollars per day variable and define past year</span></span>
 <span id="cb98-2"><a href="#cb98-2"></a>gapminder <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span> </span>
@@ -1976,9 +1893,8 @@ Important
 <p><img src="about_files/figure-html/unnamed-chunk-60-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-<section id="code-income-distribution-of-west-verseus-developing-world-only-countries-with-data" class="level3" data-number="4.9.3">
-<h3 data-number="4.9.3" class="anchored" data-anchor-id="code-income-distribution-of-west-verseus-developing-world-only-countries-with-data"><span class="header-section-number">4.9.3</span> Code: Income distribution of West verseus Developing world, only countries with data</h3>
+</section><section id="code-income-distribution-of-west-verseus-developing-world-only-countries-with-data" class="level3" data-number="4.9.3"><h3 data-number="4.9.3" class="anchored" data-anchor-id="code-income-distribution-of-west-verseus-developing-world-only-countries-with-data">
+<span class="header-section-number">4.9.3</span> Code: Income distribution of West verseus Developing world, only countries with data</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb100"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1"></a><span class="co"># define countries that have data available in both years</span></span>
 <span id="cb100-2"><a href="#cb100-2"></a>country_list_1 <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span> </span>
@@ -2001,9 +1917,8 @@ Important
 <p><img src="about_files/figure-html/unnamed-chunk-61-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-<section id="code-boxplots-of-income-in-west-versus-developing-world-1970-and-2010" class="level3" data-number="4.9.4">
-<h3 data-number="4.9.4" class="anchored" data-anchor-id="code-boxplots-of-income-in-west-versus-developing-world-1970-and-2010"><span class="header-section-number">4.9.4</span> Code: Boxplots of income in West versus Developing world, 1970 and 2010</h3>
+</section><section id="code-boxplots-of-income-in-west-versus-developing-world-1970-and-2010" class="level3" data-number="4.9.4"><h3 data-number="4.9.4" class="anchored" data-anchor-id="code-boxplots-of-income-in-west-versus-developing-world-1970-and-2010">
+<span class="header-section-number">4.9.4</span> Code: Boxplots of income in West versus Developing world, 1970 and 2010</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb101"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1"></a>p <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span> </span>
 <span id="cb101-2"><a href="#cb101-2"></a>  <span class="fu">filter</span>(year <span class="sc">%in%</span> <span class="fu">c</span>(past_year, present_year) <span class="sc">&amp;</span> country <span class="sc">%in%</span> country_list) <span class="sc">%&gt;%</span></span>
@@ -2023,10 +1938,8 @@ Important
 <p><img src="about_files/figure-html/unnamed-chunk-62-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-</section>
-<section id="density-plots" class="level2" data-number="4.10">
-<h2 data-number="4.10" class="anchored" data-anchor-id="density-plots"><span class="header-section-number">4.10</span> Density Plots</h2>
+</section></section><section id="density-plots" class="level2" data-number="4.10"><h2 data-number="4.10" class="anchored" data-anchor-id="density-plots">
+<span class="header-section-number">4.10</span> Density Plots</h2>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2043,17 +1956,15 @@ Tip
 </ul>
 </div>
 </div>
-<section id="key-points-22" class="level3" data-number="4.10.1">
-<h3 data-number="4.10.1" class="anchored" data-anchor-id="key-points-22"><span class="header-section-number">4.10.1</span> Key Points</h3>
+<section id="key-points-22" class="level3" data-number="4.10.1"><h3 data-number="4.10.1" class="anchored" data-anchor-id="key-points-22">
+<span class="header-section-number">4.10.1</span> Key Points</h3>
 <ul>
 <li><p>Change the y-axis of density plots to variable counts using <code>..count..</code> as the y argument.</p></li>
 <li><p>The <code>case_when()</code> function defines a factor whose levels are defined by a variety of logical operations to group data.</p></li>
 <li><p>Plot stacked density plots using <code>position="stack"</code>.</p></li>
 <li><p>Define a weight aesthetic mapping to change the relative weights of density plots-for example, this allow weighting of plots by population rather than number of countries.</p></li>
-</ul>
-</section>
-<section id="code-faceted-smooth-density-plots" class="level3" data-number="4.10.2">
-<h3 data-number="4.10.2" class="anchored" data-anchor-id="code-faceted-smooth-density-plots"><span class="header-section-number">4.10.2</span> Code: Faceted smooth density plots</h3>
+</ul></section><section id="code-faceted-smooth-density-plots" class="level3" data-number="4.10.2"><h3 data-number="4.10.2" class="anchored" data-anchor-id="code-faceted-smooth-density-plots">
+<span class="header-section-number">4.10.2</span> Code: Faceted smooth density plots</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb103"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1"></a><span class="co"># see the code below the previous video for variable definitions</span></span>
 <span id="cb103-2"><a href="#cb103-2"></a></span>
@@ -2064,12 +1975,10 @@ Tip
 <span id="cb103-7"><a href="#cb103-7"></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span> knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th style="text-align: left;">group</th>
 <th style="text-align: right;">n</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Developing</td>
@@ -2093,9 +2002,8 @@ Tip
 <p><img src="about_files/figure-html/unnamed-chunk-63-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-<section id="code-add-new-region-group-with-case_when" class="level3" data-number="4.10.3">
-<h3 data-number="4.10.3" class="anchored" data-anchor-id="code-add-new-region-group-with-case_when"><span class="header-section-number">4.10.3</span> Code: Add new region group with case_when</h3>
+</section><section id="code-add-new-region-group-with-case_when" class="level3" data-number="4.10.3"><h3 data-number="4.10.3" class="anchored" data-anchor-id="code-add-new-region-group-with-case_when">
+<span class="header-section-number">4.10.3</span> Code: Add new region group with case_when</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb105"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a href="#cb105-1"></a><span class="co"># add group as a factor, grouping regions</span></span>
 <span id="cb105-2"><a href="#cb105-2"></a>gapminder <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span> </span>
@@ -2109,9 +2017,8 @@ Tip
 <span id="cb105-10"><a href="#cb105-10"></a>gapminder <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span> </span>
 <span id="cb105-11"><a href="#cb105-11"></a>  <span class="fu">mutate</span>(<span class="at">group =</span> <span class="fu">factor</span>(group, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Others"</span>, <span class="st">"Latin America"</span>, <span class="st">"East Asia"</span>, <span class="st">"Sub-Saharan Africa"</span>, <span class="st">"West"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="code-stacked-density-plot" class="level3" data-number="4.10.4">
-<h3 data-number="4.10.4" class="anchored" data-anchor-id="code-stacked-density-plot"><span class="header-section-number">4.10.4</span> Code: Stacked density plot</h3>
+</section><section id="code-stacked-density-plot" class="level3" data-number="4.10.4"><h3 data-number="4.10.4" class="anchored" data-anchor-id="code-stacked-density-plot">
+<span class="header-section-number">4.10.4</span> Code: Stacked density plot</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb106"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href="#cb106-1"></a><span class="co"># note you must redefine p with the new gapminder object first</span></span>
 <span id="cb106-2"><a href="#cb106-2"></a>p <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span> </span>
@@ -2126,9 +2033,8 @@ Tip
 <p><img src="about_files/figure-html/unnamed-chunk-65-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-<section id="code-weighted-stacked-density-plot" class="level3" data-number="4.10.5">
-<h3 data-number="4.10.5" class="anchored" data-anchor-id="code-weighted-stacked-density-plot"><span class="header-section-number">4.10.5</span> Code: Weighted stacked density plot</h3>
+</section><section id="code-weighted-stacked-density-plot" class="level3" data-number="4.10.5"><h3 data-number="4.10.5" class="anchored" data-anchor-id="code-weighted-stacked-density-plot">
+<span class="header-section-number">4.10.5</span> Code: Weighted stacked density plot</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb107"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a href="#cb107-1"></a>gapminder <span class="sc">%&gt;%</span> </span>
 <span id="cb107-2"><a href="#cb107-2"></a>  <span class="fu">filter</span>(year <span class="sc">%in%</span> <span class="fu">c</span>(past_year, present_year) <span class="sc">&amp;</span> country <span class="sc">%in%</span> country_list) <span class="sc">%&gt;%</span> </span>
@@ -2142,20 +2048,13 @@ Tip
 <p><img src="about_files/figure-html/unnamed-chunk-66-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-</section>
-<section id="ecological-fallacy" class="level2" data-number="4.11">
-<h2 data-number="4.11" class="anchored" data-anchor-id="ecological-fallacy"><span class="header-section-number">4.11</span> Ecological Fallacy</h2>
-<section id="key-points-23" class="level3" data-number="4.11.1">
-<h3 data-number="4.11.1" class="anchored" data-anchor-id="key-points-23"><span class="header-section-number">4.11.1</span> Key Points</h3>
+</section></section><section id="ecological-fallacy" class="level2" data-number="4.11"><h2 data-number="4.11" class="anchored" data-anchor-id="ecological-fallacy">
+<span class="header-section-number">4.11</span> Ecological Fallacy</h2>
+<section id="key-points-23" class="level3" data-number="4.11.1"><h3 data-number="4.11.1" class="anchored" data-anchor-id="key-points-23">
+<span class="header-section-number">4.11.1</span> Key Points</h3>
 
 
-</section>
-</section>
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -2287,7 +2186,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/stats-r\.com/);
+      var filterRegex = new RegExp(/https:\/\/quartopub\.com\/sites\/ningli\/statsr/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
@@ -2303,12 +2202,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">© 2022 Stats &amp; R™ made with❤️ by <a href="../../series/Data Visualization/about.html">NING</a></div>   
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
+<li class="nav-item compact">
     <a class="nav-link" href="mailto:ln729500172@gmail.com">
       <i class="bi bi-envelope" role="img">
 </i> 
@@ -2327,10 +2225,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    </div>
+</div>
   </div>
 </footer>
-
 
 
 <script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
