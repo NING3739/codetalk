@@ -1,5 +1,5 @@
 {
-  "hash": "39c56d3de815d859421b52de55967fac",
+  "hash": "3347d3a8b02f027e0c9a85bc53e5dcb3",
   "result": {
     "markdown": "---\ntitle: \"Dynamic Graph\"\ndate: \"2022-12-01\"\ncategories: [code, analysis]\nimage: \"https://media4.giphy.com/media/bmQBu3aSF0DxadphkG/giphy.gif?cid=ecf05e47meob1g8g28iy7nkmukn31jbyq2jp88g0eqwwedn8&rid=giphy.gif&ct=g\"\ndescription: Make a dynamic graph by gganmate\nformat:\n  html:\n    code-fold: false\n---\n\n\nHere is an example shows how to use **gganmate** package to make a dynamic graph.\n\n# gganmate\n\n## Data from mtcars\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(ggplot2)\nlibrary(gganimate)\n\nggplot(mtcars, aes(factor(cyl), mpg)) + \n  geom_boxplot() + \n  # Here comes the gganimate code\n  transition_states(\n    gear,\n    transition_length = 2,\n    state_length = 1\n  ) +\n  enter_fade() + \n  exit_shrink() +\n  ease_aes('sine-in-out')\n```\n\n::: {.cell-output-display}\n![](about_files/figure-html/unnamed-chunk-1-1.gif)\n:::\n:::\n",
     "supporting": [

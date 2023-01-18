@@ -38,8 +38,8 @@ Thank you !!!
         async>
 </script>
 ```
-
 # 📣 Subscribe
+
 ```{=html}
 <div style="background-color: #0F2437; text-align: center; width:100%">
   <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display: flex; flex-wrap: wrap; justify-content: left;">

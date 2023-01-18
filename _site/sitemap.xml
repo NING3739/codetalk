@@ -1,51 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/series/R Basic/about.html</loc>
-    <lastmod>2023-01-15T01:12:47.195Z</lastmod>
+    <loc>https://stats-r.com/series/R Basic/about.html</loc>
+    <lastmod>2023-01-18T08:28:45.836Z</lastmod>
   </url>
   <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/series/Probability/about.html</loc>
-    <lastmod>2023-01-15T01:12:48.072Z</lastmod>
+    <loc>https://stats-r.com/series/Probability/about.html</loc>
+    <lastmod>2023-01-18T08:28:46.191Z</lastmod>
   </url>
   <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/series/Data Visualization/about.html</loc>
-    <lastmod>2023-01-15T01:12:50.975Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/contact.html</loc>
-    <lastmod>2023-01-15T01:12:51.321Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/posts/Dynamic Graph/about.html</loc>
-    <lastmod>2023-01-15T01:12:52.448Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/posts/welcome/about.html</loc>
-    <lastmod>2023-01-15T01:12:52.777Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/posts/Christmas Tree/about.html</loc>
-    <lastmod>2023-01-15T01:12:53.861Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/series.html</loc>
-    <lastmod>2023-01-15T01:12:54.291Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/index.html</loc>
-    <lastmod>2023-01-15T01:12:54.654Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/about.html</loc>
-    <lastmod>2023-01-15T01:12:54.990Z</lastmod>
-  </url>
-  <url>
-    <loc>https://quartopub.com/sites/ningli/statsr/posts.html</loc>
-    <lastmod>2023-01-15T01:12:55.354Z</lastmod>
+    <loc>https://stats-r.com/series/Data Visualization/about.html</loc>
+    <lastmod>2023-01-18T08:28:48.432Z</lastmod>
   </url>
   <url>
     <loc>https://stats-r.com/contact.html</loc>
-    <lastmod>2023-01-15T05:28:36.944Z</lastmod>
+    <lastmod>2023-01-18T08:28:48.749Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-r.com/posts/Dynamic Graph/about.html</loc>
+    <lastmod>2023-01-18T08:28:49.605Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-r.com/posts/welcome/about.html</loc>
+    <lastmod>2023-01-18T08:28:49.918Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-r.com/posts/Christmas Tree/about.html</loc>
+    <lastmod>2023-01-18T08:28:50.804Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-r.com/series.html</loc>
+    <lastmod>2023-01-18T08:28:51.205Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-r.com/index.html</loc>
+    <lastmod>2023-01-18T08:28:51.573Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-r.com/about.html</loc>
+    <lastmod>2023-01-18T08:28:51.914Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-r.com/posts.html</loc>
+    <lastmod>2023-01-18T08:28:52.295Z</lastmod>
   </url>
 </urlset>
