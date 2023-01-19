@@ -427,6 +427,13 @@
     "text": "💌 Get In Touch\n\n\n\n\n\nThanks in advance for contacting me.\nIn order for me to answer you as soon as possible, here are the best communication methods:\n\nDue to the increasing number of questions received, responding to each of them by email has become unmanageable and unproductive. Therefore, if you have a question, I invite you to add it as a comment at the end of the corresponding article. This way, other readers can benefit from the discussion and that saves me from answering the same thing several times. Questions by email will not be answered (I will redirect you to the comments).\nFor mistakes, bugs or inconsistencies—and that can happen, we are all human after all—you can inform me about them by raising an issue on GitHub. If you are familiar with GitHub, you can even edit the corresponding file and propose a pull request so I can quickly include your changes.\nFor a quick answer to your question, make sure to first check the comments from other readers. Your question may have already been answered.\n\nThank you !!!\n\n\n\n📣 Subscribe\n\n  \n    \n      Name:\n    \n    \n      \n    \n    \n      Email:\n    \n    \n      \n    \n    \n      Message:"
   },
   {
+    "objectID": "posts/Install R and Rstudio on Mac/about.html",
+    "href": "posts/Install R and Rstudio on Mac/about.html",
+    "title": "Install R and Rstudio on Mac",
+    "section": "",
+    "text": "前提\n安装顺序(不能颠倒)\n\nR语言\nRstudio\nR是Rstudio的基础，必须先安装R，再安装Rstudio。\nR语言安装\n\n官网安装包下载地址：https://cran.r-project.org/\n\n点击MacOS对应选项， 下方红框标出的地方\n\n\n\n在下载界面点击base，下方红框标出的地方\n\n\n\n自行选择下载R语言版本， 下载最新的版本为妙\n\n\n下载完成， 在”Finder→下载”中点击pkg文件， 一直按下一步可安装完成。\nRstudio安装\n\n官网安装包下载地址：https://posit.co/download/rstudio-desktop/#download\n\n点击下方红色标出地方，直接下载\n\n\n下载完成， 在”Finder→下载”中点击dmg文件， 将app拖入application中即可。\n安装完成\n在Rstudio中创建新项目\n\n\n创建新project。具体方法如下图所示， 依次点击File->New Project => New Directory->New Project->输入Directory name（注意要用英文，别用中文）\n\n\n\n\n\n\n创建好，就会出现下图所示\n\n\n测试R\n\n现在测试一下我们安装的的R语言环境\n\n\nheight <- c(145, 167, 176, 123, 150)\nweight <- c(51, 63, 64, 40, 55)\ncor(height, weight)\n\n[1] 0.9893769\n\nplot(height,weight, type = \"p\")\n\n\n\n\n测试结果\n结果输出一切正常"
+  },
+  {
     "objectID": "posts/Dynamic Graph/about.html",
     "href": "posts/Dynamic Graph/about.html",
     "title": "Dynamic Graph",
@@ -466,7 +473,7 @@
     "href": "index.html",
     "title": "Stats & R",
     "section": "",
-    "text": "Welcome to Stats & R!!!\nThis is a personal website with the contents of statistics and the open-source R language, aiming to facilitate academic exchanges and better promote myself.\nIf you are new to this site, here are some useful suggestions that you can do.\n\nOn the posts page, some interesting ideas (how to use R to make a 3D Christmas tree, etc.) for daily life will be presented.\nThe about page is a good place where you can quickly get to know who I am and what I am doing now.\nThe series page will display my independent projects and R language study notes.\nIf you have any questions, please go to the contact page to get in touch with me directly.\n\nThanks again for coming to my personal website.😘\n\n\n📮 Recent Posts\n\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\nDec 1, 2022\n\n\nDynamic Graph\n\n\n\n\nNov 30, 2022\n\n\nChristmas Tree\n\n\n\n\nNov 27, 2022\n\n\nWelcome\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to Stats & R!!!\nThis is a personal website with the contents of statistics and the open-source R language, aiming to facilitate academic exchanges and better promote myself.\nIf you are new to this site, here are some useful suggestions that you can do.\n\nOn the posts page, some interesting ideas (how to use R to make a 3D Christmas tree, etc.) for daily life will be presented.\nThe about page is a good place where you can quickly get to know who I am and what I am doing now.\nThe series page will display my independent projects and R language study notes.\nIf you have any questions, please go to the contact page to get in touch with me directly.\n\nThanks again for coming to my personal website.😘\n\n\n📮 Recent Posts\n\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\nJan 19, 2023\n\n\nInstall R and Rstudio on Mac\n\n\n\n\nDec 1, 2022\n\n\nDynamic Graph\n\n\n\n\nNov 30, 2022\n\n\nChristmas Tree\n\n\n\n\nNov 27, 2022\n\n\nWelcome\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -480,6 +487,6 @@
     "href": "posts.html",
     "title": "Stats & R",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nDynamic Graph\n\n\n\ncode\n\n\nanalysis\n\n\n\nMake a dynamic graph by gganmate\n\n\n\nNING LI\n\n\nDec 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChristmas Tree\n\n\n\ncode\n\n\n\nMerry Christmas Everyone!!!\n\n\n\nNING LI\n\n\nNov 30, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome\n\n\n\nnews\n\n\n\nWelcome !!!\n\n\n\nNING LI\n\n\nNov 27, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nInstall R and Rstudio on Mac\n\n\n\ntutorial\n\n\n\nA tutorial for R and Rstudio installation on Mac\n\n\n\nNING\n\n\nJan 19, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDynamic Graph\n\n\n\ncode\n\n\nanalysis\n\n\n\nMake a dynamic graph by gganmate\n\n\n\nNING LI\n\n\nDec 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChristmas Tree\n\n\n\ncode\n\n\n\nMerry Christmas Everyone!!!\n\n\n\nNING LI\n\n\nNov 30, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome\n\n\n\nnews\n\n\n\nWelcome !!!\n\n\n\nNING LI\n\n\nNov 27, 2022\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]

@@ -1,0 +1,16 @@
+{
+  "hash": "3340a284e9fdc7a271c46f2f81976299",
+  "result": {
+    "markdown": "---\ntitle: \"Install R and Rstudio on Mac\"\nauthor: \"NING\"\ndate: \"2023-01-19\"\ncategories: [tutorial]\nimage: \"https://user-images.githubusercontent.com/1775316/36732568-68dc69e6-1bce-11e8-890a-5cd3a20ab8d6.gif\"\ndescription: A tutorial for R and Rstudio installation on Mac\nformat:\n  html:\n    code-fold: false\n---\n\n\n# 前提\n\n安装顺序(不能颠倒)\n\n-   R语言\n-   Rstudio\n-   R是Rstudio的基础，必须先安装R，再安装Rstudio。\n\n# R语言安装\n\n-   官网安装包下载地址：<https://cran.r-project.org/>\n\n-   点击MacOS对应选项， 下方红框标出的地方\n\n    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/1.png)\n\n-   在下载界面点击base，下方红框标出的地方\n\n    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/2.png)\n\n-   自行选择下载R语言版本， 下载最新的版本为妙\n\n    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/3.png)\n\n-   下载完成， 在\"Finder**→下载\"中点击pkg文件， 一直按下一步可安装完成。**\n\n# Rstudio安装\n\n-   官网安装包下载地址：<https://posit.co/download/rstudio-desktop/#download>\n\n-   点击下方红色标出地方，直接下载\n\n    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/4.png)\n\n-   下载完成， 在\"Finder**→下载\"中点击dmg文件， 将app拖入application中即可。**\n\n-   安装完成\n\n# 在Rstudio中创建新项目\n\n-   创建新project。具体方法如下图所示， 依次点击File-\\>New Project =\\> New Directory-\\>New Project-\\>输入Directory name（注意要用英文，别用中文）\n\n    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/5.png)\n\n    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/6.png)\n\n    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/7.png)\n\n    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/8.png)\n\n-   创建好，就会出现下图所示\n\n    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/9.png)\n\n# 测试R\n\n-   现在测试一下我们安装的的R语言环境\n\n\n::: {.cell}\n\n```{.r .cell-code}\nheight <- c(145, 167, 176, 123, 150)\nweight <- c(51, 63, 64, 40, 55)\ncor(height, weight)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 0.9893769\n```\n:::\n\n```{.r .cell-code}\nplot(height,weight, type = \"p\")\n```\n\n::: {.cell-output-display}\n![](about_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\n# 测试结果\n\n结果输出一切正常\n\n![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/10.png)\n",
+    "supporting": [
+      "about_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

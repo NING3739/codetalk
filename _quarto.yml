@@ -10,7 +10,7 @@ website:
   site-url: https://stats-r.com/
   page-navigation: true
   page-footer: 
-    left:  "© 2022 Stats & R™ made with❤️ by [NING](about.qmd)"
+    left:  "[©2022 Stats & R™](https://creativecommons.org/licenses/by-nc-sa/4.0/)made with❤️ by [NING](about.qmd)"
     right:
       - icon: envelope
         href: mailto:ln729500172@gmail.com

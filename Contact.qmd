@@ -4,7 +4,7 @@ format:
     toc: false
 ---
 
-::: column-page
+::: column-page-left
 # 💌 Get In Touch
 
 ![](https://media1.giphy.com/media/3o8dp3rE9m8IYtZcCQ/giphy.gif?cid=ecf05e4763y1aocmf0top0mat5l4638y3yspqsh08ehc1jb4&rid=giphy.gif&ct=g){fig-align="center"}

@@ -1,0 +1,82 @@
+---
+title: "Install R and Rstudio on Mac"
+author: "NING"
+date: "2023-01-19"
+categories: [tutorial]
+image: "https://user-images.githubusercontent.com/1775316/36732568-68dc69e6-1bce-11e8-890a-5cd3a20ab8d6.gif"
+description: A tutorial for R and Rstudio installation on Mac
+format:
+  html:
+    code-fold: false
+---
+
+# 前提
+
+安装顺序(不能颠倒)
+
+-   R语言
+-   Rstudio
+-   R是Rstudio的基础，必须先安装R，再安装Rstudio。
+
+# R语言安装
+
+-   官网安装包下载地址：<https://cran.r-project.org/>
+
+-   点击MacOS对应选项， 下方红框标出的地方
+
+    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/1.png)
+
+-   在下载界面点击base，下方红框标出的地方
+
+    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/2.png)
+
+-   自行选择下载R语言版本， 下载最新的版本为妙
+
+    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/3.png)
+
+-   下载完成， 在"Finder**→下载"中点击pkg文件， 一直按下一步可安装完成。**
+
+# Rstudio安装
+
+-   官网安装包下载地址：<https://posit.co/download/rstudio-desktop/#download>
+
+-   点击下方红色标出地方，直接下载
+
+    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/4.png)
+
+-   下载完成， 在"Finder**→下载"中点击dmg文件， 将app拖入application中即可。**
+
+-   安装完成
+
+# 在Rstudio中创建新项目
+
+-   创建新project。具体方法如下图所示， 依次点击File-\>New Project =\> New Directory-\>New Project-\>输入Directory name（注意要用英文，别用中文）
+
+    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/5.png)
+
+    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/6.png)
+
+    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/7.png)
+
+    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/8.png)
+
+-   创建好，就会出现下图所示
+
+    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/9.png)
+
+# 测试R
+
+-   现在测试一下我们安装的的R语言环境
+
+```{r}
+height <- c(145, 167, 176, 123, 150)
+weight <- c(51, 63, 64, 40, 55)
+cor(height, weight)
+plot(height,weight, type = "p")
+```
+
+# 测试结果
+
+结果输出一切正常
+
+![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/10.png)

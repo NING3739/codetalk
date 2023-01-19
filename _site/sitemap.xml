@@ -2,46 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/series/R Basic/about.html</loc>
-    <lastmod>2023-01-18T11:26:02.939Z</lastmod>
+    <lastmod>2023-01-19T02:07:28.879Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/series/Probability/about.html</loc>
-    <lastmod>2023-01-18T11:26:03.261Z</lastmod>
+    <lastmod>2023-01-19T02:07:29.199Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/series/Data Visualization/about.html</loc>
-    <lastmod>2023-01-18T11:26:05.900Z</lastmod>
+    <lastmod>2023-01-19T02:07:31.701Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/contact.html</loc>
-    <lastmod>2023-01-18T11:26:06.207Z</lastmod>
+    <lastmod>2023-01-19T02:07:32.026Z</lastmod>
+  </url>
+  <url>
+    <loc>https://quartopub.com/sites/ningli/statsr/posts/Install R and Rstudio on Mac/about.html</loc>
+    <lastmod>2023-01-19T02:07:33.106Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/posts/Dynamic Graph/about.html</loc>
-    <lastmod>2023-01-18T11:26:07.316Z</lastmod>
+    <lastmod>2023-01-19T02:07:34.159Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/posts/welcome/about.html</loc>
-    <lastmod>2023-01-18T11:26:07.638Z</lastmod>
+    <lastmod>2023-01-19T02:07:34.470Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/posts/Christmas Tree/about.html</loc>
-    <lastmod>2023-01-18T11:26:08.706Z</lastmod>
+    <lastmod>2023-01-19T02:07:35.575Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/series.html</loc>
-    <lastmod>2023-01-18T11:26:09.397Z</lastmod>
+    <lastmod>2023-01-19T02:07:36.276Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/index.html</loc>
-    <lastmod>2023-01-18T11:26:09.745Z</lastmod>
+    <lastmod>2023-01-19T02:07:36.650Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/about.html</loc>
-    <lastmod>2023-01-18T11:26:10.087Z</lastmod>
+    <lastmod>2023-01-19T02:07:36.968Z</lastmod>
   </url>
   <url>
     <loc>https://quartopub.com/sites/ningli/statsr/posts.html</loc>
-    <lastmod>2023-01-18T11:26:10.452Z</lastmod>
+    <lastmod>2023-01-19T02:07:37.352Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-r.com/posts/Install R and Rstudio on Mac/about.html</loc>
+    <lastmod>2023-01-19T02:08:30.791Z</lastmod>
   </url>
 </urlset>
