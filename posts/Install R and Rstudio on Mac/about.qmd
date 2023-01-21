@@ -1,6 +1,6 @@
 ---
 title: "Install R and Rstudio on Mac"
-author: "NING"
+author: "NING LI"
 date: "2023-01-19"
 categories: [tutorial]
 image: "https://user-images.githubusercontent.com/1775316/36732568-68dc69e6-1bce-11e8-890a-5cd3a20ab8d6.gif"
@@ -8,15 +8,30 @@ description: A tutorial for R and Rstudio installation on Mac
 format:
   html:
     code-fold: false
+    number-sections: true
 ---
+
+# 什么是R
+
+R是用于统计分析、绘图的语言和操作环境。R是属于GNU系统的一个自由、免费、源代码开放的软件，它是一个用于统计计算和统计制图的优秀工具。简单来说，R是一门统计计算语言，是一套开源的数据分析解决方案。
+
+# 什么是Rstudio
+
+RStudio是为R语言设计的一种跨平台集成开发环境。其特色包括可客制化的软件套件视觉化界面与同团队开发的一系列数据可视化与出版工具。RStudio有免费的自由软件版本及收费的专业版本，并分为在本地电脑上执行的桌面版和与在服务器上执行而可由浏览器连接后使用的服务器版。
 
 # 前提
 
 安装顺序(不能颠倒)
 
 -   R语言
+
 -   Rstudio
+
 -   R是Rstudio的基础，必须先安装R，再安装Rstudio。
+
+    ::: callout-note
+    R is a programming language and environment for statistical computing and graphics, while RStudio is an integrated development environment (IDE) for R. Installing R first allows the computer to recognize the R language, and then RStudio can be installed on top of it to provide a user-friendly interface and additional tools for working with R. It is not necessary to install R first but it is a good practice as some features of RStudio are dependent on R.
+    :::
 
 # R语言安装
 
@@ -77,6 +92,6 @@ plot(height,weight, type = "p")
 
 # 测试结果
 
-结果输出一切正常
+-   结果输出一切正常
 
 ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/10.png)

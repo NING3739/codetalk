@@ -38,34 +38,45 @@ Thank you !!!
         async>
 </script>
 ```
-# 📣 Subscribe
+
 
 ```{=html}
-<div style="background-color: #0F2437; text-align: center; width:100%">
-  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display: flex; flex-wrap: wrap; justify-content: left;">
-    <div style="width: 50%; margin: 10px 0; text-align: justify-all; color: #EAEAEA; font-family: lato; font-weight: bold; font-size: 25px">
-      <label for="name">Name:</label>
-    </div>
-    <div style="width: 50%; margin: 10px 0; text-align: justify;color:#EBEBEB;">
-      <input type="text" id="name" name="name" required style="width: 70%; font-family: lato; background-color: #EBEBEB;">
-    </div>
-    <div style="width: 50%; margin: 10px 0; text-align: justify-all; color: #EBEBEB; font-family: lato; font-weight: bold; font-size: 25px">
-      <label for="email">Email:</label>
-    </div>
-    <div style="width: 50%; margin: 10px 0; text-align: justify; color: #EBEBEB">
-      <input type="email" id="email" name="email" required style="width: 70%; font-family: lato ;background-color: #EBEBEB">
-    </div>
-    <div style="width: 50%; margin: 10px 0; text-align: justify-all; color: #EBEBEB; font-family: lato ; font-weight: bold;font-size: 25px">
-      <label for="message">Message:</label>
-    </div>
-    <div style="width: 50%; margin: 10px 0; text-align: justify; color:#EBEBEB">
-      <textarea id="message" name="message" rows="6" required style="width: 70%; font-family: lato ;background-color: #EBEBEB"></textarea>
-    </div>
-    <div style="width: 100%; text-align: center; margin-top: 10px; color: #0F2437;font-weight: bold">
-      <input type="submit" value="Submit" style="width:28%; font-style: lato; font-size: 25px; color: #0F2437; font-weight: bold; background-color: #EBEBEB">
-    </div>
-    <input type="hidden" name="form-name" value="contact" />
-  </form>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/superhero/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Contact Form</h1>
+    <form name="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success/">
+      <div class="form-group row">
+        <div class="col-6">
+          <label for="first-name">First Name:</label>
+          <input type="text" class="form-control" id="first-name" name="first-name" required>
+        </div>
+        <div class="col-6">
+          <label for="second-name">Last Name:</label>
+          <input type="text" class="form-control" id="second-name" name="second-name" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+      </div>
+      <div class="text-center mt-4">
+        <button type="submit" class="btn btn-primary mr-3" style="font-weight: bold;">Submit</button>
+        <button type="reset" class="btn btn-secondary ml-3" style="font-weight: bold;">Reset</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
 ```
 :::
+
