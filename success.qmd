@@ -7,10 +7,6 @@ format:
 ```{=html}
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Form Submission Success</title>
-  <link rel="stylesheet" href="href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/superhero/bootstrap.min.css">
-</head>
 <body>
   <div class="container">
     <h1 class="text-center">Thank You!</h1>

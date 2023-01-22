@@ -1,0 +1,18 @@
+/* Form container styles */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Form group row styles */
+.form-group.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* First and last name input styles */
+.form-group.row .col-6 {
+  flex: 1;
+  margin-inline-start:10px;
+  margin-inline-end:10px;
+}
