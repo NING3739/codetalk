@@ -2,6 +2,8 @@
 format:
   html:
     toc: false
+    search: false
+      
 ---
 
 ::: column-page-left
@@ -38,7 +40,6 @@ Thank you !!!
         async>
 </script>
 ```
-
 ```{=html}
 <!DOCTYPE html>
 <html>

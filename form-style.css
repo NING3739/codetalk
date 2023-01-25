@@ -16,12 +16,12 @@ margin-right: 20px;
 
 /* Form input fields */
 input, textarea {
-margin-bottom: 20px;
+margin-right: 20px;
 }
 
 /* Form submit and reset buttons */
 button {
-margin-top: 20px;
+margin-right: 20px;
 }
 
 /* Form group row */
