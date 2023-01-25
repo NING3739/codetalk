@@ -1,18 +1,42 @@
-/* Form container styles */
+/* Form container */
 .container {
-  width: 80%;
-  margin: 0 auto;
+width: 50%;
+margin: 0 auto;
 }
 
-/* Form group row styles */
+/* Form label */
+label {
+font-weight: bold;
+}
+
+/* First and last name input fields */
+#first-name, #second-name {
+margin-right: 20px;
+}
+
+/* Form input fields */
+input, textarea {
+margin-bottom: 20px;
+}
+
+/* Form submit and reset buttons */
+button {
+margin-top: 20px;
+}
+
+/* Form group row */
 .form-group.row {
-  display: flex;
-  flex-wrap: wrap;
+display: flex;
+align-items: center;
+justify-content: space-between;
 }
 
-/* First and last name input styles */
-.form-group.row .col-6 {
-  flex: 1;
-  margin-inline-start:10px;
-  margin-inline-end:10px;
+/* Form group col */
+.col-md-6 {
+width: 48%;
+}
+
+/* Add some padding between first and last name input fields */
+#first-name, #second-name {
+padding-right: 10px;
 }
