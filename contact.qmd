@@ -3,7 +3,6 @@ format:
   html:
     toc: false
     search: false
-      
 ---
 
 ::: column-page-left

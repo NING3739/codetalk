@@ -1,42 +1,6 @@
 /* Form container */
 .container {
-width: 50%;
+width: 65%;
 margin: 0 auto;
 }
 
-/* Form label */
-label {
-font-weight: bold;
-}
-
-/* First and last name input fields */
-#first-name, #second-name {
-margin-right: 20px;
-}
-
-/* Form input fields */
-input, textarea {
-margin-right: 20px;
-}
-
-/* Form submit and reset buttons */
-button {
-margin-right: 20px;
-}
-
-/* Form group row */
-.form-group.row {
-display: flex;
-align-items: center;
-justify-content: space-between;
-}
-
-/* Form group col */
-.col-md-6 {
-width: 48%;
-}
-
-/* Add some padding between first and last name input fields */
-#first-name, #second-name {
-padding-right: 10px;
-}

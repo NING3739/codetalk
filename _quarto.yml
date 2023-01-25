@@ -10,7 +10,7 @@ website:
   site-url: https://stats-r.com/
   page-navigation: true
   page-footer: 
-    left:  "[©2023 Stats & R](https://creativecommons.org/licenses/by-nc-sa/4.0/) made with❤️by [NING](about.qmd)"
+    left:  "©2023 Stats & R made with ❤️ and [Quarto](https://quarto.org/), by [NING](about.qmd). License: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
     right:
       - icon: envelope
         href: mailto:ln729500172@gmail.com
@@ -59,7 +59,7 @@ format:
     highlight-style: github
     html-math-method: katex
     smooth-scroll: true
-    theme: superhero
+    theme: Litera
     toc: true
     toc-title: Contents
     toc-location: left
