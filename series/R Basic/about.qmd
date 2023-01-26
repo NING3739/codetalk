@@ -2,7 +2,7 @@
 title: "R Basic"
 date: "2022-11-27"
 categories: [Data Science, R Basic]
-description: Data Science-R Basic
+description: "Data Science-R Basic"
 image: https://images.unsplash.com/photo-1634128221889-82ed6efebfc3?ixlib=rb-1.2.1&q=80&cs=tinysrgb&fm=jpg&crop=entropy&w=3600
 code-fold: false
 editor: visual
@@ -370,7 +370,7 @@ R coerced the data into characters. It guessed that because you put a character 
 ## Sorting
 
 |          |                       |                                            |                                           |
-|----------|-----------------------|--------------------------------------------|-------------------------------------------|
+|--------------|--------------|----------------------|----------------------|
 | Original | Sort(按从小到大排列） | Order(Sort对应数字在原来数字排列中的顺序） | Rank(Original原来数字在Sort顺序中的排名） |
 | 31       | 4                     | 2                                          | 3                                         |
 | 4        | 15                    | 3                                          | 1                                         |

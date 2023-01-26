@@ -1,6 +1,6 @@
 ---
 title: Page Not Found
-
+description: "Page not found 404"
 format:
   html:
     toc: false

@@ -4,7 +4,7 @@ author: "NING LI"
 date: "2023-01-19"
 categories: [tutorial]
 image: "https://user-images.githubusercontent.com/1775316/36732568-68dc69e6-1bce-11e8-890a-5cd3a20ab8d6.gif"
-description: A tutorial for R and Rstudio installation on Mac
+description: "A tutorial for R and Rstudio installation on Mac"
 format:
   html:
     code-fold: false

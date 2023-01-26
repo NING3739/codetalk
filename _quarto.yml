@@ -8,6 +8,7 @@ website:
   title: "Stats & R"
   favicon: Stats-&-R.png
   site-url: https://stats-r.com/
+  description: "This is NING LI's personal website about Data Sciennce by R and Python programming language." 
   page-navigation: true
   page-footer: 
     left:  "©2023 Stats & R made with ❤️ and [Quarto](https://quarto.org/), by [NING](about.qmd). License: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"

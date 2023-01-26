@@ -3,7 +3,7 @@ title: "Christmas Tree"
 date: "2022-11-30"
 categories: [code]
 image: "https://media2.giphy.com/media/R7AW255ijTdV6/giphy.gif?cid=ecf05e47fer2fd1d7u1mh7d3ijl0wrpcib7o57odywu4axdd&rid=giphy.gif&ct=g"
-description: Merry Christmas Everyone!!!
+description: "Merry Christmas Everyone!!!"
 format:
   html:
     code-fold: false
