@@ -1,27 +1,27 @@
 project:
   type: website
-
+  
+  
 website:
-  google-analytics: 
-    tracking-id: "G-Y96LK2RNJD"
-    anonymize-ip: true
-  title: "Stats & R"
+  description: "Welcome to Stats & R. This is a personal website devoted primarily to R, Python, and statistics."
   favicon: Stats-&-R.png
-  site-url: https://stats-r.com/
-  description: "This is NING LI's personal website about Data Sciennce by R and Python programming language." 
+  google-analytics: 
+    anonymize-ip: true
+    tracking-id: "G-Y96LK2RNJD"
   page-navigation: true
-  page-footer: 
-    left:  "©2023 Stats & R made with ❤️ and [Quarto](https://quarto.org/), by [NING](about.qmd). License: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
-    right:
-      - icon: envelope
-        href: mailto:ln729500172@gmail.com
-      - icon: twitter
-        href: https://twitter.com/ningli3739
-      - icon: github
-        href: https://github.com/NING3739
+  repo-actions: [edit, issue]
+  repo-url: https://github.com/NING3739/statsr
+  site-url: https://stats-r.com/
+  title: "Stats & R"
+  
+  
   navbar:
+    background: "#A7D5E8" 
     logo: Stats-&-R.png
     logo-alt: "Stats-&-R.png"
+    pinned: true
+    search: true
+    
     left:
       - text: "Posts"
         href: posts.qmd
@@ -38,8 +38,19 @@ website:
         href: https://twitter.com/ningli3739
       - icon: github
         href: https://github.com/NING3739
-    pinned: true
-    search: true
+        
+        
+  page-footer:
+    background: "#A7D5E8"
+    left:  "©2023 Stats & R made with ❤️ and [Quarto](https://quarto.org/), by [NING](about.qmd). License: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
+    right:
+      - icon: envelope
+        href: mailto:ln729500172@gmail.com
+      - icon: twitter
+        href: https://twitter.com/ningli3739
+      - icon: github
+        href: https://github.com/NING3739
+
 
 format:
   html:
@@ -56,13 +67,17 @@ format:
     fig-align: center
     fig-cap-location: top
     footnotes-hover: true
-    link-external-newwindow: true
     highlight-style: github
     html-math-method: katex
+    link-external-newwindow: true
     smooth-scroll: true
     theme: Litera
     toc: true
     toc-title: Contents
     toc-location: left
+
+
+freeze: auto
     
+
 editor: visual

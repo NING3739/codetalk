@@ -1,5 +1,4 @@
 ---
-description: "Welcome to Stats & R. This is a personal website devoted primarily to R, Python, and statistics."
 listing:
   id: main-listing
   contents: posts/**/*.qmd

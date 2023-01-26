@@ -1,5 +1,4 @@
 ---
-description: "Get in touch with me"
 format:
   html:
     toc: false
