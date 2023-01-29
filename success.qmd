@@ -2,9 +2,10 @@
 format:
   html:
     toc: false
+comments: false
 ---
 
-```{=html}
+```{=html5}
 <!DOCTYPE html>
 <html>
 <body>

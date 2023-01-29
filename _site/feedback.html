@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Stats &amp; R - R Language Series</title>
+<title>Stats &amp; R – feedback</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./Stats-&amp;-R.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -60,35 +58,6 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-categories','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y96LK2RNJD"></script>
 
 <script type="text/javascript">
@@ -100,25 +69,9 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Stats &amp; R" href="series.xml"></head>
+</head>
 
 <body class="floating nav-fixed">
 
@@ -150,7 +103,7 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
  <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./series.html" aria-current="page"><i class="bi bi-book" role="img">
+    <a class="nav-link" href="./series.html"><i class="bi bi-book" role="img">
 </i> 
  <span class="menu-text">Series</span></a>
   </li>  
@@ -187,177 +140,56 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 <!-- sidebar -->
   
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Data Science">Data Science <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Data Visualization">Data Visualization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Probability">Probability <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R Basic">R Basic <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">R Language Series</h1>
-</div>
+<main class="content column-page" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
+<section id="site-feedback" class="level1">
+<h1>Site Feedback</h1>
+<p>You feed it back into the site</p>
 
-    
-  
-    
+
+
+  <title>Please leave your valuable feedback</title>
+  <link rel="stylesheet" href="form-style.css">
+
+
+  <div class="container">
+    <h1 class="text-center">Please leave your valuable feedback</h1>
+    <form name="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success">
+      <div class="form-group row">
+        <div class="col-6">
+          <label for="first-name">First Name:</label>
+          <input type="text" class="form-control" id="first-name" name="first-name" required="">
+        </div>
+        <div class="col-6">
+          <label for="second-name">Last Name:</label>
+          <input type="text" class="form-control" id="second-name" name="second-name" required="">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="example@example.com..." required="">
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message here and I'll answer as soon as possible" required=""></textarea>
+      </div>
+      <div class="text-center mt-4">
+        <button type="submit" class="btn btn-primary mr-3" style="font-weight: bold;">Submit</button>
+        <button type="reset" class="btn btn-secondary ml-3" style="font-weight: bold;">Reset</button>
+      </div>
+    </form>
   </div>
-  
-
-</header>
-
-<p>Here you will primarily gain a comprehensive understanding of R language, starting from the basics to advanced level, along with statistics-related knowledge.</p>
-<hr>
 
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-left" data-index="0" data-categories="Data Science,Probability" data-listing-date-sort="1670324400000" data-listing-file-modified-sort="1674988920223" data-listing-reading-time-sort="0.005">
-<div class="thumbnail">
-<p><a href="./series/Probability/probability.html"> <img src="https://images.unsplash.com/photo-1609017909889-d7b582c072f7?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy&amp;w=3600" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./series/Probability/probability.html">
-<h3 class="no-anchor listing-title">
-Probability
-</h3>
-<div class="listing-subtitle">
+</section>
 
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Data Science'); return false;">
-Data Science
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Probability'); return false;">
-Probability
-</div>
-</div>
-<a href="./series/Probability/probability.html">
-<div class="listing-description">
-<p>Data Science-Probability</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./series/Probability/probability.html">
-<div class="listing-date">
-Dec 7, 2022
-</div>
-<div class="listing-reading-time">
-0 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="1" data-categories="Data Science,Data Visualization" data-listing-date-sort="1669806000000" data-listing-file-modified-sort="1674943682921" data-listing-reading-time-sort="36.925">
-<div class="thumbnail">
-<p><a href="./series/Data Visualization/data_visualization.html"> <img src="https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy&amp;w=3600" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./series/Data Visualization/data_visualization.html">
-<h3 class="no-anchor listing-title">
-Data Visualization
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Data Science'); return false;">
-Data Science
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Data Visualization'); return false;">
-Data Visualization
-</div>
-</div>
-<a href="./series/Data Visualization/data_visualization.html">
-<div class="listing-description">
-<p>Data Science-Data Visualization</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./series/Data Visualization/data_visualization.html">
-<div class="listing-date">
-Dec 1, 2022
-</div>
-<div class="listing-reading-time">
-36 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-left" data-index="2" data-categories="Data Science,R Basic" data-listing-date-sort="1669460400000" data-listing-file-modified-sort="1674943682922" data-listing-reading-time-sort="31.045">
-<div class="thumbnail">
-<p><a href="./series/R Basic/r_basic.html"> <img src="https://images.unsplash.com/photo-1634128221889-82ed6efebfc3?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy&amp;w=3600" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./series/R Basic/r_basic.html">
-<h3 class="no-anchor listing-title">
-R Basic
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Data Science'); return false;">
-Data Science
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R Basic'); return false;">
-R Basic
-</div>
-</div>
-<a href="./series/R Basic/r_basic.html">
-<div class="listing-description">
-<p>Data Science-R Basic</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./series/R Basic/r_basic.html">
-<div class="listing-date">
-Nov 27, 2022
-</div>
-<div class="listing-reading-time">
-31 min
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -515,7 +347,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="./license.html">License</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./feedback.html">Feedback</a>
+    <a class="nav-link active" href="./feedback.html" aria-current="page">Feedback</a>
   </li>  
 </ul>
       </div>

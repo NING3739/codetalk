@@ -14,7 +14,7 @@
 <item>
   <title>Install R and Rstudio on Mac</title>
   <dc:creator>NING LI</dc:creator>
-  <link>https://stats-r.com/posts/Install R and Rstudio on Mac/about.html</link>
+  <link>https://stats-r.com/posts/Install R and Rstudio on Mac/r_installation.html</link>
   <description><![CDATA[ <section id="什么是r" class="level1" data-number="1"><h1 data-number="1">
 <span class="header-section-number">1</span> 什么是R</h1>
 <p>R是用于统计分析、绘图的语言和操作环境。R是属于GNU系统的一个自由、免费、源代码开放的软件，它是一个用于统计计算和统计制图的优秀工具。简单来说，R是一门统计计算语言，是一套开源的数据分析解决方案。</p>
@@ -98,7 +98,7 @@ Note
 </div>
 <div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;">plot</span>(height,weight, <span class="at" style="color: #657422;">type =</span> <span class="st" style="color: #20794D;">"p"</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://stats-r.com/posts/Install R and Rstudio on Mac/about_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/posts/Install R and Rstudio on Mac/r_installation_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section><section id="测试结果" class="level1" data-number="8"><h1 data-number="8">
@@ -111,14 +111,14 @@ Note
 
 </section> ]]></description>
   <category>tutorial</category>
-  <guid>https://stats-r.com/posts/Install R and Rstudio on Mac/about.html</guid>
+  <guid>https://stats-r.com/posts/Install R and Rstudio on Mac/r_installation.html</guid>
   <pubDate>Wed, 18 Jan 2023 11:00:00 GMT</pubDate>
   <media:content url="https://user-images.githubusercontent.com/1775316/36732568-68dc69e6-1bce-11e8-890a-5cd3a20ab8d6.gif" medium="image" type="image/gif"/>
 </item>
 <item>
   <title>Dynamic Graph</title>
   <dc:creator>NING LI</dc:creator>
-  <link>https://stats-r.com/posts/Dynamic Graph/about.html</link>
+  <link>https://stats-r.com/posts/Dynamic Graph/dynamic_graph.html</link>
   <description><![CDATA[ <p>Here is an example shows how to use <strong>gganmate</strong> package to make a dynamic graph.</p>
 <section id="gganmate" class="level1"><h1>gganmate</h1>
 <section id="data-from-mtcars" class="level2"><h2 class="anchored" data-anchor-id="data-from-mtcars">Data from mtcars</h2>
@@ -138,7 +138,7 @@ Note
 <span id="cb1-13">  <span class="fu" style="color: #4758AB;">exit_shrink</span>() <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb1-14">  <span class="fu" style="color: #4758AB;">ease_aes</span>(<span class="st" style="color: #20794D;">'sine-in-out'</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://stats-r.com/posts/Dynamic Graph/about_files/figure-html/unnamed-chunk-1-1.gif" class="img-fluid"></p>
+<p><img src="https://stats-r.com/posts/Dynamic Graph/dynamic_graph_files/figure-html/unnamed-chunk-1-1.gif" class="img-fluid"></p>
 </div>
 </div>
 
@@ -146,14 +146,14 @@ Note
 </section></section> ]]></description>
   <category>code</category>
   <category>analysis</category>
-  <guid>https://stats-r.com/posts/Dynamic Graph/about.html</guid>
+  <guid>https://stats-r.com/posts/Dynamic Graph/dynamic_graph.html</guid>
   <pubDate>Wed, 30 Nov 2022 11:00:00 GMT</pubDate>
   <media:content url="https://media4.giphy.com/media/bmQBu3aSF0DxadphkG/giphy.gif?cid=ecf05e47meob1g8g28iy7nkmukn31jbyq2jp88g0eqwwedn8&amp;rid=giphy.gif&amp;ct=g" medium="image"/>
 </item>
 <item>
   <title>Christmas Tree</title>
   <dc:creator>NING LI</dc:creator>
-  <link>https://stats-r.com/posts/Christmas Tree/about.html</link>
+  <link>https://stats-r.com/posts/Christmas Tree/christmas_tree.html</link>
   <description><![CDATA[ <p>Let us use <strong>ggplot2</strong> to make a Christmas Tree.</p>
 <section id="code" class="level1"><h1>Code</h1>
 <div class="cell">
@@ -210,21 +210,21 @@ Note
 <span id="cb1-51"><span class="fu" style="color: #4758AB;">ggtitle</span>(<span class="st" style="color: #20794D;">'Merry Christmas'</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb1-52"><span class="fu" style="color: #4758AB;">theme</span>(<span class="at" style="color: #657422;">plot.title =</span> <span class="fu" style="color: #4758AB;">element_text</span>(<span class="at" style="color: #657422;">color =</span> <span class="st" style="color: #20794D;">"red"</span>, <span class="at" style="color: #657422;">hjust =</span> <span class="fl" style="color: #AD0000;">0.5</span>))</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://stats-r.com/posts/Christmas Tree/about_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/posts/Christmas Tree/christmas_tree_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 
 
 </section> ]]></description>
   <category>code</category>
-  <guid>https://stats-r.com/posts/Christmas Tree/about.html</guid>
+  <guid>https://stats-r.com/posts/Christmas Tree/christmas_tree.html</guid>
   <pubDate>Tue, 29 Nov 2022 11:00:00 GMT</pubDate>
   <media:content url="https://media2.giphy.com/media/R7AW255ijTdV6/giphy.gif?cid=ecf05e47fer2fd1d7u1mh7d3ijl0wrpcib7o57odywu4axdd&amp;rid=giphy.gif&amp;ct=g" medium="image"/>
 </item>
 <item>
   <title>Welcome</title>
   <dc:creator>NING LI</dc:creator>
-  <link>https://stats-r.com/posts/welcome/about.html</link>
+  <link>https://stats-r.com/posts/welcome/welcome.html</link>
   <description><![CDATA[ 
 
 
@@ -235,7 +235,7 @@ Note
 
  ]]></description>
   <category>news</category>
-  <guid>https://stats-r.com/posts/welcome/about.html</guid>
+  <guid>https://stats-r.com/posts/welcome/welcome.html</guid>
   <pubDate>Sat, 26 Nov 2022 11:00:00 GMT</pubDate>
   <media:content url="https://media1.giphy.com/media/3YX5uFD3ksn5QGhQCQ/giphy.gif?cid=ecf05e47wh8zqk5qrx69zxo06440kl54py9vudby0dhlldj2&amp;rid=giphy.gif&amp;ct=g" medium="image"/>
 </item>

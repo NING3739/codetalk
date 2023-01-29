@@ -1,4 +1,5 @@
 ---
+title: R Language Series
 listing:
   contents: series/**/*.qmd
   sort: "date desc"
@@ -9,9 +10,13 @@ listing:
   fields: [image, date, title, description, categories, reading-time]
   feed: true
   image-align: left
-page-layout: full
+  page-size: 6
+
+comments: false
+
 title-block-banner: false
 ---
 
-::: column-page-left
-:::
+Here you will primarily gain a comprehensive understanding of R language, starting from the basics to advanced level, along with statistics-related knowledge.
+
+---

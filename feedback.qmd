@@ -1,0 +1,49 @@
+---
+format:
+  html:
+    toc: false
+comments: false
+---
+
+# Site Feedback
+
+You feed it back into the site 
+
+```{=html5}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Please leave your valuable feedback</title>
+  <link rel="stylesheet" href="form-style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Please leave your valuable feedback</h1>
+    <form name="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success">
+      <div class="form-group row">
+        <div class="col-6">
+          <label for="first-name">First Name:</label>
+          <input type="text" class="form-control" id="first-name" name="first-name" required>
+        </div>
+        <div class="col-6">
+          <label for="second-name">Last Name:</label>
+          <input type="text" class="form-control" id="second-name" name="second-name" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="example@example.com..." required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message here and I'll answer as soon as possible" required></textarea>
+      </div>
+      <div class="text-center mt-4">
+        <button type="submit" class="btn btn-primary mr-3" style="font-weight: bold;">Submit</button>
+        <button type="reset" class="btn btn-secondary ml-3" style="font-weight: bold;">Reset</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+```

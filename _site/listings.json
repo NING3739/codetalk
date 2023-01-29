@@ -2,27 +2,27 @@
   {
     "listing": "/series.html",
     "items": [
-      "/series/Probability/about.html",
-      "/series/Data Visualization/about.html",
-      "/series/R Basic/about.html"
-    ]
-  },
-  {
-    "listing": "/index.html",
-    "items": [
-      "/posts/Install R and Rstudio on Mac/about.html",
-      "/posts/Dynamic Graph/about.html",
-      "/posts/Christmas Tree/about.html",
-      "/posts/welcome/about.html"
+      "/series/Probability/probability.html",
+      "/series/Data Visualization/data_visualization.html",
+      "/series/R Basic/r_basic.html"
     ]
   },
   {
     "listing": "/posts.html",
     "items": [
-      "/posts/Install R and Rstudio on Mac/about.html",
-      "/posts/Dynamic Graph/about.html",
-      "/posts/Christmas Tree/about.html",
-      "/posts/welcome/about.html"
+      "/posts/Install R and Rstudio on Mac/r_installation.html",
+      "/posts/Dynamic Graph/dynamic_graph.html",
+      "/posts/Christmas Tree/christmas_tree.html",
+      "/posts/welcome/welcome.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/Install R and Rstudio on Mac/r_installation.html",
+      "/posts/Dynamic Graph/dynamic_graph.html",
+      "/posts/Christmas Tree/christmas_tree.html",
+      "/posts/welcome/welcome.html"
     ]
   }
 ]

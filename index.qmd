@@ -7,7 +7,10 @@ listing:
   filter-ui: false
   sort-ui: false
   fields: [date, title]
-  
+  page-size: 4
+
+comments: false
+    
 format:
   html:
     toc: false
@@ -15,10 +18,9 @@ format:
 css: styles.css
 ---
 
-::: column-page-left
 ![](https://media3.giphy.com/media/2L8AviEEaIW2DcXGg0/giphy.gif?cid=ecf05e47squf2aep9xwfuuxs5a3o604416nte3wlabz8fvo8&rid=giphy.gif&ct=g){fig-align="center"}
 
-# Welcome to Stats & R!!! {.center-text}
+## Welcome to Stats & R!!! {.center-text}
 
 This is a personal website with the contents of **statistics** and the **open-source** [R](https://www.r-project.org/) **language**, aiming to facilitate **academic exchanges** and better **promote myself**.
 
@@ -34,8 +36,17 @@ If you are new to this site, here are some useful suggestions that you can do.
 
 Thanks again for coming to my personal website.😘
 
-# 📮 Recent Posts
+## License
+
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+
+<a property="dct:title" rel="cc:attributionURL" href="https://stats-r.com/">Stats & R</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://twitter.com/ningli3739">NING LI</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-NoDerivatives 4.0 International<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/></a>
+
+</p>
+
+Visit [here](license.qmd) for more information about the license.
+
+## Lastest posts
 
 ::: {#main-listing}
-:::
 :::

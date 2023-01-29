@@ -3,78 +3,22 @@ format:
   html:
     toc: false
     search: false
+comments: false
 ---
-
-::: column-page-left
-# 💌 Get In Touch
 
 ![](https://media1.giphy.com/media/3o8dp3rE9m8IYtZcCQ/giphy.gif?cid=ecf05e4763y1aocmf0top0mat5l4638y3yspqsh08ehc1jb4&rid=giphy.gif&ct=g){fig-align="center"}
 
-Thanks in advance for contacting me.
+Thank you for considering reaching out to me.
 
-In order for me to answer you as soon as possible, here are **the best communication methods**:
+To ensure prompt response, please use the following methods for best communication:
 
--   Due to the increasing number of questions received, responding to each of them by email has become unmanageable and unproductive. Therefore, if you have a question, I invite you to **add it as a comment** at the end of the corresponding article. This way, **other readers can benefit** from the discussion and that saves me from answering the same thing several times. Questions by email will not be answered (I will redirect you to the comments).
+**Post questions as comments** on the relevant article to benefit other readers and avoid duplication. **Email inquiries will not be addressed**, but redirected to the comments section.
 
--   For mistakes, bugs or inconsistencies---and that can happen, we are all human after all---you can inform me about them by raising an issue on GitHub. If you are familiar with GitHub, you can even edit the corresponding file and propose a pull request so I can quickly include your changes.
+Report mistakes, bugs, or inaccuracies by **creating an issue on** [GitHub](https://github.com/NING3739). For those familiar with GitHub, feel free to edit the file and submit a pull request for speedy incorporation of your changes.
 
--   For a quick answer to your question, make sure to first check the comments from other readers. Your question may have already been answered.
+Before contacting me, please **check the comments section** for a possible answer to your question.
 
-Thank you !!!
+Thank you!
 
-```{=html}
-<script src="https://giscus.app/client.js"
-        data-repo="NING3739/my-personal-website"
-        data-repo-id="R_kgDOIYBxAA"
-        data-category="Comments"
-        data-category-id="DIC_kwDOIYBxAM4CS2io"
-        data-mapping="url"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>
-```
-```{=html}
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Contact Form</title>
-  <link rel="stylesheet" href="form-style.css">
-</head>
-<body>
-  <div class="container">
-    <h1 class="text-center">Contact Form</h1>
-    <form name="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success">
-      <div class="form-group row">
-        <div class="col-6">
-          <label for="first-name">First Name:</label>
-          <input type="text" class="form-control" id="first-name" name="first-name" required>
-        </div>
-        <div class="col-6">
-          <label for="second-name">Last Name:</label>
-          <input type="text" class="form-control" id="second-name" name="second-name" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="email">Email Address:</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="example@example.com..." required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message here and I'll answer as soon as possible" required></textarea>
-      </div>
-      <div class="text-center mt-4">
-        <button type="submit" class="btn btn-primary mr-3" style="font-weight: bold;">Submit</button>
-        <button type="reset" class="btn btn-secondary ml-3" style="font-weight: bold;">Reset</button>
-      </div>
-    </form>
-  </div>
-</body>
-</html>
-```
-:::
+
+

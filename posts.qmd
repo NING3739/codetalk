@@ -1,4 +1,5 @@
 ---
+title: Daily Posts
 listing:
   contents: posts/**/*.qmd
   sort: "date desc"
@@ -8,9 +9,13 @@ listing:
   filter-ui: [title, date]
   fields: [image, date, title, author, description, categories]
   feed: true
-page-layout: full
+  page-size: 6
+
+comments: false
+
 title-block-banner: false
 ---
 
-::: column-page-left
-:::
+Here you can get insights into my journey of learning data science, the challenges I faced, and my thought process regarding these challenges.
+
+---

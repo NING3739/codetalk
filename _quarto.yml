@@ -14,7 +14,6 @@ website:
   site-url: https://stats-r.com/
   title: "Stats & R"
   
-  
   navbar:
     background: "#A7D5E8" 
     logo: Stats-&-R.png
@@ -23,17 +22,22 @@ website:
     search: true
     
     left:
-      - text: "Posts"
+      - icon: house
+        text: "Home"
+        href: index.qmd
+      - icon: newspaper
+        text: "Posts"
         href: posts.qmd
-      - text: "About"
-        href: about.qmd
-      - text: "Series"
+      - icon: book
+        text: "Series"
         href: series.qmd
-      - text: "Contact"
+      - icon: file-person
+        text: "About"
+        href: about.qmd
+      - icon: phone
+        text: "Contact"
         href: contact.qmd
     right:
-      - icon: envelope
-        href: mailto:ln729500172@gmail.com
       - icon: twitter
         href: https://twitter.com/ningli3739
       - icon: github
@@ -42,10 +46,13 @@ website:
         
   page-footer:
     background: "#A7D5E8"
-    left:  "©2023 Stats & R made with ❤️ and [Quarto](https://quarto.org/), by [NING](about.qmd). License: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
+    left:  "©2023 [Stats & R](index.qmd)"
+    center: 
+      - text: "License"
+        href: license.qmd
+      - text: "Feedback"
+        href: feedback.qmd
     right:
-      - icon: envelope
-        href: mailto:ln729500172@gmail.com
       - icon: twitter
         href: https://twitter.com/ningli3739
       - icon: github
@@ -70,11 +77,25 @@ format:
     highlight-style: github
     html-math-method: katex
     link-external-newwindow: true
+    page-layout: full
     smooth-scroll: true
     theme: Litera
     toc: true
     toc-title: Contents
     toc-location: left
+    
+    
+# comments
+comments: 
+  giscus: 
+    repo: NING3739/my-personal-website
+    repo-id: R_kgDOIYBxAA
+    category: Comments
+    category-id: DIC_kwDOIYBxAM4CS2io
+    mapping: url
+    input-position: bottom
+    theme: preferred_color_scheme
+
 
 
 freeze: auto

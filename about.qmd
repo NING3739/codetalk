@@ -1,7 +1,7 @@
 ---
-title: NING LI
+title: "NING LI"
 about:
-   template: solana
+   template: trestles
    image: https://github.com/NING3739/my-personal-website/blob/797a74d18665e9f6136ef9e862e990067f7627c8/NING%20LI.jpeg?raw=true
    links:
     - icon: envelope
@@ -15,11 +15,13 @@ about:
     - icon: github
       text: Github
       href: https://github.com/NING3739
-    
+comments: false
+
 editor: visual
 ---
 
-# Who am I ?
+::: panel-tabset
+# About Me
 
 Hi, I' m ***Ning*** and I'm a potential data analyst.
 
@@ -33,10 +35,11 @@ My current short-term goal is to publish my first ***peer-reviewed paper*** and 
 
 In my free time, I like listening to ***music***, ***hiking*** and ***reading***. If you also like these activities, please feel free to contact me.
 
-## Education
+# Education
 
 Massey University, Auckland \| Master in Accountancy \| February 2019 - June 2020
 
-## Experience
+# Experience
 
 Life Maid Easy \| Head Marketing \| December 2020 - present
+:::
