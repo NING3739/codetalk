@@ -7,14 +7,14 @@ comments: false
 
 # Site Feedback
 
-You feed it back into the site 
+You feed it back into the site
 
 ```{=html5}
 <!DOCTYPE html>
 <html>
 <head>
   <title>Please leave your valuable feedback</title>
-  <link rel="stylesheet" href="form-style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">

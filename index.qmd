@@ -14,8 +14,6 @@ comments: false
 format:
   html:
     toc: false
-
-css: styles.css
 ---
 
 ![](https://media3.giphy.com/media/2L8AviEEaIW2DcXGg0/giphy.gif?cid=ecf05e47squf2aep9xwfuuxs5a3o604416nte3wlabz8fvo8&rid=giphy.gif&ct=g){fig-align="center"}

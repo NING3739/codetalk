@@ -6,3 +6,10 @@
   text-align: center;
 }
 
+/* Form container */
+.container {
+width: 57%;
+margin: 0 auto;
+}
+
+

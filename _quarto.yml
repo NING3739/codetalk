@@ -79,11 +79,10 @@ format:
     link-external-newwindow: true
     page-layout: full
     smooth-scroll: true
-    theme: Litera
+    theme: default 
     toc: true
     toc-title: Contents
     toc-location: left
-    
     
 # comments
 comments: 
