@@ -4,10 +4,6 @@ about:
    template: trestles
    image: https://github.com/NING3739/my-personal-website/blob/797a74d18665e9f6136ef9e862e990067f7627c8/NING%20LI.jpeg?raw=true
    links:
-    - icon: envelope
-      text: E-mali
-      href: mailto:ln729500172@gmail.com
-  
     - icon: twitter
       text: Twitter
       href: https://twitter.com/ningli3739
@@ -23,7 +19,7 @@ editor: visual
 ::: panel-tabset
 # About Me
 
-Hi, I' m **Ning** and I'm a potential data analyst.
+Hi, I' m **Ning**, an aspiring data analyst.
 
 My current focus is **statistics**, **R-based data analysis** and **corporate-related political risk issues**.
 

@@ -15,7 +15,7 @@ website:
   title: "Stats & R"
   
   navbar:
-    background: "#A7D5E8" 
+    #background: "#A7D5E8" 
     logo: Stats-&-R.png
     logo-alt: "Stats-&-R.png"
     pinned: true
@@ -34,7 +34,7 @@ website:
       - icon: file-person
         text: "About"
         href: about.qmd
-      - icon: phone
+      - icon: telephone
         text: "Contact"
         href: contact.qmd
     right:
@@ -45,8 +45,8 @@ website:
         
         
   page-footer:
-    background: "#A7D5E8"
-    left:  "©2023 [Stats & R](index.qmd)"
+    #background: "#A7D5E8"
+    left:  "&copy;2023 [Stats & R](index.qmd)"
     center: 
       - text: "License"
         href: license.qmd
@@ -79,11 +79,14 @@ format:
     link-external-newwindow: true
     page-layout: full
     smooth-scroll: true
-    theme: default 
+    theme:
+       light: [default, theme-light.scss]
+       dark: [default, theme-dark.scss]
     toc: true
     toc-title: Contents
     toc-location: left
     
+ 
 # comments
 comments: 
   giscus: 

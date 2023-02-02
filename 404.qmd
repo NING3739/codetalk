@@ -1,4 +1,5 @@
 ---
+title: "&nbsp;"
 format:
   html:
     toc: false

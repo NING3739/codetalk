@@ -1,5 +1,5 @@
 ---
-title: Daily Posts
+title: "Daily Posts"
 listing:
   contents: posts/**/*.qmd
   sort: "date desc"
@@ -17,5 +17,3 @@ title-block-banner: false
 ---
 
 Here you can get insights into my journey of learning data science, the challenges I faced, and my thought process regarding these challenges.
-
----
