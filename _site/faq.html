@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Stats &amp; R</title>
+<title>Stats &amp; R – faq</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./Stats-&amp;-R.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -62,35 +60,6 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-main-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-main-listing'] = new List('listing-main-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y96LK2RNJD"></script>
 
 <script type="text/javascript">
@@ -102,22 +71,6 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -193,87 +146,9 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://media3.giphy.com/media/2L8AviEEaIW2DcXGg0/giphy.gif?cid=ecf05e47squf2aep9xwfuuxs5a3o604416nte3wlabz8fvo8&amp;rid=giphy.gif&amp;ct=g" class="img-fluid figure-img"></p>
-</figure>
-</div>
-<section id="welcome-to-stats-r" class="level2 center-text">
-<h2 class="center-text anchored" data-anchor-id="welcome-to-stats-r">Welcome to Stats &amp; R!!!</h2>
-<p>As a data science enthusiast, I have always wanted to create a personal website. With this website, I hope to not only continue learning new knowledge in my spare time but also track my own growth by sharing my findings. Additionally, I wanted to introduce myself to everyone. During my journey learning <strong>R language</strong>, I stumbled upon Rstudio’s new open source publishing system, <a href="https://quarto.org/"><strong>Quarto</strong></a>. Quarto’s publishing system is simple and easy to pick up. And so, after some trial and error, Stats &amp; R was born.</p>
-<p>Stats &amp; R is a research sharing website that focuses on using <a href="https://www.r-project.org/"><strong>R</strong></a> language to solve statistical problems. The website is divided into four parts.</p>
-<p>The first part is “<a href="./posts.html"><strong>Posts</strong></a>”. This page showcases interesting thoughts and questions that arose during my R language learning process. I will periodically share these thoughts in the form of blogs. Readers can actively leave any questions or interesting ideas in the comment section below.</p>
-<p>The second part is “<a href="./series.html"><strong>Series</strong></a>”. If you are a beginner in R language, then you can start learning the language systematically for free. This section will provide readers with all the knowledge points about R language in a systematic manner.</p>
-<p>The third part is the “<a href="./about.html"><strong>About</strong></a>” page. You can find out who I am, what I am doing, and my research achievements.</p>
-<p>The fourth part is the “<a href="./contact.html"><strong>Contact</strong></a>” page. If you have any questions, please carefully read the communication terms before contacting me using the specified contact information.</p>
-<p>Once again, thank you for visiting my personal website. I hope you can experience the beauty of R language and data science here. 😘</p>
-</section>
-<section id="license" class="level2">
-<h2 class="anchored" data-anchor-id="license">License</h2>
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
-</p><p><a property="dct:title" rel="cc:attributionURL" href="https://stats-r.com/">Stats &amp; R</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://twitter.com/ningli3739">NING LI</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-NoDerivatives 4.0 International<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"></a></p>
-<p></p>
-<p>Visit <a href="./license.html">here</a> for more information about the license.</p>
-</section>
-<section id="lastest-posts" class="level2">
-<h2 class="anchored" data-anchor-id="lastest-posts">Lastest posts</h2>
-<div id="listing-main-listing" class="quarto-listing quarto-listing-container-table">
-
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-Date
-</th>
-<th>
-Title
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="tutorial" data-listing-date-sort="1674039600000" data-listing-file-modified-sort="1674943682920" data-listing-reading-time-sort="1.055" data-listing-title-sort="Install R and Rstudio on Mac" data-listing-filename-sort="index.qmd">
-<td class="listing-date">
-Jan 19, 2023
-</td>
-<td class="listing-title">
-<a href="./posts/Install R and Rstudio on Mac/index.html" class="title">Install R and Rstudio on Mac</a>
-</td>
-</tr>
-<tr data-index="1" data-categories="code,analysis" data-listing-date-sort="1669806000000" data-listing-file-modified-sort="1674943682920" data-listing-reading-time-sort="0.315" data-listing-title-sort="Dynamic Graph" data-listing-filename-sort="index.qmd">
-<td class="listing-date">
-Dec 1, 2022
-</td>
-<td class="listing-title">
-<a href="./posts/Dynamic Graph/index.html" class="title">Dynamic Graph</a>
-</td>
-</tr>
-<tr data-index="2" data-categories="code" data-listing-date-sort="1669719600000" data-listing-file-modified-sort="1674943682920" data-listing-reading-time-sort="0.785" data-listing-title-sort="Christmas Tree" data-listing-filename-sort="index.qmd">
-<td class="listing-date">
-Nov 30, 2022
-</td>
-<td class="listing-title">
-<a href="./posts/Christmas Tree/index.html" class="title">Christmas Tree</a>
-</td>
-</tr>
-<tr data-index="3" data-categories="news" data-listing-date-sort="1669460400000" data-listing-file-modified-sort="1674943682921" data-listing-reading-time-sort="0.085" data-listing-title-sort="Welcome" data-listing-filename-sort="index.qmd">
-<td class="listing-date">
-Nov 27, 2022
-</td>
-<td class="listing-title">
-<a href="./posts/welcome/index.html" class="title">Welcome</a>
-</td>
-</tr>
-</tbody>
-
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+<p>FAQ</p>
 
 
-
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -545,7 +420,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       <div class="nav-footer-center">
         <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="./faq.html">FAQ</a>
+    <a class="nav-link active" href="./faq.html" aria-current="page">FAQ</a>
   </li>  
     <li class="nav-item">
     <a class="nav-link" href="./feedback.html">Feedback</a>

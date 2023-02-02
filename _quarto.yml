@@ -22,9 +22,9 @@ website:
     search: true
     
     left:
-      - icon: house
-        text: "Home"
-        href: index.qmd
+      #- icon: house
+      #  text: "Home"
+      #  href: index.qmd
       - icon: newspaper
         text: "Posts"
         href: posts.qmd
@@ -47,11 +47,16 @@ website:
   page-footer:
     #background: "#A7D5E8"
     left:  "&copy;2023 [Stats & R](index.qmd)"
-    center: 
-      - text: "License"
-        href: license.qmd
+    center:
+      - text: "FAQ"
+        href: faq.qmd
       - text: "Feedback"
         href: feedback.qmd
+      - text: "License"
+        href: license.qmd
+      - text: "Terms"
+        href: terms.qmd
+      
     right:
       - icon: twitter
         href: https://twitter.com/ningli3739

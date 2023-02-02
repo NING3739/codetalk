@@ -12,3 +12,24 @@ width: 57%;
 margin: 0 auto;
 }
 
+.nav-footer {
+  position:relative;
+  font-size: 16px;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-footer-center {
+  position: relative;
+  margin-top: 0em;
+}
+
+.nav-footer-right {
+  position: relative;
+}
+
+.nav-footer-left {
+  position: relative;
+}
