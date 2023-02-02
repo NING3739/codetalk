@@ -20,17 +20,17 @@ format:
 
 ## Welcome to Stats & R!!! {.center-text}
 
-As a data science enthusiast, I have always wanted to create a personal website. With this website, I hope to not only continue learning new knowledge in my spare time but also track my own growth by sharing my findings. Additionally, I wanted to introduce myself to everyone. During my journey learning **R language**, I stumbled upon Rstudio's new open source publishing system, [**Quarto**](https://quarto.org/). Quarto's publishing system is simple and easy to pick up. And so, after some trial and error, Stats & R was born.
+As a data science enthusiast, I have always wanted to create a personal website. With this website, I hope to not only continue learning new knowledge in my spare time but also track my own growth by sharing my findings. Additionally, I wanted to introduce myself to everyone. During my journey learning [R language](https://www.r-project.org/), I stumbled upon [Rstudio](https://posit.co)'s new open source publishing system, [Quarto](https://quarto.org/). Quarto's publishing system is simple and easy to pick up. And so, after some trial and error, Stats & R was born.
 
-Stats & R is a research sharing website that focuses on using [**R**](https://www.r-project.org/) language to solve statistical problems. The website is divided into four parts.
+Stats & R is a research sharing website that focuses on using R language to solve statistical problems. The website is divided into four parts.
 
-The first part is "[**Posts**](posts.qmd)". This page showcases interesting thoughts and questions that arose during my R language learning process. I will periodically share these thoughts in the form of blogs. Readers can actively leave any questions or interesting ideas in the comment section below.
+The first part is "[Posts](posts.qmd)". This page showcases interesting thoughts and questions that arose during my R language learning process. I will periodically share these thoughts in the form of blogs. Readers can actively leave any questions or interesting ideas in the comment section below.
 
-The second part is "[**Series**](series.qmd)". If you are a beginner in R language, then you can start learning the language systematically for free. This section will provide readers with all the knowledge points about R language in a systematic manner.
+The second part is "[Series](series.qmd)". If you are a beginner in R language, then you can start learning the language systematically for free. This section will provide readers with all the knowledge points about R language in a systematic manner.
 
-The third part is the "[**About**](about.qmd)" page. You can find out who I am, what I am doing, and my research achievements.
+The third part is the "[About](about.qmd)" page. You can find out who I am, what I am doing, and my research achievements.
 
-The fourth part is the "[**Contact**](contact.qmd)" page. If you have any questions, please carefully read the communication terms before contacting me using the specified contact information.
+The fourth part is the "[Contact](contact.qmd)" page. If you have any questions, please carefully read the communication terms before contacting me using the specified contact information.
 
 Once again, thank you for visiting my personal website. I hope you can experience the beauty of R language and data science here. 😘
 
