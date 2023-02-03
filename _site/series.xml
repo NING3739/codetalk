@@ -13,6 +13,7 @@
 <lastBuildDate>Tue, 06 Dec 2022 11:00:00 GMT</lastBuildDate>
 <item>
   <title>Probability</title>
+  <dc:creator>NING LI</dc:creator>
   <link>https://quartopub.com/sites/ningli/statsr/series/Probability/index.html</link>
   <description><![CDATA[ 
 
@@ -30,6 +31,7 @@
 </item>
 <item>
   <title>Data Visualization</title>
+  <dc:creator>NING LI</dc:creator>
   <link>https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index.html</link>
   <description><![CDATA[ <section id="welcome" class="level1" data-number="1"><h1 data-number="1">
 <span class="header-section-number">1</span> Welcome!</h1>
@@ -1600,6 +1602,7 @@ Tip
 </item>
 <item>
   <title>R Basic</title>
+  <dc:creator>NING LI</dc:creator>
   <link>https://quartopub.com/sites/ningli/statsr/series/R Basic/index.html</link>
   <description><![CDATA[ <section id="r-basics-functions-and-data-types" class="level1 page-columns page-full" data-number="1"><h1 data-number="1">
 <span class="header-section-number">1</span> R Basics, Functions, and Data Types</h1>

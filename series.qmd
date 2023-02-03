@@ -7,10 +7,10 @@ listing:
   categories: true
   sort-ui: true
   filter-ui: true
-  fields: [image, date, title, description, categories, reading-time]
+  fields: [image, date, title, author, description, categories, reading-time]
+  date-format: MMM DD, YYYY
   feed: true
   image-align: left
-  page-size: 6
 
 comments: false
 

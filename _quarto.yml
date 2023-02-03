@@ -34,7 +34,7 @@ website:
       - icon: file-person
         text: "About"
         href: about.qmd
-      - icon: telephone
+      - icon: envelope
         text: "Contact"
         href: contact.qmd
     right:
@@ -42,7 +42,6 @@ website:
         href: https://twitter.com/ningli3739
       - icon: github
         href: https://github.com/NING3739
-        
         
   page-footer:
     #background: "#A7D5E8"
@@ -90,7 +89,7 @@ format:
     toc: true
     toc-title: Contents
     toc-location: left
-    
+
  
 # comments
 comments: 

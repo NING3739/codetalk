@@ -19,6 +19,3 @@ Report mistakes, bugs, or inaccuracies by **creating an issue on** [GitHub](http
 Before contacting me, please **check the comments section** for a possible answer to your question.
 
 Thank you!
-
-
-

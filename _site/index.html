@@ -72,9 +72,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author"],
+      searchColumns: ["listing-freeze","listing-title-block-banner","listing-author","listing-toc","listing-toc-depth","listing-title","listing-date","listing-categories","listing-image","listing-description","listing-format","listing-path","listing-filename","listing-file-modified","listing-reading-time"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -157,7 +157,7 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./contact.html"><i class="bi bi-telephone" role="img">
+    <a class="nav-link" href="./contact.html"><i class="bi bi-envelope" role="img">
 </i> 
  <span class="menu-text">Contact</span></a>
   </li>  
@@ -217,59 +217,63 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 </section>
 <section id="lastest-posts" class="level2">
 <h2 class="anchored" data-anchor-id="lastest-posts">Lastest posts</h2>
-<div id="listing-main-listing" class="quarto-listing quarto-listing-container-table">
+<div id="listing-main-listing" class="quarto-listing quarto-listing-container-custom">
 
 <table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-Date
-</th>
-<th>
-Title
-</th>
+    <tbody class="list">
+        <tr data-index="0" data-categories="null" data-listing-date-sort="1674039600000" data-listing-file-modified-sort="1675416238296" data-listing-reading-time-sort="1.055">
+        <td class="listing-date">
+            Jan 19, 2023        
+        </td>
+        <td class="listing-title">
+            <a href="./posts/Install R and Rstudio on Mac/index.html">Install R and Rstudio on Mac</a>     
+        </td>
+        <td>
+                <span class="badge badge-primary" style="background:rgb(242, 233, 249); color: rgb(84, 31, 84);">tutorial</span>
+        </td>        
 </tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="tutorial" data-listing-date-sort="1674039600000" data-listing-file-modified-sort="1674943682920" data-listing-reading-time-sort="1.055" data-listing-title-sort="Install R and Rstudio on Mac" data-listing-filename-sort="index.qmd">
-<td class="listing-date">
-Jan 19, 2023
-</td>
-<td class="listing-title">
-<a href="./posts/Install R and Rstudio on Mac/index.html" class="title">Install R and Rstudio on Mac</a>
-</td>
+        <tr data-index="0" data-categories="null" data-listing-date-sort="1669806000000" data-listing-file-modified-sort="1674943682920" data-listing-reading-time-sort="0.315">
+        <td class="listing-date">
+            Dec 01, 2022        
+        </td>
+        <td class="listing-title">
+            <a href="./posts/Dynamic Graph/index.html">Dynamic Graph</a>     
+        </td>
+        <td>
+                <span class="badge badge-primary" style="background:rgb(242, 233, 249); color: rgb(84, 31, 84);">code</span>
+                <span class="badge badge-primary" style="background:rgb(242, 233, 249); color: rgb(84, 31, 84);">analysis</span>
+        </td>        
 </tr>
-<tr data-index="1" data-categories="code,analysis" data-listing-date-sort="1669806000000" data-listing-file-modified-sort="1674943682920" data-listing-reading-time-sort="0.315" data-listing-title-sort="Dynamic Graph" data-listing-filename-sort="index.qmd">
-<td class="listing-date">
-Dec 1, 2022
-</td>
-<td class="listing-title">
-<a href="./posts/Dynamic Graph/index.html" class="title">Dynamic Graph</a>
-</td>
+        <tr data-index="0" data-categories="null" data-listing-date-sort="1669719600000" data-listing-file-modified-sort="1674943682920" data-listing-reading-time-sort="0.785">
+        <td class="listing-date">
+            Nov 30, 2022        
+        </td>
+        <td class="listing-title">
+            <a href="./posts/Christmas Tree/index.html">Christmas Tree</a>     
+        </td>
+        <td>
+                <span class="badge badge-primary" style="background:rgb(242, 233, 249); color: rgb(84, 31, 84);">code</span>
+        </td>        
 </tr>
-<tr data-index="2" data-categories="code" data-listing-date-sort="1669719600000" data-listing-file-modified-sort="1674943682920" data-listing-reading-time-sort="0.785" data-listing-title-sort="Christmas Tree" data-listing-filename-sort="index.qmd">
-<td class="listing-date">
-Nov 30, 2022
-</td>
-<td class="listing-title">
-<a href="./posts/Christmas Tree/index.html" class="title">Christmas Tree</a>
-</td>
-</tr>
-<tr data-index="3" data-categories="news" data-listing-date-sort="1669460400000" data-listing-file-modified-sort="1674943682921" data-listing-reading-time-sort="0.085" data-listing-title-sort="Welcome" data-listing-filename-sort="index.qmd">
-<td class="listing-date">
-Nov 27, 2022
-</td>
-<td class="listing-title">
-<a href="./posts/welcome/index.html" class="title">Welcome</a>
-</td>
+        <tr data-index="0" data-categories="null" data-listing-date-sort="1669460400000" data-listing-file-modified-sort="1675392204460" data-listing-reading-time-sort="0.085">
+        <td class="listing-date">
+            Nov 27, 2022        
+        </td>
+        <td class="listing-title">
+            <a href="./posts/welcome/index.html">Welcome</a>     
+        </td>
+        <td>
+                <span class="badge badge-primary" style="background:rgb(242, 233, 249); color: rgb(84, 31, 84);">news</span>
+        </td>        
 </tr>
 </tbody>
-
 </table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
 </div>
+<p><a href="../posts/index.html"> <button type="button" class="btn btn-primary float-end btn">See all</button></a></p>
+<p><br></p>
 
 
 
@@ -523,7 +527,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/stats-r\.com\//);
+      var filterRegex = new RegExp(/https:\/\/quartopub\.com\/sites\/ningli\/statsr/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }

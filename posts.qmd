@@ -8,9 +8,9 @@ listing:
   sort-ui: true
   filter-ui: [title, date]
   fields: [image, date, title, author, description, categories]
+  date-format: MMM DD, YYYY
   feed: true
-  page-size: 6
-
+  
 comments: false
 
 title-block-banner: false

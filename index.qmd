@@ -6,8 +6,10 @@ listing:
   type: table
   filter-ui: false
   sort-ui: false
-  fields: [date, title]
+  fields: [date, title, categories]
   page-size: 4
+  date-format: MMM DD, YYYY
+  template: posts.ejs
 
 comments: false
     
@@ -48,3 +50,7 @@ Visit [here](license.qmd) for more information about the license.
 
 ::: {#main-listing}
 :::
+
+<a href="../posts/index.html"> <button type="button" class="btn btn-primary float-end btn">See all</button></a>
+
+<br>
