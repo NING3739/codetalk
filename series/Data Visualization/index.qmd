@@ -1436,3 +1436,9 @@ gapminder %>%
 ## Ecological Fallacy
 
 ### Key Points
+
+- The breaks argument allows us to set the location of the axis labels and tick marks.
+
+- the *logistic* or *logit transformation* is defined as $f(p)=log\frac{1}{1-p}$, or the log of odds. This scale is useful for highlighting difference near 0 or near 1 and converts fold changes into constant increase.
+
+- The *ecological fallacy* is assuming that conclusion made from the average of a group apply to all members of that group. 

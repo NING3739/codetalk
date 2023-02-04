@@ -13,6 +13,21 @@ $navbar-fg: #181818;
   color: #007bff;
 }
 
+// card background color
+.card {
+    position: relative;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #e9ecef;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+
 // change about page navigate tabs' color
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
     color: #62c462;

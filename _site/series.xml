@@ -1591,6 +1591,11 @@ Tip
 <span class="header-section-number">4.11</span> Ecological Fallacy</h2>
 <section id="key-points-23" class="level3" data-number="4.11.1"><h3 data-number="4.11.1" class="anchored" data-anchor-id="key-points-23">
 <span class="header-section-number">4.11.1</span> Key Points</h3>
+<ul>
+<li><p>The breaks argument allows us to set the location of the axis labels and tick marks.</p></li>
+<li><p>the <em>logistic</em> or <em>logit transformation</em> is defined as <img src="https://latex.codecogs.com/png.latex?f(p)=log%5Cfrac%7B1%7D%7B1-p%7D">, or the log of odds. This scale is useful for highlighting difference near 0 or near 1 and converts fold changes into constant increase.</p></li>
+<li><p>The <em>ecological fallacy</em> is assuming that conclusion made from the average of a group apply to all members of that group.</p></li>
+</ul>
 
 
 </section></section></section> ]]></description>

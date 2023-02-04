@@ -417,7 +417,7 @@
     "href": "series/Data Visualization/index.html#ecological-fallacy",
     "title": "Data Visualization",
     "section": "\n4.11 Ecological Fallacy",
-    "text": "4.11 Ecological Fallacy\n\n4.11.1 Key Points"
+    "text": "4.11 Ecological Fallacy\n\n4.11.1 Key Points\n\nThe breaks argument allows us to set the location of the axis labels and tick marks.\nthe logistic or logit transformation is defined as f(p)=log\\frac{1}{1-p}, or the log of odds. This scale is useful for highlighting difference near 0 or near 1 and converts fold changes into constant increase.\nThe ecological fallacy is assuming that conclusion made from the average of a group apply to all members of that group."
   },
   {
     "objectID": "posts/Install R and Rstudio on Mac/index.html",
@@ -459,7 +459,7 @@
     "href": "series.html",
     "title": "R Language Series",
     "section": "",
-    "text": "Here you will primarily gain a comprehensive understanding of R language, starting from the basics to advanced level, along with statistics-related knowledge.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nProbability\n\n\n\n\n\n\n\nData Science\n\n\nProbability\n\n\n\n\nData Science-Probability\n\n\n\n\n\n\nDec 07, 2022\n\n\nNING LI\n\n\n0 min\n\n\n\n\n\n\n  \n\n\n\n\nData Visualization\n\n\n\n\n\n\n\nData Science\n\n\nData Visualization\n\n\n\n\nData Science-Data Visualization\n\n\n\n\n\n\nDec 01, 2022\n\n\nNING LI\n\n\n36 min\n\n\n\n\n\n\n  \n\n\n\n\nR Basic\n\n\n\n\n\n\n\nData Science\n\n\nR Basic\n\n\n\n\nData Science-R Basic\n\n\n\n\n\n\nNov 27, 2022\n\n\nNING LI\n\n\n31 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Here you will primarily gain a comprehensive understanding of R language, starting from the basics to advanced level, along with statistics-related knowledge.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nProbability\n\n\n\n\n\n\n\nData Science\n\n\nProbability\n\n\n\n\nData Science-Probability\n\n\n\n\n\n\nDec 07, 2022\n\n\nNING LI\n\n\n0 min\n\n\n\n\n\n\n  \n\n\n\n\nData Visualization\n\n\n\n\n\n\n\nData Science\n\n\nData Visualization\n\n\n\n\nData Science-Data Visualization\n\n\n\n\n\n\nDec 01, 2022\n\n\nNING LI\n\n\n37 min\n\n\n\n\n\n\n  \n\n\n\n\nR Basic\n\n\n\n\n\n\n\nData Science\n\n\nR Basic\n\n\n\n\nData Science-R Basic\n\n\n\n\n\n\nNov 27, 2022\n\n\nNING LI\n\n\n31 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "terms.html",
