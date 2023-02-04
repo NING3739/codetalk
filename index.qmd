@@ -51,6 +51,6 @@ Visit [here](license.qmd) for more information about the license.
 ::: {#main-listing}
 :::
 
-<a href="../posts/index.html"> <button type="button" class="btn btn-primary float-end btn">See all</button></a>
+<a href="posts.qmd"> <button type="button" class="btn btn-primary float-end btn">See all</button></a>
 
 <br>

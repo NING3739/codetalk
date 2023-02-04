@@ -13,14 +13,16 @@ website:
   repo-url: https://github.com/NING3739/statsr
   site-url: https://stats-r.com/
   title: "Stats & R"
+  search:
+      location: navbar
+      type: textbox
+  
   
   navbar:
     #background: "#A7D5E8" 
     logo: Stats-&-R.png
     logo-alt: "Stats-&-R.png"
     pinned: true
-    search: true
-    
     left:
       #- icon: house
       #  text: "Home"

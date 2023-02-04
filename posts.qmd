@@ -4,6 +4,7 @@ listing:
   contents: posts/**/*.qmd
   sort: "date desc"
   type: grid
+  grid-item-border: false
   categories: true
   sort-ui: true
   filter-ui: [title, date]
