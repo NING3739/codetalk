@@ -422,9 +422,37 @@
   {
     "objectID": "posts/Install R and Rstudio on Mac/index.html",
     "href": "posts/Install R and Rstudio on Mac/index.html",
-    "title": "Install R and Rstudio on Mac",
+    "title": "How to install R and Rstudio",
     "section": "",
-    "text": "1 什么是R\nR是用于统计分析、绘图的语言和操作环境。R是属于GNU系统的一个自由、免费、源代码开放的软件，它是一个用于统计计算和统计制图的优秀工具。简单来说，R是一门统计计算语言，是一套开源的数据分析解决方案。\n\n2 什么是Rstudio\nRStudio是为R语言设计的一种跨平台集成开发环境。其特色包括可客制化的软件套件视觉化界面与同团队开发的一系列数据可视化与出版工具。RStudio有免费的自由软件版本及收费的专业版本，并分为在本地电脑上执行的桌面版和与在服务器上执行而可由浏览器连接后使用的服务器版。\n\n3 前提\n安装顺序(不能颠倒)\n\nR语言\nRstudio\n\nR是Rstudio的基础，必须先安装R，再安装Rstudio。\n\n\n\n\n\n\nNote\n\n\n\nR is a programming language and environment for statistical computing and graphics, while RStudio is an integrated development environment (IDE) for R. Installing R first allows the computer to recognize the R language, and then RStudio can be installed on top of it to provide a user-friendly interface and additional tools for working with R. It is not necessary to install R first but it is a good practice as some features of RStudio are dependent on R.\n\n\n\n\n4 R语言安装\n\n官网安装包下载地址：https://cran.r-project.org/\n\n点击MacOS对应选项， 下方红框标出的地方\n\n\n\n在下载界面点击base，下方红框标出的地方\n\n\n\n自行选择下载R语言版本， 下载最新的版本为妙\n\n\n下载完成， 在”Finder→下载”中点击pkg文件， 一直按下一步可安装完成。\n\n5 Rstudio安装\n\n官网安装包下载地址：https://posit.co/download/rstudio-desktop/#download\n\n点击下方红色标出地方，直接下载\n\n\n下载完成， 在”Finder→下载”中点击dmg文件， 将app拖入application中即可。\n安装完成\n\n6 在Rstudio中创建新项目\n\n\n创建新project。具体方法如下图所示， 依次点击File->New Project => New Directory->New Project->输入Directory name（注意要用英文，别用中文）\n\n\n\n\n\n\n创建好，就会出现下图所示\n\n\n\n7 测试R\n\n现在测试一下我们安装的的R语言环境\n\n\nheight <- c(145, 167, 176, 123, 150)\nweight <- c(51, 63, 64, 40, 55)\ncor(height, weight)\n\n[1] 0.9893769\n\nplot(height,weight, type = \"p\")\n\n\n\n\n\n8 测试结果\n\n结果输出一切正常"
+    "text": "R is an open-source programming language and software environment for statistical computing, data analysis, and graphics. It was developed by Ross Ihaka and Robert Gentleman in 1993 and has since become a popular tool for data analysis and visualization in academia, government, and industry."
+  },
+  {
+    "objectID": "posts/Install R and Rstudio on Mac/index.html#installing-r-and-rstudio-on-windows",
+    "href": "posts/Install R and Rstudio on Mac/index.html#installing-r-and-rstudio-on-windows",
+    "title": "How to install R and Rstudio",
+    "section": "\n5.1 Installing R and RStudio on Windows:",
+    "text": "5.1 Installing R and RStudio on Windows:\n\nGo to the R website (https://cran.r-project.org) and download the latest version of R for Windows.\nOnce the download is complete, run the setup file and follow the on-screen instructions to install R on your computer.\nNext, go to the RStudio website (https://rstudio.com) and download the latest version of RStudio Desktop for Windows.\nRun the setup file and follow the on-screen instructions to install RStudio on your computer.\nOnce both R and RStudio are installed, you can launch RStudio from the Windows Start menu."
+  },
+  {
+    "objectID": "posts/Install R and Rstudio on Mac/index.html#installing-r-and-rstudio-on-mac",
+    "href": "posts/Install R and Rstudio on Mac/index.html#installing-r-and-rstudio-on-mac",
+    "title": "How to install R and Rstudio",
+    "section": "\n5.2 Installing R and RStudio on Mac:",
+    "text": "5.2 Installing R and RStudio on Mac:\n\nGo to the R website (https://cran.r-project.org) and download the latest version of R for Mac.\nOnce the download is complete, open the downloaded file and follow the on-screen instructions to install R on your computer.\nNext, go to the RStudio website (https://rstudio.com) and download the latest version of RStudio Desktop for Mac.\nOnce the download is complete, open the downloaded file and follow the on-screen instructions to install RStudio on your computer.\nOnce both R and RStudio are installed, you can launch RStudio from the Applications folder on your Mac."
+  },
+  {
+    "objectID": "posts/Install R and Rstudio on Mac/index.html#installing-r-and-rstudio-on-linux",
+    "href": "posts/Install R and Rstudio on Mac/index.html#installing-r-and-rstudio-on-linux",
+    "title": "How to install R and Rstudio",
+    "section": "\n5.3 Installing R and RStudio on Linux:",
+    "text": "5.3 Installing R and RStudio on Linux:\n\nGo to the R website (https://cran.r-project.org) and download the latest version of R for Linux.\nOnce the download is complete, open a terminal window and navigate to the directory where the downloaded file is located.\n\nRun the following command to install R:\nsudo apt-get install r-base\n\nNext, go to the RStudio website (https://rstudio.com) and download the latest version of RStudio Desktop for Linux.\nOnce the download is complete, open a terminal window and navigate to the directory where the downloaded file is located.\n\nRun the following command to install RStudio:\nsudo dpkg -i rstudio-*.deb\n\nOnce both R and RStudio are installed, you can launch RStudio from the Applications menu on your Linux computer."
+  },
+  {
+    "objectID": "posts/Install R and Rstudio on Mac/index.html#installing-r-and-rstudio-on-mac-and-linux-using-homebrew",
+    "href": "posts/Install R and Rstudio on Mac/index.html#installing-r-and-rstudio-on-mac-and-linux-using-homebrew",
+    "title": "How to install R and Rstudio",
+    "section": "\n5.4 Installing R and RStudio on Mac and Linux using Homebrew",
+    "text": "5.4 Installing R and RStudio on Mac and Linux using Homebrew\nHomebrew is a package manager for Mac and Linux that makes it easy to install and manage software. Here’s how to install R and RStudio using Homebrew:\n\n5.4.1 Mac:\n\n\nIf you don’t already have Homebrew installed, run the following command in your terminal to install it:\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\n\n\nOnce Homebrew is installed, run the following command to install R:\nbrew install r\n\n\nNext, run the following command in your terminal to install:\nbrew install --cask rstudio\n\nOnce both R and RStudio are installed, you can launch RStudio from the Applications folder on your Mac.\n\n5.4.2 Linux:\n\nSame instruction as mac to install Homebrew on Linux.\n\nOnce Homebrew is installed, run the following command to install R:\nbrew install r\n\nNext, go to the RStudio website (https://rstudio.com) and download the latest version of RStudio Desktop for Linux.\nOnce the download is complete, open a terminal window and navigate to the directory where the downloaded file is located.\n\nRun the following command to install RStudio:\nsudo dpkg -i rstudio-*.deb\n\nOnce both R and RStudio are installed, you can launch RStudio from the Applications menu on your Linux computer."
   },
   {
     "objectID": "posts/Dynamic Graph/index.html",
@@ -487,7 +515,7 @@
     "href": "index.html#lastest-posts",
     "title": "Stats & R",
     "section": "Lastest posts",
-    "text": "Lastest posts\n\n\n\n    \n        \n        \n            Jan 19, 2023        \n        \n        \n            Install R and Rstudio on Mac     \n        \n        \n                tutorial\n                \n\n        \n        \n            Dec 01, 2022        \n        \n        \n            Dynamic Graph     \n        \n        \n                code\n                analysis\n                \n\n        \n        \n            Nov 30, 2022        \n        \n        \n            Christmas Tree     \n        \n        \n                code\n                \n\n        \n        \n            Nov 27, 2022        \n        \n        \n            Welcome     \n        \n        \n                news\n                \n\n\n\n\nNo matching items\n\n\n See all"
+    "text": "Lastest posts\n\n\n\n    \n        \n        \n            Feb 07, 2023        \n        \n        \n            Guide to study R productively     \n        \n        \n                tutorial\n                \n\n        \n        \n            Jan 19, 2023        \n        \n        \n            How to install R and Rstudio     \n        \n        \n                tutorial\n                \n\n        \n        \n            Dec 01, 2022        \n        \n        \n            Dynamic Graph     \n        \n        \n                code\n                analysis\n                \n\n        \n        \n            Nov 30, 2022        \n        \n        \n            Christmas Tree     \n        \n        \n                code\n                \n\n        \n        \n            Nov 27, 2022        \n        \n        \n            Welcome     \n        \n        \n                news\n                \n\n\n\n\nNo matching items\n\n\n  \n\n\n See all"
   },
   {
     "objectID": "about.html",
@@ -508,7 +536,7 @@
     "href": "posts.html",
     "title": "Daily Posts",
     "section": "",
-    "text": "Here you can get insights into my journey of learning data science, the challenges I faced, and my thought process regarding these challenges.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nInstall R and Rstudio on Mac\n\n\n\ntutorial\n\n\n\nA tutorial for R and Rstudio installation on Mac\n\n\n\nNING LI\n\n\nJan 19, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDynamic Graph\n\n\n\ncode\n\n\nanalysis\n\n\n\nMake a dynamic graph by gganmate\n\n\n\nNING LI\n\n\nDec 01, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChristmas Tree\n\n\n\ncode\n\n\n\nMerry Christmas Everyone!!!\n\n\n\nNING LI\n\n\nNov 30, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome\n\n\n\nnews\n\n\n\nWelcome !!!\n\n\n\nNING LI\n\n\nNov 27, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Here you can get insights into my journey of learning data science, the challenges I faced, and my thought process regarding these challenges.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nGuide to study R productively\n\n\n\ntutorial\n\n\n\nThe best resources and handy tools to study R\n\n\n\nNING LI\n\n\nFeb 07, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to install R and Rstudio\n\n\n\ntutorial\n\n\n\nA tutorial for R and Rstudio installation on Mac\n\n\n\nNING LI\n\n\nJan 19, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDynamic Graph\n\n\n\ncode\n\n\nanalysis\n\n\n\nMake a dynamic graph by gganmate\n\n\n\nNING LI\n\n\nDec 01, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChristmas Tree\n\n\n\ncode\n\n\n\nMerry Christmas Everyone!!!\n\n\n\nNING LI\n\n\nNov 30, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome\n\n\n\nnews\n\n\n\nWelcome !!!\n\n\n\nNING LI\n\n\nNov 27, 2022\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "feedback.html",

@@ -34,6 +34,11 @@ a {
 
 /* Form container */
 .container {
-width: 57%;
+width: 60%;
 margin: 0 auto;
+}
+
+/* Button layout*/
+.btn-secondary {
+    margin-top: -9px;
 }

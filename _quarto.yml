@@ -1,7 +1,6 @@
 project:
   type: website
   
-  
 website:
   description: "Welcome to Stats & R. This is a personal website devoted primarily to R, Python, and statistics."
   favicon: Stats-&-R.png
@@ -11,22 +10,17 @@ website:
   page-navigation: true
   repo-actions: [edit, issue]
   repo-url: https://github.com/NING3739/statsr
-  site-url: https://stats-r.com/
+  site-url: 'https://stats-r.com'
   title: "Stats & R"
   search:
       location: navbar
       type: textbox
   
-  
   navbar:
-    #background: "#A7D5E8" 
     logo: Stats-&-R.png
     logo-alt: "Stats-&-R.png"
     pinned: true
     left:
-      #- icon: house
-      #  text: "Home"
-      #  href: index.qmd
       - icon: newspaper
         text: "Posts"
         href: posts.qmd
@@ -46,7 +40,6 @@ website:
         href: https://github.com/NING3739
         
   page-footer:
-    #background: "#A7D5E8"
     left:  "&copy;2023 [Stats & R](index.qmd)"
     center:
       - text: "FAQ"
@@ -63,7 +56,6 @@ website:
         href: https://twitter.com/ningli3739
       - icon: github
         href: https://github.com/NING3739
-
 
 format:
   html:
@@ -85,14 +77,13 @@ format:
     link-external-newwindow: true
     page-layout: full
     smooth-scroll: true
-    theme:
+    theme: 
        light: [default, theme-light.scss]
        dark: [default, theme-dark.scss]
     toc: true
     toc-title: Contents
     toc-location: left
 
- 
 # comments
 comments: 
   giscus: 
@@ -104,9 +95,6 @@ comments:
     input-position: bottom
     theme: preferred_color_scheme
 
-
-
 freeze: auto
     
-
 editor: visual

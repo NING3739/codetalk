@@ -1,9 +1,9 @@
 ---
-title: "Install R and Rstudio on Mac"
+title: "How to install R and Rstudio"
 author: "NING LI"
 date: "2023-01-19"
 categories: [tutorial]
-image: "https://user-images.githubusercontent.com/1775316/36732568-68dc69e6-1bce-11e8-890a-5cd3a20ab8d6.gif"
+image: "https://media.tenor.com/FcVg5W9zZJQAAAAM/error.gif"
 description: "A tutorial for R and Rstudio installation on Mac"
 format:
   html:
@@ -11,77 +11,155 @@ format:
     number-sections: true
 ---
 
-# 什么是R
+# What is R?
 
-R是用于统计分析、绘图的语言和操作环境。R是属于GNU系统的一个自由、免费、源代码开放的软件，它是一个用于统计计算和统计制图的优秀工具。简单来说，R是一门统计计算语言，是一套开源的数据分析解决方案。
+R is an open-source programming language and software environment for statistical computing, data analysis, and graphics. It was developed by Ross Ihaka and Robert Gentleman in 1993 and has since become a popular tool for data analysis and visualization in academia, government, and industry.
 
-# 什么是Rstudio
+# Why learning R Programming?
 
-RStudio是为R语言设计的一种跨平台集成开发环境。其特色包括可客制化的软件套件视觉化界面与同团队开发的一系列数据可视化与出版工具。RStudio有免费的自由软件版本及收费的专业版本，并分为在本地电脑上执行的桌面版和与在服务器上执行而可由浏览器连接后使用的服务器版。
+There are several reasons why you may want to learn R programming:
 
-# 前提
+-   Data analysis: R provides a wide range of statistical and graphical methods for data analysis, including linear and nonlinear regression, hypothesis testing, and machine learning algorithms.
 
-安装顺序(不能颠倒)
+-   Visualization: R is equipped with powerful graphics capabilities, which make it an ideal tool for visualizing data in a way that can be easily understood.
 
--   R语言
+-   Open-source: R is free and open-source, meaning that users have access to its source code and can modify it to meet their needs.
 
--   Rstudio
+-   Community: R has a large and growing community of users and developers, which makes it easier to find help, tutorials, and resources.
 
--   R是Rstudio的基础，必须先安装R，再安装Rstudio。
+-   Interoperability: R integrates well with other programming languages, such as Python, SQL, and C++, making it a versatile tool for data analysis.
 
-    ::: callout-note
-    R is a programming language and environment for statistical computing and graphics, while RStudio is an integrated development environment (IDE) for R. Installing R first allows the computer to recognize the R language, and then RStudio can be installed on top of it to provide a user-friendly interface and additional tools for working with R. It is not necessary to install R first but it is a good practice as some features of RStudio are dependent on R.
-    :::
+-   Applications: R is widely used in various fields such as finance, biology, medicine, and marketing, making it a valuable skill to have in a number of industries.
 
-# R语言安装
+Overall, learning R programming provides users with a flexible, powerful, and accessible tool for data analysis, visualization, and machine learning.
 
--   官网安装包下载地址：<https://cran.r-project.org/>
+# What is Rstudio?
 
--   点击MacOS对应选项， 下方红框标出的地方
+RStudio is an integrated development environment (IDE) for the R programming language. It provides a user-friendly interface and includes features such as syntax highlighting, code completion, debugging, and visualization tools.
 
-    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/1.png)
+# What relationship between R and Rstudio?
 
--   在下载界面点击base，下方红框标出的地方
+RStudio is not a part of the R programming language, but rather a third-party software that integrates with R. It provides additional functionality and a user-friendly interface on top of R, making it easier for users to interact with the R language and perform complex data analysis and visualization tasks. In short, R is a programming language, and RStudio is an IDE that makes it easier to work with R.
 
-    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/2.png)
+::: callout-note
+Therefore, the order of installing the R language is: first R, then Rstudio. Remember, R is the basis of Rstudio, R must be installed before installing Rstudio.
+:::
 
--   自行选择下载R语言版本， 下载最新的版本为妙
+# Install R and Rstudio
 
-    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/3.png)
+## Installing R and RStudio on Windows:
 
--   下载完成， 在"Finder**→下载"中点击pkg文件， 一直按下一步可安装完成。**
+-   Go to the R website (<https://cran.r-project.org>) and download the latest version of R for Windows.
 
-# Rstudio安装
+-   Once the download is complete, run the setup file and follow the on-screen instructions to install R on your computer.
 
--   官网安装包下载地址：<https://posit.co/download/rstudio-desktop/#download>
+-   Next, go to the RStudio website (<https://rstudio.com>) and download the latest version of RStudio Desktop for Windows.
 
--   点击下方红色标出地方，直接下载
+-   Run the setup file and follow the on-screen instructions to install RStudio on your computer.
 
-    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/4.png)
+-   Once both R and RStudio are installed, you can launch RStudio from the Windows Start menu.
 
--   下载完成， 在"Finder**→下载"中点击dmg文件， 将app拖入application中即可。**
+## Installing R and RStudio on Mac:
 
--   安装完成
+-   Go to the R website (<https://cran.r-project.org>) and download the latest version of R for Mac.
 
-# 在Rstudio中创建新项目
+-   Once the download is complete, open the downloaded file and follow the on-screen instructions to install R on your computer.
 
--   创建新project。具体方法如下图所示， 依次点击File-\>New Project =\> New Directory-\>New Project-\>输入Directory name（注意要用英文，别用中文）
+-   Next, go to the RStudio website (<https://rstudio.com>) and download the latest version of RStudio Desktop for Mac.
+
+-   Once the download is complete, open the downloaded file and follow the on-screen instructions to install RStudio on your computer.
+
+-   Once both R and RStudio are installed, you can launch RStudio from the Applications folder on your Mac.
+
+## Installing R and RStudio on Linux:
+
+-   Go to the R website (<https://cran.r-project.org>) and download the latest version of R for Linux.
+
+-   Once the download is complete, open a terminal window and navigate to the directory where the downloaded file is located.
+
+-   Run the following command to install R:
+
+    `sudo apt-get install r-base`
+
+-   Next, go to the RStudio website (<https://rstudio.com>) and download the latest version of RStudio Desktop for Linux.
+
+-   Once the download is complete, open a terminal window and navigate to the directory where the downloaded file is located.
+
+-   Run the following command to install RStudio:
+
+    `sudo dpkg -i rstudio-*.deb`
+
+-   Once both R and RStudio are installed, you can launch RStudio from the Applications menu on your Linux computer.
+
+## Installing R and RStudio on Mac and Linux using Homebrew
+
+Homebrew is a package manager for Mac and Linux that makes it easy to install and manage software. Here's how to install R and RStudio using Homebrew:
+
+### Mac:
+
+-   If you don't already have Homebrew installed, run the following command in your terminal to install it:
+
+    `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+
+-   Once Homebrew is installed, run the following command to install R:
+
+    `brew install r`
+
+-   Next, run the following command in your terminal to install:
+
+    `brew install --cask rstudio`
+
+-   Once both R and RStudio are installed, you can launch RStudio from the Applications folder on your Mac.
+
+### Linux:
+
+-   Same instruction as mac to install Homebrew on Linux.
+
+-   Once Homebrew is installed, run the following command to install R:
+
+    `brew install r`
+
+-   Next, go to the RStudio website (<https://rstudio.com>) and download the latest version of RStudio Desktop for Linux.
+
+-   Once the download is complete, open a terminal window and navigate to the directory where the downloaded file is located.
+
+-   Run the following command to install RStudio:
+
+    `sudo dpkg -i rstudio-*.deb`
+
+-   Once both R and RStudio are installed, you can launch RStudio from the Applications menu on your Linux computer.
+
+# Create a project in Rstudio
+
+-   Launch RStudio.
+
+-   Click on the "File" menu in the top left corner and select "New Project".
+
+-   Select "New Directory" and then "New Project".
 
     ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/5.png)
 
+-   Choose the type of project you want to create: a standard project, a package project, or a Shiny web application project.
+
     ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/6.png)
 
-    ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/7.png)
+-   Choose the location for your project and give it a name.
+
+-   Click "Create Project".
 
     ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/8.png)
 
--   创建好，就会出现下图所示
+-   RStudio will create a new project directory with a specific structure, including a main R script file, a subdirectory for data, and a subdirectory for output.
+
+-   You can now start writing code and working on your project.
 
     ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/9.png)
 
-# 测试R
+-   Whenever you want to save your project, simply go to the "File" menu and select "Save". Your project will be saved as an RStudio project file, which you can reopen later to continue working on it.
 
--   现在测试一下我们安装的的R语言环境
+# Test R
+
+-   Now test our installed R language environment
 
 ```{r}
 height <- c(145, 167, 176, 123, 150)
@@ -90,8 +168,8 @@ cor(height, weight)
 plot(height,weight, type = "p")
 ```
 
-# 测试结果
+# Test result
 
--   结果输出一切正常
+-   If R language environment is installed properly, then you will see a dot plot of height and weight.
 
 ![](https://raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/10.png)

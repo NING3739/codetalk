@@ -10,25 +10,49 @@
 <atom:link href="https://quartopub.com/sites/ningli/statsr/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Welcome to Stats &amp; R. This is a personal website devoted primarily to R, Python, and statistics.</description>
 <generator>quarto-1.2.313</generator>
-<lastBuildDate>Wed, 18 Jan 2023 11:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 06 Feb 2023 11:00:00 GMT</lastBuildDate>
 <item>
-  <title>Install R and Rstudio on Mac</title>
+  <title>Guide to study R productively</title>
+  <dc:creator>NING LI</dc:creator>
+  <link>https://quartopub.com/sites/ningli/statsr/posts/The best resources and handy tools to study R/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+ ]]></description>
+  <category>tutorial</category>
+  <guid>https://quartopub.com/sites/ningli/statsr/posts/The best resources and handy tools to study R/index.html</guid>
+  <pubDate>Mon, 06 Feb 2023 11:00:00 GMT</pubDate>
+  <media:content url="https://dtlive.s3.ap-south-1.amazonaws.com/16491/DT_G79_Design-Tools-Animated-GIF-Icon-pack.gif" medium="image" type="image/gif"/>
+</item>
+<item>
+  <title>How to install R and Rstudio</title>
   <dc:creator>NING LI</dc:creator>
   <link>https://quartopub.com/sites/ningli/statsr/posts/Install R and Rstudio on Mac/index.html</link>
-  <description><![CDATA[ <section id="什么是r" class="level1" data-number="1"><h1 data-number="1">
-<span class="header-section-number">1</span> 什么是R</h1>
-<p>R是用于统计分析、绘图的语言和操作环境。R是属于GNU系统的一个自由、免费、源代码开放的软件，它是一个用于统计计算和统计制图的优秀工具。简单来说，R是一门统计计算语言，是一套开源的数据分析解决方案。</p>
-</section><section id="什么是rstudio" class="level1" data-number="2"><h1 data-number="2">
-<span class="header-section-number">2</span> 什么是Rstudio</h1>
-<p>RStudio是为R语言设计的一种跨平台集成开发环境。其特色包括可客制化的软件套件视觉化界面与同团队开发的一系列数据可视化与出版工具。RStudio有免费的自由软件版本及收费的专业版本，并分为在本地电脑上执行的桌面版和与在服务器上执行而可由浏览器连接后使用的服务器版。</p>
-</section><section id="前提" class="level1" data-number="3"><h1 data-number="3">
-<span class="header-section-number">3</span> 前提</h1>
-<p>安装顺序(不能颠倒)</p>
+  <description><![CDATA[ <section id="what-is-r" class="level1" data-number="1"><h1 data-number="1">
+<span class="header-section-number">1</span> What is R?</h1>
+<p>R is an open-source programming language and software environment for statistical computing, data analysis, and graphics. It was developed by Ross Ihaka and Robert Gentleman in 1993 and has since become a popular tool for data analysis and visualization in academia, government, and industry.</p>
+</section><section id="why-learning-r-programming" class="level1" data-number="2"><h1 data-number="2">
+<span class="header-section-number">2</span> Why learning R Programming?</h1>
+<p>There are several reasons why you may want to learn R programming:</p>
 <ul>
-<li><p>R语言</p></li>
-<li><p>Rstudio</p></li>
-<li>
-<p>R是Rstudio的基础，必须先安装R，再安装Rstudio。</p>
+<li><p>Data analysis: R provides a wide range of statistical and graphical methods for data analysis, including linear and nonlinear regression, hypothesis testing, and machine learning algorithms.</p></li>
+<li><p>Visualization: R is equipped with powerful graphics capabilities, which make it an ideal tool for visualizing data in a way that can be easily understood.</p></li>
+<li><p>Open-source: R is free and open-source, meaning that users have access to its source code and can modify it to meet their needs.</p></li>
+<li><p>Community: R has a large and growing community of users and developers, which makes it easier to find help, tutorials, and resources.</p></li>
+<li><p>Interoperability: R integrates well with other programming languages, such as Python, SQL, and C++, making it a versatile tool for data analysis.</p></li>
+<li><p>Applications: R is widely used in various fields such as finance, biology, medicine, and marketing, making it a valuable skill to have in a number of industries.</p></li>
+</ul>
+<p>Overall, learning R programming provides users with a flexible, powerful, and accessible tool for data analysis, visualization, and machine learning.</p>
+</section><section id="what-is-rstudio" class="level1" data-number="3"><h1 data-number="3">
+<span class="header-section-number">3</span> What is Rstudio?</h1>
+<p>RStudio is an integrated development environment (IDE) for the R programming language. It provides a user-friendly interface and includes features such as syntax highlighting, code completion, debugging, and visualization tools.</p>
+</section><section id="what-relationship-between-r-and-rstudio" class="level1" data-number="4"><h1 data-number="4">
+<span class="header-section-number">4</span> What relationship between R and Rstudio?</h1>
+<p>RStudio is not a part of the R programming language, but rather a third-party software that integrates with R. It provides additional functionality and a user-friendly interface on top of R, making it easier for users to interact with the R language and perform complex data analysis and visualization tasks. In short, R is a programming language, and RStudio is an IDE that makes it easier to work with R.</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -39,55 +63,105 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>R is a programming language and environment for statistical computing and graphics, while RStudio is an integrated development environment (IDE) for R. Installing R first allows the computer to recognize the R language, and then RStudio can be installed on top of it to provide a user-friendly interface and additional tools for working with R. It is not necessary to install R first but it is a good practice as some features of RStudio are dependent on R.</p>
+<p>Therefore, the order of installing the R language is: first R, then Rstudio. Remember, R is the basis of Rstudio, R must be installed before installing Rstudio.</p>
 </div>
 </div>
-</li>
-</ul></section><section id="r语言安装" class="level1" data-number="4"><h1 data-number="4">
-<span class="header-section-number">4</span> R语言安装</h1>
+</section><section id="install-r-and-rstudio" class="level1" data-number="5"><h1 data-number="5">
+<span class="header-section-number">5</span> Install R and Rstudio</h1>
+<section id="installing-r-and-rstudio-on-windows" class="level2" data-number="5.1"><h2 data-number="5.1" class="anchored" data-anchor-id="installing-r-and-rstudio-on-windows">
+<span class="header-section-number">5.1</span> Installing R and RStudio on Windows:</h2>
 <ul>
-<li><p>官网安装包下载地址：<a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></p></li>
-<li>
-<p>点击MacOS对应选项， 下方红框标出的地方</p>
-<p><img src="https://quartopub.com/sites/ningli/statsr/posts/Install R and Rstudio on Mac/https:/raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/1.png" class="img-fluid"></p>
-</li>
-<li>
-<p>在下载界面点击base，下方红框标出的地方</p>
-<p><img src="https://quartopub.com/sites/ningli/statsr/posts/Install R and Rstudio on Mac/https:/raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/2.png" class="img-fluid"></p>
-</li>
-<li>
-<p>自行选择下载R语言版本， 下载最新的版本为妙</p>
-<p><img src="https://quartopub.com/sites/ningli/statsr/posts/Install R and Rstudio on Mac/https:/raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/3.png" class="img-fluid"></p>
-</li>
-<li><p>下载完成， 在”Finder<strong>→下载”中点击pkg文件， 一直按下一步可安装完成。</strong></p></li>
-</ul></section><section id="rstudio安装" class="level1" data-number="5"><h1 data-number="5">
-<span class="header-section-number">5</span> Rstudio安装</h1>
+<li><p>Go to the R website (<a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a>) and download the latest version of R for Windows.</p></li>
+<li><p>Once the download is complete, run the setup file and follow the on-screen instructions to install R on your computer.</p></li>
+<li><p>Next, go to the RStudio website (<a href="https://rstudio.com" class="uri">https://rstudio.com</a>) and download the latest version of RStudio Desktop for Windows.</p></li>
+<li><p>Run the setup file and follow the on-screen instructions to install RStudio on your computer.</p></li>
+<li><p>Once both R and RStudio are installed, you can launch RStudio from the Windows Start menu.</p></li>
+</ul></section><section id="installing-r-and-rstudio-on-mac" class="level2" data-number="5.2"><h2 data-number="5.2" class="anchored" data-anchor-id="installing-r-and-rstudio-on-mac">
+<span class="header-section-number">5.2</span> Installing R and RStudio on Mac:</h2>
 <ul>
-<li><p>官网安装包下载地址：<a href="https://posit.co/download/rstudio-desktop/#download" class="uri">https://posit.co/download/rstudio-desktop/#download</a></p></li>
+<li><p>Go to the R website (<a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a>) and download the latest version of R for Mac.</p></li>
+<li><p>Once the download is complete, open the downloaded file and follow the on-screen instructions to install R on your computer.</p></li>
+<li><p>Next, go to the RStudio website (<a href="https://rstudio.com" class="uri">https://rstudio.com</a>) and download the latest version of RStudio Desktop for Mac.</p></li>
+<li><p>Once the download is complete, open the downloaded file and follow the on-screen instructions to install RStudio on your computer.</p></li>
+<li><p>Once both R and RStudio are installed, you can launch RStudio from the Applications folder on your Mac.</p></li>
+</ul></section><section id="installing-r-and-rstudio-on-linux" class="level2" data-number="5.3"><h2 data-number="5.3" class="anchored" data-anchor-id="installing-r-and-rstudio-on-linux">
+<span class="header-section-number">5.3</span> Installing R and RStudio on Linux:</h2>
+<ul>
+<li><p>Go to the R website (<a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a>) and download the latest version of R for Linux.</p></li>
+<li><p>Once the download is complete, open a terminal window and navigate to the directory where the downloaded file is located.</p></li>
 <li>
-<p>点击下方红色标出地方，直接下载</p>
-<p><img src="https://quartopub.com/sites/ningli/statsr/posts/Install R and Rstudio on Mac/https:/raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/4.png" class="img-fluid"></p>
+<p>Run the following command to install R:</p>
+<p><code>sudo apt-get install r-base</code></p>
 </li>
-<li><p>下载完成， 在”Finder<strong>→下载”中点击dmg文件， 将app拖入application中即可。</strong></p></li>
-<li><p>安装完成</p></li>
-</ul></section><section id="在rstudio中创建新项目" class="level1" data-number="6"><h1 data-number="6">
-<span class="header-section-number">6</span> 在Rstudio中创建新项目</h1>
+<li><p>Next, go to the RStudio website (<a href="https://rstudio.com" class="uri">https://rstudio.com</a>) and download the latest version of RStudio Desktop for Linux.</p></li>
+<li><p>Once the download is complete, open a terminal window and navigate to the directory where the downloaded file is located.</p></li>
+<li>
+<p>Run the following command to install RStudio:</p>
+<p><code>sudo dpkg -i rstudio-*.deb</code></p>
+</li>
+<li><p>Once both R and RStudio are installed, you can launch RStudio from the Applications menu on your Linux computer.</p></li>
+</ul></section><section id="installing-r-and-rstudio-on-mac-and-linux-using-homebrew" class="level2" data-number="5.4"><h2 data-number="5.4" class="anchored" data-anchor-id="installing-r-and-rstudio-on-mac-and-linux-using-homebrew">
+<span class="header-section-number">5.4</span> Installing R and RStudio on Mac and Linux using Homebrew</h2>
+<p>Homebrew is a package manager for Mac and Linux that makes it easy to install and manage software. Here’s how to install R and RStudio using Homebrew:</p>
+<section id="mac" class="level3" data-number="5.4.1"><h3 data-number="5.4.1" class="anchored" data-anchor-id="mac">
+<span class="header-section-number">5.4.1</span> Mac:</h3>
 <ul>
 <li>
-<p>创建新project。具体方法如下图所示， 依次点击File-&gt;New Project =&gt; New Directory-&gt;New Project-&gt;输入Directory name（注意要用英文，别用中文）</p>
+<p>If you don’t already have Homebrew installed, run the following command in your terminal to install it:</p>
+<p><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></p>
+</li>
+<li>
+<p>Once Homebrew is installed, run the following command to install R:</p>
+<p><code>brew install r</code></p>
+</li>
+<li>
+<p>Next, run the following command in your terminal to install:</p>
+<p><code>brew install --cask rstudio</code></p>
+</li>
+<li><p>Once both R and RStudio are installed, you can launch RStudio from the Applications folder on your Mac.</p></li>
+</ul></section><section id="linux" class="level3" data-number="5.4.2"><h3 data-number="5.4.2" class="anchored" data-anchor-id="linux">
+<span class="header-section-number">5.4.2</span> Linux:</h3>
+<ul>
+<li><p>Same instruction as mac to install Homebrew on Linux.</p></li>
+<li>
+<p>Once Homebrew is installed, run the following command to install R:</p>
+<p><code>brew install r</code></p>
+</li>
+<li><p>Next, go to the RStudio website (<a href="https://rstudio.com" class="uri">https://rstudio.com</a>) and download the latest version of RStudio Desktop for Linux.</p></li>
+<li><p>Once the download is complete, open a terminal window and navigate to the directory where the downloaded file is located.</p></li>
+<li>
+<p>Run the following command to install RStudio:</p>
+<p><code>sudo dpkg -i rstudio-*.deb</code></p>
+</li>
+<li><p>Once both R and RStudio are installed, you can launch RStudio from the Applications menu on your Linux computer.</p></li>
+</ul></section></section></section><section id="create-a-project-in-rstudio" class="level1" data-number="6"><h1 data-number="6">
+<span class="header-section-number">6</span> Create a project in Rstudio</h1>
+<ul>
+<li><p>Launch RStudio.</p></li>
+<li><p>Click on the “File” menu in the top left corner and select “New Project”.</p></li>
+<li>
+<p>Select “New Directory” and then “New Project”.</p>
 <p><img src="https://quartopub.com/sites/ningli/statsr/posts/Install R and Rstudio on Mac/https:/raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/5.png" class="img-fluid"></p>
+</li>
+<li>
+<p>Choose the type of project you want to create: a standard project, a package project, or a Shiny web application project.</p>
 <p><img src="https://quartopub.com/sites/ningli/statsr/posts/Install R and Rstudio on Mac/https:/raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/6.png" class="img-fluid"></p>
-<p><img src="https://quartopub.com/sites/ningli/statsr/posts/Install R and Rstudio on Mac/https:/raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/7.png" class="img-fluid"></p>
+</li>
+<li><p>Choose the location for your project and give it a name.</p></li>
+<li>
+<p>Click “Create Project”.</p>
 <p><img src="https://quartopub.com/sites/ningli/statsr/posts/Install R and Rstudio on Mac/https:/raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/8.png" class="img-fluid"></p>
 </li>
+<li><p>RStudio will create a new project directory with a specific structure, including a main R script file, a subdirectory for data, and a subdirectory for output.</p></li>
 <li>
-<p>创建好，就会出现下图所示</p>
+<p>You can now start writing code and working on your project.</p>
 <p><img src="https://quartopub.com/sites/ningli/statsr/posts/Install R and Rstudio on Mac/https:/raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/9.png" class="img-fluid"></p>
 </li>
-</ul></section><section id="测试r" class="level1" data-number="7"><h1 data-number="7">
-<span class="header-section-number">7</span> 测试R</h1>
+<li><p>Whenever you want to save your project, simply go to the “File” menu and select “Save”. Your project will be saved as an RStudio project file, which you can reopen later to continue working on it.</p></li>
+</ul></section><section id="test-r" class="level1" data-number="7"><h1 data-number="7">
+<span class="header-section-number">7</span> Test R</h1>
 <ul>
-<li>现在测试一下我们安装的的R语言环境</li>
+<li>Now test our installed R language environment</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1">height <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="dv" style="color: #AD0000;">145</span>, <span class="dv" style="color: #AD0000;">167</span>, <span class="dv" style="color: #AD0000;">176</span>, <span class="dv" style="color: #AD0000;">123</span>, <span class="dv" style="color: #AD0000;">150</span>)</span>
@@ -101,10 +175,10 @@ Note
 <p><img src="https://quartopub.com/sites/ningli/statsr/posts/Install R and Rstudio on Mac/index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section><section id="测试结果" class="level1" data-number="8"><h1 data-number="8">
-<span class="header-section-number">8</span> 测试结果</h1>
+</section><section id="test-result" class="level1" data-number="8"><h1 data-number="8">
+<span class="header-section-number">8</span> Test result</h1>
 <ul>
-<li>结果输出一切正常</li>
+<li>If R language environment is installed properly, then you will see a dot plot of height and weight.</li>
 </ul>
 <p><img src="https://quartopub.com/sites/ningli/statsr/posts/Install R and Rstudio on Mac/https:/raw.githubusercontent.com/NING3739/my-personal-website/46aa9c932e5528476114fb5d7c624ce66cf6f7bf/image/10.png" class="img-fluid"></p>
 
@@ -113,7 +187,7 @@ Note
   <category>tutorial</category>
   <guid>https://quartopub.com/sites/ningli/statsr/posts/Install R and Rstudio on Mac/index.html</guid>
   <pubDate>Wed, 18 Jan 2023 11:00:00 GMT</pubDate>
-  <media:content url="https://user-images.githubusercontent.com/1775316/36732568-68dc69e6-1bce-11e8-890a-5cd3a20ab8d6.gif" medium="image" type="image/gif"/>
+  <media:content url="https://media.tenor.com/FcVg5W9zZJQAAAAM/error.gif" medium="image" type="image/gif"/>
 </item>
 <item>
   <title>Dynamic Graph</title>

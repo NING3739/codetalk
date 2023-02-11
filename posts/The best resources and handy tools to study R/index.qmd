@@ -1,0 +1,8 @@
+---
+title: "Guide to study R productively"
+author: "NING LI"
+date: "2023-02-07"
+categories: [tutorial]
+image: "https://dtlive.s3.ap-south-1.amazonaws.com/16491/DT_G79_Design-Tools-Animated-GIF-Icon-pack.gif"
+description: "The best resources and handy tools to study R"
+---
