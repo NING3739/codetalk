@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.313">
+<meta name="generator" content="quarto-1.2.335">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="NING LI">
 <meta name="dcterms.date" content="2022-11-27">
@@ -1144,20 +1144,27 @@ Knowledge Extension
 <span id="cb29-3"><a href="#cb29-3"></a>murders <span class="sc">%&gt;%</span> </span>
 <span id="cb29-4"><a href="#cb29-4"></a>  <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">"West"</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb29-5"><a href="#cb29-5"></a>  <span class="fu">summarize</span>(<span class="at">range =</span> <span class="fu">quantile</span>(rate, <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Returning more (or less) than 1 row per `summarise()` group was deprecated in
+dplyr 1.1.0.
+ℹ Please use `reframe()` instead.
+ℹ When switching from `summarise()` to `reframe()`, remember that `reframe()`
+  always returns an ungrouped data frame and adjust accordingly.</code></pre>
+</div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     range
 1 0.514592
 2 1.292453
 3 3.629527</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="co"># returning minimum, median, and maximum as a data frame</span></span>
-<span id="cb31-2"><a href="#cb31-2"></a>my_quantile <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
-<span id="cb31-3"><a href="#cb31-3"></a>  r <span class="ot">&lt;-</span>  <span class="fu">quantile</span>(x, <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>))</span>
-<span id="cb31-4"><a href="#cb31-4"></a>  <span class="fu">data.frame</span>(<span class="at">minimum =</span> r[<span class="dv">1</span>], <span class="at">median =</span> r[<span class="dv">2</span>], <span class="at">maximum =</span> r[<span class="dv">3</span>]) </span>
-<span id="cb31-5"><a href="#cb31-5"></a>}</span>
-<span id="cb31-6"><a href="#cb31-6"></a>murders <span class="sc">%&gt;%</span> </span>
-<span id="cb31-7"><a href="#cb31-7"></a>  <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">"West"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb31-8"><a href="#cb31-8"></a>  <span class="fu">summarize</span>(<span class="fu">my_quantile</span>(rate))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="co"># returning minimum, median, and maximum as a data frame</span></span>
+<span id="cb32-2"><a href="#cb32-2"></a>my_quantile <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb32-3"><a href="#cb32-3"></a>  r <span class="ot">&lt;-</span>  <span class="fu">quantile</span>(x, <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>))</span>
+<span id="cb32-4"><a href="#cb32-4"></a>  <span class="fu">data.frame</span>(<span class="at">minimum =</span> r[<span class="dv">1</span>], <span class="at">median =</span> r[<span class="dv">2</span>], <span class="at">maximum =</span> r[<span class="dv">3</span>]) </span>
+<span id="cb32-5"><a href="#cb32-5"></a>}</span>
+<span id="cb32-6"><a href="#cb32-6"></a>murders <span class="sc">%&gt;%</span> </span>
+<span id="cb32-7"><a href="#cb32-7"></a>  <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">"West"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb32-8"><a href="#cb32-8"></a>  <span class="fu">summarize</span>(<span class="fu">my_quantile</span>(rate))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   minimum   median  maximum
 1 0.514592 1.292453 3.629527</code></pre>
@@ -1172,41 +1179,41 @@ Knowledge Extension
 </ul></section><section id="code-12" class="level3" data-number="3.8.2"><h3 data-number="3.8.2" class="anchored" data-anchor-id="code-12">
 <span class="header-section-number">3.8.2</span> Code</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb33-2"><a href="#cb33-2"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb33-3"><a href="#cb33-3"></a><span class="fu">library</span>(dslabs)</span>
-<span id="cb33-4"><a href="#cb33-4"></a><span class="fu">data</span>(murders)</span>
-<span id="cb33-5"><a href="#cb33-5"></a>murders <span class="ot">&lt;-</span> <span class="fu">mutate</span>(murders, <span class="at">rate =</span> total <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb34-2"><a href="#cb34-2"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb34-3"><a href="#cb34-3"></a><span class="fu">library</span>(dslabs)</span>
+<span id="cb34-4"><a href="#cb34-4"></a><span class="fu">data</span>(murders)</span>
+<span id="cb34-5"><a href="#cb34-5"></a>murders <span class="ot">&lt;-</span> <span class="fu">mutate</span>(murders, <span class="at">rate =</span> total <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="co"># average rate adjusted by population size</span></span>
-<span id="cb34-2"><a href="#cb34-2"></a>us_murder_rate <span class="ot">&lt;-</span> murders <span class="sc">%&gt;%</span> </span>
-<span id="cb34-3"><a href="#cb34-3"></a>  <span class="fu">summarize</span>(<span class="at">rate =</span> <span class="fu">sum</span>(total) <span class="sc">/</span> <span class="fu">sum</span>(population) <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>)</span>
-<span id="cb34-4"><a href="#cb34-4"></a>us_murder_rate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="co"># average rate adjusted by population size</span></span>
+<span id="cb35-2"><a href="#cb35-2"></a>us_murder_rate <span class="ot">&lt;-</span> murders <span class="sc">%&gt;%</span> </span>
+<span id="cb35-3"><a href="#cb35-3"></a>  <span class="fu">summarize</span>(<span class="at">rate =</span> <span class="fu">sum</span>(total) <span class="sc">/</span> <span class="fu">sum</span>(population) <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>)</span>
+<span id="cb35-4"><a href="#cb35-4"></a>us_murder_rate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      rate
 1 3.034555</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="co"># us_murder_rate is stored as a data frame</span></span>
-<span id="cb36-2"><a href="#cb36-2"></a><span class="fu">class</span>(us_murder_rate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="co"># us_murder_rate is stored as a data frame</span></span>
+<span id="cb37-2"><a href="#cb37-2"></a><span class="fu">class</span>(us_murder_rate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "data.frame"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="co"># the pull function can return it as a numeric value</span></span>
-<span id="cb38-2"><a href="#cb38-2"></a>us_murder_rate <span class="sc">%&gt;%</span> <span class="fu">pull</span>(rate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="co"># the pull function can return it as a numeric value</span></span>
+<span id="cb39-2"><a href="#cb39-2"></a>us_murder_rate <span class="sc">%&gt;%</span> <span class="fu">pull</span>(rate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3.034555</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="co"># using pull to save the number directly</span></span>
-<span id="cb40-2"><a href="#cb40-2"></a>us_murder_rate <span class="ot">&lt;-</span> murders <span class="sc">%&gt;%</span> </span>
-<span id="cb40-3"><a href="#cb40-3"></a>  <span class="fu">summarize</span>(<span class="at">rate =</span> <span class="fu">sum</span>(total) <span class="sc">/</span> <span class="fu">sum</span>(population) <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb40-4"><a href="#cb40-4"></a>  <span class="fu">pull</span>(rate)</span>
-<span id="cb40-5"><a href="#cb40-5"></a>us_murder_rate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="co"># using pull to save the number directly</span></span>
+<span id="cb41-2"><a href="#cb41-2"></a>us_murder_rate <span class="ot">&lt;-</span> murders <span class="sc">%&gt;%</span> </span>
+<span id="cb41-3"><a href="#cb41-3"></a>  <span class="fu">summarize</span>(<span class="at">rate =</span> <span class="fu">sum</span>(total) <span class="sc">/</span> <span class="fu">sum</span>(population) <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb41-4"><a href="#cb41-4"></a>  <span class="fu">pull</span>(rate)</span>
+<span id="cb41-5"><a href="#cb41-5"></a>us_murder_rate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3.034555</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="co"># us_murder_rate is now stored as a number</span></span>
-<span id="cb42-2"><a href="#cb42-2"></a><span class="fu">class</span>(us_murder_rate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="co"># us_murder_rate is now stored as a number</span></span>
+<span id="cb43-2"><a href="#cb43-2"></a><span class="fu">class</span>(us_murder_rate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "numeric"</code></pre>
 </div>
@@ -1219,30 +1226,30 @@ Knowledge Extension
 <li>The <code>dot (.)</code> can be thought of as a placeholder for the data being passed through the pipe.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb44-2"><a href="#cb44-2"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb44-3"><a href="#cb44-3"></a><span class="fu">library</span>(dslabs)</span>
-<span id="cb44-4"><a href="#cb44-4"></a><span class="fu">data</span>(murders)</span>
-<span id="cb44-5"><a href="#cb44-5"></a>murders <span class="ot">&lt;-</span> <span class="fu">mutate</span>(murders, <span class="at">rate =</span> total <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb45-2"><a href="#cb45-2"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb45-3"><a href="#cb45-3"></a><span class="fu">library</span>(dslabs)</span>
+<span id="cb45-4"><a href="#cb45-4"></a><span class="fu">data</span>(murders)</span>
+<span id="cb45-5"><a href="#cb45-5"></a>murders <span class="ot">&lt;-</span> <span class="fu">mutate</span>(murders, <span class="at">rate =</span> total <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="co"># average rate adjusted by population size</span></span>
-<span id="cb45-2"><a href="#cb45-2"></a>us_murder_rate <span class="ot">&lt;-</span> murders <span class="sc">%&gt;%</span> </span>
-<span id="cb45-3"><a href="#cb45-3"></a>  <span class="fu">summarize</span>(<span class="at">rate =</span> <span class="fu">sum</span>(total) <span class="sc">/</span> <span class="fu">sum</span>(population) <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>)</span>
-<span id="cb45-4"><a href="#cb45-4"></a>us_murder_rate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="co"># average rate adjusted by population size</span></span>
+<span id="cb46-2"><a href="#cb46-2"></a>us_murder_rate <span class="ot">&lt;-</span> murders <span class="sc">%&gt;%</span> </span>
+<span id="cb46-3"><a href="#cb46-3"></a>  <span class="fu">summarize</span>(<span class="at">rate =</span> <span class="fu">sum</span>(total) <span class="sc">/</span> <span class="fu">sum</span>(population) <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>)</span>
+<span id="cb46-4"><a href="#cb46-4"></a>us_murder_rate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      rate
 1 3.034555</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="co"># using the dot to access the rate</span></span>
-<span id="cb47-2"><a href="#cb47-2"></a>us_murder_rate <span class="ot">&lt;-</span> murders <span class="sc">%&gt;%</span> </span>
-<span id="cb47-3"><a href="#cb47-3"></a>  <span class="fu">summarize</span>(<span class="at">rate =</span> <span class="fu">sum</span>(total) <span class="sc">/</span> <span class="fu">sum</span>(population) <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb47-4"><a href="#cb47-4"></a>  .<span class="sc">$</span>rate</span>
-<span id="cb47-5"><a href="#cb47-5"></a>us_murder_rate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a><span class="co"># using the dot to access the rate</span></span>
+<span id="cb48-2"><a href="#cb48-2"></a>us_murder_rate <span class="ot">&lt;-</span> murders <span class="sc">%&gt;%</span> </span>
+<span id="cb48-3"><a href="#cb48-3"></a>  <span class="fu">summarize</span>(<span class="at">rate =</span> <span class="fu">sum</span>(total) <span class="sc">/</span> <span class="fu">sum</span>(population) <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb48-4"><a href="#cb48-4"></a>  .<span class="sc">$</span>rate</span>
+<span id="cb48-5"><a href="#cb48-5"></a>us_murder_rate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3.034555</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a><span class="fu">class</span>(us_murder_rate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a><span class="fu">class</span>(us_murder_rate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "numeric"</code></pre>
 </div>
@@ -1256,15 +1263,15 @@ Knowledge Extension
 <li><p>We can use the <strong>dplyr</strong> <code>group_by()</code> function to create a special grouped data frame to facilitate such summaries.</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb51-2"><a href="#cb51-2"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb51-3"><a href="#cb51-3"></a><span class="fu">library</span>(dslabs)</span>
-<span id="cb51-4"><a href="#cb51-4"></a><span class="fu">data</span>(murders)</span>
-<span id="cb51-5"><a href="#cb51-5"></a>murders <span class="ot">&lt;-</span> <span class="fu">mutate</span>(murders, <span class="at">rate =</span> total <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb52-2"><a href="#cb52-2"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb52-3"><a href="#cb52-3"></a><span class="fu">library</span>(dslabs)</span>
+<span id="cb52-4"><a href="#cb52-4"></a><span class="fu">data</span>(murders)</span>
+<span id="cb52-5"><a href="#cb52-5"></a>murders <span class="ot">&lt;-</span> <span class="fu">mutate</span>(murders, <span class="at">rate =</span> total <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a><span class="co"># group by region</span></span>
-<span id="cb52-2"><a href="#cb52-2"></a>murders <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(region)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a><span class="co"># group by region</span></span>
+<span id="cb53-2"><a href="#cb53-2"></a>murders <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(region)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 51 × 6
 # Groups:   region [4]
@@ -1282,10 +1289,10 @@ Knowledge Extension
 10 Florida              FL    South       19687653   669  3.40
 # … with 41 more rows</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a><span class="co"># summarize after grouping</span></span>
-<span id="cb54-2"><a href="#cb54-2"></a>murders <span class="sc">%&gt;%</span> </span>
-<span id="cb54-3"><a href="#cb54-3"></a>  <span class="fu">group_by</span>(region) <span class="sc">%&gt;%</span></span>
-<span id="cb54-4"><a href="#cb54-4"></a>  <span class="fu">summarize</span>(<span class="at">median =</span> <span class="fu">median</span>(rate))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a><span class="co"># summarize after grouping</span></span>
+<span id="cb55-2"><a href="#cb55-2"></a>murders <span class="sc">%&gt;%</span> </span>
+<span id="cb55-3"><a href="#cb55-3"></a>  <span class="fu">group_by</span>(region) <span class="sc">%&gt;%</span></span>
+<span id="cb55-4"><a href="#cb55-4"></a>  <span class="fu">summarize</span>(<span class="at">median =</span> <span class="fu">median</span>(rate))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 2
   region        median
@@ -1308,15 +1315,15 @@ Knowledge Extension
 </ul></section><section id="code-13" class="level3" data-number="3.11.2"><h3 data-number="3.11.2" class="anchored" data-anchor-id="code-13">
 <span class="header-section-number">3.11.2</span> Code</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb56-2"><a href="#cb56-2"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb56-3"><a href="#cb56-3"></a><span class="fu">library</span>(dslabs)</span>
-<span id="cb56-4"><a href="#cb56-4"></a><span class="fu">data</span>(murders)</span>
-<span id="cb56-5"><a href="#cb56-5"></a>murders <span class="ot">&lt;-</span> <span class="fu">mutate</span>(murders, <span class="at">rate =</span> total <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb57-2"><a href="#cb57-2"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb57-3"><a href="#cb57-3"></a><span class="fu">library</span>(dslabs)</span>
+<span id="cb57-4"><a href="#cb57-4"></a><span class="fu">data</span>(murders)</span>
+<span id="cb57-5"><a href="#cb57-5"></a>murders <span class="ot">&lt;-</span> <span class="fu">mutate</span>(murders, <span class="at">rate =</span> total <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a><span class="co"># order the states by population size</span></span>
-<span id="cb57-2"><a href="#cb57-2"></a>murders <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(population) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a><span class="co"># order the states by population size</span></span>
+<span id="cb58-2"><a href="#cb58-2"></a>murders <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(population) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                 state abb        region population total       rate
 1              Wyoming  WY          West     563626     5  0.8871131
@@ -1326,8 +1333,8 @@ Knowledge Extension
 5               Alaska  AK          West     710231    19  2.6751860
 6         South Dakota  SD North Central     814180     8  0.9825837</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a><span class="co"># order the states by murder rate - the default is ascending order</span></span>
-<span id="cb59-2"><a href="#cb59-2"></a>murders <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(rate) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1"></a><span class="co"># order the states by murder rate - the default is ascending order</span></span>
+<span id="cb60-2"><a href="#cb60-2"></a>murders <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(rate) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>          state abb        region population total      rate
 1       Vermont  VT     Northeast     625741     2 0.3196211
@@ -1337,8 +1344,8 @@ Knowledge Extension
 5          Iowa  IA North Central    3046355    21 0.6893484
 6         Idaho  ID          West    1567582    12 0.7655102</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a><span class="co"># order the states by murder rate in descending order</span></span>
-<span id="cb61-2"><a href="#cb61-2"></a>murders <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(rate)) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1"></a><span class="co"># order the states by murder rate in descending order</span></span>
+<span id="cb62-2"><a href="#cb62-2"></a>murders <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(rate)) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                 state abb        region population total      rate
 1 District of Columbia  DC         South     601723    99 16.452753
@@ -1348,8 +1355,8 @@ Knowledge Extension
 5       South Carolina  SC         South    4625364   207  4.475323
 6             Delaware  DE         South     897934    38  4.231937</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1"></a><span class="co"># order the states by region and then by murder rate within region</span></span>
-<span id="cb63-2"><a href="#cb63-2"></a>murders <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(region, rate) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1"></a><span class="co"># order the states by region and then by murder rate within region</span></span>
+<span id="cb64-2"><a href="#cb64-2"></a>murders <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(region, rate) <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>          state abb    region population total      rate
 1       Vermont  VT Northeast     625741     2 0.3196211
@@ -1359,8 +1366,8 @@ Knowledge Extension
 5 Massachusetts  MA Northeast    6547629   118 1.8021791
 6      New York  NY Northeast   19378102   517 2.6679599</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1"></a><span class="co"># return the top 10 states by murder rate</span></span>
-<span id="cb65-2"><a href="#cb65-2"></a>murders <span class="sc">%&gt;%</span> <span class="fu">top_n</span>(<span class="dv">10</span>, rate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a><span class="co"># return the top 10 states by murder rate</span></span>
+<span id="cb66-2"><a href="#cb66-2"></a>murders <span class="sc">%&gt;%</span> <span class="fu">top_n</span>(<span class="dv">10</span>, rate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                  state abb        region population total      rate
 1               Arizona  AZ          West    6392017   232  3.629527
@@ -1374,8 +1381,8 @@ Knowledge Extension
 9              Missouri  MO North Central    5988927   321  5.359892
 10       South Carolina  SC         South    4625364   207  4.475323</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1"></a><span class="co"># return the top 10 states ranked by murder rate, sorted by murder rate</span></span>
-<span id="cb67-2"><a href="#cb67-2"></a>murders <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(rate)) <span class="sc">%&gt;%</span> <span class="fu">top_n</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1"></a><span class="co"># return the top 10 states ranked by murder rate, sorted by murder rate</span></span>
+<span id="cb68-2"><a href="#cb68-2"></a>murders <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(<span class="fu">desc</span>(rate)) <span class="sc">%&gt;%</span> <span class="fu">top_n</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Selecting by rate</code></pre>
 </div>
@@ -1407,51 +1414,51 @@ Knowledge Extension
 </ul></section><section id="code-14" class="level3" data-number="3.12.2"><h3 data-number="3.12.2" class="anchored" data-anchor-id="code-14">
 <span class="header-section-number">3.12.2</span> Code</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1"></a><span class="co"># install the data.table package before you use it!</span></span>
-<span id="cb70-2"><a href="#cb70-2"></a><span class="fu">install.packages</span>(<span class="st">"data.table"</span>)</span>
-<span id="cb70-3"><a href="#cb70-3"></a></span>
-<span id="cb70-4"><a href="#cb70-4"></a><span class="co"># load data.table package</span></span>
-<span id="cb70-5"><a href="#cb70-5"></a><span class="fu">library</span>(data.table)</span>
-<span id="cb70-6"><a href="#cb70-6"></a></span>
-<span id="cb70-7"><a href="#cb70-7"></a><span class="co"># load other packages and datasets</span></span>
-<span id="cb70-8"><a href="#cb70-8"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb70-9"><a href="#cb70-9"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb70-10"><a href="#cb70-10"></a><span class="fu">library</span>(dslabs)</span>
-<span id="cb70-11"><a href="#cb70-11"></a><span class="fu">data</span>(murders)</span>
-<span id="cb70-12"><a href="#cb70-12"></a></span>
-<span id="cb70-13"><a href="#cb70-13"></a><span class="co"># convert the data frame into a data.table object</span></span>
-<span id="cb70-14"><a href="#cb70-14"></a>murders <span class="ot">&lt;-</span> <span class="fu">setDT</span>(murders)</span>
-<span id="cb70-15"><a href="#cb70-15"></a></span>
-<span id="cb70-16"><a href="#cb70-16"></a><span class="co"># selecting in dplyr</span></span>
-<span id="cb70-17"><a href="#cb70-17"></a><span class="fu">select</span>(murders, state, region)</span>
-<span id="cb70-18"><a href="#cb70-18"></a></span>
-<span id="cb70-19"><a href="#cb70-19"></a><span class="co"># selecting in data.table - 2 methods</span></span>
-<span id="cb70-20"><a href="#cb70-20"></a>murders[, <span class="fu">c</span>(<span class="st">"state"</span>, <span class="st">"region"</span>)] <span class="sc">|&gt;</span> <span class="fu">head</span>()</span>
-<span id="cb70-21"><a href="#cb70-21"></a>murders[, .(state, region)] <span class="sc">|&gt;</span> <span class="fu">head</span>()</span>
-<span id="cb70-22"><a href="#cb70-22"></a></span>
-<span id="cb70-23"><a href="#cb70-23"></a><span class="co"># adding or changing a column in dplyr</span></span>
-<span id="cb70-24"><a href="#cb70-24"></a>murders <span class="ot">&lt;-</span> <span class="fu">mutate</span>(murders, <span class="at">rate =</span> total <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>)</span>
-<span id="cb70-25"><a href="#cb70-25"></a></span>
-<span id="cb70-26"><a href="#cb70-26"></a><span class="co"># adding or changing a column in data.table</span></span>
-<span id="cb70-27"><a href="#cb70-27"></a>murders[, rate <span class="sc">:</span><span class="er">=</span> total <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">100000</span>]</span>
-<span id="cb70-28"><a href="#cb70-28"></a><span class="fu">head</span>(murders)</span>
-<span id="cb70-29"><a href="#cb70-29"></a>murders[, <span class="st">":="</span>(<span class="at">rate =</span> total <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">100000</span>, <span class="at">rank =</span> <span class="fu">rank</span>(population))]</span>
-<span id="cb70-30"><a href="#cb70-30"></a></span>
-<span id="cb70-31"><a href="#cb70-31"></a><span class="co"># y is referring to x and := changes by reference</span></span>
-<span id="cb70-32"><a href="#cb70-32"></a>x <span class="ot">&lt;-</span> <span class="fu">data.table</span>(<span class="at">a =</span> <span class="dv">1</span>)</span>
-<span id="cb70-33"><a href="#cb70-33"></a>y <span class="ot">&lt;-</span> x</span>
-<span id="cb70-34"><a href="#cb70-34"></a></span>
-<span id="cb70-35"><a href="#cb70-35"></a>x[,a <span class="sc">:</span><span class="er">=</span> <span class="dv">2</span>]</span>
-<span id="cb70-36"><a href="#cb70-36"></a>y</span>
-<span id="cb70-37"><a href="#cb70-37"></a></span>
-<span id="cb70-38"><a href="#cb70-38"></a>y[,a <span class="sc">:</span><span class="er">=</span> <span class="dv">1</span>]</span>
-<span id="cb70-39"><a href="#cb70-39"></a>x</span>
-<span id="cb70-40"><a href="#cb70-40"></a></span>
-<span id="cb70-41"><a href="#cb70-41"></a><span class="co"># use copy to make an actual copy</span></span>
-<span id="cb70-42"><a href="#cb70-42"></a>x <span class="ot">&lt;-</span> <span class="fu">data.table</span>(<span class="at">a =</span> <span class="dv">1</span>)</span>
-<span id="cb70-43"><a href="#cb70-43"></a>y <span class="ot">&lt;-</span> <span class="fu">copy</span>(x)</span>
-<span id="cb70-44"><a href="#cb70-44"></a>x[,a <span class="sc">:</span><span class="er">=</span> <span class="dv">2</span>]</span>
-<span id="cb70-45"><a href="#cb70-45"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1"></a><span class="co"># install the data.table package before you use it!</span></span>
+<span id="cb71-2"><a href="#cb71-2"></a><span class="fu">install.packages</span>(<span class="st">"data.table"</span>)</span>
+<span id="cb71-3"><a href="#cb71-3"></a></span>
+<span id="cb71-4"><a href="#cb71-4"></a><span class="co"># load data.table package</span></span>
+<span id="cb71-5"><a href="#cb71-5"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb71-6"><a href="#cb71-6"></a></span>
+<span id="cb71-7"><a href="#cb71-7"></a><span class="co"># load other packages and datasets</span></span>
+<span id="cb71-8"><a href="#cb71-8"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb71-9"><a href="#cb71-9"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb71-10"><a href="#cb71-10"></a><span class="fu">library</span>(dslabs)</span>
+<span id="cb71-11"><a href="#cb71-11"></a><span class="fu">data</span>(murders)</span>
+<span id="cb71-12"><a href="#cb71-12"></a></span>
+<span id="cb71-13"><a href="#cb71-13"></a><span class="co"># convert the data frame into a data.table object</span></span>
+<span id="cb71-14"><a href="#cb71-14"></a>murders <span class="ot">&lt;-</span> <span class="fu">setDT</span>(murders)</span>
+<span id="cb71-15"><a href="#cb71-15"></a></span>
+<span id="cb71-16"><a href="#cb71-16"></a><span class="co"># selecting in dplyr</span></span>
+<span id="cb71-17"><a href="#cb71-17"></a><span class="fu">select</span>(murders, state, region)</span>
+<span id="cb71-18"><a href="#cb71-18"></a></span>
+<span id="cb71-19"><a href="#cb71-19"></a><span class="co"># selecting in data.table - 2 methods</span></span>
+<span id="cb71-20"><a href="#cb71-20"></a>murders[, <span class="fu">c</span>(<span class="st">"state"</span>, <span class="st">"region"</span>)] <span class="sc">|&gt;</span> <span class="fu">head</span>()</span>
+<span id="cb71-21"><a href="#cb71-21"></a>murders[, .(state, region)] <span class="sc">|&gt;</span> <span class="fu">head</span>()</span>
+<span id="cb71-22"><a href="#cb71-22"></a></span>
+<span id="cb71-23"><a href="#cb71-23"></a><span class="co"># adding or changing a column in dplyr</span></span>
+<span id="cb71-24"><a href="#cb71-24"></a>murders <span class="ot">&lt;-</span> <span class="fu">mutate</span>(murders, <span class="at">rate =</span> total <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>)</span>
+<span id="cb71-25"><a href="#cb71-25"></a></span>
+<span id="cb71-26"><a href="#cb71-26"></a><span class="co"># adding or changing a column in data.table</span></span>
+<span id="cb71-27"><a href="#cb71-27"></a>murders[, rate <span class="sc">:</span><span class="er">=</span> total <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">100000</span>]</span>
+<span id="cb71-28"><a href="#cb71-28"></a><span class="fu">head</span>(murders)</span>
+<span id="cb71-29"><a href="#cb71-29"></a>murders[, <span class="st">":="</span>(<span class="at">rate =</span> total <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">100000</span>, <span class="at">rank =</span> <span class="fu">rank</span>(population))]</span>
+<span id="cb71-30"><a href="#cb71-30"></a></span>
+<span id="cb71-31"><a href="#cb71-31"></a><span class="co"># y is referring to x and := changes by reference</span></span>
+<span id="cb71-32"><a href="#cb71-32"></a>x <span class="ot">&lt;-</span> <span class="fu">data.table</span>(<span class="at">a =</span> <span class="dv">1</span>)</span>
+<span id="cb71-33"><a href="#cb71-33"></a>y <span class="ot">&lt;-</span> x</span>
+<span id="cb71-34"><a href="#cb71-34"></a></span>
+<span id="cb71-35"><a href="#cb71-35"></a>x[,a <span class="sc">:</span><span class="er">=</span> <span class="dv">2</span>]</span>
+<span id="cb71-36"><a href="#cb71-36"></a>y</span>
+<span id="cb71-37"><a href="#cb71-37"></a></span>
+<span id="cb71-38"><a href="#cb71-38"></a>y[,a <span class="sc">:</span><span class="er">=</span> <span class="dv">1</span>]</span>
+<span id="cb71-39"><a href="#cb71-39"></a>x</span>
+<span id="cb71-40"><a href="#cb71-40"></a></span>
+<span id="cb71-41"><a href="#cb71-41"></a><span class="co"># use copy to make an actual copy</span></span>
+<span id="cb71-42"><a href="#cb71-42"></a>x <span class="ot">&lt;-</span> <span class="fu">data.table</span>(<span class="at">a =</span> <span class="dv">1</span>)</span>
+<span id="cb71-43"><a href="#cb71-43"></a>y <span class="ot">&lt;-</span> <span class="fu">copy</span>(x)</span>
+<span id="cb71-44"><a href="#cb71-44"></a>x[,a <span class="sc">:</span><span class="er">=</span> <span class="dv">2</span>]</span>
+<span id="cb71-45"><a href="#cb71-45"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section><section id="subsetting-with-data.table" class="level2" data-number="3.13"><h2 data-number="3.13" class="anchored" data-anchor-id="subsetting-with-data.table">
 <span class="header-section-number">3.13</span> Subsetting with data.table</h2>
@@ -1461,27 +1468,27 @@ Knowledge Extension
 </section><section id="code-15" class="level3" data-number="3.13.2"><h3 data-number="3.13.2" class="anchored" data-anchor-id="code-15">
 <span class="header-section-number">3.13.2</span> Code</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1"></a><span class="co"># load packages and prepare the data</span></span>
-<span id="cb71-2"><a href="#cb71-2"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb71-3"><a href="#cb71-3"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb71-4"><a href="#cb71-4"></a><span class="fu">library</span>(dslabs)</span>
-<span id="cb71-5"><a href="#cb71-5"></a><span class="fu">data</span>(murders)</span>
-<span id="cb71-6"><a href="#cb71-6"></a><span class="fu">library</span>(data.table)</span>
-<span id="cb71-7"><a href="#cb71-7"></a>murders <span class="ot">&lt;-</span> <span class="fu">setDT</span>(murders)</span>
-<span id="cb71-8"><a href="#cb71-8"></a>murders <span class="ot">&lt;-</span> <span class="fu">mutate</span>(murders, <span class="at">rate =</span> total <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>)</span>
-<span id="cb71-9"><a href="#cb71-9"></a>murders[, rate <span class="sc">:</span><span class="er">=</span> total <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">100000</span>]</span>
-<span id="cb71-10"><a href="#cb71-10"></a></span>
-<span id="cb71-11"><a href="#cb71-11"></a><span class="co"># subsetting in dplyr</span></span>
-<span id="cb71-12"><a href="#cb71-12"></a><span class="fu">filter</span>(murders, rate <span class="sc">&lt;=</span> <span class="fl">0.7</span>)</span>
-<span id="cb71-13"><a href="#cb71-13"></a></span>
-<span id="cb71-14"><a href="#cb71-14"></a><span class="co"># subsetting in data.table</span></span>
-<span id="cb71-15"><a href="#cb71-15"></a>murders[rate <span class="sc">&lt;=</span> <span class="fl">0.7</span>]</span>
-<span id="cb71-16"><a href="#cb71-16"></a></span>
-<span id="cb71-17"><a href="#cb71-17"></a><span class="co"># combining filter and select in data.table</span></span>
-<span id="cb71-18"><a href="#cb71-18"></a>murders[rate <span class="sc">&lt;=</span> <span class="fl">0.7</span>, .(state, rate)]</span>
-<span id="cb71-19"><a href="#cb71-19"></a></span>
-<span id="cb71-20"><a href="#cb71-20"></a><span class="co"># combining filter and select in dplyr</span></span>
-<span id="cb71-21"><a href="#cb71-21"></a>murders <span class="sc">%&gt;%</span> <span class="fu">filter</span>(rate <span class="sc">&lt;=</span> <span class="fl">0.7</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(state, rate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1"></a><span class="co"># load packages and prepare the data</span></span>
+<span id="cb72-2"><a href="#cb72-2"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb72-3"><a href="#cb72-3"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb72-4"><a href="#cb72-4"></a><span class="fu">library</span>(dslabs)</span>
+<span id="cb72-5"><a href="#cb72-5"></a><span class="fu">data</span>(murders)</span>
+<span id="cb72-6"><a href="#cb72-6"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb72-7"><a href="#cb72-7"></a>murders <span class="ot">&lt;-</span> <span class="fu">setDT</span>(murders)</span>
+<span id="cb72-8"><a href="#cb72-8"></a>murders <span class="ot">&lt;-</span> <span class="fu">mutate</span>(murders, <span class="at">rate =</span> total <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">10</span><span class="sc">^</span><span class="dv">5</span>)</span>
+<span id="cb72-9"><a href="#cb72-9"></a>murders[, rate <span class="sc">:</span><span class="er">=</span> total <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">100000</span>]</span>
+<span id="cb72-10"><a href="#cb72-10"></a></span>
+<span id="cb72-11"><a href="#cb72-11"></a><span class="co"># subsetting in dplyr</span></span>
+<span id="cb72-12"><a href="#cb72-12"></a><span class="fu">filter</span>(murders, rate <span class="sc">&lt;=</span> <span class="fl">0.7</span>)</span>
+<span id="cb72-13"><a href="#cb72-13"></a></span>
+<span id="cb72-14"><a href="#cb72-14"></a><span class="co"># subsetting in data.table</span></span>
+<span id="cb72-15"><a href="#cb72-15"></a>murders[rate <span class="sc">&lt;=</span> <span class="fl">0.7</span>]</span>
+<span id="cb72-16"><a href="#cb72-16"></a></span>
+<span id="cb72-17"><a href="#cb72-17"></a><span class="co"># combining filter and select in data.table</span></span>
+<span id="cb72-18"><a href="#cb72-18"></a>murders[rate <span class="sc">&lt;=</span> <span class="fl">0.7</span>, .(state, rate)]</span>
+<span id="cb72-19"><a href="#cb72-19"></a></span>
+<span id="cb72-20"><a href="#cb72-20"></a><span class="co"># combining filter and select in dplyr</span></span>
+<span id="cb72-21"><a href="#cb72-21"></a>murders <span class="sc">%&gt;%</span> <span class="fu">filter</span>(rate <span class="sc">&lt;=</span> <span class="fl">0.7</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(state, rate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section><section id="summarizing-with-data.table" class="level2" data-number="3.14"><h2 data-number="3.14" class="anchored" data-anchor-id="summarizing-with-data.table">
 <span class="header-section-number">3.14</span> Summarizing with data.table</h2>
@@ -1493,39 +1500,39 @@ Knowledge Extension
 </ul></section><section id="code-16" class="level3" data-number="3.14.2"><h3 data-number="3.14.2" class="anchored" data-anchor-id="code-16">
 <span class="header-section-number">3.14.2</span> Code</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1"></a><span class="co"># load packages and prepare the data - heights dataset</span></span>
-<span id="cb72-2"><a href="#cb72-2"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb72-3"><a href="#cb72-3"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb72-4"><a href="#cb72-4"></a><span class="fu">library</span>(dslabs)</span>
-<span id="cb72-5"><a href="#cb72-5"></a><span class="fu">data</span>(heights)</span>
-<span id="cb72-6"><a href="#cb72-6"></a>heights <span class="ot">&lt;-</span> <span class="fu">setDT</span>(heights)</span>
-<span id="cb72-7"><a href="#cb72-7"></a></span>
-<span id="cb72-8"><a href="#cb72-8"></a><span class="co"># summarizing in dplyr</span></span>
-<span id="cb72-9"><a href="#cb72-9"></a>s <span class="ot">&lt;-</span> heights <span class="sc">%&gt;%</span> </span>
-<span id="cb72-10"><a href="#cb72-10"></a>  <span class="fu">summarize</span>(<span class="at">average =</span> <span class="fu">mean</span>(height), <span class="at">standard_deviation =</span> <span class="fu">sd</span>(height))</span>
-<span id="cb72-11"><a href="#cb72-11"></a>  </span>
-<span id="cb72-12"><a href="#cb72-12"></a><span class="co"># summarizing in data.table</span></span>
-<span id="cb72-13"><a href="#cb72-13"></a>s <span class="ot">&lt;-</span> heights[, .(<span class="at">average =</span> <span class="fu">mean</span>(height), <span class="at">standard_deviation =</span> <span class="fu">sd</span>(height))]</span>
-<span id="cb72-14"><a href="#cb72-14"></a></span>
-<span id="cb72-15"><a href="#cb72-15"></a><span class="co"># subsetting and then summarizing in dplyr</span></span>
-<span id="cb72-16"><a href="#cb72-16"></a>s <span class="ot">&lt;-</span> heights <span class="sc">%&gt;%</span> </span>
-<span id="cb72-17"><a href="#cb72-17"></a>  <span class="fu">filter</span>(sex <span class="sc">==</span> <span class="st">"Female"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb72-18"><a href="#cb72-18"></a>  <span class="fu">summarize</span>(<span class="at">average =</span> <span class="fu">mean</span>(height), <span class="at">standard_deviation =</span> <span class="fu">sd</span>(height))</span>
-<span id="cb72-19"><a href="#cb72-19"></a>  </span>
-<span id="cb72-20"><a href="#cb72-20"></a><span class="co"># subsetting and then summarizing in data.table</span></span>
-<span id="cb72-21"><a href="#cb72-21"></a>s <span class="ot">&lt;-</span> heights[sex <span class="sc">==</span> <span class="st">"Female"</span>, .(<span class="at">average =</span> <span class="fu">mean</span>(height), <span class="at">standard_deviation =</span> <span class="fu">sd</span>(height))]</span>
-<span id="cb72-22"><a href="#cb72-22"></a></span>
-<span id="cb72-23"><a href="#cb72-23"></a><span class="co"># previously defined function</span></span>
-<span id="cb72-24"><a href="#cb72-24"></a>median_min_max <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
-<span id="cb72-25"><a href="#cb72-25"></a>  qs <span class="ot">&lt;-</span> <span class="fu">quantile</span>(x, <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="dv">0</span>, <span class="dv">1</span>))</span>
-<span id="cb72-26"><a href="#cb72-26"></a>  <span class="fu">data.frame</span>(<span class="at">median =</span> qs[<span class="dv">1</span>], <span class="at">minimum =</span> qs[<span class="dv">2</span>], <span class="at">maximum =</span> qs[<span class="dv">3</span>])</span>
-<span id="cb72-27"><a href="#cb72-27"></a>}</span>
-<span id="cb72-28"><a href="#cb72-28"></a></span>
-<span id="cb72-29"><a href="#cb72-29"></a><span class="co"># multiple summaries in data.table</span></span>
-<span id="cb72-30"><a href="#cb72-30"></a>heights[, .(<span class="fu">median_min_max</span>(height))]</span>
-<span id="cb72-31"><a href="#cb72-31"></a></span>
-<span id="cb72-32"><a href="#cb72-32"></a><span class="co"># grouping then summarizing in data.table</span></span>
-<span id="cb72-33"><a href="#cb72-33"></a>heights[, .(<span class="at">average =</span> <span class="fu">mean</span>(height), <span class="at">standard_deviation =</span> <span class="fu">sd</span>(height)), by <span class="ot">=</span> sex]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1"></a><span class="co"># load packages and prepare the data - heights dataset</span></span>
+<span id="cb73-2"><a href="#cb73-2"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb73-3"><a href="#cb73-3"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb73-4"><a href="#cb73-4"></a><span class="fu">library</span>(dslabs)</span>
+<span id="cb73-5"><a href="#cb73-5"></a><span class="fu">data</span>(heights)</span>
+<span id="cb73-6"><a href="#cb73-6"></a>heights <span class="ot">&lt;-</span> <span class="fu">setDT</span>(heights)</span>
+<span id="cb73-7"><a href="#cb73-7"></a></span>
+<span id="cb73-8"><a href="#cb73-8"></a><span class="co"># summarizing in dplyr</span></span>
+<span id="cb73-9"><a href="#cb73-9"></a>s <span class="ot">&lt;-</span> heights <span class="sc">%&gt;%</span> </span>
+<span id="cb73-10"><a href="#cb73-10"></a>  <span class="fu">summarize</span>(<span class="at">average =</span> <span class="fu">mean</span>(height), <span class="at">standard_deviation =</span> <span class="fu">sd</span>(height))</span>
+<span id="cb73-11"><a href="#cb73-11"></a>  </span>
+<span id="cb73-12"><a href="#cb73-12"></a><span class="co"># summarizing in data.table</span></span>
+<span id="cb73-13"><a href="#cb73-13"></a>s <span class="ot">&lt;-</span> heights[, .(<span class="at">average =</span> <span class="fu">mean</span>(height), <span class="at">standard_deviation =</span> <span class="fu">sd</span>(height))]</span>
+<span id="cb73-14"><a href="#cb73-14"></a></span>
+<span id="cb73-15"><a href="#cb73-15"></a><span class="co"># subsetting and then summarizing in dplyr</span></span>
+<span id="cb73-16"><a href="#cb73-16"></a>s <span class="ot">&lt;-</span> heights <span class="sc">%&gt;%</span> </span>
+<span id="cb73-17"><a href="#cb73-17"></a>  <span class="fu">filter</span>(sex <span class="sc">==</span> <span class="st">"Female"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb73-18"><a href="#cb73-18"></a>  <span class="fu">summarize</span>(<span class="at">average =</span> <span class="fu">mean</span>(height), <span class="at">standard_deviation =</span> <span class="fu">sd</span>(height))</span>
+<span id="cb73-19"><a href="#cb73-19"></a>  </span>
+<span id="cb73-20"><a href="#cb73-20"></a><span class="co"># subsetting and then summarizing in data.table</span></span>
+<span id="cb73-21"><a href="#cb73-21"></a>s <span class="ot">&lt;-</span> heights[sex <span class="sc">==</span> <span class="st">"Female"</span>, .(<span class="at">average =</span> <span class="fu">mean</span>(height), <span class="at">standard_deviation =</span> <span class="fu">sd</span>(height))]</span>
+<span id="cb73-22"><a href="#cb73-22"></a></span>
+<span id="cb73-23"><a href="#cb73-23"></a><span class="co"># previously defined function</span></span>
+<span id="cb73-24"><a href="#cb73-24"></a>median_min_max <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb73-25"><a href="#cb73-25"></a>  qs <span class="ot">&lt;-</span> <span class="fu">quantile</span>(x, <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="dv">0</span>, <span class="dv">1</span>))</span>
+<span id="cb73-26"><a href="#cb73-26"></a>  <span class="fu">data.frame</span>(<span class="at">median =</span> qs[<span class="dv">1</span>], <span class="at">minimum =</span> qs[<span class="dv">2</span>], <span class="at">maximum =</span> qs[<span class="dv">3</span>])</span>
+<span id="cb73-27"><a href="#cb73-27"></a>}</span>
+<span id="cb73-28"><a href="#cb73-28"></a></span>
+<span id="cb73-29"><a href="#cb73-29"></a><span class="co"># multiple summaries in data.table</span></span>
+<span id="cb73-30"><a href="#cb73-30"></a>heights[, .(<span class="fu">median_min_max</span>(height))]</span>
+<span id="cb73-31"><a href="#cb73-31"></a></span>
+<span id="cb73-32"><a href="#cb73-32"></a><span class="co"># grouping then summarizing in data.table</span></span>
+<span id="cb73-33"><a href="#cb73-33"></a>heights[, .(<span class="at">average =</span> <span class="fu">mean</span>(height), <span class="at">standard_deviation =</span> <span class="fu">sd</span>(height)), by <span class="ot">=</span> sex]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section><section id="sorting-data-frames" class="level2" data-number="3.15"><h2 data-number="3.15" class="anchored" data-anchor-id="sorting-data-frames">
 <span class="header-section-number">3.15</span> <a href="http://rafalab.dfci.harvard.edu/dsbook/tidyverse.html#sorting-data-frames">Sorting data frames</a>
@@ -1539,23 +1546,23 @@ Knowledge Extension
 </ul></section><section id="code-17" class="level3" data-number="3.15.2"><h3 data-number="3.15.2" class="anchored" data-anchor-id="code-17">
 <span class="header-section-number">3.15.2</span> Code</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1"></a><span class="co"># load packages and datasets and prepare the data</span></span>
-<span id="cb73-2"><a href="#cb73-2"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb73-3"><a href="#cb73-3"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb73-4"><a href="#cb73-4"></a><span class="fu">library</span>(data.table)</span>
-<span id="cb73-5"><a href="#cb73-5"></a><span class="fu">library</span>(dslabs)</span>
-<span id="cb73-6"><a href="#cb73-6"></a><span class="fu">data</span>(murders)</span>
-<span id="cb73-7"><a href="#cb73-7"></a>murders <span class="ot">&lt;-</span> <span class="fu">setDT</span>(murders)</span>
-<span id="cb73-8"><a href="#cb73-8"></a>murders[, rate <span class="sc">:</span><span class="er">=</span> total <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">100000</span>]</span>
-<span id="cb73-9"><a href="#cb73-9"></a></span>
-<span id="cb73-10"><a href="#cb73-10"></a><span class="co"># order by population</span></span>
-<span id="cb73-11"><a href="#cb73-11"></a>murders[<span class="fu">order</span>(population)] <span class="sc">|&gt;</span> <span class="fu">head</span>()</span>
-<span id="cb73-12"><a href="#cb73-12"></a></span>
-<span id="cb73-13"><a href="#cb73-13"></a><span class="co"># order by population in descending order</span></span>
-<span id="cb73-14"><a href="#cb73-14"></a>murders[<span class="fu">order</span>(population, <span class="at">decreasing =</span> <span class="cn">TRUE</span>)] </span>
-<span id="cb73-15"><a href="#cb73-15"></a></span>
-<span id="cb73-16"><a href="#cb73-16"></a><span class="co"># order by region and then murder rate</span></span>
-<span id="cb73-17"><a href="#cb73-17"></a>murders[<span class="fu">order</span>(region, rate)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1"></a><span class="co"># load packages and datasets and prepare the data</span></span>
+<span id="cb74-2"><a href="#cb74-2"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb74-3"><a href="#cb74-3"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb74-4"><a href="#cb74-4"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb74-5"><a href="#cb74-5"></a><span class="fu">library</span>(dslabs)</span>
+<span id="cb74-6"><a href="#cb74-6"></a><span class="fu">data</span>(murders)</span>
+<span id="cb74-7"><a href="#cb74-7"></a>murders <span class="ot">&lt;-</span> <span class="fu">setDT</span>(murders)</span>
+<span id="cb74-8"><a href="#cb74-8"></a>murders[, rate <span class="sc">:</span><span class="er">=</span> total <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">100000</span>]</span>
+<span id="cb74-9"><a href="#cb74-9"></a></span>
+<span id="cb74-10"><a href="#cb74-10"></a><span class="co"># order by population</span></span>
+<span id="cb74-11"><a href="#cb74-11"></a>murders[<span class="fu">order</span>(population)] <span class="sc">|&gt;</span> <span class="fu">head</span>()</span>
+<span id="cb74-12"><a href="#cb74-12"></a></span>
+<span id="cb74-13"><a href="#cb74-13"></a><span class="co"># order by population in descending order</span></span>
+<span id="cb74-14"><a href="#cb74-14"></a>murders[<span class="fu">order</span>(population, <span class="at">decreasing =</span> <span class="cn">TRUE</span>)] </span>
+<span id="cb74-15"><a href="#cb74-15"></a></span>
+<span id="cb74-16"><a href="#cb74-16"></a><span class="co"># order by region and then murder rate</span></span>
+<span id="cb74-17"><a href="#cb74-17"></a>murders[<span class="fu">order</span>(region, rate)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section></section><section id="programming-basics" class="level1" data-number="4"><h1 data-number="4">
 <span class="header-section-number">4</span> Programming Basics</h1>
@@ -1585,49 +1592,49 @@ Knowledge Extension
 </ul></section><section id="code-18" class="level3" data-number="4.2.2"><h3 data-number="4.2.2" class="anchored" data-anchor-id="code-18">
 <span class="header-section-number">4.2.2</span> Code</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1"></a><span class="co"># an example showing the general structure of an if-else statement</span></span>
-<span id="cb74-2"><a href="#cb74-2"></a>a <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb74-3"><a href="#cb74-3"></a><span class="cf">if</span>(a<span class="sc">!=</span><span class="dv">0</span>){</span>
-<span id="cb74-4"><a href="#cb74-4"></a>  <span class="fu">print</span>(<span class="dv">1</span><span class="sc">/</span>a)</span>
-<span id="cb74-5"><a href="#cb74-5"></a>} <span class="cf">else</span>{</span>
-<span id="cb74-6"><a href="#cb74-6"></a>  <span class="fu">print</span>(<span class="st">"No reciprocal for 0."</span>)</span>
-<span id="cb74-7"><a href="#cb74-7"></a>}</span>
-<span id="cb74-8"><a href="#cb74-8"></a></span>
-<span id="cb74-9"><a href="#cb74-9"></a><span class="co"># an example that tells us which states, if any, have a murder rate less than 0.5</span></span>
-<span id="cb74-10"><a href="#cb74-10"></a><span class="fu">library</span>(dslabs)</span>
-<span id="cb74-11"><a href="#cb74-11"></a><span class="fu">data</span>(murders)</span>
-<span id="cb74-12"><a href="#cb74-12"></a>murder_rate <span class="ot">&lt;-</span> murders<span class="sc">$</span>total <span class="sc">/</span> murders<span class="sc">$</span>population<span class="sc">*</span><span class="dv">100000</span></span>
-<span id="cb74-13"><a href="#cb74-13"></a>ind <span class="ot">&lt;-</span> <span class="fu">which.min</span>(murder_rate)</span>
-<span id="cb74-14"><a href="#cb74-14"></a><span class="cf">if</span>(murder_rate[ind] <span class="sc">&lt;</span> <span class="fl">0.5</span>){</span>
-<span id="cb74-15"><a href="#cb74-15"></a>  <span class="fu">print</span>(murders<span class="sc">$</span>state[ind]) </span>
-<span id="cb74-16"><a href="#cb74-16"></a>} <span class="cf">else</span>{</span>
-<span id="cb74-17"><a href="#cb74-17"></a>  <span class="fu">print</span>(<span class="st">"No state has murder rate that low"</span>)</span>
-<span id="cb74-18"><a href="#cb74-18"></a>}</span>
-<span id="cb74-19"><a href="#cb74-19"></a></span>
-<span id="cb74-20"><a href="#cb74-20"></a><span class="co"># changing the condition to &lt; 0.25 changes the result</span></span>
-<span id="cb74-21"><a href="#cb74-21"></a><span class="cf">if</span>(murder_rate[ind] <span class="sc">&lt;</span> <span class="fl">0.25</span>){</span>
-<span id="cb74-22"><a href="#cb74-22"></a>  <span class="fu">print</span>(murders<span class="sc">$</span>state[ind]) </span>
-<span id="cb74-23"><a href="#cb74-23"></a>} <span class="cf">else</span>{</span>
-<span id="cb74-24"><a href="#cb74-24"></a>  <span class="fu">print</span>(<span class="st">"No state has a murder rate that low."</span>)</span>
-<span id="cb74-25"><a href="#cb74-25"></a>}</span>
-<span id="cb74-26"><a href="#cb74-26"></a></span>
-<span id="cb74-27"><a href="#cb74-27"></a><span class="co"># the ifelse() function works similarly to an if-else conditional</span></span>
-<span id="cb74-28"><a href="#cb74-28"></a>a <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb74-29"><a href="#cb74-29"></a><span class="fu">ifelse</span>(a <span class="sc">&gt;</span> <span class="dv">0</span>, <span class="dv">1</span><span class="sc">/</span>a, <span class="cn">NA</span>)</span>
-<span id="cb74-30"><a href="#cb74-30"></a></span>
-<span id="cb74-31"><a href="#cb74-31"></a><span class="co"># the ifelse() function is particularly useful on vectors</span></span>
-<span id="cb74-32"><a href="#cb74-32"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="sc">-</span><span class="dv">4</span>,<span class="dv">5</span>)</span>
-<span id="cb74-33"><a href="#cb74-33"></a>result <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(a <span class="sc">&gt;</span> <span class="dv">0</span>, <span class="dv">1</span><span class="sc">/</span>a, <span class="cn">NA</span>)</span>
-<span id="cb74-34"><a href="#cb74-34"></a></span>
-<span id="cb74-35"><a href="#cb74-35"></a><span class="co"># the ifelse() function is also helpful for replacing missing values</span></span>
-<span id="cb74-36"><a href="#cb74-36"></a><span class="fu">data</span>(na_example)</span>
-<span id="cb74-37"><a href="#cb74-37"></a>no_nas <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(na_example), <span class="dv">0</span>, na_example) </span>
-<span id="cb74-38"><a href="#cb74-38"></a><span class="fu">sum</span>(<span class="fu">is.na</span>(no_nas))</span>
-<span id="cb74-39"><a href="#cb74-39"></a></span>
-<span id="cb74-40"><a href="#cb74-40"></a><span class="co"># the any() and all() functions evaluate logical vectors</span></span>
-<span id="cb74-41"><a href="#cb74-41"></a>z <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span>
-<span id="cb74-42"><a href="#cb74-42"></a><span class="fu">any</span>(z)</span>
-<span id="cb74-43"><a href="#cb74-43"></a><span class="fu">all</span>(z)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1"></a><span class="co"># an example showing the general structure of an if-else statement</span></span>
+<span id="cb75-2"><a href="#cb75-2"></a>a <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb75-3"><a href="#cb75-3"></a><span class="cf">if</span>(a<span class="sc">!=</span><span class="dv">0</span>){</span>
+<span id="cb75-4"><a href="#cb75-4"></a>  <span class="fu">print</span>(<span class="dv">1</span><span class="sc">/</span>a)</span>
+<span id="cb75-5"><a href="#cb75-5"></a>} <span class="cf">else</span>{</span>
+<span id="cb75-6"><a href="#cb75-6"></a>  <span class="fu">print</span>(<span class="st">"No reciprocal for 0."</span>)</span>
+<span id="cb75-7"><a href="#cb75-7"></a>}</span>
+<span id="cb75-8"><a href="#cb75-8"></a></span>
+<span id="cb75-9"><a href="#cb75-9"></a><span class="co"># an example that tells us which states, if any, have a murder rate less than 0.5</span></span>
+<span id="cb75-10"><a href="#cb75-10"></a><span class="fu">library</span>(dslabs)</span>
+<span id="cb75-11"><a href="#cb75-11"></a><span class="fu">data</span>(murders)</span>
+<span id="cb75-12"><a href="#cb75-12"></a>murder_rate <span class="ot">&lt;-</span> murders<span class="sc">$</span>total <span class="sc">/</span> murders<span class="sc">$</span>population<span class="sc">*</span><span class="dv">100000</span></span>
+<span id="cb75-13"><a href="#cb75-13"></a>ind <span class="ot">&lt;-</span> <span class="fu">which.min</span>(murder_rate)</span>
+<span id="cb75-14"><a href="#cb75-14"></a><span class="cf">if</span>(murder_rate[ind] <span class="sc">&lt;</span> <span class="fl">0.5</span>){</span>
+<span id="cb75-15"><a href="#cb75-15"></a>  <span class="fu">print</span>(murders<span class="sc">$</span>state[ind]) </span>
+<span id="cb75-16"><a href="#cb75-16"></a>} <span class="cf">else</span>{</span>
+<span id="cb75-17"><a href="#cb75-17"></a>  <span class="fu">print</span>(<span class="st">"No state has murder rate that low"</span>)</span>
+<span id="cb75-18"><a href="#cb75-18"></a>}</span>
+<span id="cb75-19"><a href="#cb75-19"></a></span>
+<span id="cb75-20"><a href="#cb75-20"></a><span class="co"># changing the condition to &lt; 0.25 changes the result</span></span>
+<span id="cb75-21"><a href="#cb75-21"></a><span class="cf">if</span>(murder_rate[ind] <span class="sc">&lt;</span> <span class="fl">0.25</span>){</span>
+<span id="cb75-22"><a href="#cb75-22"></a>  <span class="fu">print</span>(murders<span class="sc">$</span>state[ind]) </span>
+<span id="cb75-23"><a href="#cb75-23"></a>} <span class="cf">else</span>{</span>
+<span id="cb75-24"><a href="#cb75-24"></a>  <span class="fu">print</span>(<span class="st">"No state has a murder rate that low."</span>)</span>
+<span id="cb75-25"><a href="#cb75-25"></a>}</span>
+<span id="cb75-26"><a href="#cb75-26"></a></span>
+<span id="cb75-27"><a href="#cb75-27"></a><span class="co"># the ifelse() function works similarly to an if-else conditional</span></span>
+<span id="cb75-28"><a href="#cb75-28"></a>a <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb75-29"><a href="#cb75-29"></a><span class="fu">ifelse</span>(a <span class="sc">&gt;</span> <span class="dv">0</span>, <span class="dv">1</span><span class="sc">/</span>a, <span class="cn">NA</span>)</span>
+<span id="cb75-30"><a href="#cb75-30"></a></span>
+<span id="cb75-31"><a href="#cb75-31"></a><span class="co"># the ifelse() function is particularly useful on vectors</span></span>
+<span id="cb75-32"><a href="#cb75-32"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="sc">-</span><span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb75-33"><a href="#cb75-33"></a>result <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(a <span class="sc">&gt;</span> <span class="dv">0</span>, <span class="dv">1</span><span class="sc">/</span>a, <span class="cn">NA</span>)</span>
+<span id="cb75-34"><a href="#cb75-34"></a></span>
+<span id="cb75-35"><a href="#cb75-35"></a><span class="co"># the ifelse() function is also helpful for replacing missing values</span></span>
+<span id="cb75-36"><a href="#cb75-36"></a><span class="fu">data</span>(na_example)</span>
+<span id="cb75-37"><a href="#cb75-37"></a>no_nas <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(na_example), <span class="dv">0</span>, na_example) </span>
+<span id="cb75-38"><a href="#cb75-38"></a><span class="fu">sum</span>(<span class="fu">is.na</span>(no_nas))</span>
+<span id="cb75-39"><a href="#cb75-39"></a></span>
+<span id="cb75-40"><a href="#cb75-40"></a><span class="co"># the any() and all() functions evaluate logical vectors</span></span>
+<span id="cb75-41"><a href="#cb75-41"></a>z <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span>
+<span id="cb75-42"><a href="#cb75-42"></a><span class="fu">any</span>(z)</span>
+<span id="cb75-43"><a href="#cb75-43"></a><span class="fu">all</span>(z)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section><section id="functions" class="level2" data-number="4.3"><h2 data-number="4.3" class="anchored" data-anchor-id="functions">
 <span class="header-section-number">4.3</span> Functions</h2>
@@ -1651,33 +1658,33 @@ Knowledge Extension
 </ul></section><section id="code-19" class="level3" data-number="4.3.2"><h3 data-number="4.3.2" class="anchored" data-anchor-id="code-19">
 <span class="header-section-number">4.3.2</span> Code</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1"></a><span class="co"># example of defining a function to compute the average of a vector x</span></span>
-<span id="cb75-2"><a href="#cb75-2"></a>avg <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
-<span id="cb75-3"><a href="#cb75-3"></a>  s <span class="ot">&lt;-</span> <span class="fu">sum</span>(x)</span>
-<span id="cb75-4"><a href="#cb75-4"></a>  n <span class="ot">&lt;-</span> <span class="fu">length</span>(x)</span>
-<span id="cb75-5"><a href="#cb75-5"></a>  s<span class="sc">/</span>n</span>
-<span id="cb75-6"><a href="#cb75-6"></a>}</span>
-<span id="cb75-7"><a href="#cb75-7"></a></span>
-<span id="cb75-8"><a href="#cb75-8"></a><span class="co"># we see that the above function and the pre-built R mean() function are identical</span></span>
-<span id="cb75-9"><a href="#cb75-9"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span></span>
-<span id="cb75-10"><a href="#cb75-10"></a><span class="fu">identical</span>(<span class="fu">mean</span>(x), <span class="fu">avg</span>(x))</span>
-<span id="cb75-11"><a href="#cb75-11"></a></span>
-<span id="cb75-12"><a href="#cb75-12"></a><span class="co"># variables inside a function are not defined in the workspace</span></span>
-<span id="cb75-13"><a href="#cb75-13"></a>s <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb75-14"><a href="#cb75-14"></a><span class="fu">avg</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb75-15"><a href="#cb75-15"></a>s</span>
-<span id="cb75-16"><a href="#cb75-16"></a></span>
-<span id="cb75-17"><a href="#cb75-17"></a><span class="co"># the general form of a function</span></span>
-<span id="cb75-18"><a href="#cb75-18"></a>my_function <span class="ot">&lt;-</span> <span class="cf">function</span>(VARIABLE_NAME){</span>
-<span id="cb75-19"><a href="#cb75-19"></a>  perform operations on VARIABLE_NAME and calculate VALUE</span>
-<span id="cb75-20"><a href="#cb75-20"></a>  VALUE</span>
-<span id="cb75-21"><a href="#cb75-21"></a>}</span>
-<span id="cb75-22"><a href="#cb75-22"></a></span>
-<span id="cb75-23"><a href="#cb75-23"></a><span class="co"># functions can have multiple arguments as well as default values</span></span>
-<span id="cb75-24"><a href="#cb75-24"></a>avg <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">arithmetic =</span> <span class="cn">TRUE</span>){</span>
-<span id="cb75-25"><a href="#cb75-25"></a>  n <span class="ot">&lt;-</span> <span class="fu">length</span>(x)</span>
-<span id="cb75-26"><a href="#cb75-26"></a>  <span class="fu">ifelse</span>(arithmetic, <span class="fu">sum</span>(x)<span class="sc">/</span>n, <span class="fu">prod</span>(x)<span class="sc">^</span>(<span class="dv">1</span><span class="sc">/</span>n))</span>
-<span id="cb75-27"><a href="#cb75-27"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1"></a><span class="co"># example of defining a function to compute the average of a vector x</span></span>
+<span id="cb76-2"><a href="#cb76-2"></a>avg <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb76-3"><a href="#cb76-3"></a>  s <span class="ot">&lt;-</span> <span class="fu">sum</span>(x)</span>
+<span id="cb76-4"><a href="#cb76-4"></a>  n <span class="ot">&lt;-</span> <span class="fu">length</span>(x)</span>
+<span id="cb76-5"><a href="#cb76-5"></a>  s<span class="sc">/</span>n</span>
+<span id="cb76-6"><a href="#cb76-6"></a>}</span>
+<span id="cb76-7"><a href="#cb76-7"></a></span>
+<span id="cb76-8"><a href="#cb76-8"></a><span class="co"># we see that the above function and the pre-built R mean() function are identical</span></span>
+<span id="cb76-9"><a href="#cb76-9"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span></span>
+<span id="cb76-10"><a href="#cb76-10"></a><span class="fu">identical</span>(<span class="fu">mean</span>(x), <span class="fu">avg</span>(x))</span>
+<span id="cb76-11"><a href="#cb76-11"></a></span>
+<span id="cb76-12"><a href="#cb76-12"></a><span class="co"># variables inside a function are not defined in the workspace</span></span>
+<span id="cb76-13"><a href="#cb76-13"></a>s <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb76-14"><a href="#cb76-14"></a><span class="fu">avg</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb76-15"><a href="#cb76-15"></a>s</span>
+<span id="cb76-16"><a href="#cb76-16"></a></span>
+<span id="cb76-17"><a href="#cb76-17"></a><span class="co"># the general form of a function</span></span>
+<span id="cb76-18"><a href="#cb76-18"></a>my_function <span class="ot">&lt;-</span> <span class="cf">function</span>(VARIABLE_NAME){</span>
+<span id="cb76-19"><a href="#cb76-19"></a>  perform operations on VARIABLE_NAME and calculate VALUE</span>
+<span id="cb76-20"><a href="#cb76-20"></a>  VALUE</span>
+<span id="cb76-21"><a href="#cb76-21"></a>}</span>
+<span id="cb76-22"><a href="#cb76-22"></a></span>
+<span id="cb76-23"><a href="#cb76-23"></a><span class="co"># functions can have multiple arguments as well as default values</span></span>
+<span id="cb76-24"><a href="#cb76-24"></a>avg <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">arithmetic =</span> <span class="cn">TRUE</span>){</span>
+<span id="cb76-25"><a href="#cb76-25"></a>  n <span class="ot">&lt;-</span> <span class="fu">length</span>(x)</span>
+<span id="cb76-26"><a href="#cb76-26"></a>  <span class="fu">ifelse</span>(arithmetic, <span class="fu">sum</span>(x)<span class="sc">/</span>n, <span class="fu">prod</span>(x)<span class="sc">^</span>(<span class="dv">1</span><span class="sc">/</span>n))</span>
+<span id="cb76-27"><a href="#cb76-27"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section><section id="for-loops" class="level2" data-number="4.4"><h2 data-number="4.4" class="anchored" data-anchor-id="for-loops">
 <span class="header-section-number">4.4</span> For Loops</h2>
@@ -1690,34 +1697,34 @@ Knowledge Extension
 </ul></section><section id="code-20" class="level3" data-number="4.4.2"><h3 data-number="4.4.2" class="anchored" data-anchor-id="code-20">
 <span class="header-section-number">4.4.2</span> Code</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1"></a><span class="co"># creating a function that computes the sum of integers 1 through n</span></span>
-<span id="cb76-2"><a href="#cb76-2"></a>compute_s_n <span class="ot">&lt;-</span> <span class="cf">function</span>(n){</span>
-<span id="cb76-3"><a href="#cb76-3"></a>  x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span>n</span>
-<span id="cb76-4"><a href="#cb76-4"></a>  <span class="fu">sum</span>(x)</span>
-<span id="cb76-5"><a href="#cb76-5"></a>}</span>
-<span id="cb76-6"><a href="#cb76-6"></a></span>
-<span id="cb76-7"><a href="#cb76-7"></a><span class="co"># a very simple for-loop</span></span>
-<span id="cb76-8"><a href="#cb76-8"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>){</span>
-<span id="cb76-9"><a href="#cb76-9"></a>  <span class="fu">print</span>(i)</span>
-<span id="cb76-10"><a href="#cb76-10"></a>}</span>
-<span id="cb76-11"><a href="#cb76-11"></a></span>
-<span id="cb76-12"><a href="#cb76-12"></a><span class="co"># a for-loop for our summation</span></span>
-<span id="cb76-13"><a href="#cb76-13"></a>m <span class="ot">&lt;-</span> <span class="dv">25</span></span>
-<span id="cb76-14"><a href="#cb76-14"></a>s_n <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> m) <span class="co"># create an empty vector</span></span>
-<span id="cb76-15"><a href="#cb76-15"></a><span class="cf">for</span>(n <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>m){</span>
-<span id="cb76-16"><a href="#cb76-16"></a>  s_n[n] <span class="ot">&lt;-</span> <span class="fu">compute_s_n</span>(n)</span>
-<span id="cb76-17"><a href="#cb76-17"></a>}</span>
-<span id="cb76-18"><a href="#cb76-18"></a></span>
-<span id="cb76-19"><a href="#cb76-19"></a><span class="co"># creating a plot for our summation function</span></span>
-<span id="cb76-20"><a href="#cb76-20"></a>n <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span>m</span>
-<span id="cb76-21"><a href="#cb76-21"></a><span class="fu">plot</span>(n, s_n)</span>
-<span id="cb76-22"><a href="#cb76-22"></a></span>
-<span id="cb76-23"><a href="#cb76-23"></a><span class="co"># a table of values comparing our function to the summation formula</span></span>
-<span id="cb76-24"><a href="#cb76-24"></a><span class="fu">head</span>(<span class="fu">data.frame</span>(<span class="at">s_n =</span> s_n, <span class="at">formula =</span> n<span class="sc">*</span>(n<span class="sc">+</span><span class="dv">1</span>)<span class="sc">/</span><span class="dv">2</span>))</span>
-<span id="cb76-25"><a href="#cb76-25"></a></span>
-<span id="cb76-26"><a href="#cb76-26"></a><span class="co"># overlaying our function with the summation formula</span></span>
-<span id="cb76-27"><a href="#cb76-27"></a><span class="fu">plot</span>(n, s_n)</span>
-<span id="cb76-28"><a href="#cb76-28"></a><span class="fu">lines</span>(n, n<span class="sc">*</span>(n<span class="sc">+</span><span class="dv">1</span>)<span class="sc">/</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1"></a><span class="co"># creating a function that computes the sum of integers 1 through n</span></span>
+<span id="cb77-2"><a href="#cb77-2"></a>compute_s_n <span class="ot">&lt;-</span> <span class="cf">function</span>(n){</span>
+<span id="cb77-3"><a href="#cb77-3"></a>  x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span>n</span>
+<span id="cb77-4"><a href="#cb77-4"></a>  <span class="fu">sum</span>(x)</span>
+<span id="cb77-5"><a href="#cb77-5"></a>}</span>
+<span id="cb77-6"><a href="#cb77-6"></a></span>
+<span id="cb77-7"><a href="#cb77-7"></a><span class="co"># a very simple for-loop</span></span>
+<span id="cb77-8"><a href="#cb77-8"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>){</span>
+<span id="cb77-9"><a href="#cb77-9"></a>  <span class="fu">print</span>(i)</span>
+<span id="cb77-10"><a href="#cb77-10"></a>}</span>
+<span id="cb77-11"><a href="#cb77-11"></a></span>
+<span id="cb77-12"><a href="#cb77-12"></a><span class="co"># a for-loop for our summation</span></span>
+<span id="cb77-13"><a href="#cb77-13"></a>m <span class="ot">&lt;-</span> <span class="dv">25</span></span>
+<span id="cb77-14"><a href="#cb77-14"></a>s_n <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">length =</span> m) <span class="co"># create an empty vector</span></span>
+<span id="cb77-15"><a href="#cb77-15"></a><span class="cf">for</span>(n <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>m){</span>
+<span id="cb77-16"><a href="#cb77-16"></a>  s_n[n] <span class="ot">&lt;-</span> <span class="fu">compute_s_n</span>(n)</span>
+<span id="cb77-17"><a href="#cb77-17"></a>}</span>
+<span id="cb77-18"><a href="#cb77-18"></a></span>
+<span id="cb77-19"><a href="#cb77-19"></a><span class="co"># creating a plot for our summation function</span></span>
+<span id="cb77-20"><a href="#cb77-20"></a>n <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span>m</span>
+<span id="cb77-21"><a href="#cb77-21"></a><span class="fu">plot</span>(n, s_n)</span>
+<span id="cb77-22"><a href="#cb77-22"></a></span>
+<span id="cb77-23"><a href="#cb77-23"></a><span class="co"># a table of values comparing our function to the summation formula</span></span>
+<span id="cb77-24"><a href="#cb77-24"></a><span class="fu">head</span>(<span class="fu">data.frame</span>(<span class="at">s_n =</span> s_n, <span class="at">formula =</span> n<span class="sc">*</span>(n<span class="sc">+</span><span class="dv">1</span>)<span class="sc">/</span><span class="dv">2</span>))</span>
+<span id="cb77-25"><a href="#cb77-25"></a></span>
+<span id="cb77-26"><a href="#cb77-26"></a><span class="co"># overlaying our function with the summation formula</span></span>
+<span id="cb77-27"><a href="#cb77-27"></a><span class="fu">plot</span>(n, s_n)</span>
+<span id="cb77-28"><a href="#cb77-28"></a><span class="fu">lines</span>(n, n<span class="sc">*</span>(n<span class="sc">+</span><span class="dv">1</span>)<span class="sc">/</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
@@ -1968,7 +1975,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/quartopub\.com\/sites\/ningli\/statsr/);
+      var filterRegex = new RegExp(/https:\/\/stats-r\.com/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }

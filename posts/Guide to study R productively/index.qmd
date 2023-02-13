@@ -1,0 +1,8 @@
+---
+title: "Guide to study R productively"
+author: "NING LI"
+date: "2023-02-07"
+categories: [tutorial]
+image: "https://media4.giphy.com/media/xT77Y1T0zY1gR5qe5O/giphy.gif?cid=ecf05e47o8u0xhzrdl1u25evzwvlp89jwan9h28u8wm3hgha&rid=giphy.gif&ct=g"
+description: "The best resources and handy tools to study R"
+---
