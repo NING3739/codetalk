@@ -2,6 +2,7 @@ project:
   type: website
   
 website:
+  title: "Stats & R"
   description: "Welcome to Stats & R. This is a personal website devoted primarily to R, Python, and statistics."
   favicon: Stats-&-R.png
   google-analytics: 
@@ -11,7 +12,6 @@ website:
   repo-actions: [edit, issue]
   repo-url: https://github.com/NING3739/statsr
   site-url: 'https://stats-r.com'
-  title: "Stats & R"
   search:
       location: navbar
       type: textbox
@@ -21,15 +21,19 @@ website:
     logo-alt: "Stats-&-R.png"
     pinned: true
     left:
+      
       - icon: newspaper
         text: "Posts"
         href: posts.qmd
       - icon: book
         text: "Series"
         href: series.qmd
+      - icon: easel2
+        text: "Projects"
+        href: project.qmd
       - icon: file-person
         text: "About"
-        href: about.qmd
+        href: about.qmd 
       - icon: envelope
         text: "Contact"
         href: contact.qmd

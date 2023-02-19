@@ -1,9 +1,12 @@
 /*-- scss:defaults --*/
+// Base document colors
+$body-bg: #F6F6F6;
+
 
 // Navigation element colors
 //$footer-bg: #A7D5E8;
 $footer-fg: #181818;
-$navbar-bg: #A7D5E8;
+$navbar-bg: #FFFFFF;
 $navbar-fg: #181818;
 
 
@@ -43,4 +46,8 @@ $navbar-fg: #181818;
   background-color: #181818;
   margin-top: -9px;
   border-color: #181818;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #002465;
 }

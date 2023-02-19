@@ -1,0 +1,20 @@
+---
+title: "Projects"
+listing:
+  contents: project/**/*.qmd
+  sort: "date desc"
+  type: grid
+  grid-item-border: false
+  categories: true
+  sort-ui: true
+  filter-ui: [title, date]
+  fields: [image, date, title, author, description, categories]
+  date-format: MMM DD, YYYY
+  feed: true
+  
+comments: false
+
+title-block-banner: false
+---
+
+123456789
