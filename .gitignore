@@ -2,6 +2,6 @@
 .Rproj.user
 .RData
 .Rhistory
-_publish.yml
-_site
-_freeze
+_site/**
+_freeze/**
+
