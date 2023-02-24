@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://stats-r.com/index.html</loc>
-    <lastmod>2023-02-24T07:35:19.279Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats-r.com/series/R Basic/index.html</loc>
-    <lastmod>2023-02-24T07:34:04.961Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats-r.com/series/Probability/index.html</loc>
-    <lastmod>2023-02-24T07:34:05.326Z</lastmod>
-  </url>
-  <url>
     <loc>https://stats-r.com/series/Data Visualization/index.html</loc>
-    <lastmod>2023-02-24T07:34:44.577Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats-r.com/contact.html</loc>
-    <lastmod>2023-02-24T07:34:44.949Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats-r.com/posts/Install R and Rstudio on Mac/index.html</loc>
-    <lastmod>2023-02-24T07:34:48.016Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats-r.com/posts/Dynamic Graph/index.html</loc>
-    <lastmod>2023-02-24T07:35:11.258Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats-r.com/posts/welcome/index.html</loc>
-    <lastmod>2023-02-24T07:35:11.658Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats-r.com/posts/Christmas Tree/index.html</loc>
-    <lastmod>2023-02-24T07:35:14.453Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats-r.com/posts/Guide to study R productively/index.html</loc>
-    <lastmod>2023-02-24T07:35:14.822Z</lastmod>
+    <lastmod>2023-02-24T07:46:11.494Z</lastmod>
   </url>
   <url>
     <loc>https://stats-r.com/series.html</loc>
-    <lastmod>2023-02-24T07:35:15.645Z</lastmod>
+    <lastmod>2023-02-24T07:46:05.784Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-r.com/series/R Basic/index.html</loc>
+    <lastmod>2023-02-24T07:45:31.650Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-r.com/series/Probability/index.html</loc>
+    <lastmod>2023-02-24T07:45:32.006Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-r.com/contact.html</loc>
+    <lastmod>2023-02-24T07:45:32.366Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-r.com/posts/Install R and Rstudio on Mac/index.html</loc>
+    <lastmod>2023-02-24T07:45:34.552Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-r.com/posts/Dynamic Graph/index.html</loc>
+    <lastmod>2023-02-24T07:45:57.245Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-r.com/posts/welcome/index.html</loc>
+    <lastmod>2023-02-24T07:45:57.625Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-r.com/posts/Christmas Tree/index.html</loc>
+    <lastmod>2023-02-24T07:46:01.084Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-r.com/posts/Guide to study R productively/index.html</loc>
+    <lastmod>2023-02-24T07:46:01.444Z</lastmod>
   </url>
   <url>
     <loc>https://stats-r.com/terms.html</loc>
-    <lastmod>2023-02-24T07:35:15.999Z</lastmod>
+    <lastmod>2023-02-24T07:46:02.150Z</lastmod>
   </url>
   <url>
     <loc>https://stats-r.com/about.html</loc>
-    <lastmod>2023-02-24T07:35:16.375Z</lastmod>
+    <lastmod>2023-02-24T07:46:02.597Z</lastmod>
   </url>
   <url>
     <loc>https://stats-r.com/faq.html</loc>
-    <lastmod>2023-02-24T07:35:16.726Z</lastmod>
+    <lastmod>2023-02-24T07:46:02.959Z</lastmod>
   </url>
   <url>
     <loc>https://stats-r.com/posts.html</loc>
-    <lastmod>2023-02-24T07:35:17.181Z</lastmod>
+    <lastmod>2023-02-24T07:46:03.472Z</lastmod>
   </url>
   <url>
     <loc>https://stats-r.com/feedback.html</loc>
-    <lastmod>2023-02-24T07:35:17.548Z</lastmod>
+    <lastmod>2023-02-24T07:46:03.843Z</lastmod>
   </url>
   <url>
     <loc>https://stats-r.com/license.html</loc>
-    <lastmod>2023-02-24T07:35:18.115Z</lastmod>
+    <lastmod>2023-02-24T07:46:04.436Z</lastmod>
   </url>
   <url>
     <loc>https://stats-r.com/project.html</loc>
-    <lastmod>2023-02-24T07:35:18.499Z</lastmod>
+    <lastmod>2023-02-24T07:46:04.892Z</lastmod>
   </url>
   <url>
     <loc>https://stats-r.com/success.html</loc>
-    <lastmod>2023-02-24T07:35:18.851Z</lastmod>
+    <lastmod>2023-02-24T07:46:05.249Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-r.com/index.html</loc>
+    <lastmod>2023-02-24T07:46:06.295Z</lastmod>
   </url>
 </urlset>

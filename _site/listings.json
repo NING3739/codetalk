@@ -1,15 +1,5 @@
 [
   {
-    "listing": "/index.html",
-    "items": [
-      "/posts/Guide to study R productively/index.html",
-      "/posts/Install R and Rstudio on Mac/index.html",
-      "/posts/Dynamic Graph/index.html",
-      "/posts/Christmas Tree/index.html",
-      "/posts/welcome/index.html"
-    ]
-  },
-  {
     "listing": "/series.html",
     "items": [
       "/series/Probability/index.html",
@@ -30,5 +20,15 @@
   {
     "listing": "/project.html",
     "items": []
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/Guide to study R productively/index.html",
+      "/posts/Install R and Rstudio on Mac/index.html",
+      "/posts/Dynamic Graph/index.html",
+      "/posts/Christmas Tree/index.html",
+      "/posts/welcome/index.html"
+    ]
   }
 ]
