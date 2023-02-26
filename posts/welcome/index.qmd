@@ -1,9 +1,22 @@
 ---
-title: "Welcome"
+title: "A Big Welcome!!!"
 date: "2022-11-27"
 categories: [news]
 image: "https://media1.giphy.com/media/3YX5uFD3ksn5QGhQCQ/giphy.gif?cid=ecf05e47wh8zqk5qrx69zxo06440kl54py9vudby0dhlldj2&rid=giphy.gif&ct=g"
-description: "Welcome !!!"
 ---
 
-This is my first blog on Stats & R. Hope you will find some joys here !!!
+Welcome, readers!
+
+If you're interested in data science and the R programming language, you're in the right place! My name is [NING](https://twitter.com/ningli3739) and I'm thrilled to have you here on my personal website. The goal of this website is to create a space for exchanging ideas, learning new knowledge, and exploring the exciting world of data science.
+
+As you may know, R is a powerful language for data analysis, visualization, and modeling. It's used by many data scientists, statisticians, and researchers around the world. Through this website, I hope to share my knowledge and experiences with R and data science, and also learn from your feedback and comments.
+
+My website will cover a wide range of topics related to data science, including data wrangling, statistical modeling, machine learning, data visualization, and more. I'll also share tips and tricks for working with R, as well as my thoughts on the latest trends and developments in the field.
+
+But this website is not just about me talking at you -- it's about us having a conversation. I encourage you to leave comments and questions on my posts, share your own experiences and insights, and engage with other readers. Let's build a community of data enthusiasts who can learn from each other and grow together.
+
+To quote the famous statistician George Box, "All models are wrong, but some are useful." Let's work together to build useful models and insights that can help us understand the world around us.
+
+If you have any feedback, suggestions, or ideas for future posts, please don't hesitate to contact me. I'm always open to new ideas and collaborations.
+
+Thanks for stopping by, and I hope you'll join me on this journey of learning and discovery in the exciting world of data science and R programming.
