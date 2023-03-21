@@ -13,9 +13,19 @@ website:
   repo-url: https://github.com/NING3739/statsr
   site-url: 'https://stats-r.com'
   search:
-      location: navbar
-      type: textbox
-  
+    location: navbar
+    type: textbox
+    copy-button: true
+    algolia:
+      index-name: "stats-r"
+      application-id: "13979G24DX"
+      search-only-api-key: "57bffad781253cd27808a3c8ebcbb102"
+      analytics-events: true
+      show-logo: true
+      index-fields:
+        href: url
+        section: sec
+        text: body
   navbar:
     logo: Stats-&-R.png
     logo-alt: "Stats-&-R.png"

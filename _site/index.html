@@ -28,6 +28,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-search/autocomplete-preset-algolia.umd.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./Stats-&amp;-R.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-listing/list.min.js"></script>
@@ -45,11 +46,24 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
-  "copy-button": false,
+  "copy-button": true,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "textbox",
   "limit": 20,
+  "algolia": {
+    "application-id": "13979G24DX",
+    "search-only-api-key": "57bffad781253cd27808a3c8ebcbb102",
+    "index-name": "stats-r",
+    "index-fields": {
+      "href": "url",
+      "section": "sec",
+      "text": "body"
+    },
+    "analytics-events": true,
+    "show-logo": true,
+    "libDir": "site_libs"
+  },
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -62,6 +76,20 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
+
+
+<script type="text/javascript">
+var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights/dist/search-insights.iife.min.js";
+!function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+(e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+}(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+</script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-plugin-algolia-insights">
+
+</script>
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -227,7 +255,7 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 
 <table class="quarto-listing-table table">
     <tbody class="list">
-        <tr data-index="0" data-categories="null" data-listing-date-sort="1675681200000" data-listing-file-modified-sort="1677208473898" data-listing-reading-time-sort="0.005">
+        <tr data-index="0" data-categories="null" data-listing-date-sort="1675681200000" data-listing-file-modified-sort="1677399803000" data-listing-reading-time-sort="0.005">
         <td class="listing-date">
             Feb 07, 2023        
         </td>
@@ -238,7 +266,7 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
                 <span class="badge badge-primary" style="background:rgb(242, 233, 249); color: rgb(84, 31, 84);">tutorial</span>
         </td>        
 </tr>
-        <tr data-index="0" data-categories="null" data-listing-date-sort="1674039600000" data-listing-file-modified-sort="1677208473899" data-listing-reading-time-sort="5.835">
+        <tr data-index="0" data-categories="null" data-listing-date-sort="1674039600000" data-listing-file-modified-sort="1677399803000" data-listing-reading-time-sort="5.835">
         <td class="listing-date">
             Jan 19, 2023        
         </td>
@@ -249,7 +277,7 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
                 <span class="badge badge-primary" style="background:rgb(242, 233, 249); color: rgb(84, 31, 84);">tutorial</span>
         </td>        
 </tr>
-        <tr data-index="0" data-categories="null" data-listing-date-sort="1669806000000" data-listing-file-modified-sort="1677208473898" data-listing-reading-time-sort="0.315">
+        <tr data-index="0" data-categories="null" data-listing-date-sort="1669806000000" data-listing-file-modified-sort="1677399803000" data-listing-reading-time-sort="0.315">
         <td class="listing-date">
             Dec 01, 2022        
         </td>
@@ -261,7 +289,7 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
                 <span class="badge badge-primary" style="background:rgb(242, 233, 249); color: rgb(84, 31, 84);">analysis</span>
         </td>        
 </tr>
-        <tr data-index="0" data-categories="null" data-listing-date-sort="1669719600000" data-listing-file-modified-sort="1677208473898" data-listing-reading-time-sort="0.785">
+        <tr data-index="0" data-categories="null" data-listing-date-sort="1669719600000" data-listing-file-modified-sort="1677399803000" data-listing-reading-time-sort="0.785">
         <td class="listing-date">
             Nov 30, 2022        
         </td>
@@ -272,7 +300,7 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
                 <span class="badge badge-primary" style="background:rgb(242, 233, 249); color: rgb(84, 31, 84);">code</span>
         </td>        
 </tr>
-        <tr data-index="0" data-categories="null" data-listing-date-sort="1669460400000" data-listing-file-modified-sort="1677235799135" data-listing-reading-time-sort="1.45">
+        <tr data-index="0" data-categories="null" data-listing-date-sort="1669460400000" data-listing-file-modified-sort="1677399803000" data-listing-reading-time-sort="1.45">
         <td class="listing-date">
             Nov 27, 2022        
         </td>
@@ -547,7 +575,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/stats-r\.com/);
+      var filterRegex = new RegExp(/https:\/\/quartopub\.com\/sites\/ningli\/statsr/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }

@@ -28,6 +28,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-search/autocomplete-preset-algolia.umd.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./Stats-&amp;-R.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-listing/list.min.js"></script>
@@ -45,11 +46,24 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
-  "copy-button": false,
+  "copy-button": true,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "textbox",
   "limit": 20,
+  "algolia": {
+    "application-id": "13979G24DX",
+    "search-only-api-key": "57bffad781253cd27808a3c8ebcbb102",
+    "index-name": "stats-r",
+    "index-fields": {
+      "href": "url",
+      "section": "sec",
+      "text": "body"
+    },
+    "analytics-events": true,
+    "show-logo": true,
+    "libDir": "site_libs"
+  },
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -62,6 +76,20 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
+
+
+<script type="text/javascript">
+var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights/dist/search-insights.iife.min.js";
+!function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+(e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+}(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+</script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-plugin-algolia-insights">
+
+</script>
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -246,7 +274,7 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-left" data-index="0" data-categories="Data Science,Probability" data-listing-date-sort="1670324400000" data-listing-file-modified-sort="1677208473901" data-listing-reading-time-sort="0.005">
+<div class="quarto-post image-left" data-index="0" data-categories="Data Science,Probability" data-listing-date-sort="1670324400000" data-listing-file-modified-sort="1677399803000" data-listing-reading-time-sort="0.005">
 <div class="thumbnail">
 <p><a href="./series/Probability/index.html"> <img src="https://images.unsplash.com/photo-1609017909889-d7b582c072f7?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy&amp;w=3600" class="thumnail-image"> </a></p>
 </div>
@@ -287,7 +315,7 @@ NING LI
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="1" data-categories="Data Science,Data Visualization" data-listing-date-sort="1669806000000" data-listing-file-modified-sort="1677208473900" data-listing-reading-time-sort="47.69">
+<div class="quarto-post image-left" data-index="1" data-categories="Data Science,Data Visualization" data-listing-date-sort="1669806000000" data-listing-file-modified-sort="1677399803000" data-listing-reading-time-sort="47.69">
 <div class="thumbnail">
 <p><a href="./series/Data Visualization/index.html"> <img src="https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy&amp;w=3600" class="thumnail-image"> </a></p>
 </div>
@@ -328,7 +356,7 @@ NING LI
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="2" data-categories="Data Science,R Basic" data-listing-date-sort="1669460400000" data-listing-file-modified-sort="1677208473901" data-listing-reading-time-sort="31.045">
+<div class="quarto-post image-left" data-index="2" data-categories="Data Science,R Basic" data-listing-date-sort="1669460400000" data-listing-file-modified-sort="1677399803000" data-listing-reading-time-sort="31.045">
 <div class="thumbnail">
 <p><a href="./series/R Basic/index.html"> <img src="https://images.unsplash.com/photo-1634128221889-82ed6efebfc3?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy&amp;w=3600" class="thumnail-image"> </a></p>
 </div>

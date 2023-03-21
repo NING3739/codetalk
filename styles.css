@@ -51,4 +51,7 @@ margin: 0 auto;
     box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 11%);
 }
 
+nav.sidebar.sidebar-navigation:not(.rollup) {
+    background-color: transparent;
+}
 

@@ -28,6 +28,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
+<script src="site_libs/quarto-search/autocomplete-preset-algolia.umd.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./Stats-&amp;-R.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -43,11 +44,24 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
-  "copy-button": false,
+  "copy-button": true,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "textbox",
   "limit": 20,
+  "algolia": {
+    "application-id": "13979G24DX",
+    "search-only-api-key": "57bffad781253cd27808a3c8ebcbb102",
+    "index-name": "stats-r",
+    "index-fields": {
+      "href": "url",
+      "section": "sec",
+      "text": "body"
+    },
+    "analytics-events": true,
+    "show-logo": true,
+    "libDir": "site_libs"
+  },
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -60,6 +74,20 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
+
+
+<script type="text/javascript">
+var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights/dist/search-insights.iife.min.js";
+!function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+(e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+}(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+</script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-plugin-algolia-insights">
+
+</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y96LK2RNJD"></script>
 
 <script type="text/javascript">
@@ -151,9 +179,82 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 
 
 
-<p>FAQ</p>
+<section id="who-are-you" class="level2">
+<h2 class="anchored" data-anchor-id="who-are-you">Who are you?</h2>
+<p>I’m an ordinary person who is down-to-earth. If you’d like to learn more about me, feel free to visit my <a href="./about.html">About</a> page.</p>
+</section>
+<section id="why-did-you-start-stats-r" class="level2">
+<h2 class="anchored" data-anchor-id="why-did-you-start-stats-r">Why did you start Stats &amp; R ?</h2>
+<p>The purpose of starting Stats &amp; R is to motivate myself to continuously learn new knowledge, as well as to showcasing my achievements for those interested in R language and data science to read, offer feedback and engage in mutual exchange.</p>
+</section>
+<section id="can-i-use-the-content-on-your-website-for-my-own-purposes" class="level2">
+<h2 class="anchored" data-anchor-id="can-i-use-the-content-on-your-website-for-my-own-purposes">Can I use the content on your website for my own purposes?</h2>
+<p>Feel free to utilize the content on my website for your own use, but please adhere to the following guidelines:</p>
+<ul>
+<li><p>Commercial use of my content is prohibited.</p></li>
+<li><p>Proper credit must be given in your works.</p></li>
+<li><p>I am not liable for any issues related to the code or results in the content.</p></li>
+</ul>
+<p>If you incorporate my code or material into your project, kindly reference the following details:</p>
+<ul>
+<li><p>Author’s name: “NING LI”</p></li>
+<li><p>Title of the article or tutorial</p></li>
+<li><p>Website name: “Stats &amp; R”</p></li>
+<li><p>URL of the article or tutorial</p></li>
+<li><p>Date of access or code reproduction</p></li>
+</ul>
+<p><strong><em>For example</em></strong>:</p>
+<p>NING LI, <em>R Basic</em>, Stats &amp; R. Retrieved from <a href="https://stats-r.com/series/r%20basic/" class="uri">https://stats-r.com/series/r%20basic/</a>, accessed on March 6th, 2023.</p>
+</section>
+<section id="do-you-accept-guest-posts-or-contributions" class="level2">
+<h2 class="anchored" data-anchor-id="do-you-accept-guest-posts-or-contributions">Do you accept guest posts or contributions?</h2>
+<p>Of course. I warmly welcome you to publish posts and make valuable contributions on my website.</p>
+<p>If you are interested in publishing a post on my website, please contact me through <a href="https://twitter.com/ningli3739">Twitter</a> or <a href="https://github.com/NING3739">github</a>. Once your submission has been reviewed and approved, I will publish it on my website, and the copyright will belong to you. Additionally, if you have any suggestions or feedback regarding my content, please contact me through the <a href="./feedback.html">contact form</a>. I will respond to your message promptly.</p>
+</section>
+<section id="how-can-i-support-your-website-or-contribute-to-your-work" class="level2">
+<h2 class="anchored" data-anchor-id="how-can-i-support-your-website-or-contribute-to-your-work">How can I support your website or contribute to your work?</h2>
+<p>If you find my content helpful, please consider supporting me by <a href="https://www.buymeacoffee.com/statsr"><strong>buying me a coffee</strong></a>.</p>
+<p>Or, You are also welcome to buy me by <strong>Wechat</strong> and <strong>Alipay</strong>:</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img src="https://github.com/NING3739/my-personal-website/blob/main/IMG_0038.JPG?raw=true" class="img-fluid" width="280" alt="wechat"> <img src="https://github.com/NING3739/my-personal-website/blob/main/IMG_0039.JPG?raw=true" class="img-fluid" width="280" alt="Alipay"> <img src="https://github.com/NING3739/my-personal-website/blob/main/bmc_qr.png?raw=true" class="img-fluid" width="280" alt="Buy me a coffee"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="are-there-any-other-software-or-resources-you-recommend-for-data-science" class="level2">
+<h2 class="anchored" data-anchor-id="are-there-any-other-software-or-resources-you-recommend-for-data-science">Are there any other software or resources you recommend for data science?</h2>
+<p>As a science researcher, I deal with various scientific tools every day. Here, I have listed some of the software I use. If anyone knows better software, please leave a comment in the section below.</p>
+<section id="statistical-software" class="level3">
+<h3 class="anchored" data-anchor-id="statistical-software">Statistical software</h3>
+<p>Statistical software is the most commonly used, and I mainly focus on R language, for no other reason than it being free and powerful!!!</p>
+<ul>
+<li><p><a href="https://www.r-project.org/">R</a> (free and open source)</p></li>
+<li><p><a href="https://posit.co/downloads/">Rstudio</a> (the most popular R IDE)</p></li>
+<li><p><a href="https://www.ibm.com/spss">IBM SPSS</a></p></li>
+<li><p><a href="https://www.originlab.com/">OriginLab</a></p></li>
+<li><p><a href="https://www.jamovi.org/">jamovi</a></p></li>
+</ul>
+</section>
+<section id="reference-management-software" class="level3">
+<h3 class="anchored" data-anchor-id="reference-management-software">Reference management software</h3>
+<p>Good reference management software will greatly improve your efficiency in selecting and citing literature.</p>
+<ul>
+<li><p><a href="https://endnote.com/">Endnote</a></p></li>
+<li><p><a href="https://www.zotero.org/">Zotero</a></p></li>
+<li><p><a href="https://www.mendeley.com/">Mendeley</a></p></li>
+</ul>
+</section>
+<section id="flowchart-software" class="level3">
+<h3 class="anchored" data-anchor-id="flowchart-software">Flowchart software</h3>
+<ul>
+<li><a href="https://app.diagrams.net/">Diagrams.net</a></li>
+</ul>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -417,6 +518,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
+</script>
+<script src="https://giscus.app/client.js" data-repo="NING3739/my-personal-website" data-repo-id="R_kgDOIYBxAA" data-category="Comments" data-category-id="DIC_kwDOIYBxAM4CS2io" data-mapping="url" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">

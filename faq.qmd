@@ -2,7 +2,87 @@
 format:
   html:
     toc: false
-comments: false
+    #number-sections: true
 ---
 
-FAQ
+## Who are you?
+
+I'm an ordinary person who is down-to-earth. If you'd like to learn more about me, feel free to visit my [About](about.qmd) page.
+
+## Why did you start Stats & R ?
+
+The purpose of starting Stats & R is to motivate myself to continuously learn new knowledge, as well as to showcasing my achievements for those interested in R language and data science to read, offer feedback and engage in mutual exchange.
+
+## Can I use the content on your website for my own purposes?
+
+Feel free to utilize the content on my website for your own use, but please adhere to the following guidelines:
+
+-   Commercial use of my content is prohibited.
+
+-   Proper credit must be given in your works.
+
+-   I am not liable for any issues related to the code or results in the content.
+
+If you incorporate my code or material into your project, kindly reference the following details:
+
+-   Author's name: "NING LI"
+
+-   Title of the article or tutorial
+
+-   Website name: "Stats & R"
+
+-   URL of the article or tutorial
+
+-   Date of access or code reproduction
+
+***For example***:
+
+NING LI, *R Basic*, Stats & R. Retrieved from <https://stats-r.com/series/r%20basic/>, accessed on March 6th, 2023.
+
+## Do you accept guest posts or contributions?
+
+Of course. I warmly welcome you to publish posts and make valuable contributions on my website.
+
+If you are interested in publishing a post on my website, please contact me through [Twitter](https://twitter.com/ningli3739) or [github](https://github.com/NING3739). Once your submission has been reviewed and approved, I will publish it on my website, and the copyright will belong to you. Additionally, if you have any suggestions or feedback regarding my content, please contact me through the [contact form](feedback.qmd). I will respond to your message promptly.
+
+## How can I support your website or contribute to your work?
+
+If you find my content helpful, please consider supporting me by [**buying me a coffee**](https://www.buymeacoffee.com/statsr).
+
+Or, You are also welcome to buy me by **Wechat** and **Alipay**:
+
+::: {layout-nrow="2"}
+![wechat](https://github.com/NING3739/my-personal-website/blob/main/IMG_0038.JPG?raw=true){width="280"} ![Alipay](https://github.com/NING3739/my-personal-website/blob/main/IMG_0039.JPG?raw=true){width="280"} ![Buy me a coffee](https://github.com/NING3739/my-personal-website/blob/main/bmc_qr.png?raw=true){width="280"}
+:::
+
+## Are there any other software or resources you recommend for data science?
+
+As a science researcher, I deal with various scientific tools every day. Here, I have listed some of the software I use. If anyone knows better software, please leave a comment in the section below.
+
+### Statistical software
+
+Statistical software is the most commonly used, and I mainly focus on R language, for no other reason than it being free and powerful!!!
+
+-   [R](https://www.r-project.org/) (free and open source)
+
+-   [Rstudio](https://posit.co/downloads/) (the most popular R IDE)
+
+-   [IBM SPSS](https://www.ibm.com/spss)
+
+-   [OriginLab](https://www.originlab.com/)
+
+-   [jamovi](https://www.jamovi.org/)
+
+### Reference management software
+
+Good reference management software will greatly improve your efficiency in selecting and citing literature.
+
+-   [Endnote](https://endnote.com/)
+
+-   [Zotero](https://www.zotero.org/)
+
+-   [Mendeley](https://www.mendeley.com/)
+
+### Flowchart software
+
+-   [Diagrams.net](https://app.diagrams.net/)

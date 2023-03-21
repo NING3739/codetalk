@@ -627,7 +627,42 @@
     "href": "faq.html",
     "title": "Stats & R",
     "section": "",
-    "text": "FAQ"
+    "text": "I’m an ordinary person who is down-to-earth. If you’d like to learn more about me, feel free to visit my About page."
+  },
+  {
+    "objectID": "faq.html#why-did-you-start-stats-r",
+    "href": "faq.html#why-did-you-start-stats-r",
+    "title": "Stats & R",
+    "section": "Why did you start Stats & R ?",
+    "text": "Why did you start Stats & R ?\nThe purpose of starting Stats & R is to motivate myself to continuously learn new knowledge, as well as to showcasing my achievements for those interested in R language and data science to read, offer feedback and engage in mutual exchange."
+  },
+  {
+    "objectID": "faq.html#can-i-use-the-content-on-your-website-for-my-own-purposes",
+    "href": "faq.html#can-i-use-the-content-on-your-website-for-my-own-purposes",
+    "title": "Stats & R",
+    "section": "Can I use the content on your website for my own purposes?",
+    "text": "Can I use the content on your website for my own purposes?\nFeel free to utilize the content on my website for your own use, but please adhere to the following guidelines:\n\nCommercial use of my content is prohibited.\nProper credit must be given in your works.\nI am not liable for any issues related to the code or results in the content.\n\nIf you incorporate my code or material into your project, kindly reference the following details:\n\nAuthor’s name: “NING LI”\nTitle of the article or tutorial\nWebsite name: “Stats & R”\nURL of the article or tutorial\nDate of access or code reproduction\n\nFor example:\nNING LI, R Basic, Stats & R. Retrieved from https://stats-r.com/series/r%20basic/, accessed on March 6th, 2023."
+  },
+  {
+    "objectID": "faq.html#do-you-accept-guest-posts-or-contributions",
+    "href": "faq.html#do-you-accept-guest-posts-or-contributions",
+    "title": "Stats & R",
+    "section": "Do you accept guest posts or contributions?",
+    "text": "Do you accept guest posts or contributions?\nOf course. I warmly welcome you to publish posts and make valuable contributions on my website.\nIf you are interested in publishing a post on my website, please contact me through Twitter or github. Once your submission has been reviewed and approved, I will publish it on my website, and the copyright will belong to you. Additionally, if you have any suggestions or feedback regarding my content, please contact me through the contact form. I will respond to your message promptly."
+  },
+  {
+    "objectID": "faq.html#how-can-i-support-your-website-or-contribute-to-your-work",
+    "href": "faq.html#how-can-i-support-your-website-or-contribute-to-your-work",
+    "title": "Stats & R",
+    "section": "How can I support your website or contribute to your work?",
+    "text": "How can I support your website or contribute to your work?\nIf you find my content helpful, please consider supporting me by buying me a coffee.\nOr, You are also welcome to buy me by Wechat and Alipay:"
+  },
+  {
+    "objectID": "faq.html#are-there-any-other-software-or-resources-you-recommend-for-data-science",
+    "href": "faq.html#are-there-any-other-software-or-resources-you-recommend-for-data-science",
+    "title": "Stats & R",
+    "section": "Are there any other software or resources you recommend for data science?",
+    "text": "Are there any other software or resources you recommend for data science?\nAs a science researcher, I deal with various scientific tools every day. Here, I have listed some of the software I use. If anyone knows better software, please leave a comment in the section below.\n\nStatistical software\nStatistical software is the most commonly used, and I mainly focus on R language, for no other reason than it being free and powerful!!!\n\nR (free and open source)\nRstudio (the most popular R IDE)\nIBM SPSS\nOriginLab\njamovi\n\n\n\nReference management software\nGood reference management software will greatly improve your efficiency in selecting and citing literature.\n\nEndnote\nZotero\nMendeley\n\n\n\nFlowchart software\n\nDiagrams.net"
   },
   {
     "objectID": "posts.html",
