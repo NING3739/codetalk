@@ -6,10 +6,10 @@
       version="2.0">
 <channel>
 <title>Stats &amp; R</title>
-<link>https://quartopub.com/sites/ningli/statsr/project.html</link>
-<atom:link href="https://quartopub.com/sites/ningli/statsr/project.xml" rel="self" type="application/rss+xml"/>
+<link>https://stats-r.com/project.html</link>
+<atom:link href="https://stats-r.com/project.xml" rel="self" type="application/rss+xml"/>
 <description>Welcome to Stats &amp; R. This is a personal website devoted primarily to R, Python, and statistics.</description>
-<generator>quarto-1.2.335</generator>
-<lastBuildDate>Tue, 21 Mar 2023 10:08:52 GMT</lastBuildDate>
+<generator>quarto-1.2.475</generator>
+<lastBuildDate>Sun, 02 Apr 2023 09:06:19 GMT</lastBuildDate>
 </channel>
 </rss>

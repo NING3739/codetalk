@@ -5,15 +5,27 @@ format:
     #number-sections: true
 ---
 
-## Who are you?
+-   [Who are you?](#sec-who-are-you-)
+
+-   [Why did you start Stats & R?](#sec-why-did-you-start-stats--r-)
+
+-   [Can I use the content on your website for my own purposes?](#sec-can-i-use-the-content-on-your-website-for-my-own-purposes)
+
+-   [Do you accept guest posts or contributions?](#sec-do-you-accept-guest-posts-or-contributions)
+
+-   [How can I support your website or contribute to your work?](#sec-how-can-i-support-your-website-or-contribute-to-your-work)
+
+-   [Are there any other software or resources you recommend for data science?](#sec-are-there-any-other-software-or-resources-you-recommend-for-data-science)
+
+## Who are you? {#sec-who-are-you-}
 
 I'm an ordinary person who is down-to-earth. If you'd like to learn more about me, feel free to visit my [About](about.qmd) page.
 
-## Why did you start Stats & R ?
+## Why did you start Stats & R ? {#sec-why-did-you-start-stats--r-}
 
 The purpose of starting Stats & R is to motivate myself to continuously learn new knowledge, as well as to showcasing my achievements for those interested in R language and data science to read, offer feedback and engage in mutual exchange.
 
-## Can I use the content on your website for my own purposes?
+## Can I use the content on your website for my own purposes? {#sec-can-i-use-the-content-on-your-website-for-my-own-purposes}
 
 Feel free to utilize the content on my website for your own use, but please adhere to the following guidelines:
 
@@ -39,13 +51,13 @@ If you incorporate my code or material into your project, kindly reference the f
 
 NING LI, *R Basic*, Stats & R. Retrieved from <https://stats-r.com/series/r%20basic/>, accessed on March 6th, 2023.
 
-## Do you accept guest posts or contributions?
+## Do you accept guest posts or contributions? {#sec-do-you-accept-guest-posts-or-contributions}
 
 Of course. I warmly welcome you to publish posts and make valuable contributions on my website.
 
 If you are interested in publishing a post on my website, please contact me through [Twitter](https://twitter.com/ningli3739) or [github](https://github.com/NING3739). Once your submission has been reviewed and approved, I will publish it on my website, and the copyright will belong to you. Additionally, if you have any suggestions or feedback regarding my content, please contact me through the [contact form](feedback.qmd). I will respond to your message promptly.
 
-## How can I support your website or contribute to your work?
+## How can I support your website or contribute to your work? {#sec-how-can-i-support-your-website-or-contribute-to-your-work}
 
 If you find my content helpful, please consider supporting me by [**buying me a coffee**](https://www.buymeacoffee.com/statsr).
 
@@ -55,7 +67,7 @@ Or, You are also welcome to buy me by **Wechat** and **Alipay**:
 ![wechat](https://github.com/NING3739/my-personal-website/blob/main/IMG_0038.JPG?raw=true){width="280"} ![Alipay](https://github.com/NING3739/my-personal-website/blob/main/IMG_0039.JPG?raw=true){width="280"} ![Buy me a coffee](https://github.com/NING3739/my-personal-website/blob/main/bmc_qr.png?raw=true){width="280"}
 :::
 
-## Are there any other software or resources you recommend for data science?
+## Are there any other software or resources you recommend for data science? {#sec-are-there-any-other-software-or-resources-you-recommend-for-data-science}
 
 As a science researcher, I deal with various scientific tools every day. Here, I have listed some of the software I use. If anyone knows better software, please leave a comment in the section below.
 
@@ -86,3 +98,5 @@ Good reference management software will greatly improve your efficiency in selec
 ### Flowchart software
 
 -   [Diagrams.net](https://app.diagrams.net/)
+
+[![](https://api.netlify.com/api/v1/badges/844a5dd0-c9a0-405c-8415-ac405e812571/deploy-status)](https://app.netlify.com/sites/stats-r/deploys)

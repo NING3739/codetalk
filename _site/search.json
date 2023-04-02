@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "index.html#welcome-to-stats-r",
+    "href": "index.html#welcome-to-stats-r",
+    "title": "Stats & R",
+    "section": "Welcome to Stats & R!!!",
+    "text": "Welcome to Stats & R!!!\nAs a data science enthusiast, I have always wanted to create a personal website. With this website, I hope to not only continue learning new knowledge in my spare time but also track my own growth by sharing my findings. Additionally, I wanted to introduce myself to everyone. During my journey learning R language, I stumbled upon Rstudio’s new open source publishing system, Quarto. Quarto’s publishing system is simple and easy to pick up. And so, after some trial and error, Stats & R was born.\nStats & R is a research sharing website that focuses on using R language to solve statistical problems. The website is divided into four parts.\nThe first part is “Posts”. This page showcases interesting thoughts and questions that arose during my R language learning process. I will periodically share these thoughts in the form of blogs. Readers can actively leave any questions or interesting ideas in the comment section below.\nThe second part is “Series”. If you are a beginner in R language, then you can start learning the language systematically for free. This section will provide readers with all the knowledge points about R language in a systematic manner.\nThe third part is the “About” page. You can find out who I am, what I am doing, and my research achievements.\nThe fourth part is the “Contact” page. If you have any questions, please carefully read the communication terms before contacting me using the specified contact information.\nOnce again, thank you for visiting my personal website. I hope you can experience the beauty of R language and data science here. 😘"
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "Stats & R",
+    "section": "License",
+    "text": "License\n\nStats & R by NING LI is licensed under Attribution-NonCommercial-NoDerivatives 4.0 International\n\nVisit here for more information about the license."
+  },
+  {
+    "objectID": "index.html#lastest-posts",
+    "href": "index.html#lastest-posts",
+    "title": "Stats & R",
+    "section": "Lastest posts",
+    "text": "Lastest posts\n\n\n\n    \n        \n        \n            Feb 07, 2023        \n        \n        \n            Guide to study R productively     \n        \n        \n                tutorial\n                \n\n        \n        \n            Jan 19, 2023        \n        \n        \n            How to install R and Rstudio     \n        \n        \n                tutorial\n                \n\n        \n        \n            Dec 01, 2022        \n        \n        \n            Dynamic Graph     \n        \n        \n                code\n                analysis\n                \n\n        \n        \n            Nov 30, 2022        \n        \n        \n            Christmas Tree     \n        \n        \n                code\n                \n\n        \n        \n            Nov 27, 2022        \n        \n        \n            A Big Welcome!!!     \n        \n        \n                news\n                \n\n\n\n\nNo matching items\n\n\n  \n\n\n See all"
+  },
+  {
     "objectID": "series/R Basic/index.html",
     "href": "series/R Basic/index.html",
     "title": "R Basic",
@@ -102,7 +123,7 @@
     "href": "series/R Basic/index.html#group-then-summarize",
     "title": "R Basic",
     "section": "\n3.10 Group then summarize",
-    "text": "3.10 Group then summarize\n\n3.10.1 Key Points\n\nSplitting data into groups and then computing summaries for each group is a common operation in data exploration.\nWe can use the dplyr group_by() function to create a special grouped data frame to facilitate such summaries.\n\n\nlibrary(tidyverse)\nlibrary(dplyr)\nlibrary(dslabs)\ndata(murders)\nmurders <- mutate(murders, rate = total / population * 10^5)\n\n\n# group by region\nmurders %>% group_by(region)\n\n# A tibble: 51 × 6\n# Groups:   region [4]\n   state                abb   region    population total  rate\n   <chr>                <chr> <fct>          <dbl> <dbl> <dbl>\n 1 Alabama              AL    South        4779736   135  2.82\n 2 Alaska               AK    West          710231    19  2.68\n 3 Arizona              AZ    West         6392017   232  3.63\n 4 Arkansas             AR    South        2915918    93  3.19\n 5 California           CA    West        37253956  1257  3.37\n 6 Colorado             CO    West         5029196    65  1.29\n 7 Connecticut          CT    Northeast    3574097    97  2.71\n 8 Delaware             DE    South         897934    38  4.23\n 9 District of Columbia DC    South         601723    99 16.5 \n10 Florida              FL    South       19687653   669  3.40\n# … with 41 more rows\n\n# summarize after grouping\nmurders %>% \n  group_by(region) %>%\n  summarize(median = median(rate))\n\n# A tibble: 4 × 2\n  region        median\n  <fct>          <dbl>\n1 Northeast       1.80\n2 South           3.40\n3 North Central   1.97\n4 West            1.29"
+    "text": "3.10 Group then summarize\n\n3.10.1 Key Points\n\nSplitting data into groups and then computing summaries for each group is a common operation in data exploration.\nWe can use the dplyr group_by() function to create a special grouped data frame to facilitate such summaries.\n\n\nlibrary(tidyverse)\nlibrary(dplyr)\nlibrary(dslabs)\ndata(murders)\nmurders <- mutate(murders, rate = total / population * 10^5)\n\n\n# group by region\nmurders %>% group_by(region)\n\n# A tibble: 51 × 6\n# Groups:   region [4]\n   state                abb   region    population total  rate\n   <chr>                <chr> <fct>          <dbl> <dbl> <dbl>\n 1 Alabama              AL    South        4779736   135  2.82\n 2 Alaska               AK    West          710231    19  2.68\n 3 Arizona              AZ    West         6392017   232  3.63\n 4 Arkansas             AR    South        2915918    93  3.19\n 5 California           CA    West        37253956  1257  3.37\n 6 Colorado             CO    West         5029196    65  1.29\n 7 Connecticut          CT    Northeast    3574097    97  2.71\n 8 Delaware             DE    South         897934    38  4.23\n 9 District of Columbia DC    South         601723    99 16.5 \n10 Florida              FL    South       19687653   669  3.40\n# ℹ 41 more rows\n\n# summarize after grouping\nmurders %>% \n  group_by(region) %>%\n  summarize(median = median(rate))\n\n# A tibble: 4 × 2\n  region        median\n  <fct>          <dbl>\n1 Northeast       1.80\n2 South           3.40\n3 North Central   1.97\n4 West            1.29"
   },
   {
     "objectID": "series/R Basic/index.html#sorting-data-tables",
@@ -595,27 +616,6 @@
     "text": "66666"
   },
   {
-    "objectID": "index.html#welcome-to-stats-r",
-    "href": "index.html#welcome-to-stats-r",
-    "title": "Stats & R",
-    "section": "Welcome to Stats & R!!!",
-    "text": "Welcome to Stats & R!!!\nAs a data science enthusiast, I have always wanted to create a personal website. With this website, I hope to not only continue learning new knowledge in my spare time but also track my own growth by sharing my findings. Additionally, I wanted to introduce myself to everyone. During my journey learning R language, I stumbled upon Rstudio’s new open source publishing system, Quarto. Quarto’s publishing system is simple and easy to pick up. And so, after some trial and error, Stats & R was born.\nStats & R is a research sharing website that focuses on using R language to solve statistical problems. The website is divided into four parts.\nThe first part is “Posts”. This page showcases interesting thoughts and questions that arose during my R language learning process. I will periodically share these thoughts in the form of blogs. Readers can actively leave any questions or interesting ideas in the comment section below.\nThe second part is “Series”. If you are a beginner in R language, then you can start learning the language systematically for free. This section will provide readers with all the knowledge points about R language in a systematic manner.\nThe third part is the “About” page. You can find out who I am, what I am doing, and my research achievements.\nThe fourth part is the “Contact” page. If you have any questions, please carefully read the communication terms before contacting me using the specified contact information.\nOnce again, thank you for visiting my personal website. I hope you can experience the beauty of R language and data science here. 😘"
-  },
-  {
-    "objectID": "index.html#license",
-    "href": "index.html#license",
-    "title": "Stats & R",
-    "section": "License",
-    "text": "License\n\nStats & R by NING LI is licensed under Attribution-NonCommercial-NoDerivatives 4.0 International\n\nVisit here for more information about the license."
-  },
-  {
-    "objectID": "index.html#lastest-posts",
-    "href": "index.html#lastest-posts",
-    "title": "Stats & R",
-    "section": "Lastest posts",
-    "text": "Lastest posts\n\n\n\n    \n        \n        \n            Feb 07, 2023        \n        \n        \n            Guide to study R productively     \n        \n        \n                tutorial\n                \n\n        \n        \n            Jan 19, 2023        \n        \n        \n            How to install R and Rstudio     \n        \n        \n                tutorial\n                \n\n        \n        \n            Dec 01, 2022        \n        \n        \n            Dynamic Graph     \n        \n        \n                code\n                analysis\n                \n\n        \n        \n            Nov 30, 2022        \n        \n        \n            Christmas Tree     \n        \n        \n                code\n                \n\n        \n        \n            Nov 27, 2022        \n        \n        \n            A Big Welcome!!!     \n        \n        \n                news\n                \n\n\n\n\nNo matching items\n\n\n  \n\n\n See all"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "NING LI",
@@ -627,39 +627,46 @@
     "href": "faq.html",
     "title": "Stats & R",
     "section": "",
-    "text": "I’m an ordinary person who is down-to-earth. If you’d like to learn more about me, feel free to visit my About page."
+    "text": "Who are you?\nWhy did you start Stats & R?\nCan I use the content on your website for my own purposes?\nDo you accept guest posts or contributions?\nHow can I support your website or contribute to your work?\nAre there any other software or resources you recommend for data science?"
   },
   {
-    "objectID": "faq.html#why-did-you-start-stats-r",
-    "href": "faq.html#why-did-you-start-stats-r",
+    "objectID": "faq.html#sec-who-are-you-",
+    "href": "faq.html#sec-who-are-you-",
+    "title": "Stats & R",
+    "section": "Who are you?",
+    "text": "Who are you?\nI’m an ordinary person who is down-to-earth. If you’d like to learn more about me, feel free to visit my About page."
+  },
+  {
+    "objectID": "faq.html#sec-why-did-you-start-stats--r-",
+    "href": "faq.html#sec-why-did-you-start-stats--r-",
     "title": "Stats & R",
     "section": "Why did you start Stats & R ?",
     "text": "Why did you start Stats & R ?\nThe purpose of starting Stats & R is to motivate myself to continuously learn new knowledge, as well as to showcasing my achievements for those interested in R language and data science to read, offer feedback and engage in mutual exchange."
   },
   {
-    "objectID": "faq.html#can-i-use-the-content-on-your-website-for-my-own-purposes",
-    "href": "faq.html#can-i-use-the-content-on-your-website-for-my-own-purposes",
+    "objectID": "faq.html#sec-can-i-use-the-content-on-your-website-for-my-own-purposes",
+    "href": "faq.html#sec-can-i-use-the-content-on-your-website-for-my-own-purposes",
     "title": "Stats & R",
     "section": "Can I use the content on your website for my own purposes?",
     "text": "Can I use the content on your website for my own purposes?\nFeel free to utilize the content on my website for your own use, but please adhere to the following guidelines:\n\nCommercial use of my content is prohibited.\nProper credit must be given in your works.\nI am not liable for any issues related to the code or results in the content.\n\nIf you incorporate my code or material into your project, kindly reference the following details:\n\nAuthor’s name: “NING LI”\nTitle of the article or tutorial\nWebsite name: “Stats & R”\nURL of the article or tutorial\nDate of access or code reproduction\n\nFor example:\nNING LI, R Basic, Stats & R. Retrieved from https://stats-r.com/series/r%20basic/, accessed on March 6th, 2023."
   },
   {
-    "objectID": "faq.html#do-you-accept-guest-posts-or-contributions",
-    "href": "faq.html#do-you-accept-guest-posts-or-contributions",
+    "objectID": "faq.html#sec-do-you-accept-guest-posts-or-contributions",
+    "href": "faq.html#sec-do-you-accept-guest-posts-or-contributions",
     "title": "Stats & R",
     "section": "Do you accept guest posts or contributions?",
     "text": "Do you accept guest posts or contributions?\nOf course. I warmly welcome you to publish posts and make valuable contributions on my website.\nIf you are interested in publishing a post on my website, please contact me through Twitter or github. Once your submission has been reviewed and approved, I will publish it on my website, and the copyright will belong to you. Additionally, if you have any suggestions or feedback regarding my content, please contact me through the contact form. I will respond to your message promptly."
   },
   {
-    "objectID": "faq.html#how-can-i-support-your-website-or-contribute-to-your-work",
-    "href": "faq.html#how-can-i-support-your-website-or-contribute-to-your-work",
+    "objectID": "faq.html#sec-how-can-i-support-your-website-or-contribute-to-your-work",
+    "href": "faq.html#sec-how-can-i-support-your-website-or-contribute-to-your-work",
     "title": "Stats & R",
     "section": "How can I support your website or contribute to your work?",
     "text": "How can I support your website or contribute to your work?\nIf you find my content helpful, please consider supporting me by buying me a coffee.\nOr, You are also welcome to buy me by Wechat and Alipay:"
   },
   {
-    "objectID": "faq.html#are-there-any-other-software-or-resources-you-recommend-for-data-science",
-    "href": "faq.html#are-there-any-other-software-or-resources-you-recommend-for-data-science",
+    "objectID": "faq.html#sec-are-there-any-other-software-or-resources-you-recommend-for-data-science",
+    "href": "faq.html#sec-are-there-any-other-software-or-resources-you-recommend-for-data-science",
     "title": "Stats & R",
     "section": "Are there any other software or resources you recommend for data science?",
     "text": "Are there any other software or resources you recommend for data science?\nAs a science researcher, I deal with various scientific tools every day. Here, I have listed some of the software I use. If anyone knows better software, please leave a comment in the section below.\n\nStatistical software\nStatistical software is the most commonly used, and I mainly focus on R language, for no other reason than it being free and powerful!!!\n\nR (free and open source)\nRstudio (the most popular R IDE)\nIBM SPSS\nOriginLab\njamovi\n\n\n\nReference management software\nGood reference management software will greatly improve your efficiency in selecting and citing literature.\n\nEndnote\nZotero\nMendeley\n\n\n\nFlowchart software\n\nDiagrams.net"

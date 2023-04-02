@@ -12,6 +12,7 @@ website:
   repo-actions: [edit, issue]
   repo-url: https://github.com/NING3739/statsr
   site-url: 'https://stats-r.com'
+  
   search:
     location: navbar
     type: textbox
@@ -26,12 +27,12 @@ website:
         href: url
         section: sec
         text: body
+  
   navbar:
     logo: Stats-&-R.png
     logo-alt: "Stats-&-R.png"
     pinned: true
     left:
-      
       - icon: newspaper
         text: "Posts"
         href: posts.qmd
@@ -41,6 +42,9 @@ website:
       - icon: easel2
         text: "Projects"
         href: project.qmd
+      - icon: chat-text
+        text: "Talks"
+        href: talk.qmd
       - icon: file-person
         text: "About"
         href: about.qmd 
