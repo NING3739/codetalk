@@ -1,26 +1,5 @@
 [
   {
-    "objectID": "index.html#welcome-to-stats-r",
-    "href": "index.html#welcome-to-stats-r",
-    "title": "Stats & R",
-    "section": "Welcome to Stats & R!!!",
-    "text": "Welcome to Stats & R!!!\nAs a data science enthusiast, I have always wanted to create a personal website. With this website, I hope to not only continue learning new knowledge in my spare time but also track my own growth by sharing my findings. Additionally, I wanted to introduce myself to everyone. During my journey learning R language, I stumbled upon Rstudio’s new open source publishing system, Quarto. Quarto’s publishing system is simple and easy to pick up. And so, after some trial and error, Stats & R was born.\nStats & R is a research sharing website that focuses on using R language to solve statistical problems. The website is divided into four parts.\nThe first part is “Posts”. This page showcases interesting thoughts and questions that arose during my R language learning process. I will periodically share these thoughts in the form of blogs. Readers can actively leave any questions or interesting ideas in the comment section below.\nThe second part is “Series”. If you are a beginner in R language, then you can start learning the language systematically for free. This section will provide readers with all the knowledge points about R language in a systematic manner.\nThe third part is the “About” page. You can find out who I am, what I am doing, and my research achievements.\nThe fourth part is the “Contact” page. If you have any questions, please carefully read the communication terms before contacting me using the specified contact information.\nOnce again, thank you for visiting my personal website. I hope you can experience the beauty of R language and data science here. 😘"
-  },
-  {
-    "objectID": "index.html#license",
-    "href": "index.html#license",
-    "title": "Stats & R",
-    "section": "License",
-    "text": "License\n\nStats & R by NING LI is licensed under Attribution-NonCommercial-NoDerivatives 4.0 International\n\nVisit here for more information about the license."
-  },
-  {
-    "objectID": "index.html#lastest-posts",
-    "href": "index.html#lastest-posts",
-    "title": "Stats & R",
-    "section": "Lastest posts",
-    "text": "Lastest posts\n\n\n\n    \n        \n        \n            Feb 07, 2023        \n        \n        \n            Guide to study R productively     \n        \n        \n                tutorial\n                \n\n        \n        \n            Jan 19, 2023        \n        \n        \n            How to install R and Rstudio     \n        \n        \n                tutorial\n                \n\n        \n        \n            Dec 01, 2022        \n        \n        \n            Dynamic Graph     \n        \n        \n                code\n                analysis\n                \n\n        \n        \n            Nov 30, 2022        \n        \n        \n            Christmas Tree     \n        \n        \n                code\n                \n\n        \n        \n            Nov 27, 2022        \n        \n        \n            A Big Welcome!!!     \n        \n        \n                news\n                \n\n\n\n\nNo matching items\n\n\n  \n\n\n See all"
-  },
-  {
     "objectID": "series/R Basic/index.html",
     "href": "series/R Basic/index.html",
     "title": "R Basic",
@@ -614,6 +593,27 @@
     "title": "Stats & R",
     "section": "",
     "text": "66666"
+  },
+  {
+    "objectID": "index.html#welcome-to-stats-r",
+    "href": "index.html#welcome-to-stats-r",
+    "title": "Stats & R",
+    "section": "Welcome to Stats & R!!!",
+    "text": "Welcome to Stats & R!!!\nI’m glad you’re here at my website, Stats & R! As an avid enthusiast of statistics and the R programming language, I’ve created this platform to share my experiences, research and projects with fellow aficionados.\nStats & R is more than just a showcase of my work – it’s a thriving community where you can engage with the content, expand your knowledge, and connect with others in the fascinating world of statistics and R.\nNavigating through the six main sections of my website with ease:\n\n“Posts”: In this section, I share my reflections and questions that have emerged throughout my R language learning journey, providing engaging insights and perspectives on various aspects of R programming and statistics.\n“Series”: Here you’ll find a systematic approach to learning R. Explore comprehensive tutorials and guides crafted to guide you toward proficiency in R programming.\n“Projects”: Explore the real-world projects I’ve undertaken, demonstrating the power and versatility of R in addressing intricate statistical challenges, and find inspiration for your own projects.\n“Talks”: Keep up to date with my most recent presentations, where I delve into topical subjects and share research findings, offering a wealth of knowledge on the latest advancements in R and statistics.\n“About”: You can find out my background, what I’m currently working on, and my research achievements. My passion for statistics, R programming, and knowledge-sharing is the driving force behind Stats & R.\n“Contact”: If you have any questions or require assistance, please don’t hesitate to reach out, reviewing the communication terms carefully before contacting me using the provided contact information.\n\nOnce again, thank you for visiting Stats & R. I hope you find the content engaging and informative, and that my platform serves as a valuable resource for you as you delve into the captivating realms of statistics and R programming. Enjoy your time and have fun exploring! 😘"
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "Stats & R",
+    "section": "License",
+    "text": "License\n\nStats & R by NING LI is licensed under Attribution-NonCommercial-NoDerivatives 4.0 International\n\nVisit here for more information about the license."
+  },
+  {
+    "objectID": "index.html#lastest-posts",
+    "href": "index.html#lastest-posts",
+    "title": "Stats & R",
+    "section": "Lastest posts",
+    "text": "Lastest posts\n\n\n\n    \n        \n        \n            Feb 07, 2023        \n        \n        \n            Guide to study R productively     \n        \n        \n                tutorial\n                \n\n        \n        \n            Jan 19, 2023        \n        \n        \n            How to install R and Rstudio     \n        \n        \n                tutorial\n                \n\n        \n        \n            Dec 01, 2022        \n        \n        \n            Dynamic Graph     \n        \n        \n                code\n                analysis\n                \n\n        \n        \n            Nov 30, 2022        \n        \n        \n            Christmas Tree     \n        \n        \n                code\n                \n\n        \n        \n            Nov 27, 2022        \n        \n        \n            A Big Welcome!!!     \n        \n        \n                news\n                \n\n\n\n\nNo matching items\n\n\n  \n\n\n See all"
   },
   {
     "objectID": "about.html",

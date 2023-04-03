@@ -1,5 +1,13 @@
 [
   {
+    "listing": "/series.html",
+    "items": [
+      "/series/Probability/index.html",
+      "/series/Data Visualization/index.html",
+      "/series/R Basic/index.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
       "/posts/Guide to study R productively/index.html",
@@ -7,14 +15,6 @@
       "/posts/Dynamic Graph/index.html",
       "/posts/Christmas Tree/index.html",
       "/posts/welcome/index.html"
-    ]
-  },
-  {
-    "listing": "/series.html",
-    "items": [
-      "/series/Probability/index.html",
-      "/series/Data Visualization/index.html",
-      "/series/R Basic/index.html"
     ]
   },
   {

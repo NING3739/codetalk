@@ -22,19 +22,25 @@ format:
 
 ## Welcome to Stats & R!!! {.center-text}
 
-As a data science enthusiast, I have always wanted to create a personal website. With this website, I hope to not only continue learning new knowledge in my spare time but also track my own growth by sharing my findings. Additionally, I wanted to introduce myself to everyone. During my journey learning [R language](https://www.r-project.org/), I stumbled upon [Rstudio](https://posit.co)'s new open source publishing system, [Quarto](https://quarto.org/). Quarto's publishing system is simple and easy to pick up. And so, after some trial and error, Stats & R was born.
+I'm glad you're here at my website, Stats & R! As an avid enthusiast of statistics and the [R programming language](https://www.r-project.org/), I've created this platform to share my experiences, research and projects with fellow aficionados.
 
-Stats & R is a research sharing website that focuses on using R language to solve statistical problems. The website is divided into four parts.
+Stats & R is more than just a showcase of my work -- it's a thriving community where you can engage with the content, expand your knowledge, and connect with others in the fascinating world of statistics and R.
 
-The first part is "[Posts](posts.qmd)". This page showcases interesting thoughts and questions that arose during my R language learning process. I will periodically share these thoughts in the form of blogs. Readers can actively leave any questions or interesting ideas in the comment section below.
+Navigating through the six main sections of my website with ease:
 
-The second part is "[Series](series.qmd)". If you are a beginner in R language, then you can start learning the language systematically for free. This section will provide readers with all the knowledge points about R language in a systematic manner.
+-   "[Posts](posts.qmd)": In this section, I share my reflections and questions that have emerged throughout my R language learning journey, providing engaging insights and perspectives on various aspects of R programming and statistics.
 
-The third part is the "[About](about.qmd)" page. You can find out who I am, what I am doing, and my research achievements.
+-   "[Series](series.qmd)": Here you'll find a systematic approach to learning R. Explore comprehensive tutorials and guides crafted to guide you toward proficiency in R programming.
 
-The fourth part is the "[Contact](contact.qmd)" page. If you have any questions, please carefully read the communication terms before contacting me using the specified contact information.
+-   "[Projects](project.qmd)": Explore the real-world projects I've undertaken, demonstrating the power and versatility of R in addressing intricate statistical challenges, and find inspiration for your own projects.
 
-Once again, thank you for visiting my personal website. I hope you can experience the beauty of R language and data science here. 😘
+-   "[Talks](talk.qmd)": Keep up to date with my most recent presentations, where I delve into topical subjects and share research findings, offering a wealth of knowledge on the latest advancements in R and statistics.
+
+-   "[About](about.qmd)": You can find out my background, what I'm currently working on, and my research achievements. My passion for statistics, R programming, and knowledge-sharing is the driving force behind Stats & R.
+
+-   "[Contact](contact.qmd)": If you have any questions or require assistance, please don't hesitate to reach out, reviewing the communication terms carefully before contacting me using the provided contact information.
+
+Once again, thank you for visiting Stats & R. I hope you find the content engaging and informative, and that my platform serves as a valuable resource for you as you delve into the captivating realms of statistics and R programming. Enjoy your time and have fun exploring! 😘
 
 ## License
 
