@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>Stats &amp; R</title>
-<link>https://quartopub.com/sites/ningli/statsr/series.html</link>
-<atom:link href="https://quartopub.com/sites/ningli/statsr/series.xml" rel="self" type="application/rss+xml"/>
+<link>https://stats-r.com/series.html</link>
+<atom:link href="https://stats-r.com/series.xml" rel="self" type="application/rss+xml"/>
 <description>Welcome to Stats &amp; R. This is a personal website devoted primarily to R, Python, and statistics.</description>
 <generator>quarto-1.2.475</generator>
 <lastBuildDate>Tue, 06 Dec 2022 11:00:00 GMT</lastBuildDate>
 <item>
   <title>Probability</title>
   <dc:creator>NING LI</dc:creator>
-  <link>https://quartopub.com/sites/ningli/statsr/series/Probability/index.html</link>
+  <link>https://stats-r.com/series/Probability/index.html</link>
   <description><![CDATA[ 
 
 
@@ -25,14 +25,14 @@
  ]]></description>
   <category>Data Science</category>
   <category>Probability</category>
-  <guid>https://quartopub.com/sites/ningli/statsr/series/Probability/index.html</guid>
+  <guid>https://stats-r.com/series/Probability/index.html</guid>
   <pubDate>Tue, 06 Dec 2022 11:00:00 GMT</pubDate>
   <media:content url="https://images.unsplash.com/photo-1609017909889-d7b582c072f7?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy&amp;w=3600" medium="image"/>
 </item>
 <item>
   <title>Data Visualization</title>
   <dc:creator>NING LI</dc:creator>
-  <link>https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index.html</link>
+  <link>https://stats-r.com/series/Data Visualization/index.html</link>
   <description><![CDATA[ <section id="welcome" class="level1" data-number="1"><h1 data-number="1">
 <span class="header-section-number">1</span> Welcome!</h1>
 <section id="what-is-data-visualization" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="what-is-data-visualization">
@@ -191,7 +191,7 @@ Important
 <p>Every <em>continuous distribution</em> has <em>cumulative distribution function (CDF)</em>. The CDF defines the proportion of the data below a given value for all values of <img src="https://latex.codecogs.com/png.latex?a"> :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p></p><figcaption class="figure-caption">Cumulative Distribution Function (CDF)</figcaption><p></p>
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/https:/rafalab.dfci.harvard.edu/dsbook/book_files/figure-html/ecdf-1.png" class="img-fluid figure-img"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/https:/rafalab.dfci.harvard.edu/dsbook/book_files/figure-html/ecdf-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>As defined above, this plot of the CDF for male heights has height value <em>a</em> on the x-axis and the proportion of student with heights of that value or lower(<em>F(</em>a<em>)</em>) on the y-axis.</p>
@@ -220,7 +220,7 @@ Important
 <span id="cb6-6">cdf_value <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">sapply</span>(a, cdf_function)</span>
 <span id="cb6-7"><span class="fu" style="color: #4758AB;">plot</span>(a, cdf_value)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>The CDF defines that proportion of data below a cut-off <img src="https://latex.codecogs.com/png.latex?a">. To define the proportion of values above <img src="https://latex.codecogs.com/png.latex?a">, we compute: <img src="https://latex.codecogs.com/png.latex?1-F(a)"></p>
@@ -314,7 +314,7 @@ A further note on histograms
 <p>The normal distribution is associated with the 68-95-99.7 rule. This rule describes the probability of observing events within a ceration number of standard deviations of the mean.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p></p><figcaption class="figure-caption">Normal Distribution Probabilities</figcaption><p></p>
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/28d10d22ba8b3bf4b0cc5024de0dc616/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-probs-combined.png" class="img-fluid figure-img"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/28d10d22ba8b3bf4b0cc5024de0dc616/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-probs-combined.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>The probability distribution function for the normal distribution is defined such that:</p>
@@ -324,7 +324,7 @@ A further note on histograms
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p></p><figcaption class="figure-caption">Probability of an observation within 1 SD of mean</figcaption><p></p>
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/f0bb9f66b7bdd91b2c9852c7a68427c7/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-1sd.png" class="img-fluid figure-img"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/f0bb9f66b7bdd91b2c9852c7a68427c7/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-1sd.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <ul>
@@ -332,7 +332,7 @@ A further note on histograms
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p></p><figcaption class="figure-caption">Probability of an ovservation within 2 SD of mean</figcaption><p></p>
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/9686a507a97a536a1f5c6b6a01bd8154/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-2sd.png" class="img-fluid figure-img"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/9686a507a97a536a1f5c6b6a01bd8154/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-2sd.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <ul>
@@ -340,7 +340,7 @@ A further note on histograms
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p></p><figcaption class="figure-caption">Probability of an observation within 3 SD of mean</figcaption><p></p>
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/a8af7c699c20d1e83819b5f68bf6f17d/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-3sd.png" class="img-fluid figure-img"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/https:/courses.edx.org/assets/courseware/v1/a8af7c699c20d1e83819b5f68bf6f17d/asset-v1:HarvardX+PH125.2x+1T2022+type@asset+block/norm-dist-3sd.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </section></section><section id="the-normal-cdf-and-pnorm" class="level2" data-number="2.9"><h2 data-number="2.9" class="anchored" data-anchor-id="the-normal-cdf-and-pnorm">
@@ -373,7 +373,7 @@ A further note on histograms
 <div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><span class="co" style="color: #5E5E5E;"># plot distribution of exact heights in data</span></span>
 <span id="cb10-2"><span class="fu" style="color: #4758AB;">plot</span>(<span class="fu" style="color: #4758AB;">prop.table</span>(<span class="fu" style="color: #4758AB;">table</span>(x)), <span class="at" style="color: #657422;">xlab =</span> <span class="st" style="color: #20794D;">"a = Height in inches"</span>, <span class="at" style="color: #657422;">ylab =</span> <span class="st" style="color: #20794D;">"Pr(x = a)"</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="cell">
@@ -508,7 +508,7 @@ A further note on histograms
 <span id="cb27-7"><span class="fu" style="color: #4758AB;">plot</span>(theoretical_quantiles, observed_quantiles)</span>
 <span id="cb27-8"><span class="fu" style="color: #4758AB;">abline</span>(<span class="dv" style="color: #AD0000;">0</span>,<span class="dv" style="color: #AD0000;">1</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb28" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><span class="co" style="color: #5E5E5E;"># make QQ-plot with scaled values</span></span>
 <span id="cb28-2">observed_quantiles <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">quantile</span>(z, p)</span>
@@ -516,7 +516,7 @@ A further note on histograms
 <span id="cb28-4"><span class="fu" style="color: #4758AB;">plot</span>(theoretical_quantiles, observed_quantiles)</span>
 <span id="cb28-5"><span class="fu" style="color: #4758AB;">abline</span>(<span class="dv" style="color: #AD0000;">0</span>,<span class="dv" style="color: #AD0000;">1</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-21-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-21-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section></section><section id="percentiles-1" class="level2" data-number="2.13"><h2 data-number="2.13" class="anchored" data-anchor-id="percentiles-1">
@@ -651,13 +651,13 @@ A further note on histograms
 <span id="cb32-2">p <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="at" style="color: #657422;">data =</span> murders)</span>
 <span id="cb32-3">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_point</span>(<span class="fu" style="color: #4758AB;">aes</span>(population<span class="sc" style="color: #5E5E5E;">/</span><span class="dv" style="color: #AD0000;">10</span><span class="sc" style="color: #5E5E5E;">^</span><span class="dv" style="color: #AD0000;">6</span>, total))</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><span class="co" style="color: #5E5E5E;"># add text layer to scatterplot</span></span>
 <span id="cb33-2">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_point</span>(<span class="fu" style="color: #4758AB;">aes</span>(population<span class="sc" style="color: #5E5E5E;">/</span><span class="dv" style="color: #AD0000;">10</span><span class="sc" style="color: #5E5E5E;">^</span><span class="dv" style="color: #AD0000;">6</span>, total)) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb33-3">  <span class="fu" style="color: #4758AB;">geom_text</span>(<span class="fu" style="color: #4758AB;">aes</span>(population<span class="sc" style="color: #5E5E5E;">/</span><span class="dv" style="color: #AD0000;">10</span><span class="sc" style="color: #5E5E5E;">^</span><span class="dv" style="color: #AD0000;">6</span>, total, <span class="at" style="color: #657422;">label =</span> abb))</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-25-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-25-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Code: Example of <code>aes</code> behavior</p>
@@ -696,26 +696,26 @@ A further note on histograms
 <span id="cb35-2">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_point</span>(<span class="fu" style="color: #4758AB;">aes</span>(population<span class="sc" style="color: #5E5E5E;">/</span><span class="dv" style="color: #AD0000;">10</span><span class="sc" style="color: #5E5E5E;">^</span><span class="dv" style="color: #AD0000;">6</span>, total), <span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">3</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb35-3">    <span class="fu" style="color: #4758AB;">geom_text</span>(<span class="fu" style="color: #4758AB;">aes</span>(population<span class="sc" style="color: #5E5E5E;">/</span><span class="dv" style="color: #AD0000;">10</span><span class="sc" style="color: #5E5E5E;">^</span><span class="dv" style="color: #AD0000;">6</span>, total, <span class="at" style="color: #657422;">label =</span> abb))</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb36" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><span class="co" style="color: #5E5E5E;"># move text labels slightly to the right</span></span>
 <span id="cb36-2">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_point</span>(<span class="fu" style="color: #4758AB;">aes</span>(population<span class="sc" style="color: #5E5E5E;">/</span><span class="dv" style="color: #AD0000;">10</span><span class="sc" style="color: #5E5E5E;">^</span><span class="dv" style="color: #AD0000;">6</span>, total), <span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">3</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb36-3">    <span class="fu" style="color: #4758AB;">geom_text</span>(<span class="fu" style="color: #4758AB;">aes</span>(population<span class="sc" style="color: #5E5E5E;">/</span><span class="dv" style="color: #AD0000;">10</span><span class="sc" style="color: #5E5E5E;">^</span><span class="dv" style="color: #AD0000;">6</span>, total, <span class="at" style="color: #657422;">label =</span> abb), <span class="at" style="color: #657422;">nudge_x =</span> <span class="dv" style="color: #AD0000;">1</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-27-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-27-2.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb37" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><span class="co" style="color: #5E5E5E;"># simplify code by adding global aesthetic</span></span>
 <span id="cb37-2">p <span class="ot" style="color: #003B4F;">&lt;-</span> murders <span class="sc" style="color: #5E5E5E;">%&gt;%</span> <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(population<span class="sc" style="color: #5E5E5E;">/</span><span class="dv" style="color: #AD0000;">10</span><span class="sc" style="color: #5E5E5E;">^</span><span class="dv" style="color: #AD0000;">6</span>, total, <span class="at" style="color: #657422;">label =</span> abb))</span>
 <span id="cb37-3">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_point</span>(<span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">3</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb37-4">    <span class="fu" style="color: #4758AB;">geom_text</span>(<span class="at" style="color: #657422;">nudge_x =</span> <span class="fl" style="color: #AD0000;">1.5</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-27-3.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-27-3.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb38" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><span class="co" style="color: #5E5E5E;"># local aesthetics override global aesthetics</span></span>
 <span id="cb38-2">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_point</span>(<span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">3</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb38-3">  <span class="fu" style="color: #4758AB;">geom_text</span>(<span class="fu" style="color: #4758AB;">aes</span>(<span class="at" style="color: #657422;">x =</span> <span class="dv" style="color: #AD0000;">10</span>, <span class="at" style="color: #657422;">y =</span> <span class="dv" style="color: #AD0000;">800</span>, <span class="at" style="color: #657422;">label =</span> <span class="st" style="color: #20794D;">"Hello there!"</span>))</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-27-4.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-27-4.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section></section><section id="scales-labels-and-colors" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="scales-labels-and-colors">
@@ -759,7 +759,7 @@ A further note on histograms
 <span id="cb40-4">    <span class="fu" style="color: #4758AB;">scale_x_log10</span>() <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb40-5">    <span class="fu" style="color: #4758AB;">scale_y_log10</span>()</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section><section id="code-add-labels-and-title" class="level3" data-number="3.7.4"><h3 data-number="3.7.4" class="anchored" data-anchor-id="code-add-labels-and-title">
@@ -773,7 +773,7 @@ A further note on histograms
 <span id="cb41-6">    <span class="fu" style="color: #4758AB;">ylab</span>(<span class="st" style="color: #20794D;">"Total number of murders(log scale)"</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb41-7">    <span class="fu" style="color: #4758AB;">ggtitle</span>(<span class="st" style="color: #20794D;">"US Gun Murders in 2010"</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section><section id="code-change-color-of-the-points" class="level3" data-number="3.7.5"><h3 data-number="3.7.5" class="anchored" data-anchor-id="code-change-color-of-the-points">
@@ -793,14 +793,14 @@ A further note on histograms
 <div class="sourceCode cell-code" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><span class="co" style="color: #5E5E5E;"># make all points blue</span></span>
 <span id="cb43-2">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_point</span>(<span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">3</span>, <span class="at" style="color: #657422;">color =</span> <span class="st" style="color: #20794D;">"blue"</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb44" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><span class="co" style="color: #5E5E5E;"># color points by region</span></span>
 <span id="cb44-2">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_point</span>(<span class="fu" style="color: #4758AB;">aes</span>(<span class="at" style="color: #657422;">col =</span> region), <span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">3</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section><section id="code-add-a-line-with-average-murder-rate" class="level3" data-number="3.7.6"><h3 data-number="3.7.6" class="anchored" data-anchor-id="code-add-a-line-with-average-murder-rate">
@@ -816,7 +816,7 @@ A further note on histograms
 <span id="cb45-8">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_abline</span>(<span class="at" style="color: #657422;">intercept =</span> <span class="fu" style="color: #4758AB;">log</span>(r), <span class="at" style="color: #657422;">lty =</span> <span class="dv" style="color: #AD0000;">2</span>, <span class="at" style="color: #657422;">color =</span> <span class="st" style="color: #20794D;">"darkgrey"</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb45-9">    <span class="fu" style="color: #4758AB;">geom_point</span>(<span class="fu" style="color: #4758AB;">aes</span>(<span class="at" style="color: #657422;">col =</span> region), <span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">3</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
@@ -839,7 +839,7 @@ Line types in R: Ity
 <span id="cb46-2">p <span class="ot" style="color: #003B4F;">&lt;-</span> p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">scale_color_discrete</span>(<span class="at" style="color: #657422;">name =</span> <span class="st" style="color: #20794D;">"Region"</span>)</span>
 <span id="cb46-3">p</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section></section><section id="add-on-packages" class="level2" data-number="3.8"><h2 data-number="3.8" class="anchored" data-anchor-id="add-on-packages">
@@ -869,11 +869,11 @@ Line types in R: Ity
 <div class="cell">
 <div class="sourceCode cell-code" id="cb49" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">theme_economist</span>()    <span class="co" style="color: #5E5E5E;"># style of the Economist magazine</span></span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb50" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">theme_fivethirtyeight</span>()    <span class="co" style="color: #5E5E5E;"># style of the FiveThirtyEight website</span></span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-38-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-38-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section><section id="code-putting-it-all-together-to-assemble-the-plot" class="level3" data-number="3.8.4"><h3 data-number="3.8.4" class="anchored" data-anchor-id="code-putting-it-all-together-to-assemble-the-plot">
@@ -906,7 +906,7 @@ Line types in R: Ity
 <span id="cb52-17">    <span class="fu" style="color: #4758AB;">scale_color_discrete</span>(<span class="at" style="color: #657422;">name =</span> <span class="st" style="color: #20794D;">"Region"</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb52-18">    <span class="fu" style="color: #4758AB;">theme_economist</span>()</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-40-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-40-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section></section><section id="other-examples" class="level2" data-number="3.9"><h2 data-number="3.9" class="anchored" data-anchor-id="other-examples">
@@ -943,18 +943,18 @@ Line types in R: Ity
 <pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 </div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-42-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-42-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb56" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_histogram</span>(<span class="at" style="color: #657422;">binwidth =</span> <span class="dv" style="color: #AD0000;">1</span>) <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">ggtitle</span>(<span class="st" style="color: #20794D;">"binwidth is 1"</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-42-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-42-2.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb57" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><span class="co" style="color: #5E5E5E;"># histogram with blue fill, black outline, labels and title</span></span>
 <span id="cb57-2">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_histogram</span>(<span class="at" style="color: #657422;">binwidth =</span> <span class="dv" style="color: #AD0000;">1</span>, <span class="at" style="color: #657422;">fill =</span><span class="st" style="color: #20794D;">"blue"</span>, <span class="at" style="color: #657422;">col =</span> <span class="st" style="color: #20794D;">"black"</span>) <span class="sc" style="color: #5E5E5E;">+</span> </span>
 <span id="cb57-3">  <span class="fu" style="color: #4758AB;">xlab</span>(<span class="st" style="color: #20794D;">"Male heights in inches"</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb57-4">  <span class="fu" style="color: #4758AB;">ggtitle</span>(<span class="st" style="color: #20794D;">"histogram"</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-42-3.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-42-3.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section><section id="code-smooth-density-plots-in-ggplot2" class="level3" data-number="3.9.4"><h3 data-number="3.9.4" class="anchored" data-anchor-id="code-smooth-density-plots-in-ggplot2">
@@ -962,14 +962,14 @@ Line types in R: Ity
 <div class="cell">
 <div class="sourceCode cell-code" id="cb58" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_density</span>()</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-43-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-43-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb59" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_density</span>(<span class="at" style="color: #657422;">fill =</span> <span class="st" style="color: #20794D;">"blue"</span>, <span class="at" style="color: #657422;">col =</span> <span class="st" style="color: #20794D;">"red"</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb59-2">  <span class="fu" style="color: #4758AB;">xlab</span>(<span class="st" style="color: #20794D;">"Male heights in inches"</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb59-3">  <span class="fu" style="color: #4758AB;">ylab</span>(<span class="st" style="color: #20794D;">"proportion of Male heights"</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb59-4">  <span class="fu" style="color: #4758AB;">ggtitle</span>(<span class="st" style="color: #20794D;">"Male heights distribution"</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-43-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-43-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section><section id="code-quantile-quantile-plots-in-ggplot2" class="level3" data-number="3.9.5"><h3 data-number="3.9.5" class="anchored" data-anchor-id="code-quantile-quantile-plots-in-ggplot2">
@@ -980,7 +980,7 @@ Line types in R: Ity
 <span id="cb60-3">  <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(<span class="at" style="color: #657422;">sample =</span> height))</span>
 <span id="cb60-4">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_qq</span>()</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-44-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-44-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb61" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><span class="co" style="color: #5E5E5E;"># QQ-plot against a normal distribution with same mean/sd as data</span></span>
 <span id="cb61-2">params <span class="ot" style="color: #003B4F;">&lt;-</span> heights <span class="sc" style="color: #5E5E5E;">%&gt;%</span> </span>
@@ -989,7 +989,7 @@ Line types in R: Ity
 <span id="cb61-5">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_qq</span>(<span class="at" style="color: #657422;">dparams =</span> params) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb61-6">  <span class="fu" style="color: #4758AB;">geom_abline</span>()</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-44-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-44-2.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb62" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><span class="co" style="color: #5E5E5E;"># QQ-plot of scaled data against the standard normal distribution</span></span>
 <span id="cb62-2">heights <span class="sc" style="color: #5E5E5E;">%&gt;%</span> </span>
@@ -997,7 +997,7 @@ Line types in R: Ity
 <span id="cb62-4">  <span class="fu" style="color: #4758AB;">geom_qq</span>() <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb62-5">  <span class="fu" style="color: #4758AB;">geom_abline</span>()</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-44-3.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-44-3.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="cell">
@@ -1014,7 +1014,7 @@ Line types in R: Ity
 <div class="cell">
 <div class="sourceCode cell-code" id="cb65" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><span class="fu" style="color: #4758AB;">grid.arrange</span>(p1, p2, p3, <span class="at" style="color: #657422;">ncol =</span> <span class="dv" style="color: #AD0000;">3</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-47-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-47-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section></section></section><section id="gapminder" class="level1 page-columns page-full" data-number="4"><h1 data-number="4">
@@ -1102,14 +1102,14 @@ Line types in R: Ity
 <span id="cb73-4">  <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(fertility, life_expectancy)) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb73-5">  <span class="fu" style="color: #4758AB;">geom_point</span>()</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-51-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-51-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb74" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><span class="co" style="color: #5E5E5E;"># add color as continent</span></span>
 <span id="cb74-2"><span class="fu" style="color: #4758AB;">filter</span>(gapminder, year <span class="sc" style="color: #5E5E5E;">==</span> <span class="dv" style="color: #AD0000;">1962</span>) <span class="sc" style="color: #5E5E5E;">%&gt;%</span> </span>
 <span id="cb74-3">  <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(fertility, life_expectancy, <span class="at" style="color: #657422;">color =</span> continent)) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb74-4">  <span class="fu" style="color: #4758AB;">geom_point</span>()</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-51-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-51-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section></section><section id="faceting" class="level2 page-columns page-full" data-number="4.5"><h2 data-number="4.5" class="anchored" data-anchor-id="faceting">
@@ -1133,7 +1133,7 @@ Line types in R: Ity
 <span id="cb75-4">  <span class="fu" style="color: #4758AB;">geom_point</span>() <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb75-5">  <span class="fu" style="color: #4758AB;">facet_grid</span>(continent <span class="sc" style="color: #5E5E5E;">~</span> year)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-52-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-52-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb76" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><span class="co" style="color: #5E5E5E;"># facet by year only </span></span>
 <span id="cb76-2"><span class="fu" style="color: #4758AB;">filter</span>(gapminder, year <span class="sc" style="color: #5E5E5E;">%in%</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="dv" style="color: #AD0000;">1962</span>, <span class="dv" style="color: #AD0000;">2012</span>)) <span class="sc" style="color: #5E5E5E;">%&gt;%</span> </span>
@@ -1141,7 +1141,7 @@ Line types in R: Ity
 <span id="cb76-4">  <span class="fu" style="color: #4758AB;">geom_point</span>() <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb76-5">  <span class="fu" style="color: #4758AB;">facet_grid</span>(. <span class="sc" style="color: #5E5E5E;">~</span> year)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-52-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-52-2.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb77" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><span class="co" style="color: #5E5E5E;"># facet by year, plots wrapped onto multiple rows</span></span>
 <span id="cb77-2">years <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">c</span>(<span class="dv" style="color: #AD0000;">1962</span>, <span class="dv" style="color: #AD0000;">1980</span>, <span class="dv" style="color: #AD0000;">1990</span>, <span class="dv" style="color: #AD0000;">2000</span>, <span class="dv" style="color: #AD0000;">2012</span>)</span>
@@ -1152,7 +1152,7 @@ Line types in R: Ity
 <span id="cb77-7">  <span class="fu" style="color: #4758AB;">geom_point</span>() <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb77-8">  <span class="fu" style="color: #4758AB;">facet_wrap</span>(. <span class="sc" style="color: #5E5E5E;">~</span> year)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-52-3.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-52-3.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section></section><section id="time-series-plots" class="level2" data-number="4.6"><h2 data-number="4.6" class="anchored" data-anchor-id="time-series-plots">
@@ -1173,7 +1173,7 @@ Line types in R: Ity
 <span id="cb78-4">  <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(year, fertility)) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb78-5">  <span class="fu" style="color: #4758AB;">geom_point</span>()</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-53-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-53-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb79" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><span class="co" style="color: #5E5E5E;"># line plot of US fertility by year</span></span>
 <span id="cb79-2">gapminder <span class="sc" style="color: #5E5E5E;">%&gt;%</span> </span>
@@ -1181,7 +1181,7 @@ Line types in R: Ity
 <span id="cb79-4">  <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(year, fertility)) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb79-5">  <span class="fu" style="color: #4758AB;">geom_line</span>()</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-53-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-53-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section><section id="code-multiple-time-series" class="level3" data-number="4.6.3"><h3 data-number="4.6.3" class="anchored" data-anchor-id="code-multiple-time-series">
@@ -1193,21 +1193,21 @@ Line types in R: Ity
 <span id="cb80-4">    <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(year, fertility)) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb80-5">    <span class="fu" style="color: #4758AB;">geom_line</span>()</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-54-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-54-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb81" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb81-1"><span class="co" style="color: #5E5E5E;"># line plot fertility time series for two countries - one line per country</span></span>
 <span id="cb81-2">gapminder <span class="sc" style="color: #5E5E5E;">%&gt;%</span> <span class="fu" style="color: #4758AB;">filter</span>(country <span class="sc" style="color: #5E5E5E;">%in%</span> countries) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
 <span id="cb81-3">    <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(year, fertility, <span class="at" style="color: #657422;">group =</span> country)) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb81-4">    <span class="fu" style="color: #4758AB;">geom_line</span>()</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-54-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-54-2.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb82" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb82-1"><span class="co" style="color: #5E5E5E;"># fertility time series for two countries - lines colored by country</span></span>
 <span id="cb82-2">gapminder <span class="sc" style="color: #5E5E5E;">%&gt;%</span> <span class="fu" style="color: #4758AB;">filter</span>(country <span class="sc" style="color: #5E5E5E;">%in%</span> countries) <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
 <span id="cb82-3">    <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(year, fertility, <span class="at" style="color: #657422;">col =</span> country)) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb82-4">    <span class="fu" style="color: #4758AB;">geom_line</span>()</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-54-3.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-54-3.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section><section id="code-adding-text-labels-to-a-plot" class="level3" data-number="4.6.4"><h3 data-number="4.6.4" class="anchored" data-anchor-id="code-adding-text-labels-to-a-plot">
@@ -1222,7 +1222,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>labels data frame as the data to ensure where to start label text</strong> <img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/https:/raw.githubusercontent.com/NING3739/my-personal-website/main/geom_text.png" class="img-fluid"></p>
+<p><strong>labels data frame as the data to ensure where to start label text</strong> <img src="https://stats-r.com/series/Data Visualization/https:/raw.githubusercontent.com/NING3739/my-personal-website/main/geom_text.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell">
@@ -1234,7 +1234,7 @@ Note
 <span id="cb83-6">    <span class="fu" style="color: #4758AB;">geom_text</span>(<span class="at" style="color: #657422;">data =</span> labels, <span class="fu" style="color: #4758AB;">aes</span>(x, y, <span class="at" style="color: #657422;">label =</span> country), <span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">5</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb83-7">    <span class="fu" style="color: #4758AB;">theme</span>(<span class="at" style="color: #657422;">legend.position =</span> <span class="st" style="color: #20794D;">"none"</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-55-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-55-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section></section><section id="transformations" class="level2" data-number="4.7"><h2 data-number="4.7" class="anchored" data-anchor-id="transformations">
@@ -1263,7 +1263,7 @@ Note
 <span id="cb84-9">  <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(dollars_per_day)) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb84-10">  <span class="fu" style="color: #4758AB;">geom_histogram</span>(<span class="at" style="color: #657422;">binwidth =</span> <span class="dv" style="color: #AD0000;">1</span>, <span class="at" style="color: #657422;">color =</span> <span class="st" style="color: #20794D;">"black"</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-56-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-56-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb85" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb85-1"><span class="co" style="color: #5E5E5E;"># repeat histogram with log2 scaled data</span></span>
 <span id="cb85-2">gapminder <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
@@ -1271,7 +1271,7 @@ Note
 <span id="cb85-4">    <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(<span class="fu" style="color: #4758AB;">log2</span>(dollars_per_day))) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb85-5">    <span class="fu" style="color: #4758AB;">geom_histogram</span>(<span class="at" style="color: #657422;">binwidth =</span> <span class="dv" style="color: #AD0000;">1</span>, <span class="at" style="color: #657422;">color =</span> <span class="st" style="color: #20794D;">"black"</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-56-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-56-2.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb86" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb86-1"><span class="co" style="color: #5E5E5E;"># repeat histogram with log2 scaled x-axis</span></span>
 <span id="cb86-2">gapminder <span class="sc" style="color: #5E5E5E;">%&gt;%</span></span>
@@ -1280,7 +1280,7 @@ Note
 <span id="cb86-5">    <span class="fu" style="color: #4758AB;">geom_histogram</span>(<span class="at" style="color: #657422;">binwidth =</span> <span class="dv" style="color: #AD0000;">1</span>, <span class="at" style="color: #657422;">color =</span> <span class="st" style="color: #20794D;">"black"</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb86-6">    <span class="fu" style="color: #4758AB;">scale_x_continuous</span>(<span class="at" style="color: #657422;">trans =</span> <span class="st" style="color: #20794D;">"log2"</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-56-3.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-56-3.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section></section><section id="stratify-and-boxplot" class="level2" data-number="4.8"><h2 data-number="4.8" class="anchored" data-anchor-id="stratify-and-boxplot">
@@ -1311,13 +1311,13 @@ Note
 <span id="cb89-5">     <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(region, dollars_per_day))</span>
 <span id="cb89-6">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_boxplot</span>()</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-57-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-57-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb90" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb90-1"><span class="co" style="color: #5E5E5E;"># roation name on x-axis</span></span>
 <span id="cb90-2">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_boxplot</span>() <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb90-3">  <span class="fu" style="color: #4758AB;">theme</span>(<span class="at" style="color: #657422;">axis.text.x =</span> <span class="fu" style="color: #4758AB;">element_text</span>(<span class="at" style="color: #657422;">angle =</span> <span class="dv" style="color: #AD0000;">90</span>, <span class="at" style="color: #657422;">hjust =</span> <span class="dv" style="color: #AD0000;">1</span>))</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-57-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-57-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section><section id="code-the-reorder-function" class="level3" data-number="4.8.3"><h3 data-number="4.8.3" class="anchored" data-anchor-id="code-the-reorder-function">
@@ -1363,17 +1363,17 @@ Tip
 <span id="cb95-8">    <span class="fu" style="color: #4758AB;">xlab</span>(<span class="st" style="color: #20794D;">""</span>)</span>
 <span id="cb95-9">p</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-59-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-59-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb96" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb96-1"><span class="co" style="color: #5E5E5E;"># log2 scale y-axis</span></span>
 <span id="cb96-2">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">scale_y_continuous</span>(<span class="at" style="color: #657422;">trans =</span> <span class="st" style="color: #20794D;">"log2"</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-59-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-59-2.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb97" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb97-1"><span class="co" style="color: #5E5E5E;"># add data points</span></span>
 <span id="cb97-2">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">scale_y_continuous</span>(<span class="at" style="color: #657422;">trans =</span> <span class="st" style="color: #20794D;">"log2"</span>) <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_point</span>(<span class="at" style="color: #657422;">show.legend =</span> <span class="cn" style="color: #8f5902;">FALSE</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-59-3.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-59-3.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section></section><section id="comparing-distributions" class="level2" data-number="4.9"><h2 data-number="4.9" class="anchored" data-anchor-id="comparing-distributions">
@@ -1417,7 +1417,7 @@ Important
 <span id="cb98-15">  <span class="fu" style="color: #4758AB;">scale_x_continuous</span>(<span class="at" style="color: #657422;">trans =</span> <span class="st" style="color: #20794D;">"log2"</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb98-16">  <span class="fu" style="color: #4758AB;">facet_grid</span>(. <span class="sc" style="color: #5E5E5E;">~</span>group)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-60-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-60-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb99" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb99-1"><span class="co" style="color: #5E5E5E;"># facet by West/Developing and year</span></span>
 <span id="cb99-2">present_year <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="dv" style="color: #AD0000;">2010</span></span>
@@ -1429,7 +1429,7 @@ Important
 <span id="cb99-8">    <span class="fu" style="color: #4758AB;">scale_x_continuous</span>(<span class="at" style="color: #657422;">trans =</span> <span class="st" style="color: #20794D;">"log2"</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb99-9">    <span class="fu" style="color: #4758AB;">facet_grid</span>(year <span class="sc" style="color: #5E5E5E;">~</span> group)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-60-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-60-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section><section id="code-income-distribution-of-west-verseus-developing-world-only-countries-with-data" class="level3" data-number="4.9.3"><h3 data-number="4.9.3" class="anchored" data-anchor-id="code-income-distribution-of-west-verseus-developing-world-only-countries-with-data">
@@ -1453,7 +1453,7 @@ Important
 <span id="cb100-16">  <span class="fu" style="color: #4758AB;">scale_x_continuous</span>(<span class="at" style="color: #657422;">trans =</span> <span class="st" style="color: #20794D;">"log2"</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb100-17">  <span class="fu" style="color: #4758AB;">facet_grid</span>(year <span class="sc" style="color: #5E5E5E;">~</span> group)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-61-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-61-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section><section id="code-boxplots-of-income-in-west-versus-developing-world-1970-and-2010" class="level3" data-number="4.9.4"><h3 data-number="4.9.4" class="anchored" data-anchor-id="code-boxplots-of-income-in-west-versus-developing-world-1970-and-2010">
@@ -1469,12 +1469,12 @@ Important
 <span id="cb101-8">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_boxplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(region, dollars_per_day, <span class="at" style="color: #657422;">fill =</span> continent)) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb101-9">  <span class="fu" style="color: #4758AB;">facet_grid</span>(year <span class="sc" style="color: #5E5E5E;">~</span> .)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-62-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-62-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb102" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb102-1"><span class="co" style="color: #5E5E5E;"># arrange matching boxplots next to each other, colored by year</span></span>
 <span id="cb102-2">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_boxplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(region, dollars_per_day, <span class="at" style="color: #657422;">fill =</span> <span class="fu" style="color: #4758AB;">factor</span>(year)))</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-62-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-62-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section></section><section id="density-plots" class="level2" data-number="4.10"><h2 data-number="4.10" class="anchored" data-anchor-id="density-plots">
@@ -1538,7 +1538,7 @@ Tip
 <span id="cb104-6">  <span class="fu" style="color: #4758AB;">scale_x_continuous</span>(<span class="at" style="color: #657422;">trans =</span> <span class="st" style="color: #20794D;">"log2"</span>)</span>
 <span id="cb104-7">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_density</span>(<span class="at" style="color: #657422;">alpha =</span> <span class="fl" style="color: #AD0000;">0.2</span>, <span class="at" style="color: #657422;">bw =</span> <span class="fl" style="color: #AD0000;">0.75</span>) <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">facet_grid</span>(year <span class="sc" style="color: #5E5E5E;">~</span> .)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-63-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-63-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section><section id="code-add-new-region-group-with-case_when" class="level3" data-number="4.10.3"><h3 data-number="4.10.3" class="anchored" data-anchor-id="code-add-new-region-group-with-case_when">
@@ -1569,7 +1569,7 @@ Tip
 <span id="cb106-8">p <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_density</span>(<span class="at" style="color: #657422;">alpha =</span> <span class="fl" style="color: #AD0000;">0.2</span>, <span class="at" style="color: #657422;">bw =</span> <span class="fl" style="color: #AD0000;">0.75</span>, <span class="at" style="color: #657422;">position =</span> <span class="st" style="color: #20794D;">"stack"</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb106-9">  <span class="fu" style="color: #4758AB;">facet_grid</span>(year <span class="sc" style="color: #5E5E5E;">~</span> .)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-65-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-65-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section><section id="code-weighted-stacked-density-plot" class="level3" data-number="4.10.5"><h3 data-number="4.10.5" class="anchored" data-anchor-id="code-weighted-stacked-density-plot">
@@ -1584,7 +1584,7 @@ Tip
 <span id="cb107-7">  <span class="fu" style="color: #4758AB;">scale_x_continuous</span>(<span class="at" style="color: #657422;">trans =</span> <span class="st" style="color: #20794D;">"log2"</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb107-8">  <span class="fu" style="color: #4758AB;">geom_density</span>(<span class="at" style="color: #657422;">alpha =</span> <span class="fl" style="color: #AD0000;">0.2</span>, <span class="at" style="color: #657422;">bw =</span> <span class="fl" style="color: #AD0000;">0.75</span>, <span class="at" style="color: #657422;">position =</span> <span class="st" style="color: #20794D;">"stack"</span>) <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">facet_grid</span>(year <span class="sc" style="color: #5E5E5E;">~</span> .)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-66-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-66-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section></section><section id="ecological-fallacy" class="level2" data-number="4.11"><h2 data-number="4.11" class="anchored" data-anchor-id="ecological-fallacy">
@@ -1644,7 +1644,7 @@ Tip
 <span id="cb111-5">                                       <span class="at" style="color: #657422;">breaks =</span> <span class="fu" style="color: #4758AB;">c</span>(.<span class="dv" style="color: #AD0000;">85</span>, .<span class="dv" style="color: #AD0000;">90</span>, .<span class="dv" style="color: #AD0000;">95</span>, .<span class="dv" style="color: #AD0000;">99</span>, .<span class="dv" style="color: #AD0000;">995</span>, .<span class="dv" style="color: #AD0000;">998</span>)) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb111-6">    <span class="fu" style="color: #4758AB;">geom_label</span>(<span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">3</span>, <span class="at" style="color: #657422;">show.legend =</span> <span class="cn" style="color: #8f5902;">FALSE</span>) </span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-68-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-68-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section></section></section><section id="data-visualization-principles" class="level1" data-number="5"><h1 data-number="5">
@@ -1704,12 +1704,12 @@ Tip
 <div class="sourceCode cell-code" id="cb112" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb112-1"><span class="co" style="color: #5E5E5E;"># dot plot showing the data</span></span>
 <span id="cb112-2">heights <span class="sc" style="color: #5E5E5E;">%&gt;%</span> <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(sex, height)) <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_point</span>()</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-69-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-69-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb113" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb113-1"><span class="co" style="color: #5E5E5E;"># jittered, alpha blended point plot</span></span>
 <span id="cb113-2">heights <span class="sc" style="color: #5E5E5E;">%&gt;%</span> <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(sex, height)) <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">geom_jitter</span>(<span class="at" style="color: #657422;">width =</span> <span class="fl" style="color: #AD0000;">0.1</span>, <span class="at" style="color: #657422;">alpha =</span> <span class="fl" style="color: #AD0000;">0.2</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-69-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-69-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section></section><section id="ease-comparisons-use-common-axes" class="level2" data-number="5.7"><h2 data-number="5.7" class="anchored" data-anchor-id="ease-comparisons-use-common-axes">
@@ -1751,7 +1751,7 @@ Tip
 <span id="cb114-5">    <span class="fu" style="color: #4758AB;">geom_point</span>(<span class="at" style="color: #657422;">size =</span> <span class="dv" style="color: #AD0000;">5</span>)</span>
 <span id="cb114-6">p1 <span class="sc" style="color: #5E5E5E;">+</span> <span class="fu" style="color: #4758AB;">scale_color_manual</span>(<span class="at" style="color: #657422;">values =</span> color_blind_friendly_cols)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-70-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-70-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section></section><section id="slope-charts" class="level2" data-number="5.10"><h2 data-number="5.10" class="anchored" data-anchor-id="slope-charts">
@@ -1790,7 +1790,7 @@ Tip
 <span id="cb116-15">    <span class="fu" style="color: #4758AB;">xlab</span>(<span class="st" style="color: #20794D;">""</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb116-16">    <span class="fu" style="color: #4758AB;">ylab</span>(<span class="st" style="color: #20794D;">"Life Expectancy"</span>) </span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-72-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-72-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section><section id="code-bland-altman-plot" class="level3" data-number="5.10.4"><h3 data-number="5.10.4" class="anchored" data-anchor-id="code-bland-altman-plot">
@@ -1811,7 +1811,7 @@ Tip
 <span id="cb118-10">    <span class="fu" style="color: #4758AB;">xlab</span>(<span class="st" style="color: #20794D;">"Average of 2010 and 2015"</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb118-11">    <span class="fu" style="color: #4758AB;">ylab</span>(<span class="st" style="color: #20794D;">"Difference between 2015 and 2010"</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-74-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-74-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section></section><section id="encoding-a-third-variable" class="level2" data-number="5.11"><h2 data-number="5.11" class="anchored" data-anchor-id="encoding-a-third-variable">
@@ -1860,7 +1860,7 @@ Tip
 <span id="cb120-12">    <span class="fu" style="color: #4758AB;">ylab</span>(<span class="st" style="color: #20794D;">"Cases per 10,000"</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb120-13">    <span class="fu" style="color: #4758AB;">geom_vline</span>(<span class="at" style="color: #657422;">xintercept=</span><span class="dv" style="color: #AD0000;">1963</span>, <span class="at" style="color: #657422;">col =</span> <span class="st" style="color: #20794D;">"blue"</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-76-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-76-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb121" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb121-1"><span class="co" style="color: #5E5E5E;"># tile plot of disease rate by state and year</span></span>
 <span id="cb121-2">dat <span class="sc" style="color: #5E5E5E;">%&gt;%</span> <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>(year, state, <span class="at" style="color: #657422;">fill=</span>rate)) <span class="sc" style="color: #5E5E5E;">+</span></span>
@@ -1873,7 +1873,7 @@ Tip
 <span id="cb121-9">    <span class="fu" style="color: #4758AB;">ylab</span>(<span class="st" style="color: #20794D;">""</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb121-10">    <span class="fu" style="color: #4758AB;">xlab</span>(<span class="st" style="color: #20794D;">""</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-76-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-76-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section><section id="code-line-plot-of-measles-rate-by-year-and-state" class="level3" data-number="5.12.4"><h3 data-number="5.12.4" class="anchored" data-anchor-id="code-line-plot-of-measles-rate-by-year-and-state">
@@ -1899,7 +1899,7 @@ Tip
 <span id="cb122-18">        <span class="at" style="color: #657422;">mapping =</span> <span class="fu" style="color: #4758AB;">aes</span>(x, y, <span class="at" style="color: #657422;">label =</span> <span class="st" style="color: #20794D;">"US average"</span>), <span class="at" style="color: #657422;">color =</span> <span class="st" style="color: #20794D;">"black"</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb122-19">    <span class="fu" style="color: #4758AB;">geom_vline</span>(<span class="at" style="color: #657422;">xintercept =</span> <span class="dv" style="color: #AD0000;">1963</span>, <span class="at" style="color: #657422;">col =</span> <span class="st" style="color: #20794D;">"blue"</span>)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index_files/figure-html/unnamed-chunk-77-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/Data Visualization/index_files/figure-html/unnamed-chunk-77-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section></section><section id="avoid-pseudo-and-gratuitous-3d-plots" class="level2" data-number="5.13"><h2 data-number="5.13" class="anchored" data-anchor-id="avoid-pseudo-and-gratuitous-3d-plots">
@@ -1927,14 +1927,14 @@ Tip
 </section></section></section> ]]></description>
   <category>Data Science</category>
   <category>Data Visualization</category>
-  <guid>https://quartopub.com/sites/ningli/statsr/series/Data Visualization/index.html</guid>
+  <guid>https://stats-r.com/series/Data Visualization/index.html</guid>
   <pubDate>Wed, 30 Nov 2022 11:00:00 GMT</pubDate>
   <media:content url="https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy&amp;w=3600" medium="image"/>
 </item>
 <item>
   <title>R Basic</title>
   <dc:creator>NING LI</dc:creator>
-  <link>https://quartopub.com/sites/ningli/statsr/series/R Basic/index.html</link>
+  <link>https://stats-r.com/series/R Basic/index.html</link>
   <description><![CDATA[ <section id="r-basics-functions-and-data-types" class="level1 page-columns page-full" data-number="1"><h1 data-number="1">
 <span class="header-section-number">1</span> R Basics, Functions, and Data Types</h1>
 <p>In this section, I will introduce you to R Basics, Functions, and Datatypes.</p>
@@ -2512,7 +2512,7 @@ Knowledge Extension
 <span id="cb14-3">y <span class="ot" style="color: #003B4F;">&lt;-</span> murders<span class="sc" style="color: #5E5E5E;">$</span>total</span>
 <span id="cb14-4"><span class="fu" style="color: #4758AB;">plot</span>(x, y)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/R Basic/index_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/R Basic/index_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="cell">
@@ -2520,12 +2520,12 @@ Knowledge Extension
 <span id="cb15-2">murders <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">mutate</span>(murders, <span class="at" style="color: #657422;">rate =</span> total <span class="sc" style="color: #5E5E5E;">/</span> population <span class="sc" style="color: #5E5E5E;">*</span> <span class="dv" style="color: #AD0000;">100000</span>)</span>
 <span id="cb15-3"><span class="fu" style="color: #4758AB;">hist</span>(murders<span class="sc" style="color: #5E5E5E;">$</span>rate)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/R Basic/index_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/R Basic/index_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><span class="co" style="color: #5E5E5E;"># boxplots of murder rates by region</span></span>
 <span id="cb16-2"><span class="fu" style="color: #4758AB;">boxplot</span>(rate<span class="sc" style="color: #5E5E5E;">~</span>region, <span class="at" style="color: #657422;">data =</span> murders)</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://quartopub.com/sites/ningli/statsr/series/R Basic/index_files/figure-html/unnamed-chunk-15-2.png" class="img-fluid" width="672"></p>
+<p><img src="https://stats-r.com/series/R Basic/index_files/figure-html/unnamed-chunk-15-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section></section><section id="the-summarize-function" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="the-summarize-function">
@@ -3188,7 +3188,7 @@ dplyr 1.1.0.
 </section></section></section> ]]></description>
   <category>Data Science</category>
   <category>R Basic</category>
-  <guid>https://quartopub.com/sites/ningli/statsr/series/R Basic/index.html</guid>
+  <guid>https://stats-r.com/series/R Basic/index.html</guid>
   <pubDate>Sat, 26 Nov 2022 11:00:00 GMT</pubDate>
   <media:content url="https://images.unsplash.com/photo-1634128221889-82ed6efebfc3?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy&amp;w=3600" medium="image"/>
 </item>

@@ -17,4 +17,4 @@ comments: false
 title-block-banner: false
 ---
 
-123456789
+Discover how R can solve real-world problems on my project page, where I showcase practical applications of this powerful tool.

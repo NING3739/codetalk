@@ -29,6 +29,8 @@
   },
   {
     "listing": "/project.html",
-    "items": []
+    "items": [
+      "/project/Cost Calculator/index.html"
+    ]
   }
 ]
