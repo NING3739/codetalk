@@ -17,4 +17,4 @@ comments: false
 title-block-banner: false
 ---
 
-Here you will primarily gain a comprehensive understanding of R language, starting from the basics to advanced level, along with statistics-related knowledge.
+Acquire a thorough grasp of the R language, beginning with fundamental concepts and progressing to an advanced level, while also incorporating knowledge related to statistics.

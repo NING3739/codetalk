@@ -224,7 +224,7 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 <li><a href="#introduction-to-shiny" id="toc-introduction-to-shiny" class="nav-link active" data-scroll-target="#introduction-to-shiny">Introduction to Shiny</a></li>
   <li><a href="#purpose-of-this-app" id="toc-purpose-of-this-app" class="nav-link" data-scroll-target="#purpose-of-this-app">Purpose of this app</a></li>
   <li><a href="#server-component" id="toc-server-component" class="nav-link" data-scroll-target="#server-component">Server Component</a></li>
-  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">code</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a></li>
   </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/NING3739/statsr/edit/main/project/Cost Calculator/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/NING3739/statsr/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
 </nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
@@ -283,7 +283,7 @@ gtag('config', 'G-Y96LK2RNJD', { 'anonymize_ip': true});
 <li><p><em>Downloading service records</em>: Allows users to download service records as a CSV file, with a filename containing the current date.</p></li>
 </ol>
 <p>In summary, this Shiny app is a user-friendly service fee calculator that helps users input various parameters, calculate the total cost, apply or remove GST, store and display service records, and generate a time series plot of service costs.</p>
-</section><section id="code" class="level1"><h1>code</h1>
+</section><section id="code" class="level1"><h1>Code</h1>
 <div class="cell">
 <details><summary>show the code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(shiny)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(dplyr)</span>
@@ -707,7 +707,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/stats-r\.com/);
+      var filterRegex = new RegExp(/https:\/\/quartopub\.com\/sites\/ningli\/statsr/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }

@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>Stats &amp; R</title>
-<link>https://stats-r.com/project.html</link>
-<atom:link href="https://stats-r.com/project.xml" rel="self" type="application/rss+xml"/>
+<link>https://quartopub.com/sites/ningli/statsr/project.html</link>
+<atom:link href="https://quartopub.com/sites/ningli/statsr/project.xml" rel="self" type="application/rss+xml"/>
 <description>Welcome to Stats &amp; R. This is a personal website devoted primarily to R, Python, and statistics.</description>
 <generator>quarto-1.2.475</generator>
 <lastBuildDate>Tue, 04 Apr 2023 12:00:00 GMT</lastBuildDate>
 <item>
   <title>Cost Calculator</title>
   <dc:creator>NING LI</dc:creator>
-  <link>https://stats-r.com/project/Cost Calculator/index.html</link>
+  <link>https://quartopub.com/sites/ningli/statsr/project/Cost Calculator/index.html</link>
   <description><![CDATA[ <section id="introduction-to-shiny" class="level1"><h1>Introduction to Shiny</h1>
 <p>Shiny is an R package for creating interactive web applications directly from R without requiring web development knowledge. A Shiny app generally consists of a user interface (UI) and a server component that contains the app’s logic and computations.</p>
 </section><section id="purpose-of-this-app" class="level1"><h1>Purpose of this app</h1>
@@ -35,7 +35,7 @@
 <li><p><em>Downloading service records</em>: Allows users to download service records as a CSV file, with a filename containing the current date.</p></li>
 </ol>
 <p>In summary, this Shiny app is a user-friendly service fee calculator that helps users input various parameters, calculate the total cost, apply or remove GST, store and display service records, and generate a time series plot of service costs.</p>
-</section><section id="code" class="level1"><h1>code</h1>
+</section><section id="code" class="level1"><h1>Code</h1>
 <div class="cell">
 <details><summary>show the code</summary><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;">library</span>(shiny)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;">library</span>(dplyr)</span>
@@ -214,7 +214,7 @@
 
 </section> ]]></description>
   <category>shiny</category>
-  <guid>https://stats-r.com/project/Cost Calculator/index.html</guid>
+  <guid>https://quartopub.com/sites/ningli/statsr/project/Cost Calculator/index.html</guid>
   <pubDate>Tue, 04 Apr 2023 12:00:00 GMT</pubDate>
   <media:content url="https://img.freepik.com/free-vector/mortgage-isometric-composition-with-images-calculator-bunch-coins-receipt-with-percentage-vector-illustration_1284-66060.jpg?w=740&amp;t=st=1680648272~exp=1680648872~hmac=5e5fd95b97ec52d2661e3358e2c2e133f8443ec713d77014e6ae138e22e77656" medium="image"/>
 </item>
