@@ -44,7 +44,7 @@ website:
         href: project.qmd
       - icon: chat-text
         text: "Talks"
-        href: talk.qmd
+        href: talks.qmd
       - icon: file-person
         text: "About"
         href: about.qmd 
@@ -101,6 +101,7 @@ format:
     toc: true
     toc-title: Contents
     toc-location: left
+    
 
 # comments
 comments: 

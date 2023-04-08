@@ -1,0 +1,20 @@
+---
+title: Latest Presentations
+listing:
+  contents: talks/**/*.qmd
+  sort: "date desc"
+  type: table
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [image, date, title, description]
+  date-format: MMM DD, YYYY
+  feed: true
+  image-align: left
+
+comments: false
+
+title-block-banner: false
+---
+
+Stay informed about the latest developments in R and statistics through my informative presentations and research findings.

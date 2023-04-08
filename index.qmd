@@ -34,7 +34,7 @@ Navigating through the six main sections of my website with ease:
 
 -   "[Projects](project.qmd)": Explore the real-world projects I've undertaken, demonstrating the power and versatility of R in addressing intricate statistical challenges, and find inspiration for your own projects.
 
--   "[Talks](talk.qmd)": Keep up to date with my most recent presentations, where I delve into topical subjects and share research findings, offering a wealth of knowledge on the latest advancements in R and statistics.
+-   "[Talks](talks.qmd)": Keep up to date with my most recent presentations, where I delve into topical subjects and share research findings, offering a wealth of knowledge on the latest advancements in R and statistics.
 
 -   "[About](about.qmd)": You can find out my background, what I'm currently working on, and my research achievements. My passion for statistics, R programming, and knowledge-sharing is the driving force behind Stats & R.
 

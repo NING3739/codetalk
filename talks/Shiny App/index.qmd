@@ -1,0 +1,11 @@
+---
+title: "A talk about Shiny App"
+date: "2023-04-07"
+author: 'NING LI'
+categories: [Shiny]
+image: "https://ericrayanderson.github.io/shinymaterial/img/shinyLogo.png"
+description: "Explaination about how to build a shiny app"
+format:
+  html:
+    code-fold: false
+---

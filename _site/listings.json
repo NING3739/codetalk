@@ -1,5 +1,11 @@
 [
   {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/Shiny App/index.html"
+    ]
+  },
+  {
     "listing": "/series.html",
     "items": [
       "/series/Probability/index.html",
